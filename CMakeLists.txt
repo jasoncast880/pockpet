@@ -1,13 +1,13 @@
 # Set minimum required version of CMake
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.16)
 
 # Include build functions from Pico SDK
-include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+include(pico_sdk_import.cmake)
 
 # Set name of project (as PROJECT_NAME) and C/C++ standards
-project(ST7735 C CXX ASM)
-set(CMAKE_C_STANDARD 17)
-set(CMAKE_CXX_STANDARD 20)
+project(test1 C CXX ASM)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 # Creates a pico-sdk subdirectory in our project for the libraries
 pico_sdk_init()
@@ -17,11 +17,12 @@ add_compile_options(-Wall -Wextra)
 
 # Tell CMake where to find the executable source file
 add_executable(${PROJECT_NAME} 
-  examples/ST7735_TFT_HELLO/main.cpp
+  #examples/ST7735_TFT_HELLO/main.cpp
   #examples/ST7735_TFT_GRAPHICS/main.cpp
   #examples/ST7735_TFT_FUNCTIONS_FPS/main.cpp
   #examples/ST7735_TFT_TESTS/main.cpp
   #examples/ST7735_TFT_BMP_DATA/main.cpp
+  examples/main.cpp
 )
 
 # Create map/bin/hex/uf2 files
@@ -46,4 +47,3 @@ target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi pico_st7735 )
 # Enable usb output, disable uart output
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_enable_stdio_uart(${PROJECT_NAME} 0)
-

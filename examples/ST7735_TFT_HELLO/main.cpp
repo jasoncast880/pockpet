@@ -68,31 +68,30 @@ void Setup(void)
 // the chosen interface eg Spi0 CLK=18 DIN=19)
 	int8_t SDIN_TFT = 19; 
 	int8_t SCLK_TFT = 18; 
-	int8_t DC_TFT = 3;
-	int8_t CS_TFT = 2 ;  
-	int8_t RST_TFT = 17;
+	int8_t DC_TFT = 17;
+	int8_t CS_TFT = 21;  
+	int8_t RST_TFT = 16;
 	myTFT.TFTSetupGPIO(RST_TFT, DC_TFT, CS_TFT, SCLK_TFT, SDIN_TFT);
 //**********************************************************
 
 // ****** USER OPTION 2 Screen Setup ****** 
-	uint8_t OFFSET_COL = 0;  // 2, These offsets can be adjusted for any issues->
-	uint8_t OFFSET_ROW = 0; // 3, with screen manufacture tolerance/defects
+	uint8_t OFFSET_COL = 1;  // 2, These offsets can be adjusted for any issues->
+	uint8_t OFFSET_ROW = 1; // 3, with screen manufacture tolerance/defects
 	uint16_t TFT_WIDTH = 128;// Screen width in pixels
-	uint16_t TFT_HEIGHT = 128; // Screen height in pixels
+	uint16_t TFT_HEIGHT = 160; // Screen height in pixels
 	myTFT.TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_WIDTH , TFT_HEIGHT);
 // ******************************************
 
 // ******** USER OPTION 3 PCB_TYPE  **************************
-	myTFT.TFTInitPCBType(myTFT.TFT_ST7735R_Red); // pass enum,4 choices,see README
+	myTFT.TFTInitPCBType(myTFT.TFT_ST7735S_Black); // pass enum,4 choices,see README
 //**********************************************************
 }
 
 /*!
 	@brief print out hello world on TFT
 */
-void Test0(void) {
-
-	char teststr1[] = "Hello";
+void Test0(void) {	
+  char teststr1[] = "Hello";
 	char teststr2[] = "World";
 	
 	myTFT.TFTfillScreen(ST7735_BLACK);
