@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 # Name project
-SET(ProjectName rp2040-freertos-template)
+SET(ProjectName pockpet_rtos)
 
 # Set any variables required for importing libraries
 SET(FREERTOS_KERNEL_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib/FreeRTOS-Kernel)
@@ -22,3 +22,7 @@ add_subdirectory(src)
 # if you have anything in "lib" folder then uncomment below - remember to add a CMakeLists.txt
 # file to the "lib" directory
 #add_subdirectory(lib)
+
+pico_enable_stdio_usb(${ProjectName} 1)
+pico_enable_stdio_uart(${ProjectName} 0)
+
