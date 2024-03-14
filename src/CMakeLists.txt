@@ -1,5 +1,5 @@
 add_executable(${ProjectName}
-    main.c
+    test/test1/main.cpp
 )
 
 target_include_directories(${ProjectName} PRIVATE
