@@ -1,14 +1,14 @@
-add_executable(${ProjectName}
-    test/test1/main.cpp
-)
+#add source files
+file(GLOB SOURCES "*.cpp")
 
-target_include_directories(${ProjectName} PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}
-)
+add_executable(${ProjectName}
+              test/test1/main.cpp
+              )
 
 target_link_libraries(${ProjectName} 
-    pico_stdlib 
-    FreeRTOS-Kernel-Heap4 
-    )
+                      pico_stdlib 
+                      FreeRTOS-Kernel-Heap4 
+                      st7735
+                      )
 
 pico_add_extra_outputs(${ProjectName})

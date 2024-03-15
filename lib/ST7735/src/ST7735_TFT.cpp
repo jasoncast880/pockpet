@@ -4,10 +4,9 @@
 	@brief    Source file for ST7735_TFT_PICO library. 
 			Contains driver methods for ST7735_TFT display 
 	@note  See URL for full details.https://github.com/gavinlyonsrepo/ST7735_TFT_PICO
-		
 */
 
-#include "../include/st7735/ST7735_TFT.hpp"
+#include "../include/ST7735_TFT.hpp"
  
 /*!
 	@brief Constructor for class ST7735_TFT

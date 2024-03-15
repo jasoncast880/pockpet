@@ -21,8 +21,7 @@ add_subdirectory(src)
 
 # if you have anything in "lib" folder then uncomment below - remember to add a CMakeLists.txt
 # file to the "lib" directory
-#add_subdirectory(lib)
+add_subdirectory(lib/ST7735)
 
 pico_enable_stdio_usb(${ProjectName} 1)
 pico_enable_stdio_uart(${ProjectName} 0)
-

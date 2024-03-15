@@ -2,11 +2,13 @@
 #include "task.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "ST7735_TFT.hpp"
+#include "ST7735_TFT_Assets.hpp"
 
 
 void led_task(void *pvParameters)
 {   
-    const uint LED_PIN = PICO_DEFAULT_LED_PIN;
+    const uint LED_PIN = 25; // gp25 for pico, gp100 for pico w
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
     while (true) {

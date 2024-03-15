@@ -1,4 +1,4 @@
-#include "../include/st7735/ST7735_TFT_Bitmap_Data.hpp"
+#include "../include/ST7735_TFT_Bitmap_Data.hpp"
 
 //pixel data  arrays here
 

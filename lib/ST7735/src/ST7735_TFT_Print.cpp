@@ -6,7 +6,7 @@
 		
 */
 
-#include "../include/st7735/ST7735_TFT_Print.hpp"
+#include "../include/ST7735_TFT_Print.hpp"
 
 // Public Methods ///////////////
 /* default implementation: may be overridden */

@@ -13,7 +13,7 @@
 
 */
 
-#include "../include/st7735/ST7735_TFT_Bitmap_Data.hpp"
+#include "../include/ST7735_TFT_Bitmap_Data.hpp"
 
 // array size is 40960
 static const uint8_t bg_1[]  = {
