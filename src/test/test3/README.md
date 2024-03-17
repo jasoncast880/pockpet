@@ -13,5 +13,5 @@ test3 with binary semaphores appears to be working.
 
 here is a snippet by snippet explanation of how to use binary semaphores properly:
 
-`SemaphoreHandle_t count;'
+`SemaphoreHandle_t count;`
 
