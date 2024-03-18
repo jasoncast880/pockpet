@@ -10,6 +10,10 @@
 
 SemaphoreHandle_t count;
 
+void tft_task(void *pvParameters){}
+void speaker_driver_task(void *pvParameters){}
+void rtc_task(void *pvParameters){}
+
 void led_task(void *pvParameters)
 {   
     const uint LED_PIN = 25; // gp25 for pico, gp100 for pico w
