@@ -10,6 +10,10 @@
 #define TEST_DELAY2 2000
 #define TEST_DELAY5 5000
 #define CLOCK_DISPLAY_TIME 20 // seconds
+// push button
+#define BUTTON1_GPIO 11
+#define BUTTON2_GPIO 12
+#define BUTTON3_GPIO 13
 
 // Section :: Globals
 ST7735_TFT myTFT;
@@ -19,13 +23,16 @@ ST7735_TFT myTFT;
 void Setup(void);	// setup + user options
 void Test16BMP(void);
 void WalkAnimation(void);
+void WalkAnimationBG(void);
+void ButtonTest(void);
 //  Section ::  MAIN
 
 int main(void)
 {
 	Setup();
 //	Test16BMP();
-  WalkAnimation();
+  WalkAnimationBG();
+  ButtonTest();
 
 }
 // *** End OF MAIN **
@@ -78,6 +85,15 @@ void Setup(void)
 	// ******** USER OPTION 3 PCB_TYPE  **************************
 	myTFT.TFTInitPCBType(myTFT.TFT_ST7735S_Black); // pass enum,4 choices,see README
 												 //**********************************************************
+
+
+  //buttons setup
+  gpio_init(BUTTON1_GPIO);
+  gpio_set_dir(BUTTON1_GPIO, GPIO_IN);
+  gpio_init(BUTTON2_GPIO);
+  gpio_set_dir(BUTTON2_GPIO, GPIO_IN);
+  gpio_pull_up(BUTTON1_GPIO);
+  gpio_pull_up(BUTTON2_GPIO);
 }
 
 void Test16BMP(void)
@@ -92,24 +108,69 @@ void Test16BMP(void)
 	myTFT.TFTfillScreen(ST7735_BLACK);
 }
 
-void WalkAnimation(void) //void for now, add pointer pathing to a list of bmp arrays or etc PLS make more elegant later
+void WalkAnimationBG(void) //how to make the background layer???
 {
-  myTFT.TFTfillScreen(ST7735_WHITE);
-  for(uint8_t counter=0;counter<=30;counter+=3){
-    myTFT.TFTdrawBitmap16Data(counter, 0, (uint8_t *)pOreo1, 64, 64);
-	  TFT_MILLISEC_DELAY(TEST_DELAY1);
-    myTFT.TFTfillRectangle(counter, 0, 64, 64, ST7735_WHITE);
+  static int y = 65;
+  myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 160);
+  TFT_MILLISEC_DELAY(TEST_DELAY2);
 
-    myTFT.TFTdrawBitmap16Data(counter+1, 0, (uint8_t *)pOreo2, 64, 64);
-	  TFT_MILLISEC_DELAY(TEST_DELAY1);
-    myTFT.TFTfillRectangle(counter+1, 0, 64, 64, ST7735_WHITE);
+  for(uint8_t counter=0;counter<=85;counter+=4){
+    myTFT.TFTdrawBitmap16Data(counter, y, (uint8_t *)pOreo1, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 160);
 
-    myTFT.TFTdrawBitmap16Data(counter+2, 0, (uint8_t *)pOreo3, 64, 64);
-	  TFT_MILLISEC_DELAY(TEST_DELAY1);
-    myTFT.TFTfillRectangle(counter+2, 0, 64, 64, ST7735_WHITE);
+    myTFT.TFTdrawBitmap16Data(counter+1, y, (uint8_t *)pOreo2, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 160);
+
+    myTFT.TFTdrawBitmap16Data(counter+2, y, (uint8_t *)pOreo1, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 160);
+
+    myTFT.TFTdrawBitmap16Data(counter+3, y, (uint8_t *)pOreo3, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 160);
 	  //TFT_MILLISEC_DELAY(TEST_DELAY1);
   }
   char teststrsus[]="Animation over";
 	myTFT.TFTdrawText(5, 150, teststrsus, ST7735_WHITE, ST7735_BLACK, 1);
+}
+    
+void WalkAnimation(void) //void for now, add pointer pathing to a list of bmp arrays or etc PLS make more elegant later
+{
+  static int y = 65;
+  myTFT.TFTfillScreen(ST7735_WHITE);
+  for(uint8_t counter=0;counter<=85;counter+=4){
+    myTFT.TFTdrawBitmap16Data(counter, y, (uint8_t *)pOreo1, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTfillRectangle(counter, y, 1, 64, ST7735_WHITE);
 
+    myTFT.TFTdrawBitmap16Data(counter+1, y, (uint8_t *)pOreo2, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTfillRectangle(counter+1, y, 1, 64, ST7735_WHITE);
+
+    myTFT.TFTdrawBitmap16Data(counter+2, y, (uint8_t *)pOreo1, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTfillRectangle(counter+2, y, 1, 64, ST7735_WHITE);
+
+    myTFT.TFTdrawBitmap16Data(counter+3, y, (uint8_t *)pOreo3, 64, 64);
+	  TFT_MILLISEC_DELAY(100);
+    myTFT.TFTfillRectangle(counter+3, y, 1, 64, ST7735_WHITE);
+	  //TFT_MILLISEC_DELAY(TEST_DELAY1);
+  }
+  char teststrsus[]="Animation over";
+	myTFT.TFTdrawText(5, 150, teststrsus, ST7735_WHITE, ST7735_BLACK, 1);
+}
+
+void ButtonTest(void)
+{
+  while(true) {
+    if (!gpio_get(BUTTON1_GPIO)){
+      myTFT.TFTfillScreen(ST7735_RED);
+    }
+    if (!gpio_get(BUTTON2_GPIO)){
+      myTFT.TFTfillScreen(ST7735_BLUE);
+    }
+  TFT_MILLISEC_DELAY(100);
+  }
 }

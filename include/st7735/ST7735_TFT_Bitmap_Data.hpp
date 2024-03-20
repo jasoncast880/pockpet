@@ -18,6 +18,7 @@
 
 #include "pico/stdlib.h"
 
+extern const uint8_t * pbg_1;
 extern const uint8_t * pOreo1;
 extern const uint8_t * pOreo2;
 extern const uint8_t * pOreo3;

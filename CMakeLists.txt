@@ -22,7 +22,13 @@ add_executable(${PROJECT_NAME}
   #examples/ST7735_TFT_FUNCTIONS_FPS/main.cpp
   #examples/ST7735_TFT_TESTS/main.cpp
   #examples/ST7735_TFT_BMP_DATA/main.cpp
-  examples/main.cpp
+  #examples/ANIMATION_TEST/main.cpp
+  #examples/DMA_TEST/main.c
+  #examples/CASTICO/main.cpp
+  #examples/CONTROLLER_UI_DEMO/main.cpp
+  #examples/helpme/main.cpp
+  #examples/MENU_TEST/main.cpp
+  examples/GPIO_TEST/main.cpp
 )
 
 # Create map/bin/hex/uf2 files
@@ -35,13 +41,14 @@ target_sources(pico_st7735 INTERFACE
   ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_graphics.cpp
   ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_Print.cpp
   ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_Font.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_Bitmap_Data.cpp
+  # ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_Bitmap_Data.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/src/st7735/ST7735_TFT_Assets.cpp
 )
 
 target_include_directories(pico_st7735 INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 # Pull in pico libraries that we need
-target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi pico_st7735 )
+target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi  pico_st7735 )
 
 
 # Enable usb output, disable uart output
