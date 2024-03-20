@@ -140,25 +140,63 @@ void RenderBg(void)
   myTFT.TFTfillScreen(ST7735_WHITE);
   myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 140);
   TFT_MILLISEC_DELAY(TEST_DELAY2);
-  //WalkAnimation();
 }
-/* Toma Screen main function */
+void WalkAnimation()
+{
+  int y=54;
+  for(uint8_t counter=0;counter<=85;counter+=4){
+    myTFT.TFTdrawBitmap16Data(counter, y, (uint8_t *)poreo1, 63, 53);
+	  TFT_MILLISEC_DELAY(100);
 
+    myTFT.TFTdrawBitmap16Data(counter+1, y, (uint8_t *)poreo2, 63, 53);
+	  TFT_MILLISEC_DELAY(100);
+
+    myTFT.TFTdrawBitmap16Data(counter+2, y, (uint8_t *)poreo1, 63, 53);
+	  TFT_MILLISEC_DELAY(100);
+
+    myTFT.TFTdrawBitmap16Data(counter+3, y, (uint8_t *)poreo3, 63, 53);
+	  TFT_MILLISEC_DELAY(100);
+  }
+}
+void WalkAnimation(int temp) //test walk animation
+{
+  const uint8_t* spriteArr[4] = {poreo1,poreo2,poreo1,poreo3};
+  int idx = 0;
+  for(int i=0;i<=10;i++)
+  {    
+    myTFT.TFTdrawBitmap16Data( 15+i, 54, *(*(spriteArr[idx])), 63, 53);
+    idx = idx >= 3 ? 0 : idx++; 
+    sleep_ms(100);
+  }
+  printf("finished animation");
+}
+ 
+void MenuScreen();
+/* Toma Screen main function */
+void TomaScreen() //button3 triggers interrupt to the menu screen
+{
+  RenderBg(); //render static menu components
+  sleep_ms(3000);//temp
+  while(1)
+  {
+    WalkAnimation(1);
+    if(!gpio_get(BUTTON3)){
+      printf("button3 pressed");
+      MenuScreen();//replace later
+    }
+    sleep_ms(1200);
+  }
+  
+}
 /* Menu Screen main function 
  * I need to refactor to use interrupts 
  * */ 
-
 void MenuScreen() 
 {
-
-  //implement state machines here
-  
-  //RenderBg();
-  //ButtonHandler();
   int buttonPress = 0;
-  RenderMenu(); //render static components
+  RenderMenu(); //render static menu components
   
-  while(true)
+  while(1)
   {
     if(!gpio_get(BUTTON1)){
       printf("button1 pressed");
@@ -197,7 +235,8 @@ int main()
 	tftSetup();
   buttonSetup();
   //run the toma screen
-  MenuScreen();
+  TomaScreen();
+  //MenuScreen();
 }
 
 /*

@@ -1268,6 +1268,7 @@ static const uint8_t bar1[]  = {
 const uint8_t *pbg_1 = bg_1;
 //const uint8_t *pmenu_1 = menu_1;
 
+//1,2,1,3,1
 const uint8_t *poreo1 = oreo1;
 const uint8_t *poreo2 = oreo2;
 const uint8_t *poreo3 = oreo3;
