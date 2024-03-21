@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "pico/rand.h"
 #include "st7735/ST7735_TFT.hpp"
 #include "st7735/ST7735_TFT_Assets.hpp"
 #include <string>
@@ -134,57 +135,72 @@ void lightButtons(int n)
 }
 //
 
-/* toma screen functions */
+/* toma screen initializers */
+//global relative dist. vars
+const int xMaxVal = 65;
+int xPos = 0;
+
 void RenderBg(void)
 {
   myTFT.TFTfillScreen(ST7735_WHITE);
   myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 140);
   TFT_MILLISEC_DELAY(TEST_DELAY2);
 }
-void WalkAnimation()
+//random num hashing fxn; pass ints as floats, process, then cast it back into int afterwards
+float scale(float x,float a, float b, float min, float max)
 {
-  int y=54;
-  for(uint8_t counter=0;counter<=85;counter+=4){
-    myTFT.TFTdrawBitmap16Data(counter, y, (uint8_t *)poreo1, 63, 53);
-	  TFT_MILLISEC_DELAY(100);
-
-    myTFT.TFTdrawBitmap16Data(counter+1, y, (uint8_t *)poreo2, 63, 53);
-	  TFT_MILLISEC_DELAY(100);
-
-    myTFT.TFTdrawBitmap16Data(counter+2, y, (uint8_t *)poreo1, 63, 53);
-	  TFT_MILLISEC_DELAY(100);
-
-    myTFT.TFTdrawBitmap16Data(counter+3, y, (uint8_t *)poreo3, 63, 53);
-	  TFT_MILLISEC_DELAY(100);
-  }
+    return (b-a)*(x-min)/(max-min) + a;
 }
-void WalkAnimation(int temp) //test walk animation
+void WalkAnimation() /* walk animation; random amount of distance to travel to end of screen max. 
+eventually, the animation must switch directions walking. (need to make poreo4-6 facing op. dir.*/ 
 {
+  xPos=0;//temp
+  //relative distance vars
+  
   const uint8_t* spriteArr[4] = {poreo1,poreo2,poreo1,poreo3};
   int idx = 0;
-  for(int i=0;i<=10;i++)
+  for(int i=0;xPos<=xMaxVal;i++)
   {    
-    myTFT.TFTdrawBitmap16Data( 15+i, 54, *(*(spriteArr[idx])), 63, 53);
-    idx = idx >= 3 ? 0 : idx++; 
-    sleep_ms(100);
+    //go a random time
+    uint32_t r = get_rand_32();
+    int rand =int(scale(r,200,300,0,UINT32_MAX));
+
+    myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArr[idx], 63, 53);
+    idx = idx >= 3 ? 0 : idx+1; 
+    sleep_ms(rand);
+    printf("paused %d ms",rand);
+    xPos+=1;
   }
-  printf("finished animation");
+}
+void EatAnimation()
+{
+  const uint8_t* dogArr[4] = {poreo1,poreo3};
+  const uint8_t* spriteArr[6] = {psteak1,psteak2,psteak3,psteak4,psteak5,psteak6};
+  int idx = 0;
+  for(int i=0;i<6;i++)
+  {    
+    myTFT.TFTdrawBitmap16Data(15, 54, (uint8_t*)dogArr[idx], 63, 53);
+    myTFT.TFTdrawBitmap16Data(52, 115, (uint8_t*)spriteArr[i], 34, 21);
+    idx = idx >= 1 ? 0 : idx+1; 
+    sleep_ms(800);
+  }
 }
  
 void MenuScreen();
 /* Toma Screen main function */
 void TomaScreen() //button3 triggers interrupt to the menu screen
 {
+  sleep_ms(1200);
   RenderBg(); //render static menu components
-  sleep_ms(3000);//temp
+  sleep_ms(1000);//temp
+  EatAnimation();
+  //WalkAnimation();
   while(1)
   {
-    WalkAnimation(1);
     if(!gpio_get(BUTTON3)){
       printf("button3 pressed");
       MenuScreen();//replace later
     }
-    sleep_ms(1200);
   }
   
 }
@@ -195,6 +211,7 @@ void MenuScreen()
 {
   int buttonPress = 0;
   RenderMenu(); //render static menu components
+  sleep_ms(1200);
   
   while(1)
   {
@@ -222,8 +239,7 @@ void MenuScreen()
     }
     if(!gpio_get(BUTTON3)){
       printf("button3 pressed");
-      myTFT.TFTfillScreen(0xa548);
-      sleep_ms(1200);
+      TomaScreen();
       //break;
     }
   }
@@ -238,55 +254,3 @@ int main()
   TomaScreen();
   //MenuScreen();
 }
-
-/*
-static char event_str[128];
-
-void gpio_event_string(char *buf, uint32_t events);
-
-void gpio_callback(uint gpio, uint32_t events) {
-    // Put the GPIO event(s) that just happened into event_str
-    // so we can print it
-    gpio_event_string(event_str, events);
-    printf("GPIO %d %s\n", gpio, event_str);
-}
-
-int main() {
-    stdio_init_all();
-
-    printf("Hello GPIO IRQ\n");
-    gpio_set_irq_enabled_with_callback(2, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
-
-    // Wait forever
-    while (1);
-}
-
-
-static const char *gpio_irq_str[] = {
-        "LEVEL_LOW",  // 0x1
-        "LEVEL_HIGH", // 0x2
-        "EDGE_FALL",  // 0x4
-        "EDGE_RISE"   // 0x8
-};
-
-void gpio_event_string(char *buf, uint32_t events) {
-    for (uint i = 0; i < 4; i++) {
-        uint mask = (1 << i);
-        if (events & mask) {
-            // Copy this event string into the user string
-            const char *event_str = gpio_irq_str[i];
-            while (*event_str != '\0') {
-                *buf++ = *event_str++;
-            }
-            events &= ~mask;
-
-            // If more events add ", "
-            if (events) {
-                *buf++ = ',';
-                *buf++ = ' ';
-            }
-        }
-    }
-    *buf++ = '\0';
-}
-*/

@@ -48,7 +48,7 @@ target_sources(pico_st7735 INTERFACE
 target_include_directories(pico_st7735 INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 # Pull in pico libraries that we need
-target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi  pico_st7735 )
+target_link_libraries(${PROJECT_NAME} pico_stdlib pico_rand hardware_spi  pico_st7735 )
 
 
 # Enable usb output, disable uart output
