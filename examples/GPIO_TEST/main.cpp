@@ -136,9 +136,6 @@ void lightButtons(int n)
 //
 
 /* toma screen initializers */
-//global relative dist. vars
-const int xMaxVal = 65;
-int xPos = 0;
 
 void RenderBg(void)
 {
@@ -151,25 +148,79 @@ float scale(float x,float a, float b, float min, float max)
 {
     return (b-a)*(x-min)/(max-min) + a;
 }
+//global relative dist. vars
+const int xMaxVal = 65;
+int xPos = 0;
 void WalkAnimation() /* walk animation; random amount of distance to travel to end of screen max. 
 eventually, the animation must switch directions walking. (need to make poreo4-6 facing op. dir.*/ 
 {
-  xPos=0;//temp
-  //relative distance vars
-  
-  const uint8_t* spriteArr[4] = {poreo1,poreo2,poreo1,poreo3};
-  int idx = 0;
-  for(int i=0;xPos<=xMaxVal;i++)
-  {    
-    //go a random time
+  while(1) //temptemp
+  {
+    //go a random dist forward
     uint32_t r = get_rand_32();
-    int rand =int(scale(r,200,300,0,UINT32_MAX));
+    int dist =int(scale(r,15,65,0,UINT32_MAX));
+    printf("\nfwd %d", dist);
 
-    myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArr[idx], 63, 53);
-    idx = idx >= 3 ? 0 : idx+1; 
-    sleep_ms(rand);
-    printf("paused %d ms",rand);
-    xPos+=1;
+    const uint8_t* spriteArrFwd[4] = {poreo1,poreo2,poreo1,poreo3};
+    int idxF = 0; //index forward
+
+    for(int i=0;i<=dist;i++)
+    {    
+      myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrFwd[idxF], 63, 53);
+      idxF = idxF >= 3 ? 0 : idxF+1; 
+      xPos+=1;
+      if (xPos >= 65) 
+      {
+        printf("\nchanging dirs");
+        break;
+      }
+      sleep_ms(350);
+    }
+
+    //stay in place for random num of cycles
+    r = get_rand_32();
+    dist =int(scale(r,4,12,0,UINT32_MAX));
+    printf("\nStay in place for %d", dist);
+    idxF = 0; //index forward
+    for(int i=0;i<=dist;i++)
+    {    
+      myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrFwd[idxF], 63, 53);
+      idxF = idxF == 1 ? 0 : idxF+1; 
+      sleep_ms(500);
+    }
+    //
+
+    //go a random dist back 
+    r = get_rand_32();
+    dist =int(scale(r,15,65,0,UINT32_MAX));
+    printf("\nback %d", dist);
+
+    const uint8_t* spriteArrBck[4] = {poreo4,poreo5,poreo4,poreo6};
+    int idxB = 0; //index back
+    for(int i=0;xPos<=xMaxVal;i++)
+    {    
+      myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrBck[idxB], 63, 53);
+      idxB = idxB >= 3 ? 0 : idxB+1; 
+      xPos-=1;
+      if (xPos <= 0) 
+      {
+        printf("\nchanging dirs");
+        break;
+      }
+      sleep_ms(350);
+    }
+
+    //stay in place for random num of cycles
+    r = get_rand_32();
+    dist =int(scale(r,4,12,0,UINT32_MAX));
+    printf("\nstay in place for %d", dist);
+    idxF = 0; //index forward
+    for(int i=0;i<=dist;i++)
+    {    
+      myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrBck[idxB], 63, 53);
+      idxB = idxB == 1 ? 0 : idxB+1; 
+      sleep_ms(500);
+    }
   }
 }
 void EatAnimation()
@@ -190,19 +241,16 @@ void MenuScreen();
 /* Toma Screen main function */
 void TomaScreen() //button3 triggers interrupt to the menu screen
 {
-  sleep_ms(1200);
   RenderBg(); //render static menu components
-  sleep_ms(1000);//temp
-  EatAnimation();
-  //WalkAnimation();
+  sleep_ms(1000);
+  //EatAnimation();
+  WalkAnimation();
   while(1)
   {
     if(!gpio_get(BUTTON3)){
-      printf("button3 pressed");
       MenuScreen();//replace later
     }
   }
-  
 }
 /* Menu Screen main function 
  * I need to refactor to use interrupts 
@@ -216,7 +264,6 @@ void MenuScreen()
   while(1)
   {
     if(!gpio_get(BUTTON1)){
-      printf("button1 pressed");
       updateButtons();
       //do gpio1 things
       buttonPress-=1;
@@ -226,7 +273,6 @@ void MenuScreen()
       sleep_ms(1200);
     }
     if(!gpio_get(BUTTON2)){
-      printf("button2 pressed");
       updateButtons();
       //do gpio2 things
       buttonPress+=1;
@@ -238,7 +284,6 @@ void MenuScreen()
       sleep_ms(1200);
     }
     if(!gpio_get(BUTTON3)){
-      printf("button3 pressed");
       TomaScreen();
       //break;
     }
