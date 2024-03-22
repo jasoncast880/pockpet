@@ -28,7 +28,8 @@ add_executable(${PROJECT_NAME}
   #examples/CONTROLLER_UI_DEMO/main.cpp
   #examples/helpme/main.cpp
   #examples/MENU_TEST/main.cpp
-  examples/GPIO_TEST/main.cpp
+  #examples/GPIO_TEST/main.cpp
+  examples/IRQ_TEST/main.cpp
 )
 
 # Create map/bin/hex/uf2 files

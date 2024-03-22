@@ -238,11 +238,13 @@ void EatAnimation()
 }
  
 void MenuScreen();
-/* Toma Screen main function */
+/* Toma Screen main task */
+/*
 void TomaScreen() //button3 triggers interrupt to the menu screen
 {
   RenderBg(); //render static menu components
   sleep_ms(1000);
+
   //EatAnimation();
   WalkAnimation();
   while(1)
@@ -252,6 +254,28 @@ void TomaScreen() //button3 triggers interrupt to the menu screen
     }
   }
 }
+*/
+//doing testy things here
+
+void gpio_callback(uint gpio, uint32_t events)
+{
+  if(events & GPIO_IRQ_EDGE_RISE)
+  {
+    MenuScreen();
+  }
+}
+
+void TomaScreen() //button3 triggers interrupt to the menu screen
+{
+  RenderBg(); //render static menu components
+  sleep_ms(1000);
+
+  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &gpio_callback);
+
+  //EatAnimation();
+  WalkAnimation();
+}
+
 /* Menu Screen main function 
  * I need to refactor to use interrupts 
  * */ 
