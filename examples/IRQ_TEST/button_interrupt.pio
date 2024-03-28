@@ -1,0 +1,35 @@
+.program button_interrupt
+
+    .set PIN_BUTTON, 0
+
+    .set SM, 0
+
+    // Define instructions
+    mov pins, 1         // Set pins high
+    set pins, PIN_BUTTON   // Set PIN_BUTTON as input
+    irq y, 1            // Enable IRQ for PIO
+    wait irq0           // Wait for interrupt
+
+y:  jmp y, #0x1          // Jump to y label
+
+    irq irq0            // IRQ handler
+    irq y, 1
+    irq wait 1
+    irq irq_done        // Clear IRQ flag
+
+irq_done:
+    in pins, pins       // Read pins
+
+    test pins, PIN_BUTTON  // Check if the button pin is high
+    jmp button_pressed, z
+    irq irq_cpu, 1      // Send interrupt signal to CPU
+    jmp done
+button_pressed:
+    jmp done
+
+done:
+    irq wait 1
+    irq irq_done
+
+.endif
+

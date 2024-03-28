@@ -28,9 +28,12 @@ add_executable(${PROJECT_NAME}
   #examples/CONTROLLER_UI_DEMO/main.cpp
   #examples/helpme/main.cpp
   #examples/MENU_TEST/main.cpp
-  #examples/GPIO_TEST/main.cpp
-  examples/IRQ_TEST/main.cpp
+  examples/GPIO_TEST/main.cpp
+  #examples/IRQ_TEST/main.cpp
+  #examples/IRQ_TEST/button_interrupt.pio
 )
+
+#pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/examples/IRQ_TEST/button_interrupt.pio)
 
 # Create map/bin/hex/uf2 files
 pico_add_extra_outputs(${PROJECT_NAME})
@@ -49,7 +52,7 @@ target_sources(pico_st7735 INTERFACE
 target_include_directories(pico_st7735 INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 # Pull in pico libraries that we need
-target_link_libraries(${PROJECT_NAME} pico_stdlib pico_rand hardware_spi  pico_st7735 )
+target_link_libraries(${PROJECT_NAME} pico_stdlib pico_rand hardware_spi  pico_st7735 hardware_pio )
 
 
 # Enable usb output, disable uart output

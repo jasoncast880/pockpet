@@ -1,9 +1,3 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
@@ -16,14 +10,9 @@
 #define TEST_DELAY2 2000
 #define TEST_DELAY5 5000
 
-// push buttons
-#define BUTTON1 2
-#define BUTTON2 3
-#define BUTTON3 4
-
 /* global vars, stored data*/
 ST7735_TFT myTFT;
-int myBars = 2;
+int myBars = 2; //temp
 
 /* setup fxn for TFT screen */
 void tftSetup(void)
@@ -72,24 +61,110 @@ void tftSetup(void)
 }
 //
 
-/* GPIO BUTTON SETUP */
+// push buttons
+#define BUTTON1 2
+#define BUTTON2 3
+#define BUTTON3 4
+
+int buttonPress = 0;
+void MenuScreen();
+void lightButtons(int n);
+void TomaScreen();
+
+/* Implement Menu Button Handler & Associated State Machine Here.
+ * Declare Any Screen functionalities Above Ad Hoc. */
+
+//Shared Flags and Vars to handle UI State
+
+//button1 SM.
+//define callback functions
+void run_button1(uint gpio, uint32_t events)
+{ 
+  printf("button1 pressed");
+  buttonPress-=1;
+  buttonPress = (buttonPress<=0) ? 2 : buttonPress;
+  lightButtons(buttonPress);
+}
+
+/*
+//define function pointer type for callback functions
+typedef void (*CallbackFunction)();
+
+//define state variable and initial state
+CallbackFunction current_callback1 = run_button1;
+
+//interrupt handler
+void button1_interrupt_handler(uint gpio, uint32_t events)
+{
+  buttonPress-=1;
+  buttonPress = (buttonPress<=0) ? 2 : buttonPress;
+
+  current_callback1();
+  printf("button1 pressed");
+  sleep_ms(1200);
+
+  //SM Logic Here
+  //current_callback1 = run_button1;
+}
+*/
+
+//button2 SM
+//define callback functions
+void run_button2(uint gpio, uint32_t events)
+{
+  printf("button2 pressed");
+  buttonPress+=1;
+  buttonPress = (buttonPress>2) ? 1 : buttonPress;
+
+   lightButtons(buttonPress);
+}
+
+/*
+//define function pointer type for callback functions
+typedef void (*CallbackFunction)();
+
+//define state variable and initial state
+CallbackFunction current_callback2 = run_button2;
+
+//interrupt handler
+void button2_interrupt_handler(uint gpio, uint32_t events)
+{
+  buttonPress+=1;
+  buttonPress = (buttonPress>2) ? 1 : buttonPress;
+
+  current_callback2();
+  printf("button2 pressed");
+  sleep_ms(1200);
+
+  //SM Logic Here
+  //current_callback; = run_button2;
+}
+*/
+
+void run_button3(uint gpio, uint32_t events)
+{
+  TomaScreen();
+}
+
 void buttonSetup()
 {
   //buttons setup
   gpio_init(BUTTON1);
   gpio_set_dir(BUTTON1, GPIO_IN);
   gpio_pull_up(BUTTON1);
-
+  gpio_set_irq_enabled_with_callback(BUTTON1, GPIO_IRQ_EDGE_RISE, true, &run_button1);
+    
   gpio_init(BUTTON2);
   gpio_set_dir(BUTTON2, GPIO_IN);
   gpio_pull_up(BUTTON2);
-  
+  gpio_set_irq_enabled_with_callback(BUTTON2, GPIO_IRQ_EDGE_FALL, true, &run_button2);
+
   gpio_init(BUTTON3);
   gpio_set_dir(BUTTON3, GPIO_IN);
   gpio_pull_up(BUTTON3);
+  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &run_button3);
 }
 //
-
 
 /* Menu Screen TFT functions */
 void ShowBars(int numBars);
@@ -120,15 +195,18 @@ void ShowBars(int numBars)
     myTFT.TFTdrawBitmap16Data(22+offset, 102, (uint8_t *)pbar1,13,10);
   }
 }
+
 void lightButtons(int n)
 {
   if (n == 1) 
   {
+    updateButtons();
     myTFT.TFTdrawBitmap16Data(84,12, (uint8_t *)phome_button2,42,27);
     //draw over 1
   }
   else if (n == 2)
   {
+    updateButtons();
     myTFT.TFTdrawBitmap16Data(84,42, (uint8_t *)pfood_button2,42,27);
     //draw 2
   }
@@ -238,88 +316,45 @@ void EatAnimation()
 }
  
 void MenuScreen();
-/* Toma Screen main task */
-/*
-void TomaScreen() //button3 triggers interrupt to the menu screen
-{
-  RenderBg(); //render static menu components
-  sleep_ms(1000);
 
-  //EatAnimation();
-  WalkAnimation();
-  while(1)
-  {
-    if(!gpio_get(BUTTON3)){
-      MenuScreen();//replace later
-    }
-  }
-}
-*/
 //doing testy things here
 
-void gpio_callback(uint gpio, uint32_t events)
-{
-  if(events & GPIO_IRQ_EDGE_RISE)
-  {
-    MenuScreen();
-  }
-}
 
 void TomaScreen() //button3 triggers interrupt to the menu screen
 {
   RenderBg(); //render static menu components
-  sleep_ms(1000);
 
-  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &gpio_callback);
+  //gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &gpio_callback);
 
   //EatAnimation();
   WalkAnimation();
 }
+
 
 /* Menu Screen main function 
  * I need to refactor to use interrupts 
  * */ 
+
 void MenuScreen() 
 {
-  int buttonPress = 0;
   RenderMenu(); //render static menu components
-  sleep_ms(1200);
+  sleep_ms(500);
+  buttonSetup();
   
-  while(1)
-  {
-    if(!gpio_get(BUTTON1)){
-      updateButtons();
-      //do gpio1 things
-      buttonPress-=1;
-      buttonPress = (buttonPress<=0) ? 2 : buttonPress;
-      lightButtons(buttonPress);
-
-      sleep_ms(1200);
-    }
-    if(!gpio_get(BUTTON2)){
-      updateButtons();
-      //do gpio2 things
-      buttonPress+=1;
-      //use the commented out code when u ready to add more buttons
-      buttonPress = (buttonPress>2) ? 1 : buttonPress;
-      //buttonPress = (buttonPress>4) ? 4 : buttonPress;
-      lightButtons(buttonPress);
-      
-      sleep_ms(1200);
-    }
-    if(!gpio_get(BUTTON3)){
-      TomaScreen();
-      //break;
-    }
-  }
 }
 //
 
 int main()
 {
 	tftSetup();
-  buttonSetup();
   //run the toma screen
-  TomaScreen();
-  //MenuScreen();
+  //TomaScreen();
+  MenuScreen();
+  
+  while(1)
+  {
+    printf("\nrunning");
+    sleep_ms(2000);
+  }
+  return 0;
 }
