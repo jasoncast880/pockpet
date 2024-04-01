@@ -3,7 +3,8 @@ file(GLOB SOURCES "*.cpp")
 
 add_executable(${ProjectName}
               #test/test1/main.cpp
-              test/test4/main.cpp
+              #test/test5/main.cpp
+              main.cpp
               )
 
 target_link_libraries(${ProjectName} 

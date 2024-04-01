@@ -1,4 +1,3 @@
-/* test4/main.c */
 #include "FreeRTOS.h"
 #include "task.h"
 #include <stdio.h>
@@ -7,91 +6,73 @@
 #include "hardware/rtc.h"
 #include "pico/util/datetime.h"
 
-datetime_t t = 
-{
-            .year  = 2024,
-            .month = 01,
-            .day   = 01,
-            .dotw  = 1, // 0 is Sunday, so 5 is Friday
-            .hour  = 59,
-            .min   = 59,
-            .sec   = 59
-};
-  
-#define QUEUE_LENGTH 5
-#define ITEM_SIZE sizeof(t)
+//make a superloop that can read through your thingies without using rtos kernel.
+//
 
-//rtc things
-char datetime_buf[256];
-char *datetime_str = &datetime_buf[0];
 
-QueueHandle_t myQueue;
+// Define a structure to hold RTC time and any other relevant data
+typedef struct {
+    datetime_t datetime; // Using datetime_t type from pico/util/datetime.h
+    // Add any other relevant fields here
+} RTCData;
 
-void init_rtc(&t) //for now the timeset is in the initializer; 
-{
-  rtc_init();
-  rtc_set_datetime(&t);
-}
-uint32_t get_rtc()
-{
-  rtc_get_datetime(&t);
-  return datetime_tostr(datetime_str, sizeof(datetime_buf), &t);
-}
+// Sender task function
+void senderTask(void *pvParameters) {
+    QueueHandle_t rtcQueue = (QueueHandle_t)pvParameters;
 
-void initQueue() 
-{
-  myQueue = xQueueCreate(QUEUE_LENGTH, ITEM_SIZE);
-  if(myQueue == NULL)
-  {
-    //queue creation has failed
-    printf("Queue creation failed");
-  }
-}
-/*
-void buttonTask(){}
-void sound_driverTask(){}
-*/
-void displayTask(void *pvParameters) //displayTask is a queue consumer
-{
-  int timeReceived;
-  while(1) 
-  {
-    if(xQueueReceive(myQueue, &timeReceived, portMAX_DELAY) != pdPASS)
-    {
-      printf("data failed to be received");
+    while(1) {
+        // Fetch current RTC time
+        datetime_t currentTime;
+        rtc_get_datetime(&currentTime);
+
+        // Create a structure to hold RTC data
+        RTCData rtcData;
+        rtcData.datetime = currentTime;
+
+        // Send the RTC data through the queue
+        xQueueSend(rtcQueue, &rtcData, portMAX_DELAY);
+
+        // Delay or do other tasks as needed
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Example: delay for 1 second
     }
-    printf("time right now: %d\n", timeReceived);
-    vTaskDelay(pdMS_TO_TICKS(1000));
-  }
 }
 
-void rtcTask(void *pvParameters) //queue producer
-{
-  uint32_t timeToSend = get_rtc();
-  while(1) 
-  {
-    if(xQueueReceive(myQueue, &timeToSend, portMAX_DELAY) != pdPASS)
-    {
-      printf("data failed to be sent");
+// Receiver task function
+void receiverTask(void *pvParameters) {
+    QueueHandle_t rtcQueue = (QueueHandle_t)pvParameters;
+
+    while(1) {
+        RTCData rtcData;
+
+        // Receive data from the queue
+        if(xQueueReceive(rtcQueue, &rtcData, portMAX_DELAY) == pdPASS) {
+            // Process the received RTC data
+            datetime_t receivedTime = rtcData.datetime;
+
+            // Do something with the received time
+            char datetimeStr[20]; // Adjust the size as needed
+            datetime_to_str(datetimeStr, sizeof(datetimeStr), &receivedTime);
+            printf("Received time: %s\n", datetimeStr);
+        }
     }
-  }
- 
 }
 
-int main()
-{
-  stdio_init_all();
-  init_rtc(0);
+int main() {
+    // Initialize RTC
+    stdio_init_all();
+    rtc_init();
+    
 
-  myQueue = xQueueCreate(QUEUE_LENGTH, ITEM_SIZE);
-  
-  xTaskCreate(displayTask, "displayTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
-  xTaskCreate(rtcTask, "rtcTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
+    // Create a queue to pass RTC data
+    QueueHandle_t rtcQueue = xQueueCreate(10, sizeof(RTCData));
 
-  vTaskStartScheduler();
-  return 0;
+    // Create sender and receiver tasks
+    xTaskCreate(senderTask, "Sender", configMINIMAL_STACK_SIZE, (void *)&rtcQueue, tskIDLE_PRIORITY + 1, NULL);
+    xTaskCreate(receiverTask, "Receiver", configMINIMAL_STACK_SIZE, (void *)&rtcQueue, tskIDLE_PRIORITY + 1, NULL);
+
+    // Start the scheduler
+    vTaskStartScheduler();
+
+    return 0;
 }
 
-/*
- * Expected output: time right now: (some number)
-*/

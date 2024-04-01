@@ -1,31 +1,61 @@
+/**
+ * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 #include "FreeRTOS.h"
 #include "task.h"
+#include "smphr.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "hardware/gpio.h"
 
+/*
+ * Include Later when intergrating the tft lib
+#include "pico/rand.h"
+#include "st7735/ST7735_TFT.hpp"
+#include "st7735/ST7735_TFT_Assets.hpp"
+#include <string>
+*/
 
-void led_task(void *pvParameters)
-{   
-    const uint LED_PIN = PICO_DEFAULT_LED_PIN;
-    gpio_init(LED_PIN);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
-    while (true) {
-        gpio_put(LED_PIN, 1);
-        printf("LED ON\n");
-        vTaskDelay(100);
-        gpio_put(LED_PIN, 0);
-        printf("LED OFF\n");
-        vTaskDelay(100);
+// push buttons
+#define BUTTON1 2
+#define BUTTON2 3
+#define BUTTON3 4
+
+SemaphoreHandle_t buttonSemaphore
+
+void buttonTask(void* pvParameters) {
+  gpio_init(BUTTON1);
+  gpio_set_dir(BUTTON1, GPIO_IN);
+  gpio_pull_up(BUTTON1);
+
+  while(1) {
+    if(gpio_get(BUTTON1) == 0){
+      xSemaporeGive(BUTTON1);
+      while(gpio_get(BUTTON1) == 0);
     }
+  vTaskDelay(pdMS_TO_TICKS(100));
+  }
 }
 
-int main()
-{
-    stdio_init_all();
-
-    xTaskCreate(led_task, "LED_Task", 256, NULL, 1, NULL);
-    vTaskStartScheduler();
-
-    return 0;
-    //while(1){};
+void speakTask(void* pvParameters) {
+  while(1) {
+    if(xSemaphoreTake(buttonSemaphore, portMAX_DELAY) {
+      printf("Button1 Pressed!\n);
+    }
+  }
 }
+
+int main() {
+  stdio_init_all();
+  buttonSemaphore = xSemaphoreCreateBinary();
+    
+  xTaskCreate(buttonTask, "ButtonTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
+  xTaskCreate(speakTask, "SpeakTask", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+2, NULL);
+
+  vTaskStartScheduler();
+  return 0;
+}
+
