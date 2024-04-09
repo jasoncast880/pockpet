@@ -24,11 +24,11 @@ add_executable(${PROJECT_NAME}
   #examples/ST7735_TFT_BMP_DATA/main.cpp
   #examples/ANIMATION_TEST/main.cpp
   #examples/DMA_TEST/main.c
-  #examples/CASTICO/main.cpp
+  examples/CASTICO/main.cpp
   #examples/CONTROLLER_UI_DEMO/main.cpp
   #examples/helpme/main.cpp
   #examples/MENU_TEST/main.cpp
-  examples/GPIO_TEST/main.cpp
+  #examples/GPIO_TEST/main.cpp
   #examples/IRQ_TEST/main.cpp
   #examples/IRQ_TEST/button_interrupt.pio
 )

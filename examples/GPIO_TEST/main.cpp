@@ -80,10 +80,13 @@ void TomaScreen();
 //define callback functions
 void run_button1(uint gpio, uint32_t events)
 { 
-  printf("button1 pressed");
-  buttonPress-=1;
-  buttonPress = (buttonPress<=0) ? 2 : buttonPress;
-  lightButtons(buttonPress);
+  if(gpio==BUTTON1)
+  { 
+    printf("button1 pressed");
+    buttonPress-=1;
+    buttonPress = (buttonPress<=0) ? 2 : buttonPress;
+    lightButtons(buttonPress);
+  }
 }
 
 /*
@@ -112,11 +115,13 @@ void button1_interrupt_handler(uint gpio, uint32_t events)
 //define callback functions
 void run_button2(uint gpio, uint32_t events)
 {
-  printf("button2 pressed");
-  buttonPress+=1;
-  buttonPress = (buttonPress>2) ? 1 : buttonPress;
-
-   lightButtons(buttonPress);
+  if(gpio == BUTTON2)
+  {
+    printf("button2 pressed");
+    buttonPress+=1;
+    buttonPress = (buttonPress>2) ? 1 : buttonPress;
+    lightButtons(buttonPress);
+  }
 }
 
 /*
@@ -146,24 +151,7 @@ void run_button3(uint gpio, uint32_t events)
   TomaScreen();
 }
 
-void buttonSetup()
-{
-  //buttons setup
-  gpio_init(BUTTON1);
-  gpio_set_dir(BUTTON1, GPIO_IN);
-  gpio_pull_up(BUTTON1);
-  gpio_set_irq_enabled_with_callback(BUTTON1, GPIO_IRQ_EDGE_RISE, true, &run_button1);
-    
-  gpio_init(BUTTON2);
-  gpio_set_dir(BUTTON2, GPIO_IN);
-  gpio_pull_up(BUTTON2);
-  gpio_set_irq_enabled_with_callback(BUTTON2, GPIO_IRQ_EDGE_FALL, true, &run_button2);
 
-  gpio_init(BUTTON3);
-  gpio_set_dir(BUTTON3, GPIO_IN);
-  gpio_pull_up(BUTTON3);
-  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &run_button3);
-}
 //
 
 /* Menu Screen TFT functions */
@@ -229,9 +217,17 @@ float scale(float x,float a, float b, float min, float max)
 //global relative dist. vars
 const int xMaxVal = 65;
 int xPos = 0;
-void WalkAnimation() /* walk animation; random amount of distance to travel to end of screen max. 
-eventually, the animation must switch directions walking. (need to make poreo4-6 facing op. dir.*/ 
+void EatAnimation(uint gpio, uint32_t events);
+
+void WalkAnimation(uint gpio, uint32_t events) 
 {
+  //disable all current interrupts
+  for (uint gpio = 0; gpio < 15; gpio++) 
+  {
+        gpio_set_irq_enabled(gpio, GPIO_IRQ_EDGE_RISE, false);
+  } 
+  //set an interrupt to exit from this loop and go to eat
+  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &EatAnimation);
   while(1) //temptemp
   {
     //go a random dist forward
@@ -301,8 +297,15 @@ eventually, the animation must switch directions walking. (need to make poreo4-6
     }
   }
 }
-void EatAnimation()
+void EatAnimation(uint gpio, uint32_t events)
 {
+  //disable all current interrupts
+  for (uint gpio = 0; gpio < 15; gpio++) 
+  {
+        gpio_set_irq_enabled(gpio, GPIO_IRQ_EDGE_RISE, false);
+  } 
+  //set an interrupt to exit from this loop and go to eat
+  gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &WalkAnimation);
   const uint8_t* dogArr[4] = {poreo1,poreo3};
   const uint8_t* spriteArr[6] = {psteak1,psteak2,psteak3,psteak4,psteak5,psteak6};
   int idx = 0;
@@ -327,34 +330,44 @@ void TomaScreen() //button3 triggers interrupt to the menu screen
   //gpio_set_irq_enabled_with_callback(BUTTON3, GPIO_IRQ_EDGE_RISE, true, &gpio_callback);
 
   //EatAnimation();
-  WalkAnimation();
 }
 
-
-/* Menu Screen main function 
- * I need to refactor to use interrupts 
- * */ 
 
 void MenuScreen() 
 {
   RenderMenu(); //render static menu components
-  sleep_ms(500);
-  buttonSetup();
+  sleep_ms(200);
   
 }
 //
 
 int main()
 {
+  stdio_init_all();
 	tftSetup();
+
+  gpio_init(BUTTON1);
+  gpio_set_dir(BUTTON1, GPIO_IN);
+  gpio_pull_up(BUTTON1);
+    
+  gpio_init(BUTTON2);
+  gpio_set_dir(BUTTON2, GPIO_IN);
+  gpio_pull_up(BUTTON2);
+
+  gpio_init(BUTTON3);
+  gpio_set_dir(BUTTON3, GPIO_IN);
+  gpio_pull_up(BUTTON3);
+
   //run the toma screen
-  //TomaScreen();
-  MenuScreen();
+  TomaScreen();
+  WalkAnimation(69,69);
   
   while(1)
   {
-    printf("\nrunning");
+    //should never get here???
+    printf("\n running");
     sleep_ms(2000);
   }
   return 0;
 }
+
