@@ -59,13 +59,13 @@ void tftSetup(void)
 	//**********************************************************
 }
 
-
 void RenderBg()
 {
   myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 140);
   sleep_ms(500);
   //TFT_MILLISEC_DELAY(TEST_DELAY2);
 }
+
 //random num hashing fxn; pass ints as floats, process, then cast it back into int afterwards
 float scale(float x,float a, float b, float min, float max)
 {
@@ -73,17 +73,21 @@ float scale(float x,float a, float b, float min, float max)
 }
 
 //global relative dist. vars
-const int xMaxVal = 65;
+#define xMaxVal = 65;
 int xPos = 0;
 
 #define BUTTON1 2
 #define BUTTON2 3
 #define BUTTON3 4
 
-void EatAnimation();
+void EatAnimation(int);
 void WalkAnimation();
+void CleanFloor();
+void ToggleSleepAnimation(int);
 
-void WalkAnimation() 
+bool sleepStatus = false;
+
+void WalkAnimation(int xPos) 
 {
   RenderBg();
   while(1)
@@ -97,11 +101,21 @@ void WalkAnimation()
     int dist =int(scale(r,15,65,0,UINT32_MAX));
     printf("\nfwd %d", dist);
     for(int i=0;i<=dist;i++)
-    {    
-      if(gpio_get(BUTTON3)==0)
+    {  
+      if(gpio_get(BUTTON1)==0)
       {
         printf("b3 pressed\n"); 
-        EatAnimation();  
+        CleanFloor();  
+      }
+        else if(gpio_get(BUTTON2)==0)
+      {
+        printf("b3 pressed\n"); 
+        ToggleSleepAnimation(xPos);  
+      }
+        else if(gpio_get(BUTTON3)==0)
+      {
+        printf("b3 pressed\n"); 
+        EatAnimation(xPos);  
       }
       myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrFwd[idx], 63, 53);
       idx = idx >= 3 ? 0 : idx+1; 
@@ -121,10 +135,20 @@ void WalkAnimation()
     printf("\nStay in place for %d", dist);
     for(int i=0;i<=dist;i++)
     {    
-      if(gpio_get(BUTTON3)==0)
+      if(gpio_get(BUTTON1)==0)
       {
         printf("b3 pressed\n"); 
-        EatAnimation();  
+        CleanFloor();  
+      }
+        else if(gpio_get(BUTTON2)==0)
+      {
+        printf("b3 pressed\n"); 
+        ToggleSleepAnimation(xPos);  
+      }
+        else if(gpio_get(BUTTON3)==0)
+      {
+        printf("b3 pressed\n"); 
+        EatAnimation(xPos);  
       }
       myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrBck[idx], 63, 53);
       idx = idx == 1 ? 0 : idx+1; 
@@ -140,10 +164,20 @@ void WalkAnimation()
 
     for(int i=0;xPos<=xMaxVal;i++)
     {    
-      if(gpio_get(BUTTON3)==0)
+      if(gpio_get(BUTTON1)==0)
       {
         printf("b3 pressed\n"); 
-        EatAnimation();  
+        CleanFloor();  
+      }
+        else if(gpio_get(BUTTON2)==0)
+      {
+        printf("b3 pressed\n"); 
+        ToggleSleepAnimation(xPos);  
+      }
+        else if(gpio_get(BUTTON3)==0)
+      {
+        printf("b3 pressed\n"); 
+        EatAnimation(xPos);
       }
       myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrBck[idx], 63, 53);
       idx = idx >= 3 ? 0 : idx+1; 
@@ -163,10 +197,20 @@ void WalkAnimation()
     printf("\nstay in place for %d", dist);
     for(int i=0;i<=dist;i++)
     {    
-      if(gpio_get(BUTTON3)==0)
+      if(gpio_get(BUTTON1)==0)
       {
         printf("b3 pressed\n"); 
-        EatAnimation();  
+        CleanFloor();  
+      }
+        else if(gpio_get(BUTTON2)==0)
+      {
+        printf("b3 pressed\n"); 
+        ToggleSleepAnimation(xPos);
+      }
+        else if(gpio_get(BUTTON3)==0)
+      {
+        printf("b3 pressed\n"); 
+        EatAnimation(xPos);  
       }
       myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrFwd[idx], 63, 53);
       idx = idx == 1 ? 0 : idx+1; 
@@ -175,7 +219,7 @@ void WalkAnimation()
   }
 }
 
-void EatAnimation()
+void EatAnimation(int xPos)
 {
   RenderBg();
   const uint8_t* dogArr[4] = {poreo1,poreo3};
@@ -183,14 +227,37 @@ void EatAnimation()
   int idx = 0;
   for(int i=0;i<6;i++)
   {    
-    //pollButton3(1);
     printf("running eat animations");
-    myTFT.TFTdrawBitmap16Data(15, 54, (uint8_t*)dogArr[idx], 63, 53);
+    myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)dogArr[idx], 63, 53);
     myTFT.TFTdrawBitmap16Data(52, 115, (uint8_t*)spriteArr[i], 34, 21);
     idx = idx >= 1 ? 0 : idx+1; 
     sleep_ms(500);
   }
   WalkAnimation();
+}
+
+void SleepAnimation(int xPos)
+{
+  const uint8_t* spriteArrSleep[2] = {poreoSleep1,poreoSleep2};
+  while(1)
+  {
+    //run animation loop while polling button 2.
+    for(int idx=0;idx<2;i++)
+    {    
+      if(gpio_get(BUTTON2)==0)
+      {
+        printf("b2 pressed\n"); 
+        WalkAnimation(xPos);  
+      }
+      myTFT.TFTdrawBitmap16Data(xPos, 54, (uint8_t*)spriteArrSleep[idx], 63, 53);
+      sleep_ms(500);
+    }
+  }
+}
+
+void CleanFloor()
+{
+  //fill screen with blank box
 }
 
 int main()
@@ -212,8 +279,8 @@ int main()
   gpio_set_dir(BUTTON3, GPIO_IN);
   gpio_pull_up(BUTTON3);
 
-  //run the toma screen
-  EatAnimation();
+  //run the tama screen
+  WalkAnimation(xPos);
   
   while(1)
   {
