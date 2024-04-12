@@ -59,6 +59,7 @@ void tftSetup(void)
 	//**********************************************************
 }
 
+
 void RenderBg()
 {
   myTFT.TFTdrawBitmap16Data( 0, 0, (uint8_t *)pbg_1, 128, 140);
@@ -70,6 +71,7 @@ float scale(float x,float a, float b, float min, float max)
 {
     return (b-a)*(x-min)/(max-min) + a;
 }
+
 //global relative dist. vars
 const int xMaxVal = 65;
 int xPos = 0;
@@ -79,19 +81,8 @@ int xPos = 0;
 #define BUTTON3 4
 
 void EatAnimation();
+void WalkAnimation();
 
-void pollButton3()
-{
-  if(gpio_get(BUTTON3)==0)
-  {
-    printf("b3 pressed\n"); 
-    EatAnimation();  
-  }
-  else
-  {
-    printf("b3 np\n"); 
-  }
-}
 void WalkAnimation() 
 {
   RenderBg();
