@@ -20,3 +20,9 @@ extern const uint8_t * psteak4;
 extern const uint8_t * psteak5;
 extern const uint8_t * psteak6;
 
+//facing left
+extern const uint8_t * poreo_sleep1; //63,53 ; (x,54)
+extern const uint8_t * poreo_sleep2; //63,53 ; (x,54)
+extern const uint8_t * poreo_sleep3; //63,53 ; (x,54)
+
+//extern const uint8_t * poop_sprite;
