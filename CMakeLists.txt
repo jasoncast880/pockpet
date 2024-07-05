@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.18)
 
 # Include build functions from Pico SDK
-include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 # Set name of project (as PROJECT_NAME) and C/C++ standards
 project(pockpet C CXX ASM)
