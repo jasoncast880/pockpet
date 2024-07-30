@@ -1331,8 +1331,6 @@ Discarded input sections
                 0x00000000      0x384 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .text._ZN19ST7735_TFT_graphics16spiWriteSoftwareEh
                 0x00000000      0x2b0 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- .text._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht
-                0x00000000       0xfc ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics13TFTdrawBitmapEssssttPht.str1.4
                 0x00000000      0x178 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .text._ZN19ST7735_TFT_graphics13TFTdrawBitmapEssssttPht
@@ -1350,9 +1348,9 @@ Discarded input sections
  .text          0x00000000        0x0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .data          0x00000000        0x0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .bss           0x00000000        0x0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- .text          0x00000000        0x0 /tmp/ccB2kTZn.o
- .data          0x00000000        0x0 /tmp/ccB2kTZn.o
- .bss           0x00000000        0x0 /tmp/ccB2kTZn.o
+ .text          0x00000000        0x0 /tmp/cc8eF80d.o
+ .data          0x00000000        0x0 /tmp/cc8eF80d.o
+ .bss           0x00000000        0x0 /tmp/cc8eF80d.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1532,11 +1530,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccB2kTZn.o
+ .boot2         0x10000000      0x100 /tmp/cc8eF80d.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0xafa8
+.text           0x10000100     0xb0a0
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2306,32 +2304,34 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .text._ZN19ST7735_TFT_graphics18spiWriteDataBufferEPhm
                 0x1000a0f4      0x3fc ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
                 0x1000a0f4                ST7735_TFT_graphics::spiWriteDataBuffer(unsigned char*, unsigned long)
+ .text._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht
+                0x1000a4f0       0xfc ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1000a4f0                ST7735_TFT_graphics::TFTfillRectangle(unsigned char, unsigned char, unsigned char, unsigned char, unsigned short)
  .text._ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh
-                0x1000a4f0      0x1a0 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x1000a4f0                ST7735_TFT_graphics::TFTdrawBitmap16Data(unsigned char, unsigned char, unsigned char*, unsigned char, unsigned char)
+                0x1000a5ec      0x1a0 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1000a5ec                ST7735_TFT_graphics::TFTdrawBitmap16Data(unsigned char, unsigned char, unsigned char*, unsigned char, unsigned char)
  .text._ZN19ST7735_TFT_graphics13TFTfillScreenEt
-                0x1000a690       0xbc ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x1000a690                ST7735_TFT_graphics::TFTfillScreen(unsigned short)
- .text          0x1000a74c       0x28 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
-                0x1000a74c                malloc
-                0x1000a760                free
- .text          0x1000a774      0x574 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x1000a774                _malloc_r
- .text          0x1000ace8        0x8 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
-                0x1000ace8                __malloc_lock
-                0x1000acec                __malloc_unlock
- .text          0x1000acf0       0x24 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x1000acf0                _sbrk_r
- .text          0x1000ad14       0x5c /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x1000ad14                strlen
- .text          0x1000ad70      0x260 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
-                0x1000ad70                _malloc_trim_r
-                0x1000ae0c                _free_r
+                0x1000a78c       0xbc ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1000a78c                ST7735_TFT_graphics::TFTfillScreen(unsigned short)
+ .text          0x1000a848       0x28 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
+                0x1000a848                malloc
+                0x1000a85c                free
+ .text          0x1000a870      0x574 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x1000a870                _malloc_r
+ .text          0x1000ade4        0x8 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
+                0x1000ade4                __malloc_lock
+                0x1000ade8                __malloc_unlock
+ .text          0x1000adec       0x24 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x1000adec                _sbrk_r
+ .text          0x1000ae10       0x5c /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x1000ae10                strlen
+ .text          0x1000ae6c      0x260 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
+                0x1000ae6c                _malloc_trim_r
+                0x1000af08                _free_r
  *(.fini)
- .fini          0x1000afd0        0x4 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crti.o
-                0x1000afd0                _fini
- *fill*         0x1000afd4        0x4 
- .fini.__stub   0x1000afd8       0xd0 linker stubs
+ .fini          0x1000b0cc        0x4 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crti.o
+                0x1000b0cc                _fini
+ .fini.__stub   0x1000b0d0       0xd0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2343,251 +2343,251 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x1000b0a8        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x1000b0a8                        . = ALIGN (0x4)
+ .eh_frame      0x1000b1a0        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x1000b1a0                        . = ALIGN (0x4)
 
-.glue_7         0x1000b0a8        0x0
- .glue_7        0x1000b0a8        0x0 linker stubs
+.glue_7         0x1000b1a0        0x0
+ .glue_7        0x1000b1a0        0x0 linker stubs
 
-.glue_7t        0x1000b0a8        0x0
- .glue_7t       0x1000b0a8        0x0 linker stubs
+.glue_7t        0x1000b1a0        0x0
+ .glue_7t       0x1000b1a0        0x0 linker stubs
 
-.vfp11_veneer   0x1000b0a8        0x0
- .vfp11_veneer  0x1000b0a8        0x0 linker stubs
+.vfp11_veneer   0x1000b1a0        0x0
+ .vfp11_veneer  0x1000b1a0        0x0 linker stubs
 
-.v4_bx          0x1000b0a8        0x0
- .v4_bx         0x1000b0a8        0x0 linker stubs
+.v4_bx          0x1000b1a0        0x0
+ .v4_bx         0x1000b1a0        0x0 linker stubs
 
-.iplt           0x1000b0a8        0x0
- .iplt          0x1000b0a8        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x1000b1a0        0x0
+ .iplt          0x1000b1a0        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x1000b0a8    0x22d9c
+.rodata         0x1000b1a0    0x22d9c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata._Z8tftSetupv.str1.4
-                0x1000b0a8        0xe CMakeFiles/pockpetv1.dir/main.cpp.obj
- *fill*         0x1000b0b6        0x2 
+                0x1000b1a0        0xe CMakeFiles/pockpetv1.dir/main.cpp.obj
+ *fill*         0x1000b1ae        0x2 
  .rodata._Z14SleepAnimationv.str1.4
-                0x1000b0b8       0x23 CMakeFiles/pockpetv1.dir/main.cpp.obj
- *fill*         0x1000b0db        0x1 
+                0x1000b1b0       0x23 CMakeFiles/pockpetv1.dir/main.cpp.obj
+ *fill*         0x1000b1d3        0x1 
  .rodata._Z13WalkAnimationv.str1.4
-                0x1000b0dc        0x9 CMakeFiles/pockpetv1.dir/main.cpp.obj
- *fill*         0x1000b0e5        0x3 
+                0x1000b1d4        0x9 CMakeFiles/pockpetv1.dir/main.cpp.obj
+ *fill*         0x1000b1dd        0x3 
  .rodata.spin_lock_claim_unused.str1.4
-                0x1000b0e8       0x1b CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x1000b103        0x1 
+                0x1000b1e0       0x1b CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x1000b1fb        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x1000b104       0x1b CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000b11f        0x1 
+                0x1000b1fc       0x1b CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000b217        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x1000b120       0x22 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1000b142        0x2 
+                0x1000b218       0x22 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x1000b23a        0x2 
  .rodata.panic.str1.4
-                0x1000b144       0x10 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000b23c       0x10 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x12 (size before relaxing)
  .rodata.hard_assertion_failure.str1.4
-                0x1000b154        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000b24c        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x1000b160       0x15 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1000b175        0x3 
+                0x1000b258       0x15 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x1000b26d        0x3 
  .rodata._vsnprintf
-                0x1000b178      0x19c CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1000b314        0x4 
+                0x1000b270      0x19c CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x1000b40c        0x4 
  .rodata.pow10.0
-                0x1000b318       0x50 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000b410       0x50 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__wrap_malloc.str1.4
-                0x1000b368        0xe CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- *fill*         0x1000b376        0x2 
+                0x1000b460        0xe CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ *fill*         0x1000b46e        0x2 
  .rodata.str1.4
-                0x1000b378       0x40 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000b470       0x40 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x1000b3b8        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000b4b0        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x1000b3c4        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000b4bc        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x1000b3d0        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000b4c8        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x1000b3dc        0x2 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x1000b3de        0x2 
+                0x1000b4d4        0x2 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000b4d6        0x2 
  .rodata._resetd_driver
-                0x1000b3e0       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000b4d8       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x1000b3f8       0x13 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x1000b40b        0x1 
+                0x1000b4f0       0x13 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x1000b503        0x1 
  .rodata.__bi_182.0
-                0x1000b40c        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000b504        0xc CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x1000b418       0x2a CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000b442        0x2 
+                0x1000b510       0x2a CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x1000b53a        0x2 
  .rodata.usbd_desc_str
-                0x1000b444       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000b53c       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_cfg
-                0x1000b45c       0x54 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000b554       0x54 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x1000b4b0       0x12 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000b4c2        0x2 
+                0x1000b5a8       0x12 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x1000b5ba        0x2 
  .rodata.str1.4
-                0x1000b4c4       0x14 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1000b5bc       0x14 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x1000b4d8       0x53 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x1000b52b        0x1 
+                0x1000b5d0       0x53 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x1000b623        0x1 
  .rodata.tud_task_ext
-                0x1000b52c       0x8c CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000b624       0x8c CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x1000b5b8       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000b6b0       0x18 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._ZN10ST7735_TFT4BcmdEv.str1.4
-                0x1000b5d0       0x25 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
- *fill*         0x1000b5f5        0x3 
+                0x1000b6c8       0x25 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
+ *fill*         0x1000b6ed        0x3 
  .rodata._ZN10ST7735_TFT5Rcmd1Ev.str1.4
-                0x1000b5f8       0x10 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x1000b6f0       0x10 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
  .rodata._ZTV10ST7735_TFT
-                0x1000b608       0x14 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x1000b608                vtable for ST7735_TFT
- .rodata        0x1000b61c       0x20 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x1000b700       0x14 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x1000b700                vtable for ST7735_TFT
+ .rodata        0x1000b714       0x20 ../st7735/libst7735.a(ST7735_TFT.cpp.obj)
  .rodata._ZL10sleeping_4
-                0x1000b63c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1000d052        0x2 
+                0x1000b734     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1000d14a        0x2 
  .rodata._ZL10sleeping_3
-                0x1000d054     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1000ea6a        0x2 
+                0x1000d14c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1000eb62        0x2 
  .rodata._ZL10sleeping_2
-                0x1000ea6c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x10010482        0x2 
+                0x1000eb64     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1001057a        0x2 
  .rodata._ZL10sleeping_1
-                0x10010484     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x10011e9a        0x2 
+                0x1001057c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x10011f92        0x2 
  .rodata._ZL7eating4
-                0x10011e9c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x100138b2        0x2 
+                0x10011f94     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x100139aa        0x2 
  .rodata._ZL7eating3
-                0x100138b4     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x100152ca        0x2 
+                0x100139ac     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x100153c2        0x2 
  .rodata._ZL7eating2
-                0x100152cc     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x10016ce2        0x2 
+                0x100153c4     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x10016dda        0x2 
  .rodata._ZL7eating1
-                0x10016ce4     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x100186fa        0x2 
+                0x10016ddc     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x100187f2        0x2 
  .rodata._ZL12walking_bck3
-                0x100186fc     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1001a112        0x2 
+                0x100187f4     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1001a20a        0x2 
  .rodata._ZL12walking_bck2
-                0x1001a114     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1001bb2a        0x2 
+                0x1001a20c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1001bc22        0x2 
  .rodata._ZL12walking_bck1
-                0x1001bb2c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1001d542        0x2 
+                0x1001bc24     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1001d63a        0x2 
  .rodata._ZL12walking_fwd3
-                0x1001d544     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1001ef5a        0x2 
+                0x1001d63c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x1001f052        0x2 
  .rodata._ZL12walking_fwd2
-                0x1001ef5c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x10020972        0x2 
+                0x1001f054     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x10020a6a        0x2 
  .rodata._ZL12walking_fwd1
-                0x10020974     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
- *fill*         0x1002238a        0x2 
+                0x10020a6c     0x1a16 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+ *fill*         0x10022482        0x2 
  .rodata._ZL6steak5
-                0x1002238c      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10022484      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL6steak4
-                0x1002300c      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10023104      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL6steak3
-                0x10023c8c      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10023d84      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL6steak2
-                0x1002490c      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10024a04      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL6steak1
-                0x1002558c      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10025684      0xc80 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL10curtain_bg
-                0x1002620c      0xe00 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10026304      0xe00 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZL8floor_bg
-                0x1002700c     0x2f00 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
+                0x10027104     0x2f00 ../st7735/libst7735.a(ST7735_TFT_Assets.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtt.str1.4
-                0x10029f0c      0x10c ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1002a004      0x10c ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtt
-                0x1002a018       0x18 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1002a110       0x18 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtth.str1.4
-                0x1002a030       0xbb ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x1002a0eb        0x1 
+                0x1002a128       0xbb ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x1002a1e3        0x1 
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtth
-                0x1002a0ec       0x1c ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1002a1e4       0x1c ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics5writeEh.str1.4
-                0x1002a108       0x6d ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x1002a175        0x3 
+                0x1002a200       0x6d ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x1002a26d        0x3 
  .rodata._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht.str1.4
-                0x1002a178       0x6a ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x1002a1e2        0x2 
+                0x1002a270       0x6a ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x1002a2da        0x2 
  .rodata._ZN19ST7735_TFT_graphics19TFTdrawBitmap24DataEhhPhhh.str1.4
-                0x1002a1e4       0x9e ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x1002a282        0x2 
+                0x1002a2dc       0x9e ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x1002a37a        0x2 
  .rodata._ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh.str1.4
-                0x1002a284       0x69 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x1002a2ed        0x3 
+                0x1002a37c       0x69 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x1002a3e5        0x3 
  .rodata._ZTV19ST7735_TFT_graphics
-                0x1002a2f0       0x14 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x1002a2f0                vtable for ST7735_TFT_graphics
+                0x1002a3e8       0x14 ../st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x1002a3e8                vtable for ST7735_TFT_graphics
  .rodata._ZL11Font_Twelve
-                0x1002a304      0x474 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002a3fc      0x474 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL11Font_Eleven
-                0x1002a778      0x5f0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002a870      0x5f0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL8Font_Ten
-                0x1002ad68      0xc00 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002ae60      0xc00 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL9Font_Nine
-                0x1002b968     0x1200 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002ba60     0x1200 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL10Font_Eight
-                0x1002cb68      0x1c0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002cc60      0x1c0 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL10Font_Seven
-                0x1002cd28      0x380 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002ce20      0x380 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL8Font_Six
-                0x1002d0a8      0x299 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- *fill*         0x1002d341        0x3 
+                0x1002d1a0      0x299 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+ *fill*         0x1002d439        0x3 
  .rodata._ZL9Font_Five
-                0x1002d344      0x120 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002d43c      0x120 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL9Font_Four
-                0x1002d464      0x1d8 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002d55c      0x1d8 ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL10Font_Three
-                0x1002d63c      0x16c ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002d734      0x16c ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL8Font_Two
-                0x1002d7a8      0x19d ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- *fill*         0x1002d945        0x3 
+                0x1002d8a0      0x19d ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+ *fill*         0x1002da3d        0x3 
  .rodata._ZL8Font_One
-                0x1002d948      0x4fb ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
-                0x1002de44                        . = ALIGN (0x4)
- *fill*         0x1002de43        0x1 
+                0x1002da40      0x4fb ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x1002df3c                        . = ALIGN (0x4)
+ *fill*         0x1002df3b        0x1 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x1002de44                        . = ALIGN (0x4)
+                0x1002df3c                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1002de44                        __exidx_start = .
+                0x1002df3c                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1002de44                        __exidx_end = .
-                0x1002de44                        . = ALIGN (0x4)
-                0x1002de44                        __binary_info_start = .
+                0x1002df3c                        __exidx_end = .
+                0x1002df3c                        . = ALIGN (0x4)
+                0x1002df3c                        __binary_info_start = .
 
-.binary_info    0x1002de44       0x20
+.binary_info    0x1002df3c       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x1002de44        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df3c        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x1002de48        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df40        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x1002de4c        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df44        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x1002de50        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df48        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x1002de54        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df4c        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x1002de58        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df50        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x1002de5c        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1002df54        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x1002de60        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1002de64                        __binary_info_end = .
+                0x1002df58        0x4 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1002df5c                        __binary_info_end = .
 
-.rel.dyn        0x1002de64        0x0
- .rel.iplt      0x1002de64        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x1002de64                        . = ALIGN (0x4)
+.rel.dyn        0x1002df5c        0x0
+ .rel.iplt      0x1002df5c        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x1002df5c                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2596,7 +2596,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x20000000       0xc0 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0     0x173c load address 0x1002de64
+.data           0x200000c0     0x173c load address 0x1002df5c
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2835,20 +2835,20 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.jcr)
                 0x200017fc                        . = ALIGN (0x4)
                 0x200017fc                        __data_end__ = .
-                0x1002de64                        __etext = LOADADDR (.data)
+                0x1002df5c                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x200017fc        0x0 load address 0x1002f5a0
+                0x200017fc        0x0 load address 0x1002f698
  .tm_clone_table
                 0x200017fc        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x200017fc        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x200017fc        0x0 load address 0x1002f5a0
+.igot.plt       0x200017fc        0x0 load address 0x1002f698
  .igot.plt      0x200017fc        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20001800       0x20 load address 0x1002f5a0
+                0x20001800       0x20 load address 0x1002f698
                 0x20001800                        . = ALIGN (0x4)
  *(.uninitialized_data*)
  .uninitialized_data.rosc_samples
@@ -2858,19 +2858,19 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .uninitialized_data.rng_state
                 0x20001810       0x10 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 
-.scratch_x      0x20040000        0x0 load address 0x1002f5a0
+.scratch_x      0x20040000        0x0 load address 0x1002f698
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x1002f5a0                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x1002f698                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x1002f5a0
+.scratch_y      0x20041000        0x0 load address 0x1002f698
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x1002f5a0                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x1002f698                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20001820      0xe14
                 0x20001820                        . = ALIGN (0x4)
@@ -3009,8 +3009,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x1002f5a0        0x0
-                0x1002f5a0                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x1002f698        0x0
+                0x1002f698                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3091,7 +3091,7 @@ LOAD CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp20
 LOAD CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD CMakeFiles/pockpetv1.dir/home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 LOAD ../st7735/libst7735.a
-LOAD /tmp/ccB2kTZn.o
+LOAD /tmp/cc8eF80d.o
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3221,7 +3221,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000008d6       0x2c ../st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .ARM.attributes
-                0x00000902       0x22 /tmp/ccB2kTZn.o
+                0x00000902       0x22 /tmp/cc8eF80d.o
  .ARM.attributes
                 0x00000924       0x1e /usr/lib/gcc/arm-none-eabi/12.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

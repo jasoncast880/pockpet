@@ -8,7 +8,7 @@
 #include <string>
 
 #define POCKPET_CURTAIN 0xfcb6
-#define POCKPET_WALL 0xff5d
+#define POCKPET_WALL 0xff7e
 
 #define TEST_DELAY1 1000
 #define TEST_DELAY2 2000
@@ -71,7 +71,7 @@ void tftSetup(void)
 
   //Render Background
   myTFT.TFTfillScreen(POCKPET_WALL);
-  myTFT.TFTdrawRectWH(0,0,128,36,POCKPET_CURTAIN);
+  myTFT.TFTfillRectangle(0,0,128,36,POCKPET_CURTAIN);
 
   myTFT.TFTdrawBitmap16Data( 0, 36, (uint8_t *)pcurtain_bg, 128, 14);
   myTFT.TFTdrawBitmap16Data( 0, 112, (uint8_t *)pfloor_bg, 128, 47);
@@ -132,7 +132,7 @@ void WalkAnimation()
         printf("b3 pressed");
         ClearFloor();
       }
-      myTFT.TFTdrawBitmap16Data(xPos,111,(uint8_t*)spriteArrFwd[idx],63,53);
+      myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)spriteArrFwd[idx],63,53);
       idx= idx >= 3 ? 0 : idx+1;
       xPos+=1;
       if(xPos >= 65)
@@ -166,7 +166,7 @@ void WalkAnimation()
         printf("b3 pressed");
         ClearFloor();
       }
-      myTFT.TFTdrawBitmap16Data(xPos,111,(uint8_t*)spriteArrBck[idx],63,53);
+      myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)spriteArrBck[idx],63,53);
       idx= idx >= 3 ? 0 : idx+1;
       xPos-=1;
       if(xPos <= 10)
@@ -189,8 +189,8 @@ void EatAnimation()
   int idx = 0;
   for(int i=0;i<5;i++)
   {
-    myTFT.TFTdrawBitmap16Data(10,111,(uint8_t*)dogArr[idx],63,53);
-    myTFT.TFTdrawBitmap16Data(80,111,(uint8_t*)steakArr[i],40,40);
+    myTFT.TFTdrawBitmap16Data(10,59,(uint8_t*)dogArr[idx],63,53);
+    myTFT.TFTdrawBitmap16Data(80,59,(uint8_t*)steakArr[i],40,40);
     idx = idx >= 4 ? 0 : idx+1;
 
     //implement button handling here
@@ -217,7 +217,7 @@ void SleepAnimation()
   int idx=1;
   const uint8_t* dogArr[4] = {psleeping1, psleeping2, psleeping3, psleeping4};
 
-  myTFT.TFTdrawBitmap16Data(xPos,111,(uint8_t*)dogArr[0],63,53);
+  myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)dogArr[0],63,53);
   sleep_ms(1500);
   
   while(1)
@@ -234,13 +234,13 @@ void SleepAnimation()
     {
       //go to walk animation
       printf("b3 pressed");
-      myTFT.TFTdrawBitmap16Data(xPos,111,(uint8_t*)dogArr[0],63,53);
+      myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)dogArr[0],63,53);
       sleep_ms(500); //change value later
       WalkAnimation();
     }
 
   //scroll through the sleeping frames, collect button data and run functions accordingly
-    myTFT.TFTdrawBitmap16Data(xPos,111,(uint8_t*)dogArr[idx],63,53);
+    myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)dogArr[idx],63,53);
     idx = (idx == 4) ? 1 : idx+1;    
     sleep_ms(500);
   }
