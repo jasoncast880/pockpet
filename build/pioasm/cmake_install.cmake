@@ -1,4 +1,4 @@
-# Install script for directory: /home/plebish/pico/pico-sdk/tools/pioasm
+# Install script for directory: /home/plebish/pico-sdk/tools/pioasm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/plebish/pockpet/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/plebish/Desktop/pockpet_v1/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

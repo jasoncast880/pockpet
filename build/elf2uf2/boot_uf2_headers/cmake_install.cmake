@@ -1,4 +1,4 @@
-# Install script for directory: /home/plebish/pico/pico-sdk/src/common/boot_uf2
+# Install script for directory: /home/plebish/pico-sdk/src/common/boot_uf2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

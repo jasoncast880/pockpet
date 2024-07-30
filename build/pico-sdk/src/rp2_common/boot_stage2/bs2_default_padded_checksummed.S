@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/plebish/pockpet/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/plebish/Desktop/pockpet_v1/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

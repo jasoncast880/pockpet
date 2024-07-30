@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/home/plebish/pico/pico-sdk/tools/pioasm
+source_dir=/home/plebish/pico-sdk/tools/pioasm
 work_dir=
 
