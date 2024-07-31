@@ -21,12 +21,19 @@ ST7735_TFT myTFT;
 #define BUTTON3 4
 
 void ClearFloor();
-void EatAnimation();
-void WalkAnimation();
-void SleepAnimation();
 
-void tftSetup(void)
-{
+//Animations
+void WalkAnimation();
+void EatAnimation();
+void SleepAnimation();
+void BarkAnimation();
+void CongratsAnimation();
+
+//Icon State Handlers
+void TopIconHandler(int config);
+void BotIconHandler(int config);
+
+void tftSetup(void) {
 	stdio_init_all(); // Initialize chosen serial port
 	TFT_MILLISEC_DELAY(TEST_DELAY1);
 	printf("TFT :: Start\r\n");
@@ -34,13 +41,11 @@ void tftSetup(void)
 	//*************** USER OPTION 0 SPI_SPEED + TYPE ***********
 	bool bhardwareSPI = true; // true for hardware spi,
 
-	if (bhardwareSPI == true)
-	{								   // hw spi
+	if (bhardwareSPI == true) {								   // hw spi
 		uint32_t TFT_SCLK_FREQ = 8000; // Spi freq in KiloHertz , 1000 = 1Mhz , max 62500
 		myTFT.TFTInitSPIType(TFT_SCLK_FREQ, spi0);
 	}
-	else
-	{								 // sw spi
+	else {								 // sw spi
 		uint16_t SWSPICommDelay = 0; // optional SW SPI GPIO delay in uS
 		myTFT.TFTInitSPIType(SWSPICommDelay);
 	}
@@ -75,20 +80,12 @@ void tftSetup(void)
 
   myTFT.TFTdrawBitmap16Data( 0, 36, (uint8_t *)pcurtain_bg, 128, 14);
   myTFT.TFTdrawBitmap16Data( 0, 112, (uint8_t *)pfloor_bg, 128, 47);
+
+  TopIconHandler(0);
   sleep_ms(500);
 }
 
-float scale(float x, float a, float b, float min, float max)
-{
-  return (b-1)*(x-min)/(max-min)+a;
-}
-
-void ClearFloor()
-{
-  //clear the thingy
-  myTFT.TFTdrawRectWH(0,50,128,61,POCKPET_WALL);
-}
-
+//end of TFT_SETUP
 
 int xPos=0;
 #define X_MAX_VAL = 65;
@@ -97,46 +94,92 @@ int xPos=0;
 #define BUTTON2 3
 #define BUTTON3 4
 
+float scale(float x, float a, float b, float min, float max) {
+  return (b-1)*(x-min)/(max-min)+a;
+}
 
-bool sleepStatus = false;
+void ClearFloor() {
+  myTFT.TFTfillRectangle(0,59,128,53,POCKPET_WALL);
+}
 
-void WalkAnimation()
-{
+//ICON HANDLERS HERE
+void TopIconHandler(int config) { 
+  if (config == 0) { //no lightup
+    myTFT.TFTdrawBitmap16Data(6,6,(uint8_t*)peat_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(50,6,(uint8_t*)psleep_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(93,6,(uint8_t*)pheart_icon,29,29);
+  }
+  else if (config == 1) { //lightup eat_icon
+    myTFT.TFTdrawBitmap16Data(6,6,(uint8_t*)peat_icon_alt,29,29);
+    myTFT.TFTdrawBitmap16Data(50,6,(uint8_t*)psleep_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(93,6,(uint8_t*)pheart_icon,29,29);
+  }
+  else if (config == 2) { //lightup sleep_icon
+    myTFT.TFTdrawBitmap16Data(6,6,(uint8_t*)peat_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(50,6,(uint8_t*)psleep_icon_alt,29,29);
+    myTFT.TFTdrawBitmap16Data(93,6,(uint8_t*)pheart_icon,29,29);
+  }
+  else if (config == 3) { //lightup heart_icon
+    myTFT.TFTdrawBitmap16Data(6,6,(uint8_t*)peat_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(50,6,(uint8_t*)psleep_icon,29,29);
+    myTFT.TFTdrawBitmap16Data(93,6,(uint8_t*)pheart_icon_alt,29,29);
+  }
+}
+
+void BotIconHandler(int config) {
+  if (config == 0) { //no lightup
+    myTFT.TFTdrawBitmap16Data(9,126,(uint8_t*)pleft_arrow,26,26);
+    myTFT.TFTdrawBitmap16Data(51,126,(uint8_t*)pright_arrow,26,26);
+    myTFT.TFTdrawBitmap16Data(93,126,(uint8_t*)px_arrow,26,26);
+  }
+  else if (config == 1) { //grey out - left and right arrows
+    myTFT.TFTdrawBitmap16Data(9,126,(uint8_t*)pleft_arrow_alt,26,26);
+    myTFT.TFTdrawBitmap16Data(51,126,(uint8_t*)pright_arrow_alt,26,26);
+    myTFT.TFTdrawBitmap16Data(93,126,(uint8_t*)px_arrow,26,26);
+  }
+}
+//END OF ICON HANDLERS
+
+void WalkAnimation() {
   ClearFloor();
+  TopIconHandler(0);
+  BotIconHandler(0);
 
-  while(1)
-  {
+  while(1) {
     const uint8_t* spriteArrFwd[4] = {pwalking_fwd1,pwalking_fwd2,pwalking_fwd1,pwalking_fwd3};
     const uint8_t* spriteArrBck[4] = {pwalking_bck1,pwalking_bck2,pwalking_bck1,pwalking_bck3};
     
     int idx = 0;
-
+    int top_button_state = 0;
+    
     //go a random distance forward
     uint32_t r = get_rand_32();
     int dist = int(scale(r, 15, 65, 0, UINT32_MAX));
     printf("\n fwd %d", dist);
     for(int i=0; i<=dist; i++)
     {
-      if(gpio_get(BUTTON1)==0)
-      {
-        printf("b1 pressed");
-        EatAnimation();
+      if(gpio_get(BUTTON1)==0) {
+        top_button_state = (top_button_state <= 0) ? 3 : top_button_state-1;
       }
-      else if(gpio_get(BUTTON2)==0)
-      {
-        printf("b2 pressed");
-        SleepAnimation();
+      else if(gpio_get(BUTTON2)==0) {
+        top_button_state = (top_button_state >= 3) ? 1 : top_button_state+1;
       }
-      else if(gpio_get(BUTTON3)==0)
-      {
-        printf("b3 pressed");
-        ClearFloor();
+      else if(gpio_get(BUTTON3)==0) {
+        if(top_button_state == 1){
+          EatAnimation();  
+        }
+        else if(top_button_state == 2){
+          SleepAnimation();
+        }
+        else if(top_button_state == 3){
+          EatAnimation();
+        }
       }
+      TopIconHandler(top_button_state);
       myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)spriteArrFwd[idx],63,53);
-      idx= idx >= 3 ? 0 : idx+1;
+      idx= (idx >= 3) ? 0 : idx+1;
       xPos+=1;
-      if(xPos >= 65)
-      {
+      if(xPos >= 65) {
         //change dir to backwards
         break;
       }
@@ -149,28 +192,29 @@ void WalkAnimation()
     r=get_rand_32();
     dist=int(scale(r,15,65,0,UINT32_MAX));
 
-    for(int i=0;i<=dist;i++)
-    {
-      if(gpio_get(BUTTON1)==0)
-      {
-        printf("b1 pressed");
-        EatAnimation();
+    for(int i=0;i<=dist;i++) {
+      if(gpio_get(BUTTON1)==0) {
+        top_button_state = (top_button_state <= 0) ? 3 : top_button_state-1;
       }
-      else if(gpio_get(BUTTON2)==0)
-      {
-        printf("b2 pressed");
-        SleepAnimation();
+      else if(gpio_get(BUTTON2)==0) {
+        top_button_state = (top_button_state >= 3) ? 1 : top_button_state+1;
       }
-      else if(gpio_get(BUTTON3)==0)
-      {
-        printf("b3 pressed");
-        ClearFloor();
+      else if(gpio_get(BUTTON3)==0) {
+        if(top_button_state == 1){
+          EatAnimation();  
+        }
+        else if(top_button_state == 2){
+          SleepAnimation();
+        }
+        else if(top_button_state == 3){
+          EatAnimation();
+        }
       }
+      TopIconHandler(top_button_state);
       myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)spriteArrBck[idx],63,53);
       idx= idx >= 3 ? 0 : idx+1;
       xPos-=1;
-      if(xPos <= 10)
-      {
+      if(xPos <= 10) {
         //change dir to forward 
         break;
       }
@@ -182,6 +226,7 @@ void WalkAnimation()
 void EatAnimation()
 {
   ClearFloor();
+  BotIconHandler(1);
 
   const uint8_t* dogArr[4] = {peating1, peating2, peating3, peating4};
   const uint8_t* steakArr[5] = {psteak1,psteak2,psteak3,psteak4,psteak5};
@@ -190,7 +235,7 @@ void EatAnimation()
   for(int i=0;i<5;i++)
   {
     myTFT.TFTdrawBitmap16Data(10,59,(uint8_t*)dogArr[idx],63,53);
-    myTFT.TFTdrawBitmap16Data(80,59,(uint8_t*)steakArr[i],40,40);
+    myTFT.TFTdrawBitmap16Data(80,72,(uint8_t*)steakArr[i],40,40);
     idx = idx >= 4 ? 0 : idx+1;
 
     //implement button handling here
@@ -213,6 +258,9 @@ void EatAnimation()
 
 void SleepAnimation()
 {
+  ClearFloor();
+  BotIconHandler(1);
+
   int idx=1;
   const uint8_t* dogArr[4] = {psleeping1, psleeping2, psleeping3, psleeping4};
 
@@ -240,11 +288,47 @@ void SleepAnimation()
 
   //scroll through the sleeping frames, collect button data and run functions accordingly
     myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)dogArr[idx],63,53);
-    idx = (idx == 4) ? 1 : idx+1;    
+    idx = (idx >= 4) ? 1 : idx+1;    
     sleep_ms(500);
   }
 }
 
+void BarkAnimation()
+{
+  ClearFloor();
+  BotIconHandler(1);
+
+  int idx=1;
+  const uint8_t* dogArr[4] = {pbarking1, pbarking2, pbarking3, pbarking4};
+
+  myTFT.TFTdrawBitmap16Data(xPos,59,(uint8_t*)dogArr[0],63,53);
+  sleep_ms(1500);
+  
+  while(1)
+  {
+    if(gpio_get(BUTTON1)==0)
+    {
+      printf("b1 pressed");
+    }
+    else if(gpio_get(BUTTON2)==0)
+    {
+      printf("b2 pressed");
+    }
+    else if(gpio_get(BUTTON3)==0)
+    {
+      //go to walk animation
+      printf("b3 pressed");
+      myTFT.TFTdrawBitmap16Data(10,59,(uint8_t*)dogArr[0],63,53);
+      sleep_ms(500); //change value later
+      WalkAnimation();
+    }
+
+  //scroll through the sleeping frames, collect button data and run functions accordingly
+    myTFT.TFTdrawBitmap16Data(10,59,(uint8_t*)dogArr[idx],63,53);
+    idx = (idx >= 4) ? 1 : idx+1;    
+    sleep_ms(500);
+  }
+}
 
 int main()
 {
