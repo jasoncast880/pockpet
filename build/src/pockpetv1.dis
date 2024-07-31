@@ -475,7 +475,7 @@ Disassembly of section .text:
 10000448:	330a      	adds	r3, #10
 1000044a:	9300      	str	r3, [sp, #0]
 1000044c:	0013      	movs	r3, r2
-1000044e:	226f      	movs	r2, #111	@ 0x6f
+1000044e:	223b      	movs	r2, #59	@ 0x3b
 10000450:	f00a f8cc 	bl	1000a5ec <_ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh>
 10000454:	482a      	ldr	r0, [pc, #168]	@ (10000500 <_Z14SleepAnimationv+0xec>)
 10000456:	f001 f8f1 	bl	1000163c <sleep_ms>
@@ -505,7 +505,7 @@ Disassembly of section .text:
 10000488:	4642      	mov	r2, r8
 1000048a:	0028      	movs	r0, r5
 1000048c:	9200      	str	r2, [sp, #0]
-1000048e:	226f      	movs	r2, #111	@ 0x6f
+1000048e:	223b      	movs	r2, #59	@ 0x3b
 10000490:	f00a f8ac 	bl	1000a5ec <_ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh>
 10000494:	2c04      	cmp	r4, #4
 10000496:	d011      	beq.n	100004bc <_Z14SleepAnimationv+0xa8>
@@ -532,7 +532,7 @@ Disassembly of section .text:
 100004c8:	7831      	ldrb	r1, [r6, #0]
 100004ca:	9301      	str	r3, [sp, #4]
 100004cc:	4643      	mov	r3, r8
-100004ce:	226f      	movs	r2, #111	@ 0x6f
+100004ce:	223b      	movs	r2, #59	@ 0x3b
 100004d0:	9300      	str	r3, [sp, #0]
 100004d2:	0028      	movs	r0, r5
 100004d4:	9b02      	ldr	r3, [sp, #8]
@@ -631,7 +631,7 @@ Disassembly of section .text:
 100005a8:	210a      	movs	r1, #10
 100005aa:	9200      	str	r2, [sp, #0]
 100005ac:	0038      	movs	r0, r7
-100005ae:	226f      	movs	r2, #111	@ 0x6f
+100005ae:	223b      	movs	r2, #59	@ 0x3b
 100005b0:	f00a f81c 	bl	1000a5ec <_ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh>
 100005b4:	2228      	movs	r2, #40	@ 0x28
 100005b6:	6823      	ldr	r3, [r4, #0]
@@ -639,7 +639,7 @@ Disassembly of section .text:
 100005ba:	9201      	str	r2, [sp, #4]
 100005bc:	9200      	str	r2, [sp, #0]
 100005be:	0038      	movs	r0, r7
-100005c0:	3247      	adds	r2, #71	@ 0x47
+100005c0:	3213      	adds	r2, #19
 100005c2:	f00a f813 	bl	1000a5ec <_ZN19ST7735_TFT_graphics19TFTdrawBitmap16DataEhhPhhh>
 100005c6:	2d04      	cmp	r5, #4
 100005c8:	d1d8      	bne.n	1000057c <_Z12EatAnimationv+0x6c>
