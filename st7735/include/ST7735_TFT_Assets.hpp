@@ -28,10 +28,10 @@ extern const uint8_t * pleft_arrow; //26x26 ; (9,127)
 extern const uint8_t * pleft_arrow_alt; 
 
 extern const uint8_t * pright_arrow; // (51,127)
-extern const uint8_t * psleep_icon_alt;
+extern const uint8_t * pright_arrow_alt;
 
-extern const uint8_t * pheart_icon; // (93,127)
-extern const uint8_t * pheart_icon_alt; 
+extern const uint8_t * px_arrow; // (93,127)
+extern const uint8_t * px_arrow_alt; 
 
 //facing right
 extern const uint8_t * pwalking_fwd1; //63x53 ;
