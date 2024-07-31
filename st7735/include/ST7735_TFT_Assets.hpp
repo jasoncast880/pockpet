@@ -7,22 +7,31 @@ extern const uint8_t * pfloor_bg; // 128x47 ; (0,113)
 extern const uint8_t * pcurtain_bg; //128x14 ; (0,36) - (127,34)
 
 //steaks!!!
-extern const uint8_t * psteak1; //40x40 ; (
+extern const uint8_t * psteak1; //40x40 ; (x, 72)
 extern const uint8_t * psteak2; 
 extern const uint8_t * psteak3; 
 extern const uint8_t * psteak4; 
 extern const uint8_t * psteak5; 
 
-//icons + alt icons
-extern const uint8_t * peat_icon; //29x29 ; 
+//icons + alt icons ; TOP SIDE
+extern const uint8_t * peat_icon; //29x29 ; (6,6)
 extern const uint8_t * peat_icon_alt; 
 
-extern const uint8_t * psleep_icon; //
+extern const uint8_t * psleep_icon; // (50,6)
 extern const uint8_t * psleep_icon_alt;
 
-extern const uint8_t * pheart_icon; //
+extern const uint8_t * pheart_icon; // (93,6)
 extern const uint8_t * pheart_icon_alt; 
 
+//button icons; BOT SIDE
+extern const uint8_t * pleft_arrow; //26x26 ; (9,127)
+extern const uint8_t * pleft_arrow_alt; 
+
+extern const uint8_t * pright_arrow; // (51,127)
+extern const uint8_t * psleep_icon_alt;
+
+extern const uint8_t * pheart_icon; // (93,127)
+extern const uint8_t * pheart_icon_alt; 
 
 //facing right
 extern const uint8_t * pwalking_fwd1; //63x53 ;

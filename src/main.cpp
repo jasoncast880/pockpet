@@ -208,7 +208,6 @@ void EatAnimation()
     }
     sleep_ms(500);
   }
-  
   SleepAnimation();
 }
 
