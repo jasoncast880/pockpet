@@ -9,7 +9,7 @@ target_include_directories(${ProjectName} PRIVATE
 target_link_libraries(${ProjectName} 
     pico_stdlib 
     hardware_spi
-    pico_rand
+    #pico_rand
     st7735
     #FreeRTOS-Kernel-Heap4 
     )

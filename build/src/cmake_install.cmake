@@ -1,4 +1,4 @@
-# Install script for directory: /home/plebish/Desktop/pockpet_v1/src
+# Install script for directory: /home/plebish/pockpet/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

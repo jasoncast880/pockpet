@@ -1,4 +1,4 @@
-# Install script for directory: /home/plebish/Desktop/pockpet_v1
+# Install script for directory: /home/plebish/pockpet
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/plebish/Desktop/pockpet_v1/build/pico-sdk/cmake_install.cmake")
-  include("/home/plebish/Desktop/pockpet_v1/build/src/cmake_install.cmake")
-  include("/home/plebish/Desktop/pockpet_v1/build/st7735/cmake_install.cmake")
+  include("/home/plebish/pockpet/build/pico-sdk/cmake_install.cmake")
+  include("/home/plebish/pockpet/build/src/cmake_install.cmake")
+  include("/home/plebish/pockpet/build/st7735/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/plebish/Desktop/pockpet_v1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/plebish/pockpet/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
