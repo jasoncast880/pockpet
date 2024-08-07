@@ -1,0 +1,2 @@
+add_subdirectory(FreeRTOS_Kernel)
+add_subdirectory(st7735)
