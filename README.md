@@ -1,0 +1,3 @@
+08-07-24
+The St7735 and free rtos are working; however the st7735 class appears to be not working as a freertos task...
+will have to do more debugging in the future..
