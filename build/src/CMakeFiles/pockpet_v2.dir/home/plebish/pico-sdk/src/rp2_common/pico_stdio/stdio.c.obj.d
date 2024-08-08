@@ -52,8 +52,4 @@ src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/st
  /home/plebish/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/plebish/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
  /home/plebish/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
- /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
- /home/plebish/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+ /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
