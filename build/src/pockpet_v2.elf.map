@@ -1599,8 +1599,6 @@ Discarded input sections
                 0x0000000000000000      0x378 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .text._ZN19ST7735_TFT_graphics16spiWriteSoftwareEh
                 0x0000000000000000      0x2bc ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- .text._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht
-                0x0000000000000000      0x124 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics13TFTdrawBitmapEssssttPht.str1.4
                 0x0000000000000000      0x178 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .text._ZN19ST7735_TFT_graphics13TFTdrawBitmapEssssttPht
@@ -1624,9 +1622,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .data          0x0000000000000000        0x0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .bss           0x0000000000000000        0x0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- .text          0x0000000000000000        0x0 /tmp/ccl4vRcZ.o
- .data          0x0000000000000000        0x0 /tmp/ccl4vRcZ.o
- .bss           0x0000000000000000        0x0 /tmp/ccl4vRcZ.o
+ .text          0x0000000000000000        0x0 /tmp/cco5ZEYQ.o
+ .data          0x0000000000000000        0x0 /tmp/cco5ZEYQ.o
+ .bss           0x0000000000000000        0x0 /tmp/cco5ZEYQ.o
  .text          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(pure.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(pure.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(pure.o)
@@ -2582,11 +2580,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccl4vRcZ.o
+ .boot2         0x0000000010000000      0x100 /tmp/cco5ZEYQ.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0xbe68
+.text           0x0000000010000100     0xbfa0
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2657,868 +2655,871 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x000000001000045c       0x68 CMakeFiles/pockpet_v2.dir/main.cpp.obj
                 0x000000001000045c                tftSetup()
  .text.startup.main
-                0x00000000100004c4       0x58 CMakeFiles/pockpet_v2.dir/main.cpp.obj
+                0x00000000100004c4       0x6c CMakeFiles/pockpet_v2.dir/main.cpp.obj
                 0x00000000100004c4                main
  .text.startup._GLOBAL__sub_I_myTFT
-                0x000000001000051c       0x10 CMakeFiles/pockpet_v2.dir/main.cpp.obj
+                0x0000000010000530       0x10 CMakeFiles/pockpet_v2.dir/main.cpp.obj
  .text.gpio_set_function
-                0x000000001000052c       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x000000001000052c                gpio_set_function
+                0x0000000010000540       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000540                gpio_set_function
  .text.gpio_init
-                0x000000001000055c       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x000000001000055c                gpio_init
+                0x0000000010000570       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000570                gpio_init
  .text.running_on_fpga
-                0x0000000010000598       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010000598                running_on_fpga
+                0x00000000100005ac       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x00000000100005ac                running_on_fpga
  .text.hw_claim_or_assert
-                0x00000000100005a8       0x44 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x00000000100005a8                hw_claim_or_assert
+                0x00000000100005bc       0x44 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000000100005bc                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x00000000100005ec       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x00000000100005ec                hw_claim_unused_from_range
+                0x0000000010000600       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000600                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x0000000010000688       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000688                spin_locks_reset
+                0x000000001000069c       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x000000001000069c                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x00000000100006a4       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x00000000100006a4                next_striped_spin_lock_num
+                0x00000000100006b8       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100006b8                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x00000000100006bc       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x00000000100006bc                spin_lock_claim_unused
+                0x00000000100006d0       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100006d0                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x00000000100006dc       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100006dc                irq_set_enabled
+                0x00000000100006f0       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100006f0                irq_set_enabled
  .text.irq_set_pending
-                0x0000000010000700       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000700                irq_set_pending
+                0x0000000010000714       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000714                irq_set_pending
  .text.irq_has_shared_handler
-                0x0000000010000710       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000710                irq_has_shared_handler
+                0x0000000010000724       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000724                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x000000001000073c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000073c                irq_get_vtable_handler
+                0x0000000010000750       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000750                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x000000001000074c       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000074c                irq_set_exclusive_handler
+                0x0000000010000760       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000760                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x00000000100007a0      0x1e8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100007a0                irq_add_shared_handler
+                0x00000000100007b4      0x1e8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100007b4                irq_add_shared_handler
  .text.irq_remove_handler
-                0x0000000010000988      0x1b0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000988                irq_remove_handler
+                0x000000001000099c      0x1b0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000099c                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x0000000010000b38       0xb4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000b38                irq_add_tail_to_free_list
+                0x0000000010000b4c       0xb4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000b4c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x0000000010000bec       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000bec                irq_init_priorities
+                0x0000000010000c00       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000c00                irq_init_priorities
  .text.user_irq_claim_unused
-                0x0000000010000c10       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000c10                user_irq_claim_unused
+                0x0000000010000c24       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000c24                user_irq_claim_unused
  .text.lock_init
-                0x0000000010000c38       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x0000000010000c38                lock_init
+                0x0000000010000c4c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x0000000010000c4c                lock_init
  .text.mutex_init
-                0x0000000010000c48       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010000c48                mutex_init
+                0x0000000010000c5c       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010000c5c                mutex_init
  .text.recursive_mutex_init
-                0x0000000010000c64       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010000c64                recursive_mutex_init
+                0x0000000010000c78       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010000c78                recursive_mutex_init
  .text.critical_section_init
-                0x0000000010000c84       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x0000000010000c84                critical_section_init
+                0x0000000010000c98       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x0000000010000c98                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x0000000010000ca4       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x0000000010000ca4                critical_section_init_with_lock_num
+                0x0000000010000cb8       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x0000000010000cb8                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x0000000010000cb8       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000cb8                timer_pool_entry_comparator
+                0x0000000010000ccc       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000ccc                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x0000000010000cec       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000d00       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x0000000010000d10      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000d24      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x0000000010000e10      0x1bc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000e24      0x1bc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010000fcc       0x6c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000fcc                alarm_pool_init_default
+                0x0000000010000fe0       0x6c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000fe0                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x0000000010001038        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001038                alarm_pool_get_default
+                0x000000001000104c        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000104c                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010001040      0x178 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001040                alarm_pool_add_alarm_at
+                0x0000000010001054      0x178 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001054                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x00000000100011b8        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100011b8                alarm_pool_core_num
+                0x00000000100011cc        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100011cc                alarm_pool_core_num
  .text.sleep_until
-                0x00000000100011bc       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100011bc                sleep_until
+                0x00000000100011d0       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100011d0                sleep_until
  .text.sleep_ms
-                0x0000000010001278       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001278                sleep_ms
+                0x000000001000128c       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000128c                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x00000000100012ac       0xd4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100012ac                best_effort_wfe_or_timeout
+                0x00000000100012c0       0xd4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100012c0                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010001380       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001394       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x000000001000143c       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000143c                hardware_alarm_claim
+                0x0000000010001450       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001450                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010001454       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001454                time_us_64
+                0x0000000010001468       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001468                time_us_64
  .text.busy_wait_us
-                0x0000000010001468       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001468                busy_wait_us
+                0x000000001000147c       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000147c                busy_wait_us
  .text.busy_wait_ms
-                0x00000000100014bc       0x88 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100014bc                busy_wait_ms
+                0x00000000100014d0       0x88 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100014d0                busy_wait_ms
  .text.busy_wait_until
-                0x0000000010001544       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001544                busy_wait_until
+                0x0000000010001558       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001558                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010001564       0x8c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001564                hardware_alarm_set_callback
+                0x0000000010001578       0x8c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001578                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x00000000100015f0       0xd4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100015f0                hardware_alarm_set_target
+                0x0000000010001604       0xd4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001604                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x00000000100016c4       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100016c4                hardware_alarm_cancel
+                0x00000000100016d8       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100016d8                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x0000000010001700       0x68 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001714       0x68 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010001768       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001768                ph_post_alloc_init
+                0x000000001000177c       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000177c                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x00000000100017a4       0x90 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100017a4                ph_merge_two_pass
+                0x00000000100017b8       0x90 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100017b8                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010001834      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001848      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010001934      0x104 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001934                ph_remove_head
+                0x0000000010001948      0x104 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001948                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010001a38       0x7c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001a38                ph_remove_and_free_node
+                0x0000000010001a4c       0x7c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001a4c                ph_remove_and_free_node
  .text.clocks_init
-                0x0000000010001ab4      0x2d0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001ab4                clocks_init
+                0x0000000010001ac8      0x2d0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001ac8                clocks_init
  .text.clock_get_hz
-                0x0000000010001d84        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001d84                clock_get_hz
+                0x0000000010001d98        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001d98                clock_get_hz
  .text.pll_init
-                0x0000000010001d90       0xa0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010001d90                pll_init
+                0x0000000010001da4       0xa0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010001da4                pll_init
  .text.watchdog_start_tick
-                0x0000000010001e30       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010001e30                watchdog_start_tick
+                0x0000000010001e44       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001e44                watchdog_start_tick
  .text.watchdog_reboot
-                0x0000000010001e40       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010001e40                watchdog_reboot
+                0x0000000010001e54       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001e54                watchdog_reboot
  .text.xosc_init
-                0x0000000010001ed8       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010001ed8                xosc_init
+                0x0000000010001eec       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010001eec                xosc_init
  .text.runtime_init
-                0x0000000010001f00       0xf0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001f00                runtime_init
- .text._exit    0x0000000010001ff0        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001ff0                _exit
- .text._sbrk    0x0000000010001ff4       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001ff4                _sbrk
- .text.exit     0x0000000010002028        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002028                exit
- .text.panic    0x0000000010002030       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002030                panic
+                0x0000000010001f14       0xf0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001f14                runtime_init
+ .text._exit    0x0000000010002004        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002004                _exit
+ .text._sbrk    0x0000000010002008       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002008                _sbrk
+ .text.exit     0x000000001000203c        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000203c                exit
+ .text.panic    0x0000000010002044       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002044                panic
  .text.panic_unsupported
-                0x0000000010002060        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002060                panic_unsupported
+                0x0000000010002074        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002074                panic_unsupported
  .text.hard_assertion_failure
-                0x000000001000206c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000206c                hard_assertion_failure
+                0x0000000010002080        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002080                hard_assertion_failure
  .text._out_null
-                0x0000000010002078        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000208c        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x000000001000207c       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002090       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010002118      0x1cc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000212c      0x1cc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x00000000100022e4       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100022f8       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x00000000100022f4       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x0000000010002304      0x44c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x0000000010002750      0x398 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002308       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x0000000010002318      0x44c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010002764      0x398 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010002ae8      0xb04 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002afc      0xb04 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x00000000100035ec       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x00000000100035ec                vfctprintf
+                0x0000000010003600       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003600                vfctprintf
  .text.weak_raw_vprintf
-                0x000000001000360c       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000360c                weak_raw_vprintf
- .text          0x000000001000363c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010003620       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003620                weak_raw_vprintf
+ .text          0x0000000010003650       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x000000001000364c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000364c                rom_func_lookup
+                0x0000000010003660       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003660                rom_func_lookup
  .text.rom_data_lookup
-                0x000000001000365c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000365c                rom_data_lookup
+                0x0000000010003670       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003670                rom_data_lookup
  .text.rom_funcs_lookup
-                0x000000001000366c       0x44 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000366c                rom_funcs_lookup
+                0x0000000010003680       0x44 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003680                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x00000000100036b0       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100036b0                __wrap___aeabi_idivmod
-                0x00000000100036b0                divmod_s32s32
-                0x00000000100036b0                div_s32s32
-                0x00000000100036b0                __wrap___aeabi_idiv
-                0x00000000100036b8                divmod_s32s32_unsafe
-                0x00000000100036e4                divmod_s32s32_savestate
+                0x00000000100036c4       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100036c4                __wrap___aeabi_idivmod
+                0x00000000100036c4                divmod_s32s32
+                0x00000000100036c4                div_s32s32
+                0x00000000100036c4                __wrap___aeabi_idiv
+                0x00000000100036cc                divmod_s32s32_unsafe
+                0x00000000100036f8                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x0000000010003700       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003700                __wrap___aeabi_uidiv
-                0x0000000010003700                __wrap___aeabi_uidivmod
-                0x0000000010003700                div_u32u32
-                0x0000000010003700                divmod_u32u32
-                0x0000000010003708                divmod_u32u32_unsafe
-                0x0000000010003730                divmod_u32u32_savestate
+                0x0000000010003714       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003714                __wrap___aeabi_uidiv
+                0x0000000010003714                __wrap___aeabi_uidivmod
+                0x0000000010003714                div_u32u32
+                0x0000000010003714                divmod_u32u32
+                0x000000001000371c                divmod_u32u32_unsafe
+                0x0000000010003744                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x000000001000374c      0x424 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x000000001000374c                div_s64s64
-                0x000000001000374c                divmod_s64s64
-                0x000000001000374c                __wrap___aeabi_ldivmod
-                0x000000001000377c                div_u64u64
-                0x000000001000377c                divmod_u64u64
-                0x000000001000377c                __wrap___aeabi_uldivmod
-                0x000000001000378c                divmod_u64u64_savestate
-                0x00000000100037ac                divmod_s64s64_unsafe
-                0x0000000010003834                divmod_u64u64_unsafe
+                0x0000000010003760      0x424 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003760                div_s64s64
+                0x0000000010003760                divmod_s64s64
+                0x0000000010003760                __wrap___aeabi_ldivmod
+                0x0000000010003790                div_u64u64
+                0x0000000010003790                divmod_u64u64
+                0x0000000010003790                __wrap___aeabi_uldivmod
+                0x00000000100037a0                divmod_u64u64_savestate
+                0x00000000100037c0                divmod_s64s64_unsafe
+                0x0000000010003848                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010003b70       0x80 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003b70                __wrap___aeabi_drsub
-                0x0000000010003b76                __wrap___aeabi_dsub
-                0x0000000010003b88                __wrap___aeabi_dadd
-                0x0000000010003b9a                __wrap___aeabi_ddiv
-                0x0000000010003bd6                __wrap___aeabi_dmul
+                0x0000000010003b84       0x80 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003b84                __wrap___aeabi_drsub
+                0x0000000010003b8a                __wrap___aeabi_dsub
+                0x0000000010003b9c                __wrap___aeabi_dadd
+                0x0000000010003bae                __wrap___aeabi_ddiv
+                0x0000000010003bea                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010003bf0       0x6c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003bf0                __wrap___aeabi_cdrcmple
-                0x0000000010003c00                __wrap___aeabi_cdcmple
-                0x0000000010003c00                __wrap___aeabi_cdcmpeq
+                0x0000000010003c04       0x6c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c04                __wrap___aeabi_cdrcmple
+                0x0000000010003c14                __wrap___aeabi_cdcmple
+                0x0000000010003c14                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x0000000010003c5c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003c5c                __wrap___aeabi_dcmplt
+                0x0000000010003c70        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c70                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010003c68       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003c68                __wrap___aeabi_dcmple
+                0x0000000010003c7c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c7c                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010003c78       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003c78                __wrap___aeabi_dcmpge
+                0x0000000010003c8c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c8c                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010003c88        0xa CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003c88                __wrap___aeabi_dcmpgt
+                0x0000000010003c9c        0xa CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c9c                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x0000000010003c92       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003c92                __wrap___aeabi_dcmpun
- *fill*         0x0000000010003cae        0x2 
+                0x0000000010003ca6       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003ca6                __wrap___aeabi_dcmpun
+ *fill*         0x0000000010003cc2        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010003cb0       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003cb0                __wrap___aeabi_ui2d
-                0x0000000010003cb8                __wrap___aeabi_i2d
+                0x0000000010003cc4       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cc4                __wrap___aeabi_ui2d
+                0x0000000010003ccc                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010003ce8       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003ce8                __wrap___aeabi_d2iz
-                0x0000000010003ce8                double2int_z
+                0x0000000010003cfc       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cfc                __wrap___aeabi_d2iz
+                0x0000000010003cfc                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x0000000010003d30       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003d30                double2uint
-                0x0000000010003d30                __wrap___aeabi_d2uiz
+                0x0000000010003d44       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003d44                double2uint
+                0x0000000010003d44                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x0000000010003d48       0x94 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010003d48                __aeabi_double_init
+                0x0000000010003d5c       0x94 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010003d5c                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x0000000010003ddc       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003ddc                double_table_shim_on_use_helper
+                0x0000000010003df0       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003df0                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x0000000010003e08       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003e08                drsub_shim
-                0x0000000010003e0e                dsub_shim
+                0x0000000010003e1c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003e1c                drsub_shim
+                0x0000000010003e22                dsub_shim
  .text.dadd_shim
-                0x0000000010003e18      0x15c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003e18                dadd_shim
+                0x0000000010003e2c      0x15c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003e2c                dadd_shim
  .text.dmul_shim
-                0x0000000010003f74      0x15c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003f74                dmul_shim
+                0x0000000010003f88      0x15c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003f88                dmul_shim
  .text.ddiv_shim
-                0x00000000100040d0      0x1b0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100040d0                ddiv_shim
+                0x00000000100040e4      0x1b0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100040e4                ddiv_shim
  .text.double2uint_shim
-                0x0000000010004280        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004280                double2uint_shim
-                0x0000000010004282                double2ufix_shim
- *fill*         0x000000001000428e        0x2 
+                0x0000000010004294        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004294                double2uint_shim
+                0x0000000010004296                double2ufix_shim
+ *fill*         0x00000000100042a2        0x2 
  .text.double2uint64_shim
-                0x0000000010004290       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004290                double2uint64_shim
-                0x0000000010004292                double2ufix64_shim
-                0x00000000100042b2                d2fix_a
+                0x00000000100042a4       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100042a4                double2uint64_shim
+                0x00000000100042a6                double2ufix64_shim
+                0x00000000100042c6                d2fix_a
  .text.dunpacks
-                0x0000000010004300       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004300                dunpacks
+                0x0000000010004314       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004314                dunpacks
  .text.__aeabi_lmul
-                0x000000001000433c       0x32 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x000000001000433c                __wrap___aeabi_lmul
- *fill*         0x000000001000436e        0x2 
+                0x0000000010004350       0x32 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x0000000010004350                __wrap___aeabi_lmul
+ *fill*         0x0000000010004382        0x2 
  .text.__aeabi_float_init
-                0x0000000010004370       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010004370                __aeabi_float_init
+                0x0000000010004384       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000010004384                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x00000000100043d4       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x00000000100043d4                float_table_shim_on_use_helper
+                0x00000000100043e8       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000000100043e8                float_table_shim_on_use_helper
  .text.__wrap_malloc
-                0x0000000010004400       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x0000000010004400                __wrap_malloc
+                0x0000000010004414       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x0000000010004414                __wrap_malloc
  .text.__wrap_free
-                0x000000001000443c       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x000000001000443c                __wrap_free
- .text          0x000000001000445c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000445c                __aeabi_mem_init
- .text.memset   0x000000001000446c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000446c                __wrap_memset
- .text.memcpy   0x0000000010004478        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004478                __wrap___aeabi_memcpy
-                0x0000000010004478                __wrap_memcpy
+                0x0000000010004450       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x0000000010004450                __wrap_free
+ .text          0x0000000010004470       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004470                __aeabi_mem_init
+ .text.memset   0x0000000010004480        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004480                __wrap_memset
+ .text.memcpy   0x000000001000448c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000000001000448c                __wrap___aeabi_memcpy
+                0x000000001000448c                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010004484       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004498       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010004494       0xb4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100044a8       0xb4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x0000000010004548       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000455c       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x00000000100045ac       0xfc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100045c0       0xfc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x00000000100046a8       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100046a8                __wrap_putchar
+                0x00000000100046bc       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100046bc                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010004740       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004740                __wrap_puts
+                0x0000000010004754       0x3c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004754                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x000000001000477c       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000477c                stdio_set_driver_enabled
+                0x0000000010004790       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004790                stdio_set_driver_enabled
  .text.__wrap_vprintf
-                0x00000000100047ac       0xd8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100047ac                __wrap_vprintf
+                0x00000000100047c0       0xd8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100047c0                __wrap_vprintf
  .text.__wrap_printf
-                0x0000000010004884       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004884                __wrap_printf
+                0x0000000010004898       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004898                __wrap_printf
  .text.stdio_init_all
-                0x000000001000489c        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000489c                stdio_init_all
+                0x00000000100048b0        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100048b0                stdio_init_all
  .text.resetd_init
-                0x00000000100048a4        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100048b8        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x00000000100048a8        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100048bc        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x00000000100048b4       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100048c8       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x00000000100048dc        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100048f0        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x00000000100048e0       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100048f4       0x64 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x0000000010004944        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010004944                usbd_app_driver_get_cb
+                0x0000000010004958        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004958                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x0000000010004950       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010004950                tud_cdc_line_coding_cb
+                0x0000000010004964       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004964                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x0000000010004984       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004984                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x0000000010004998       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004998       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004998                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x00000000100049ac       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x00000000100049a8       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000000100049bc       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x00000000100049fc       0x90 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100049fc                stdio_usb_in_chars
+                0x0000000010004a10       0x90 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004a10                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x0000000010004a8c      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004aa0      0x100 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x0000000010004b8c       0xa8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004ba0       0xa8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x0000000010004c34       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004c34                tud_cdc_rx_cb
+                0x0000000010004c48       0x20 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004c48                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x0000000010004c54       0xdc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004c54                stdio_usb_init
+                0x0000000010004c68       0xdc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004c68                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x0000000010004d30        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010004d30                tud_descriptor_device_cb
+                0x0000000010004d44        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004d44                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x0000000010004d38        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010004d38                tud_descriptor_configuration_cb
+                0x0000000010004d4c        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004d4c                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x0000000010004d40       0x74 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010004d40                tud_descriptor_string_cb
+                0x0000000010004d54       0x74 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004d54                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x0000000010004db4       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010004dc8       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x0000000010004dc4      0x1a8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000010004dc4                pico_get_unique_board_id_string
+                0x0000000010004dd8      0x1a8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010004dd8                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x0000000010004f6c       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x0000000010004f6c                flash_get_unique_id
+                0x0000000010004f80       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000010004f80                flash_get_unique_id
  .text.dcd_int_enable
-                0x0000000010004fac        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010004fac                dcd_int_enable
+                0x0000000010004fc0        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010004fc0                dcd_int_enable
  .text.dcd_set_address
-                0x0000000010004fb8       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010004fb8                dcd_set_address
+                0x0000000010004fcc       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010004fcc                dcd_set_address
  .text.dcd_connect
-                0x0000000010004fcc       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010004fcc                dcd_connect
+                0x0000000010004fe0       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010004fe0                dcd_connect
  .text.dcd_init
-                0x0000000010004fdc       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010004fdc                dcd_init
+                0x0000000010004ff0       0x98 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010004ff0                dcd_init
  .text.dcd_edpt0_status_complete
-                0x0000000010005074       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005074                dcd_edpt0_status_complete
+                0x0000000010005088       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005088                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x0000000010005090      0x108 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005090                dcd_edpt_open
+                0x00000000100050a4      0x108 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100050a4                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x0000000010005198        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005198                dcd_edpt_close_all
+                0x00000000100051ac        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100051ac                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x00000000100051a0       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100051a0                dcd_edpt_xfer
+                0x00000000100051b4       0x24 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100051b4                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x00000000100051c4       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100051c4                dcd_edpt_stall
+                0x00000000100051d8       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100051d8                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x00000000100051fc       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100051fc                dcd_edpt_clear_stall
+                0x0000000010005210       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005210                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x000000001000522c       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000522c                rp2040_usb_init
+                0x0000000010005240       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005240                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x0000000010005278       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005278                hw_endpoint_xfer_start
+                0x000000001000528c       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x000000001000528c                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x00000000100052c8       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100052c8                tud_mounted
+                0x00000000100052dc       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100052dc                tud_mounted
  .text.tud_suspended
-                0x00000000100052d8       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100052d8                tud_suspended
+                0x00000000100052ec       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100052ec                tud_suspended
  .text.tud_inited
-                0x00000000100052e8       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100052e8                tud_inited
+                0x00000000100052fc       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100052fc                tud_inited
  .text.tud_init
-                0x00000000100052fc       0xe4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100052fc                tud_init
+                0x0000000010005310       0xe4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005310                tud_init
  .text.tud_task_ext
-                0x00000000100053e0      0x854 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100053e0                tud_task_ext
+                0x00000000100053f4      0x854 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100053f4                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x0000000010005c34       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005c34                usbd_open_edpt_pair
+                0x0000000010005c48       0x9c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005c48                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x0000000010005cd0       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005cd0                usbd_defer_func
+                0x0000000010005ce4       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005ce4                usbd_defer_func
  .text.usbd_edpt_open
-                0x0000000010005d18       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005d18                usbd_edpt_open
+                0x0000000010005d2c       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005d2c                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x0000000010005d4c       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005d4c                usbd_edpt_claim
+                0x0000000010005d60       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005d60                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x0000000010005d74       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005d74                usbd_edpt_release
+                0x0000000010005d88       0x28 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005d88                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x0000000010005d9c       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005d9c                usbd_edpt_xfer
+                0x0000000010005db0       0x4c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005db0                usbd_edpt_xfer
  .text.tud_control_status
-                0x0000000010005de8       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005de8                tud_control_status
+                0x0000000010005dfc       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005dfc                tud_control_status
  .text.tud_control_xfer
-                0x0000000010005e18       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005e18                tud_control_xfer
+                0x0000000010005e2c       0xbc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005e2c                tud_control_xfer
  .text.usbd_control_reset
-                0x0000000010005ed4       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005ed4                usbd_control_reset
+                0x0000000010005ee8       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005ee8                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x0000000010005ee8        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005ee8                usbd_control_set_complete_callback
+                0x0000000010005efc        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005efc                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x0000000010005ef4       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005ef4                usbd_control_set_request
+                0x0000000010005f08       0x1c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005f08                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x0000000010005f10       0xfc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010005f10                usbd_control_xfer_cb
+                0x0000000010005f24       0xfc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005f24                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x000000001000600c       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000600c                tud_cdc_n_connected
+                0x0000000010006020       0x30 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006020                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x000000001000603c       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000603c                tud_cdc_n_available
+                0x0000000010006050       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006050                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x0000000010006054       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006054                tud_cdc_n_read
+                0x0000000010006068       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006068                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x00000000100060c4       0x78 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100060c4                tud_cdc_n_write_flush
+                0x00000000100060d8       0x78 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100060d8                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x000000001000613c       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000613c                tud_cdc_n_write
+                0x0000000010006150       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006150                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x0000000010006170       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006170                tud_cdc_n_write_available
+                0x0000000010006184       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006184                tud_cdc_n_write_available
  .text.cdcd_init
-                0x0000000010006188       0x7c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006188                cdcd_init
+                0x000000001000619c       0x7c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000619c                cdcd_init
  .text.cdcd_reset
-                0x0000000010006204       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006204                cdcd_reset
+                0x0000000010006218       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006218                cdcd_reset
  .text.cdcd_open
-                0x0000000010006230       0xe8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006230                cdcd_open
+                0x0000000010006244       0xe8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006244                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x0000000010006318       0xe4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006318                cdcd_control_xfer_cb
+                0x000000001000632c       0xe4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000632c                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x00000000100063fc      0x148 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100063fc                cdcd_xfer_cb
+                0x0000000010006410      0x148 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006410                cdcd_xfer_cb
  .text.tusb_init
-                0x0000000010006544        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006544                tusb_init
+                0x0000000010006558        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006558                tusb_init
  .text.tusb_inited
-                0x0000000010006550        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006550                tusb_inited
+                0x0000000010006564        0x8 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006564                tusb_inited
  .text.tu_edpt_claim
-                0x0000000010006558       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006558                tu_edpt_claim
+                0x000000001000656c       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000656c                tu_edpt_claim
  .text.tu_edpt_release
-                0x00000000100065a8       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100065a8                tu_edpt_release
+                0x00000000100065bc       0x38 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100065bc                tu_edpt_release
  .text.tu_edpt_validate
-                0x00000000100065e0       0x78 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100065e0                tu_edpt_validate
+                0x00000000100065f4       0x78 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100065f4                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x0000000010006658       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006658                tu_edpt_bind_driver
+                0x000000001000666c       0x34 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000666c                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x000000001000668c       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000668c                tu_fifo_config
+                0x00000000100066a0       0x70 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100066a0                tu_fifo_config
  .text.tu_fifo_count
-                0x00000000100066fc       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100066fc                tu_fifo_count
+                0x0000000010006710       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006710                tu_fifo_count
  .text.tu_fifo_empty
-                0x0000000010006728       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006728                tu_fifo_empty
+                0x000000001000673c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000673c                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x0000000010006738       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006738                tu_fifo_remaining
+                0x000000001000674c       0x2c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000674c                tu_fifo_remaining
  .text.tu_fifo_read
-                0x0000000010006764       0xa0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006764                tu_fifo_read
+                0x0000000010006778       0xa0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006778                tu_fifo_read
  .text.tu_fifo_read_n
-                0x0000000010006804       0xec CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006804                tu_fifo_read_n
+                0x0000000010006818       0xec CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006818                tu_fifo_read_n
  .text.tu_fifo_write
-                0x00000000100068f0       0x88 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100068f0                tu_fifo_write
+                0x0000000010006904       0x88 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006904                tu_fifo_write
  .text.tu_fifo_write_n
-                0x0000000010006978      0x168 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006978                tu_fifo_write_n
+                0x000000001000698c      0x168 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000698c                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x0000000010006ae0       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006ae0                tu_fifo_clear
+                0x0000000010006af4       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006af4                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x0000000010006b20       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006b20                tu_fifo_set_overwritable
+                0x0000000010006b34       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006b34                tu_fifo_set_overwritable
  .text.pvPortMalloc
-                0x0000000010006b68      0x144 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/MemMang/heap_4.c.obj
-                0x0000000010006b68                pvPortMalloc
+                0x0000000010006b7c      0x144 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/MemMang/heap_4.c.obj
+                0x0000000010006b7c                pvPortMalloc
  .text.vPortFree
-                0x0000000010006cac       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/MemMang/heap_4.c.obj
-                0x0000000010006cac                vPortFree
+                0x0000000010006cc0       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/MemMang/heap_4.c.obj
+                0x0000000010006cc0                vPortFree
  .text.vPortSVCHandler
-                0x0000000010006d38        0x4 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006d38                vPortSVCHandler
- *fill*         0x0000000010006d3c        0x4 
+                0x0000000010006d4c        0x4 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006d4c                vPortSVCHandler
  .text.vPortStartFirstTask
-                0x0000000010006d40       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
- *fill*         0x0000000010006d74        0xc 
+                0x0000000010006d50       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+ *fill*         0x0000000010006d84        0xc 
  .text.xPortPendSVHandler
-                0x0000000010006d80       0x64 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006d80                xPortPendSVHandler
+                0x0000000010006d90       0x64 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006d90                xPortPendSVHandler
  .text.prvTaskExitError
-                0x0000000010006de4        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006df4        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
  .text.pxPortInitialiseStack
-                0x0000000010006dec       0x20 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006dec                pxPortInitialiseStack
+                0x0000000010006dfc       0x20 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006dfc                pxPortInitialiseStack
  .text.vPortYield
-                0x0000000010006e0c       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e0c                vPortYield
+                0x0000000010006e1c       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e1c                vPortYield
  .text.vPortEnterCritical
-                0x0000000010006e24       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e24                vPortEnterCritical
+                0x0000000010006e34       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e34                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000000010006e3c       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e3c                vPortExitCritical
+                0x0000000010006e4c       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e4c                vPortExitCritical
  .text.ulSetInterruptMaskFromISR
-                0x0000000010006e70        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e70                ulSetInterruptMaskFromISR
+                0x0000000010006e80        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e80                ulSetInterruptMaskFromISR
  .text.vClearInterruptMaskFromISR
-                0x0000000010006e78        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e78                vClearInterruptMaskFromISR
+                0x0000000010006e88        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e88                vClearInterruptMaskFromISR
  .text.xPortSysTickHandler
-                0x0000000010006e80       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006e80                xPortSysTickHandler
+                0x0000000010006e90       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006e90                xPortSysTickHandler
  .text.vPortSetupTimerInterrupt
-                0x0000000010006ea4       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006ea4                vPortSetupTimerInterrupt
+                0x0000000010006eb4       0x34 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006eb4                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x0000000010006ed8       0x70 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006ed8                xPortStartScheduler
+                0x0000000010006ee8       0x70 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006ee8                xPortStartScheduler
  .text.ulPortLockGetCurrentOwnerId
-                0x0000000010006f48       0x2c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006f48                ulPortLockGetCurrentOwnerId
+                0x0000000010006f58       0x2c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006f58                ulPortLockGetCurrentOwnerId
  .text.vPortLockInternalSpinUnlockWithWait
-                0x0000000010006f74       0x68 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006f74                vPortLockInternalSpinUnlockWithWait
+                0x0000000010006f84       0x68 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006f84                vPortLockInternalSpinUnlockWithWait
  .text.vPortLockInternalSpinUnlockWithNotify
-                0x0000000010006fdc       0x84 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010006fdc                vPortLockInternalSpinUnlockWithNotify
+                0x0000000010006fec       0x84 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010006fec                vPortLockInternalSpinUnlockWithNotify
  .text.xPortLockInternalSpinUnlockWithBestEffortWaitOrTimeout
-                0x0000000010007060       0xfc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
-                0x0000000010007060                xPortLockInternalSpinUnlockWithBestEffortWaitOrTimeout
+                0x0000000010007070       0xfc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x0000000010007070                xPortLockInternalSpinUnlockWithBestEffortWaitOrTimeout
  .text.startup.prvRuntimeInitializer
-                0x000000001000715c       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
+                0x000000001000716c       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/port.c.obj
  .text.vEventGroupSetBitsCallback
-                0x000000001000716c       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
-                0x000000001000716c                vEventGroupSetBitsCallback
+                0x000000001000717c       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
+                0x000000001000717c                vEventGroupSetBitsCallback
  .text.xEventGroupCreate
-                0x00000000100071f8       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
-                0x00000000100071f8                xEventGroupCreate
+                0x0000000010007208       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
+                0x0000000010007208                xEventGroupCreate
  .text.xEventGroupWaitBits
-                0x0000000010007210       0xb8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
-                0x0000000010007210                xEventGroupWaitBits
+                0x0000000010007220       0xb8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
+                0x0000000010007220                xEventGroupWaitBits
  .text.xEventGroupSetBits
-                0x00000000100072c8       0x90 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
-                0x00000000100072c8                xEventGroupSetBits
+                0x00000000100072d8       0x90 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
+                0x00000000100072d8                xEventGroupSetBits
  .text.xEventGroupSetBitsFromISR
-                0x0000000010007358       0x14 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
-                0x0000000010007358                xEventGroupSetBitsFromISR
+                0x0000000010007368       0x14 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/event_groups.c.obj
+                0x0000000010007368                xEventGroupSetBitsFromISR
  .text.vListInitialise
-                0x000000001000736c       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
-                0x000000001000736c                vListInitialise
+                0x000000001000737c       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
+                0x000000001000737c                vListInitialise
  .text.vListInitialiseItem
-                0x0000000010007384        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
-                0x0000000010007384                vListInitialiseItem
+                0x0000000010007394        0x8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
+                0x0000000010007394                vListInitialiseItem
  .text.vListInsert
-                0x000000001000738c       0x30 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
-                0x000000001000738c                vListInsert
+                0x000000001000739c       0x30 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
+                0x000000001000739c                vListInsert
  .text.uxListRemove
-                0x00000000100073bc       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
-                0x00000000100073bc                uxListRemove
+                0x00000000100073cc       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/list.c.obj
+                0x00000000100073cc                uxListRemove
  .text.prvUnlockQueue
-                0x00000000100073e0      0x148 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x00000000100073f0      0x148 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
  .text.prvNotifyQueueSetContainer
-                0x0000000010007528       0x9c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x0000000010007538       0x9c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
  .text.xQueueGenericCreate
-                0x00000000100075c4       0xa0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
-                0x00000000100075c4                xQueueGenericCreate
+                0x00000000100075d4       0xa0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x00000000100075d4                xQueueGenericCreate
  .text.xQueueGenericSendFromISR
-                0x0000000010007664      0x138 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
-                0x0000000010007664                xQueueGenericSendFromISR
+                0x0000000010007674      0x138 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x0000000010007674                xQueueGenericSendFromISR
  .text.xQueueReceive
-                0x000000001000779c      0x11c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
-                0x000000001000779c                xQueueReceive
+                0x00000000100077ac      0x11c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x00000000100077ac                xQueueReceive
  .text.vQueueAddToRegistry
-                0x00000000100078b8       0xec CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
-                0x00000000100078b8                vQueueAddToRegistry
+                0x00000000100078c8       0xec CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x00000000100078c8                vQueueAddToRegistry
  .text.vQueueWaitForMessageRestricted
-                0x00000000100079a4       0x48 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
-                0x00000000100079a4                vQueueWaitForMessageRestricted
+                0x00000000100079b4       0x48 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/queue.c.obj
+                0x00000000100079b4                vQueueWaitForMessageRestricted
  .text.prvIdleTask
-                0x00000000100079ec       0x60 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100079fc       0x60 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
  .text.xTaskIncrementTick.part.0
-                0x0000000010007a4c      0x1a0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010007a5c      0x1a0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
  .text.xTaskCreate
-                0x0000000010007bec      0x280 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010007bec                xTaskCreate
+                0x0000000010007bfc      0x280 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010007bfc                xTaskCreate
  .text.vTaskStartScheduler
-                0x0000000010007e6c      0x1e0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010007e6c                vTaskStartScheduler
+                0x0000000010007e7c      0x1e0 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010007e7c                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x000000001000804c       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x000000001000804c                vTaskSuspendAll
+                0x000000001000805c       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x000000001000805c                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x000000001000805c      0x18c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x000000001000805c                xTaskResumeAll
+                0x000000001000806c      0x18c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x000000001000806c                xTaskResumeAll
  .text.xTaskGetTickCount
-                0x00000000100081e8        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100081e8                xTaskGetTickCount
+                0x00000000100081f8        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100081f8                xTaskGetTickCount
  .text.uxTaskGetNumberOfTasks
-                0x00000000100081f4        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100081f4                uxTaskGetNumberOfTasks
+                0x0000000010008204        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008204                uxTaskGetNumberOfTasks
  .text.xTaskIncrementTick
-                0x0000000010008200       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008200                xTaskIncrementTick
+                0x0000000010008210       0x24 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008210                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x0000000010008224       0x6c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008224                vTaskSwitchContext
+                0x0000000010008234       0x6c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008234                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x0000000010008290       0x98 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008290                vTaskPlaceOnEventList
+                0x00000000100082a0       0x98 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100082a0                vTaskPlaceOnEventList
  .text.vTaskPlaceOnUnorderedEventList
-                0x0000000010008328       0xbc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008328                vTaskPlaceOnUnorderedEventList
+                0x0000000010008338       0xbc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008338                vTaskPlaceOnUnorderedEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x00000000100083e4       0xc4 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100083e4                vTaskPlaceOnEventListRestricted
+                0x00000000100083f4       0xc4 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100083f4                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x00000000100084a8       0xd8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100084a8                xTaskRemoveFromEventList
+                0x00000000100084b8       0xd8 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100084b8                xTaskRemoveFromEventList
  .text.vTaskRemoveFromUnorderedEventList
-                0x0000000010008580       0x98 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008580                vTaskRemoveFromUnorderedEventList
+                0x0000000010008590       0x98 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008590                vTaskRemoveFromUnorderedEventList
  .text.vTaskInternalSetTimeOutState
-                0x0000000010008618       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008618                vTaskInternalSetTimeOutState
+                0x0000000010008628       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008628                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000000010008630       0x74 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008630                xTaskCheckForTimeOut
+                0x0000000010008640       0x74 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008640                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x00000000100086a4        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100086a4                vTaskMissedYield
+                0x00000000100086b4        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100086b4                vTaskMissedYield
  .text.xTaskGetCurrentTaskHandle
-                0x00000000100086b0        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100086b0                xTaskGetCurrentTaskHandle
+                0x00000000100086c0        0xc CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100086c0                xTaskGetCurrentTaskHandle
  .text.xTaskPriorityDisinherit
-                0x00000000100086bc       0x64 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x00000000100086bc                xTaskPriorityDisinherit
+                0x00000000100086cc       0x64 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x00000000100086cc                xTaskPriorityDisinherit
  .text.uxTaskResetEventItemValue
-                0x0000000010008720       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
-                0x0000000010008720                uxTaskResetEventItemValue
+                0x0000000010008730       0x18 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/tasks.c.obj
+                0x0000000010008730                uxTaskResetEventItemValue
  .text.prvTimerTask
-                0x0000000010008738      0x360 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
+                0x0000000010008748      0x360 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
  .text.xTimerCreateTimerTask
-                0x0000000010008a98       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
-                0x0000000010008a98                xTimerCreateTimerTask
+                0x0000000010008aa8       0x8c CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
+                0x0000000010008aa8                xTimerCreateTimerTask
  .text.xTimerPendFunctionCallFromISR
-                0x0000000010008b24       0x28 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
-                0x0000000010008b24                xTimerPendFunctionCallFromISR
+                0x0000000010008b34       0x28 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
+                0x0000000010008b34                xTimerPendFunctionCallFromISR
  .text.exception_set_exclusive_handler
-                0x0000000010008b4c       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
-                0x0000000010008b4c                exception_set_exclusive_handler
+                0x0000000010008b5c       0x48 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
+                0x0000000010008b5c                exception_set_exclusive_handler
  .text.spi_init
-                0x0000000010008b94      0x138 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x0000000010008b94                spi_init
+                0x0000000010008ba4      0x138 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x0000000010008ba4                spi_init
  .text._ZN5Print17availableForWriteEv
-                0x0000000010008ccc        0x4 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008ccc                Print::availableForWrite()
+                0x0000000010008cdc        0x4 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008cdc                Print::availableForWrite()
  .text._ZN10ST7735_TFTC2Ev
-                0x0000000010008cd0       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008cd0                ST7735_TFT::ST7735_TFT()
-                0x0000000010008cd0                ST7735_TFT::ST7735_TFT()
+                0x0000000010008ce0       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008ce0                ST7735_TFT::ST7735_TFT()
+                0x0000000010008ce0                ST7735_TFT::ST7735_TFT()
  .text._ZN10ST7735_TFT12TFTSetupGPIOEaaaaa
-                0x0000000010008cf0       0x4c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008cf0                ST7735_TFT::TFTSetupGPIO(signed char, signed char, signed char, signed char, signed char)
+                0x0000000010008d00       0x4c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008d00                ST7735_TFT::TFTSetupGPIO(signed char, signed char, signed char, signed char, signed char)
  .text._ZN10ST7735_TFT4BcmdEv
-                0x0000000010008d3c      0x1b8 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008d3c                ST7735_TFT::Bcmd()
+                0x0000000010008d4c      0x1b8 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008d4c                ST7735_TFT::Bcmd()
  .text._ZN10ST7735_TFT20TFTST7735BInitializeEv
-                0x0000000010008ef4       0xd4 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008ef4                ST7735_TFT::TFTST7735BInitialize()
+                0x0000000010008f04       0xd4 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008f04                ST7735_TFT::TFTST7735BInitialize()
  .text._ZN10ST7735_TFT5Rcmd1Ev
-                0x0000000010008fc8      0x13c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010008fc8                ST7735_TFT::Rcmd1()
+                0x0000000010008fd8      0x13c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010008fd8                ST7735_TFT::Rcmd1()
  .text._ZN10ST7735_TFT5Rcmd3Ev
-                0x0000000010009104       0x6c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010009104                ST7735_TFT::Rcmd3()
+                0x0000000010009114       0x6c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010009114                ST7735_TFT::Rcmd3()
  .text._ZN10ST7735_TFT21TFTGreenTabInitializeEv
-                0x0000000010009170      0x128 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010009170                ST7735_TFT::TFTGreenTabInitialize()
+                0x0000000010009180      0x128 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010009180                ST7735_TFT::TFTGreenTabInitialize()
  .text._ZN10ST7735_TFT19TFTRedTabInitializeEv
-                0x0000000010009298      0x10c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010009298                ST7735_TFT::TFTRedTabInitialize()
+                0x00000000100092a8      0x10c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x00000000100092a8                ST7735_TFT::TFTRedTabInitialize()
  .text._ZN10ST7735_TFT21TFTBlackTabInitializeEv
-                0x00000000100093a4      0x11c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x00000000100093a4                ST7735_TFT::TFTBlackTabInitialize()
+                0x00000000100093b4      0x11c ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x00000000100093b4                ST7735_TFT::TFTBlackTabInitialize()
  .text._ZN10ST7735_TFT17TFTInitScreenSizeEhhtt
-                0x00000000100094c0       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x00000000100094c0                ST7735_TFT::TFTInitScreenSize(unsigned char, unsigned char, unsigned short, unsigned short)
+                0x00000000100094d0       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x00000000100094d0                ST7735_TFT::TFTInitScreenSize(unsigned char, unsigned char, unsigned short, unsigned short)
  .text._ZN10ST7735_TFT14TFTInitPCBTypeENS_13TFT_PCBtype_eE
-                0x00000000100094e0       0x28 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x00000000100094e0                ST7735_TFT::TFTInitPCBType(ST7735_TFT::TFT_PCBtype_e)
+                0x00000000100094f0       0x28 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x00000000100094f0                ST7735_TFT::TFTInitPCBType(ST7735_TFT::TFT_PCBtype_e)
  .text._ZN10ST7735_TFT14TFTInitSPITypeEmP8spi_inst
-                0x0000000010009508        0xc ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x0000000010009508                ST7735_TFT::TFTInitSPIType(unsigned long, spi_inst*)
+                0x0000000010009518        0xc ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x0000000010009518                ST7735_TFT::TFTInitSPIType(unsigned long, spi_inst*)
  .text._ZN5Print5writeEPKhj
-                0x0000000010009514       0x28 ../lib/st7735/libst7735.a(ST7735_TFT_Print.cpp.obj)
-                0x0000000010009514                Print::write(unsigned char const*, unsigned int)
+                0x0000000010009524       0x28 ../lib/st7735/libst7735.a(ST7735_TFT_Print.cpp.obj)
+                0x0000000010009524                Print::write(unsigned char const*, unsigned int)
  .text._ZN19ST7735_TFT_graphicsC2Ev
-                0x000000001000953c       0x30 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000953c                ST7735_TFT_graphics::ST7735_TFT_graphics()
-                0x000000001000953c                ST7735_TFT_graphics::ST7735_TFT_graphics()
+                0x000000001000954c       0x30 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000954c                ST7735_TFT_graphics::ST7735_TFT_graphics()
+                0x000000001000954c                ST7735_TFT_graphics::ST7735_TFT_graphics()
  .text._ZN19ST7735_TFT_graphics10TFTFontNumENS_15TFT_Font_Type_eE
-                0x000000001000956c      0x110 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000956c                ST7735_TFT_graphics::TFTFontNum(ST7735_TFT_graphics::TFT_Font_Type_e)
+                0x000000001000957c      0x110 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000957c                ST7735_TFT_graphics::TFTFontNum(ST7735_TFT_graphics::TFT_Font_Type_e)
  .text._ZN19ST7735_TFT_graphics12writeCommandEh
-                0x000000001000967c      0x304 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000967c                ST7735_TFT_graphics::writeCommand(unsigned char)
+                0x000000001000968c      0x304 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000968c                ST7735_TFT_graphics::writeCommand(unsigned char)
  .text._ZN19ST7735_TFT_graphics9writeDataEh
-                0x0000000010009980      0x304 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x0000000010009980                ST7735_TFT_graphics::writeData(unsigned char)
+                0x0000000010009990      0x304 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x0000000010009990                ST7735_TFT_graphics::writeData(unsigned char)
  .text._ZN19ST7735_TFT_graphics8spiWriteEh
-                0x0000000010009c84      0x2e4 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x0000000010009c84                ST7735_TFT_graphics::spiWrite(unsigned char)
+                0x0000000010009c94      0x2e4 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x0000000010009c94                ST7735_TFT_graphics::spiWrite(unsigned char)
  .text._ZN19ST7735_TFT_graphics16TFTsetAddrWindowEhhhh
-                0x0000000010009f68      0x308 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x0000000010009f68                ST7735_TFT_graphics::TFTsetAddrWindow(unsigned char, unsigned char, unsigned char, unsigned char)
+                0x0000000010009f78      0x308 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x0000000010009f78                ST7735_TFT_graphics::TFTsetAddrWindow(unsigned char, unsigned char, unsigned char, unsigned char)
  .text._ZN19ST7735_TFT_graphics16TFTdrawFastVLineEhhht
-                0x000000001000a270      0x734 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000a270                ST7735_TFT_graphics::TFTdrawFastVLine(unsigned char, unsigned char, unsigned char, unsigned short)
+                0x000000001000a280      0x734 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000a280                ST7735_TFT_graphics::TFTdrawFastVLine(unsigned char, unsigned char, unsigned char, unsigned short)
  .text._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtt
-                0x000000001000a9a4      0x25c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000a9a4                ST7735_TFT_graphics::TFTdrawChar(unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
+                0x000000001000a9b4      0x25c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000a9b4                ST7735_TFT_graphics::TFTdrawChar(unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
  .text._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtth
-                0x000000001000ac00      0x308 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000ac00                ST7735_TFT_graphics::TFTdrawChar(unsigned char, unsigned char, unsigned char, unsigned short, unsigned short, unsigned char)
+                0x000000001000ac10      0x308 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000ac10                ST7735_TFT_graphics::TFTdrawChar(unsigned char, unsigned char, unsigned char, unsigned short, unsigned short, unsigned char)
  .text._ZN19ST7735_TFT_graphics11TFTdrawTextEhhPctth
-                0x000000001000af08      0x100 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000af08                ST7735_TFT_graphics::TFTdrawText(unsigned char, unsigned char, char*, unsigned short, unsigned short, unsigned char)
+                0x000000001000af18      0x100 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000af18                ST7735_TFT_graphics::TFTdrawText(unsigned char, unsigned char, char*, unsigned short, unsigned short, unsigned char)
  .text._ZN19ST7735_TFT_graphics5writeEh
-                0x000000001000b008       0xf4 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000b008                ST7735_TFT_graphics::write(unsigned char)
+                0x000000001000b018       0xf4 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000b018                ST7735_TFT_graphics::write(unsigned char)
  .text._ZN19ST7735_TFT_graphics18spiWriteDataBufferEPhm
-                0x000000001000b0fc      0x3ec ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000b0fc                ST7735_TFT_graphics::spiWriteDataBuffer(unsigned char*, unsigned long)
+                0x000000001000b10c      0x3ec ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000b10c                ST7735_TFT_graphics::spiWriteDataBuffer(unsigned char*, unsigned long)
+ .text._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht
+                0x000000001000b4f8      0x124 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000b4f8                ST7735_TFT_graphics::TFTfillRectangle(unsigned char, unsigned char, unsigned char, unsigned char, unsigned short)
  .text._ZN19ST7735_TFT_graphics13TFTfillScreenEt
-                0x000000001000b4e8       0xdc ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000b4e8                ST7735_TFT_graphics::TFTfillScreen(unsigned short)
+                0x000000001000b61c       0xdc ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000b61c                ST7735_TFT_graphics::TFTfillScreen(unsigned short)
  .text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
-                0x000000001000b5c4       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(eh_alloc.o)
- .text          0x000000001000b5f0       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000001000b5f0                malloc
-                0x000000001000b604                free
- .text          0x000000001000b618      0x574 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x000000001000b618                _malloc_r
- .text          0x000000001000bb8c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000001000bb8c                __malloc_lock
-                0x000000001000bb90                __malloc_unlock
- .text          0x000000001000bb94       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x000000001000bb94                _sbrk_r
- .text          0x000000001000bbb8       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000001000bbb8                strlen
- .text          0x000000001000bc14      0x260 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
-                0x000000001000bc14                _malloc_trim_r
-                0x000000001000bcb0                _free_r
+                0x000000001000b6f8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(eh_alloc.o)
+ .text          0x000000001000b724       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
+                0x000000001000b724                malloc
+                0x000000001000b738                free
+ .text          0x000000001000b74c      0x574 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x000000001000b74c                _malloc_r
+ .text          0x000000001000bcc0        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000001000bcc0                __malloc_lock
+                0x000000001000bcc4                __malloc_unlock
+ .text          0x000000001000bcc8       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x000000001000bcc8                _sbrk_r
+ .text          0x000000001000bcec       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x000000001000bcec                strlen
+ .text          0x000000001000bd48      0x260 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
+                0x000000001000bd48                _malloc_trim_r
+                0x000000001000bde4                _free_r
  *(.fini)
- .fini          0x000000001000be74        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x000000001000be74                _fini
- .fini.__stub   0x000000001000be78       0xf0 linker stubs
+ .fini          0x000000001000bfa8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x000000001000bfa8                _fini
+ *fill*         0x000000001000bfac        0x4 
+ .fini.__stub   0x000000001000bfb0       0xf0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3530,200 +3531,200 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x000000001000bf68        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x000000001000bf68                . = ALIGN (0x4)
+ .eh_frame      0x000000001000c0a0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x000000001000c0a0                . = ALIGN (0x4)
 
-.glue_7         0x000000001000bf68        0x0
- .glue_7        0x000000001000bf68        0x0 linker stubs
+.glue_7         0x000000001000c0a0        0x0
+ .glue_7        0x000000001000c0a0        0x0 linker stubs
 
-.glue_7t        0x000000001000bf68        0x0
- .glue_7t       0x000000001000bf68        0x0 linker stubs
+.glue_7t        0x000000001000c0a0        0x0
+ .glue_7t       0x000000001000c0a0        0x0 linker stubs
 
-.vfp11_veneer   0x000000001000bf68        0x0
- .vfp11_veneer  0x000000001000bf68        0x0 linker stubs
+.vfp11_veneer   0x000000001000c0a0        0x0
+ .vfp11_veneer  0x000000001000c0a0        0x0 linker stubs
 
-.v4_bx          0x000000001000bf68        0x0
- .v4_bx         0x000000001000bf68        0x0 linker stubs
+.v4_bx          0x000000001000c0a0        0x0
+ .v4_bx         0x000000001000c0a0        0x0 linker stubs
 
-.iplt           0x000000001000bf68        0x0
- .iplt          0x000000001000bf68        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x000000001000c0a0        0x0
+ .iplt          0x000000001000c0a0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x000000001000bf68     0x4558
+.rodata         0x000000001000c0a0     0x4558
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata._Z8lcd_taskPv.str1.4
-                0x000000001000bf68       0x18 CMakeFiles/pockpet_v2.dir/main.cpp.obj
+                0x000000001000c0a0       0x18 CMakeFiles/pockpet_v2.dir/main.cpp.obj
  .rodata._Z8tftSetupv.str1.4
-                0x000000001000bf80        0xe CMakeFiles/pockpet_v2.dir/main.cpp.obj
- *fill*         0x000000001000bf8e        0x2 
+                0x000000001000c0b8        0xe CMakeFiles/pockpet_v2.dir/main.cpp.obj
+ *fill*         0x000000001000c0c6        0x2 
  .rodata.main.str1.4
-                0x000000001000bf90       0x15 CMakeFiles/pockpet_v2.dir/main.cpp.obj
- *fill*         0x000000001000bfa5        0x3 
+                0x000000001000c0c8       0x15 CMakeFiles/pockpet_v2.dir/main.cpp.obj
+ *fill*         0x000000001000c0dd        0x3 
  .rodata.spin_lock_claim_unused.str1.4
-                0x000000001000bfa8       0x1b CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x000000001000bfc3        0x1 
+                0x000000001000c0e0       0x1b CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x000000001000c0fb        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x000000001000bfc4       0x1b CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x000000001000bfdf        0x1 
+                0x000000001000c0fc       0x1b CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x000000001000c117        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x000000001000bfe0       0x22 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x000000001000c002        0x2 
+                0x000000001000c118       0x22 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001000c13a        0x2 
  .rodata.panic.str1.4
-                0x000000001000c004       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000c13c       0x10 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x12 (size before relaxing)
  .rodata.panic_unsupported.str1.4
-                0x000000001000c014        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x000000001000c022        0x2 
+                0x000000001000c14c        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x000000001000c15a        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x000000001000c024        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000c15c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x000000001000c030       0x15 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000c045        0x3 
+                0x000000001000c168       0x15 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x000000001000c17d        0x3 
  .rodata._vsnprintf
-                0x000000001000c048      0x1e0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000c180      0x1e0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x000000001000c228       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000c360       0x50 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__wrap_malloc.str1.4
-                0x000000001000c278        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- *fill*         0x000000001000c286        0x2 
+                0x000000001000c3b0        0xe CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ *fill*         0x000000001000c3be        0x2 
  .rodata.str1.4
-                0x000000001000c288       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000c3c0       0x40 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x000000001000c2c8        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000c400        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x000000001000c2d4        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000c40c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x000000001000c2e0        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000c418        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x000000001000c2ec        0x2 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x000000001000c2ee        0x2 
+                0x000000001000c424        0x2 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001000c426        0x2 
  .rodata._resetd_driver
-                0x000000001000c2f0       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x000000001000c428       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x000000001000c308       0x13 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x000000001000c31b        0x1 
+                0x000000001000c440       0x13 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x000000001000c453        0x1 
  .rodata.__bi_182.0
-                0x000000001000c31c        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000c454        0xc CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x000000001000c328       0x2a CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x000000001000c352        0x2 
+                0x000000001000c460       0x2a CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x000000001000c48a        0x2 
  .rodata.usbd_desc_cfg
-                0x000000001000c354       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000000001000c48c       0x54 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x000000001000c3a8       0x12 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x000000001000c3ba        0x2 
+                0x000000001000c4e0       0x12 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x000000001000c4f2        0x2 
  .rodata.usbd_desc_str
-                0x000000001000c3bc       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000000001000c4f4       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x000000001000c3d4       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000c50c       0x14 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x000000001000c3e8       0x53 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x000000001000c43b        0x1 
+                0x000000001000c520       0x53 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x000000001000c573        0x1 
  .rodata.tud_task_ext
-                0x000000001000c43c       0x8c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000c574       0x8c CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x000000001000c4c8       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000c600       0x18 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.prvTimerTask
-                0x000000001000c4e0       0x28 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
+                0x000000001000c618       0x28 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
  .rodata.xTimerCreateTimerTask.str1.4
-                0x000000001000c508       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
+                0x000000001000c640       0x10 CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
  .rodata._ZN10ST7735_TFT4BcmdEv.str1.4
-                0x000000001000c518       0x25 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
- *fill*         0x000000001000c53d        0x3 
+                0x000000001000c650       0x25 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+ *fill*         0x000000001000c675        0x3 
  .rodata._ZN10ST7735_TFT5Rcmd1Ev.str1.4
-                0x000000001000c540       0x10 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x000000001000c678       0x10 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
  .rodata._ZTV10ST7735_TFT
-                0x000000001000c550       0x14 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
-                0x000000001000c550                vtable for ST7735_TFT
- .rodata        0x000000001000c564       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x000000001000c688       0x14 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
+                0x000000001000c688                vtable for ST7735_TFT
+ .rodata        0x000000001000c69c       0x20 ../lib/st7735/libst7735.a(ST7735_TFT.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics10TFTFontNumENS_15TFT_Font_Type_eE
-                0x000000001000c584       0x34 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000c6bc       0x34 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtt.str1.4
-                0x000000001000c5b8      0x10c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000c6f0      0x10c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtt
-                0x000000001000c6c4       0x18 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000c7fc       0x18 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtth.str1.4
-                0x000000001000c6dc       0xbb ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x000000001000c797        0x1 
+                0x000000001000c814       0xbb ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x000000001000c8cf        0x1 
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawCharEhhhtth
-                0x000000001000c798       0x1c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000c8d0       0x1c ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics11TFTdrawTextEhhPctth.str1.4
-                0x000000001000c7b4       0xdc ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000c8ec       0xdc ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
  .rodata._ZN19ST7735_TFT_graphics5writeEh.str1.4
-                0x000000001000c890       0x6d ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x000000001000c8fd        0x3 
+                0x000000001000c9c8       0x6d ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x000000001000ca35        0x3 
  .rodata._ZN19ST7735_TFT_graphics16TFTfillRectangleEhhhht.str1.4
-                0x000000001000c900       0x6a ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
- *fill*         0x000000001000c96a        0x2 
+                0x000000001000ca38       0x6a ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+ *fill*         0x000000001000caa2        0x2 
  .rodata._ZTV19ST7735_TFT_graphics
-                0x000000001000c96c       0x14 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
-                0x000000001000c96c                vtable for ST7735_TFT_graphics
+                0x000000001000caa4       0x14 ../lib/st7735/libst7735.a(ST7735_TFT_graphics.cpp.obj)
+                0x000000001000caa4                vtable for ST7735_TFT_graphics
  .rodata._ZL10Font_Eight
-                0x000000001000c980      0x1c0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000cab8      0x1c0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL10Font_Seven
-                0x000000001000cb40      0x380 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000cc78      0x380 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL10Font_Three
-                0x000000001000cec0      0x16c ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000cff8      0x16c ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL11Font_Eleven
-                0x000000001000d02c      0x5f0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000d164      0x5f0 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL11Font_Twelve
-                0x000000001000d61c      0x474 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000d754      0x474 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL8Font_One
-                0x000000001000da90      0x4fb ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- *fill*         0x000000001000df8b        0x1 
+                0x000000001000dbc8      0x4fb ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+ *fill*         0x000000001000e0c3        0x1 
  .rodata._ZL8Font_Six
-                0x000000001000df8c      0x299 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- *fill*         0x000000001000e225        0x3 
+                0x000000001000e0c4      0x299 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+ *fill*         0x000000001000e35d        0x3 
  .rodata._ZL8Font_Ten
-                0x000000001000e228      0xc00 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000e360      0xc00 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL8Font_Two
-                0x000000001000ee28      0x19d ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
- *fill*         0x000000001000efc5        0x3 
+                0x000000001000ef60      0x19d ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+ *fill*         0x000000001000f0fd        0x3 
  .rodata._ZL9Font_Five
-                0x000000001000efc8      0x120 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000f100      0x120 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL9Font_Four
-                0x000000001000f0e8      0x1d8 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x000000001000f220      0x1d8 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .rodata._ZL9Font_Nine
-                0x000000001000f2c0     0x1200 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
-                0x00000000100104c0                . = ALIGN (0x4)
+                0x000000001000f3f8     0x1200 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
+                0x00000000100105f8                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100104c0                . = ALIGN (0x4)
+                0x00000000100105f8                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100104c0                __exidx_start = .
+                0x00000000100105f8                __exidx_start = .
 
-.ARM.exidx      0x00000000100104c0        0x8
+.ARM.exidx      0x00000000100105f8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx.text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
-                0x00000000100104c0        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(eh_alloc.o)
-                0x00000000100104c8                __exidx_end = .
-                0x00000000100104c8                . = ALIGN (0x4)
-                0x00000000100104c8                __binary_info_start = .
+                0x00000000100105f8        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(eh_alloc.o)
+                0x0000000010010600                __exidx_end = .
+                0x0000000010010600                . = ALIGN (0x4)
+                0x0000000010010600                __binary_info_start = .
 
-.binary_info    0x00000000100104c8       0x20
+.binary_info    0x0000000010010600       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x00000000100104c8        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010600        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x00000000100104cc        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010604        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x00000000100104d0        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010608        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x00000000100104d4        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001001060c        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x00000000100104d8        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010610        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x00000000100104dc        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010614        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100104e0        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010010618        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x00000000100104e4        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100104e8                __binary_info_end = .
+                0x000000001001061c        0x4 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010010620                __binary_info_end = .
 
-.rel.dyn        0x00000000100104e8        0x0
- .rel.iplt      0x00000000100104e8        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100104e8                . = ALIGN (0x4)
+.rel.dyn        0x0000000010010620        0x0
+ .rel.iplt      0x0000000010010620        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010010620                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -3732,7 +3733,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020000000       0xc0 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0     0x177c load address 0x00000000100104e8
+.data           0x00000000200000c0     0x177c load address 0x0000000010010620
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3924,36 +3925,36 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.jcr)
                 0x000000002000183c                . = ALIGN (0x4)
                 0x000000002000183c                __data_end__ = .
-                0x00000000100104e8                __etext = LOADADDR (.data)
+                0x0000000010010620                __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x000000002000183c        0x0 load address 0x0000000010011c64
+                0x000000002000183c        0x0 load address 0x0000000010011d9c
  .tm_clone_table
                 0x000000002000183c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000002000183c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x000000002000183c        0x0 load address 0x0000000010011c64
+.igot.plt       0x000000002000183c        0x0 load address 0x0000000010011d9c
  .igot.plt      0x000000002000183c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x000000002000183c        0x0 load address 0x0000000010011c64
+                0x000000002000183c        0x0 load address 0x0000000010011d9c
                 0x000000002000183c                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010011c64
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010011d9c
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010011c64                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010011d9c                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010011c64
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010011d9c
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010011c64                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010011d9c                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x0000000020001840    0x211dc
                 0x0000000020001840                . = ALIGN (0x4)
@@ -4166,8 +4167,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010011c64        0x0
-                0x0000000010011c64                PROVIDE (__flash_binary_end = .)
+.flash_end      0x0000000010011d9c        0x0
+                0x0000000010011d9c                PROVIDE (__flash_binary_end = .)
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -4257,7 +4258,7 @@ LOAD CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.obj
 LOAD CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
 LOAD CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD ../lib/st7735/libst7735.a
-LOAD /tmp/ccl4vRcZ.o
+LOAD /tmp/cco5ZEYQ.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -4399,7 +4400,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000009e4       0x32 ../lib/st7735/libst7735.a(ST7735_TFT_Font.cpp.obj)
  .ARM.attributes
-                0x0000000000000a16       0x22 /tmp/ccl4vRcZ.o
+                0x0000000000000a16       0x22 /tmp/cco5ZEYQ.o
  .ARM.attributes
                 0x0000000000000a38       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(eh_alloc.o)
  .ARM.attributes

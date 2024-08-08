@@ -92,6 +92,7 @@ int main()
     stdio_init_all();
     tftSetup();
     myTFT.TFTfillScreen(ST7735_BLACK);
+    myTFT.TFTfillRectangle(10,10,50,50,0xf800);
 
     xTaskCreate(lcd_task, "LCD_Task", 256, NULL, 1, NULL);
     xTaskCreate(button_task, "BTN_Task", 256, NULL, 1, NULL);
