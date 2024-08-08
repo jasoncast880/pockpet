@@ -61,23 +61,26 @@ void tftSetup(void) {
 bool button_pressed = false;
 
 void lcd_task(void *pvParameters){
-  if(button_pressed){
-    char teststr1[] = "Hello";
-    char teststr2[] = "World";
-    
-    myTFT.TFTfillScreen(ST7735_BLACK);
-    myTFT.TFTFontNum(myTFT.TFTFont_Default);
-    myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-    myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
-  }
-  else {
-    char teststr1[] = "Goodbye";
-    char teststr2[] = "World";
-    
-    myTFT.TFTfillScreen(ST7735_BLACK);
-    myTFT.TFTFontNum(myTFT.TFTFont_Default);
-    myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-    myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
+  while(1){
+    if(button_pressed){
+      char teststr1[] = "Hello";
+      char teststr2[] = "World";
+      
+      myTFT.TFTfillScreen(ST7735_BLACK);
+      myTFT.TFTFontNum(myTFT.TFTFont_Default);
+      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
+      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
+    }
+    else {
+      char teststr1[] = "Goodbye";
+      char teststr2[] = "World";
+      
+      myTFT.TFTfillScreen(ST7735_BLACK);
+      myTFT.TFTFontNum(myTFT.TFTFont_Default);
+      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
+      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
+    }
+    vTaskDelay(1000/portTICK_PERIOD_MS);
   }
 }
 
