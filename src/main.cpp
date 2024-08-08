@@ -99,7 +99,7 @@ int main()
     myTFT.TFTfillRectangle(10,10,50,50,0xf800);
 
     xTaskCreate(lcd_task, "LCD_Task", 256, NULL, 1, NULL);
-    xTaskCreate(button_task, "BTN_Task", 256, NULL, 1, NULL);
+    //xTaskCreate(button_task, "BTN_Task", 256, NULL, 1, NULL);
     vTaskStartScheduler();
 
     while(1){};
