@@ -264,7 +264,7 @@ FreeRTOS-Kernel_IS_TOP_LEVEL:STATIC=OFF
 FreeRTOS-Kernel_SOURCE_DIR:STATIC=/home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040
 
 //PICO target board (e.g. pico)
-PICO_BOARD:STRING=pico
+PICO_BOARD:STRING=pico_w
 
 //PICO board header directories
 PICO_BOARD_HEADER_DIRS:STRING=
@@ -515,7 +515,7 @@ PICO_BOOT_STAGE2_DIR:INTERNAL=/home/plebish/pico-sdk/src/rp2_common/boot_stage2
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/plebish/pico-sdk/cmake/preload/platforms
 PICO_CMAKE_PRELOAD_PLATFORM_FILE:INTERNAL=/home/plebish/pico-sdk/cmake/preload/platforms/rp2040.cmake
 PICO_COMPILER_ASM:INTERNAL=/usr/bin/arm-none-eabi-gcc
-PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs
+PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs /home/plebish/pico-sdk/src/rp2_common/cmsis /home/plebish/pico-sdk/src/rp2040/hardware_regs
 PICO_DOXYGEN_PATHS:INTERNAL= /home/plebish/pico-sdk/src/common /home/plebish/pico-sdk/lib/cyw43-driver/src /home/plebish/pico-sdk/src/rp2_common /home/plebish/pico-sdk/src/rp2040
 PICO_NO_HARDWARE:INTERNAL=0
 PICO_ON_DEVICE:INTERNAL=1

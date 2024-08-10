@@ -1,44 +1,11 @@
 src/CMakeFiles/pockpet_v2.dir/main.cpp.obj: \
- /home/plebish/pockpet_v2/src/main.cpp \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/FreeRTOS.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /home/plebish/pockpet_v2/src/FreeRTOSConfig.h \
- /usr/include/newlib/assert.h /usr/include/newlib/_ansi.h \
- /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
- /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
- /usr/include/newlib/sys/features.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/projdefs.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/portable.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/deprecated_definitions.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/portmacro.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico/types.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico/assert.h \
- /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
- /usr/include/newlib/c++/10.3.1/cassert \
- /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
- /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
- /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h \
- /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
- /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/freertos_sdk_config.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/rp2040_config.h \
- /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
- /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+ /home/plebish/pockpet_v2/src/main.cpp /usr/include/newlib/stdio.h \
+ /usr/include/newlib/_ansi.h /usr/include/newlib/newlib.h \
+ /usr/include/newlib/_newlib_version.h /usr/include/newlib/sys/config.h \
+ /usr/include/newlib/machine/ieeefp.h /usr/include/newlib/sys/features.h \
  /usr/include/newlib/sys/cdefs.h \
  /usr/include/newlib/machine/_default_types.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico/types.h \
- /home/plebish/pico-sdk/src/common/pico_base/include/pico/error.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/mpu_wrappers.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/task.h \
- /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/list.h \
- /usr/include/newlib/stdio.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /usr/include/newlib/sys/reent.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
@@ -50,6 +17,30 @@ src/CMakeFiles/pockpet_v2.dir/main.cpp.obj: \
  /usr/include/newlib/sys/_pthreadtypes.h /usr/include/newlib/sys/sched.h \
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
  /home/plebish/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico/types.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico/assert.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /usr/include/newlib/c++/10.3.1/cassert \
+ /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+ /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+ /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+ /usr/include/newlib/assert.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
+ /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h \
+ /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
+ /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/freertos_sdk_config.h \
+ /home/plebish/pockpet_v2/src/FreeRTOSConfig.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/rp2040_config.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+ /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+ /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+ /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico/types.h \
+ /home/plebish/pico-sdk/src/common/pico_base/include/pico/error.h \
  /home/plebish/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/plebish/pico-sdk/src/common/pico_time/include/pico/time.h \
  /home/plebish/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
@@ -71,18 +62,69 @@ src/CMakeFiles/pockpet_v2.dir/main.cpp.obj: \
  /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
  /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch.h \
+ /home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43.h \
+ /home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_config.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/include/cyw43_configport.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/netif.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/opt.h \
+ /home/plebish/pockpet_v2/src/lwipopts.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/debug.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/arch.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_lwip/include/arch/cc.h \
+ /usr/include/newlib/sys/time.h /usr/include/newlib/time.h \
+ /usr/include/newlib/machine/time.h /usr/include/newlib/sys/_locale.h \
+ /usr/include/newlib/machine/_time.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_rand/include/pico/rand.h \
+ /usr/include/newlib/c++/10.3.1/stdlib.h \
+ /usr/include/newlib/c++/10.3.1/cstdlib /usr/include/newlib/stdlib.h \
+ /usr/include/newlib/machine/stdlib.h /usr/include/newlib/alloca.h \
+ /usr/include/newlib/c++/10.3.1/bits/std_abs.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h \
+ /usr/include/newlib/ctype.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/err.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip_addr.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/def.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip4_addr.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip6_addr.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/def.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/pbuf.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/stats.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/mem.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/memp.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/priv/memp_std.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/priv/memp_priv.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/priv/mem_priv.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/dhcp.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/udp.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip4.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/prot/ip4.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/ip6.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/prot/ip.h \
+ /home/plebish/pico-sdk/lib/lwip/src/include/lwip/prot/udp.h \
+ /home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.h \
+ /usr/include/newlib/string.h /usr/include/newlib/strings.h \
+ /usr/include/newlib/sys/string.h \
+ /home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_country.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_async_context/include/pico/async_context.h \
+ /home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch/arch_freertos.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/FreeRTOS.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/projdefs.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/portable.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/deprecated_definitions.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/portmacro.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/mpu_wrappers.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/task.h \
+ /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/include/list.h \
  /home/plebish/pockpet_v2/src/../lib/st7735/include/ST7735_TFT.hpp \
  /home/plebish/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
  /home/plebish/pockpet_v2/src/../lib/st7735/include/ST7735_TFT_graphics.hpp \
- /usr/include/newlib/c++/10.3.1/cstring /usr/include/newlib/string.h \
- /usr/include/newlib/sys/_locale.h /usr/include/newlib/strings.h \
- /usr/include/newlib/sys/string.h /usr/include/newlib/c++/10.3.1/cstdio \
- /usr/include/newlib/c++/10.3.1/cstdlib \
- /usr/include/newlib/c++/10.3.1/stdlib.h /usr/include/newlib/stdlib.h \
- /usr/include/newlib/machine/stdlib.h /usr/include/newlib/alloca.h \
- /usr/include/newlib/c++/10.3.1/bits/std_abs.h \
+ /usr/include/newlib/c++/10.3.1/cstring \
+ /usr/include/newlib/c++/10.3.1/cstdio \
  /home/plebish/pockpet_v2/src/../lib/st7735/include/ST7735_TFT_Print.hpp \
  /usr/include/newlib/c++/10.3.1/math.h \
  /usr/include/newlib/c++/10.3.1/cmath \
@@ -125,7 +167,7 @@ src/CMakeFiles/pockpet_v2.dir/main.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h \
  /usr/include/newlib/c++/10.3.1/clocale /usr/include/newlib/locale.h \
  /usr/include/newlib/c++/10.3.1/iosfwd \
- /usr/include/newlib/c++/10.3.1/cctype /usr/include/newlib/ctype.h \
+ /usr/include/newlib/c++/10.3.1/cctype \
  /usr/include/newlib/c++/10.3.1/bits/ostream_insert.h \
  /usr/include/newlib/c++/10.3.1/bits/cxxabi_forced.h \
  /usr/include/newlib/c++/10.3.1/bits/stl_function.h \

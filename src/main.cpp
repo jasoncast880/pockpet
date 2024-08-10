@@ -1,8 +1,15 @@
+#include <stdio.h>
+#include "pico/stdlib.h"
+
+//cyw and lwip includes
+#include "pico/cyw43_arch.h"
+//#include "lwip/sockets.h"
+
+//freertos includes
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include <stdio.h>
-#include "pico/stdlib.h"
+//hardware includes
 #include "hardware/gpio.h"
 #include "ST7735_TFT.hpp"
 #include <string>
@@ -58,18 +65,20 @@ void tftSetup(void) {
 }
 
 //globs
-bool button_pressed = false;
+bool button_pressed = true;
 
 void lcd_task(void *pvParameters){
   while(1){
     if(button_pressed){
       char teststr1[] = "Hello";
       char teststr2[] = "World";
+      char teststr3[] = "v2_1";
       
       myTFT.TFTfillScreen(ST7735_BLACK);
       myTFT.TFTFontNum(myTFT.TFTFont_Default);
       myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
       myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
+      myTFT.TFTdrawText(15, 55, teststr3, ST7735_WHITE, ST7735_BLACK, 2);
     }
     else {
       char teststr1[] = "Goodbye";

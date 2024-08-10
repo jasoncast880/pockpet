@@ -27,6 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/plebish/pico-sdk/src/CMakeLists.txt"
   "/home/plebish/pico-sdk/src/board_setup.cmake"
   "/home/plebish/pico-sdk/src/boards/generic_board.cmake"
+  "/home/plebish/pico-sdk/src/boards/pico_w.cmake"
   "/home/plebish/pico-sdk/src/common/CMakeLists.txt"
   "/home/plebish/pico-sdk/src/common/boot_picoboot/CMakeLists.txt"
   "/home/plebish/pico-sdk/src/common/boot_uf2/CMakeLists.txt"

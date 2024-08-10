@@ -28,7 +28,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_util/phea
  /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h \
  /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
  /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h \
- /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+ /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
  /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \

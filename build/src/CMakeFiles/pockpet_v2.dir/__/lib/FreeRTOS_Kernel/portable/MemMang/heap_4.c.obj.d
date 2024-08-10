@@ -27,7 +27,7 @@ src/CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/portable/MemMang/heap_4.c.o
  /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h \
  /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
  /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h \
- /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+ /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/freertos_sdk_config.h \
  /home/plebish/pockpet_v2/lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/rp2040_config.h \

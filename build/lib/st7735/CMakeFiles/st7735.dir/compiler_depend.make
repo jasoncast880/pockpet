@@ -24,7 +24,7 @@ lib/st7735/CMakeFiles/st7735.dir/ST7735_TFT.cpp.obj: ../lib/st7735/ST7735_TFT.cp
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -193,7 +193,7 @@ lib/st7735/CMakeFiles/st7735.dir/ST7735_TFT_Font.cpp.obj: ../lib/st7735/ST7735_T
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -248,7 +248,7 @@ lib/st7735/CMakeFiles/st7735.dir/ST7735_TFT_Print.cpp.obj: ../lib/st7735/ST7735_
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -418,7 +418,7 @@ lib/st7735/CMakeFiles/st7735.dir/ST7735_TFT_graphics.cpp.obj: ../lib/st7735/ST77
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -543,7 +543,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_sync/crit
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -578,7 +578,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_sync/lock
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -614,7 +614,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_sync/mute
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -650,7 +650,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -713,7 +713,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_time/time
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -753,7 +753,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_time/time
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -786,7 +786,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_util/date
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -860,7 +860,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_util/phea
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -901,7 +901,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/common/pico_util/queu
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -935,7 +935,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_c
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -965,7 +965,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_c
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1017,7 +1017,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_g
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1057,7 +1057,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_i
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1098,7 +1098,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_p
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1136,7 +1136,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_s
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1175,7 +1175,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_s
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1206,7 +1206,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_t
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1243,7 +1243,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_u
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1284,7 +1284,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_v
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1339,7 +1339,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_w
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1370,7 +1370,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/hardware_x
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1406,7 +1406,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootr
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1446,7 +1446,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_doubl
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1482,7 +1482,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_doubl
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1521,7 +1521,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_float
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1558,7 +1558,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_float
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1595,7 +1595,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_mallo
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1622,7 +1622,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_platf
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1675,7 +1675,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_print
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1733,7 +1733,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_runti
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1785,7 +1785,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stand
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1831,7 +1831,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stand
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1886,7 +1886,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1930,7 +1930,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1979,7 +1979,7 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdli
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -2138,6 +2138,10 @@ lib/st7735/CMakeFiles/st7735.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdli
 
 generated/pico_base/pico/version.h:
 
+/home/plebish/pico-sdk/src/common/pico_sync/include/pico/sync.h:
+
+/usr/include/newlib/c++/10.3.1/initializer_list:
+
 /usr/include/newlib/sys/select.h:
 
 /usr/include/newlib/sys/features.h:
@@ -2174,6 +2178,16 @@ generated/pico_base/pico/version.h:
 
 /usr/include/newlib/sys/config.h:
 
+/home/plebish/pico-sdk/src/boards/include/boards/pico_w.h:
+
+/home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
+/usr/include/newlib/c++/10.3.1/bits/stl_iterator_base_types.h:
+
+../lib/st7735/include/ST7735_TFT_Font.hpp:
+
 /usr/include/newlib/c++/10.3.1/bits/predefined_ops.h:
 
 /usr/include/newlib/machine/_types.h:
@@ -2206,6 +2220,8 @@ generated/pico_base/pico/version.h:
 
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h:
 
+/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
+
 /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h:
 
 /usr/include/newlib/c++/10.3.1/math.h:
@@ -2225,14 +2241,6 @@ generated/pico_base/pico/version.h:
 ../lib/st7735/include/ST7735_TFT.hpp:
 
 /usr/include/newlib/sys/times.h:
-
-/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
-
-/home/plebish/pico-sdk/src/common/pico_sync/include/pico/sync.h:
-
-/usr/include/newlib/c++/10.3.1/initializer_list:
-
-/home/plebish/pico-sdk/src/boards/include/boards/pico.h:
 
 /usr/include/newlib/sys/cdefs.h:
 
@@ -2391,14 +2399,6 @@ generated/pico_base/pico/config_autogen.h:
 ../lib/st7735/ST7735_TFT.cpp:
 
 /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
-
-/home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
-
-/usr/include/newlib/sys/_intsup.h:
-
-/usr/include/newlib/c++/10.3.1/bits/stl_iterator_base_types.h:
-
-../lib/st7735/include/ST7735_TFT_Font.hpp:
 
 ../lib/st7735/ST7735_TFT_Print.cpp:
 

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
+set(PICO_BOARD pico_w)
+
 # Name project
 SET(ProjectName pockpet_v2)
 

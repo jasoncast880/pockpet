@@ -24,7 +24,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/ThirdParty/GCC/
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -59,7 +59,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/ThirdParty/GCC/
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -110,7 +110,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -145,7 +145,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -181,7 +181,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -217,7 +217,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -280,7 +280,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -320,7 +320,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -353,7 +353,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -427,7 +427,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -468,7 +468,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -502,7 +502,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -532,7 +532,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -584,7 +584,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -617,7 +617,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -657,7 +657,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -698,7 +698,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -736,7 +736,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -767,7 +767,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -803,7 +803,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -858,7 +858,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -889,7 +889,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -924,7 +924,7 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
   generated/pico_base/pico/version.h \
   /home/plebish/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /home/plebish/pico-sdk/src/boards/include/boards/pico.h \
+  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h \
   /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -977,6 +977,8 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
 
 /home/plebish/pico-sdk/src/common/pico_time/include/pico/time.h:
 
+/usr/include/newlib/sys/sched.h:
+
 /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
 
 /home/plebish/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h:
@@ -1005,12 +1007,6 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
 
 /usr/include/newlib/machine/_types.h:
 
-/usr/include/newlib/sys/sched.h:
-
-/home/plebish/pico-sdk/src/boards/include/boards/pico.h:
-
-../lib/FreeRTOS_Kernel/include/deprecated_definitions.h:
-
 /home/plebish/pico-sdk/src/common/pico_sync/include/pico/lock_core.h:
 
 /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h:
@@ -1022,6 +1018,8 @@ lib/FreeRTOS_Kernel/portable/CMakeFiles/freertos_kernel_port.dir/home/plebish/pi
 /usr/include/newlib/_newlib_version.h:
 
 /home/plebish/pico-sdk/src/common/pico_util/pheap.c:
+
+../lib/FreeRTOS_Kernel/include/deprecated_definitions.h:
 
 /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c:
 
@@ -1110,6 +1108,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/plebish/pico-sdk/src/common/pico_sync/mutex.c:
 
 ../lib/FreeRTOS_Kernel/portable/ThirdParty/GCC/RP2040/include/portmacro.h:
+
+/home/plebish/pico-sdk/src/boards/include/boards/pico_w.h:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 

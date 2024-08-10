@@ -360,6 +360,2166 @@ __/lib/FreeRTOS_Kernel/timers.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/__/lib/FreeRTOS_Kernel/timers.c.s
 .PHONY : __/lib/FreeRTOS_Kernel/timers.c.s
 
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.i
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.s
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.i
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.s
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.obj
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.i
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.c.s
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.obj
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.i
+
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s: home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+.PHONY : home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.c.s
+
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.obj: home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.obj
+
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.i: home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.i
+
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.s: home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.obj: home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.i: home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.s: home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_lib.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.obj: home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.i: home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.s: home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/api_msg.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/err.obj: home/plebish/pico-sdk/lib/lwip/src/api/err.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/err.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/err.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/err.i: home/plebish/pico-sdk/lib/lwip/src/api/err.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/err.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/err.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/err.s: home/plebish/pico-sdk/lib/lwip/src/api/err.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/err.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/err.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/err.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.obj: home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.i: home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.s: home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/if_api.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.obj: home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.i: home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.s: home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netbuf.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.obj: home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.i: home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.s: home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netdb.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.obj: home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.i: home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.s: home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/netifapi.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.obj: home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.i: home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.s: home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/sockets.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.obj: home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.i: home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.s: home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/api/tcpip.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.obj: home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.i: home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.s: home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.obj: home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.i: home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.s: home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.obj: home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.i: home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.s: home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/def.obj: home/plebish/pico-sdk/lib/lwip/src/core/def.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/def.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/def.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/def.i: home/plebish/pico-sdk/lib/lwip/src/core/def.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/def.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/def.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/def.s: home/plebish/pico-sdk/lib/lwip/src/core/def.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/def.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/def.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/def.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/dns.obj: home/plebish/pico-sdk/lib/lwip/src/core/dns.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/dns.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/dns.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/dns.i: home/plebish/pico-sdk/lib/lwip/src/core/dns.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/dns.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/dns.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/dns.s: home/plebish/pico-sdk/lib/lwip/src/core/dns.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/dns.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/dns.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/dns.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.obj: home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.i: home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.s: home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/init.obj: home/plebish/pico-sdk/lib/lwip/src/core/init.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/init.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/init.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/init.i: home/plebish/pico-sdk/lib/lwip/src/core/init.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/init.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/init.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/init.s: home/plebish/pico-sdk/lib/lwip/src/core/init.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/init.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/init.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/init.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ip.obj: home/plebish/pico-sdk/lib/lwip/src/core/ip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ip.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ip.i: home/plebish/pico-sdk/lib/lwip/src/core/ip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ip.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ip.s: home/plebish/pico-sdk/lib/lwip/src/core/ip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ip.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ip.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.i: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.s: home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/mem.obj: home/plebish/pico-sdk/lib/lwip/src/core/mem.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/mem.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/mem.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/mem.i: home/plebish/pico-sdk/lib/lwip/src/core/mem.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/mem.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/mem.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/mem.s: home/plebish/pico-sdk/lib/lwip/src/core/mem.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/mem.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/mem.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/mem.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/memp.obj: home/plebish/pico-sdk/lib/lwip/src/core/memp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/memp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/memp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/memp.i: home/plebish/pico-sdk/lib/lwip/src/core/memp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/memp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/memp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/memp.s: home/plebish/pico-sdk/lib/lwip/src/core/memp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/memp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/memp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/memp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/netif.obj: home/plebish/pico-sdk/lib/lwip/src/core/netif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/netif.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/netif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/netif.i: home/plebish/pico-sdk/lib/lwip/src/core/netif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/netif.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/netif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/netif.s: home/plebish/pico-sdk/lib/lwip/src/core/netif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/netif.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/netif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/netif.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.obj: home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.i: home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.s: home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/pbuf.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/raw.obj: home/plebish/pico-sdk/lib/lwip/src/core/raw.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/raw.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/raw.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/raw.i: home/plebish/pico-sdk/lib/lwip/src/core/raw.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/raw.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/raw.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/raw.s: home/plebish/pico-sdk/lib/lwip/src/core/raw.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/raw.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/raw.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/raw.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/stats.obj: home/plebish/pico-sdk/lib/lwip/src/core/stats.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/stats.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/stats.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/stats.i: home/plebish/pico-sdk/lib/lwip/src/core/stats.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/stats.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/stats.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/stats.s: home/plebish/pico-sdk/lib/lwip/src/core/stats.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/stats.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/stats.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/stats.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/sys.obj: home/plebish/pico-sdk/lib/lwip/src/core/sys.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/sys.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/sys.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/sys.i: home/plebish/pico-sdk/lib/lwip/src/core/sys.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/sys.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/sys.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/sys.s: home/plebish/pico-sdk/lib/lwip/src/core/sys.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/sys.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/sys.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/sys.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.obj: home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.i: home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.s: home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.obj: home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.i: home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.s: home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.obj: home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.i: home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.s: home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.obj: home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.i: home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.s: home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/timeouts.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/core/udp.obj: home/plebish/pico-sdk/lib/lwip/src/core/udp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/core/udp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/udp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/core/udp.i: home/plebish/pico-sdk/lib/lwip/src/core/udp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/core/udp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/udp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/core/udp.s: home/plebish/pico-sdk/lib/lwip/src/core/udp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/core/udp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/core/udp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/core/udp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.obj: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.i: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.s: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s: home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.i: home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.s: home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.obj: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.i: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.s: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.i: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.s: home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.obj: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.i: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.s: home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.obj: home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.i: home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.s: home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/slipif.c.s
+
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.obj: home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.obj
+
+# target to build an object file
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.obj
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.obj
+
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.i: home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.i
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.i
+
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.s: home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.s
+.PHONY : home/plebish/pico-sdk/lib/lwip/src/netif/zepif.c.s
+
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1064,6 +3224,30 @@ home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.obj: home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.obj: home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.c.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.obj
 
@@ -1167,6 +3351,30 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/pl
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.obj: home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.i: home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.s: home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj
@@ -1360,6 +3568,54 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.obj: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.i: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.s: home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.c.s
+
 home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
 
@@ -1391,6 +3647,198 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/plebish/pico-s
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s: home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.obj
@@ -1560,6 +4008,30 @@ home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.obj: home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.i: home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.s: home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.c.s
+
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj
 
@@ -1639,6 +4111,30 @@ home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.s: home/plebish/pico-sdk
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.obj: home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.obj
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.i: home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.s: home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet_v2.dir/build.make src/CMakeFiles/pockpet_v2.dir/home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
@@ -1925,6 +4421,276 @@ help:
 	@echo "... __/lib/FreeRTOS_Kernel/timers.obj"
 	@echo "... __/lib/FreeRTOS_Kernel/timers.i"
 	@echo "... __/lib/FreeRTOS_Kernel/timers.s"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.obj"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.i"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.s"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.obj"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.i"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_ll.s"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.obj"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.i"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_lwip.s"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.obj"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.i"
+	@echo "... home/plebish/pico-sdk/lib/cyw43-driver/src/cyw43_stats.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/contrib/ports/freertos/sys_arch.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_lib.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_lib.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_lib.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_msg.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_msg.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/api_msg.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/err.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/err.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/err.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/if_api.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/if_api.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/if_api.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netbuf.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netbuf.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netbuf.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netdb.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netdb.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netdb.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netifapi.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netifapi.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/netifapi.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/sockets.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/sockets.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/sockets.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/tcpip.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/tcpip.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/api/tcpip.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_alloc.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/altcp_tcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/def.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/def.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/def.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/dns.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/dns.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/dns.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/inet_chksum.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/init.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/init.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/init.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ip.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ip.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ip.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/acd.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/autoip.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/dhcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/etharp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/icmp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/igmp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_addr.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv4/ip4_frag.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/dhcp6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ethip6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/icmp6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/inet6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_addr.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/ip6_frag.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/mld6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/ipv6/nd6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/mem.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/mem.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/mem.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/memp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/memp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/memp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/netif.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/netif.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/netif.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/pbuf.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/pbuf.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/pbuf.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/raw.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/raw.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/raw.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/stats.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/stats.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/stats.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/sys.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/sys.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/sys.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_in.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/tcp_out.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/timeouts.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/timeouts.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/timeouts.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/udp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/udp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/core/udp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/bridgeif_fdb.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ethernet.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_ble.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/lowpan6_common.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/auth.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ccp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-md5.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap-new.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/chap_ms.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/demand.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eap.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ecp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/eui64.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/fsm.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ipv6cp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/lcp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/magic.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/mppe.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/multilink.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/arc4.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/des.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md4.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/md5.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/polarssl/sha1.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/ppp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppapi.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppcrypt.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppoe.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppol2tp.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/pppos.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/upap.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/utils.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/ppp/vj.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/slipif.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/slipif.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/slipif.s"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/zepif.obj"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/zepif.i"
+	@echo "... home/plebish/pico-sdk/lib/lwip/src/netif/zepif.s"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2013,6 +4779,9 @@ help:
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_dma/dma.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_exception/exception.s"
@@ -2026,6 +4795,9 @@ help:
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pio/pio.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.s"
@@ -2050,10 +4822,40 @@ help:
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_base.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_async_context/async_context_freertos.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_freertos.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_poll.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cybt_shared_bus_driver.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_divider/divider.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj"
@@ -2075,6 +4877,9 @@ help:
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_lwip/lwip_freertos.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s"
@@ -2085,6 +4890,9 @@ help:
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_rand/rand.s"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
