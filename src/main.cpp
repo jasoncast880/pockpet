@@ -3,7 +3,9 @@
 
 //cyw and lwip includes
 #include "pico/cyw43_arch.h"
+#include "WifiHandler.h"
 //#include "lwip/sockets.h"
+#define TASK_PRIORITY      ( tskIDLE_PRIORITY + 1UL )
 
 //freertos includes
 #include "FreeRTOS.h"
@@ -16,6 +18,7 @@
 
 #define BUTTON1 2
 
+//class WifiHandler; // Forward declaration
 ST7735_TFT myTFT;
 
 void BoolStatusUpdate();
@@ -100,16 +103,42 @@ void button_task(void *pvParameters) {
   }
 }
 
+void main_task(void* params) {
+  if(WifiHandler::init()) {
+    printf("CYW43 Controller Initialized \n");
+  } else {
+    printf("Failed CYW43 Initialization \n");
+    return;
+  } 
+
+  if(WifiHandler::join(WIFI_SSID, WIFI_PASSWORD,10)){
+      printf("Connected to WAP : %s \n", WIFI_SSID);
+  } else {
+    printf("ERROR: Timeout on WAP Connection");
+    return;
+  }
+
+  while(true) {
+    printf("Task Complete");
+    vTaskDelay(2000);
+  }
+}
+
+void vLaunch(void) {
+  TaskHandle_t task;
+
+  xTaskCreate(main_task,"Main Thread", 2048, NULL, TASK_PRIORITY, &task);
+
+  vTaskStartScheduler();
+}
+
 int main()
 {
     stdio_init_all();
-    tftSetup();
-    myTFT.TFTfillScreen(ST7735_BLACK);
-    myTFT.TFTfillRectangle(10,10,50,50,0xf800);
+    sleep_ms(10000);
+    printf("GO\n");
 
-    xTaskCreate(lcd_task, "LCD_Task", 256, NULL, 1, NULL);
-    //xTaskCreate(button_task, "BTN_Task", 256, NULL, 1, NULL);
-    vTaskStartScheduler();
+    vLaunch();
 
     while(1){};
 }

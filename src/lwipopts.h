@@ -1,19 +1,20 @@
 #ifndef _LWIPOPTS_H 
 #define _LWIPOPTS_H
 
-#ifndef NO_SYS
 #define NO_SYS                      0
-#endif
-// allow override in some examples
-#ifndef LWIP_SOCKET
+
+#define TCPIP_THREAD_PRIO 2
+#define TCPIP_THREAD_STACKSIZE 2048//1024
+#define DEFAULT_THREAD_STACKSIZE 1024
+#define DEFAULT_RAW_RECVMBOX_SIZE 8
+#define TCPIP_MBOX_SIZE 8
+#define LWIP_TIMEVAL_PRIVATE 0
+
 #define LWIP_SOCKET                 0
-#endif
-#if PICO_CYW43_ARCH_POLL
-#define MEM_LIBC_MALLOC             1
-#else
-// MEM_LIBC_MALLOC is incompatible with non polling versions
+#define LWIP_SO_RCVBUF              1
+#define RECV_BUFSIZE_DEFAULT        256
 #define MEM_LIBC_MALLOC             0
-#endif
+
 #define MEM_ALIGNMENT               4
 #define MEM_SIZE                    4000
 #define MEMP_NUM_TCP_SEG            32
@@ -44,7 +45,7 @@
 #define LWIP_DNS                    1
 #define LWIP_TCP_KEEPALIVE          1
 #define LWIP_NETIF_TX_SINGLE_PBUF   1
-#define DHCP_DOES_ARP_CHECK         0
+#define DHCP_DOES_ARP_CHECK         1
 #define LWIP_DHCP_DOES_ACD_CHECK    0
 
 #ifndef NDEBUG
