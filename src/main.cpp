@@ -114,31 +114,37 @@ void main_task(void* params) {
   if(WifiHandler::join(WIFI_SSID, WIFI_PASSWORD,10)){
       printf("Connected to WAP : %s \n", WIFI_SSID);
   } else {
-    printf("ERROR: Timeout on WAP Connection");
+    printf("ERROR: Timeout on WAP Connection\n");
     return;
   }
 
   while(true) {
-    printf("Task Complete");
+    printf("Task Complete\n");
     vTaskDelay(2000);
   }
+
+
 }
 
 void vLaunch(void) {
   TaskHandle_t task;
 
-  xTaskCreate(main_task,"Main Thread", 2048, NULL, TASK_PRIORITY, &task);
+  xTaskCreate(main_task,"Main_Thread", 2048, NULL, TASK_PRIORITY, NULL); //task handles (ie &main_task is set to NULL) handles are not relevant right now.
+  xTaskCreate(lcd_task,"LCD_Thread", 2048, NULL, TASK_PRIORITY-1, NULL);
 
   vTaskStartScheduler();
 }
 
 int main()
 {
-    stdio_init_all();
-    sleep_ms(10000);
-    printf("GO\n");
+  stdio_init_all();
+  tftSetup();
+  myTFT.TFTfillScreen(ST7735_CYAN);
+  sleep_ms(10000);
+  printf("GO\n");
 
-    vLaunch();
 
-    while(1){};
+  vLaunch();
+
+  while(1){};
 }
