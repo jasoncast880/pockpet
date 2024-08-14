@@ -1,8 +1,6 @@
-# rp2040-freertos-template
-This is a template project for developing FreeRTOS based applications on Raspberry Pi RP2040 based boards. This template uses the "official" RP2040 port from the Raspberry Pi Foundation. My previous repo used the generic Cortex M0 port so this one corrects that. Previous Repo retained as tutorials rely on it. 
-
-Unmodified, this project will spawn a single task to rapidly blink the LED on and off.
-
-18-07-24
-Build compiles okay, have yet to test on physical board; I am very smart and cool.
-
+READ ME is WIP; Will start a github pages to link to the appropriate blog posts, etc. for the project.
+TODO:
+-start a seperate repo to encapsulate my own st7735/ili library with seamless freertos usage... ; CYW43 can stay within the pockpet (no additional seperate repo; not as versatile, can't be used in seperate use cases...)
+-setup the github pages and research the proper syntax to be used on readme's and on ghp; setup a blog system for internal usage and to increase output.
+-perhaps setup a kanban board and enable it to be used by other devs; low proprity and not very useful for a solo dev....
+-shred and be cool
