@@ -1,8 +1,13 @@
-08-07-24
-The St7735 and free rtos are working; however the st7735 class appears to be not working as a freertos task...
-will have to do more debugging in the future..
+# Welcome Pockpet-v2 Branch!
 
+## Our Goals:
+### v2 Branch's focus is on limit testing the pico w running free RTOS, setup in various lib folders in order to increase modularity and increase visibility with the scheduler: 
 
-REMINDER TO SELF:
-Once a working version has been restored, uncomment the 'build' line out of .gitignore file (needs to be uncommented during prototyping so I can export the files)
+### Demos:
+* ST7735 (Adding the ILI Later) Sprite Handling lib
+* TCP Sockets Handling Lib
+* BLE/BT Stack for Getting wifi Credentials.
+* Button Handler Lib.
+* Various Frame Buffer/Memory Management units...
 
+### The prevailing idea being each of these demos will represent some form(s) of task, which can be combined in FreeRTOS; eventually leading to a cohesive user experience on an IOT/embedded device!

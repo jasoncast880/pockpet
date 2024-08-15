@@ -3,7 +3,7 @@
 
 //cyw and lwip includes
 #include "pico/cyw43_arch.h"
-#include "WifiHandler.h"
+#include "WifiHandler.h" 
 //#include "lwip/sockets.h"
 #define TASK_PRIORITY      ( tskIDLE_PRIORITY + 1UL )
 
@@ -142,7 +142,6 @@ int main()
   myTFT.TFTfillScreen(ST7735_CYAN);
   sleep_ms(10000);
   printf("GO\n");
-
 
   vLaunch();
 
