@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-//cyw and lwip includes
-#include "pico/cyw43_arch.h"
-#include "WifiHandler.h" 
-//#include "lwip/sockets.h"
-#define TASK_PRIORITY      ( tskIDLE_PRIORITY + 1UL )
-
 //freertos includes
 #include "FreeRTOS.h"
 #include "task.h"
@@ -14,6 +8,7 @@
 //hardware includes
 #include "hardware/gpio.h"
 #include "ST7735_TFT.hpp"
+#include "ST7735_TFT_Assets.hpp"
 #include <string>
 
 #define BUTTON1 2
@@ -67,85 +62,19 @@ void tftSetup(void) {
   sleep_ms(500);
 }
 
-//globs
-bool button_pressed = true;
-
-void lcd_task(void *pvParameters){
-  while(1){
-    if(button_pressed){
-      char teststr1[] = "Hello";
-      char teststr2[] = "World";
-      char teststr3[] = "v2_1";
-      
-      myTFT.TFTfillScreen(ST7735_BLACK);
-      myTFT.TFTFontNum(myTFT.TFTFont_Default);
-      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 55, teststr3, ST7735_WHITE, ST7735_BLACK, 2);
-    }
-    else {
-      char teststr1[] = "Goodbye";
-      char teststr2[] = "World";
-      
-      myTFT.TFTfillScreen(ST7735_BLACK);
-      myTFT.TFTFontNum(myTFT.TFTFont_Default);
-      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
-    }
-    vTaskDelay(1000/portTICK_PERIOD_MS);
-  }
-}
-
-void button_task(void *pvParameters) {
-  //button_pressed = !button_pressed;
-  if(gpio_get(BUTTON1)==0){
-    button_pressed = !button_pressed;
-  }
-}
-
-void main_task(void* params) {
-  if(WifiHandler::init()) {
-    printf("CYW43 Controller Initialized \n");
-  } else {
-    printf("Failed CYW43 Initialization \n");
-    return;
-  } 
-
-  if(WifiHandler::join(WIFI_SSID, WIFI_PASSWORD,10)){
-      printf("Connected to WAP : %s \n", WIFI_SSID);
-  } else {
-    printf("ERROR: Timeout on WAP Connection\n");
-    return;
-  }
-
-  while(true) {
-    printf("Task Complete\n");
-    vTaskDelay(2000);
-  }
-
-
-}
-
-void vLaunch(void) {
-  TaskHandle_t task;
-
-  xTaskCreate(main_task,"Main_Thread", 2048, NULL, TASK_PRIORITY, NULL); //task handles (ie &main_task is set to NULL) handles are not relevant right now.
-  xTaskCreate(lcd_task,"LCD_Thread", 2048, NULL, TASK_PRIORITY-1, NULL);
-
-  vTaskStartScheduler();
-}
-
 int main()
 {
   stdio_init_all();
   tftSetup();
+
+  myTFT.TFTsetRotation(myTFT.TFT_Degrees_90);
+
   while(1){
-    myTFT.TFTdrawBitmap16Data(0,0,pBlue,160,128);
+    myTFT.TFTdrawBitmap16Data(0,0,(uint8_t*)pBlue,160,128);
     sleep_ms(500);
-    myTFT.TFTdrawBitmap16Data(0,0,pRed,160,128);
+    myTFT.TFTdrawBitmap16Data(0,0,(uint8_t*)pRed,160,128);
     sleep_ms(500);
-    myTFT.TFTdrawBitmap16Data(0,0,pGreen,160,128);
+    myTFT.TFTdrawBitmap16Data(0,0,(uint8_t*)pGreen,160,128);
     sleep_ms(500);
   };
 }
-
