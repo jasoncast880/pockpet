@@ -5,6 +5,7 @@ v2 Branch's focus is on limit testing the pico w running free RTOS, setup in var
 
 ### Demos:
 * ST7735 (Adding the ILI Later) Sprite Handling lib
+  * The Value of Adding DMA : https://www.youtube.com/watch?v=FwaqTPlaAvA
 * TCP Sockets Handling Lib
 * BLE/BT Stack for Getting wifi Credentials.
 * Button Handler Lib.
