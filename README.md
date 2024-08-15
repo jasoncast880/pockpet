@@ -14,6 +14,9 @@ The prevailing idea being each of these demos will represent some form(s) of tas
 
 
 ## Current Testing Rig (As of 08-15-24)
-A Simple SPI Connection to the proper SPI GPIO Ports. VCC and Backlight are connected to VSYS, as shown Below.
-[image](https://github.com/user-attachments/assets/b71d5637-150d-457b-9781-a66b4ad1f5e2)
+A Simple SPI Connection to the proper SPI GPIO Ports. VCC and Backlight are connected to VSYS, as shown below.
+
+![image](https://github.com/user-attachments/assets/e7b783ed-5451-4845-b30a-2069199bcdb8)
+
+Configuration Information (Pins, GPIO Modes) can be seen from tftSetup() in main.cpp
 
