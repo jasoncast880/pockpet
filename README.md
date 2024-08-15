@@ -20,3 +20,7 @@ A Simple SPI Connection to the proper SPI GPIO Ports. VCC and Backlight are conn
 
 Configuration Information (Pins, GPIO Modes) can be seen from tftSetup() in main.cpp
 
+## Long Term Goals For Pockpet (by branch)
++ v1 - A simple demo prototype using *just* the lcd screen, buttons - this version used a pressure fit 3d printed case, slide-in components and crude soldering & wirings.
++ v2_(dev) - More advanced demos, drivers. Limit test the hardware capabilities of the Pico W using FreeRTOS. (CURRENT BRANCH)
++ v2_prod - Build PCB and case. Limit soldering/wiring requirements to create a seamless build experience. Build a Gameboy-Style Case with a hinge & clasp for easy iteratability. (6 months est.)
