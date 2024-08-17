@@ -1,13 +1,16 @@
+#ifndef TCP_ROUTINES_H_
+#define TCP_ROUTINES_H_
+
 #include "pico/stdlib.h"
 #include "FreeRTOS.h"
 #include "task.h"
 
 #include "Agent.h"
 
-class TestTrans : public Agent{
+class TCP_Routines:public Agent{
 public:
-	TestTrans();
-	virtual ~TestTrans();
+TCP_Routines();
+	virtual ~TCP_Routines();
 
 protected:
 
@@ -29,8 +32,9 @@ private:
 
 	bool testConnect();
 	bool testTrans();
-	bool testTLS();
 
 	int xTests = 0;
-	int xSuccessful = 0;
+	int xSuccessful = 0; //for agent object to telemetry
 };
+
+#endif /* TCP_ROUTININES_H_ */

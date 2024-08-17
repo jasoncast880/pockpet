@@ -3,9 +3,11 @@
 
 //cyw and lwip includes
 #include "pico/cyw43_arch.h"
-#include "WifiHandler.h" 
 //#include "lwip/sockets.h"
 #define TASK_PRIORITY      ( tskIDLE_PRIORITY + 1UL )
+
+#include "WifiHandler.h" 
+#include "TCP_Routines.h" 
 
 //freertos includes
 #include "FreeRTOS.h"
@@ -130,7 +132,6 @@ void vLaunch(void) {
   TaskHandle_t task;
 
   xTaskCreate(main_task,"Main_Thread", 2048, NULL, TASK_PRIORITY, NULL); //task handles (ie &main_task is set to NULL) handles are not relevant right now.
-  xTaskCreate(lcd_task,"LCD_Thread", 2048, NULL, TASK_PRIORITY-1, NULL);
 
   vTaskStartScheduler();
 }

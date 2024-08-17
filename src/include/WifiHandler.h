@@ -1,8 +1,8 @@
-#include <stdlib.h>
-#include "pico/stdlib.h"
-
 #ifndef WIFIHANDLER_H
 #define WIFIHANDLER_H
+
+#include <stdlib.h>
+#include "pico/stdlib.h"
 
 class WifiHandler {
 public:

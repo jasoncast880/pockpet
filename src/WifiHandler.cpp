@@ -46,4 +46,3 @@ bool WifiHandler::join(const char *sid, const char *password, uint8_t retries) {
   //print telemetry in main.
 }
 
-
