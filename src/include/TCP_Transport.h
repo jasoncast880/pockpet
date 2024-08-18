@@ -1,6 +1,4 @@
 #define TCP_TRANSPORT_WAIT 10000
-#endif //WIFI_HANDLER_H_
-#endif //WIFI_HANDLER_H_
 
 #include "Transport.h"
 
@@ -17,17 +15,17 @@ extern "C" {
 }
 
 
-class TCPTransport : public Transport {
+class TCP_Transport : public Transport {
 public:
 	/***
 	 * Constructor
 	 */
-	TCPTransport();
+	TCP_Transport();
 
 	/***
 	 * Destructor
 	 */
-	virtual ~TCPTransport();
+	virtual ~TCP_Transport();
 
 	/***
 	 * Connect to remote TCP Socket

@@ -2,9 +2,14 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(${ProjectName}
-  #main.cpp
-  #WifiHandler.cpp
-  double_bufferDemo.cpp
+  main.cpp
+  WifiHandler.cpp
+  Agent.cpp
+  Transport.cpp
+  TCP_Transport.cpp
+  TCP_Routines.cpp
+
+  #double_bufferDemo.cpp
 )
 
 target_include_directories(${ProjectName} PRIVATE
