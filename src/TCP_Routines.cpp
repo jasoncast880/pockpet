@@ -52,5 +52,32 @@ bool TestTrans::testConnect() { //i expect that this method should pass consiste
 }
 
 bool TestTrans::testTCP() {
- //todo: research and write the tcp class
+  uint16_t targetPort = 80;
+  char targetHost[]="drjonea.co.uk"; //temp
+  char message[]="GET / HTTP/1.1\r\n"
+    "Host: drjonea.co.uk\r\n"
+    "Connection: close\r\n"
+    "\r\n";
+  char buf[1024]; //this appears to be the returned buffer. why size 1024??
+  int32_t retVal;
+
+  TCPTransport sockTrans;
+
+  if(!sockTrans.transConnect(targetHost, targetPort)){
+    printf("Socket Send failed\n\r");
+    return false;
+  }
+
+  retVal = 1;
+
+  while(retVal>0){
+    retVal = sockTrans.transRead(buf, sizeof(buf));
+    if(retVal > 0) {
+      sockTrans.debugPrintBuffer("READ:", buf, retVal);
+    }
+  }
+
+  sockTrans.transClose();
+  
+  return true;
 }

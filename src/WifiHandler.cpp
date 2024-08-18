@@ -46,3 +46,58 @@ bool WifiHandler::join(const char *sid, const char *password, uint8_t retries) {
   //print telemetry in main.
 }
 
+bool WifiHelper::isJoined() {
+  int res = cyw43_wifi_link_status(&cyw43_state, CYW43_ITF_STA);
+  return(res>=0);
+}
+
+bool WifiHelper::getIPAddress(uint8_t *ip) {
+  memcpy(ip, netif_ip4_addr(&cyw43_state.netif[0]), 4);
+  return true;
+}
+
+bool WifiHelper::getIPAddressStr(char *ips) {
+  char *s = ipaddr_ntoa(netif_ip4_addr(&cyw43_state.netif[0]));
+  strcpy(ips, s);
+  return true;
+}
+
+bool WifiHelper::getGWAddress(uint8_t *ip) {
+  memcpy(ip, netif_ip4_gw(&cyw43_state.netif[0]), 4);
+  return true;
+}
+
+bool WifiHelper::getGWAddressStr(char *ips) {
+  char *s = ipaddr_ntoa(netif_ip4_gw(&cyw43_state.netif[0]));
+  strcpy(ips, s);
+  return true;
+}
+
+bool WifiHelper::getNetMask(uint8_t *ip) {
+  memcpy(ip, netif_ip4_netmask(&cyw43_state.netif[0]), 4);
+  return true;
+}
+
+bool WifiHelper::getNetMaskStr(char *ips) {
+  char *s = ipaddr_ntoa(netif_ip4_netmask(&cyw43_state.netif[0]));
+  strcpy(ips, s);
+  return true;
+}
+
+bool WifiHelper::getMACAddressStr(char *macStr) {
+  uint8_t mac[6];
+  int r = cyw43_wifi_get_mac(&cyw43_state, CYW43_ITF_STA, mac);
+
+  if(r==0) {
+    for(uint8_t i = 0 ; i<6; i++) {
+      if(mac[i] < 16) {
+        sprintf(&macStr[i*2], "0%X", mac[i]);
+      } else {
+        sprintf(&macStr[i*2], "%X", mac[i]);
+      }
+    }
+    macStr[13] = 0;
+    return true;
+  }
+  return false;
+}

@@ -1,4 +1,6 @@
 #define TCP_TRANSPORT_WAIT 10000
+#endif //WIFI_HANDLER_H_
+#endif //WIFI_HANDLER_H_
 
 #include "Transport.h"
 
