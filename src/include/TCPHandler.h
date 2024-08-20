@@ -1,0 +1,59 @@
+/*
+ * GOAL: Encapsulate the transport layer into a class, 
+ * then use the object in the agent class. 
+ * 
+ *
+ */
+
+#ifndef _TCP_HANDLER_H_
+#define _TCP_HANDLER_H_
+
+#define TCP_WAIT 10000
+
+#include "SocketHandler.h"
+
+extern "C" {
+  #include <FreeRTOS.h>
+  #include <task.h>
+  #include <semphr.h>
+
+  #include "lwip/ip4_addr.h"
+  #include "lwip/ip_addr.h"
+  #include "lwip/sockets.h"
+
+//for now, assume to use direct IP
+//#include "lwip/dns.h" 
+}
+
+class TCPHandler : public SocketHandler {
+public:
+  TCPHandler();
+  virtual ~TCPHandler();
+
+  bool sockConnect(const char * host, uint16_t port);
+
+  int status();
+  
+  bool sockClose();
+
+  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
+
+  int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
+
+private:
+  
+  bool sockConnect();
+
+  int xSock = 0; //socket no.
+
+  uint16_t xPort = 80;//port to connect to
+
+  ip_addr_t xHost; //remote server ip to connect to
+
+  char xHostName[80]; //remote server name to connect
+                      
+  Semaphorehandle_t xSocketFlag;
+  //SemaphoreHandle_t xHostDNSFound; // semaphore for waiting on dns
+}
+
+#endif /* _TCP_HANDLER_H_ */

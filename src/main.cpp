@@ -2,13 +2,12 @@
 #include "pico/stdlib.h"
 
 //cyw and lwip includes
-#include "pico/cyw43_arch.h"
-//#include "lwip/sockets.h"
+//#include "pico/cyw43_arch.h"
 #define TASK_PRIORITY      ( tskIDLE_PRIORITY + 1UL )
 
-#include "lwip/ip4_addr.h"
-#include "lwip/sockets.h"
-#include "lwip/dns.h"
+//#include "lwip/ip4_addr.h"
+//#include "lwip/sockets.h"
+//#include "lwip/dns.h"
 
 #include "WifiHandler.h" 
 #include "TCP_Routines.h" 
@@ -26,8 +25,6 @@
 
 //class WifiHandler; // Forward declaration
 ST7735_TFT myTFT;
-
-void BoolStatusUpdate();
 
 void tftSetup(void) {
 	stdio_init_all(); // Initialize chosen serial port
@@ -71,35 +68,6 @@ void tftSetup(void) {
 	//**********************************************************
 
   sleep_ms(500);
-}
-
-//globs
-bool button_pressed = true;
-
-void lcd_task(void *pvParameters){
-  while(1){
-    if(button_pressed){
-      char teststr1[] = "Hello";
-      char teststr2[] = "World";
-      char teststr3[] = "v2_1";
-      
-      myTFT.TFTfillScreen(ST7735_BLACK);
-      myTFT.TFTFontNum(myTFT.TFTFont_Default);
-      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 55, teststr3, ST7735_WHITE, ST7735_BLACK, 2);
-    }
-    else {
-      char teststr1[] = "Goodbye";
-      char teststr2[] = "World";
-      
-      myTFT.TFTfillScreen(ST7735_BLACK);
-      myTFT.TFTFontNum(myTFT.TFTFont_Default);
-      myTFT.TFTdrawText(15, 15, teststr1, ST7735_WHITE, ST7735_BLACK, 2);
-      myTFT.TFTdrawText(15, 35, teststr2, ST7735_WHITE, ST7735_BLACK, 2);
-    }
-    vTaskDelay(1000/portTICK_PERIOD_MS);
-  }
 }
 
 void runTimeStats(){
@@ -182,8 +150,8 @@ void main_task(void* params) {
   printf("IP ADDRESS: %s\n", ipStr);
 
 
-  TCP_Routines testTrans;
-  testTrans.start("test", TASK_PRIORITY);
+  TCP_Routines testConnect;
+  testConnect.start("test", TASK_PRIORITY);
 
   while(true) {
 
@@ -191,10 +159,17 @@ void main_task(void* params) {
 
     vTaskDelay(3000);
 
-    if(!WifiHandler::join(WIFI_SSID, WIFI_PASSWORD)){
-      printf("Connect to Wifi\n");
+    if(!WifiHandler::isJoined()) {
+
+      printf("AP is down \n");
+
+      if(!WifiHandler::join(WIFI_SSID, WIFI_PASSWORD)){
+        printf("Attempt to Connect to Wifi\n");
+      } else {
+        printf("Failed to connect to Wifi\n");
+      }
     } else {
-      printf("Failed to connect to Wifi\n");
+      printf("Wifi is OK\n");
     }
   }
 
@@ -208,8 +183,7 @@ void vLaunch(void) {
   vTaskStartScheduler();
 }
 
-int main()
-{
+int main() {
   stdio_init_all();
   sleep_ms(10000);
   printf("GO\n");

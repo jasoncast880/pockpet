@@ -9,7 +9,7 @@
 
 class TCP_Routines:public Agent{
 public:
-TCP_Routines();
+  TCP_Routines();
 	virtual ~TCP_Routines();
 
 protected:
@@ -31,7 +31,7 @@ protected:
 private:
 
 	bool testConnect();
-	bool testTrans();
+	bool testSock();
 
 	int xTests = 0;
 	int xSuccessful = 0; //for agent object to telemetry
