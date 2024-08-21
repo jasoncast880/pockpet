@@ -29,18 +29,18 @@ public: // when some virtual func has a = 0 assignment, its supposed to be imple
   virtual bool sockConnect(const char *host, uint16_t port) = 0;
 
   //status of socket; neg return is an error
-  virtual int status() = 0;
+//  virtual int status() = 0;
 
   //close the socket
-  virtual bool sockClose() = 0;
+//  virtual bool sockClose() = 0;
 
   //send bytes through the socket; 
   //buffer to send from , no of bytes to send.. return the no of bytes sent.
-  virtual int32_t sockSend(const void *pBuffer, size_t bytesToSend) = 0;
+//  virtual int32_t sockSend(const void *pBuffer, size_t bytesToSend) = 0;
 
   //read bytes through the sock to print them to stdio;
   //title of the print, ptr to buffer, no. bytes in the buffer .. 
-  virtual int32_t sockRead(void *pBuffer, size_t bytesToRecv) = 0;
+//  virtual int32_t sockRead(void *pBuffer, size_t bytesToRecv) = 0;
 
   //print out to stdio; plain text and hex dump
   //title, buffer to print, no bytes in buffer.

@@ -5,8 +5,9 @@
 #include <errno.h>
 
 TCPHandler::TCPHandler(){
+  //NOP??
   //bind immediately
-  xSocketFlag = xSemaphoreCreateBinary();
+//  xSocketFlag = xSemaphoreCreateBinary();
 }
 
 TCPHandler::~TCPHandler(){
@@ -20,7 +21,7 @@ TCPHandler::~TCPHandler(){
 
 struct sockaddr_in serv_addr;
 
-bool TCPHandler::sockConnect(const char *host, uint16_t port){
+bool TCPHandler::sockConnect(const char* host, uint16_t port){
  //bind return 0 on success, -1 to indicate an error
 
   xSock = socket(AF_INET, SOCK_STREAM, 0);

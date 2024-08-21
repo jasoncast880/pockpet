@@ -31,14 +31,12 @@ void TCP_Routines::test() {
   } else {
     xSuccessful++;
   }
-  /*
   xTests++;
-  if(!testTCP()) {
+  if(!testSock()) {
     printf("TCP CONNECTION FAILED\n");
   } else {
     xSuccessful++;
   }
-  */
 }
 
 bool TCP_Routines::testConnect() { //i expect that this method should pass consistently
@@ -57,9 +55,15 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
   return false;
 }
 
+
 bool TCP_Routines::testSock() {
-  //const chr *host, uint16_t port
-  if(!TCPHandler::sockConnect(*targetIP,targetPort)){ 
+  char targetHost[] = "3.85.140.175";
+  uint16_t targetPort = 8081;
+
+
+  TCPHandler ecSock;
+  //const char* host, uint16_t port
+  if(!ecSock.sockConnect(targetHost,targetPort)){ 
     printf("Socket Connect Failed");
     return false;
   } 

@@ -6,6 +6,7 @@ add_executable(${ProjectName}
   Agent.cpp
   WifiHandler.cpp
   TCPHandler.cpp
+  SocketHandler.cpp
   TCP_Routines.cpp
 )
 

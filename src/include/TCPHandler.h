@@ -16,7 +16,6 @@ extern "C" { //assume direct ip connection
   #include <task.h>
   #include <semphr.h>
 
-
   #include "lwip/ip4_addr.h"
   #include "lwip/ip_addr.h"
   #include "lwip/sockets.h"
@@ -31,17 +30,17 @@ public:
 
   bool sockConnect(const char * host, uint16_t port);
 
-  int status();
+//  int status();
   
-  bool sockClose();
+//  bool sockClose();
 
-  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
+//  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
 
-  int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
+//  int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
 
 private:
   
-  bool sockConnect();
+//  bool sockConnect();
 
   int xSock = 0; //socket no.
 
