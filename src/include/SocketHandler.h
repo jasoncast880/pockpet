@@ -45,7 +45,7 @@ public: // when some virtual func has a = 0 assignment, its supposed to be imple
   //print out to stdio; plain text and hex dump
   //title, buffer to print, no bytes in buffer.
   void debugPrintBuffer(const char *title, const void *pBuffer, size_t bytes);
-}
+};
 
 #endif /* _SOCKET_HANDLER_H_ */
 

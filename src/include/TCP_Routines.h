@@ -1,7 +1,6 @@
 #ifndef TCP_ROUTINES_H_
 #define TCP_ROUTINES_H_
 
-#include "pico/stdlib.h"
 #include "FreeRTOS.h"
 #include "task.h"
 

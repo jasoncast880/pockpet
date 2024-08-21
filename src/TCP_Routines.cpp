@@ -1,12 +1,9 @@
 //an extension interface, or something
 #include "TCP_Routines.h"
 
-#include <cstdio>
-#include <stdio>
-#include <stdlib>
+//#include <cstdio>
 
 #include "WifiHandler.h"
-
 #include "TCPHandler.h"
 
 TCP_Routines::TCP_Routines() {
@@ -60,7 +57,8 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
   return false;
 }
 
-bool TCP_Routines:testSock() {
+bool TCP_Routines::testSock() {
+  //const chr *host, uint16_t port
   if(!TCPHandler::sockConnect(*targetIP,targetPort)){ 
     printf("Socket Connect Failed");
     return false;

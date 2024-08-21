@@ -2,7 +2,6 @@
  * GOAL: Encapsulate the transport layer into a class, 
  * then use the object in the agent class. 
  * 
- *
  */
 
 #ifndef _TCP_HANDLER_H_
@@ -12,17 +11,17 @@
 
 #include "SocketHandler.h"
 
-extern "C" {
+extern "C" { //assume direct ip connection
   #include <FreeRTOS.h>
   #include <task.h>
   #include <semphr.h>
+
 
   #include "lwip/ip4_addr.h"
   #include "lwip/ip_addr.h"
   #include "lwip/sockets.h"
 
-//for now, assume to use direct IP
-//#include "lwip/dns.h" 
+  #include <cstring>
 }
 
 class TCPHandler : public SocketHandler {
@@ -52,8 +51,8 @@ private:
 
   char xHostName[80]; //remote server name to connect
                       
-  Semaphorehandle_t xSocketFlag;
+  SemaphoreHandle_t xSocketFlag;
   //SemaphoreHandle_t xHostDNSFound; // semaphore for waiting on dns
-}
+};
 
 #endif /* _TCP_HANDLER_H_ */

@@ -10,7 +10,7 @@
 #define TCPIP_MBOX_SIZE 8
 #define LWIP_TIMEVAL_PRIVATE 0
 
-#define LWIP_SOCKET                 0
+#define LWIP_SOCKET                 1
 #define LWIP_SO_RCVBUF              1
 #define RECV_BUFSIZE_DEFAULT        256
 #define MEM_LIBC_MALLOC             0

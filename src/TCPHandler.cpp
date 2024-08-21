@@ -1,5 +1,9 @@
 #include "TCPHandler.h"
 
+#include <cstring>
+#include "pico/stdlib.h"
+#include <errno.h>
+
 TCPHandler::TCPHandler(){
   //bind immediately
   xSocketFlag = xSemaphoreCreateBinary();
@@ -52,7 +56,3 @@ int TCPHandler::status(){
   int ret 
 }
 */
-
-
-}
-

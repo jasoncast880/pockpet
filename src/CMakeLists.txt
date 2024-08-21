@@ -3,10 +3,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(${ProjectName}
   main.cpp
-  WifiHandler.cpp
   Agent.cpp
+  WifiHandler.cpp
+  TCPHandler.cpp
   TCP_Routines.cpp
-
 )
 
 target_include_directories(${ProjectName} PRIVATE
@@ -15,13 +15,17 @@ target_include_directories(${ProjectName} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/../lib/st7735/include
 )
 
+
 target_link_libraries(${ProjectName} 
-    pico_stdlib 
-    pico_cyw43_arch_lwip_sys_freertos
-    FreeRTOS-Kernel-Heap4 
-    hardware_spi
-    st7735
-    )
+  pico_stdlib 
+  pico_cyw43_arch_lwip_sys_freertos
+  FreeRTOS-Kernel-Heap4 
+  hardware_spi
+  st7735
+)
+
+#idfk
+target_include_directories(${ProjectName} PRIVATE ${PICO_SDK_PATH}/lib/lwip/src/include/lwip)
 
 if (NOT DEFINED ENV{WIFI_SSID})
 	message(FATAL_ERROR "WIFI_SSID Environment variable not defined")
