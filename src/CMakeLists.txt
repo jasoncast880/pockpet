@@ -23,6 +23,7 @@ target_link_libraries(${ProjectName}
   FreeRTOS-Kernel-Heap4 
   hardware_spi
   st7735
+  hardware_irq
 )
 
 #idfk

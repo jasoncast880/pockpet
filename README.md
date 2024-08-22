@@ -24,6 +24,9 @@ Configuration Information (Pins, GPIO Modes) can be seen from tftSetup() in main
 19-08-24
 This thing sucks lmaooo; i hate debugging this
 
+21-08-24
+Build ok, BUT I had to rework pico sdk to include the directories (follow the compiler)... Don't know if this approach works long term.
+I need to test with my ec2 instance, i plan a TCP socket application alongside the buffer management system.
 
 ## Long Term Goals For Pockpet (by branch)
 + v1 - A simple demo prototype using *just* the lcd screen, buttons - this version used a pressure fit 3d printed case, slide-in components and crude soldering & wirings.
