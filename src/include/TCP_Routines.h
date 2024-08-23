@@ -18,8 +18,7 @@ protected:
 	 */
 	virtual void run();
 
-
-	/***
+  /***
 	 * Get the static depth required in words
 	 * @return - words
 	 */

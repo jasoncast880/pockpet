@@ -21,8 +21,6 @@ target_link_libraries(${ProjectName}
   pico_stdlib 
   pico_cyw43_arch_lwip_sys_freertos
   FreeRTOS-Kernel-Heap4 
-  hardware_spi
-  st7735
   hardware_irq
 )
 

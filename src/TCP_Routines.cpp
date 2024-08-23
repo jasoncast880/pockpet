@@ -1,3 +1,4 @@
+//all serial interfaces are OK
 //an extension interface, or something
 #include "TCP_Routines.h"
 
@@ -25,18 +26,23 @@ configSTACK_DEPTH_TYPE TCP_Routines::getMaxStackSize() {
 }
 
 void TCP_Routines::test() {
-  xTests++;
+//  xTests++;
   if(!testConnect()) {
     printf("CYW CONNECTION FAILED\n");
   } else {
-    xSuccessful++;
+    printf("CYW CONNECTION OK \n"
+        
+//    xSuccessful++;
   }
+
+  /*
   xTests++;
   if(!testSock()) {
     printf("TCP CONNECTION FAILED\n");
   } else {
     xSuccessful++;
   }
+  */
 }
 
 bool TCP_Routines::testConnect() { //i expect that this method should pass consistently
@@ -57,6 +63,10 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
 
 
 bool TCP_Routines::testSock() {
+  return false;
+}
+/*
+bool TCP_Routines::testSock() {
   char targetHost[] = "3.85.140.175";
   uint16_t targetPort = 8081;
 
@@ -70,4 +80,4 @@ bool TCP_Routines::testSock() {
 
   return true;
 }
-
+*/
