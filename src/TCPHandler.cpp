@@ -21,6 +21,7 @@ TCPHandler::~TCPHandler(){
 
 struct sockaddr_in serv_addr;
 
+//DIRECT IP TCP Connection.....
 bool TCPHandler::sockConnect(const char* host, uint16_t port){
  //bind return 0 on success, -1 to indicate an error
 
@@ -49,11 +50,17 @@ bool TCPHandler::sockConnect(const char* host, uint16_t port){
   return true;
 }
 
-/*
 //get status of socket; return neg is error;
 int TCPHandler::status(){
   int error = 0;
   socklen_t len = sizeof(error);
-  int ret 
+  int retVal = getsockopt(xSock, SOL_SOCKET, SO_ERROR, &error, &len);
+  return retVal;
 }
-*/
+
+bool TCPHandler::sockClose(){
+  closesocket(xSock);
+  return true;
+}
+
+

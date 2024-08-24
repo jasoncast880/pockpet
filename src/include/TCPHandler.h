@@ -30,13 +30,13 @@ public:
 
   bool sockConnect(const char * host, uint16_t port);
 
-//  int status();
+  int status();
   
-//  bool sockClose();
+  bool sockClose();
 
-//  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
+  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
 
-//  int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
+  int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
 
 private:
   

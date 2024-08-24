@@ -13,8 +13,9 @@ TCP_Routines::~TCP_Routines() {
 }
 
 void TCP_Routines::run() {
+  printf("Running Test:");
   test(); //agent thread will run tcp routines through this method
-  printf("RUN %d TESTS; %d SUCCESFUL \n");
+  //printf("RUN %d TESTS; %d SUCCESFUL \n");
 
   while(true) {
     vTaskDelay(5000); //busy loop forever
@@ -26,23 +27,17 @@ configSTACK_DEPTH_TYPE TCP_Routines::getMaxStackSize() {
 }
 
 void TCP_Routines::test() {
-//  xTests++;
   if(!testConnect()) {
     printf("CYW CONNECTION FAILED\n");
   } else {
-    printf("CYW CONNECTION OK \n"
-        
-//    xSuccessful++;
+    printf("CYW CONNECTION OK \n");
   }
 
-  /*
-  xTests++;
   if(!testSock()) {
     printf("TCP CONNECTION FAILED\n");
   } else {
-    xSuccessful++;
+    printf("TCP CONNECTION OK \n");
   }
-  */
 }
 
 bool TCP_Routines::testConnect() { //i expect that this method should pass consistently
@@ -61,13 +56,14 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
   return false;
 }
 
-
+/*
 bool TCP_Routines::testSock() {
   return false;
 }
-/*
+*/
+
 bool TCP_Routines::testSock() {
-  char targetHost[] = "3.85.140.175";
+  char targetHost[] = "18.209.109.132";
   uint16_t targetPort = 8081;
 
 
@@ -80,4 +76,3 @@ bool TCP_Routines::testSock() {
 
   return true;
 }
-*/

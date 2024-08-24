@@ -35,12 +35,12 @@ bool WifiHandler::join(const char *sid, const char *password, uint8_t retries) {
   //cyw43 will connect (retries) no of times
   int resp = 1;
   for(int i=0;i<=retries;i++){
-    resp = cyw43_arch_wifi_connect_timeout_ms(sid, password, CYW43_AUTH_WPA2_AES_PSK, 5000); //returns 0 if successful
+    resp = cyw43_arch_wifi_connect_timeout_ms(sid, password, CYW43_AUTH_WPA2_AES_PSK, 30000); //returns 0 if successful
 
     if(resp) {
       printf("Reattempting Connection\n");
     } else return true;
-    vTaskDelay(2000);
+    vTaskDelay(500);
   }
   return false;
   //print telemetry in main.
