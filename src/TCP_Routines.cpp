@@ -27,12 +27,14 @@ configSTACK_DEPTH_TYPE TCP_Routines::getMaxStackSize() {
 }
 
 void TCP_Routines::test() {
+  printf("CHECKING WIFI:");
   if(!testConnect()) {
     printf("CYW CONNECTION FAILED\n");
   } else {
     printf("CYW CONNECTION OK \n");
   }
 
+  printf("CHECKING TCP:");
   if(!testSock()) {
     printf("TCP CONNECTION FAILED\n");
   } else {
@@ -56,23 +58,17 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
   return false;
 }
 
-/*
-bool TCP_Routines::testSock() {
-  return false;
-}
-*/
 
 bool TCP_Routines::testSock() {
-  char targetHost[] = "18.209.109.132";
+  char targetIP[] = "18.209.109.132";
   uint16_t targetPort = 8081;
 
 
   TCPHandler ecSock;
   //const char* host, uint16_t port
-  if(!ecSock.sockConnect(targetHost,targetPort)){ 
-    printf("Socket Connect Failed");
-    return false;
-  } 
-
-  return true;
+  if(ecSock.sockConnect(targetIP,targetPort)<0){ 
+    printf("Socket Connect Failed"); //delegate all printfs to the thread classes, not the Reentrant functions....
+  } else {
+    printf("Socket Connection OK");
+  }
 }

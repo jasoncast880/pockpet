@@ -104,8 +104,8 @@ void main_task(void* params) {
   printf("IP ADDRESS: %s\n", ipStr);
 
 
-  TCP_Routines testConnect;
-  testConnect.start("test", TASK_PRIORITY);
+  TCP_Routines testConnect; //remember tcp_routines inherits Agent Class.
+  testConnect.start("test", TASK_PRIORITY); 
 
   while(true) {
 

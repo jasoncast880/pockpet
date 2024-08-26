@@ -15,6 +15,7 @@ SocketHandler::~SocketHandler() {
   //NOP
 }
 
+/*
 //when a socket connection is made, print the print and hex data in a buffer.
 void SocketHandler::debugPrintBuffer(const char *title, const void *pBuffer, size_t bytes){
   
@@ -30,4 +31,5 @@ void SocketHandler::debugPrintBuffer(const char *title, const void *pBuffer, siz
   }
 
 }
+*/
 

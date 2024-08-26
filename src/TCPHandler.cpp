@@ -22,14 +22,13 @@ TCPHandler::~TCPHandler(){
 struct sockaddr_in serv_addr;
 
 //DIRECT IP TCP Connection.....
-bool TCPHandler::sockConnect(const char* host, uint16_t port){
+int TCPHandler::sockConnect(const char* host, uint16_t port){
  //bind return 0 on success, -1 to indicate an error
-
+  //xSock - type int
   xSock = socket(AF_INET, SOCK_STREAM, 0);
 
   if(xSock < 0) {
-    printf("ERROR opening socket \n");
-    return false;
+    return xSock;
   }
 
   //server's (ipv4) IP details; all members defined after socket(.) declaration; 
@@ -42,12 +41,11 @@ bool TCPHandler::sockConnect(const char* host, uint16_t port){
 
   //check for neg
   if(resp<0) {
-    printf("Socket Connection Error\n");
-    return false;
+    int ret = -1;//temp
+    return ret;
   }
 
-  printf("Socket Connection OK\n");
-  return true;
+  return xSock;
 }
 
 //get status of socket; return neg is error;
@@ -62,5 +60,4 @@ bool TCPHandler::sockClose(){
   closesocket(xSock);
   return true;
 }
-
 

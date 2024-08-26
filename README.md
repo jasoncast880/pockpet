@@ -1,12 +1,20 @@
 # Welcome Pockpet-v2 Branch!
 
+4.11- Thread Local Storage, Reentrancy
+    - Thread Local storage: store arbitrary data which should normally be stored in a global variable by reentrant functions....
+    - Reentrant Function: a function which can safely run from multiple threads safely; A thread Safe function.
+    
+
 ## Our Goals:
+Pockpet is my study into embedded/iot systems and the art of combining microcontroller routines
+and leveraging client-server infastructure to make a robust and well-designed product.
+
 v2 Branch's focus is on limit testing the pico w running free RTOS, setup in various lib folders in order to increase modularity and increase visibility with the scheduler: 
 
 ### Demos:
 * ST7735 (Adding the ILI Later) Sprite Handling lib
   * The Value of Adding DMA : https://www.youtube.com/watch?v=FwaqTPlaAvA
-* TCP Sockets Handling Lib
+* TCP Sockets Handling Lib (THIS BRANCH FOCUS)
 * BLE/BT Stack for Getting wifi Credentials.
 * Button Handler Lib.
 * Various Frame Buffer/Memory Management units...
