@@ -26,7 +26,7 @@ public: // when some virtual func has a = 0 assignment, its supposed to be imple
   virtual ~SocketHandler();
 
   //tcp sock connect 
-  virtual bool sockConnect(const char *host, uint16_t port) = 0;
+  virtual int sockConnect(const char *host, uint16_t port) = 0;
 
   //status of socket; neg return is an error
 //  virtual int status() = 0;

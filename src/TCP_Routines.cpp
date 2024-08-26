@@ -1,7 +1,6 @@
 //all serial interfaces are OK
 //an extension interface, or something
 #include "TCP_Routines.h"
-
 //#include <cstdio>
 
 #include "WifiHandler.h"
@@ -58,11 +57,9 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
   return false;
 }
 
-
 bool TCP_Routines::testSock() {
   char targetIP[] = "18.209.109.132";
   uint16_t targetPort = 8081;
-
 
   TCPHandler ecSock;
   //const char* host, uint16_t port
@@ -71,4 +68,6 @@ bool TCP_Routines::testSock() {
   } else {
     printf("Socket Connection OK");
   }
+  
+  return true;
 }

@@ -28,7 +28,7 @@ public:
   TCPHandler();
   virtual ~TCPHandler();
 
-  bool sockConnect(const char * host, uint16_t port);
+  int sockConnect(const char * host, uint16_t port);
 
   int status();
   
