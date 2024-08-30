@@ -15,7 +15,6 @@ SocketHandler::~SocketHandler() {
   //NOP
 }
 
-/*
 //when a socket connection is made, print the print and hex data in a buffer.
 void SocketHandler::debugPrintBuffer(const char *title, const void *pBuffer, size_t bytes){
   
@@ -26,10 +25,23 @@ void SocketHandler::debugPrintBuffer(const char *title, const void *pBuffer, siz
   printf("DEBUG: %s of size %d\n", title, bytes);
 
   while(count < bytes) {
-    printf("*");
-    count++;
-  }
+    lineEnd = count + DEBUG_LINE;
+    if(lineEnd > bytes) {
+      lineEnd = bytes;
+    }
+    //print hex dump
+    for (size_t i=count; i < lineEnd; i++){
+			if (pBuf[i] <= 0x0F){
+				printf("0%X ", pBuf[i]);
+			} else {
+				printf("%X ", pBuf[i]);
+			}
+		}
 
+    printf("\n");
+
+    count = lineEnd;
+    
+  }
 }
-*/
 

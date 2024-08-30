@@ -34,7 +34,7 @@ public:
   
   bool sockClose();
 
-  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
+//  int32_t sockSend(const void *pBuffer, size_t bytesToSend);
 
   int32_t sockRead(const void *pBuffer, size_t bytesToRecv);
 

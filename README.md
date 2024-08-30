@@ -36,7 +36,15 @@ This thing sucks lmaooo; i hate debugging this
 Build ok, BUT I had to rework pico sdk to include the directories (follow the compiler)... Don't know if this approach works long term.
 I need to test with my ec2 instance, i plan a TCP socket application alongside the buffer management system.
 
+30-08-24
+I am 'supposedly' finished building out the socket read functions; 
+I will have to test on my rig, which hasn't worked well in the past. Perhaps a more simplistic-non elastic ip server is more appropriate for my use case, but i will have to see when i get back to base...
+
+Next up is to actually connect to the server. 
+Once connected, I can use my Java Knowledge to write a Java EC2 Server. Java good for jobs
+
 ## Long Term Goals For Pockpet (by branch)
 + v1 - A simple demo prototype using *just* the lcd screen, buttons - this version used a pressure fit 3d printed case, slide-in components and crude soldering & wirings.
 + v2_(dev) - More advanced demos, drivers. Limit test the hardware capabilities of the Pico W using FreeRTOS. (CURRENT BRANCH)
++ v2_tcp - socket testing demo. Idea is to use an ec2/other cloud server to serve a pixel array to the pico (tcp client). Ideally hardcode IP credentials, but keep SSID connected via BT or other means (very optional).
 + v2_prod - Build PCB and case. Limit soldering/wiring requirements to create a seamless build experience. Build a Gameboy-Style Case with a hinge & clasp for easy iteratability. (6 months est.)

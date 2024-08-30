@@ -58,7 +58,7 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
 }
 
 bool TCP_Routines::testSock() {
-  char targetIP[] = "18.209.109.132";
+  char targetIP[] = "18.209.109.132"; //configure target IP; should be an elastic ip if using ec2
   uint16_t targetPort = 8081;
 
   TCPHandler ecSock;
