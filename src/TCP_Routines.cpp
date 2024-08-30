@@ -52,14 +52,16 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
     } else {
       printf("did not join successfully\n\r");
     }
-  } else {printf("CYW Connect failed\n\r");}
+  } else {
+    printf("CYW Connect failed\n\r");
+  }
 
   return false;
 }
 
 bool TCP_Routines::testSock() {
-  char targetIP[] = "18.209.109.132"; //configure target IP; should be an elastic ip if using ec2
-  uint16_t targetPort = 8081;
+  char targetIP[] = EC2_IP; //configure target IP; should be an elastic ip if using ec2
+  uint16_t targetPort = EC2_PORT;
 
   TCPHandler ecSock;
   //const char* host, uint16_t port

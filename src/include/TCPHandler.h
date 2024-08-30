@@ -45,6 +45,7 @@ private:
   int xSock = 0; //socket no.
 
   uint16_t xPort = 80;//port to connect to
+                      //
 
   ip_addr_t xHost; //remote server ip to connect to
 

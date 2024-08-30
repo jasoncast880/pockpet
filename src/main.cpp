@@ -29,7 +29,6 @@ void runTimeStats(){
   volatile UBaseType_t uxArraySize, x;
   unsigned long        ulTotalRunTime;
 
-
   /* Take a snapshot of the number of tasks in case it changes while this
   function is executing. */
   uxArraySize = uxTaskGetNumberOfTasks();
@@ -103,9 +102,16 @@ void main_task(void* params) {
   WifiHandler::getIPAddressStr(ipStr);
   printf("IP ADDRESS: %s\n", ipStr);
 
-
   TCP_Routines testConnect; //remember tcp_routines inherits Agent Class.
   testConnect.start("test", TASK_PRIORITY); 
+
+  /*
+  expected tasks to run atp:
+   * main
+   * test
+   * freertos tcb thing
+   * tcp ip task (lwip)
+  */
 
   while(true) {
 

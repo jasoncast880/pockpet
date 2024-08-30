@@ -49,7 +49,7 @@ int TCPHandler::sockConnect(const char* host, uint16_t port) {
 }
 
 //const void *pBuffer, size_t bytesToRecv
-int32_t TCPHandler::sockRead(const void *pBuffer, size_t bytesToRecv){
+int32_t TCPHandler::sockRead(const void *pBuffer, size_t bytesToRecv) {
   int32_t dataIn = 0;
 
   //method below writes direct to buffer space from socket's contents
@@ -65,7 +65,7 @@ int32_t TCPHandler::sockRead(const void *pBuffer, size_t bytesToRecv){
 
 
 //get status of socket; return neg is error;
-int TCPHandler::status(){
+int TCPHandler::status() {
   int error = 0;
   socklen_t len = sizeof(error);
   int retVal = getsockopt(xSock, SOL_SOCKET, SO_ERROR, &error, &len);
@@ -76,4 +76,3 @@ bool TCPHandler::sockClose(){
   closesocket(xSock);
   return true;
 }
-
