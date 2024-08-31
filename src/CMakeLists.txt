@@ -36,16 +36,14 @@ endif()
 if (NOT DEFINED ENV{EC2_IP})
 	message(FATAL_ERROR "WIFI_SSID Environment variable not defined")
 endif()
-if (NOT DEFINED ENV{EC2_PORT})
-	message(FATAL_ERROR "WIFI_PASSWORD Environment variable not defined")
-endif()
 
 
 target_compile_definitions(${ProjectName} PRIVATE
     WIFI_SSID=\"$ENV{WIFI_SSID}\"
     WIFI_PASSWORD=\"$ENV{WIFI_PASSWORD}\"
     EC2_IP=\"$ENV{EC2_IP}\"
-    EC2_PORT=\"$ENV{EC2_PORT}\"
+    #Port will be hardcoded
+    #EC2_PORT=\"$ENV{EC2_PORT}\"
 
 )
 
