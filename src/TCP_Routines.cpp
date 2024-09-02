@@ -60,9 +60,9 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
 
 bool TCP_Routines::testSock() {
   char targetIP[] = EC2_IP; //configure target IP; should be an elastic ip if using ec2
-  uint16_t targetPort = 8081;
+  uint16_t targetPort = 8888;
 
-  printf("Connecting to %s\n",targetIP);
+  printf("Connecting to %s ; %d\n",targetIP, targetPort);
   TCPHandler ecSock;
   int ret = ecSock.sockConnect(targetIP,targetPort);
   //const char* host, uint16_t port

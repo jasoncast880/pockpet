@@ -46,7 +46,7 @@ int TCPHandler::sockConnect(const char* host, uint16_t port) {
   //check for neg
   if(resp<0) {
 
-    printf("3");
+    printf("3\n");
     int ret = -1;//temp
     return ret;
   }
