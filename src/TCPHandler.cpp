@@ -25,12 +25,16 @@ struct sockaddr_in serv_addr;
 int TCPHandler::sockConnect(const char* host, uint16_t port) {
   //bind return 0 on success, -1 to indicate an error
   //xSock - type int
+  printf("1\n");
   xSock = socket(AF_INET, SOCK_STREAM, 0);
+  printf("1.1\n");
 
   if(xSock < 0) {
+    printf("2\n");
     return xSock;
   }
 
+  printf("3\n");
   //server's (ipv4) IP details; all members defined after socket(.) declaration; 
   memset(&serv_addr,0,sizeof(serv_addr));
   serv_addr.sin_family = AF_INET;
@@ -41,10 +45,13 @@ int TCPHandler::sockConnect(const char* host, uint16_t port) {
 
   //check for neg
   if(resp<0) {
+
+    printf("3");
     int ret = -1;//temp
     return ret;
   }
 
+  printf("4\n");
   return xSock;
 }
 

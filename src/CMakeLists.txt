@@ -19,9 +19,9 @@ target_include_directories(${ProjectName} PRIVATE
 
 target_link_libraries(${ProjectName} 
   pico_stdlib 
-  pico_cyw43_arch_lwip_sys_freertos
-  FreeRTOS-Kernel-Heap4 
-  hardware_irq
+    FreeRTOS-Kernel-Heap4
+    pico_cyw43_arch_lwip_sys_freertos
+    hardware_irq
 )
 
 #idfk
@@ -34,7 +34,7 @@ if (NOT DEFINED ENV{WIFI_PASSWORD})
 	message(FATAL_ERROR "WIFI_PASSWORD Environment variable not defined")
 endif()
 if (NOT DEFINED ENV{EC2_IP})
-	message(FATAL_ERROR "WIFI_SSID Environment variable not defined")
+  message(FATAL_ERROR "EC2 IP Environment variable not defined")
 endif()
 
 

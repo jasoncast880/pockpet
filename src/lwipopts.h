@@ -1,18 +1,18 @@
-#ifndef _LWIPOPTS_H 
-#define _LWIPOPTS_H
+#ifndef __LWIPOPTS_H__
+#define __LWIPOPTS_H__
 
-#define NO_SYS                      0
 
-#define TCPIP_THREAD_PRIO 2
-#define TCPIP_THREAD_STACKSIZE 2048//1024
+#define TCPIP_THREAD_PRIO   2
+#define TCPIP_THREAD_STACKSIZE 2048 //1024
 #define DEFAULT_THREAD_STACKSIZE 1024
 #define DEFAULT_RAW_RECVMBOX_SIZE 8
 #define TCPIP_MBOX_SIZE 8
 #define LWIP_TIMEVAL_PRIVATE 0
 
 #define LWIP_SOCKET                 1
-#define LWIP_SO_RCVBUF              1
-#define RECV_BUFSIZE_DEFAULT        256
+#define LWIP_SO_RCVBUF				1
+#define RECV_BUFSIZE_DEFAULT		256
+
 #define MEM_LIBC_MALLOC             0
 
 #define MEM_ALIGNMENT               4
@@ -31,7 +31,7 @@
 #define LWIP_NETIF_STATUS_CALLBACK  1
 #define LWIP_NETIF_LINK_CALLBACK    1
 #define LWIP_NETIF_HOSTNAME         1
-#define LWIP_NETCONN                0
+#define LWIP_NETCONN                1
 #define MEM_STATS                   0
 #define SYS_STATS                   0
 #define MEMP_STATS                  0
@@ -83,4 +83,9 @@
 #define SLIP_DEBUG                  LWIP_DBG_OFF
 #define DHCP_DEBUG                  LWIP_DBG_OFF
 
-#endif
+
+#define DEFAULT_TCP_RECVMBOX_SIZE 128
+
+
+
+#endif /* __LWIPOPTS_H__ */

@@ -12,7 +12,6 @@ TCP_Routines::~TCP_Routines() {
 }
 
 void TCP_Routines::run() {
-  printf("Running Test:");
   test(); //agent thread will run tcp routines through this method
   //printf("RUN %d TESTS; %d SUCCESFUL \n");
 
@@ -26,14 +25,14 @@ configSTACK_DEPTH_TYPE TCP_Routines::getMaxStackSize() {
 }
 
 void TCP_Routines::test() {
-  printf("CHECKING WIFI:");
+  printf("CHECKING WIFI:\n");
   if(!testConnect()) {
     printf("CYW CONNECTION FAILED\n");
   } else {
     printf("CYW CONNECTION OK \n");
   }
 
-  printf("CHECKING TCP:");
+  printf("CHECKING TCP:\n");
   if(!testSock()) {
     printf("TCP CONNECTION FAILED\n");
   } else {
@@ -63,12 +62,14 @@ bool TCP_Routines::testSock() {
   char targetIP[] = EC2_IP; //configure target IP; should be an elastic ip if using ec2
   uint16_t targetPort = 8081;
 
+  printf("Connecting to %s\n",targetIP);
   TCPHandler ecSock;
+  int ret = ecSock.sockConnect(targetIP,targetPort);
   //const char* host, uint16_t port
-  if(ecSock.sockConnect(targetIP,targetPort)<0){ 
-    printf("Socket Connect Failed"); //delegate all printfs to the thread classes, not the Reentrant functions....
+  if(ret<0){ 
+    printf("Socket Connect Failed\n\r"); //delegate all printfs to the thread classes, not the Reentrant functions....
   } else {
-    printf("Socket Connection OK");
+    printf("Socket Connection OK\n\r");
   }
   
   return true;
