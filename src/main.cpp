@@ -103,7 +103,7 @@ void main_task(void* params) {
   printf("IP ADDRESS: %s\n", ipStr);
 
   TCP_Routines testConnect; //remember tcp_routines inherits Agent Class.
-  testConnect.start("test", TASK_PRIORITY); 
+  testConnect.start("test", TASK_PRIORITY); //spawn a thread
 
   /*
   expected tasks to run atp:
@@ -115,21 +115,13 @@ void main_task(void* params) {
 
   while(true) {
 
-    runTimeStats();
+    //runTimeStats(); //temp comment-out
 
+    //essentially, a busy task with WAP down error
     vTaskDelay(3000);
 
     if(!WifiHandler::isJoined()) {
-
-      printf("AP is down \n");
-
-      if(!WifiHandler::join(WIFI_SSID, WIFI_PASSWORD)){
-        printf("Attempt to Connect to Wifi\n");
-      } else {
-        printf("Failed to connect to Wifi\n");
-      }
-    } else {
-      printf("Wifi is OK\n");
+      printf("WAP is down \n");
     }
   }
 }
@@ -151,4 +143,3 @@ int main() {
 
   return 0;
 }
-

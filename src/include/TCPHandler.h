@@ -19,6 +19,7 @@ extern "C" { //assume direct ip connection
   #include "lwip/ip4_addr.h"
   #include "lwip/ip_addr.h"
   #include "lwip/sockets.h"
+  #include "lwip/inet.h"
 
   #include <cstring>
 }
@@ -28,7 +29,7 @@ public:
   TCPHandler();
   virtual ~TCPHandler();
 
-  int sockConnect(const char * host, uint16_t port);
+  int sockConnect(const char * ip, uint16_t port);
 
   int status();
   
@@ -47,10 +48,8 @@ private:
   uint16_t xPort = 80;//port to connect to
                       //
 
-  ip_addr_t xHost; //remote server ip to connect to
+  //ip_addr_t xHost = EC2_IP; //remote server ip to connect to
 
-  char xHostName[80]; //remote server name to connect
-                      
   SemaphoreHandle_t xSocketFlag;
   //SemaphoreHandle_t xHostDNSFound; // semaphore for waiting on dns
 };

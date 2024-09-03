@@ -3,6 +3,8 @@
 #include "pico/stdlib.h"
 #include <errno.h>
 
+#define MAX_RETRIES 10
+
 TCPHandler::TCPHandler(){
   //NOP??
   //bind immediately
@@ -19,40 +21,49 @@ TCPHandler::~TCPHandler(){
 //direct ip connection, through port <69> (idk)
 //
 
-struct sockaddr_in serv_addr;
+//int xSock = 0;  HEADER DECLARATION
 
-//DIRECT IP TCP Connection.....
-int TCPHandler::sockConnect(const char* host, uint16_t port) {
-  //bind return 0 on success, -1 to indicate an error
-  //xSock - type int
-  printf("1\n");
-  xSock = socket(AF_INET, SOCK_STREAM, 0);
-  printf("1.1\n");
+//DIRECT IP TCP Connection 
+//return 1, issue opening socket
+//return 0, ok connect to server
+//return -1, no connect to server
+int TCPHandler::sockConnect(const char* ip, uint16_t port) {
+  struct sockaddr_in serv_addr;
 
+  int retries = 0;
+  int delay = 1000; //ms for vTaskDelay(x)
+
+  xSock = lwip_socket(AF_INET, SOCK_STREAM, 0);
   if(xSock < 0) {
-    printf("2\n");
-    return xSock;
+    printf("Socket Creation Failed");
+    return 1;
   }
 
-  printf("3\n");
-  //server's (ipv4) IP details; all members defined after socket(.) declaration; 
   memset(&serv_addr,0,sizeof(serv_addr));
   serv_addr.sin_family = AF_INET;
   serv_addr.sin_port = htons(xPort);
-  memcpy(&serv_addr.sin_addr.s_addr, &xHost, sizeof(xHost));
+  //memcpy(&serv_addr.sin_addr.s_addr, &xHost, sizeof(xHost));
+  inet_pton(AF_INET, ip, &serv_addr.sin_addr);
   
-  int resp = connect(xSock,(struct sockaddr *) &serv_addr, sizeof(serv_addr));
-
-  //check for neg
-  if(resp<0) {
-
-    printf("3\n");
-    int ret = -1;//temp
-    return ret;
+  while(retries < MAX_RETRIES) {
+    if(lwip_connect(xSock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == 0) {
+      printf("TCP Connected Successfuly\n");
+      break;
+    } else {
+      printf("TCP Connect Failed: %s\n", strerror(errno));
+      retries++;
+      if (retries < MAX_RETRIES) {
+        printf("Retrying in %d ms... \n",delay);
+        vTaskDelay(delay);
+      } else {
+        printf("Max Retries Reached. TCP Connect Failed \n");
+        close(xSock);
+        return -1;
+      }
+    }
   }
-
-  printf("4\n");
-  return xSock;
+  
+  return 0;
 }
 
 //const void *pBuffer, size_t bytesToRecv
