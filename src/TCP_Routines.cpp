@@ -58,8 +58,8 @@ bool TCP_Routines::testConnect() { //i expect that this method should pass consi
 }
 
 bool TCP_Routines::testSock() {
-  char targetIP[] = EC2_IP; //configure target IP
-  uint16_t targetPort = 8888;
+  char targetIP[] = "192.168.40.143"; //configure target IP
+  uint16_t targetPort = 8080;
 
   printf("Connecting to %s ; %d\n",targetIP, targetPort);
   TCPHandler tcpSock;

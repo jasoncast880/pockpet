@@ -45,7 +45,7 @@ private:
 
   int xSock = 0; //socket no.
 
-  uint16_t xPort = 80;//port to connect to
+  //uint16_t xPort = 80;//pass as param instead
                       //
 
   //ip_addr_t xHost = EC2_IP; //remote server ip to connect to

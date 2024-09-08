@@ -22,6 +22,8 @@ target_link_libraries(${ProjectName}
     FreeRTOS-Kernel-Heap4
     pico_cyw43_arch_lwip_sys_freertos
     hardware_irq
+    hardware_spi
+    st7735
 )
 
 #idfk

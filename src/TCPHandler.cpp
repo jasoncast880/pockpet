@@ -33,20 +33,24 @@ int TCPHandler::sockConnect(const char* ip, uint16_t port) {
   int retries = 0;
   int delay = 1000; //ms for vTaskDelay(x)
 
-  xSock = lwip_socket(AF_INET, SOCK_STREAM, 0);
+  xSock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
   if(xSock < 0) {
     printf("Socket Creation Failed");
     return 1;
   }
 
-  memset(&serv_addr,0,sizeof(serv_addr));
+  //memset(&serv_addr,0,sizeof(serv_addr));
   serv_addr.sin_family = AF_INET;
-  serv_addr.sin_port = htons(xPort);
+  serv_addr.sin_port = htons(port);
   //memcpy(&serv_addr.sin_addr.s_addr, &xHost, sizeof(xHost));
+  //
   inet_pton(AF_INET, ip, &serv_addr.sin_addr);
+  //
+  //serv_addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
   
+  connect(xSock, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
   while(retries < MAX_RETRIES) {
-    if(lwip_connect(xSock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == 0) {
+    if(connect(xSock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == 0) {
       printf("TCP Connected Successfuly\n");
       break;
     } else {
