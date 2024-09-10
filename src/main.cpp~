@@ -177,7 +177,7 @@ void vLaunch(void) {
 
   //task handles (ie &main_task is set to NULL) handles are not relevant right now.
   xTaskCreate(main_task,"Main_Task", 2048, NULL, TASK_PRIORITY, NULL); 
-  xTaskCreate(display_task,"Display_Task", 2048, NULL, TASK_PRIORITY-1, NULL);
+  xTaskCreate(display_task,"Display_Task", 2048, NULL, TASK_PRIORITY, NULL);
 
   vTaskStartScheduler();
 }
