@@ -160,16 +160,38 @@ void main_task(void* params) {
   }
 }
 
-void display_task(void* params) {
-  if(leftState){ printf("L\n"); }
-  if(downState){ printf("D\n"); }
-  if(upState){ printf("U\n"); }
-  if(rightState){ printf("R\n"); }
+char inBuf[4] = "";
+
+void display_task(/*void* params*/) {
+  int i = 0;
+  char btnStr[4] = "";
+
+  if(leftState){ 
+    btnStr[i]='L'; 
+    i++;
+  }
+  if(downState){ 
+    btnStr[i]='D'; 
+    i++;
+  }
+  if(upState){
+    btnStr[i]='U'; 
+    i++;
+  }
+  if(rightState){
+    btnStr[i]='R'; 
+    i++;
+  }
+  if(leftState||downState||upState||rightState){ printf("%s\n",btnStr); }
 
   leftState = false;
   downState = false;
   upState = false;
-  rightState = false;
+  rightState = false; 
+
+  //next, this buffer must be passed to other functions (perhpas via queue) 
+  //google: NULL TERMINATOR
+  strcpy(inBuf, btnStr);
 }
 
 void vLaunch(void) {
@@ -177,20 +199,28 @@ void vLaunch(void) {
 
   //task handles (ie &main_task is set to NULL) handles are not relevant right now.
   xTaskCreate(main_task,"Main_Task", 2048, NULL, TASK_PRIORITY, NULL); 
-  xTaskCreate(display_task,"Display_Task", 2048, NULL, TASK_PRIORITY-1, NULL);
+//  xTaskCreate(display_task,"Display_Task", 2048, NULL, TASK_PRIORITY-1, NULL);
 
   vTaskStartScheduler();
 }
 
-void leftButton_isr(uint gpio, uint32_t events) {leftState = true;}
-void downButton_isr(uint gpio, uint32_t events) {downState = true;} 
-void upButton_isr(uint gpio, uint32_t events) {upState = true;} //try without sw timers
-void rightButton_isr(uint gpio, uint32_t events) {rightState = true;}
+void button_isr(uint gpio, uint32_t events) {
+//  printf("Interrupt on GPIO %d, Events %d\n", gpio, events);
+  if(gpio==2){
+    leftState=true;
+  } else if (gpio==3) {
+    downState=true;
+  } else if (gpio==4) {
+    upState=true;
+  } else if (gpio==5) {
+    rightState=true;
+  }
+}
 
 int main() {
   //initialization routines
   stdio_init_all();
-  tftSetup();
+  //tftSetup();
 
   gpio_init(BUTTON_LEFT);
   gpio_set_dir(BUTTON_LEFT,GPIO_IN);
@@ -208,16 +238,21 @@ int main() {
   gpio_set_dir(BUTTON_RIGHT,GPIO_IN);
   gpio_pull_up(BUTTON_RIGHT);
   
-  gpio_set_irq_enabled_with_callback(BUTTON_LEFT, GPIO_IRQ_EDGE_FALL, true, &leftButton_isr);
-  gpio_set_irq_enabled_with_callback(BUTTON_DOWN, GPIO_IRQ_EDGE_FALL, true, &downButton_isr);
-  gpio_set_irq_enabled_with_callback(BUTTON_UP, GPIO_IRQ_EDGE_FALL, true, &upButton_isr);
-  gpio_set_irq_enabled_with_callback(BUTTON_RIGHT, GPIO_IRQ_EDGE_FALL, true, &rightButton_isr);
+  gpio_set_irq_enabled_with_callback(BUTTON_LEFT, GPIO_IRQ_EDGE_FALL, true, &button_isr);
+  gpio_set_irq_enabled_with_callback(BUTTON_DOWN, GPIO_IRQ_EDGE_FALL, true, &button_isr);
+  gpio_set_irq_enabled_with_callback(BUTTON_UP, GPIO_IRQ_EDGE_FALL, true, &button_isr);
+  gpio_set_irq_enabled_with_callback(BUTTON_RIGHT, GPIO_IRQ_EDGE_FALL, true, &button_isr);
 
   sleep_ms(5000);
   printf("GO\n");
 
-  vLaunch();
+  //vLaunch(); //enable-disable FreeRTOS 
+  while (true) {
+    
+  display_task();
+  sleep_ms(250);
+
+  }
 
   return 0;
 }
-
