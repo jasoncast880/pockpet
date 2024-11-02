@@ -25,4 +25,4 @@ For the average person this design is a huge hassle and is liable to break witho
 The animations look great, with my main complaint being that the animation changes aren't always responding to button presses. This is likely to be solved by doing 2 things:
 * Switching from button polling to interrupts
 * changing the animation calling mechanics??
-This is a firmware-cetric project, so much of my design and engineering focus and knowledge is based around the software-firmware area. In v2_dev I have the goals i want to set aside for version 2.
+\nThis is a firmware-cetric project, so much of my design and engineering focus and knowledge is based around the software-firmware area. In v2_dev I have the goals i want to set aside for version 2.
