@@ -18,10 +18,9 @@ Overall, the design of the case looks great, although i would like to have a pro
 Because this is mainly a personal prototype, i won't put the 3d cad files in this repo, but perhaps with cleaner (better haha) designs I will consider putting them out for public access. <br/>
 ### Electrical Issues:
 Assembling this without shorting wires was a challenge because of how much loose wire was dangling. <br/>
-I hope that in later iterations pockpet can have a proper pcb in order to ensure that the connections between components dont short or disconnect. <br/>
-For the average person this design is a huge hassle and is liable to break without proper care. <br/>
+I hope that in later iterations pockpet can have a proper pcb in order to ensure that the connections between components don't short or disconnect. <br/>
 ### SOFTWARE ISSUES:
 The animations look great, with my main complaint being that the animation changes aren't always responding to button presses. This is likely to be solved by doing 2 things: <br/>
 * Switching from button polling to interrupts
-* changing the animation calling mechanics?? <br/>
-This is a firmware-cetric project, so much of my design and engineering focus and knowledge is based around the software-firmware area. In v2_dev I have the goals i want to set aside for version 2.
+* changing the animation calling mechanics?? 
+<br/>This is a firmware-cetric project, so much of my design and engineering focus and knowledge is based around the software-firmware area. In v2_dev I have the goals i want to set aside for version 2.
