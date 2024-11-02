@@ -14,12 +14,11 @@ To make your own pockpet, you should connect the RPi Pico to an ST7735 LCD scree
 | GP2 | BUTTON1 |
 | GP3 | BUTTON2 |
 | GP4 | BUTTON3 |
-<br/> This configuration has 4-wire SPI connection and 3 buttons as peripherals.
-<br/> ![image](https://github.com/user-attachments/assets/936675c1-7978-4359-84d0-e06c3e17125e)
+|EXAMPLE: | ![image](https://github.com/user-attachments/assets/936675c1-7978-4359-84d0-e06c3e17125e) |
 
 ---
-## How to Install Firmware:
-From this top level repository, you can go download /build/src/pockpetv1.uf2 <br/>
+## How to Install Firmware
+<br/>From this top level repository, you can go download /build/src/pockpetv1.uf2 
 This file can be downloaded to the rpi pico directly; Hold the BOOTSEL button on the pico board while plugging it in to USB, then drag and drop the .uf2 into the pico's file directory. <br/>
 ---
 ## Screenshots & Observation Log
