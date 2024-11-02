@@ -4,6 +4,9 @@
 Pockpet is a Tomagachi-style device that uses the Raspberry Pi Pico and an LCD Screen to provide a seamless nostalgia experience! <br/>
 This branch is the first iteration of the pockpet device, encased in a 3d printed enclosure. <br/>
 To make your own pockpet, you should connect the RPi Pico to an ST7735 LCD screen, along with 3 push buttons. <br/>
+
+![image](https://github.com/user-attachments/assets/3d48ecf2-d453-4647-ab5c-97c5d59acf03)
+
 | PICO-GPIO | Component Pin |
 | ----------- | ----------- |
 | GP16 | ST7735_RST |
@@ -14,10 +17,9 @@ To make your own pockpet, you should connect the RPi Pico to an ST7735 LCD scree
 | GP2 | BUTTON1 |
 | GP3 | BUTTON2 |
 | GP4 | BUTTON3 |
-|EXAMPLE: | ![image](https://github.com/user-attachments/assets/936675c1-7978-4359-84d0-e06c3e17125e) |
-
 ---
 ## How to Install Firmware
+---
 <br/>From this top level repository, you can go download /build/src/pockpetv1.uf2 
 This file can be downloaded to the rpi pico directly; Hold the BOOTSEL button on the pico board while plugging it in to USB, then drag and drop the .uf2 into the pico's file directory. <br/>
 ---
