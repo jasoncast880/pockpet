@@ -11,9 +11,9 @@ This file can be downloaded to the rpi pico directly; Hold the BOOTSEL button on
 
 ## Screenshots & Observation Log
 DEMO VIDEO: https://youtu.be/JOMGvVkbFnE
-![20240801_162118](https://github.com/user-attachments/assets/ae4f28c9-46b2-4414-8691-ea9767c14d8c)
+![20240801_162118](https://github.com/user-attachments/assets/ae4f28c9-46b2-4414-8691-ea9767c14d8c) <br/>
 ### Mechanical Issues:
-![image](https://github.com/user-attachments/assets/05eae27b-5ace-4164-96f0-787f80357a88)
+![image](https://github.com/user-attachments/assets/05eae27b-5ace-4164-96f0-787f80357a88) <br/>
 Overall, the design of the case looks great, although i would like to have a proper clamp shell design in a later version. This version uses pressure fit pegs to make a looser fit, which will be inconvenient down the line. <br/>
 Because this is mainly a personal prototype, i won't put the 3d cad files in this repo, but perhaps with cleaner (better haha) designs I will consider putting them out for public access. <br/>
 ### Electrical Issues:
