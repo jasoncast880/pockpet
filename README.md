@@ -31,7 +31,7 @@ DEMO VIDEO: https://youtu.be/JOMGvVkbFnE
 
 ![image](https://github.com/user-attachments/assets/36948a9e-9aa2-4d26-9014-eb960dd905f9)<br/>
 ### Mechanical Issues:
-![image](https://github.com/user-attachments/assets/8eb85601-0055-4506-9866-a259787677a9)
+![image](https://github.com/user-attachments/assets/8eb85601-0055-4506-9866-a259787677a9)<br/>
 Overall, the design of the case looks great, although i would like to have a proper clamp shell design in a later version. This version uses pressure fit pegs to make a looser fit, which will be inconvenient down the line. <br/>
 Because this is mainly a personal prototype, i won't put the 3d cad files in this repo, but perhaps with cleaner (better haha) designs I will consider putting them out for public access. <br/>
 ### Electrical Issues:
