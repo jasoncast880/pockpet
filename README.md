@@ -28,6 +28,7 @@ This file can be downloaded to the RPi Pico directly. Hold the BOOTSEL button on
 
 DEMO VIDEO: https://youtu.be/JOMGvVkbFnE  
 
+![image](https://github.com/user-attachments/assets/a054b7ee-30dd-4050-8bce-34b3808ce070)
 
 ![image](https://github.com/user-attachments/assets/36948a9e-9aa2-4d26-9014-eb960dd905f9)<br/>
 ### Mechanical Issues:
