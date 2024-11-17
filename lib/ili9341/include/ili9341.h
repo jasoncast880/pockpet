@@ -68,17 +68,17 @@
 #define _SDATA_SPI_FUNC gpio_set_function(_ST7735_SDATA, GPIO_FUNC_SPI)
 
 //internal funcs
-static void st7735_writeCommand(uint8_t commandByte);
-static void st7735_writeData(uint8_t dataByte);
-static void st7735_writeData(uint8_t* dataByte, size_t len);
+static void ili9341_writeCommand(uint8_t commandByte);
+static void ili9341_writeData(uint8_t dataByte);
+static void ili9341_writeData(uint8_t* dataByte, size_t len);
 
 // 1 powerup & initialization routine
-void st7735_initialize(int8_t,int8_t,int8_t,int8_t,int8_t);
+void ili9341_initialize(int8_t,int8_t,int8_t,int8_t,int8_t);
 
 // 2 address window pointers
-void st7735_setAddrWindow(uint8_t,uint8_t,uint8_t,uint8_t);
+void ili9341_setAddrWindow(uint8_t,uint8_t,uint8_t,uint8_t);
 
 // utility functions
-void st7735_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
-void st7735_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
+void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
+void ili9341_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
 

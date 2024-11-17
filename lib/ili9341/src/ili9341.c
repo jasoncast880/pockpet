@@ -1,4 +1,4 @@
-#include "st7735.h"
+#include "ili9341.h"
 
 static void st7735_writeCommand(uint8_t commandByte){
     gpio_write(_ST7735_DC, false);
