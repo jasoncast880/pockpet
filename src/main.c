@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#include "st7735.h"
+#include "ili9341.h"
 
 //serves as a testbench for the things
 
@@ -12,6 +12,7 @@ int main() {
     printf("GO\n");
 
     //test util functions here 
+    ili9341_initialize(17,20,21,19,6,16);
     /*
     st7735_initialize(pisn here);
     st7735_setAddrWindow(here);

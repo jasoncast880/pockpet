@@ -1,63 +1,98 @@
 #include "ili9341.h"
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
 
-static void ili9341_writeCommand(uint8_t commandByte){
-    gpio_write(_ILI9341_DC, false);
-    gpio_write(_ILI9341_CS, false);
-    spi_write_blocking(spi0, &commandByte, 1);
-    gpio_write(_ILI9341_CS, true);
-}
+int8_t _ILI9341_CS;
+int8_t _ILI9341_RST;
+int8_t _ILI9341_DC;
+int8_t _ILI9341_MOSI;
+int8_t _ILI9341_SCLK;
+int8_t _ILI9341_MISO;
 
-static void ili9341_writeData(uint8_t dataByte){
-    gpio_write(_ILI9341_DC, true);
-    gpio_write(_ILI9341_CS, false);
-    spi_write_blocking(spi0, &dataByte, 1);
-    gpio_write(_ILI9341_CS, true);
-}
+void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sclk, int8_t miso){
+    /*
+     * testbench:
+     * cs - blue - gp17
+     * rst - ylo - gp20
+     * dc - grn  - gp 21
+     * mosi - wht - gp19
+     * sck - blu - gp6
+     * led - vcc line
+     * miso - blk - gp16
+     */
 
-static void ili9341_writeData_Buffer(unit8_t* dataBuf, uint32_t len){
-    gpio_write(_ILI9341_DC, true);
-    gpio_write(_ILI9341_CS, false);
-    spi_write_blocking(spi0, dataBuf, len);
-    gpio_write(_ILI9341_CS, true);
-}
-
-static void ili9341_hard_reset(){
-    gpio_write(_ILI9341_RST, true);
-    sleep_ms(10);
-    gpio_write(_ILI9341_RST, false);
-    sleep_ms(10);
-    gpio_write(_ILI9341_RST, true);
-    sleep_ms(10);
-}
-
-void ili9341_initialize(int8_t rst, int8_t dc, int8_t cs, int8_t sclk, int8_t sdata){
+    _ILI9341_CS = cs;
     _ILI9341_RST = rst;
     _ILI9341_DC = dc;
-    _ILI9341_CS = cs;
+    _ILI9341_MOSI = mosi;
     _ILI9341_SCLK = sclk;
-    _ILI9341_SDATA = sdata;
+    _ILI9341_MISO = miso;
  
+    _CS_INIT;
     _RST_INIT;
     _DC_INIT;
-    _CS_INIT;
+    _MOSI_INIT;
     _SCLK_INIT;
-    _SDATA_INIT;   
+    _MISO_INIT;   
    
-    gpio_write(_ILI9341_DC, 0);
-    gpio_write(_ILI9341_CS, 1);
-
+    _CS_SetDigitalOut;
     _RST_SetDigitalOut;
     _DC_SetDigitalOut;
-    _CS_SetDigitalOut;
+    _MOSI_SetDigitalOut;
     _SCLK_SetDigitalOut;
-    _SDATA_SetDigitalOut;
+    _MISO_SetDigitalOut;
+
+    gpio_put(_ILI9341_DC, 0);
+    gpio_put(_ILI9341_CS, 1);
 
     //initialize hardware spi instance type and speed
     spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
-    TFT_SCLK_SPI_FUNC;
-    TFT_SDATA_SPI_FUNC;
+    _SCLK_SPI_FUNC;
+    _MOSI_SPI_FUNC;
 
-    ili9341_hard_reset(); //will reset all vram to random
-
-    
+    ili9341_hard_reset(); 
+    ili9341_init_sub_pwr();
 }
+
+static void ili9341_writeCommand(uint8_t commandByte){
+    gpio_put(_ILI9341_DC, false);
+    gpio_put(_ILI9341_CS, false);
+    spi_write_blocking(spi0, &commandByte, 1);
+    gpio_put(_ILI9341_CS, true);
+}
+
+static void ili9341_writeData(uint8_t dataByte){
+    gpio_put(_ILI9341_DC, true);
+    gpio_put(_ILI9341_CS, false);
+    spi_write_blocking(spi0, &dataByte, 1);
+    gpio_put(_ILI9341_CS, true);
+}
+
+static void ili9341_writeData_Buffer(uint8_t* dataBuf, size_t len){
+    gpio_put(_ILI9341_DC, true);
+    gpio_put(_ILI9341_CS, false);
+    spi_write_blocking(spi0, dataBuf, len);
+    gpio_put(_ILI9341_CS, true);
+}
+
+static void ili9341_hard_reset(){
+    gpio_put(_ILI9341_RST, true);
+    sleep_ms(10);
+    gpio_put(_ILI9341_RST, false);
+    sleep_ms(10);
+    gpio_put(_ILI9341_RST, true);
+    sleep_ms(120);
+}
+
+static void ili9341_init_sub_pwr(){
+    ili9341_writeCommand(SLPOUT);
+    sleep_ms(120);
+    ili9341_writeCommand(DISPON);
+    sleep_ms(100);
+}
+
+static void ili9341_init_sub_vram(){
+    ili9341_writeCommand(NOOP);
+}
+
+

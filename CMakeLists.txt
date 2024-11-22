@@ -7,7 +7,7 @@ SET(ProjectName pockpet)
 
 # Import those libraries
 include(pico_sdk_import.cmake)
-include($ENV{FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
+#include($ENV{FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
 
 # Define project
 project(${ProjectName})

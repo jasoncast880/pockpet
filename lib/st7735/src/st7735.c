@@ -1,32 +1,32 @@
 #include "st7735.h"
 
 static void st7735_writeCommand(uint8_t commandByte){
-    gpio_write(_ST7735_DC, false);
-    gpio_write(_ST7735_CS, false);
+    gpio_put(_ST7735_DC, false);
+    gpio_put(_ST7735_CS, false);
     spi_write_blocking(spi0, &commandByte, 1);
-    gpio_write(_ST7735_CS, true);
+    gpio_put(_ST7735_CS, true);
 }
 
 static void st7735_writeData(uint8_t dataByte){
-    gpio_write(_ST7735_DC, true);
-    gpio_write(_ST7735_CS, false);
+    gpio_put(_ST7735_DC, true);
+    gpio_put(_ST7735_CS, false);
     spi_write_blocking(spi0, &dataByte, 1);
-    gpio_write(_ST7735_CS, true);
+    gpio_put(_ST7735_CS, true);
 }
 
 static void st7735_writeData_Buffer(unit8_t* dataBuf, uint32_t len){
-    gpio_write(_ST7735_DC, true);
-    gpio_write(_ST7735_CS, false);
+    gpio_put(_ST7735_DC, true);
+    gpio_put(_ST7735_CS, false);
     spi_write_blocking(spi0, dataBuf, len);
-    gpio_write(_ST7735_CS, true);
+    gpio_put(_ST7735_CS, true);
 }
 
 static void st7735_reset(){
-    gpio_write(_ST7735_RST, true);
+    gpio_put(_ST7735_RST, true);
     sleep_ms(10);
-    gpio_write(_ST7735_RST, false);
+    gpio_put(_ST7735_RST, false);
     sleep_ms(10);
-    gpio_write(_ST7735_RST, true);
+    gpio_put(_ST7735_RST, true);
     sleep_ms(10);
 }
 
@@ -70,6 +70,6 @@ void st7735_initialize(int8_t rst, int8_t dc, int8_t cs, int8_t sclk, int8_t sda
     //3 True hardware initialization Routine for 'ST7735R Black Tab'
 
     //research the initialization routines and etc
-    gpio_write(_ST7735_DC, 0);
-    gpio_write(_ST7735_CS, 1);
+    gpio_put(_ST7735_DC, 0);
+    gpio_put(_ST7735_CS, 1);
 }
