@@ -47,6 +47,7 @@
 #define GMCTRN  0xE1
 
 #define FRMCTR1 0xB1 /* frame rate control */
+#define COLMOD  0x3A
 
 //power control
 //color control
@@ -92,7 +93,7 @@ extern int8_t _ILI9341_MISO;
 //internal funcs
 static void ili9341_writeCommand(uint8_t commandByte);
 static void ili9341_writeData(uint8_t dataByte);
-static void ili9341_writeData_Buffer(uint8_t* dataByte, size_t len);
+static void ili9341_writeData_Buffer(uint8_t* dataBuf, size_t len);
 
 static void ili9341_hard_reset();
                                   

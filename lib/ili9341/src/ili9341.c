@@ -52,6 +52,19 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sc
 
     ili9341_hard_reset(); 
     ili9341_init_sub_pwr();
+
+    ili9341_writeCommand(COLMOD);
+    ili9341_writeData(0x55);
+
+    //test
+    sleep_ms(500);
+
+    ili9341_writeCommand(RAM_WRT);
+
+    uint8_t red_kek[2] = {0x00, 0xF8};
+    for(int i = 0; i < (240*380);i++){
+        ili9341_writeData_Buffer(&red_kek[0], 2);
+    }
 }
 
 static void ili9341_writeCommand(uint8_t commandByte){
@@ -85,6 +98,7 @@ static void ili9341_hard_reset(){
 }
 
 static void ili9341_init_sub_pwr(){
+    ili9341_writeCommand(SWRESET);
     ili9341_writeCommand(SLPOUT);
     sleep_ms(120);
     ili9341_writeCommand(DISPON);
