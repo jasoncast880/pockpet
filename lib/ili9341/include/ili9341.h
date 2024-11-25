@@ -41,13 +41,14 @@
 
 #define CASET   0x2A /* Column Address SET */
 #define RASET   0x2B /* Row Address SET */
-#define RAM_WRT 0x2C /* Write to VRAM */
+
+#define RAM_WR 0x2C /* Write to VRAM */
 
 #define GMCTRP  0xE0 /* mysterious thing */
 #define GMCTRN  0xE1
 
 #define FRMCTR1 0xB1 /* frame rate control */
-#define COLMOD  0x3A
+#define PIXSET  0x3A /* config color format */
 
 //power control
 //color control
@@ -93,20 +94,17 @@ extern int8_t _ILI9341_MISO;
 //internal funcs
 static void ili9341_writeCommand(uint8_t commandByte);
 static void ili9341_writeData(uint8_t dataByte);
-static void ili9341_writeData_Buffer(uint8_t* dataBuf, size_t len);
+static void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
 
 static void ili9341_hard_reset();
                                   
-static void ili9341_init_sub_pwr(); //have gamma correction in this routine
+static void ili9341_init_sub_pwr(); 
 static void ili9341_init_sub_vram(); 
 
-// 1 powerup & initialization routine
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso);
 
-// 2 address window pointers
-void ili9341_setAddrWindow(uint8_t,uint8_t,uint8_t,uint8_t);
+uint16_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
 
 // utility functions
 void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
 void ili9341_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
-

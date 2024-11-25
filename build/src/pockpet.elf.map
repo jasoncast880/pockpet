@@ -1736,9 +1736,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
  .data          0x0000000000000000        0x0 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
  .bss           0x0000000000000000        0x0 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .text          0x0000000000000000        0x0 /tmp/ccvwiwZ8.o
- .data          0x0000000000000000        0x0 /tmp/ccvwiwZ8.o
- .bss           0x0000000000000000        0x0 /tmp/ccvwiwZ8.o
+ .text.poo      0x0000000000000000       0x94 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .text          0x0000000000000000        0x0 /tmp/cc02iMDk.o
+ .data          0x0000000000000000        0x0 /tmp/cc02iMDk.o
+ .bss           0x0000000000000000        0x0 /tmp/cc02iMDk.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
@@ -2613,11 +2614,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccvwiwZ8.o
+ .boot2         0x0000000010000000      0x100 /tmp/cc02iMDk.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x46c4
+.text           0x0000000010000100     0x4b74
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
@@ -3188,14 +3189,14 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x000000001000427c      0x134 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
                 0x000000001000427c                spi_init
  .text.ili9341_initialize
-                0x00000000100043b0      0x2a0 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+                0x00000000100043b0      0x750 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
                 0x00000000100043b0                ili9341_initialize
- .text          0x0000000010004650       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
-                0x0000000010004650                strlen
+ .text          0x0000000010004b00       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+                0x0000000010004b00                strlen
  *(.fini)
- .fini          0x00000000100046ac        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x00000000100046ac                _fini
- .fini.__stub   0x00000000100046b0       0xd0 linker stubs
+ .fini          0x0000000010004b5c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010004b5c                _fini
+ .fini.__stub   0x0000000010004b60       0xd0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3206,193 +3207,193 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x0000000010004780                . = ALIGN (0x4)
-                0x0000000010004780                PROVIDE (__preinit_array_start = .)
+                0x0000000010004c30                . = ALIGN (0x4)
+                0x0000000010004c30                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00100
-                0x0000000010004780        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x0000000010004780                __pre_init_runtime_init_early_resets
+                0x0000000010004c30        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c30                __pre_init_runtime_init_early_resets
  .preinit_array.00101
-                0x0000000010004784        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x0000000010004784                __pre_init_runtime_init_usb_power_down
+                0x0000000010004c34        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c34                __pre_init_runtime_init_usb_power_down
  .preinit_array.00275
-                0x0000000010004788        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010004c38        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00300
-                0x000000001000478c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004c3c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00350
-                0x0000000010004790        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+                0x0000000010004c40        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
  .preinit_array.00350
-                0x0000000010004794        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+                0x0000000010004c44        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
  .preinit_array.00500
-                0x0000000010004798        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x0000000010004798                __pre_init_runtime_init_clocks
+                0x0000000010004c48        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c48                __pre_init_runtime_init_clocks
  .preinit_array.00600
-                0x000000001000479c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x000000001000479c                __pre_init_runtime_init_post_clock_resets
+                0x0000000010004c4c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c4c                __pre_init_runtime_init_post_clock_resets
  .preinit_array.00700
-                0x00000000100047a0        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x00000000100047a0                __pre_init_runtime_init_rp2040_gpio_ie_disable
+                0x0000000010004c50        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c50                __pre_init_runtime_init_rp2040_gpio_ie_disable
  .preinit_array.01000
-                0x00000000100047a4        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x00000000100047a4                __pre_init_runtime_init_spin_locks_reset
+                0x0000000010004c54        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c54                __pre_init_runtime_init_spin_locks_reset
  .preinit_array.01100
-                0x00000000100047a8        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x00000000100047a8                __pre_init_runtime_init_mutex
+                0x0000000010004c58        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010004c58                __pre_init_runtime_init_mutex
  .preinit_array.10080
-                0x00000000100047ac        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-                0x00000000100047ac                __pre_init_runtime_init_install_ram_vector_table
+                0x0000000010004c5c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+                0x0000000010004c5c                __pre_init_runtime_init_install_ram_vector_table
  .preinit_array.11000
-                0x00000000100047b0        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100047b0                __pre_init_runtime_init_default_alarm_pool
+                0x0000000010004c60        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010004c60                __pre_init_runtime_init_default_alarm_pool
  .preinit_array.YYYYY
-                0x00000000100047b4        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x00000000100047b4                __pre_init_first_per_core_initializer
+                0x0000000010004c64        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010004c64                __pre_init_first_per_core_initializer
  .preinit_array.ZZZZZ.01200
-                0x00000000100047b8        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100047b8                __pre_init_runtime_init_per_core_irq_priorities
+                0x0000000010004c68        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010004c68                __pre_init_runtime_init_per_core_irq_priorities
  *(.preinit_array)
-                0x00000000100047bc                PROVIDE (__preinit_array_end = .)
-                0x00000000100047bc                . = ALIGN (0x4)
-                0x00000000100047bc                PROVIDE (__init_array_start = .)
+                0x0000000010004c6c                PROVIDE (__preinit_array_end = .)
+                0x0000000010004c6c                . = ALIGN (0x4)
+                0x0000000010004c6c                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x00000000100047bc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x00000000100047c0        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x00000000100047c4                PROVIDE (__init_array_end = .)
-                0x00000000100047c4                . = ALIGN (0x4)
-                0x00000000100047c4                PROVIDE (__fini_array_start = .)
+ .init_array    0x0000000010004c6c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x0000000010004c70        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010004c74                PROVIDE (__init_array_end = .)
+                0x0000000010004c74                . = ALIGN (0x4)
+                0x0000000010004c74                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
-                0x00000000100047c4                PROVIDE (__fini_array_end = .)
+                0x0000000010004c74                PROVIDE (__fini_array_end = .)
  *(.eh_frame*)
- .eh_frame      0x00000000100047c4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100047c4                . = ALIGN (0x4)
+ .eh_frame      0x0000000010004c74        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010004c74                . = ALIGN (0x4)
 
-.glue_7         0x00000000100047c4        0x0
- .glue_7        0x00000000100047c4        0x0 linker stubs
+.glue_7         0x0000000010004c74        0x0
+ .glue_7        0x0000000010004c74        0x0 linker stubs
 
-.glue_7t        0x00000000100047c4        0x0
- .glue_7t       0x00000000100047c4        0x0 linker stubs
+.glue_7t        0x0000000010004c74        0x0
+ .glue_7t       0x0000000010004c74        0x0 linker stubs
 
-.vfp11_veneer   0x00000000100047c4        0x0
- .vfp11_veneer  0x00000000100047c4        0x0 linker stubs
+.vfp11_veneer   0x0000000010004c74        0x0
+ .vfp11_veneer  0x0000000010004c74        0x0 linker stubs
 
-.v4_bx          0x00000000100047c4        0x0
- .v4_bx         0x00000000100047c4        0x0 linker stubs
+.v4_bx          0x0000000010004c74        0x0
+ .v4_bx         0x0000000010004c74        0x0 linker stubs
 
-.iplt           0x00000000100047c4        0x0
- .iplt          0x00000000100047c4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010004c74        0x0
+ .iplt          0x0000000010004c74        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x00000000100047c4      0x40c
+.rodata         0x0000000010004c74      0x40c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x00000000100047c4        0x3 CMakeFiles/pockpet.dir/main.c.obj
- *fill*         0x00000000100047c7        0x1 
+                0x0000000010004c74        0x3 CMakeFiles/pockpet.dir/main.c.obj
+ *fill*         0x0000000010004c77        0x1 
  .rodata.panic.str1.4
-                0x00000000100047c8       0x12 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
- *fill*         0x00000000100047da        0x2 
+                0x0000000010004c78       0x12 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+ *fill*         0x0000000010004c8a        0x2 
  .rodata.spin_lock_claim_unused.str1.4
-                0x00000000100047dc       0x1b CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x00000000100047f7        0x1 
+                0x0000000010004c8c       0x1b CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x0000000010004ca7        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x00000000100047f8       0x1b CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010004813        0x1 
+                0x0000000010004ca8       0x1b CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010004cc3        0x1 
  .rodata.timer_hardware_alarm_claim.str1.4
-                0x0000000010004814       0x22 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x0000000010004836        0x2 
+                0x0000000010004cc4       0x22 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x0000000010004ce6        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010004838        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010004ce8        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.missing_double_func_shim.str1.4
-                0x0000000010004844       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+                0x0000000010004cf4       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
  .rodata.missing_float_func_shim.str1.4
-                0x000000001000485c       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+                0x0000000010004d0c       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
                                           0x1 (size before relaxing)
  .rodata.str1.4
-                0x000000001000485c       0x2c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d0c       0x2c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_26
-                0x0000000010004888        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d38        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_34
-                0x0000000010004894        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d44        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_42
-                0x00000000100048a0        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d50        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_48
-                0x00000000100048ac        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d5c        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_54
-                0x00000000100048b8        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d68        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.__bi_84
-                0x00000000100048c4        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010004d74        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .rodata.crlf_str.0
-                0x00000000100048d0        0x2 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x00000000100048d2        0x2 
+                0x0000000010004d80        0x2 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x0000000010004d82        0x2 
  .rodata._resetd_driver
-                0x00000000100048d4       0x20 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004d84       0x20 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.desc_bos
-                0x00000000100048f4       0x21 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x00000000100048f4                desc_bos
- *fill*         0x0000000010004915        0x3 
+                0x0000000010004da4       0x21 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004da4                desc_bos
+ *fill*         0x0000000010004dc5        0x3 
  .rodata.desc_ms_os_20
-                0x0000000010004918       0xa6 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- *fill*         0x00000000100049be        0x2 
+                0x0000000010004dc8       0xa6 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ *fill*         0x0000000010004e6e        0x2 
  .rodata.str1.4
-                0x00000000100049c0       0x13 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x00000000100049d3        0x1 
+                0x0000000010004e70       0x13 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x0000000010004e83        0x1 
  .rodata.__bi_197.0
-                0x00000000100049d4        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004e84        0xc CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x00000000100049e0       0x2a CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010004a0a        0x2 
+                0x0000000010004e90       0x2a CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010004eba        0x2 
  .rodata.usbd_desc_cfg
-                0x0000000010004a0c       0x54 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004ebc       0x54 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x0000000010004a60       0x12 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010004a72        0x2 
+                0x0000000010004f10       0x12 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010004f22        0x2 
  .rodata.usbd_desc_str
-                0x0000000010004a74       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004f24       0x18 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x0000000010004a8c       0x14 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010004f3c       0x14 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x0000000010004aa0       0x48 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010004f50       0x48 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .rodata.tud_task_ext
-                0x0000000010004ae8       0x8c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .rodata        0x0000000010004b74       0x1c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010004f98       0x8c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .rodata        0x0000000010005024       0x1c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x0000000010004b90       0x40 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010004bd0                . = ALIGN (0x4)
+                0x0000000010005040       0x40 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005080                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x0000000010004bd0                . = ALIGN (0x4)
+                0x0000000010005080                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000010004bd0                __exidx_start = .
+                0x0000000010005080                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000010004bd0                __exidx_end = .
-                0x0000000010004bd0                . = ALIGN (0x4)
-                0x0000000010004bd0                __binary_info_start = .
+                0x0000000010005080                __exidx_end = .
+                0x0000000010005080                . = ALIGN (0x4)
+                0x0000000010005080                __binary_info_start = .
 
-.binary_info    0x0000000010004bd0       0x1c
+.binary_info    0x0000000010005080       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr26
-                0x0000000010004bd0        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010005080        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .binary_info.keep.__bi_ptr34
-                0x0000000010004bd4        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010005084        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .binary_info.keep.__bi_ptr42
-                0x0000000010004bd8        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010005088        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .binary_info.keep.__bi_ptr48
-                0x0000000010004bdc        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x000000001000508c        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .binary_info.keep.__bi_ptr54
-                0x0000000010004be0        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010005090        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  .binary_info.keep.__bi_ptr84
-                0x0000000010004be4        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+                0x0000000010005094        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr197
-                0x0000000010004be8        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004bec                __binary_info_end = .
+                0x0000000010005098        0x4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000509c                __binary_info_end = .
 
-.rel.dyn        0x0000000010004bec        0x0
- .rel.iplt      0x0000000010004bec        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010004bec                . = ALIGN (0x4)
+.rel.dyn        0x000000001000509c        0x0
+ .rel.iplt      0x000000001000509c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x000000001000509c                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -3406,7 +3407,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x00000000200000c0                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.data           0x00000000200000c0     0x1050 load address 0x0000000010004bec
+.data           0x00000000200000c0     0x1050 load address 0x000000001000509c
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3514,23 +3515,23 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020001110                . = ALIGN (0x4)
 
 .tm_clone_table
-                0x0000000020001110        0x0 load address 0x0000000010005c3c
+                0x0000000020001110        0x0 load address 0x00000000100060ec
  .tm_clone_table
                 0x0000000020001110        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020001110        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020001110        0x0 load address 0x0000000010005c3c
+.igot.plt       0x0000000020001110        0x0 load address 0x00000000100060ec
  .igot.plt      0x0000000020001110        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.tdata          0x0000000020001110        0x0 load address 0x0000000010005c3c
+.tdata          0x0000000020001110        0x0 load address 0x00000000100060ec
                 0x0000000020001110                . = ALIGN (0x4)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x0000000020001110                __tdata_end = .
                 0x0000000020001110                PROVIDE (__data_end__ = .)
-                0x0000000010004bec                __etext = LOADADDR (.data)
+                0x000000001000509c                __etext = LOADADDR (.data)
 
-.tbss           0x0000000020001110        0x0 load address 0x0000000010005c3c
+.tbss           0x0000000020001110        0x0 load address 0x00000000100060ec
                 0x0000000020001110                . = ALIGN (0x4)
                 0x0000000020001110                __bss_start__ = .
                 0x0000000020001110                __tls_base = .
@@ -3538,7 +3539,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.tcommon)
                 0x0000000020001110                __tls_end = .
 
-.bss            0x0000000020001110     0x1070 load address 0x0000000010005c3c
+.bss            0x0000000020001110     0x1070 load address 0x00000000100060ec
                 0x0000000020001110                . = ALIGN (0x4)
                 0x0000000020001110                __tbss_end = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -3653,7 +3654,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020002180                . = ALIGN (0x4)
                 0x0000000020002180                __bss_end__ = .
 
-.heap           0x0000000020002180    0x3de80 load address 0x0000000010005c3c
+.heap           0x0000000020002180    0x3de80 load address 0x00000000100060ec
                 0x0000000020002180                __end__ = .
                 0x0000000020002180                end = __end__
  *(.heap*)
@@ -3662,19 +3663,19 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *fill*         0x0000000020002980    0x3d680 
                 0x0000000020040000                __HeapLimit = .
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010005c3c
+.scratch_x      0x0000000020040000        0x0 load address 0x00000000100060ec
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010005c3c                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x00000000100060ec                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010005c3c
+.scratch_y      0x0000000020041000        0x0 load address 0x00000000100060ec
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010005c3c                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x00000000100060ec                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -3683,9 +3684,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 
-.flash_end      0x0000000010005c3c        0x0
+.flash_end      0x00000000100060ec        0x0
  *(.embedded_end_block*)
-                0x0000000010005c3c                PROVIDE (__flash_binary_end = .)
+                0x00000000100060ec                PROVIDE (__flash_binary_end = .)
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3782,7 +3783,7 @@ LOAD CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fi
 LOAD CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD ../lib/ili9341/libili9341_pico_driver.a
-LOAD /tmp/ccvwiwZ8.o
+LOAD /tmp/cc02iMDk.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3911,7 +3912,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000008ba       0x2c ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
  .ARM.attributes
-                0x00000000000008e6       0x22 /tmp/ccvwiwZ8.o
+                0x00000000000008e6       0x22 /tmp/cc02iMDk.o
  .ARM.attributes
                 0x0000000000000908       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -3968,7 +3969,7 @@ LOAD linker stubs
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000    0x307ec
+.debug_info     0x0000000000000000    0x33275
  .debug_info    0x0000000000000000      0x12b CMakeFiles/pockpet.dir/main.c.obj
  .debug_info    0x000000000000012b     0x24d4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_info    0x00000000000025ff      0x114 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -4019,11 +4020,11 @@ LOAD linker stubs
  .debug_info    0x0000000000029bdc     0x163c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_info    0x000000000002b218     0x28da CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_info    0x000000000002daf2     0x12b5 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_info    0x000000000002eda7     0x1931 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .debug_info    0x00000000000306d8       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_info    0x00000000000306fe       0xee /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_info    0x000000000002eda7     0x43ba ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_info    0x0000000000033161       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0000000000033187       0xee /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
 
-.debug_abbrev   0x0000000000000000     0x82b5
+.debug_abbrev   0x0000000000000000     0x82cf
  .debug_abbrev  0x0000000000000000       0xac CMakeFiles/pockpet.dir/main.c.obj
  .debug_abbrev  0x00000000000000ac      0x4b6 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_abbrev  0x0000000000000562       0x77 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -4074,11 +4075,11 @@ LOAD linker stubs
  .debug_abbrev  0x0000000000007408      0x43c CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_abbrev  0x0000000000007844      0x3f3 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_abbrev  0x0000000000007c37      0x306 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_abbrev  0x0000000000007f3d      0x2d5 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .debug_abbrev  0x0000000000008212       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_abbrev  0x0000000000008226       0x8f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_abbrev  0x0000000000007f3d      0x2ef ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_abbrev  0x000000000000822c       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000000000008240       0x8f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
 
-.debug_aranges  0x0000000000000000     0x15b0
+.debug_aranges  0x0000000000000000     0x15b8
  .debug_aranges
                 0x0000000000000000       0x20 CMakeFiles/pockpet.dir/main.c.obj
  .debug_aranges
@@ -4180,13 +4181,13 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000000014e8       0x68 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .debug_aranges
-                0x0000000000001550       0x20 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+                0x0000000000001550       0x28 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
  .debug_aranges
-                0x0000000000001570       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000001578       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .debug_aranges
-                0x0000000000001590       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+                0x0000000000001598       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
 
-.debug_ranges   0x0000000000000000     0xcd00
+.debug_ranges   0x0000000000000000     0xdd38
  .debug_ranges  0x0000000000000000       0x10 CMakeFiles/pockpet.dir/main.c.obj
  .debug_ranges  0x0000000000000010      0xd28 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_ranges  0x0000000000000d38       0x10 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -4234,9 +4235,9 @@ LOAD linker stubs
  .debug_ranges  0x000000000000b798      0x278 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_ranges  0x000000000000ba10      0x658 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_ranges  0x000000000000c068      0x660 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_ranges  0x000000000000c6c8      0x638 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_ranges  0x000000000000c6c8     0x1670 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
 
-.debug_line     0x0000000000000000    0x207b0
+.debug_line     0x0000000000000000    0x2209a
  .debug_line    0x0000000000000000      0x139 CMakeFiles/pockpet.dir/main.c.obj
  .debug_line    0x0000000000000139     0x1c0d CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_line    0x0000000000001d46      0x1b1 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -4287,11 +4288,11 @@ LOAD linker stubs
  .debug_line    0x000000000001c4f1      0xc30 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_line    0x000000000001d121     0x1559 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_line    0x000000000001e67a     0x1276 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_line    0x000000000001f8f0      0xcee ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .debug_line    0x00000000000205de       0x60 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_line    0x000000000002063e      0x172 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_line    0x000000000001f8f0     0x25d8 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_line    0x0000000000021ec8       0x60 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0000000000021f28      0x172 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
 
-.debug_str      0x0000000000000000     0x8525
+.debug_str      0x0000000000000000     0x8536
  .debug_str     0x0000000000000000      0x16d CMakeFiles/pockpet.dir/main.c.obj
                                         0x1b0 (size before relaxing)
  .debug_str     0x000000000000016d      0xa50 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -4392,13 +4393,13 @@ LOAD linker stubs
                                         0x5e1 (size before relaxing)
  .debug_str     0x0000000000007d42      0x243 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
                                         0x6eb (size before relaxing)
- .debug_str     0x0000000000007f85      0x3de ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
-                                        0x9db (size before relaxing)
- .debug_str     0x0000000000008363       0xa6 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_str     0x0000000000008409      0x11c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_str     0x0000000000007f85      0x3ef ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+                                        0x9ec (size before relaxing)
+ .debug_str     0x0000000000008374       0xa6 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x000000000000841a      0x11c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
                                         0x1c5 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x2f40
+.debug_frame    0x0000000000000000     0x2f68
  .debug_frame   0x0000000000000000       0x28 CMakeFiles/pockpet.dir/main.c.obj
  .debug_frame   0x0000000000000028      0x330 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_frame   0x0000000000000358       0x20 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -4440,10 +4441,10 @@ LOAD linker stubs
  .debug_frame   0x0000000000002984      0x1d4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_frame   0x0000000000002b58      0x220 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_frame   0x0000000000002d78      0x164 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_frame   0x0000000000002edc       0x3c ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .debug_frame   0x0000000000002f18       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_frame   0x0000000000002edc       0x64 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_frame   0x0000000000002f40       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
 
-.debug_loc      0x0000000000000000    0x269f8
+.debug_loc      0x0000000000000000    0x28a7d
  .debug_loc     0x0000000000000000     0x2956 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_loc     0x0000000000002956       0x73 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
  .debug_loc     0x00000000000029c9      0x6c7 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
@@ -4483,5 +4484,5 @@ LOAD linker stubs
  .debug_loc     0x00000000000206c7     0x10e2 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_loc     0x00000000000217a9     0x3187 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_loc     0x0000000000024930     0x10f4 CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .debug_loc     0x0000000000025a24      0xf44 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
- .debug_loc     0x0000000000026968       0x90 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_loc     0x0000000000025a24     0x2fc9 ../lib/ili9341/libili9341_pico_driver.a(ili9341.c.obj)
+ .debug_loc     0x00000000000289ed       0x90 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
