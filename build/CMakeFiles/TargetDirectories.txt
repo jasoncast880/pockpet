@@ -39,6 +39,8 @@
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/edit_cache.dir
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir
+/home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir
+/home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolBuild.dir
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir
 /home/plebish/pockpet_v2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/edit_cache.dir
@@ -194,6 +196,9 @@
 /home/plebish/pockpet_v2/build/src/CMakeFiles/pockpet.dir
 /home/plebish/pockpet_v2/build/src/CMakeFiles/edit_cache.dir
 /home/plebish/pockpet_v2/build/src/CMakeFiles/rebuild_cache.dir
+/home/plebish/pockpet_v2/build/src/assets/CMakeFiles/assets.dir
+/home/plebish/pockpet_v2/build/src/assets/CMakeFiles/edit_cache.dir
+/home/plebish/pockpet_v2/build/src/assets/CMakeFiles/rebuild_cache.dir
 /home/plebish/pockpet_v2/build/lib/CMakeFiles/edit_cache.dir
 /home/plebish/pockpet_v2/build/lib/CMakeFiles/rebuild_cache.dir
 /home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir

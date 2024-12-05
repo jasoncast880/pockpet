@@ -1,3 +1,6 @@
+#ifndef ILI9341_H
+#define ILI9341_H
+
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/gpio.h"
@@ -5,11 +8,12 @@
 /*
  * ili9341 shouuld control all of the reg hardware assignments and 
  * be an abstraction layer for all low level writes and commands..
- * although i will be writing app code in c
  * the driver should have a setup that can later be integrated into cpp
  */
 
-#pragma once
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 //gp defines; 
 //
@@ -91,20 +95,25 @@ extern int8_t _ILI9341_MISO;
 #define _SCLK_SPI_FUNC gpio_set_function(_ILI9341_SCLK, GPIO_FUNC_SPI)
 #define _MOSI_SPI_FUNC gpio_set_function(_ILI9341_MOSI, GPIO_FUNC_SPI)
 
-//internal funcs
-static void ili9341_writeCommand(uint8_t commandByte);
-static void ili9341_writeData(uint8_t dataByte);
-static void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
 
+//internal funcs
 static void ili9341_hard_reset();
-                                  
 static void ili9341_init_sub_pwr(); 
 static void ili9341_init_sub_vram(); 
+//
 
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso);
 
-uint16_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
+void ili9341_writeCommand(uint8_t commandByte);
+void ili9341_writeData(uint8_t dataByte);
+void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
+void ili9341_writeData16Buffer(uint16_t* dataBuf, size_t len);
 
-// utility functions
-void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
-void ili9341_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
+uint32_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
+void ili9341_setVertScroll(uint16_t x0, uint16_t y0);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif //ILI9341_H

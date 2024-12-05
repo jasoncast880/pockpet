@@ -1,4 +1,4 @@
-file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c")
+file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/ili9341.c")
 #file(GLOB HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
 
 add_library(ili9341_pico_driver STATIC
@@ -11,6 +11,6 @@ target_link_libraries(ili9341_pico_driver
 )
 
 target_include_directories(ili9341_pico_driver PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/ili9341.h
 )
 
