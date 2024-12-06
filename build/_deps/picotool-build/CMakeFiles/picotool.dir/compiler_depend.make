@@ -779,7 +779,7 @@ CMakeFiles/picotool.dir/main.cpp.o: /home/plebish/pockpet_v2/build/_deps/picotoo
   /home/plebish/pockpet_v2/build/_deps/picotool-src/elf/addresses.h \
   /home/plebish/pockpet_v2/build/_deps/picotool-src/bintool/metadata.h \
   /home/plebish/pockpet_v2/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
-  /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
+  /home/plebish/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h \
   /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
   /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
   /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
@@ -1569,8 +1569,6 @@ data_locs.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
-/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h:
-
 /usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
@@ -1822,6 +1820,8 @@ data_locs.cpp:
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
+
+/home/plebish/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h:
 
 /usr/include/c++/11/bits/exception.h:
 

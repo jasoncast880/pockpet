@@ -32,12 +32,12 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "/usr/bin/git"  checkout 2.0.0 --
+  COMMAND "/usr/bin/git"  checkout develop --
   WORKING_DIRECTORY "/home/plebish/pockpet_v2/build/_deps/picotool-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: '2.0.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'develop'")
 endif()
 
 set(init_submodules TRUE)

@@ -97,6 +97,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/plebish/pockpet_v2/build/_deps/picotool-build/boot_picoboot_headers/cmake_install.cmake")
   include("/home/plebish/pockpet_v2/build/_deps/picotool-build/boot_picobin_headers/cmake_install.cmake")
   include("/home/plebish/pockpet_v2/build/_deps/picotool-build/pico_usb_reset_interface_headers/cmake_install.cmake")
+  include("/home/plebish/pockpet_v2/build/_deps/picotool-build/boot_bootrom_headers/cmake_install.cmake")
   include("/home/plebish/pockpet_v2/build/_deps/picotool-build/pico_platform/cmake_install.cmake")
 
 endif()

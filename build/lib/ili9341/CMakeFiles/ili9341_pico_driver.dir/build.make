@@ -69,11 +69,11 @@ include lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/progress.make
 # Include the compile flags for this target's objects.
 include lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj: ../lib/ili9341/src/ili9341.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj -c /home/plebish/pockpet_v2/lib/ili9341/src/ili9341.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o: ../lib/ili9341/src/ili9341.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o -MF CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o -c /home/plebish/pockpet_v2/lib/ili9341/src/ili9341.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.i"
@@ -83,11 +83,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pockpet_v2/lib/ili9341/src/ili9341.c -o CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
@@ -97,11 +97,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i"
@@ -111,11 +111,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj -c /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o -c /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i"
@@ -125,11 +125,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i"
@@ -139,11 +139,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj -c /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o -c /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i"
@@ -153,11 +153,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/hardware_claim/claim.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i"
@@ -167,11 +167,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i"
@@ -181,11 +181,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i"
@@ -195,10 +195,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o   -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i"
@@ -208,11 +208,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/sem.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/sem.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: /home/plebish/pico-sdk/src/common/pico_sync/sem.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/sem.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i"
@@ -222,11 +222,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/sem.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i"
@@ -236,11 +236,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i"
@@ -250,11 +250,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/mutex.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i"
@@ -264,11 +264,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: /home/plebish/pico-sdk/src/common/pico_time/time.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj -c /home/plebish/pico-sdk/src/common/pico_time/time.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: /home/plebish/pico-sdk/src/common/pico_time/time.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o -c /home/plebish/pico-sdk/src/common/pico_time/time.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i"
@@ -278,11 +278,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_time/time.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj -c /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o -c /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i"
@@ -292,11 +292,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i"
@@ -306,11 +306,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: /home/plebish/pico-sdk/src/common/pico_util/datetime.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/datetime.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: /home/plebish/pico-sdk/src/common/pico_util/datetime.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o -c /home/plebish/pico-sdk/src/common/pico_util/datetime.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i"
@@ -320,11 +320,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/datetime.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: /home/plebish/pico-sdk/src/common/pico_util/pheap.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/pheap.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: /home/plebish/pico-sdk/src/common/pico_util/pheap.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o -c /home/plebish/pico-sdk/src/common/pico_util/pheap.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i"
@@ -334,11 +334,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/pheap.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: /home/plebish/pico-sdk/src/common/pico_util/queue.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/queue.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: /home/plebish/pico-sdk/src/common/pico_util/queue.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o -c /home/plebish/pico-sdk/src/common/pico_util/queue.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i"
@@ -348,11 +348,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/queue.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i"
@@ -362,11 +362,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i"
@@ -376,11 +376,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i"
@@ -390,11 +390,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i"
@@ -404,11 +404,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i"
@@ -418,11 +418,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i"
@@ -432,107 +432,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
-
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i"
@@ -542,11 +446,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i"
@@ -556,11 +460,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i"
@@ -570,10 +474,120 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o   -c /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
+
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i"
@@ -583,10 +597,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i"
@@ -596,11 +610,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i"
@@ -610,11 +624,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i"
@@ -624,10 +638,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i"
@@ -637,10 +651,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i"
@@ -650,10 +664,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i"
@@ -663,11 +677,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i"
@@ -677,11 +691,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i"
@@ -691,10 +705,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i"
@@ -704,11 +718,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i"
@@ -718,10 +732,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i"
@@ -731,11 +745,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i"
@@ -745,11 +759,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i"
@@ -759,11 +773,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i"
@@ -773,11 +787,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i"
@@ -787,10 +801,10 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building ASM object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i"
@@ -800,11 +814,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i"
@@ -814,11 +828,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i"
@@ -828,11 +842,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i"
@@ -842,11 +856,11 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
-lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
-	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/flags.make
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
+lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	cd /home/plebish/pockpet_v2/build/lib/ili9341 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
@@ -858,128 +872,130 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
 
 # Object files for target ili9341_pico_driver
 ili9341_pico_driver_OBJECTS = \
-"CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
-"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+"CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" \
+"CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 
 # External object files for target ili9341_pico_driver
 ili9341_pico_driver_EXTERNAL_OBJECTS =
 
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make
 lib/ili9341/libili9341_pico_driver.a: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 lib/ili9341/libili9341_pico_driver.a: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking CXX static library libili9341_pico_driver.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking CXX static library libili9341_pico_driver.a"
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && $(CMAKE_COMMAND) -P CMakeFiles/ili9341_pico_driver.dir/cmake_clean_target.cmake
 	cd /home/plebish/pockpet_v2/build/lib/ili9341 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ili9341_pico_driver.dir/link.txt --verbose=$(VERBOSE)
 

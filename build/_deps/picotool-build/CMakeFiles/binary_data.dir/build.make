@@ -65,6 +65,10 @@ include CMakeFiles/binary_data.dir/compiler_depend.make
 
 CMakeFiles/binary_data: rp2350.rom.h
 CMakeFiles/binary_data: xip_ram_perms_elf.h
+CMakeFiles/binary_data: flash_id_bin.h
+
+flash_id_bin.h: flash_id
+	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=flash_id_bin -P /home/plebish/pockpet_v2/build/_deps/picotool-src/cmake/binh.cmake
 
 rp2350.rom.h:
 	/usr/bin/cmake -D BINARY_FILE=/home/plebish/pockpet_v2/build/_deps/picotool-src/bootrom.end.bin -D OUTPUT_NAME=rp2350.rom -P /home/plebish/pockpet_v2/build/_deps/picotool-src/cmake/binh.cmake
@@ -73,6 +77,7 @@ xip_ram_perms_elf.h: /home/plebish/pockpet_v2/build/_deps/picotool-src/xip_ram_p
 	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=xip_ram_perms_elf -P /home/plebish/pockpet_v2/build/_deps/picotool-src/cmake/binh.cmake
 
 binary_data: CMakeFiles/binary_data
+binary_data: flash_id_bin.h
 binary_data: rp2350.rom.h
 binary_data: xip_ram_perms_elf.h
 binary_data: CMakeFiles/binary_data.dir/build.make

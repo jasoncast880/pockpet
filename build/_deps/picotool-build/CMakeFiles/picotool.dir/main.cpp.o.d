@@ -289,7 +289,7 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /home/plebish/pockpet_v2/build/_deps/picotool-src/elf/addresses.h \
  /home/plebish/pockpet_v2/build/_deps/picotool-src/bintool/metadata.h \
  /home/plebish/pockpet_v2/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
- /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
+ /home/plebish/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h \
  /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
  /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
  /home/plebish/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \

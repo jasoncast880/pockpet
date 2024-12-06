@@ -143,17 +143,17 @@ bs2_default_bin/fast:
 .PHONY : bs2_default_bin/fast
 
 #=============================================================================
-# Target rules for targets named bs2_default_padded_checksummed_asm
+# Target rules for targets named bs2_default_library
 
 # Build rule for target.
-bs2_default_padded_checksummed_asm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_padded_checksummed_asm
-.PHONY : bs2_default_padded_checksummed_asm
+bs2_default_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_library
+.PHONY : bs2_default_library
 
 # fast build rule for target.
-bs2_default_padded_checksummed_asm/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
-.PHONY : bs2_default_padded_checksummed_asm/fast
+bs2_default_library/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
+.PHONY : bs2_default_library/fast
 
 #=============================================================================
 # Target rules for targets named pioasmBuild
@@ -216,10 +216,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
-	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pioasmBuild"
 	@echo "... bs2_default"
+	@echo "... bs2_default_library"
 	@echo "... ili9341_pico_driver"
 	@echo "... pockpet"
 .PHONY : help

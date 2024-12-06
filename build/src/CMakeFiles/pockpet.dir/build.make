@@ -69,11 +69,11 @@ include src/CMakeFiles/pockpet.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/pockpet.dir/flags.make
 
-src/CMakeFiles/pockpet.dir/main.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/main.c.obj: ../src/main.c
-src/CMakeFiles/pockpet.dir/main.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/pockpet.dir/main.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/main.c.obj -MF CMakeFiles/pockpet.dir/main.c.obj.d -o CMakeFiles/pockpet.dir/main.c.obj -c /home/plebish/pockpet_v2/src/main.c
+src/CMakeFiles/pockpet.dir/main.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/main.c.o: ../src/main.c
+src/CMakeFiles/pockpet.dir/main.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/pockpet.dir/main.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/main.c.o -MF CMakeFiles/pockpet.dir/main.c.o.d -o CMakeFiles/pockpet.dir/main.c.o -c /home/plebish/pockpet_v2/src/main.c
 
 src/CMakeFiles/pockpet.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/main.c.i"
@@ -83,11 +83,11 @@ src/CMakeFiles/pockpet.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/main.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pockpet_v2/src/main.c -o CMakeFiles/pockpet.dir/main.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
@@ -97,11 +97,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i"
@@ -111,11 +111,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj -c /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o -c /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i"
@@ -125,11 +125,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platfo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i"
@@ -139,11 +139,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_pa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj -c /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o -c /home/plebish/pico-sdk/src/common/hardware_claim/claim.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i"
@@ -153,11 +153,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/hardware_claim/claim.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i"
@@ -167,11 +167,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sy
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i"
@@ -181,11 +181,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_sp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i"
@@ -195,10 +195,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o   -c /home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i"
@@ -208,11 +208,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/sem.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/sem.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: /home/plebish/pico-sdk/src/common/pico_sync/sem.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/sem.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i"
@@ -222,11 +222,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/sem.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i"
@@ -236,11 +236,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/lock_core.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/mutex.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i"
@@ -250,11 +250,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/mutex.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj -c /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o -c /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i"
@@ -264,11 +264,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_sync/critical_section.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: /home/plebish/pico-sdk/src/common/pico_time/time.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj -c /home/plebish/pico-sdk/src/common/pico_time/time.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: /home/plebish/pico-sdk/src/common/pico_time/time.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o -c /home/plebish/pico-sdk/src/common/pico_time/time.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i"
@@ -278,11 +278,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_time/time.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj -c /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o -c /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i"
@@ -292,11 +292,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_he
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i"
@@ -306,11 +306,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: /home/plebish/pico-sdk/src/common/pico_util/datetime.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/datetime.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: /home/plebish/pico-sdk/src/common/pico_util/datetime.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o -c /home/plebish/pico-sdk/src/common/pico_util/datetime.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i"
@@ -320,11 +320,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/datetime.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: /home/plebish/pico-sdk/src/common/pico_util/pheap.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/pheap.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: /home/plebish/pico-sdk/src/common/pico_util/pheap.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o -c /home/plebish/pico-sdk/src/common/pico_util/pheap.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i"
@@ -334,11 +334,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/pheap.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: /home/plebish/pico-sdk/src/common/pico_util/queue.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj -c /home/plebish/pico-sdk/src/common/pico_util/queue.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: /home/plebish/pico-sdk/src/common/pico_util/queue.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o -c /home/plebish/pico-sdk/src/common/pico_util/queue.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i"
@@ -348,11 +348,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/common/pico_util/queue.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i"
@@ -362,11 +362,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/ua
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i"
@@ -376,11 +376,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i"
@@ -390,11 +390,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i"
@@ -404,11 +404,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i"
@@ -418,11 +418,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i"
@@ -432,107 +432,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
-
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i"
@@ -542,11 +446,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/boo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i"
@@ -556,11 +460,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/boo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i"
@@ -570,10 +474,120 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o   -c /home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i"
@@ -583,10 +597,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/div
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i"
@@ -596,11 +610,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/doub
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i"
@@ -610,11 +624,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/doub
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i"
@@ -624,10 +638,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/doub
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i"
@@ -637,10 +651,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/doub
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i"
@@ -650,10 +664,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/p
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i"
@@ -663,11 +677,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i"
@@ -677,11 +691,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i"
@@ -691,10 +705,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i"
@@ -704,11 +718,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i"
@@ -718,10 +732,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/mall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i"
@@ -731,11 +745,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i"
@@ -745,11 +759,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atom
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i"
@@ -759,11 +773,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i"
@@ -773,11 +787,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_bi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i"
@@ -787,10 +801,10 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/prin
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj   -c /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building ASM object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i"
@@ -800,11 +814,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_ASM_CREATE_ASSEMBLY_SOURCE
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i"
@@ -814,11 +828,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interf
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i"
@@ -828,11 +842,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i"
@@ -842,11 +856,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i"
@@ -856,11 +870,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i"
@@ -870,11 +884,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i"
@@ -884,11 +898,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/u
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i"
@@ -898,11 +912,25 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c > CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i"
@@ -912,11 +940,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspbe
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i"
@@ -926,11 +954,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspbe
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i"
@@ -940,11 +968,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i"
@@ -954,11 +982,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_con
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i"
@@ -968,11 +996,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/aud
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i"
@@ -982,11 +1010,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i"
@@ -996,11 +1024,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i"
@@ -1010,11 +1038,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i"
@@ -1024,11 +1052,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i"
@@ -1038,11 +1066,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i"
@@ -1052,11 +1080,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i"
@@ -1066,11 +1094,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i"
@@ -1080,11 +1108,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i"
@@ -1094,11 +1122,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/us
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i"
@@ -1108,11 +1136,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/ve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i"
@@ -1122,11 +1150,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/vid
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/tusb.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/tusb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/tusb.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/tusb.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i"
@@ -1136,11 +1164,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/tusb.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: /home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -c /home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i"
@@ -1150,11 +1178,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fif
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: /home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -c /home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i"
@@ -1164,11 +1192,11 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s"
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: src/CMakeFiles/pockpet.dir/flags.make
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
-src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: src/CMakeFiles/pockpet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
-	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: src/CMakeFiles/pockpet.dir/flags.make
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
+src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: src/CMakeFiles/pockpet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
@@ -1180,182 +1208,186 @@ src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi
 
 # Object files for target pockpet
 pockpet_OBJECTS = \
-"CMakeFiles/pockpet.dir/main.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
-"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+"CMakeFiles/pockpet.dir/main.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
+"CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 
 # External object files for target pockpet
 pockpet_EXTERNAL_OBJECTS =
 
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/main.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/main.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+src/pockpet.elf: src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 src/pockpet.elf: src/CMakeFiles/pockpet.dir/build.make
+src/pockpet.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
 src/pockpet.elf: lib/ili9341/libili9341_pico_driver.a
-src/pockpet.elf: pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
 src/pockpet.elf: /home/plebish/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 src/pockpet.elf: src/CMakeFiles/pockpet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Linking CXX executable pockpet.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/plebish/pockpet_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Linking CXX executable pockpet.elf"
 	cd /home/plebish/pockpet_v2/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pockpet.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-objdump -h /home/plebish/pockpet_v2/build/src/pockpet.elf > pockpet.dis
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-objdump -d /home/plebish/pockpet_v2/build/src/pockpet.elf >> pockpet.dis
-	cd /home/plebish/pockpet_v2/build/src && ../_deps/picotool/picotool coprodis --quiet pockpet.dis pockpet.dis || /usr/bin/cmake -E echo "WARNING: Disassembly is not correct"
+	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-objcopy -Oihex /home/plebish/pockpet_v2/build/src/pockpet.elf pockpet.hex
 	cd /home/plebish/pockpet_v2/build/src && /usr/bin/arm-none-eabi-objcopy -Obinary /home/plebish/pockpet_v2/build/src/pockpet.elf pockpet.bin
-	cd /home/plebish/pockpet_v2/build/src && ../_deps/picotool/picotool uf2 convert --quiet /home/plebish/pockpet_v2/build/src/pockpet.elf pockpet.uf2 --family rp2040 --abs-block
+	cd /home/plebish/pockpet_v2/build/src && ../_deps/picotool/picotool uf2 convert --quiet /home/plebish/pockpet_v2/build/src/pockpet.elf pockpet.uf2 --family rp2040
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/pockpet.dir/build: src/pockpet.elf

@@ -130,13 +130,13 @@ ili9341_pico_driver/fast:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build
 .PHONY : ili9341_pico_driver/fast
 
-home/plebish/pico-sdk/src/common/hardware_claim/claim.obj: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.obj
+home/plebish/pico-sdk/src/common/hardware_claim/claim.o: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.obj
+home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
 
 home/plebish/pico-sdk/src/common/hardware_claim/claim.i: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.i
@@ -154,13 +154,13 @@ home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 
-home/plebish/pico-sdk/src/common/pico_sync/critical_section.obj: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.obj
+home/plebish/pico-sdk/src/common/pico_sync/critical_section.o: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.obj
+home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.i: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.i
@@ -178,13 +178,13 @@ home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-home/plebish/pico-sdk/src/common/pico_sync/lock_core.obj: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.obj
+home/plebish/pico-sdk/src/common/pico_sync/lock_core.o: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.obj
+home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.i: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.i
@@ -202,13 +202,13 @@ home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-home/plebish/pico-sdk/src/common/pico_sync/mutex.obj: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.obj
+home/plebish/pico-sdk/src/common/pico_sync/mutex.o: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.obj
+home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/mutex.i: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.i
@@ -226,13 +226,13 @@ home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 
-home/plebish/pico-sdk/src/common/pico_sync/sem.obj: home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.obj
+home/plebish/pico-sdk/src/common/pico_sync/sem.o: home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.obj
+home/plebish/pico-sdk/src/common/pico_sync/sem.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/sem.i: home/plebish/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.i
@@ -250,13 +250,13 @@ home/plebish/pico-sdk/src/common/pico_sync/sem.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 
-home/plebish/pico-sdk/src/common/pico_time/time.obj: home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_time/time.obj
+home/plebish/pico-sdk/src/common/pico_time/time.o: home/plebish/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_time/time.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_time/time.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.obj
+home/plebish/pico-sdk/src/common/pico_time/time.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.o
 
 home/plebish/pico-sdk/src/common/pico_time/time.i: home/plebish/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/time.i
@@ -274,13 +274,13 @@ home/plebish/pico-sdk/src/common/pico_time/time.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.s
 
-home/plebish/pico-sdk/src/common/pico_time/timeout_helper.obj: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.obj
+home/plebish/pico-sdk/src/common/pico_time/timeout_helper.o: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.i: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.i
@@ -298,13 +298,13 @@ home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-home/plebish/pico-sdk/src/common/pico_util/datetime.obj: home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.obj
+home/plebish/pico-sdk/src/common/pico_util/datetime.o: home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.obj
+home/plebish/pico-sdk/src/common/pico_util/datetime.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/datetime.i: home/plebish/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.i
@@ -322,13 +322,13 @@ home/plebish/pico-sdk/src/common/pico_util/datetime.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 
-home/plebish/pico-sdk/src/common/pico_util/pheap.obj: home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.obj
+home/plebish/pico-sdk/src/common/pico_util/pheap.o: home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.obj
+home/plebish/pico-sdk/src/common/pico_util/pheap.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/pheap.i: home/plebish/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.i
@@ -346,13 +346,13 @@ home/plebish/pico-sdk/src/common/pico_util/pheap.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 
-home/plebish/pico-sdk/src/common/pico_util/queue.obj: home/plebish/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.obj
+home/plebish/pico-sdk/src/common/pico_util/queue.o: home/plebish/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/common/pico_util/queue.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.obj
+home/plebish/pico-sdk/src/common/pico_util/queue.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/queue.i: home/plebish/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.i
@@ -370,13 +370,13 @@ home/plebish/pico-sdk/src/common/pico_util/queue.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 
-home/plebish/pico-sdk/src/rp2040/pico_platform/platform.obj: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.obj
+home/plebish/pico-sdk/src/rp2040/pico_platform/platform.o: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
 
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.i: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.i
@@ -394,13 +394,13 @@ home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i
@@ -418,13 +418,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
@@ -442,21 +442,21 @@ home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
-home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
@@ -474,13 +474,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i
@@ -498,21 +498,21 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
-home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i
@@ -530,13 +530,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.i
@@ -554,13 +554,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.i
@@ -578,13 +578,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i
@@ -602,13 +602,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.i
@@ -626,13 +626,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.i
@@ -650,13 +650,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.i
@@ -674,13 +674,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
@@ -698,13 +698,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
@@ -722,13 +722,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
@@ -746,13 +746,13 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.obj
+home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.i
@@ -770,21 +770,21 @@ home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
@@ -802,13 +802,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i
@@ -826,13 +826,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj
+home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
@@ -850,21 +850,21 @@ home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.obj
+home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj
+home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i
@@ -882,29 +882,29 @@ home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj
+home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj
-
-# target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i
@@ -922,13 +922,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.i: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.i
@@ -946,29 +946,53 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj
-
-# target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.o: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.i: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.i
+
+# target to preprocess a source file
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.s: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.s
+
+# target to generate assembly for a file
+home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
@@ -986,13 +1010,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.obj
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.i: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.i
@@ -1010,29 +1034,29 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
-
-# target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-
-home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.obj
+home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+
+home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.o
+
+# target to build an object file
+home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.i
@@ -1050,21 +1074,21 @@ home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
+home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 
-home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj
+home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.i
@@ -1082,13 +1106,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.obj
+home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.o: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i
@@ -1106,13 +1130,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i
@@ -1130,13 +1154,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i
@@ -1154,13 +1178,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i
@@ -1178,13 +1202,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i
@@ -1202,13 +1226,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj
+home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i
@@ -1226,13 +1250,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_i
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.i
@@ -1250,13 +1274,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
@@ -1274,13 +1298,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
-home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
 
 # target to build an object file
-home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
@@ -1298,13 +1322,13 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-src/ili9341.obj: src/ili9341.c.obj
-.PHONY : src/ili9341.obj
+src/ili9341.o: src/ili9341.c.o
+.PHONY : src/ili9341.o
 
 # target to build an object file
-src/ili9341.c.obj:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.obj
-.PHONY : src/ili9341.c.obj
+src/ili9341.c.o:
+	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o
+.PHONY : src/ili9341.c.o
 
 src/ili9341.i: src/ili9341.c.i
 .PHONY : src/ili9341.i
@@ -1331,153 +1355,156 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ili9341_pico_driver"
-	@echo "... home/plebish/pico-sdk/src/common/hardware_claim/claim.obj"
+	@echo "... home/plebish/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... home/plebish/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/plebish/pico-sdk/src/common/hardware_claim/claim.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_sync/critical_section.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_sync/critical_section.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/critical_section.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_sync/lock_core.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_sync/lock_core.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/lock_core.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/lock_core.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_sync/mutex.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_sync/mutex.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/mutex.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/mutex.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_sync/sem.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_sync/sem.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/sem.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_sync/sem.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_time/time.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_time/time.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_time/time.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_time/time.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_time/timeout_helper.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_time/timeout_helper.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_time/timeout_helper.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_time/timeout_helper.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_util/datetime.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_util/datetime.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/datetime.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/datetime.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_util/pheap.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_util/pheap.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/pheap.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/pheap.s"
-	@echo "... home/plebish/pico-sdk/src/common/pico_util/queue.obj"
+	@echo "... home/plebish/pico-sdk/src/common/pico_util/queue.o"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... home/plebish/pico-sdk/src/common/pico_util/queue.s"
-	@echo "... home/plebish/pico-sdk/src/rp2040/pico_platform/platform.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2040/pico_platform/platform.o"
 	@echo "... home/plebish/pico-sdk/src/rp2040/pico_platform/platform.i"
 	@echo "... home/plebish/pico-sdk/src/rp2040/pico_platform/platform.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.i"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.s"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
-	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
+	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... src/ili9341.obj"
+	@echo "... src/ili9341.o"
 	@echo "... src/ili9341.i"
 	@echo "... src/ili9341.s"
 .PHONY : help
