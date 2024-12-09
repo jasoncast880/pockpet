@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild-complete.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild-complete.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-build.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-configure.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-download.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-install.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch.rule"
 		},
 		{
-			"file" : "/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule"
+			"file" : "/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-update.rule"
 		}
 	],
 	"target" : 

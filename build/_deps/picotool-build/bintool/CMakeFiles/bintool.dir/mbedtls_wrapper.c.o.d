@@ -1,7 +1,7 @@
 bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/bintool/mbedtls_wrapper.c \
+ /home/plebish/ampalaya/build/_deps/picotool-src/bintool/mbedtls_wrapper.c \
  /usr/include/stdc-predef.h \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
+ /home/plebish/ampalaya/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

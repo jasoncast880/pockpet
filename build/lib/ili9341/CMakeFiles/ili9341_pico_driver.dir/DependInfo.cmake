@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
-  "/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/plebish/pockpet_v2/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+  "/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
   )
 
 # Preprocessor definitions for this target.
@@ -181,7 +181,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d"
   "/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o.d"
   "/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d"
-  "/home/plebish/pockpet_v2/lib/ili9341/src/ili9341.c" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o.d"
+  "/home/plebish/ampalaya/lib/ili9341/src/ili9341.c" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o.d"
   "/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   )
 

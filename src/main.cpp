@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#include "assets/bgrDemo.h"
+#include "bgrDemo.h"
 #include "ili9341.h"
 
 //serves as a testbench for the things
@@ -19,4 +19,3 @@ int main() {
     ili9341_writeCommand(NOOP);
 
 }
-

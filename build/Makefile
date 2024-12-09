@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/plebish/pockpet_v2
+CMAKE_SOURCE_DIR = /home/plebish/ampalaya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/plebish/pockpet_v2/build
+CMAKE_BINARY_DIR = /home/plebish/ampalaya/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/pockpet_v2/build/CMakeFiles /home/plebish/pockpet_v2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles /home/plebish/ampalaya/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/pockpet_v2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -182,17 +182,17 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named pockpet
+# Target rules for targets named ampalaya
 
 # Build rule for target.
-pockpet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pockpet
-.PHONY : pockpet
+ampalaya: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ampalaya
+.PHONY : ampalaya
 
 # fast build rule for target.
-pockpet/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/build
-.PHONY : pockpet/fast
+ampalaya/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/build
+.PHONY : ampalaya/fast
 
 #=============================================================================
 # Target rules for targets named ili9341_pico_driver
@@ -218,10 +218,10 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pioasmBuild"
+	@echo "... ampalaya"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
 	@echo "... ili9341_pico_driver"
-	@echo "... pockpet"
 .PHONY : help
 
 

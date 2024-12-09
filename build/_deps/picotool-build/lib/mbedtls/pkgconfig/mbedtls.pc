@@ -1,4 +1,4 @@
-prefix=/home/plebish/pockpet_v2/build/_deps
+prefix=/home/plebish/ampalaya/build/_deps
 includedir=${prefix}/include
 libdir=${prefix}/lib
 

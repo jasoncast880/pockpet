@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/plebish/pockpet_v2/build/_deps/picotool-src
+CMAKE_SOURCE_DIR = /home/plebish/ampalaya/build/_deps/picotool-src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/plebish/pockpet_v2/build/_deps/picotool-build
+CMAKE_BINARY_DIR = /home/plebish/ampalaya/build/_deps/picotool-build
 
 # Utility rule file for lib.
 
@@ -76,10 +76,10 @@ lib/mbedtls/library/CMakeFiles/lib.dir/build: lib
 .PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/build
 
 lib/mbedtls/library/CMakeFiles/lib.dir/clean:
-	cd /home/plebish/pockpet_v2/build/_deps/picotool-build/lib/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
+	cd /home/plebish/ampalaya/build/_deps/picotool-build/lib/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
 .PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/clean
 
 lib/mbedtls/library/CMakeFiles/lib.dir/depend:
-	cd /home/plebish/pockpet_v2/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/plebish/pockpet_v2/build/_deps/picotool-src /home/plebish/pico-sdk/lib/mbedtls/library /home/plebish/pockpet_v2/build/_deps/picotool-build /home/plebish/pockpet_v2/build/_deps/picotool-build/lib/mbedtls/library /home/plebish/pockpet_v2/build/_deps/picotool-build/lib/mbedtls/library/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/plebish/ampalaya/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/plebish/ampalaya/build/_deps/picotool-src /home/plebish/pico-sdk/lib/mbedtls/library /home/plebish/ampalaya/build/_deps/picotool-build /home/plebish/ampalaya/build/_deps/picotool-build/lib/mbedtls/library /home/plebish/ampalaya/build/_deps/picotool-build/lib/mbedtls/library/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/depend
 

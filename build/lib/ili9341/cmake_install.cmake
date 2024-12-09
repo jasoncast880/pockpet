@@ -1,4 +1,4 @@
-# Install script for directory: /home/plebish/pockpet_v2/lib/ili9341
+# Install script for directory: /home/plebish/ampalaya/lib/ili9341
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

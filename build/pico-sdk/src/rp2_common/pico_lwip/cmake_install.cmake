@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/plebish/pockpet_v2/build/pico-sdk/src/rp2_common/pico_lwip/tools/cmake_install.cmake")
+  include("/home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_lwip/tools/cmake_install.cmake")
 endif()
 

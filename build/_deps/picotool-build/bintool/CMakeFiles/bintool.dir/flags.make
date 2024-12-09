@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DHAS_MBEDTLS=1 -DNO_PICO_PLATFORM=1
 
-C_INCLUDES = -I/home/plebish/pockpet_v2/build/_deps/picotool-src/bintool -I/home/plebish/pico-sdk/lib/mbedtls/include -I/home/plebish/pico-sdk/lib/mbedtls/3rdparty/everest/include -I/home/plebish/pockpet_v2/build/_deps/picotool-src/elf -I/home/plebish/pockpet_v2/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_picobin_headers/include
+C_INCLUDES = -I/home/plebish/ampalaya/build/_deps/picotool-src/bintool -I/home/plebish/pico-sdk/lib/mbedtls/include -I/home/plebish/pico-sdk/lib/mbedtls/3rdparty/everest/include -I/home/plebish/ampalaya/build/_deps/picotool-src/elf -I/home/plebish/ampalaya/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_picobin_headers/include
 
-C_FLAGS = -O3 -DNDEBUG -I/home/plebish/pockpet_v2/build/_deps/picotool-src/lib/include
+C_FLAGS = -O3 -DNDEBUG -I/home/plebish/ampalaya/build/_deps/picotool-src/lib/include
 
 CXX_DEFINES = -DHAS_MBEDTLS=1 -DNO_PICO_PLATFORM=1
 
-CXX_INCLUDES = -I/home/plebish/pockpet_v2/build/_deps/picotool-src/bintool -I/home/plebish/pico-sdk/lib/mbedtls/include -I/home/plebish/pico-sdk/lib/mbedtls/3rdparty/everest/include -I/home/plebish/pockpet_v2/build/_deps/picotool-src/elf -I/home/plebish/pockpet_v2/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_picobin_headers/include
+CXX_INCLUDES = -I/home/plebish/ampalaya/build/_deps/picotool-src/bintool -I/home/plebish/pico-sdk/lib/mbedtls/include -I/home/plebish/pico-sdk/lib/mbedtls/3rdparty/everest/include -I/home/plebish/ampalaya/build/_deps/picotool-src/elf -I/home/plebish/ampalaya/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_picobin_headers/include
 
-CXX_FLAGS = -O3 -DNDEBUG -I/home/plebish/pockpet_v2/build/_deps/picotool-src/lib/include -std=gnu++14
+CXX_FLAGS = -O3 -DNDEBUG -I/home/plebish/ampalaya/build/_deps/picotool-src/lib/include -std=gnu++14
 

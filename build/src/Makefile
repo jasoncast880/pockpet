@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/plebish/pockpet_v2
+CMAKE_SOURCE_DIR = /home/plebish/ampalaya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/plebish/pockpet_v2/build
+CMAKE_BINARY_DIR = /home/plebish/ampalaya/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/plebish/pockpet_v2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/pockpet_v2/build/CMakeFiles /home/plebish/pockpet_v2/build/src//CMakeFiles/progress.marks
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/pockpet_v2/build/CMakeFiles 0
+	cd /home/plebish/ampalaya/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles /home/plebish/ampalaya/build/src//CMakeFiles/progress.marks
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,39 +103,39 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/plebish/pockpet_v2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/plebish/ampalaya/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/pockpet.dir/rule:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/pockpet.dir/rule
-.PHONY : src/CMakeFiles/pockpet.dir/rule
+src/CMakeFiles/ampalaya.dir/rule:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ampalaya.dir/rule
+.PHONY : src/CMakeFiles/ampalaya.dir/rule
 
 # Convenience name for target.
-pockpet: src/CMakeFiles/pockpet.dir/rule
-.PHONY : pockpet
+ampalaya: src/CMakeFiles/ampalaya.dir/rule
+.PHONY : ampalaya
 
 # fast build rule for target.
-pockpet/fast:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/build
-.PHONY : pockpet/fast
+ampalaya/fast:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/build
+.PHONY : ampalaya/fast
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -143,7 +143,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/plebish/p
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -151,7 +151,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/plebish/p
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
@@ -159,7 +159,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -167,7 +167,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -175,7 +175,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
@@ -183,7 +183,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -191,7 +191,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -199,7 +199,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
@@ -207,7 +207,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/plebish/pi
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -215,7 +215,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/plebish/pi
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -223,7 +223,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/plebish/pi
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
@@ -231,7 +231,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -239,7 +239,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -247,7 +247,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
@@ -255,7 +255,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/plebish/pic
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -263,7 +263,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/plebish/pic
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -271,7 +271,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/plebish/pic
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
@@ -279,7 +279,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -287,7 +287,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -295,7 +295,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
@@ -303,7 +303,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/plebish
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -311,7 +311,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/plebish
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -319,7 +319,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/plebish
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
@@ -327,7 +327,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -335,7 +335,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -343,7 +343,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
@@ -351,7 +351,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/plebish
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -359,7 +359,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/plebish
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -367,7 +367,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/plebish
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
@@ -375,7 +375,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/plebish
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -383,7 +383,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/plebish
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -391,7 +391,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/plebish
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
@@ -399,7 +399,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/plebish/p
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -407,7 +407,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/plebish/p
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -415,7 +415,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/plebish/p
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
@@ -423,7 +423,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/plebish/pico-sdk/
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -431,7 +431,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/plebish/pico-sdk/
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -439,7 +439,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/plebish/pico-sdk/
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.o: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o
@@ -447,7 +447,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.o: home/plebish/pico-sdk/lib/t
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.i: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -455,7 +455,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.i: home/plebish/pico-sdk/lib/t
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.s: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -463,7 +463,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.s: home/plebish/pico-sdk/lib/t
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
@@ -471,7 +471,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -479,7 +479,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -487,7 +487,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
@@ -495,7 +495,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: 
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -503,7 +503,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: 
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -511,7 +511,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: 
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
@@ -519,7 +519,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: 
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -527,7 +527,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: 
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -535,7 +535,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: 
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.o: home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o
@@ -543,7 +543,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/tusb.o: home/plebish/pico-sdk/lib/tinyusb/
 
 # target to build an object file
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.o
 
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.i: home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -551,7 +551,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/tusb.i: home/plebish/pico-sdk/lib/tinyusb/
 
 # target to preprocess a source file
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.s: home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -559,7 +559,7 @@ home/plebish/pico-sdk/lib/tinyusb/src/tusb.s: home/plebish/pico-sdk/lib/tinyusb/
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/plebish/pico-sdk/src/common/hardware_claim/claim.o: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
@@ -567,7 +567,7 @@ home/plebish/pico-sdk/src/common/hardware_claim/claim.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.o
 
 home/plebish/pico-sdk/src/common/hardware_claim/claim.i: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i
@@ -575,7 +575,7 @@ home/plebish/pico-sdk/src/common/hardware_claim/claim.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.i
 
 home/plebish/pico-sdk/src/common/hardware_claim/claim.s: home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
@@ -583,7 +583,7 @@ home/plebish/pico-sdk/src/common/hardware_claim/claim.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/plebish/pico-sdk/src/common/hardware_claim/claim.c.s
 
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.o: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
@@ -591,7 +591,7 @@ home/plebish/pico-sdk/src/common/pico_sync/critical_section.o: home/plebish/pico
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.i: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -599,7 +599,7 @@ home/plebish/pico-sdk/src/common/pico_sync/critical_section.i: home/plebish/pico
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.s: home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -607,7 +607,7 @@ home/plebish/pico-sdk/src/common/pico_sync/critical_section.s: home/plebish/pico
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.o: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
@@ -615,7 +615,7 @@ home/plebish/pico-sdk/src/common/pico_sync/lock_core.o: home/plebish/pico-sdk/sr
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.i: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -623,7 +623,7 @@ home/plebish/pico-sdk/src/common/pico_sync/lock_core.i: home/plebish/pico-sdk/sr
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.s: home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -631,7 +631,7 @@ home/plebish/pico-sdk/src/common/pico_sync/lock_core.s: home/plebish/pico-sdk/sr
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/plebish/pico-sdk/src/common/pico_sync/mutex.o: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
@@ -639,7 +639,7 @@ home/plebish/pico-sdk/src/common/pico_sync/mutex.o: home/plebish/pico-sdk/src/co
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/mutex.i: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -647,7 +647,7 @@ home/plebish/pico-sdk/src/common/pico_sync/mutex.i: home/plebish/pico-sdk/src/co
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/plebish/pico-sdk/src/common/pico_sync/mutex.s: home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -655,7 +655,7 @@ home/plebish/pico-sdk/src/common/pico_sync/mutex.s: home/plebish/pico-sdk/src/co
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/plebish/pico-sdk/src/common/pico_sync/sem.o: home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
@@ -663,7 +663,7 @@ home/plebish/pico-sdk/src/common/pico_sync/sem.o: home/plebish/pico-sdk/src/comm
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_sync/sem.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.o
 
 home/plebish/pico-sdk/src/common/pico_sync/sem.i: home/plebish/pico-sdk/src/common/pico_sync/sem.c.i
@@ -671,7 +671,7 @@ home/plebish/pico-sdk/src/common/pico_sync/sem.i: home/plebish/pico-sdk/src/comm
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_sync/sem.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/plebish/pico-sdk/src/common/pico_sync/sem.s: home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
@@ -679,7 +679,7 @@ home/plebish/pico-sdk/src/common/pico_sync/sem.s: home/plebish/pico-sdk/src/comm
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_sync/sem.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/plebish/pico-sdk/src/common/pico_time/time.o: home/plebish/pico-sdk/src/common/pico_time/time.c.o
@@ -687,7 +687,7 @@ home/plebish/pico-sdk/src/common/pico_time/time.o: home/plebish/pico-sdk/src/com
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_time/time.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.o
 
 home/plebish/pico-sdk/src/common/pico_time/time.i: home/plebish/pico-sdk/src/common/pico_time/time.c.i
@@ -695,7 +695,7 @@ home/plebish/pico-sdk/src/common/pico_time/time.i: home/plebish/pico-sdk/src/com
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_time/time.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.i
 
 home/plebish/pico-sdk/src/common/pico_time/time.s: home/plebish/pico-sdk/src/common/pico_time/time.c.s
@@ -703,7 +703,7 @@ home/plebish/pico-sdk/src/common/pico_time/time.s: home/plebish/pico-sdk/src/com
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_time/time.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/time.c.s
 
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.o: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
@@ -711,7 +711,7 @@ home/plebish/pico-sdk/src/common/pico_time/timeout_helper.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.i: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -719,7 +719,7 @@ home/plebish/pico-sdk/src/common/pico_time/timeout_helper.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.s: home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -727,7 +727,7 @@ home/plebish/pico-sdk/src/common/pico_time/timeout_helper.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/plebish/pico-sdk/src/common/pico_util/datetime.o: home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
@@ -735,7 +735,7 @@ home/plebish/pico-sdk/src/common/pico_util/datetime.o: home/plebish/pico-sdk/src
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_util/datetime.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/datetime.i: home/plebish/pico-sdk/src/common/pico_util/datetime.c.i
@@ -743,7 +743,7 @@ home/plebish/pico-sdk/src/common/pico_util/datetime.i: home/plebish/pico-sdk/src
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_util/datetime.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/plebish/pico-sdk/src/common/pico_util/datetime.s: home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
@@ -751,7 +751,7 @@ home/plebish/pico-sdk/src/common/pico_util/datetime.s: home/plebish/pico-sdk/src
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_util/datetime.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/plebish/pico-sdk/src/common/pico_util/pheap.o: home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
@@ -759,7 +759,7 @@ home/plebish/pico-sdk/src/common/pico_util/pheap.o: home/plebish/pico-sdk/src/co
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_util/pheap.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/pheap.i: home/plebish/pico-sdk/src/common/pico_util/pheap.c.i
@@ -767,7 +767,7 @@ home/plebish/pico-sdk/src/common/pico_util/pheap.i: home/plebish/pico-sdk/src/co
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_util/pheap.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/plebish/pico-sdk/src/common/pico_util/pheap.s: home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
@@ -775,7 +775,7 @@ home/plebish/pico-sdk/src/common/pico_util/pheap.s: home/plebish/pico-sdk/src/co
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_util/pheap.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/plebish/pico-sdk/src/common/pico_util/queue.o: home/plebish/pico-sdk/src/common/pico_util/queue.c.o
@@ -783,7 +783,7 @@ home/plebish/pico-sdk/src/common/pico_util/queue.o: home/plebish/pico-sdk/src/co
 
 # target to build an object file
 home/plebish/pico-sdk/src/common/pico_util/queue.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.o
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.o
 
 home/plebish/pico-sdk/src/common/pico_util/queue.i: home/plebish/pico-sdk/src/common/pico_util/queue.c.i
@@ -791,7 +791,7 @@ home/plebish/pico-sdk/src/common/pico_util/queue.i: home/plebish/pico-sdk/src/co
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/common/pico_util/queue.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.i
 
 home/plebish/pico-sdk/src/common/pico_util/queue.s: home/plebish/pico-sdk/src/common/pico_util/queue.c.s
@@ -799,7 +799,7 @@ home/plebish/pico-sdk/src/common/pico_util/queue.s: home/plebish/pico-sdk/src/co
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/common/pico_util/queue.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/plebish/pico-sdk/src/common/pico_util/queue.c.s
 
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.o: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
@@ -807,7 +807,7 @@ home/plebish/pico-sdk/src/rp2040/pico_platform/platform.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.o
 
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.i: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i
@@ -815,7 +815,7 @@ home/plebish/pico-sdk/src/rp2040/pico_platform/platform.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.i
 
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.s: home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
@@ -823,7 +823,7 @@ home/plebish/pico-sdk/src/rp2040/pico_platform/platform.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
@@ -831,7 +831,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/plebis
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
@@ -839,7 +839,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/plebis
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
@@ -847,7 +847,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/plebis
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
@@ -855,7 +855,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/plebish/pico
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -863,7 +863,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/plebish/pico
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -871,7 +871,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/plebish/pico
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
@@ -879,7 +879,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/plebish/pi
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
@@ -887,7 +887,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -895,7 +895,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -903,7 +903,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
@@ -911,7 +911,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -919,7 +919,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -927,7 +927,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
@@ -935,7 +935,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -943,7 +943,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -951,7 +951,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
@@ -959,7 +959,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/pleb
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
@@ -967,7 +967,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -975,7 +975,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -983,7 +983,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
@@ -991,7 +991,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -999,7 +999,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1007,7 +1007,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
@@ -1015,7 +1015,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1023,7 +1023,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1031,7 +1031,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
@@ -1039,7 +1039,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: h
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
@@ -1047,7 +1047,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: h
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
@@ -1055,7 +1055,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: h
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
@@ -1063,7 +1063,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
@@ -1071,7 +1071,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
@@ -1079,7 +1079,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
@@ -1087,7 +1087,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1095,7 +1095,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1103,7 +1103,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
@@ -1111,7 +1111,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1119,7 +1119,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1127,7 +1127,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
@@ -1135,7 +1135,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1143,7 +1143,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1151,7 +1151,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
@@ -1159,7 +1159,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/plebish/
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1167,7 +1167,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/plebish/
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1175,7 +1175,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/plebish/
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
@@ -1183,7 +1183,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/plebis
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
@@ -1191,7 +1191,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/plebis
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
@@ -1199,7 +1199,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/plebis
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
@@ -1207,7 +1207,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1215,7 +1215,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1223,7 +1223,7 @@ home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
@@ -1231,7 +1231,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
@@ -1239,7 +1239,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
@@ -1247,7 +1247,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
@@ -1255,7 +1255,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/plebish/
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
@@ -1263,7 +1263,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1271,7 +1271,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1279,7 +1279,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
@@ -1287,7 +1287,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/plebish/p
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
@@ -1295,7 +1295,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/plebish/p
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
@@ -1303,7 +1303,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/plebish/p
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
@@ -1311,7 +1311,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: hom
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
@@ -1319,7 +1319,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: hom
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
@@ -1327,7 +1327,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: hom
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
@@ -1335,7 +1335,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/plebish/pico-sdk/src
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
@@ -1343,7 +1343,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/plebish
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
@@ -1351,7 +1351,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/plebish
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
@@ -1359,7 +1359,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/plebish
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
@@ -1367,7 +1367,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/plebi
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
@@ -1375,7 +1375,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/ple
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
@@ -1383,7 +1383,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
@@ -1391,7 +1391,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
@@ -1399,7 +1399,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: home/
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
@@ -1407,7 +1407,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.o: home/plebish/pic
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.i: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1415,7 +1415,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.i: home/plebish/pic
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.s: home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1423,7 +1423,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.s: home/plebish/pic
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
@@ -1431,7 +1431,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: ho
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
@@ -1439,7 +1439,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp20
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1447,7 +1447,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp20
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1455,7 +1455,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp20
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.o: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
@@ -1463,7 +1463,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.i: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
@@ -1471,7 +1471,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.s: home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
@@ -1479,7 +1479,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
@@ -1487,7 +1487,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/plebi
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
@@ -1495,7 +1495,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/pl
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
@@ -1503,7 +1503,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/pl
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
@@ -1511,7 +1511,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: home/pl
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
@@ -1519,7 +1519,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.o: home/plebish/pico-
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.i: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1527,7 +1527,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.i: home/plebish/pico-
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.s: home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1535,7 +1535,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.s: home/plebish/pico-
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
@@ -1543,7 +1543,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
@@ -1551,7 +1551,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
@@ -1559,7 +1559,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
@@ -1567,7 +1567,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
@@ -1575,7 +1575,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
@@ -1583,7 +1583,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/plebish/
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
@@ -1591,7 +1591,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/plebish/p
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
@@ -1599,7 +1599,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/plebish/p
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
@@ -1607,7 +1607,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/plebish/p
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.o: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
@@ -1615,7 +1615,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1623,7 +1623,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.s: home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1631,7 +1631,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
@@ -1639,7 +1639,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/plebish/pico-s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1647,7 +1647,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/plebish/pico-s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1655,7 +1655,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/plebish/pico-s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
@@ -1663,7 +1663,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/pleb
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
@@ -1671,7 +1671,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/pleb
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
@@ -1679,7 +1679,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/pleb
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
@@ -1687,7 +1687,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: ho
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
@@ -1695,7 +1695,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: ho
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
@@ -1703,7 +1703,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: ho
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
@@ -1711,7 +1711,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
@@ -1719,7 +1719,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
@@ -1727,7 +1727,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
@@ -1735,7 +1735,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_i
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
@@ -1743,7 +1743,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_i
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
@@ -1751,7 +1751,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_i
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
@@ -1759,7 +1759,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/plebish/pico-sdk/s
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1767,7 +1767,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/plebish/pico-sdk/s
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1775,7 +1775,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/plebish/pico-sdk/s
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
@@ -1783,7 +1783,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/pleb
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1791,7 +1791,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/pleb
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1799,7 +1799,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/pleb
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
@@ -1807,7 +1807,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/plebish/pi
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1815,7 +1815,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/plebish/pi
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1823,7 +1823,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/plebish/pi
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
@@ -1831,7 +1831,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: hom
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1839,7 +1839,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: hom
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -1847,7 +1847,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: hom
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
@@ -1855,7 +1855,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/plebish/pico-sdk
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1863,7 +1863,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/plebish/pico-sdk
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1871,7 +1871,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/plebish/pico-sdk
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
@@ -1879,7 +1879,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/plebish/pi
 
 # target to build an object file
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1887,7 +1887,7 @@ home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/plebish/pi
 
 # target to preprocess a source file
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1895,32 +1895,32 @@ home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/plebish/pi
 
 # target to generate assembly for a file
 home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/plebish/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-main.o: main.c.o
+main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/main.c.o
-.PHONY : main.c.o
+main.cpp.o:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.c.i
+main.i: main.cpp.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	cd /home/plebish/pockpet_v2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pockpet.dir/build.make src/CMakeFiles/pockpet.dir/main.c.s
-.PHONY : main.c.s
+main.cpp.s:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -1930,7 +1930,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pockpet"
+	@echo "... ampalaya"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2166,6 +2166,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/plebish/pockpet_v2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/plebish/ampalaya/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

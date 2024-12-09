@@ -17,9 +17,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -54,9 +54,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -95,9 +95,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -137,9 +137,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -181,9 +181,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -231,9 +231,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -292,9 +292,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -330,9 +330,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -413,9 +413,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -458,9 +458,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/common/
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -497,9 +497,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2040/
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -533,9 +533,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -567,9 +567,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -621,9 +621,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -670,9 +670,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -721,9 +721,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -763,9 +763,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -806,9 +806,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -842,9 +842,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -877,9 +877,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -914,9 +914,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -960,9 +960,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1006,9 +1006,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1065,9 +1065,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1111,9 +1111,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1152,9 +1152,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/machine/ieeefp.h
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1198,9 +1198,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1249,9 +1249,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1317,9 +1317,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1373,9 +1373,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/c++/10.3.1/cassert
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1415,9 +1415,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1460,9 +1460,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1492,9 +1492,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1544,9 +1544,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1590,9 +1590,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1631,9 +1631,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1686,9 +1686,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1739,9 +1739,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/types.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/assert.h
  /usr/include/newlib/assert.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1772,9 +1772,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1806,9 +1806,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1853,9 +1853,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1902,9 +1902,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -1941,9 +1941,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/machine/ieeefp.h
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -2000,9 +2000,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -2053,9 +2053,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -2114,9 +2114,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h
@@ -2161,8 +2161,8 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/home/plebish/pico-sdk/src/rp2_com
  /home/plebish/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
 
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o
- /home/plebish/pockpet_v2/lib/ili9341/src/ili9341.c
- /home/plebish/pockpet_v2/lib/ili9341/include/ili9341.h
+ /home/plebish/ampalaya/lib/ili9341/src/ili9341.c
+ /home/plebish/ampalaya/lib/ili9341/include/ili9341.h
  /home/plebish/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/types.h
@@ -2177,9 +2177,9 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/src/ili9341.c.o
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/version.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/version.h
  /home/plebish/pico-sdk/src/common/pico_base_headers/include/pico/config.h
- /home/plebish/pockpet_v2/build/generated/pico_base/pico/config_autogen.h
+ /home/plebish/ampalaya/build/generated/pico_base/pico/config_autogen.h
  /home/plebish/pico-sdk/src/boards/include/boards/pico_w.h
  /home/plebish/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/plebish/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h

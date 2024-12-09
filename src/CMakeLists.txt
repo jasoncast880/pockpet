@@ -1,15 +1,17 @@
 add_executable(${ProjectName}
-   main.c
+   main.cpp
 )
 
 target_include_directories(${ProjectName} PRIVATE
     ${CMAKE_SOURCE_DIR}/lib/ili9341/include
+    ${CMAKE_SOURCE_DIR}/lib/assets/include
 )
 
 target_link_libraries(${ProjectName}
+    ili9341_pico_driver
+    assets_ampalaya
     pico_stdlib
     hardware_spi
-    ili9341_pico_driver
 )
 
 pico_enable_stdio_usb(${ProjectName} 1)

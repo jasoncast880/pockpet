@@ -1,15 +1,19 @@
-#include "pico/stdlib.h"
-#include "hardware/spi.h"
-#include "hardware/gpio.h"
-
 /*
  * ili9341 shouuld control all of the reg hardware assignments and 
  * be an abstraction layer for all low level writes and commands..
- * although i will be writing app code in c
  * the driver should have a setup that can later be integrated into cpp
  */
 
 #pragma once
+
+#include "pico/stdlib.h"
+#include "hardware/spi.h"
+#include "hardware/gpio.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 
 //gp defines; 
 //
@@ -106,3 +110,7 @@ uint16_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h)
 // utility functions
 void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
 void ili9341_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
+                                                        
+#ifdef __cplusplus
+}
+#endif                                                       

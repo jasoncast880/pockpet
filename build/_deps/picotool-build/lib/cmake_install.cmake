@@ -1,8 +1,8 @@
-# Install script for directory: /home/plebish/pockpet_v2/build/_deps/picotool-src/lib
+# Install script for directory: /home/plebish/ampalaya/build/_deps/picotool-src/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/plebish/pockpet_v2/build/_deps")
+  set(CMAKE_INSTALL_PREFIX "/home/plebish/ampalaya/build/_deps")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

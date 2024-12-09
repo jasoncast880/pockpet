@@ -1,5 +1,5 @@
 elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/elf2uf2/elf2uf2.cpp \
+ /home/plebish/ampalaya/build/_deps/picotool-src/elf2uf2/elf2uf2.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/cstdio \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -152,7 +152,7 @@ elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
+ /home/plebish/ampalaya/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/cstdint /usr/include/c++/11/bits/localefwd.h \
@@ -191,9 +191,9 @@ elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
  /usr/include/c++/11/bits/fstream.tcc \
  /home/plebish/pico-sdk/src/common/boot_uf2_headers/include/boot/uf2.h \
  /usr/include/assert.h \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/elf/elf_file.h \
+ /home/plebish/ampalaya/build/_deps/picotool-src/elf/elf_file.h \
  /usr/include/c++/11/iostream \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/elf/elf.h \
+ /home/plebish/ampalaya/build/_deps/picotool-src/elf/elf.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/elf/addresses.h \
- /home/plebish/pockpet_v2/build/_deps/picotool-src/errors/errors.h
+ /home/plebish/ampalaya/build/_deps/picotool-src/elf/addresses.h \
+ /home/plebish/ampalaya/build/_deps/picotool-src/errors/errors.h

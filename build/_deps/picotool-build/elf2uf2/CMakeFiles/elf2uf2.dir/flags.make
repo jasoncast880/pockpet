@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/plebish/pockpet_v2/build/_deps/picotool-src/elf2uf2 -I/home/plebish/pockpet_v2/build/_deps/picotool-src/elf -I/home/plebish/pockpet_v2/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_uf2_headers/include
+CXX_INCLUDES = -I/home/plebish/ampalaya/build/_deps/picotool-src/elf2uf2 -I/home/plebish/ampalaya/build/_deps/picotool-src/elf -I/home/plebish/ampalaya/build/_deps/picotool-src/errors -isystem /home/plebish/pico-sdk/src/common/boot_uf2_headers/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14
 

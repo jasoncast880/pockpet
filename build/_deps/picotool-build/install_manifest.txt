@@ -1,5 +1,5 @@
-/home/plebish/pockpet_v2/build/_deps/picotool/picotool
-/home/plebish/pockpet_v2/build/_deps/picotool/picotoolTargets.cmake
-/home/plebish/pockpet_v2/build/_deps/picotool/picotoolTargets-release.cmake
-/home/plebish/pockpet_v2/build/_deps/picotool/picotoolConfig.cmake
-/home/plebish/pockpet_v2/build/_deps/picotool/picotoolConfigVersion.cmake
+/home/plebish/ampalaya/build/_deps/picotool/picotool
+/home/plebish/ampalaya/build/_deps/picotool/picotoolTargets.cmake
+/home/plebish/ampalaya/build/_deps/picotool/picotoolTargets-release.cmake
+/home/plebish/ampalaya/build/_deps/picotool/picotoolConfig.cmake
+/home/plebish/ampalaya/build/_deps/picotool/picotoolConfigVersion.cmake
