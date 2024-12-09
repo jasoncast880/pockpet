@@ -92,16 +92,14 @@ extern int8_t _ILI9341_MISO;
 #define _MOSI_SPI_FUNC gpio_set_function(_ILI9341_MOSI, GPIO_FUNC_SPI)
 
 //internal funcs
-static void ili9341_writeCommand(uint8_t commandByte);
-static void ili9341_writeData(uint8_t dataByte);
-static void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
-
 static void ili9341_hard_reset();
-                                  
 static void ili9341_init_sub_pwr(); 
 static void ili9341_init_sub_vram(); 
 
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso);
+void ili9341_writeCommand(uint8_t commandByte);
+void ili9341_writeData(uint8_t dataByte);
+void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
 
 uint16_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
 

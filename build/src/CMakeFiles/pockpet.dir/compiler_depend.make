@@ -3727,6 +3727,7 @@ src/CMakeFiles/pockpet.dir/main.c.o: ../src/main.c \
   /home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   /home/plebish/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../src/assets/bgrDemo.h \
   ../lib/ili9341/include/ili9341.h \
   /home/plebish/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
   /home/plebish/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
@@ -3734,6 +3735,8 @@ src/CMakeFiles/pockpet.dir/main.c.o: ../src/main.c \
 
 
 ../lib/ili9341/include/ili9341.h:
+
+../src/assets/bgrDemo.h:
 
 ../src/main.c:
 
