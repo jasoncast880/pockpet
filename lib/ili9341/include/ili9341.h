@@ -14,42 +14,43 @@
 extern "C"{
 #endif
 
-
 //gp defines; 
-//
 //ili9341 modes, reg addressing refer to strionix ili9341 10.1 table
 
 //general-purpose registers
 #define NOOP    0x00
 #define SWRESET 0x01
 
-//useless, i don't use the miso line
-#define RDDID   0x04
-#define RDDST   0x09
-#define RDDPM   0x0A
-#define RDD_MADCTL 0x0B
-#define RDD_COLMOD 0x0C
-#define RDDIM   0x0D
-#define RDDSM   0x0E
-#define RDD___  0x0F
-
 //power&display modes
 #define SLPIN   0x10 /* Sleep ON */
 #define SLPOUT  0x11 /* Sleep OFF */
 #define PTLON   0x12 /* Partial mode ON */
 #define NORON   0x13 /* Normal mode ON */
-#define INVOFF  0x20 //display color inversions
-#define INVON   0x21
+
+#define INVOFF  0x20 /* Display Inversion ON */
+#define INVON   0x21 /* Display Inversion OFF */
 #define DISPOFF 0x28 /* Display OFF */
 #define DISPON  0x29 /* Display ON */
+
+/* Mem Access CTL Register: MY-MX-MV-ML-BGR-MH-X-X
+ * MY - Row Addr Order
+ * MX - Column Addr Order
+ * MV - Row/Column Order
+ * ML - Vertical Refresh Order
+ * BGR - RGB/BGR Order: 
+ * MH - Horizontal Refresh Order
+ * X - DC, assume 0!!!!
+ * for ampalaya purposes
+ * screen is rotated 90deg CCW && RGB-big endian
+ * thus set:
+ * MADCTL = 0 1 1 0 1 0 / 0 0 == 0x68
+ */
+#define MADCTL  0x36 
 
 #define CASET   0x2A /* Column Address SET */
 #define RASET   0x2B /* Row Address SET */
 
-#define RAM_WR 0x2C /* Write to VRAM */
-
-#define GMCTRP  0xE0 /* mysterious thing */
-#define GMCTRN  0xE1
+#define RAM_WR  0x2C /* Write to VRAM */
 
 #define FRMCTR1 0xB1 /* frame rate control */
 #define PIXSET  0x3A /* config color format */
@@ -104,8 +105,7 @@ void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,i
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
-
-uint16_t ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
+void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
 
 // utility functions
 void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma

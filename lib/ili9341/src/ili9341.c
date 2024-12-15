@@ -14,21 +14,6 @@ static uint16_t _cursorx_ = 0x0000;
 static uint16_t _cursorx_ = 0x0000;
 */
 
-//240x320-pixel dims - wip
-void ili9341_addressWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h){
-    ili9341_writeCommand(CASET);  //x0,x1
-    ili9341_writeData(0x00);
-    ili9341_writeData(0x00);
-    ili9341_writeData(0x00);
-    ili9341_writeData(0xFF);
-
-    ili9341_writeCommand(RASET);
-    ili9341_writeData(0x00);
-    ili9341_writeData(0x00);
-    ili9341_writeData(0x00);
-    ili9341_writeData(0xFF);
-}
-
 void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sclk, int8_t miso){
     /*
      * testbench:
@@ -72,17 +57,9 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sc
 
     ili9341_hard_reset(); 
     ili9341_init_sub_pwr();
-    //test
+    ili9341_init_sub_vram();
+    //screen is now set to the breadboard config, with rgb
 
-    sleep_ms(100);
-    ili9341_writeCommand(RAM_WR);
-
-    uint8_t red_kek[2] = {0xF8,0x00};
-    for(int i = 0; i < (240*80);i++){
-        ili9341_writeDataBuffer(&red_kek[0], 1);
-    }
-    ili9341_writeCommand(NOOP);
-    
 
 }
 
@@ -114,6 +91,27 @@ void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len){
     gpio_put(_ILI9341_CS, true);
 }
 
+/*      .___.(320,240)
+ *      |   |
+ * (0,0).___.
+ */
+void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) { 
+    uint16_t x1 = x0+w-1;
+    uint16_t y1 = y0+h-1;
+
+    ili9341_writeCommand(CASET);
+    ili9341_writeData((uint8_t)(x0>>8));
+    ili9341_writeData((uint8_t)(x0&0xFF));
+    ili9341_writeData((uint8_t)(x1>>8));
+    ili9341_writeData((uint8_t)(x1&0xFF));
+
+    ili9341_writeCommand(RASET);
+    ili9341_writeData((uint8_t)(y0>>8));
+    ili9341_writeData((uint8_t)(y0&0xFF));
+    ili9341_writeData((uint8_t)(y1>>8));
+    ili9341_writeData((uint8_t)(y1&0xFF));
+}
+
 static void ili9341_hard_reset(){
     gpio_put(_ILI9341_RST, true);
     sleep_ms(10);
@@ -124,16 +122,21 @@ static void ili9341_hard_reset(){
 }
 
 static void ili9341_init_sub_pwr(){
+    //call to set power & electrical presets
     ili9341_writeCommand(SWRESET);
     ili9341_writeCommand(SLPOUT);
     sleep_ms(120);
     ili9341_writeCommand(DISPON);
     sleep_ms(100);
 
-    ili9341_writeCommand(PIXSET);
-    ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
 }
 
 static void ili9341_init_sub_vram(){
-    ili9341_writeCommand(NOOP);
+    //call to set controller's display orientation, pixel format
+    ili9341_writeCommand(PIXSET);
+    ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
+
+    ili9341_writeCommand(MADCTL);
+    ili9341_writeData(0xA8);
+    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame.
 }
