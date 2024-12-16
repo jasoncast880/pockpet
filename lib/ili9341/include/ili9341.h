@@ -43,7 +43,7 @@ extern "C"{
  * for ampalaya purposes
  * screen is rotated 90deg CCW && RGB-big endian
  * thus set:
- * MADCTL = 0 1 1 0 1 0 / 0 0 == 0x68
+ * MADCTL = 0 1 1 0 1 1 / 0 0 == 0x68
  */
 #define MADCTL  0x36 
 

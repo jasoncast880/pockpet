@@ -137,6 +137,6 @@ static void ili9341_init_sub_vram(){
     ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
 
     ili9341_writeCommand(MADCTL);
-    ili9341_writeData(0xA8);
+    ili9341_writeData(0xAC);
     ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame.
 }
