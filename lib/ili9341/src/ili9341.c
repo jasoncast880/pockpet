@@ -59,8 +59,6 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sc
     ili9341_init_sub_pwr();
     ili9341_init_sub_vram();
     //screen is now set to the breadboard config, with rgb
-
-
 }
 
 void ili9341_writeCommand(uint8_t commandByte){
@@ -89,6 +87,26 @@ void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len){
     gpio_put(_ILI9341_CS, false);
     spi_write_blocking(spi0, dataBuf, len);
     gpio_put(_ILI9341_CS, true);
+}
+
+//commands abstracted
+
+void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa){
+    ili9341_writeCommand(VSCR_DEF);
+    ili9341_writeData((uint8_t)(tfa>>8));
+    ili9341_writeData((uint8_t)(tfa&0xFF));
+    ili9341_writeData((uint8_t)(vsa>>8));
+    ili9341_writeData((uint8_t)(vsa&0xFF));
+    ili9341_writeData((uint8_t)(bfa>>8));
+    ili9341_writeData((uint8_t)(bfa&0xFF));
+    sleep_ms(10);
+}
+
+void ili9341_setScrollPtr(uint16_t vsp){
+    ili9341_writeCommand(VSCR_ADD);
+    ili9341_writeData((uint8_t)(vsp>>8));
+    ili9341_writeData((uint8_t)(vsp&0xFF));
+    sleep_ms(10);
 }
 
 /*      .___.(320,240)
@@ -138,5 +156,5 @@ static void ili9341_init_sub_vram(){
 
     ili9341_writeCommand(MADCTL);
     ili9341_writeData(0xAC);
-    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame.
+    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. THIS WORKS....
 }

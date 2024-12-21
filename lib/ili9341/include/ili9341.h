@@ -45,7 +45,11 @@ extern "C"{
  * thus set:
  * MADCTL = 0 1 1 0 1 1 / 0 0 == 0x68
  */
-#define MADCTL  0x36 
+#define MADCTL  0x36 /* see above.. */
+
+//scrolling-related registers here
+#define VSCR_DEF 0x33 /* config vert. scrolling */
+#define VSCR_ADD 0x37 /* assign vert. scrolling pointer */
 
 #define CASET   0x2A /* Column Address SET */
 #define RASET   0x2B /* Row Address SET */
@@ -54,10 +58,6 @@ extern "C"{
 
 #define FRMCTR1 0xB1 /* frame rate control */
 #define PIXSET  0x3A /* config color format */
-
-//power control
-//color control
-//mem access data control registers
 
 //define subroutine initialization sequnces here;
 //these sequences should be preset parameters for commands; not commands themselves
@@ -105,12 +105,11 @@ void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,i
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
-void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); //return the buffer size
+void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); 
+void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa); 
+void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
+void ili9341_exitScrollMode(); 
 
-// utility functions
-void ili9341_drawFrame(uint32_t * buf, size_t len); //gp frame write; should be compatible with dma
-void ili9341_write_565(uint32_t * bmpData, size_t len); //draw a bitmap from ram; optimized and shii
-                                                        
 #ifdef __cplusplus
 }
 #endif                                                       
