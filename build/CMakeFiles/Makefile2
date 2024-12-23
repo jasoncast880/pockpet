@@ -1847,12 +1847,12 @@ src/clean: src/CMakeFiles/ampalaya.dir/clean
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=53,54 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=54 "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -1873,7 +1873,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num= "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=55 "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1899,12 +1899,12 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=55,56 "Built target bs2_default_library"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=56 "Built target bs2_default_library"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
@@ -1978,12 +1978,12 @@ src/CMakeFiles/ampalaya.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_
 src/CMakeFiles/ampalaya.dir/all: lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52 "Built target ampalaya"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/plebish/ampalaya/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target ampalaya"
 .PHONY : src/CMakeFiles/ampalaya.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/ampalaya.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 93
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 92
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ampalaya.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/ampalaya.dir/rule
@@ -2009,7 +2009,7 @@ lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/all: pico-sdk/src/rp2040/boot_sta
 
 # Build rule for subdir invocation for target.
 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 41
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 39
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/plebish/ampalaya/build/CMakeFiles 0
 .PHONY : lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/rule

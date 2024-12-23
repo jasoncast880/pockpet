@@ -5,6 +5,7 @@
 //#include "roll_scroll_demo.h"
 #include "rook_tileset_8.h"
 #include "ili9341.h"
+#include "FrameHandler.h"
 
 //serves as a testbench for the things
 
@@ -17,7 +18,6 @@ int main() {
     ili9341_initialize(17,20,21,19,6,16);
 
     //demmo here
-    /*
     ili9341_setAddrWindow(40,40,150,150);
     ili9341_writeCommand(RAM_WR);
     uint8_t red_kek[2] = {0xF8,0x00};
@@ -59,7 +59,6 @@ int main() {
     ili9341_writeCommand(NOOP);
 
     sleep_ms(2000);
-    */
 
     /*
     ili9341_setAddrWindow(0,0,320,240);
@@ -90,7 +89,7 @@ int main() {
 
     //its not working
 
-    Tile genTile = new Tile(8, (uint8_t*)rook_tileset_8);
-    genTile.render(25,25);
+    Tile tile_8(8, (uint8_t*)rook_tileset_8);
+    tile_8.render(25,25);
     //this is def not going to compile
 }

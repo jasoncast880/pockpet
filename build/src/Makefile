@@ -130,6 +130,30 @@ ampalaya/fast:
 	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/build
 .PHONY : ampalaya/fast
 
+FrameHandler.o: FrameHandler.cpp.o
+.PHONY : FrameHandler.o
+
+# target to build an object file
+FrameHandler.cpp.o:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/FrameHandler.cpp.o
+.PHONY : FrameHandler.cpp.o
+
+FrameHandler.i: FrameHandler.cpp.i
+.PHONY : FrameHandler.i
+
+# target to preprocess a source file
+FrameHandler.cpp.i:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/FrameHandler.cpp.i
+.PHONY : FrameHandler.cpp.i
+
+FrameHandler.s: FrameHandler.cpp.s
+.PHONY : FrameHandler.s
+
+# target to generate assembly for a file
+FrameHandler.cpp.s:
+	cd /home/plebish/ampalaya/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/FrameHandler.cpp.s
+.PHONY : FrameHandler.cpp.s
+
 home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
@@ -1931,6 +1955,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ampalaya"
+	@echo "... FrameHandler.o"
+	@echo "... FrameHandler.i"
+	@echo "... FrameHandler.s"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/plebish/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
