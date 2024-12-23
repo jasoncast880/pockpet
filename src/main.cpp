@@ -2,7 +2,8 @@
 #include "pico/stdlib.h"
 
 //#include "landscape1.h"
-#include "roll_scroll_demo.h"
+//#include "roll_scroll_demo.h"
+#include "rook_tileset_8.h"
 #include "ili9341.h"
 
 //serves as a testbench for the things
@@ -67,6 +68,7 @@ int main() {
     ili9341_writeCommand(NOOP);
     */
 
+    /*
     ili9341_setAddrWindow(0,0,320,240);
     ili9341_writeCommand(RAM_WR);
     ili9341_writeDataBuffer((uint8_t*)roll_scroll_demo, sizeof(roll_scroll_demo));
@@ -84,4 +86,11 @@ int main() {
     ili9341_writeCommand(RAM_WR);
     ili9341_writeDataBuffer((uint8_t*)roll_scroll_demo, sizeof(roll_scroll_demo));
     ili9341_writeCommand(NOOP);
+    */
+
+    //its not working
+
+    Tile genTile = new Tile(8, (uint8_t*)rook_tileset_8);
+    genTile.render(25,25);
+    //this is def not going to compile
 }

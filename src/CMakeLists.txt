@@ -1,10 +1,12 @@
 add_executable(${ProjectName}
-   main.cpp
+    main.cpp
+    FrameHandler.cpp
 )
 
 target_include_directories(${ProjectName} PRIVATE
     ${CMAKE_SOURCE_DIR}/lib/ili9341/include
     ${CMAKE_SOURCE_DIR}/lib/assets/include
+    ${CMAKE_CURRENT_LIST_DIR}/include #has class headers, ie peripheral HAL abstractions
 )
 
 target_link_libraries(${ProjectName}
