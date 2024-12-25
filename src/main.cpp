@@ -1,23 +1,14 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-//#include "landscape1.h"
-//#include "roll_scroll_demo.h"
+#include "landscape1.h"
 #include "rook_tileset_8.h"
+#include "rook_tileset_16.h"
 #include "ili9341.h"
 #include "FrameHandler.h"
 
 //serves as a testbench for the things
-
-int main() {
-    stdio_init_all();
-
-    sleep_ms(3000);
-    printf("GO\n");
-
-    ili9341_initialize(17,20,21,19,6,16);
-
-    //demmo here
+void graphics_test(){ //testing the HAL abstractions
     ili9341_setAddrWindow(40,40,150,150);
     ili9341_writeCommand(RAM_WR);
     uint8_t red_kek[2] = {0xF8,0x00};
@@ -59,37 +50,60 @@ int main() {
     ili9341_writeCommand(NOOP);
 
     sleep_ms(2000);
+}
+
+void tile_test() { //test the tile class
+    Tile tile1(16, (uint8_t*)rook_tileset_16);
+    tile1.render(25,25);
+    sleep_ms(200);
+
+    Tile tile2(16, (uint8_t*)&rook_tileset_16[512]);
+    tile2.render(25+16+10,25);
+    sleep_ms(200);
+
+    Tile tile10(16, (uint8_t*)&rook_tileset_16[512*10]);
+    tile10.render(25+32+20,25);
+    sleep_ms(200);
+
+    Tile tile12(16, (uint8_t*)&rook_tileset_16[512*12]);
+    tile12.render(25+48+20,25);
+    sleep_ms(200);
+
+    Tile tile6(16, (uint8_t*)&rook_tileset_16[512*6]);
+    tile6.render(25+64+20,25);
+    sleep_ms(200);
+
+    Tile tile135(16, (uint8_t*)&rook_tileset_16[512*135]);
+    tile135.render(25+48+20,75);
+    sleep_ms(200);
+
+    Tile tile169(16, (uint8_t*)&rook_tileset_16[512*169]);
+    tile169.render(25+20,75);
+    sleep_ms(200);
+
+Tile tile174(16, (uint8_t*)&rook_tileset_16[512*174]);
+    tile174.render(25+90+20,75);
+    sleep_ms(200);
+
+}
+
+int main() {
+    stdio_init_all();
+
+    sleep_ms(3000);
+    printf("GO\n");
+
+    ili9341_initialize(17,20,21,19,6,16);
 
     /*
     ili9341_setAddrWindow(0,0,320,240);
     ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer((uint8_t*)landscape1, sizeof(landscape1));
+    ili9341_writeDataBuffer((uint8_t*)landscape1, 2*240*320);
     ili9341_writeCommand(NOOP);
+
+    sleep_ms(2000);
     */
+    
+    tile_test();
 
-    /*
-    ili9341_setAddrWindow(0,0,320,240);
-    ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer((uint8_t*)roll_scroll_demo, sizeof(roll_scroll_demo));
-    ili9341_writeCommand(NOOP);
-
-    sleep_ms(500);
-    ili9341_setScrollWindow(0,240,0);
-
-    sleep_ms(500);
-
-    ili9341_setScrollPtr(120);
-
-    sleep_ms(500);
-
-    ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer((uint8_t*)roll_scroll_demo, sizeof(roll_scroll_demo));
-    ili9341_writeCommand(NOOP);
-    */
-
-    //its not working
-
-    Tile tile_8(8, (uint8_t*)rook_tileset_8);
-    tile_8.render(25,25);
-    //this is def not going to compile
 }
