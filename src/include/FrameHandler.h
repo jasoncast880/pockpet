@@ -13,6 +13,17 @@ public:
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
 
 };
+
+class Tileset{
+private:
+    int tile_len;
+    uint8_t* bufPtr;
+    int tileNum;
+
+public:
+    Tileset(int tile_len, uint8_t* bufPtr);
+    void renderTileset(uint16_t x, uint16_t y, uint8_t tileNum);
+};
 //can have terrain tiles, ui tiles, bg ui tiles. leaves room for polymorphism.
 
 /*
