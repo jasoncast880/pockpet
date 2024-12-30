@@ -32,18 +32,41 @@ void Tile::render(uint16_t x, uint16_t y) {
     sleep_ms(250);// temp for timing purposes. tweak later.
 }
 
+Tileset::Tileset() {
+}
+
 Tileset::Tileset(int tile_len, uint8_t* bufPtr) {
     this->tile_len = tile_len;
     this->bufPtr = bufPtr;
 }
 
-void Tileset::renderTileset(uint16_t x, uint16_t y, uint8_t tileNum) {
-    bufPtr+=(tileNum*tile_len*tile_len*2);//increment by necessary amt of indeces
+uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
+    return (this->bufPtr+(tileNum*tile_len*2));
+}
+
+void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer(this->bufPtr, (this->tile_len)*(this->tile_len)*(4)); //size_t is  32 bits, (4 pixels) so (tile_len/4pix)*tile_len
+    ili9341_writeDataBuffer(this->bufPtr+(tileNum*tile_len*tile_len*2), (this->tile_len)*(this->tile_len)*(4)); //size_t is  32 bits, (4 pixels) so (tile_len/4pix)*tile_len
     ili9341_writeCommand(NOOP);
-    sleep_ms(250);// temp for timing purposes. tweak later.
+    //sleep_ms(250);// temp for timing purposes. tweak later.
     //revert to original bufPtr
-    bufPtr-=(tileNum*tile_len*tile_len*2);
+}
+
+Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
+    this->tileset = tileset;
+    this->mapBuf = mapBuf;
+    //HARDCODED SCREEN DIMS, add err handling just in case later.
+    this->tiles_wide = 320/tileset->tile_len;
+    this->tiles_high = 240/tileset->tile_len;
+}
+
+void Tilemap::render(){ //rendr a whole screen frame; add the update frames
+    int counter = 0;
+    for(int i=0; i<=tiles_high; i++){
+        for(int j=0;j<=tiles_wide;j++){
+            tileset->render((i*tileset->tile_len),(j*tileset->tile_len),mapBuf[counter]);
+            counter++;
+        }
+    }
 }

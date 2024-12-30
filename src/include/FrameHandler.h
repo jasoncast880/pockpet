@@ -11,39 +11,47 @@ private:
 public:
     Tile(int tile_len, uint8_t* bufPtr);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
-
 };
 
-class Tileset{
-private:
+struct Tileset{
+public:
     int tile_len;
     uint8_t* bufPtr;
     int tileNum;
 
-public:
+    //default constructor for passing by reference
+    Tileset();
     Tileset(int tile_len, uint8_t* bufPtr);
-    void renderTileset(uint16_t x, uint16_t y, uint8_t tileNum);
+    void render(uint16_t x, uint16_t y, uint8_t tileNum);
+    uint8_t* getTileData(uint8_t tileNum);
 };
+
+/* maps to the frame, so it should be (assuming 16 pix tilemaps)
+ *  .____.
+ *  |    | 240:15 tiles
+ *  o____.
+ *   320:20 tiles
+ *
+ *  IF using 8 pix tilemap: 40 tiles by 30 tiles
+ *
+ *  implement feature:
+ *  tilemap has to remember which tiles have been changed, so that it can 
+ *  re-render the necessary pixels.
+ *
+ */ 
+
+struct Tilemap{ 
+public:
+    //assume u take up the entire screen
+    Tileset* tileset;
+    uint8_t* mapBuf;
+    uint8_t tiles_wide;
+    uint8_t tiles_high;
+
+    Tilemap(Tileset* tileset, uint8_t* mapBuf);
+    void render();//assuming tilemap takes over the entire screen
+    void alterTile(uint8_t tileNo, uint8_t* tilePtr); //todo
+};
+
 //can have terrain tiles, ui tiles, bg ui tiles. leaves room for polymorphism.
 
-/*
-class Frame {
-private:
-uint8_t* changedTiles[];//store all of the addresses of changed tiles in frameBuf. this 
-
-public:
-static uint8_t frameBuffer[];
-static uint8_t* tileMap[];
-
-//tile funcs
-void updateTile(Tile tile);
-
-void pushWholeFrame(); //resend the entire contents of frameBuffer[]
-void pushUpdatedTiles(uint8_t* changedTiles[]); //resend the appropriate tiles based on changedTiles[]; also clear the array.
-};
-*/
-
-//something like this should be suitable
-//only needs to access the HAL's DRAM, adhere to some timing constraints.
-//frame is an object that only needs one instance
-//tile is gonna go polymorphic probably.
