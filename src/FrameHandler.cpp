@@ -63,9 +63,9 @@ Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
 
 void Tilemap::render(){ //rendr a whole screen frame; add the update frames
     int counter = 0;
-    for(int i=0; i<=tiles_high; i++){
-        for(int j=0;j<=tiles_wide;j++){
-            tileset->render((i*tileset->tile_len),(j*tileset->tile_len),mapBuf[counter]);
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0;j<tiles_wide;j++){
+            tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
             counter++;
         }
     }
