@@ -74,37 +74,12 @@ void tile_test() { //test the tile class
 
 }
 
-void tileset_test() {
-    Tileset tilesetPee(16, (uint8_t*)&rook_tileset_16[0]);
-
-    tilesetPee.render(25, 100, 1);
-    sleep_ms(200);
-    tilesetPee.render(50, 100, 10);
-    sleep_ms(200);
-    tilesetPee.render(75, 100, 12);
-    sleep_ms(200);
-    tilesetPee.render(100, 100, 6);
-    sleep_ms(200);
-}
-
-void renderTileset16(int del) {
-    Tileset tilesetPoop(16, (uint8_t*)&rook_tileset_16[0]);
-
-    for(int j = 0; j<15;j++){ //should be 
-        for(int i = 0; i<=16;){
-            tilesetPoop.render(16*i, j*16, ((j*16)+i));
-            //sleep_ms(del);
-            i++;
-        }
-    }
-}
-
-void renderTileset8(int del) {
-    Tileset tilesetPoop(8, (uint8_t*)ampalaya_tileset_8);
+void tileset_demo(){
+    Tileset* amp_tileset_ptr = new Tileset(8, (uint8_t*)ampalaya_tileset_8);
 
     for(int j = 0; j<3;j++){ //should be 
         for(int i = 0; i<8;i++){
-            tilesetPoop.render(8*i, j*8, ((j*8)+i));
+            amp_tileset_ptr->render(8*i, j*8, ((j*8)+i));
             //sleep_ms(del);
         }
     }
@@ -138,10 +113,12 @@ void clr_screen(){ //i gotta make a util 'HAL' file...
 int main() {
     stdio_init_all();
 
-    sleep_ms(3000);
+    sleep_ms(2000);
     printf("GO\n");
 
     ili9341_initialize(17,20,21,19,6,16);
 
+    tileset_demo();
+    sleep_ms(10000);
     tilemap_demo();
 }
