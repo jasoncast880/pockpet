@@ -4,6 +4,7 @@
 #include "rook_tileset_8.h"
 #include "rook_tileset_16.h"
 #include "ampalaya_tileset_8.h"
+#include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 
 #include "ili9341.h"
@@ -54,40 +55,73 @@ void graphics_test(){ //testing the HAL abstractions
     sleep_ms(2000);
 }
 
-void tile_test() { //test the tile class
-
+void tile_test_16() { //test the tile class
     Tile tile1(16, (uint8_t*)&rook_tileset_16[512*1]);
     tile1.render(25,25);
     sleep_ms(200);
-
     Tile tile10(16, (uint8_t*)&rook_tileset_16[512*10]);
     tile10.render(50,25);
     sleep_ms(200);
-
     Tile tile12(16, (uint8_t*)&rook_tileset_16[512*12]);
     tile12.render(75,25);
     sleep_ms(200);
-
     Tile tile6(16, (uint8_t*)&rook_tileset_16[512*6]);
     tile6.render(100,25);
     sleep_ms(200);
-
 }
 
-void tileset_demo(){
-    Tileset* amp_tileset_ptr = new Tileset(8, (uint8_t*)ampalaya_tileset_8);
+void tile_test_16_alt() { //test the tile class
+    Tile tile1(16, (uint8_t*)&ampalaya_tileset_16[512*1]);
+    tile1.render(25,100);
+    sleep_ms(200);
+    Tile tile10(16, (uint8_t*)&ampalaya_tileset_16[512*10]);
+    tile10.render(25+16,100);
+    sleep_ms(200);
+    Tile tile21(16, (uint8_t*)&ampalaya_tileset_16[512*21]);
+    tile21.render(25+16+16,100);
+    sleep_ms(200);
+    
+}
 
+void tile_test_8() { //test the tile class
+    Tile tile1(8, (uint8_t*)&rook_tileset_8[128*1]);
+    tile1.render(25,25);
+    sleep_ms(200);
+    Tile tile10(8, (uint8_t*)&rook_tileset_8[128*10]);
+    tile10.render(50,25);
+    sleep_ms(200);
+    Tile tile12(8, (uint8_t*)&rook_tileset_8[128*12]);
+    tile12.render(75,25);
+    sleep_ms(200);
+    Tile tile6(8, (uint8_t*)&rook_tileset_8[128*6]);
+    tile6.render(100,25);
+    sleep_ms(200);
+}
+
+void tileset_demo_8(){
+    Tileset* tileset_ptr = new Tileset(8, (uint8_t*)rook_tileset_8);
+
+    for(int j = 0; j<16;j++){ //should be 
+        for(int i = 0; i<16;i++){
+            tileset_ptr->render(8*i, j*8, ((j*8)+i));
+            //sleep_ms(del);
+        }
+    }
+}
+
+void tileset_demo_16(){
+    Tileset* tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
     for(int j = 0; j<3;j++){ //should be 
         for(int i = 0; i<8;i++){
-            amp_tileset_ptr->render(8*i, j*8, ((j*8)+i));
+            tileset_ptr->render(16*i, 16*j, ((8*j)+i));
             //sleep_ms(del);
         }
     }
 }
 
 void tilemap_demo(){
-    Tileset* amp_tileset_ptr = new Tileset(8, (uint8_t*)ampalaya_tileset_8);
-    Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_8);
+    Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
 }
 
@@ -108,8 +142,6 @@ void clr_screen(){ //i gotta make a util 'HAL' file...
     ili9341_writeCommand(NOOP);
 }
 
-
-
 int main() {
     stdio_init_all();
 
@@ -117,8 +149,13 @@ int main() {
     printf("GO\n");
 
     ili9341_initialize(17,20,21,19,6,16);
+/*
+    tile_test_16_alt();
+    sleep_ms(5000);
+    tileset_demo_16();
+    sleep_ms(10000); //testing the buffers' validity
+*/
+    sleep_ms(1000);
+    tilemap_demo(); 
 
-    tileset_demo();
-    sleep_ms(10000);
-    tilemap_demo();
 }

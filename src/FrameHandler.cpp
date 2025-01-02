@@ -27,7 +27,7 @@ Tile::Tile(int tile_len, uint8_t* bufPtr) {
 void Tile::render(uint16_t x, uint16_t y) {
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer(this->bufPtr, (this->tile_len)*(this->tile_len)*(4)); //size_t is  32 bits, (4 pixels) so (tile_len/4pix)*tile_len
+    ili9341_writeDataBuffer(this->bufPtr, (this->tile_len)*(this->tile_len)*(2)); 
     ili9341_writeCommand(NOOP);
     sleep_ms(250);// temp for timing purposes. tweak later.
 }
@@ -47,7 +47,7 @@ uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data 
 void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer(this->bufPtr+(tileNum*tile_len*tile_len*2), (this->tile_len)*(this->tile_len)*(4)); //size_t is  32 bits, (4 pixels) so (tile_len/4pix)*tile_len
+    ili9341_writeDataBuffer(this->bufPtr+(tileNum*tile_len*tile_len*2), (tile_len)*(tile_len)*(2)); 
     ili9341_writeCommand(NOOP);
     //sleep_ms(250);// temp for timing purposes. tweak later.
     //revert to original bufPtr
