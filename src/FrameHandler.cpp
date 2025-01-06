@@ -77,7 +77,7 @@ Font::Font(Tileset* tileset, char* charBuf, size_t len){
         size_t index = static_cast<size_t>(charBuf[i]);
         fontArr[index].glyph=charBuf[i];
         fontArr[index].bufPtr=tileset->bufPtr;
-        tileset->bufPtr++;
+        tileset->bufPtr--;
     } //hashes all of the chars.
 }
 

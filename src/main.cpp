@@ -142,6 +142,22 @@ void clr_screen(){ //i gotta make a util 'HAL' file...
     ili9341_writeCommand(NOOP);
 }
 
+void font_demo(){
+    char charArr[] = { //first index of is at 196-indexed tile of the rook tileset (starting from bot-left)
+    ' ','!','\"','#','$','%','\'','(',')','*','+',',','-','.','/',
+    '0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?',
+    '@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
+    'P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_',
+    '`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',//'`' is a placeholder....
+    'p','q','r','s','t','u','v','w','x','y','z','{','|','}','~'
+    };
+
+    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)&rook_tileset_16[196]);
+
+    Font rookFont(rookTilesetPtr, *charArr,(sizeof(charArr)/sizeof(char)));
+    rookFont.printFont(10,10,"Hello World");
+}
+
 int main() {
     stdio_init_all();
 
