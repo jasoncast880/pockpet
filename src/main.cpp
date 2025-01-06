@@ -110,10 +110,10 @@ void tileset_demo_8(){
 }
 
 void tileset_demo_16(){
-    Tileset* tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
-    for(int j = 0; j<3;j++){ //should be 
-        for(int i = 0; i<8;i++){
-            tileset_ptr->render(16*i, 16*j, ((8*j)+i));
+    Tileset* tileset_ptr = new Tileset(16, (uint8_t*)rook_tileset_16);
+    for(int j = 0; j<15;j++){ //should be 
+        for(int i = 0; i<16;i++){
+            tileset_ptr->render(16*i, 16*j, ((16*j)+i));
             //sleep_ms(del);
         }
     }
@@ -149,13 +149,12 @@ int main() {
     printf("GO\n");
 
     ili9341_initialize(17,20,21,19,6,16);
-/*
-    tile_test_16_alt();
+
+    tile_test_16();
     sleep_ms(5000);
     tileset_demo_16();
-    sleep_ms(10000); //testing the buffers' validity
-*/
-    sleep_ms(1000);
+    sleep_ms(10000); 
+
     tilemap_demo(); 
 
 }

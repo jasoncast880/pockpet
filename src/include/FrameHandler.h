@@ -3,6 +3,8 @@
 #include "pico/stdlib.h"
 #include "ili9341.h"
 
+#include <string>
+
 class Tile {
 private:
     int tile_len;        
@@ -53,5 +55,20 @@ public:
     void alterTile(uint8_t tileNo, uint8_t* tilePtr); //todo
 };
 
-//can have terrain tiles, ui tiles, bg ui tiles. leaves room for polymorphism.
 
+struct Char_16{ //simplified hash-map structure for storing font data
+public:
+    char glyph;
+    uint8_t* bufPtr;
+    size_t len=16*16*2;
+};
+
+struct Font{
+public:
+    Tileset* tileset;
+    char* charBuf;
+    Char_16 fontArr[100]; //might have to alter this
+
+    Font(Tileset* tileset, char* charBuf,size_t len);
+    void printFont(uint8_t x,uint8_t y,std::string txt);
+};

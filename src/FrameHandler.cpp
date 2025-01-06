@@ -70,3 +70,25 @@ void Tilemap::render(){ //rendr a whole screen frame; add the update frames
         }
     }
 }
+
+//Font: Char_16 fontArr[100]
+Font::Font(Tileset* tileset, char* charBuf, size_t len){
+    for(int i=0;i<(len);i++){
+        size_t index = static_cast<size_t>(charBuf[i]);
+        fontArr[index].glyph=charBuf[i];
+        fontArr[index].bufPtr=tileset->bufPtr;
+        tileset->bufPtr++;
+    } //hashes all of the chars.
+}
+
+void Font::printFont(uint8_t x, uint8_t y, std::string txt){
+    for(int i=0; i<txt.size(); i++){
+        uint8_t* tempBuf=fontArr[static_cast<size_t>(txt[i])].bufPtr;
+
+        ili9341_setAddrWindow(x+(16*i)+2, y, 16,16); //ASSUME A 16px tileset
+        ili9341_writeCommand(RAM_WR);
+        ili9341_writeDataBuffer(tempBuf, 16*16*2);
+        ili9341_writeCommand(NOOP);
+        sleep_ms(100);
+    }
+}
