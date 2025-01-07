@@ -196,8 +196,6 @@
 /home/plebish/ampalaya/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
 /home/plebish/ampalaya/build/src/CMakeFiles/ampalaya.dir
-/home/plebish/ampalaya/build/src/CMakeFiles/picotoolForceReconfigure.dir
-/home/plebish/ampalaya/build/src/CMakeFiles/picotoolBuild.dir
 /home/plebish/ampalaya/build/src/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/src/CMakeFiles/rebuild_cache.dir
 /home/plebish/ampalaya/build/lib/CMakeFiles/edit_cache.dir

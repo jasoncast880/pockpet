@@ -15,7 +15,6 @@
  *
  */
 
-//uint8_t frameBuffer[(240)*(320)] = new uint8_t[];
 
 Tile::Tile(int tile_len, uint8_t* bufPtr) {
     this->tile_len = tile_len;
@@ -74,11 +73,15 @@ void Tilemap::render(){ //rendr a whole screen frame; add the update frames
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){
     for(int i=0;i<(len);i++){
-        size_t index = static_cast<size_t>(charBuf[i]);
-        fontArr[index].glyph=charBuf[i];
-        fontArr[index].bufPtr=tileset->bufPtr;
-        tileset->bufPtr--;
+        size_t index = static_cast<size_t>(*charBuf);
+        fontArr[index].glyph=*charBuf;
+        fontArr[index].bufPtr=tileset->getTileData(196-i);
+        charBuf++;
+        //
+        printf("%d\n",i);
+        sleep_ms(100);
     } //hashes all of the chars.
+    printf("finished loop");
 }
 
 void Font::printFont(uint8_t x, uint8_t y, std::string txt){

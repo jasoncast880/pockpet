@@ -148,14 +148,19 @@ void font_demo(){
     '0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?',
     '@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
     'P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_',
-    '`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',//'`' is a placeholder....
-    'p','q','r','s','t','u','v','w','x','y','z','{','|','}','~'
+    '~','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',//'~' is a placeholder for a checkmark tile
+    'p','q','r','s','t','u','v','w','x','y','z','{','|','}'
     };
 
-    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)&rook_tileset_16[196]);
+    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
 
-    Font rookFont(rookTilesetPtr, *charArr,(sizeof(charArr)/sizeof(char)));
+    printf("%d\n",sizeof(charArr)/sizeof(char));
+    Font rookFont(rookTilesetPtr,charArr,(sizeof(charArr)/sizeof(char)));
+    //constructor is broken!!!!!!!!!!!!!!!!!!!!!!!
+    printf("font constructor ok\n");
+
     rookFont.printFont(10,10,"Hello World");
+    printf("printFont ok\n");
 }
 
 int main() {
@@ -166,11 +171,14 @@ int main() {
 
     ili9341_initialize(17,20,21,19,6,16);
 
+    /*
     tile_test_16();
     sleep_ms(5000);
     tileset_demo_16();
-    sleep_ms(10000); 
+    */
 
-    tilemap_demo(); 
-
+    sleep_ms(1000);
+    clr_screen();
+    sleep_ms(100);
+    font_demo(); 
 }
