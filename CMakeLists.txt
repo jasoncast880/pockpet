@@ -15,6 +15,8 @@ project(${ProjectName} C CXX)
 # Initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
 
-# Add subdirectories
-add_subdirectory(src)
-add_subdirectory(lib)
+#add_subdirectory(src)     #during testing, testbenches is the new src.
+add_subdirectory(lib) 
+
+#!!!!testbenches, comment out the one that is testing!!!!!
+add_subdirectory(testbench/graphics_test)

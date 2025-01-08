@@ -182,19 +182,6 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named ampalaya
-
-# Build rule for target.
-ampalaya: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ampalaya
-.PHONY : ampalaya
-
-# fast build rule for target.
-ampalaya/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ampalaya.dir/build.make src/CMakeFiles/ampalaya.dir/build
-.PHONY : ampalaya/fast
-
-#=============================================================================
 # Target rules for targets named ili9341_pico_driver
 
 # Build rule for target.
@@ -206,6 +193,19 @@ ili9341_pico_driver: cmake_check_build_system
 ili9341_pico_driver/fast:
 	$(MAKE) $(MAKESILENT) -f lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build.make lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/build
 .PHONY : ili9341_pico_driver/fast
+
+#=============================================================================
+# Target rules for targets named ampalaya
+
+# Build rule for target.
+ampalaya: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ampalaya
+.PHONY : ampalaya
+
+# fast build rule for target.
+ampalaya/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/ampalaya.dir/build.make testbench/graphics_test/CMakeFiles/ampalaya.dir/build
+.PHONY : ampalaya/fast
 
 # Help Target
 help:

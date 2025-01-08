@@ -40,8 +40,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/plebish/ampalaya/build/pico-sdk/cmake_install.cmake")
-  include("/home/plebish/ampalaya/build/src/cmake_install.cmake")
   include("/home/plebish/ampalaya/build/lib/cmake_install.cmake")
+  include("/home/plebish/ampalaya/build/testbench/graphics_test/cmake_install.cmake")
 
 endif()
 

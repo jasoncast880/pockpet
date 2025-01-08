@@ -195,13 +195,11 @@
 /home/plebish/ampalaya/build/pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/rebuild_cache.dir
 /home/plebish/ampalaya/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
-/home/plebish/ampalaya/build/src/CMakeFiles/ampalaya.dir
-/home/plebish/ampalaya/build/src/CMakeFiles/edit_cache.dir
-/home/plebish/ampalaya/build/src/CMakeFiles/rebuild_cache.dir
 /home/plebish/ampalaya/build/lib/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/lib/CMakeFiles/rebuild_cache.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/rebuild_cache.dir
-/home/plebish/ampalaya/build/lib/assets/CMakeFiles/edit_cache.dir
-/home/plebish/ampalaya/build/lib/assets/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/ampalaya.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/rebuild_cache.dir

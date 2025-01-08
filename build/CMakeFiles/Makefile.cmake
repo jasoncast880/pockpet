@@ -18,10 +18,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/picotool/picotoolTargets.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/pioasmBuild-cfgcmd.txt.in"
   "../lib/CMakeLists.txt"
-  "../lib/assets/CMakeLists.txt"
   "../lib/ili9341/CMakeLists.txt"
   "../pico_sdk_import.cmake"
-  "../src/CMakeLists.txt"
+  "../testbench/graphics_test/CMakeLists.txt"
   "/home/plebish/pico-sdk/CMakeLists.txt"
   "/home/plebish/pico-sdk/cmake/Platform/PICO.cmake"
   "/home/plebish/pico-sdk/cmake/generic_board.cmake"
@@ -278,10 +277,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2_common/pico_stdio/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/ili9341/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/assets/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "testbench/graphics_test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -291,6 +289,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
-  "src/CMakeFiles/ampalaya.dir/DependInfo.cmake"
   "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/DependInfo.cmake"
+  "testbench/graphics_test/CMakeFiles/ampalaya.dir/DependInfo.cmake"
   )
