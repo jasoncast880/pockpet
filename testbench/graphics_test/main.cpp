@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#include "rook_tileset_8.h"
 #include "rook_tileset_16.h"
-#include "ampalaya_tileset_8.h"
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 
@@ -83,32 +81,6 @@ void tile_test_16_alt() { //test the tile class
     
 }
 
-void tile_test_8() { //test the tile class
-    Tile tile1(8, (uint8_t*)&rook_tileset_8[128*1]);
-    tile1.render(25,25);
-    sleep_ms(200);
-    Tile tile10(8, (uint8_t*)&rook_tileset_8[128*10]);
-    tile10.render(50,25);
-    sleep_ms(200);
-    Tile tile12(8, (uint8_t*)&rook_tileset_8[128*12]);
-    tile12.render(75,25);
-    sleep_ms(200);
-    Tile tile6(8, (uint8_t*)&rook_tileset_8[128*6]);
-    tile6.render(100,25);
-    sleep_ms(200);
-}
-
-void tileset_demo_8(){
-    Tileset* tileset_ptr = new Tileset(8, (uint8_t*)rook_tileset_8);
-
-    for(int j = 0; j<16;j++){ //should be 
-        for(int i = 0; i<16;i++){
-            tileset_ptr->render(8*i, j*8, ((j*8)+i));
-            //sleep_ms(del);
-        }
-    }
-}
-
 void tileset_demo_16(){
     Tileset* tileset_ptr = new Tileset(16, (uint8_t*)rook_tileset_16);
     for(int j = 0; j<15;j++){ //should be 
@@ -123,13 +95,6 @@ void tilemap_demo(){
     Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
     Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
-}
-
-void ampalaya_tools_test(){ //testing the buffer on the thingy
-    ili9341_setAddrWindow(30,30,8,8);
-    ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer((uint8_t*)ampalaya_tileset_8,(8*8*2));
-    ili9341_writeCommand(NOOP);
 }
 
 void clr_screen(){ //i gotta make a util 'HAL' file...
@@ -178,8 +143,10 @@ int main() {
     sleep_ms(5000);
     tilemap_demo();
 
+    /*
     sleep_ms(5000);
     clr_screen();
     sleep_ms(100);
     font_demo(); 
+    */
 }

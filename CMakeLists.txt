@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.16)
 
 set(PICO_BOARD pico_w)
 
 # Name project
 SET(ProjectName ampalaya)
+SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Import those libraries
 include(pico_sdk_import.cmake)
@@ -19,5 +21,5 @@ pico_sdk_init()
 add_subdirectory(lib) 
 
 #!!!!testbenches, comment out the one that is testing!!!!!
-#add_subdirectory(testbench/graphics_test)
-add_subdirectory(testbench/irq_graphics_test)
+add_subdirectory(testbench/graphics_test)
+#add_subdirectory(testbench/irq_graphics_test)

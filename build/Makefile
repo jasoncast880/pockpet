@@ -195,17 +195,69 @@ ili9341_pico_driver/fast:
 .PHONY : ili9341_pico_driver/fast
 
 #=============================================================================
-# Target rules for targets named irq_graphics_test
+# Target rules for targets named frame_handler
 
 # Build rule for target.
-irq_graphics_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irq_graphics_test
-.PHONY : irq_graphics_test
+frame_handler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 frame_handler
+.PHONY : frame_handler
 
 # fast build rule for target.
-irq_graphics_test/fast:
-	$(MAKE) $(MAKESILENT) -f testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build.make testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build
-.PHONY : irq_graphics_test/fast
+frame_handler/fast:
+	$(MAKE) $(MAKESILENT) -f lib/frame_handler/CMakeFiles/frame_handler.dir/build.make lib/frame_handler/CMakeFiles/frame_handler.dir/build
+.PHONY : frame_handler/fast
+
+#=============================================================================
+# Target rules for targets named assets_lib
+
+# Build rule for target.
+assets_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assets_lib
+.PHONY : assets_lib
+
+# fast build rule for target.
+assets_lib/fast:
+	$(MAKE) $(MAKESILENT) -f lib/assets/CMakeFiles/assets_lib.dir/build.make lib/assets/CMakeFiles/assets_lib.dir/build
+.PHONY : assets_lib/fast
+
+#=============================================================================
+# Target rules for targets named graphics_test
+
+# Build rule for target.
+graphics_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 graphics_test
+.PHONY : graphics_test
+
+# fast build rule for target.
+graphics_test/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/graphics_test.dir/build.make testbench/graphics_test/CMakeFiles/graphics_test.dir/build
+.PHONY : graphics_test/fast
+
+#=============================================================================
+# Target rules for targets named picotoolForceReconfigure
+
+# Build rule for target.
+picotoolForceReconfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
+.PHONY : picotoolForceReconfigure
+
+# fast build rule for target.
+picotoolForceReconfigure/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir/build.make testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir/build
+.PHONY : picotoolForceReconfigure/fast
+
+#=============================================================================
+# Target rules for targets named picotoolBuild
+
+# Build rule for target.
+picotoolBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
+.PHONY : picotoolBuild
+
+# fast build rule for target.
+picotoolBuild/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/picotoolBuild.dir/build.make testbench/graphics_test/CMakeFiles/picotoolBuild.dir/build
+.PHONY : picotoolBuild/fast
 
 # Help Target
 help:
@@ -217,11 +269,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... picotoolBuild"
+	@echo "... picotoolForceReconfigure"
 	@echo "... pioasmBuild"
+	@echo "... assets_lib"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
+	@echo "... frame_handler"
+	@echo "... graphics_test"
 	@echo "... ili9341_pico_driver"
-	@echo "... irq_graphics_test"
 .PHONY : help
 
 

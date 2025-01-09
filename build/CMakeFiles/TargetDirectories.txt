@@ -200,6 +200,14 @@
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/rebuild_cache.dir
-/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir
-/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/edit_cache.dir
-/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/lib/frame_handler/CMakeFiles/frame_handler.dir
+/home/plebish/ampalaya/build/lib/frame_handler/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/lib/frame_handler/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/lib/assets/CMakeFiles/assets_lib.dir
+/home/plebish/ampalaya/build/lib/assets/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/lib/assets/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/graphics_test.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/picotoolBuild.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/rebuild_cache.dir
