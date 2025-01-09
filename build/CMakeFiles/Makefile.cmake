@@ -20,7 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../lib/CMakeLists.txt"
   "../lib/ili9341/CMakeLists.txt"
   "../pico_sdk_import.cmake"
-  "../testbench/graphics_test/CMakeLists.txt"
+  "../testbench/irq_graphics_test/CMakeLists.txt"
   "/home/plebish/pico-sdk/CMakeLists.txt"
   "/home/plebish/pico-sdk/cmake/Platform/PICO.cmake"
   "/home/plebish/pico-sdk/cmake/generic_board.cmake"
@@ -279,7 +279,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/ili9341/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "testbench/graphics_test/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "testbench/irq_graphics_test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -290,5 +290,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
   "lib/ili9341/CMakeFiles/ili9341_pico_driver.dir/DependInfo.cmake"
-  "testbench/graphics_test/CMakeFiles/ampalaya.dir/DependInfo.cmake"
+  "testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/DependInfo.cmake"
   )

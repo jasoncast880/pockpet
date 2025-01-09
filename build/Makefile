@@ -195,17 +195,17 @@ ili9341_pico_driver/fast:
 .PHONY : ili9341_pico_driver/fast
 
 #=============================================================================
-# Target rules for targets named ampalaya
+# Target rules for targets named irq_graphics_test
 
 # Build rule for target.
-ampalaya: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ampalaya
-.PHONY : ampalaya
+irq_graphics_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irq_graphics_test
+.PHONY : irq_graphics_test
 
 # fast build rule for target.
-ampalaya/fast:
-	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/ampalaya.dir/build.make testbench/graphics_test/CMakeFiles/ampalaya.dir/build
-.PHONY : ampalaya/fast
+irq_graphics_test/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build.make testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build
+.PHONY : irq_graphics_test/fast
 
 # Help Target
 help:
@@ -218,10 +218,10 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pioasmBuild"
-	@echo "... ampalaya"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
 	@echo "... ili9341_pico_driver"
+	@echo "... irq_graphics_test"
 .PHONY : help
 
 

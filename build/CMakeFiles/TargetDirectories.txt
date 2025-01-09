@@ -200,6 +200,6 @@
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/ili9341_pico_driver.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/lib/ili9341/CMakeFiles/rebuild_cache.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/ampalaya.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/edit_cache.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/rebuild_cache.dir
