@@ -8,19 +8,27 @@
 #include "ili9341.h"
 #include "FrameHandler.h"
 
+#define DEBOUNCE_DELAY_MS 50
 //global vars
 static uint8_t gpio_flag = 0x00;
+static uint32_t time_0 = 0;
 
 void gpio_callback(uint gpio, uint32_t events){
-    if(gpio==0){
+    uint32_t time_1 = to_ms_since_boot(get_absolute_time());
+
+    if((gpio==0)&&((time_1-time_0)>=DEBOUNCE_DELAY_MS)){
         printf("gpio0 pressed\n");
         gpio_flag = 0x00;
+
+        //timing reg adjustment: this resource might be vulnerable to race conditions in the future
+        time_0=time_1;
     }
-    else if(gpio==2){
+    else if((gpio==2)&&((time_1-time_0)>=DEBOUNCE_DELAY_MS)){
         printf("gpio2 pressed\n");
         gpio_flag = 0x02;
+        
+        time_0=time_1;
     }
-
 }
 
 void color_screen(uint8_t flag){
