@@ -49,7 +49,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/plebish/ampalaya/build/testbench/graphics_test/cmake_install.cmake")
+  include("/home/plebish/ampalaya/build/testbench/irq_graphics_test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -206,8 +206,6 @@
 /home/plebish/ampalaya/build/lib/assets/CMakeFiles/assets_lib.dir
 /home/plebish/ampalaya/build/lib/assets/CMakeFiles/edit_cache.dir
 /home/plebish/ampalaya/build/lib/assets/CMakeFiles/rebuild_cache.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/graphics_test.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/picotoolBuild.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/edit_cache.dir
-/home/plebish/ampalaya/build/testbench/graphics_test/CMakeFiles/rebuild_cache.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/edit_cache.dir
+/home/plebish/ampalaya/build/testbench/irq_graphics_test/CMakeFiles/rebuild_cache.dir

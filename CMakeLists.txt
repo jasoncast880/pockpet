@@ -21,5 +21,5 @@ pico_sdk_init()
 add_subdirectory(lib) 
 
 #!!!!testbenches, comment out the one that is testing!!!!!
-add_subdirectory(testbench/graphics_test)
-#add_subdirectory(testbench/irq_graphics_test)
+#add_subdirectory(testbench/graphics_test)
+add_subdirectory(testbench/irq_graphics_test)

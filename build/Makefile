@@ -221,43 +221,17 @@ assets_lib/fast:
 .PHONY : assets_lib/fast
 
 #=============================================================================
-# Target rules for targets named graphics_test
+# Target rules for targets named irq_graphics_test
 
 # Build rule for target.
-graphics_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 graphics_test
-.PHONY : graphics_test
+irq_graphics_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irq_graphics_test
+.PHONY : irq_graphics_test
 
 # fast build rule for target.
-graphics_test/fast:
-	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/graphics_test.dir/build.make testbench/graphics_test/CMakeFiles/graphics_test.dir/build
-.PHONY : graphics_test/fast
-
-#=============================================================================
-# Target rules for targets named picotoolForceReconfigure
-
-# Build rule for target.
-picotoolForceReconfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
-.PHONY : picotoolForceReconfigure
-
-# fast build rule for target.
-picotoolForceReconfigure/fast:
-	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir/build.make testbench/graphics_test/CMakeFiles/picotoolForceReconfigure.dir/build
-.PHONY : picotoolForceReconfigure/fast
-
-#=============================================================================
-# Target rules for targets named picotoolBuild
-
-# Build rule for target.
-picotoolBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
-.PHONY : picotoolBuild
-
-# fast build rule for target.
-picotoolBuild/fast:
-	$(MAKE) $(MAKESILENT) -f testbench/graphics_test/CMakeFiles/picotoolBuild.dir/build.make testbench/graphics_test/CMakeFiles/picotoolBuild.dir/build
-.PHONY : picotoolBuild/fast
+irq_graphics_test/fast:
+	$(MAKE) $(MAKESILENT) -f testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build.make testbench/irq_graphics_test/CMakeFiles/irq_graphics_test.dir/build
+.PHONY : irq_graphics_test/fast
 
 # Help Target
 help:
@@ -269,15 +243,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
-	@echo "... picotoolBuild"
-	@echo "... picotoolForceReconfigure"
 	@echo "... pioasmBuild"
 	@echo "... assets_lib"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
 	@echo "... frame_handler"
-	@echo "... graphics_test"
 	@echo "... ili9341_pico_driver"
+	@echo "... irq_graphics_test"
 .PHONY : help
 
 
