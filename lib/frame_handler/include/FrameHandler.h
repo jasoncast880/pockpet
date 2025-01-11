@@ -44,18 +44,34 @@ public:
 
 struct Tilemap{ 
 public:
-    //assume u take up the entire screen
+    uint8_t x, y;
+    uint8_t tiles_wide, tiles_high;
     Tileset* tileset;
     uint8_t* mapBuf;
-    uint8_t tiles_wide;
-    uint8_t tiles_high;
 
-    Tilemap(Tileset* tileset, uint8_t* mapBuf);
-    void render();//assuming tilemap takes over the entire screen
-    void alterTile(uint8_t tileNo, uint8_t* tilePtr); //todo
+    Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
+    Tilemap(uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+    void render();
+    void alterTile(uint8_t tileNo, uint8_t newTile); //todo, 
 };
 
+struct Base:Tilemap{
+public:
+    uint8_t mapGuide[];
+    void render();
 
+    Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
+};
+
+struct Sprite:Tilemap{
+    Sprite(Base* baseMap, uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+
+    void render(); //render will 'temporarily' render the sprite, once its lifecycle is done and/or its position changes, the space it occupies in vram becomes the base sprite again
+};
+
+Tilemap tilemap_mask(Tilemap* base, Tilemap* mask, uint8_t x, uint8_t y);
+
+//doesn't work...
 struct Char_16{ //simplified hash-map structure for storing font data
 public:
     char glyph;

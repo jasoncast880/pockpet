@@ -56,19 +56,32 @@ Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
     this->tileset = tileset;
     this->mapBuf = mapBuf;
     //HARDCODED SCREEN DIMS, add err handling just in case later.
+    this->x=0;
+    this->y=0;
     this->tiles_wide = 320/tileset->tile_len;
     this->tiles_high = 240/tileset->tile_len;
+}
+
+Tilemap::Tilemap(uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+    this->x = x;
+    this->y = y;
+    this->tiles_wide = tiles_wide;
+    this->tiles_high = tiles_high;
+    this->tileset = tileset;
+    this->mapBuf = mapBuf;
 }
 
 void Tilemap::render(){ //rendr a whole screen frame; add the update frames
     int counter = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0;j<tiles_wide;j++){
-            tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
+            tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
             counter++;
         }
     }
 }
+
+
 
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){

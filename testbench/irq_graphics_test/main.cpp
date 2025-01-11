@@ -13,6 +13,10 @@
 static uint8_t gpio_flag = 0x00;
 static uint32_t time_0 = 0;
 
+void melon_animate_sm();
+void fill_screen();
+
+
 void gpio_callback(uint gpio, uint32_t events){
     uint32_t time_1 = to_ms_since_boot(get_absolute_time());
 
@@ -31,20 +35,34 @@ void gpio_callback(uint gpio, uint32_t events){
     }
 }
 
-void color_screen(uint8_t flag){
-    uint8_t colByte1=0x07; //red
-    uint8_t colByte2=0xe0;
-    if(gpio_flag==0x02){
-        colByte1=0xf8;
-        colByte2=0x00;
+void melon_animate_sm(){ //animation state mach
+    Tileset* melon_set_ptr=new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Tilemap amp_tilemap1(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_1_16);
+    Tilemap amp_tilemap2(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_2_16);
+    Tilemap amp_tilemap3(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_3_16);
+    Tilemap amp_tilemap4(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_4_16);
+
+    Tilemap map_arr[] = { amp_tilemap1, amp_tilemap2,amp_tilemap3,amp_tilemap4};
+
+    int i=0;
+    while(1){
+        if(i>3){
+            i=0;
+        }
+        map_arr[i].render();
+        sleep_ms(500);
+        i++;
     }
-    ili9341_writeCommand(RAM_WR);
-    for(int i=0;i<(320*240);i++){
-        ili9341_writeData(colByte1);
-        ili9341_writeData(colByte2);
-    }
-    ili9341_writeCommand(NOOP);
 }
+
+void fill_screen(){ //fill the screen with the base-tilemap
+    Tileset* melon_set_ptr=new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Tilemap tilemap(melon_set_ptr, (uint8_t*)tile_bg_16);
+
+    tilemap.render();
+}
+
+//how do i explicitly delete these obj's w out bloat???? A: i think that they are deleted automatically once they go out of scope...
 
 int main() {
     stdio_init_all();
@@ -63,20 +81,15 @@ int main() {
     gpio_pull_up(2);
     gpio_set_irq_enabled_with_callback(2,GPIO_IRQ_EDGE_FALL,true,gpio_callback);
 
-
     sleep_ms(2000);
     printf("GO\n");
 
-    ili9341_writeCommand(RAM_WR);
-    for(int i=0;i<(320*240);i++){
-       ili9341_writeData(0xf8);
-        ili9341_writeData(0x00);
-    }
-    ili9341_writeCommand(NOOP);
+    static uint8_t temp_gpio_flag = 0x00; //comparison flag for utility
+
+    fill_screen();
 
     while(true){
-        color_screen(gpio_flag);
-        sleep_ms(500);
+       tight_loop_contents(); //once an interrupt resets, program flow never returns here
     }
 
     return 0;

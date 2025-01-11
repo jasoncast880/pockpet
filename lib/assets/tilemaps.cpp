@@ -18,4 +18,31 @@ const uint8_t tile_bg_16[] = {
 0,0,0,0,0,16,0,0,0,0,0,0,0,0,17,0,0,0,0,0
 };
 
+//superstate: shuffle between these spritemaps on interrupt-triggered flag change
+const uint8_t melon_spritemap_1_16[] = {
+14,10,11,15,
+12,1, 1, 13,
+20,1, 0, 0,
+22,18,0 ,0
+};
 
+const uint8_t melon_spritemap_2_16[] = {
+14,10,11,15,
+12,1, 1, 13,
+0 ,0, 1, 21,
+0 ,0 ,19,23
+};
+
+const uint8_t melon_spritemap_3_16[] = {
+0 ,0 ,11,15,
+0 ,0, 1, 13,
+20,1, 1, 21,
+22,18,19,23
+};
+
+const uint8_t melon_spritemap_4_16[] = {
+14,10,0 ,0 ,
+12,1, 0, 0 ,
+20,1, 1, 21,
+22,18,19,23
+};
