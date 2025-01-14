@@ -88,9 +88,12 @@ int main() {
 
     fill_screen();
 
-    while(true){
-       tight_loop_contents(); //once an interrupt resets, program flow never returns here
-    }
+    //base initialization
+    //sprite initialization;sprite must alter Base:mapGuide to mask it's tiles relative to coord
+    //sprite render pass over the vram
+    //{MOTION? (yes)} : rework the fields in sprite to reflect accurate positional, tileset data
+    //sprite changes base:mapGuide to mask its tiles relative to NEW coords
+    //do a base render pass to compare old tileguide to new tile guide: which tiles to cover with the original 'base tilemap'
 
     return 0;
 }

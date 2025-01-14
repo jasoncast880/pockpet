@@ -52,6 +52,8 @@ void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
     //revert to original bufPtr
 }
 
+Tilemap::Tilemap(){} //default constructor (not used)
+
 Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
     this->tileset = tileset;
     this->mapBuf = mapBuf;
@@ -81,7 +83,77 @@ void Tilemap::render(){ //rendr a whole screen frame; add the update frames
     }
 }
 
+Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
+    this->x=0;
+    this->y=0;
+    this->tiles_wide = 320/tileset->tile_len;
+    this->tiles_high = 240/tileset->tile_len;
 
+    this->tileset = tileset;
+    this->mapBuf = mapBuf;
+
+    this->guideLen = tiles_wide*tiles_high; //size of arrays
+    uint8_t* mapGuide = new uint8_t[guideLen]; //i will never release you.
+    this->mapGuidePtr=&mapGuide[0];
+
+    //populate the mapGuide: 1 is base's default tiles, 0 is sprite's tiles; 
+    //compare the map arrays in compare_guides to see which tiles 
+    //to re-render in a Base:render() pass
+    for(int i=0; i<guideLen; i++){
+        mapGuide[i]=0x01;
+    }
+
+    uint8_t* mapGuideNext = new uint8_t[guideLen];
+    this->mapGuidePtr=&mapGuideNext[0];
+    for(int i=0; i<guideLen; i++){ 
+        //copy the first mapGuide for reference, change on sprite's render pass.
+        mapGuideNext[i]=mapGuide[i];
+    }
+}
+
+void Base::render(){
+    int counter = 0;
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0;j<tiles_wide;j++){
+            if(*mapGuideNextPtr[(i*tiles_wide)+j]==*mapGuidePtr[(i*tiles_wide)+j]){
+                ili9341_writeCommand(NOOP);
+            }
+            else{ //clean up 'dirty' tiles on a base render pass
+                tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+            }
+            counter++;
+        }
+    }
+
+}
+
+Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+    this->basePtr = basePtr;
+    this->x = x;
+    this->y = y;
+    this->tiles_wide = tiles_wide;
+    this->tiles_high = tiles_high;
+    this->tileset = tileset;
+    this->mapBuf = mapBuf;
+}
+
+void Sprite::render(){
+    uint8_t* refPtr=(uint8_t*)basePtr->mapGuidePtr;
+    
+    int counter=0;
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0; j<tiles_wide;j++){
+            if(mapBuf[counter]==255){
+                ili9341_writeCommand(NOOP); //do not render
+            }
+            else{
+                tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+                //HERE i must alter the mapGuide (notebook notes)
+            }
+            counter++;
+        }
+    }
+}
 
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){

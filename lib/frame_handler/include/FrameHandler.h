@@ -24,7 +24,7 @@ public:
     //default constructor for passing by reference
     Tileset();
     Tileset(int tile_len, uint8_t* bufPtr);
-    void render(uint16_t x, uint16_t y, uint8_t tileNum);
+    virtual void render(uint16_t x, uint16_t y, uint8_t tileNum);
     uint8_t* getTileData(uint8_t tileNum);
 };
 
@@ -49,27 +49,36 @@ public:
     Tileset* tileset;
     uint8_t* mapBuf;
 
+    Tilemap();
     Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     Tilemap(uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     void render();
-    void alterTile(uint8_t tileNo, uint8_t newTile); //todo, 
-};
 
-struct Base:Tilemap{
+    void alterTile(uint8_t tileNo, uint8_t newTile);
+}; //built and tested on 16 pix tiles!!!
+
+struct Base: public Tilemap{
 public:
-    uint8_t mapGuide[];
+    uint8_t* mapGuidePtr;
+    uint8_t* mapGuideNextPtr;
+    size_t guideLen;
+
+    //dynamically allocate two mapguides, one before and one after a render pass
+    Base(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
 
-    Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
+    void compare_guides(); //no parameters because i can compare locally; subroutine on render pass
 };
 
-struct Sprite:Tilemap{
-    Sprite(Base* baseMap, uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+struct Sprite: public Tilemap{
+public:
+    Base* basePtr;
 
+    Sprite(Base* basePtr, uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     void render(); //render will 'temporarily' render the sprite, once its lifecycle is done and/or its position changes, the space it occupies in vram becomes the base sprite again
-};
 
-Tilemap tilemap_mask(Tilemap* base, Tilemap* mask, uint8_t x, uint8_t y);
+    void mask_on_mapGuide(); //subroutine on constructor call
+};
 
 //doesn't work...
 struct Char_16{ //simplified hash-map structure for storing font data
