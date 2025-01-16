@@ -66,8 +66,6 @@ public:
     //dynamically allocate two mapguides, one before and one after a render pass
     Base(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
-
-    void compare_guides(); //no parameters because i can compare locally; subroutine on render pass
 };
 
 struct Sprite: public Tilemap{
@@ -77,7 +75,9 @@ public:
     Sprite(Base* basePtr, uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     void render(); //render will 'temporarily' render the sprite, once its lifecycle is done and/or its position changes, the space it occupies in vram becomes the base sprite again
 
-    void mask_on_mapGuide(); //subroutine on constructor call
+    //helper functions
+    set_position(uint8_t x0, uint8_t y0);
+    void mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height); //subroutine on constructor call
 };
 
 //doesn't work...

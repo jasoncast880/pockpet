@@ -105,6 +105,7 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
 
     uint8_t* mapGuideNext = new uint8_t[guideLen];
     this->mapGuidePtr=&mapGuideNext[0];
+
     for(int i=0; i<guideLen; i++){ 
         //copy the first mapGuide for reference, change on sprite's render pass.
         mapGuideNext[i]=mapGuide[i];
@@ -115,16 +116,16 @@ void Base::render(){
     int counter = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0;j<tiles_wide;j++){
-            if(*mapGuideNextPtr[(i*tiles_wide)+j]==*mapGuidePtr[(i*tiles_wide)+j]){
+            if(*(mapGuideNextPtr+(tiles_wide*i+j))==*(mapGuidePtr+(tiles_wide*i+j))){
                 ili9341_writeCommand(NOOP);
             }
             else{ //clean up 'dirty' tiles on a base render pass
-                tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+                *(mapGuideNextPtr+(tiles_wide*i+j))=0x01;
+                tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
             }
             counter++;
         }
     }
-
 }
 
 Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
@@ -135,11 +136,44 @@ Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t 
     this->tiles_high = tiles_high;
     this->tileset = tileset;
     this->mapBuf = mapBuf;
+
+    uint8_t* guidePtr=(uint8_t*)basePtr->mapGuidePtr;
+    uint8_t* guideNextPtr=(uint8_t*)basePtr->mapGuideNextPtr;
+    //for handling the map Guides
 }
 
 void Sprite::render(){
-    uint8_t* refPtr=(uint8_t*)basePtr->mapGuidePtr;
+    int counter=0;
+    //'blindly' render; IF there is alpha processing or a sprite isn't rendered 
+    //on a tile, then update the tile guide so base object can re-render 
+    //during the rendering loop;
     
+    for(uint8_t i = y; i<tiles_tall; i++){
+        for(uint8_t j = x; j<tiles_wide; j++){
+            //please assume a 16-length tileset
+            tileset->render((x+i*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+            }
+            counter++;
+        }
+    }
+
+
+}
+
+void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
+    //make 1's to 0's on the appropriate mask guide tiles
+    //any sprite tile with alpha processing that moves,
+    //or is removed from a guide-tile entirely, should be turned to a 0 for 
+    //'cleaning'
+
+    for(uint8_t i=y0;i<height+y0;i++{
+        for(uint8_t j=x0;j<width+x0;j++){
+            *(guideNextPtr+(i*basePtr->tiles_wide+j))=0;
+        }
+    }
+}
+
+void Sprite::render(){
     int counter=0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0; j<tiles_wide;j++){

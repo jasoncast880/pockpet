@@ -87,6 +87,8 @@ int main() {
     static uint8_t temp_gpio_flag = 0x00; //comparison flag for utility
 
     fill_screen();
+    sleep_ms(100);
+    melon_animate_sm();
 
     //base initialization
     //sprite initialization;sprite must alter Base:mapGuide to mask it's tiles relative to coord
