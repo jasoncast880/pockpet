@@ -157,7 +157,6 @@ void Sprite::render(){
         }
     }
 
-
 }
 
 void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
