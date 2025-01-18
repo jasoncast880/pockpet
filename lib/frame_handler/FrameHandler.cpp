@@ -184,7 +184,7 @@ void Sprite::render(){ //need to account for alpha processing...
         for(uint8_t j = x; j<tiles_wide; j++){
             //please assume a 16-length tileset
             tileset->render((x+i*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
-            }
+            
             //if sprite tile has alpha processing then change the tileguide
             //implement that here, once alpha processing is worked on
             counter++;
@@ -198,25 +198,9 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
     //or is removed from a guide-tile entirely, should be turned to a 0 for 
     //'cleaning'
 
-    for(uint8_t i=y0;i<height+y0;i++{
+    for(uint8_t i=y0;i<height+y0;i++){
         for(uint8_t j=x0;j<width+x0;j++){
             *(guideNextPtr+(i*basePtr->tiles_wide+j))=0;
-        }
-    }
-}
-
-void Sprite::render(){
-    int counter=0;
-    for(int i=0; i<tiles_high; i++){
-        for(int j=0; j<tiles_wide;j++){
-            if(mapBuf[counter]==255){
-                ili9341_writeCommand(NOOP); //do not render
-            }
-            else{
-                tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
-                //HERE i must alter the mapGuide (notebook notes)
-            }
-            counter++;
         }
     }
 }

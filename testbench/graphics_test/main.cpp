@@ -107,6 +107,7 @@ void clr_screen(){ //i gotta make a util 'HAL' file...
     ili9341_writeCommand(NOOP);
 }
 
+//fix later
 void font_demo(){
     char charArr[] = { //first index of is at 196-indexed tile of the rook tileset (starting from bot-left)
     ' ','!','\"','#','$','%','\'','(',')','*','+',',','-','.','/',
@@ -128,6 +129,21 @@ void font_demo(){
     printf("printFont ok\n");
 }
 
+void sprite_base_test(){
+
+    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
+
+    Tileset* ampTilesetPtr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Base baseSprite = new Base(ampTilePtr, (uint8_t*)tile_bg_16);
+
+    baseSprite.render();
+
+    Sprite spriteThing = new Sprite(&baseSprite,16,16,2,2,ampTilesetPtr_tileset_16,melon_spritemap_1_16);
+    spriteThing.render();
+
+    //check initializations for now, once tested then i can test my positional system
+}
+
 int main() {
     stdio_init_all();
 
@@ -136,17 +152,6 @@ int main() {
 
     ili9341_initialize(17,20,21,19,6,16);
 
-    tile_test_16();
-    sleep_ms(5000);
-    tileset_demo_16();
-
-    sleep_ms(5000);
-    tilemap_demo();
-
-    /*
-    sleep_ms(5000);
-    clr_screen();
-    sleep_ms(100);
-    font_demo(); 
-    */
+    sprite_base_test(); 
+   
 }
