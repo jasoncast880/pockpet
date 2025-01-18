@@ -100,7 +100,7 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
     //compare the map arrays in compare_guides to see which tiles 
     //to re-render in a Base:render() pass
     for(int i=0; i<guideLen; i++){
-        mapGuide[i]=0x01;
+        mapGuide[i]=1;
     }
 
     uint8_t* mapGuideNext = new uint8_t[guideLen];
@@ -116,12 +116,12 @@ void Base::render(){
     int counter = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0;j<tiles_wide;j++){
-            if(*(mapGuideNextPtr+(tiles_wide*i+j))==*(mapGuidePtr+(tiles_wide*i+j))){
+            if(*(mapGuidePtr+(tiles_wide*i+j))==1){
                 ili9341_writeCommand(NOOP);
             }
             else{ //clean up 'dirty' tiles on a base render pass
-                *(mapGuideNextPtr+(tiles_wide*i+j))=0x01;
                 tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
+                *(mapGuidePtr+(tiles_wide*i+j))=1;
             }
             counter++;
         }
@@ -142,7 +142,39 @@ Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t 
     //for handling the map Guides
 }
 
-void Sprite::render(){
+void Sprite::set_position(uint8_t x0, uint8_t y0){
+    //check to see if the new position frees up base tiles 
+    //to be rendered out; 'dirty tiles'
+    uint8_t dx, dy;
+    //todo: make a getDiff func
+    if ((x0-x)>=16){ //only works for sprites moving up, left
+        dx=(x0-x);
+    }
+
+    if ((y0-y)>=16){ //only works for sprites moving up, left
+        dy=(y0-y);
+    }
+
+    //rounding up formula: (a+b-1)/b
+
+    if(dx&&!dy){
+        dx=(dx+16-1)/16;
+        mask_on_mapGuide(x/16,y/16,dx,tiles_high);
+    }
+    else if(!dx&&dy){
+        dy=(dy+16-1)/16;
+        mask_on_mapGuide(x/16,y/16,tiles_wide,dy);
+    }
+    else(){ //diagonal (ish) motion
+        printf("wip"); //i nono wanna
+    }
+
+    this->x = x0;
+    this->y = x0;
+    
+}
+
+void Sprite::render(){ //need to account for alpha processing...
     int counter=0;
     //'blindly' render; IF there is alpha processing or a sprite isn't rendered 
     //on a tile, then update the tile guide so base object can re-render 
@@ -153,10 +185,11 @@ void Sprite::render(){
             //please assume a 16-length tileset
             tileset->render((x+i*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
             }
+            //if sprite tile has alpha processing then change the tileguide
+            //implement that here, once alpha processing is worked on
             counter++;
         }
     }
-
 }
 
 void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
