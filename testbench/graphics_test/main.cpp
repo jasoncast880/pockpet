@@ -134,12 +134,12 @@ void sprite_base_test(){
     Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
 
     Tileset* ampTilesetPtr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
-    Base baseSprite = new Base(ampTilePtr, (uint8_t*)tile_bg_16);
+    Base* baseSprite = new Base(ampTilesetPtr, (uint8_t*)tile_bg_16);
 
-    baseSprite.render();
+    baseSprite->render();
 
-    Sprite spriteThing = new Sprite(&baseSprite,16,16,2,2,ampTilesetPtr_tileset_16,melon_spritemap_1_16);
-    spriteThing.render();
+    Sprite* spriteThing = new Sprite(baseSprite,16,16,2,2,ampTilesetPtr,(uint8_t*)melon_spritemap_1_16);
+    spriteThing->render();
 
     //check initializations for now, once tested then i can test my positional system
 }

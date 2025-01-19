@@ -137,9 +137,7 @@ Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t 
     this->tileset = tileset;
     this->mapBuf = mapBuf;
 
-    uint8_t* guidePtr=(uint8_t*)basePtr->mapGuidePtr;
-    uint8_t* guideNextPtr=(uint8_t*)basePtr->mapGuideNextPtr;
-    //for handling the map Guides
+    this->guidePtr=basePtr->mapGuidePtr;
 }
 
 void Sprite::set_position(uint8_t x0, uint8_t y0){
@@ -165,7 +163,7 @@ void Sprite::set_position(uint8_t x0, uint8_t y0){
         dy=(dy+16-1)/16;
         mask_on_mapGuide(x/16,y/16,tiles_wide,dy);
     }
-    else(){ //diagonal (ish) motion
+    else{ //diagonal (ish) motion
         printf("wip"); //i nono wanna
     }
 
@@ -180,7 +178,7 @@ void Sprite::render(){ //need to account for alpha processing...
     //on a tile, then update the tile guide so base object can re-render 
     //during the rendering loop;
     
-    for(uint8_t i = y; i<tiles_tall; i++){
+    for(uint8_t i = y; i<tiles_high; i++){
         for(uint8_t j = x; j<tiles_wide; j++){
             //please assume a 16-length tileset
             tileset->render((x+i*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
@@ -200,7 +198,7 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
 
     for(uint8_t i=y0;i<height+y0;i++){
         for(uint8_t j=x0;j<width+x0;j++){
-            *(guideNextPtr+(i*basePtr->tiles_wide+j))=0;
+            *(guidePtr+(i*basePtr->tiles_wide+j))=0;
         }
     }
 }
