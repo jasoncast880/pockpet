@@ -68,7 +68,7 @@ int main() {
     stdio_init_all();
 
     //spi0 bus initializers, disabled temporarily
-    ili9341_initialize(17,20,21,19,6,16);
+    ili9341_initialize(17,20,21,19,18,16);
 
     //pins gp0, gp2
     gpio_init(0);

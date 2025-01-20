@@ -150,7 +150,7 @@ int main() {
     sleep_ms(2000);
     printf("GO\n");
 
-    ili9341_initialize(17,20,21,19,6,16);
+    ili9341_initialize(17,20,21,19,18,16);
 
     sprite_base_test(); 
    
