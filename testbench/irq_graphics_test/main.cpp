@@ -42,15 +42,20 @@ void melon_animate_sm(){ //animation state mach
     Tilemap amp_tilemap3(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_3_16);
     Tilemap amp_tilemap4(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_4_16);
 
-    Tilemap map_arr[] = { amp_tilemap1, amp_tilemap2,amp_tilemap3,amp_tilemap4};
+    Tilemap amp_tilemap5(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_5_16);
+    Tilemap amp_tilemap6(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_6_16);
+    Tilemap amp_tilemap7(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_7_16);
+    Tilemap amp_tilemap8(15*16, 1*16, 4, 4, melon_set_ptr, (uint8_t*) melon_spritemap_8_16);
+
+    Tilemap map_arr[] = { amp_tilemap1, amp_tilemap5,amp_tilemap2,amp_tilemap6,     amp_tilemap3, amp_tilemap7, amp_tilemap4, amp_tilemap8};
 
     int i=0;
     while(1){
-        if(i>3){
+        if(i>7){
             i=0;
         }
         map_arr[i].render();
-        sleep_ms(500);
+        sleep_ms(250);
         i++;
     }
 }
