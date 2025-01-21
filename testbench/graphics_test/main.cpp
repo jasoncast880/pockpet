@@ -1,3 +1,4 @@
+//gp-graphics testbench
 #include <stdio.h>
 #include "pico/stdlib.h"
 
@@ -131,18 +132,26 @@ void font_demo(){
 
 void sprite_base_test(){
 
-    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
+    uint8_t* map_arr[] = { (uint8_t*)&melon_spritemap_1_16[0], (uint8_t*)&melon_spritemap_5_16[0],(uint8_t*)&melon_spritemap_2_16[0],(uint8_t*)&melon_spritemap_6_16[0],(uint8_t*)&melon_spritemap_3_16[0],(uint8_t*)&melon_spritemap_7_16[0],(uint8_t*)&melon_spritemap_4_16[0],(uint8_t*)&melon_spritemap_8_16[0] };
 
-    Tileset* ampTilesetPtr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
-    Base* baseSprite = new Base(ampTilesetPtr, (uint8_t*)tile_bg_16);
+    Tileset* melon_set_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
 
-    baseSprite->render();
+    Base* base = new Base(melon_set_ptr, (uint8_t*)tile_bg_16);
 
-    Sprite* spriteThing = new Sprite(baseSprite,16,16,2,2,ampTilesetPtr,(uint8_t*)melon_spritemap_1_16);
-    spriteThing->render();
+    base->render();
 
-    //check initializations for now, once tested then i can test my positional system
+    sleep_ms(500);
+
+    for(int i=0;i<7;i++){
+        Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
+        sprit.render();
+        sleep_ms(2500);
+    }
+
+
 }
+
+
 
 int main() {
     stdio_init_all();

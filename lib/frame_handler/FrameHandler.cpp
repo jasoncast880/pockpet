@@ -73,7 +73,7 @@ Tilemap::Tilemap(uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, T
     this->mapBuf = mapBuf;
 }
 
-void Tilemap::render(){ //rendr a whole screen frame; add the update frames
+void Tilemap::render(){ 
     int counter = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0;j<tiles_wide;j++){
@@ -116,7 +116,7 @@ void Base::render(){
     int counter = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0;j<tiles_wide;j++){
-            if(*(mapGuidePtr+(tiles_wide*i+j))==1){
+            if(*(mapGuidePtr+(tiles_wide*i+j))==0){
                 ili9341_writeCommand(NOOP);
             }
             else{ //clean up 'dirty' tiles on a base render pass
@@ -129,7 +129,7 @@ void Base::render(){
 }
 
 Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
-    this->basePtr = basePtr;
+    //this->basePtr = basePtr;
     this->x = x;
     this->y = y;
     this->tiles_wide = tiles_wide;
@@ -178,10 +178,10 @@ void Sprite::render(){ //need to account for alpha processing...
     //on a tile, then update the tile guide so base object can re-render 
     //during the rendering loop;
     
-    for(uint8_t i = y; i<tiles_high; i++){
-        for(uint8_t j = x; j<tiles_wide; j++){
+    for(uint8_t i = 0; i<tiles_high; i++){
+        for(uint8_t j = 0; j<tiles_wide; j++){
             //please assume a 16-length tileset
-            tileset->render((x+i*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+            tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
             
             //if sprite tile has alpha processing then change the tileguide
             //implement that here, once alpha processing is worked on
