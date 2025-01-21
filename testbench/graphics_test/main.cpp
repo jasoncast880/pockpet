@@ -142,10 +142,14 @@ void sprite_base_test(){
 
     sleep_ms(500);
 
-    for(int i=0;i<7;i++){
+    for(int i=0;i<=7;i++){
         Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
         sprit.render();
-        sleep_ms(2500);
+        sleep_ms(250);
+
+        if(i>=7){
+            i=-1;
+        }
     }
 
 
