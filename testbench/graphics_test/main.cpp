@@ -142,16 +142,17 @@ void sprite_base_test(){
 
     sleep_ms(500);
 
-    //
+    /*
     Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[2]);
     sprit.render();
     sleep_ms(100);
     sprit.mask_on_mapGuide(15,1,4,4);
+    base->printMapGuide();
 
     base->render();
-    //
+    */
     
-    /*
+    //
     for(int i=0;i<=7;i++){
         Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
         sprit.render();
@@ -166,7 +167,7 @@ void sprite_base_test(){
         
         sleep_ms(250);
     }
-    */
+    //
 }
 
 int main() {

@@ -96,6 +96,8 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
     uint8_t* mapGuide = new uint8_t[guideLen]; //i will never release you.
     this->mapGuidePtr=&mapGuide[0];
 
+    printf("from Base constructor:");
+    printf("0x%d\n", mapGuidePtr);
     //populate the mapGuide: 1 is base's default tiles, 0 is sprite's tiles; 
     //compare the map arrays in compare_guides to see which tiles 
     //to re-render in a Base:render() pass
@@ -192,7 +194,7 @@ void Sprite::render(){ //need to account for alpha processing...
             //please assume a 16-length tileset
             if(mapBuf[counter]==255){
                 counter++;
-                mask_on_mapGuide((x*16+j),(y*16+j),1,1);
+                //mask_on_mapGuide((x*16+j),(y*16+j),1,1);
             }
             else {
                 tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
@@ -200,8 +202,6 @@ void Sprite::render(){ //need to account for alpha processing...
             }
         }
     }
-
-    basePtr->printMapGuide();
 }
 
 //!!! @param : by tiles, not by pixel!!!
@@ -211,10 +211,14 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
     //any sprite tile with alpha processing that moves,
     //or is removed from a guide-tile entirely
 
+    uint8_t* temp = basePtr->mapGuidePtr+(y0*20)+x0;
+    printf("0x%d\n", temp);
     for(uint8_t i=y0;i<height+y0;i++){
         for(uint8_t j=x0;j<width+x0;j++){
-            *(guidePtr+(i*width+j))=1;
+            *temp=1;
+            temp++;
         }
+        temp+=(20-width);
     }
 }
 
