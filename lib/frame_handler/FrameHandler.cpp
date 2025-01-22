@@ -102,14 +102,6 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
     for(int i=0; i<guideLen; i++){
         mapGuide[i]=1;
     }
-
-    uint8_t* mapGuideNext = new uint8_t[guideLen];
-    this->mapGuidePtr=&mapGuideNext[0];
-
-    for(int i=0; i<guideLen; i++){ 
-        //copy the first mapGuide for reference, change on sprite's render pass.
-        mapGuideNext[i]=mapGuide[i];
-    }
 }
 
 void Base::render(){
@@ -121,15 +113,32 @@ void Base::render(){
             }
             else{ //clean up 'dirty' tiles on a base render pass
                 tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
-                *(mapGuidePtr+(tiles_wide*i+j))=1;
+                *(mapGuidePtr+(tiles_wide*i+j))=0;
             }
             counter++;
         }
     }
+
+    printMapGuide();
+}
+
+void Base::printMapGuide(){
+    //debug function
+    printf("Tileguide:\n");
+    int j=0;
+    for(int i=0; i<guideLen; i++){ 
+        printf("%d, ",*(mapGuidePtr+(i)));
+        j++;
+        if(j==tiles_wide){
+            j=0;
+            printf("\n");
+        }
+    }
+    printf("EOA\n");
 }
 
 Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
-    //this->basePtr = basePtr;
+    this->basePtr = basePtr;
     this->x = x;
     this->y = y;
     this->tiles_wide = tiles_wide;
@@ -181,24 +190,30 @@ void Sprite::render(){ //need to account for alpha processing...
     for(uint8_t i = 0; i<tiles_high; i++){
         for(uint8_t j = 0; j<tiles_wide; j++){
             //please assume a 16-length tileset
-            tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
-            
-            //if sprite tile has alpha processing then change the tileguide
-            //implement that here, once alpha processing is worked on
-            counter++;
+            if(mapBuf[counter]==255){
+                counter++;
+                mask_on_mapGuide((x*16+j),(y*16+j),1,1);
+            }
+            else {
+                tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
+                counter++;
+            }
         }
     }
+
+    basePtr->printMapGuide();
 }
 
+//!!! @param : by tiles, not by pixel!!!
 void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
+    //@brief: params: tileGuide's x coord, tileGuide's y coord, tiles wide, height
     //make 1's to 0's on the appropriate mask guide tiles
     //any sprite tile with alpha processing that moves,
-    //or is removed from a guide-tile entirely, should be turned to a 0 for 
-    //'cleaning'
+    //or is removed from a guide-tile entirely
 
     for(uint8_t i=y0;i<height+y0;i++){
         for(uint8_t j=x0;j<width+x0;j++){
-            *(guidePtr+(i*basePtr->tiles_wide+j))=0;
+            *(guidePtr+(i*width+j))=1;
         }
     }
 }

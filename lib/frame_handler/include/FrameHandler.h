@@ -65,6 +65,7 @@ public:
     //dynamically allocate two mapguides, one before and one after a render pass
     Base(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
+    void printMapGuide();
 };
 
 struct Sprite: public Tilemap{

@@ -142,25 +142,37 @@ void sprite_base_test(){
 
     sleep_ms(500);
 
+    //
+    Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[2]);
+    sprit.render();
+    sleep_ms(100);
+    sprit.mask_on_mapGuide(15,1,4,4);
+
+    base->render();
+    //
+    
+    /*
     for(int i=0;i<=7;i++){
         Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
         sprit.render();
-        sleep_ms(250);
+        sleep_ms(100);
+        sprit.mask_on_mapGuide(15,1,4,4);
 
+        base->render();
+        
         if(i>=7){
             i=-1;
         }
+        
+        sleep_ms(250);
     }
-
-
+    */
 }
-
-
 
 int main() {
     stdio_init_all();
 
-    sleep_ms(2000);
+    sleep_ms(4500);
     printf("GO\n");
 
     ili9341_initialize(17,20,21,19,18,16);
