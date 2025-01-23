@@ -156,8 +156,8 @@ void sprite_base_test(){
     for(int i=0;i<=7;i++){
         Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
         sprit.render();
-        sleep_ms(100);
-        sprit.mask_on_mapGuide(15,1,4,4);
+        sleep_ms(50);
+        //sprit.mask_on_mapGuide(15,1,4,4);
 
         base->render();
         

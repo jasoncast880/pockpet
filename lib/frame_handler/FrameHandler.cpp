@@ -194,7 +194,10 @@ void Sprite::render(){ //need to account for alpha processing...
             //please assume a 16-length tileset
             if(mapBuf[counter]==255){
                 counter++;
-                //mask_on_mapGuide((x*16+j),(y*16+j),1,1);
+                mask_on_mapGuide(((x/16)+j),((y/16)+i),1,1);
+                //edge case to implement: off-tiles.
+                //this implementation assumes that the 
+                //sprite is squarely on a tile!!!!
             }
             else {
                 tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
@@ -202,6 +205,7 @@ void Sprite::render(){ //need to account for alpha processing...
             }
         }
     }
+    basePtr->printMapGuide();
 }
 
 //!!! @param : by tiles, not by pixel!!!
