@@ -178,6 +178,7 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
-    sprite_base_test(); 
+    //sprite_base_test(); 
+    //working on fonts now
    
 }
