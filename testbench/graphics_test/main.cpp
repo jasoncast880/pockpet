@@ -127,21 +127,25 @@ void font_demo(){
     '~','~','}','|','{','z','y','x','w','v','u','t','s','r','q','p' //first two in this row are placeholders
     };
 
+    Tileset* melon_set_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Base* base = new Base(melon_set_ptr, (uint8_t*)tile_bg_16);
     Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
-
-    
-
-    printf("%d\n",sizeof(charArr)/sizeof(char));
     Font rookFont(rookTilesetPtr,charArr,(sizeof(charArr)/sizeof(char)));
-    //constructor is broken!!!!!!!!!!!!!!!!!!!!!!!
-    printf("font constructor ok\n");
 
-    rookFont.printFont(10,10,"Hello World");
-    printf("printFont ok\n");
+    //sprite stuff here
+
+    base->render();
+
+    Sprite sprit(base, 2*16, 2*16, 16, 11,melon_set_ptr,(uint8_t*)tile_menu_spr_16);
+    sprit.render();
+    rookFont.printFont(70,110,"Hello World");
+
+    delete base;
+    delete melon_set_ptr;
+    delete rookTilesetPtr;
 }
 
 void sprite_base_test(){
-
     uint8_t* map_arr[] = { (uint8_t*)&melon_spritemap_1_16[0], (uint8_t*)&melon_spritemap_5_16[0],(uint8_t*)&melon_spritemap_2_16[0],(uint8_t*)&melon_spritemap_6_16[0],(uint8_t*)&melon_spritemap_3_16[0],(uint8_t*)&melon_spritemap_7_16[0],(uint8_t*)&melon_spritemap_4_16[0],(uint8_t*)&melon_spritemap_8_16[0] };
 
     Tileset* melon_set_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
@@ -152,32 +156,24 @@ void sprite_base_test(){
 
     sleep_ms(500);
 
-    /*
-    Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[2]);
-    sprit.render();
-    sleep_ms(100);
-    sprit.mask_on_mapGuide(15,1,4,4);
-    base->printMapGuide();
-
-    base->render();
-    */
-    
-    //
     for(int i=0;i<=7;i++){
-        Sprite sprit(base, 15*16, 16, 4, 4,melon_set_ptr,map_arr[i]);
+        Sprite sprit(base, 15*16, 1*16, 4, 4,melon_set_ptr,map_arr[i]);
         sprit.render();
         sleep_ms(50);
         //sprit.mask_on_mapGuide(15,1,4,4);
 
         base->render();
         
+        /*
         if(i>=7){
             i=-1;
         }
+        */
         
-        sleep_ms(250);
+        sleep_ms(500);
     }
-    //
+
+    delete melon_set_ptr;
 }
 
 int main() {
@@ -188,8 +184,8 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
-    //sprite_base_test(); 
-   
+    sprite_base_test(); 
+    sleep_ms(1000);
     font_demo();
 
 }

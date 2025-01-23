@@ -73,11 +73,11 @@ public:
     Base* basePtr;
     uint8_t* guidePtr;
 
-    Sprite(Base* basePtr, uint8_t x,uint8_t y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+    Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     void render(); //render will 'temporarily' render the sprite, once its lifecycle is done and/or its position changes, the space it occupies in vram becomes the base sprite again
 
     //helper functions
-    void set_position(uint8_t x0, uint8_t y0);
+    void set_position(int x0, int y0);
     void mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height); //subroutine on constructor call
 };
 

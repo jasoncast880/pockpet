@@ -139,7 +139,7 @@ void Base::printMapGuide(){
     printf("EOA\n");
 }
 
-Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
     this->basePtr = basePtr;
     this->x = x;
     this->y = y;
@@ -151,10 +151,10 @@ Sprite::Sprite(Base* basePtr, uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t 
     this->guidePtr=basePtr->mapGuidePtr;
 }
 
-void Sprite::set_position(uint8_t x0, uint8_t y0){
+void Sprite::set_position(int x0, int y0){
     //check to see if the new position frees up base tiles 
     //to be rendered out; 'dirty tiles'
-    uint8_t dx, dy;
+    int dx, dy;
     //todo: make a getDiff func
     if ((x0-x)>=16){ //only works for sprites moving up, left
         dx=(x0-x);
@@ -189,8 +189,8 @@ void Sprite::render(){ //need to account for alpha processing...
     //on a tile, then update the tile guide so base object can re-render 
     //during the rendering loop;
     
-    for(uint8_t i = 0; i<tiles_high; i++){
-        for(uint8_t j = 0; j<tiles_wide; j++){
+    for(int i = 0; i<tiles_high; i++){
+        for(int j = 0; j<tiles_wide; j++){
             //please assume a 16-length tileset
             if(mapBuf[counter]==255){
                 counter++;
@@ -246,6 +246,6 @@ void Font::printFont(uint8_t x, uint8_t y, std::string txt){
         ili9341_writeCommand(RAM_WR);
         ili9341_writeDataBuffer(tempBuf, 16*16*2);
         ili9341_writeCommand(NOOP);
-        sleep_ms(200);
+        sleep_ms(250);
     }
 }

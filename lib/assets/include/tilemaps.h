@@ -4,7 +4,9 @@
 #include <cstdint>
 
 extern const uint8_t tile_bg_16[];
+extern const uint8_t tile_menu_16[];
 
+extern const uint8_t tile_menu_spr_16[];
 extern const uint8_t melon_spritemap_1_16[];
 extern const uint8_t melon_spritemap_2_16[];
 extern const uint8_t melon_spritemap_3_16[];
