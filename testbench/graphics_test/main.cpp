@@ -111,15 +111,25 @@ void clr_screen(){ //i gotta make a util 'HAL' file...
 //fix later
 void font_demo(){
     char charArr[] = { //first index of is at 196-indexed tile of the rook tileset (starting from bot-left)
+    /*
     ' ','!','\"','#','$','%','\'','(',')','*','+',',','-','.','/',
     '0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?',
     '@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
     'P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_',
     '~','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',//'~' is a placeholder for a checkmark tile
     'p','q','r','s','t','u','v','w','x','y','z','{','|','}'
+    */
+    '/','.','-',',','+','*',')','(','\'','%','$','#','\"','!',' ',
+    '?','>','=','<',';',':','9','8','7','6','5','4','3','2','1','0',
+    'O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','@',
+    '_','^',']','\\','[','Z','Y','X','W','V','U','T','S','R','Q','P',
+    'o','n','m','l','k','j','i','h','g','f','e','d','c','b','a','~', //last is placeholder
+    '~','~','}','|','{','z','y','x','w','v','u','t','s','r','q','p' //first two in this row are placeholders
     };
 
     Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
+
+    
 
     printf("%d\n",sizeof(charArr)/sizeof(char));
     Font rookFont(rookTilesetPtr,charArr,(sizeof(charArr)/sizeof(char)));
@@ -179,6 +189,7 @@ int main() {
     ili9341_initialize(17,20,21,19,18,16);
 
     //sprite_base_test(); 
-    //working on fonts now
    
+    font_demo();
+
 }

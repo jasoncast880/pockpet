@@ -40,7 +40,7 @@ Tileset::Tileset(int tile_len, uint8_t* bufPtr) {
 }
 
 uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
-    return (this->bufPtr+(tileNum*tile_len*2));
+    return (bufPtr+((16*16*2)*tileNum));
 }
 
 void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
@@ -228,14 +228,12 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
 
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){
-    for(int i=0;i<(len);i++){
+    printf("size of struct Char_16: %zu bytes\n",sizeof(struct Char_16));
+    for(int i=0;i<(int)len;i++){
         size_t index = static_cast<size_t>(*charBuf);
         fontArr[index].glyph=*charBuf;
-        fontArr[index].bufPtr=tileset->getTileData(196-i);
+        fontArr[index].bufPtr=tileset->getTileData(222-i);
         charBuf++;
-        //
-        printf("%d\n",i);
-        sleep_ms(100);
     } //hashes all of the chars.
     printf("finished loop");
 }
@@ -248,6 +246,6 @@ void Font::printFont(uint8_t x, uint8_t y, std::string txt){
         ili9341_writeCommand(RAM_WR);
         ili9341_writeDataBuffer(tempBuf, 16*16*2);
         ili9341_writeCommand(NOOP);
-        sleep_ms(100);
+        sleep_ms(200);
     }
 }
