@@ -83,6 +83,7 @@ void Tilemap::render(){
     }
 }
 
+Base::Base(){}
 Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
     this->x=0;
     this->y=0;

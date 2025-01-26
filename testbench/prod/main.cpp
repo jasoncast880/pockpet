@@ -32,10 +32,16 @@ void gpio_callback(uint gpio, uint32_t events){
     }
 }
 
-void tileset_font_initializer(){
 
-    static Tileset amp_tileset(16, (uint8_t*)&ampalaya_tileset_16[0]);
-    static Tileset rook_tileset(16, (uint8_t*)&rook_tileset_16[0]);
+//global var declaration
+Tileset amp_tileset, rook_tileset;
+Base base;
+//Font rook_font;
+
+void tileset_font_initializer(){
+    //later make this global, for now all display functionalities are in this function
+    amp_tileset = Tileset(16, (uint8_t*)&ampalaya_tileset_16[0]);
+    rook_tileset = Tileset(16, (uint8_t*)&rook_tileset_16[0]);
 
     static char charArr[] = {
          '/','.','-',',','+','*',')','(','\'','%','$','#','\"','!',' ',
@@ -46,8 +52,9 @@ void tileset_font_initializer(){
         '~','~','}','|','{','z','y','x','w','v','u','t','s','r','q','p' //first two in this row are placeholders
     };
 
-    static Base base(&amp_tileset, (uint8_t*)&tile_bg_16[0]);
-    base.render();
+    base = Base(&amp_tileset, (uint8_t*)&tile_bg_16[0]);
+
+    //todo: initialize a font object in this fxn to be usable by the entire system
 }
 
 int main() {
@@ -67,9 +74,12 @@ int main() {
     gpio_pull_up(2);
     gpio_set_irq_enabled_with_callback(2,GPIO_IRQ_EDGE_FALL,true,gpio_callback);
 
+    /* */
     sleep_ms(2000);
     printf("GO\n");
 
+    tileset_font_initializer();
+    base.render();
 
     return 0;
 }

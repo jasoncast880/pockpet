@@ -63,6 +63,7 @@ public:
     size_t guideLen;
 
     //dynamically allocate two mapguides, one before and one after a render pass
+    Base();
     Base(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
     void printMapGuide();
