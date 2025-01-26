@@ -5,7 +5,7 @@
 
 #include <string>
 
-class Tile {
+class Tile { //unused??
 private:
     int tile_len;        
     uint8_t* bufPtr;
