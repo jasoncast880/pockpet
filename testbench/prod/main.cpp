@@ -36,7 +36,7 @@ void gpio_callback(uint gpio, uint32_t events){
 //global var declaration
 Tileset amp_tileset, rook_tileset;
 Base base;
-//Font rook_font;
+Font rook_font;
 
 void tileset_font_initializer(){
     //later make this global, for now all display functionalities are in this function
@@ -53,8 +53,7 @@ void tileset_font_initializer(){
     };
 
     base = Base(&amp_tileset, (uint8_t*)&tile_bg_16[0]);
-
-    //todo: initialize a font object in this fxn to be usable by the entire system
+    rook_font = Font(&rook_tileset, &charArr[0], (sizeof(charArr)/sizeof(char)));
 }
 
 int main() {
@@ -80,6 +79,7 @@ int main() {
 
     tileset_font_initializer();
     base.render();
+    rook_font.printFont(10,10,"peepee");
 
     return 0;
 }

@@ -227,6 +227,8 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
     }
 }
 
+Font::Font(){}
+
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){
     printf("size of struct Char_16: %zu bytes\n",sizeof(struct Char_16));

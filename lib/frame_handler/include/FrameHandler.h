@@ -96,6 +96,7 @@ public:
     char* charBuf;
     Char_16 fontArr[250]; //might have to alter this
 
+    Font();
     Font(Tileset* tileset, char* charBuf,size_t len);
     void printFont(uint8_t x,uint8_t y,std::string txt);
 };
