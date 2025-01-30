@@ -25,6 +25,7 @@ public:
     Tileset();
     Tileset(int tile_len, uint8_t* bufPtr);
     virtual void render(uint16_t x, uint16_t y, uint8_t tileNum);
+    virtual void renderByIndex(uint16_t x, uint16_t y, uint8_t tileNum);//does the same thing but use HAL's index rendering
     uint8_t* getTileData(uint8_t tileNum);
 };
 

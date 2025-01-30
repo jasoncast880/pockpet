@@ -54,126 +54,17 @@ void graphics_test(){ //testing the HAL abstractions
     sleep_ms(2000);
 }
 
-void tile_test_16() { //test the tile class
-    Tile tile1(16, (uint8_t*)&rook_tileset_16[512*1]);
-    tile1.render(25,25);
-    sleep_ms(200);
-    Tile tile10(16, (uint8_t*)&rook_tileset_16[512*10]);
-    tile10.render(50,25);
-    sleep_ms(200);
-    Tile tile12(16, (uint8_t*)&rook_tileset_16[512*12]);
-    tile12.render(75,25);
-    sleep_ms(200);
-    Tile tile6(16, (uint8_t*)&rook_tileset_16[512*6]);
-    tile6.render(100,25);
-    sleep_ms(200);
-}
+void tileset_demo(){ 
+    Tileset* amp_tileset = new Tileset(16,(uint8_t*)ampalaya_tileset_16);
 
-void tile_test_16_alt() { //test the tile class
-    Tile tile1(16, (uint8_t*)&ampalaya_tileset_16[512*1]);
-    tile1.render(25,100);
-    sleep_ms(200);
-    Tile tile10(16, (uint8_t*)&ampalaya_tileset_16[512*10]);
-    tile10.render(25+16,100);
-    sleep_ms(200);
-    Tile tile21(16, (uint8_t*)&ampalaya_tileset_16[512*21]);
-    tile21.render(25+16+16,100);
-    sleep_ms(200);
+    amp_tileset->renderByIndex(10,10,3);
     
-}
-
-void tileset_demo_16(){
-    Tileset* tileset_ptr = new Tileset(16, (uint8_t*)rook_tileset_16);
-    for(int j = 0; j<15;j++){ //should be 
-        for(int i = 0; i<16;i++){
-            tileset_ptr->render(16*i, 16*j, ((16*j)+i));
-            //sleep_ms(del);
-        }
-    }
 }
 
 void tilemap_demo(){
     Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
     Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
-}
-
-void clr_screen(){ //i gotta make a util 'HAL' file...
-    ili9341_setAddrWindow(0,0,320,240);
-    ili9341_writeCommand(RAM_WR);
-    for(int i=0; i<=(320*240);i++){
-        ili9341_writeData(0xFF); //yello
-        ili9341_writeData(0xC0);
-    }
-    ili9341_writeCommand(NOOP);
-}
-
-//fix later
-void font_demo(){
-    char charArr[] = { //first index of is at 196-indexed tile of the rook tileset (starting from bot-left)
-    /*
-    ' ','!','\"','#','$','%','\'','(',')','*','+',',','-','.','/',
-    '0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?',
-    '@','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
-    'P','Q','R','S','T','U','V','W','X','Y','Z','[','\\',']','^','_',
-    '~','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',//'~' is a placeholder for a checkmark tile
-    'p','q','r','s','t','u','v','w','x','y','z','{','|','}'
-    */
-    '/','.','-',',','+','*',')','(','\'','%','$','#','\"','!',' ',
-    '?','>','=','<',';',':','9','8','7','6','5','4','3','2','1','0',
-    'O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','@',
-    '_','^',']','\\','[','Z','Y','X','W','V','U','T','S','R','Q','P',
-    'o','n','m','l','k','j','i','h','g','f','e','d','c','b','a','~', //last is placeholder
-    '~','~','}','|','{','z','y','x','w','v','u','t','s','r','q','p' //first two in this row are placeholders
-    };
-
-    Tileset* melon_set_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
-    Base* base = new Base(melon_set_ptr, (uint8_t*)tile_bg_16);
-    Tileset* rookTilesetPtr = new Tileset(16, (uint8_t*)rook_tileset_16);
-    Font rookFont(rookTilesetPtr,charArr,(sizeof(charArr)/sizeof(char)));
-
-    //sprite stuff here
-
-    base->render();
-
-    Sprite sprit(base, 2*16, 2*16, 16, 11,melon_set_ptr,(uint8_t*)tile_menu_spr_16);
-    sprit.render();
-    rookFont.printFont(70,110,"Hello World");
-
-    delete base;
-    delete melon_set_ptr;
-    delete rookTilesetPtr;
-}
-
-void sprite_base_test(){
-    uint8_t* map_arr[] = { (uint8_t*)&melon_spritemap_1_16[0], (uint8_t*)&melon_spritemap_5_16[0],(uint8_t*)&melon_spritemap_2_16[0],(uint8_t*)&melon_spritemap_6_16[0],(uint8_t*)&melon_spritemap_3_16[0],(uint8_t*)&melon_spritemap_7_16[0],(uint8_t*)&melon_spritemap_4_16[0],(uint8_t*)&melon_spritemap_8_16[0] };
-
-    Tileset* melon_set_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
-
-    Base* base = new Base(melon_set_ptr, (uint8_t*)tile_bg_16);
-
-    base->render();
-
-    sleep_ms(500);
-
-    for(int i=0;i<=7;i++){
-        Sprite sprit(base, 15*16, 1*16, 4, 4,melon_set_ptr,map_arr[i]);
-        sprit.render();
-        sleep_ms(50);
-        //sprit.mask_on_mapGuide(15,1,4,4);
-
-        base->render();
-        
-        /*
-        if(i>=7){
-            i=-1;
-        }
-        */
-        
-        sleep_ms(500);
-    }
-
-    delete melon_set_ptr;
 }
 
 int main() {
@@ -184,8 +75,6 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
-    sprite_base_test(); 
-    sleep_ms(1000);
-    font_demo();
+    tileset_demo();
 
 }

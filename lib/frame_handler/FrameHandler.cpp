@@ -52,6 +52,17 @@ void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
     //revert to original bufPtr
 }
 
+void Tileset::renderByIndex(uint16_t x, uint16_t y, uint8_t tileNum) {
+    ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
+    ili9341_writeCommand(RAM_WR);
+    for(int i = 0; i<=((this->tile_len)*(this->tile_len));i++){
+        ili9341_writeColorByIndex(*(this->bufPtr+(tileNum*tile_len*tile_len)+i));
+    }
+    ili9341_writeCommand(NOOP);
+    //sleep_ms(250);// temp for timing purposes. tweak later.
+    //revert to original bufPtr
+}
+
 Tilemap::Tilemap(){} //default constructor (not used)
 
 Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){

@@ -158,3 +158,31 @@ static void ili9341_init_sub_vram(){
     ili9341_writeData(0xAC);
     ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. THIS WORKS....
 }
+
+void ili9341_writeColorByIndex(uint8_t index){
+    //ensure that you're in Write RAM mode before calling this funct
+    if(index==0){
+        ili9341_writeData(0x00);
+        ili9341_writeData(0x00);
+    }
+    else if(index==1){ //wht
+        ili9341_writeData(0xff);
+        ili9341_writeData(0xff);
+    }
+    else if(index==2){ //ylo
+        ili9341_writeData(0xff);
+        ili9341_writeData(0xd0);
+    }
+    else if(index==3){ //orng
+        ili9341_writeData(0xfc);
+        ili9341_writeData(0x66);
+    }
+    else if(index==4){ //grn
+        ili9341_writeData(0x67);
+        ili9341_writeData(0xf7);
+    }
+    else if(index==5){ //dark blu
+        ili9341_writeData(0x00);
+        ili9341_writeData(0x4e);
+    }
+}

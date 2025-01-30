@@ -110,6 +110,8 @@ void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa);
 void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
 void ili9341_exitScrollMode(); 
 
+void ili9341_writeColorByIndex(uint8_t index);
+
 #ifdef __cplusplus
 }
 #endif                                                       
