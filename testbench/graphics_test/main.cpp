@@ -55,17 +55,17 @@ void graphics_test(){ //testing the HAL abstractions
 }
 
 void tileset_demo(){ 
-    Tileset* amp_tileset = new Tileset(16,(uint8_t*)ampalaya_tileset_16);
+    Tileset* amp_tileset = new Tileset(16,(uint8_t*)ampalaya_tileset_16,40);
 
     for(int j = 0; j<(5); j++){
         for(int i = 0; i<(6); i++){
-            amp_tileset->renderByIndex(i*16,j*16,i+(j*6));
+            amp_tileset->render(i*16,j*16,i+(j*6));
         }
     }
 }
 
 void tilemap_demo(){
-    Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16);
+    Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16,40);
     Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
 }

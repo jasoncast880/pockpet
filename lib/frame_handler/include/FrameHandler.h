@@ -5,28 +5,32 @@
 
 #include <string>
 
-class Tile { //unused??
-private:
+struct Tile { //implement assuming indexed color
+public:
     int tile_len;        
     uint8_t* buf_ptr;
 
-public:
+    Tile();
     Tile(int tile_len, uint8_t* buf_ptr);
-    void render(uint16_t x, uint16_t y); //bot left corner (x,y)
+    int render(uint16_t x, uint16_t y); //bot left corner (x,y)
 };
 
 struct Tileset{
 public:
     int tile_len;
     uint8_t* bufPtr;
-    int tileNum;
+    uint8_t numTiles;
+
+    Tile* tileArr;
 
     //default constructor for passing by reference
     Tileset();
-    Tileset(int tile_len, uint8_t* bufPtr);
-    virtual void render(uint16_t x, uint16_t y, uint8_t tileNum);
-    virtual void renderByIndex(uint16_t x, uint16_t y, uint8_t tileNum);//does the same thing but use HAL's index rendering
+    Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles);
+    virtual void render(uint16_t x, uint16_t y, uint8_t tileNum); 
     uint8_t* getTileData(uint8_t tileNum);
+    void setTileData(uint8_t tileNum);
+
+    ~Tileset();
 };
 
 /* maps to the frame, so it should be (assuming 16 pix tilemaps)
@@ -83,19 +87,18 @@ public:
     void mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height); //subroutine on constructor call
 };
 
-//doesn't work...
 struct Char_16{ //simplified hash-map structure for storing font data
 public:
     char glyph;
-    uint8_t* bufPtr;
-    size_t len=16*16*2;
+    uint8_t tileNum;
+    size_t len=16*16;
 };
 
 struct Font{
 public:
     Tileset* tileset;
     char* charBuf;
-    Char_16 fontArr[250]; //might have to alter this
+    Char_16 fontArr[250]; 
 
     Font();
     Font(Tileset* tileset, char* charBuf,size_t len);

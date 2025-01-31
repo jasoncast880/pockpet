@@ -15,52 +15,49 @@
  *
  */
 
-
+Tile::Tile(){} //unused
 Tile::Tile(int tile_len, uint8_t* bufPtr) {
     this->tile_len = tile_len;
     this->buf_ptr = buf_ptr;
 }
 
-//testing right now...
-//need to fix up ampalaya tools. so the tileset bmp makes sense
-void Tile::render(uint16_t x, uint16_t y) {
-    ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
-    ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer(this->bufPtr, (this->tile_len)*(this->tile_len)*(2)); 
-    ili9341_writeCommand(NOOP);
-    sleep_ms(250);// temp for timing purposes. tweak later.
-}
-
-Tileset::Tileset() {
-}
-
-Tileset::Tileset(int tile_len, uint8_t* bufPtr) {
-    this->tile_len = tile_len;
-    this->bufPtr = bufPtr;
-}
-
-uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
-    return (bufPtr+((16*16*2)*tileNum));
-}
-
-void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
-    ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
-    ili9341_writeCommand(RAM_WR);
-    ili9341_writeDataBuffer(this->bufPtr+(tileNum*tile_len*tile_len*2), (tile_len)*(tile_len)*(2)); 
-    ili9341_writeCommand(NOOP);
-    //sleep_ms(250);// temp for timing purposes. tweak later.
-    //revert to original bufPtr
-}
-
-void Tileset::renderByIndex(uint16_t x, uint16_t y, uint8_t tileNum) {
+//this renders indexed color
+int Tile::render(uint16_t x, uint16_t y) {
+    int flag = 0;
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
     for(int i = 0; i<=((this->tile_len)*(this->tile_len));i++){
-        ili9341_writeColorByIndex(*(this->bufPtr+(tileNum*tile_len*tile_len)+i));
+        if(*(this->buf_ptr+i)==255){
+            flag = 1;
+        }
+        else{
+        ili9341_writeColorByIndex(*(this->buf_ptr+i));
+        }
     }
     ili9341_writeCommand(NOOP);
-    //sleep_ms(250);// temp for timing purposes. tweak later.
-    //revert to original bufPtr
+    return flag;
+}
+
+Tileset::Tileset() { //unused
+}
+
+Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
+    this->tile_len = tile_len;
+    this->bufPtr = bufPtr;
+    this->numTiles = numTiles;
+
+    tileArr = new Tile[numTiles];
+    for (int i=0;i<=numTiles;i++){
+        tileArr[i] = Tile(tile_len,(bufPtr+(i*tile_len*tile_len)));
+    }
+}
+
+uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
+    return tileArr[tileNum].buf_ptr; //imp later
+}
+
+void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
+    tileArr[tileNum].render(x,y);
 }
 
 Tilemap::Tilemap(){} //default constructor (not used)
@@ -86,19 +83,24 @@ Tilemap::Tilemap(uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, T
 
 void Tilemap::render(){ 
     int counter = 0;
-    for(int i=0; i<tiles_high; i++){
-        for(int j=0;j<tiles_wide;j++){
-            tileset->render((x+j*tileset->tile_len),(y+i*tileset->tile_len),mapBuf[counter]);
+
+    for(int i = 0; i<tiles_high; i++){
+        for(int j=0;j<tiles_wide; j++){
+            tileset->render((x+j*tileset->tile_len),
+                    (y+i*tileset->tile_len),
+                    mapBuf[counter]
+                    );
             counter++;
         }
     }
 }
 
+//need to account for edge case rendering
 Base::Base(){}
-Base::Base(Tileset* tileset, uint8_t* mapBuf){ //assuming a 16 pixel tileset
+Base::Base(Tileset* tileset, uint8_t* mapBuf){ 
     this->x=0;
     this->y=0;
-    this->tiles_wide = 320/tileset->tile_len;
+    this->tiles_wide = 320/tileset->tile_len; //hardcoded screen dims!!
     this->tiles_high = 240/tileset->tile_len;
 
     this->tileset = tileset;
@@ -126,14 +128,16 @@ void Base::render(){
                 ili9341_writeCommand(NOOP);
             }
             else{ //clean up 'dirty' tiles on a base render pass
-                tileset->render((j*tileset->tile_len),(i*tileset->tile_len),mapBuf[counter]);
+                tileset->render((j*tileset->tile_len),
+                        (i*tileset->tile_len),
+                        mapBuf[counter]);
                 *(mapGuidePtr+(tiles_wide*i+j))=0;
             }
             counter++;
         }
     }
 
-    printMapGuide();
+    printMapGuide(); //for debug
 }
 
 void Base::printMapGuide(){
@@ -240,13 +244,15 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
 
 Font::Font(){}
 
+//only works for 16 pixel fonts!!
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){
     printf("size of struct Char_16: %zu bytes\n",sizeof(struct Char_16));
+    this->tileset = tileset;
     for(int i=0;i<(int)len;i++){
         size_t index = static_cast<size_t>(*charBuf);
         fontArr[index].glyph=*charBuf;
-        fontArr[index].bufPtr=tileset->getTileData(222-i);
+        fontArr[index].tileNum=(222-i); //specific to rook tileset
         charBuf++;
     } //hashes all of the chars.
     printf("finished loop");
@@ -254,11 +260,9 @@ Font::Font(Tileset* tileset, char* charBuf, size_t len){
 
 void Font::printFont(uint8_t x, uint8_t y, std::string txt){
     for(int i=0; i<txt.size(); i++){
-        uint8_t* tempBuf=fontArr[static_cast<size_t>(txt[i])].bufPtr;
+        uint8_t temp=fontArr[static_cast<size_t>(txt[i])].tileNum;
 
-        ili9341_setAddrWindow(x+(16*i)+2, y, 16,16); //ASSUME A 16px tileset
-        ili9341_writeCommand(RAM_WR);
-        ili9341_writeDataBuffer(tempBuf, 16*16*2);
+        tileset->render(x+(16*i)+2, y, temp);
         ili9341_writeCommand(NOOP);
         sleep_ms(250);
     }
