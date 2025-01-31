@@ -8,10 +8,10 @@
 class Tile { //unused??
 private:
     int tile_len;        
-    uint8_t* bufPtr;
+    uint8_t* buf_ptr;
 
 public:
-    Tile(int tile_len, uint8_t* bufPtr);
+    Tile(int tile_len, uint8_t* buf_ptr);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
 };
 

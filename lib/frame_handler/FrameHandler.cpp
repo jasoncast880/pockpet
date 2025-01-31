@@ -18,7 +18,7 @@
 
 Tile::Tile(int tile_len, uint8_t* bufPtr) {
     this->tile_len = tile_len;
-    this->bufPtr = bufPtr;
+    this->buf_ptr = buf_ptr;
 }
 
 //testing right now...
