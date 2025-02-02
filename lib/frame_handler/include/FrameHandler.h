@@ -12,7 +12,7 @@ public:
 
     Tile();
     Tile(int tile_len, uint8_t* buf_ptr);
-    int render(uint16_t x, uint16_t y); //bot left corner (x,y)
+    void render(uint16_t x, uint16_t y); //bot left corner (x,y)
 };
 
 struct Tileset{

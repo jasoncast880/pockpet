@@ -56,12 +56,7 @@ void graphics_test(){ //testing the HAL abstractions
 
 void tileset_demo(){ 
     Tileset* amp_tileset = new Tileset(16,(uint8_t*)ampalaya_tileset_16,40);
-
-    for(int j = 0; j<(5); j++){
-        for(int i = 0; i<(6); i++){
-            amp_tileset->render(i*16,j*16,i+(j*6));
-        }
-    }
+    amp_tileset->render(16,16,2);
 }
 
 void tilemap_demo(){
@@ -79,5 +74,10 @@ int main() {
     ili9341_initialize(17,20,21,19,18,16);
 
     tileset_demo();
+
+    /*
+    sleep_ms(2000);
+    tilemap_demo();
+    */
 
 }

@@ -15,27 +15,22 @@
  *
  */
 
-Tile::Tile(){} //unused
-Tile::Tile(int tile_len, uint8_t* bufPtr) {
+Tile::Tile():tile_len(0),buf_ptr(nullptr){} //unused
+Tile::Tile(int tile_len, uint8_t* bufPtr){
     this->tile_len = tile_len;
     this->buf_ptr = buf_ptr;
 }
 
 //this renders indexed color
-int Tile::render(uint16_t x, uint16_t y) {
+void Tile::render(uint16_t x, uint16_t y) {
     int flag = 0;
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
-    for(int i = 0; i<=((this->tile_len)*(this->tile_len));i++){
-        if(*(this->buf_ptr+i)==255){
-            flag = 1;
-        }
-        else{
-        ili9341_writeColorByIndex(*(this->buf_ptr+i));
-        }
+    for(int i = 0; i<((this->tile_len)*(this->tile_len));i++){
+       ili9341_writeColorByIndex(*(this->buf_ptr+i));
     }
     ili9341_writeCommand(NOOP);
-    return flag;
+    //return flag;
 }
 
 Tileset::Tileset() { //unused
@@ -47,9 +42,11 @@ Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
     this->numTiles = numTiles;
 
     tileArr = new Tile[numTiles];
-    for (int i=0;i<=numTiles;i++){
+    for (int i=0;i<numTiles;i++){
         tileArr[i] = Tile(tile_len,(bufPtr+(i*tile_len*tile_len)));
     }
+
+    tileArr[2].render(16,16);
 }
 
 uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
