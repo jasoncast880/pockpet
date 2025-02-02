@@ -3,6 +3,7 @@
 #include "pico/stdlib.h"
 #include "ili9341.h"
 
+#include <cstring>
 #include <string>
 
 struct Tile { //implement assuming indexed color
@@ -12,6 +13,7 @@ public:
 
     Tile();
     Tile(int tile_len, uint8_t* buf_ptr);
+    Tile& operator=(const Tile& other);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
 };
 

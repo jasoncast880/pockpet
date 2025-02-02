@@ -16,21 +16,32 @@
  */
 
 Tile::Tile():tile_len(0),buf_ptr(nullptr){} //unused
-Tile::Tile(int tile_len, uint8_t* bufPtr){
+Tile::Tile(int tile_len, uint8_t* buf_ptr){
     this->tile_len = tile_len;
     this->buf_ptr = buf_ptr;
 }
 
+Tile& Tile::operator = (const Tile& copySource){
+    //self-assignment check
+    if(this == &copySource) return *this;
+        
+    delete[] buf_ptr; //free old mem
+    tile_len = copySource.tile_len;
+
+    //allocate new mem and cpy data
+    buf_ptr = new uint8_t[tile_len*tile_len];
+    std::memcpy(buf_ptr,copySource.buf_ptr, tile_len*tile_len);
+    return *this;
+}
+
 //this renders indexed color
 void Tile::render(uint16_t x, uint16_t y) {
-    int flag = 0;
     ili9341_setAddrWindow(x, y, (this->tile_len), (this->tile_len));
     ili9341_writeCommand(RAM_WR);
     for(int i = 0; i<((this->tile_len)*(this->tile_len));i++){
        ili9341_writeColorByIndex(*(this->buf_ptr+i));
     }
     ili9341_writeCommand(NOOP);
-    //return flag;
 }
 
 Tileset::Tileset() { //unused
@@ -46,8 +57,10 @@ Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
         tileArr[i] = Tile(tile_len,(bufPtr+(i*tile_len*tile_len)));
     }
 
-    tileArr[2].render(16,16);
+   tileArr[2].render(16,16);
 }
+
+Tileset::~Tileset(){}
 
 uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
     return tileArr[tileNum].buf_ptr; //imp later

@@ -55,15 +55,21 @@ void graphics_test(){ //testing the HAL abstractions
 }
 
 void tileset_demo(){ 
-    Tileset* amp_tileset = new Tileset(16,(uint8_t*)ampalaya_tileset_16,40);
-    amp_tileset->render(16,16,2);
+    Tileset amp_tileset(16,(uint8_t*)ampalaya_tileset_16,40);
+    for(int j = 0; j<4; j++){
+        for(int i = 0; i<6; i++){
+            amp_tileset.render(16*i,16*j,((j*6)+i));
+        }
+    }
 }
 
+/*
 void tilemap_demo(){
     Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16,40);
     Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
 }
+*/
 
 int main() {
     stdio_init_all();
@@ -73,6 +79,7 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
+    graphics_test();
     tileset_demo();
 
     /*
