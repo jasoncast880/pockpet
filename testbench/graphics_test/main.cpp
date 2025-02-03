@@ -63,13 +63,11 @@ void tileset_demo(){
     }
 }
 
-/*
 void tilemap_demo(){
     Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16,40);
     Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
     amp_tilemap.render();
 }
-*/
 
 int main() {
     stdio_init_all();
@@ -79,12 +77,9 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
-    graphics_test();
     tileset_demo();
 
-    /*
     sleep_ms(2000);
     tilemap_demo();
-    */
 
 }

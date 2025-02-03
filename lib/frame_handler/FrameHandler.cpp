@@ -15,7 +15,7 @@
  *
  */
 
-Tile::Tile():tile_len(0),buf_ptr(nullptr){} //unused
+Tile::Tile():tile_len(0),buf_ptr(nullptr){} 
 Tile::Tile(int tile_len, uint8_t* buf_ptr){
     this->tile_len = tile_len;
     this->buf_ptr = buf_ptr;
@@ -56,8 +56,6 @@ Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
     for (int i=0;i<numTiles;i++){
         tileArr[i] = Tile(tile_len,(bufPtr+(i*tile_len*tile_len)));
     }
-
-   tileArr[2].render(16,16);
 }
 
 Tileset::~Tileset(){}
@@ -80,15 +78,6 @@ Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
     this->y=0;
     this->tiles_wide = 320/tileset->tile_len;
     this->tiles_high = 240/tileset->tile_len;
-}
-
-Tilemap::Tilemap(uint8_t x, uint8_t y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
-    this->x = x;
-    this->y = y;
-    this->tiles_wide = tiles_wide;
-    this->tiles_high = tiles_high;
-    this->tileset = tileset;
-    this->mapBuf = mapBuf;
 }
 
 void Tilemap::render(){ 
@@ -128,6 +117,8 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){
     for(int i=0; i<guideLen; i++){
         mapGuide[i]=1;
     }
+
+    spareTileset = new Tileset(tileset->tile_len,nullptr,20);
 }
 
 void Base::render(){
@@ -237,10 +228,6 @@ void Sprite::render(){ //need to account for alpha processing...
 //!!! @param : by tiles, not by pixel!!!
 void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
     //@brief: params: tileGuide's x coord, tileGuide's y coord, tiles wide, height
-    //make 1's to 0's on the appropriate mask guide tiles
-    //any sprite tile with alpha processing that moves,
-    //or is removed from a guide-tile entirely
-
     uint8_t* temp = basePtr->mapGuidePtr+(y0*20)+x0;
     printf("0x%d\n", temp);
     for(uint8_t i=y0;i<height+y0;i++){
@@ -253,7 +240,6 @@ void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t hei
 }
 
 Font::Font(){}
-
 //only works for 16 pixel fonts!!
 //Font: Char_16 fontArr[100]
 Font::Font(Tileset* tileset, char* charBuf, size_t len){

@@ -43,7 +43,7 @@ void tileset_font_initializer(){
     amp_tileset = Tileset(16, (uint8_t*)&ampalaya_tileset_16[0]);
     rook_tileset = Tileset(16, (uint8_t*)&rook_tileset_16[0]);
 
-    static char charArr[] = {
+    static char charArr[] = { //order of tiles for the rook tileset
          '/','.','-',',','+','*',')','(','\'','%','$','#','\"','!',' ',
         '?','>','=','<',';',':','9','8','7','6','5','4','3','2','1','0',
         'O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','@',
