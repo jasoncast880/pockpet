@@ -54,20 +54,15 @@ void graphics_test(){ //testing the HAL abstractions
     sleep_ms(2000);
 }
 
-void tileset_demo(){ 
-    Tileset amp_tileset(16,(uint8_t*)ampalaya_tileset_16,40);
-    for(int j = 0; j<4; j++){
-        for(int i = 0; i<6; i++){
-            amp_tileset.render(16*i,16*j,((j*6)+i));
-        }
-    }
+Tileset amp_tileset, rook_tileset;
+Base baseSprite;
+//Font rookFont;
+
+void tileset_font_init(){
+    amp_tileset = Tileset(16, (uint8_t*)&ampalaya_tileset_16[0], 40);
+    baseSprite = Base((Tileset*)&amp_tileset, (uint8_t*)&tile_bg_16[0]);
 }
 
-void tilemap_demo(){
-    Tileset* amp_tileset_ptr = new Tileset(16, (uint8_t*)ampalaya_tileset_16,40);
-    Tilemap amp_tilemap(amp_tileset_ptr, (uint8_t*)tile_bg_16);
-    amp_tilemap.render();
-}
 
 int main() {
     stdio_init_all();
@@ -77,9 +72,17 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16);
 
-    tileset_demo();
+    tileset_font_init();
+
+    //tileset test
+    sleep_ms(2000);
+    for(int i = 0; i<5; i++){
+        for(int j = 0; j<6; j++){
+            amp_tileset.render(j*16,i*16,(i*6)+j);
+        }
+    }
 
     sleep_ms(2000);
-    tilemap_demo();
+    baseSprite.render();
 
 }

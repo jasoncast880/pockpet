@@ -21,7 +21,7 @@ Tile::Tile(int tile_len, uint8_t* buf_ptr){
     this->buf_ptr = buf_ptr;
 }
 
-Tile& Tile::operator = (const Tile& copySource){
+Tile& Tile::operator=(const Tile& copySource){
     //self-assignment check
     if(this == &copySource) return *this;
         
@@ -137,7 +137,6 @@ void Base::render(){
             counter++;
         }
     }
-
     printMapGuide(); //for debug
 }
 

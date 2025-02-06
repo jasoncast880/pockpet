@@ -60,7 +60,7 @@ public:
     Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
 
-    void alterTile(uint8_t tileNo, uint8_t newTile);
+    void alterTile(Tile* tile, Tile* newTile);
 }; 
 
 struct Base: public Tilemap{
@@ -91,14 +91,7 @@ public:
     uint8_t* guidePtr;
 
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
-    void render(); //render will 'temporarily' render the sprite, once its lifecycle is done and/or its position changes, the space it occupies in vram becomes the base sprite again
-    
-    //1) retreive the tiles of the sprite object, associated configurations
-    //2) retrieve data of the base objects'tiles that this object will be over
-    //3) mask these tiles inside of the sprite object subroutine and then
-    //prepare them to be written in base class's spare tiles tileset
-    //4) render spare tiles in the proper configuration (from base::render())
-
+    void render(); 
 };
 
 struct Char_16{ //simplified hash-map structure for storing font data
