@@ -3,6 +3,7 @@
 #include "pico/stdlib.h"
 #include "ili9341.h"
 
+#include <stdexcept>
 #include <cstring>
 #include <string>
 
@@ -84,13 +85,17 @@ public:
 struct Sprite: public Tilemap{
 private:
     //helper functions
-    void set_position(int x0, int y0);
-    void mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height); //subroutine on constructor call
+    void calcTileIndeces(); //get the needed indices for the tilemap
+    void spriteMask(); //mask the tiles as u go
 public:
     Base* basePtr;
-    uint8_t* guidePtr;
+    uint8_t* bufPtr; //
+
+    uint8_t* tileIndeces; //
+    Tileset* tempTiles; //this is what's passed to the base object.
 
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+    ~Sprite();
     void render(); 
 };
 

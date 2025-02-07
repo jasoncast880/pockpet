@@ -74,7 +74,7 @@ int main() {
 
     tileset_font_init();
 
-    //tileset test
+    //tileset test OK
     sleep_ms(2000);
     for(int i = 0; i<5; i++){
         for(int j = 0; j<6; j++){
@@ -82,6 +82,7 @@ int main() {
         }
     }
 
+    //base test OK
     sleep_ms(2000);
     baseSprite.render();
 

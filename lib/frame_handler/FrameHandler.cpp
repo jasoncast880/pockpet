@@ -106,7 +106,7 @@ Base::Base(Tileset* tileset, uint8_t* mapBuf){
     this->mapBuf = mapBuf;
 
     this->guideLen = tiles_wide*tiles_high; //size of arrays
-    uint8_t* mapGuide = new uint8_t[guideLen]; //i will never release you.
+    uint8_t* mapGuide = new uint8_t[guideLen]; //i will not release you.
     this->mapGuidePtr=&mapGuide[0];
 
     printf("from Base constructor:");
@@ -164,42 +164,77 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->tileset = tileset;
     this->mapBuf = mapBuf;
 
-    this->guidePtr=basePtr->mapGuidePtr;
+    size_t len = (tileset->tile_len*tiles_wide)*(tileset->tile_len*tiles_high);
+    //BUFPTR needs to be contiguous so that it can be handles piecewise
+    bufPtr = new uint8_t[len]; 
+
+    //populate bufPtr with the tilemap's tiles line by line
+    int counter; //control counter var with offsets...
+    for(int i = 0; i<(tileset->tile_len*tiles_high); i++){
+        for(int j = 0; j<(tileset->tile_len*tiles_wide); j++){
+            
+            //do incrementing of counter here...
+            uint8_t* temp=tileset->getTileData(mapBuf[counter]);
+            for(int k = 0; k<(tileset->tile_len); k++){ //after each row you have to change counter
+                                                        //to get the data from the next tile
+                bufPtr[i*(tileset->tile_len*tiles_wide)+j]=;
+            }
+        }
+        //what the fuck
+    }
+
+    calcTileIndeces(); //define the appropriate base tilemap indeces
+    spriteMask(); //make the appropriate masked tiles based on the sectors ...
+                  
+    //polymorphism: Sprite::render() will alter the tileset of Base, 
+    //swap temp and original, use a identical queue in order to keep track
+    //on destructor call, replace all of the things somehow...
+
 }
 
-void Sprite::set_position(int x0, int y0){
-    //check to see if the new position frees up base tiles 
-    //to be rendered out; 'dirty tiles'
-    int dx, dy;
-    //todo: make a getDiff func
-    if ((x0-x)>=16){ //only works for sprites moving up, left
-        dx=(x0-x);
+Sprite::~Sprite(){} //will really need this LMAO
+
+void Sprite::calcTileIndeces(){
+
+    uint8_t width, height; //WIDTH HEIGHT of the blocks that sprite takes up on base
+    if(!((tileset->tile_len+x)%(tileset->tile_len))){
+        width = tiles_wide;
+    } else{
+        width = tiles_wide+1;
     }
 
-    if ((y0-y)>=16){ //only works for sprites moving up, left
-        dy=(y0-y);
+    if(!((tileset->tile_len+y)%(tileset->tile_len))){
+        height = tiles_high;
+    } else{
+        height = tiles_high+1;
     }
 
-    //rounding up formula: (a+b-1)/b
+    tileIndeces = new uint8_t[width*height];
 
-    if(dx&&!dy){
-        dx=(dx+16-1)/16;
-        mask_on_mapGuide(x/16,y/16,dx,tiles_high);
+    //gives you the indeces of the tiles you must change on mapGuide, base tilemap
+    uint8_t basePtrHeight = basePtr->tiles_high;
+    uint8_t basePtrWidth = basePtr->tiles_wide;
+    for(int i=0;i<height;i++){
+        for(int j=0;j<width;j++){
+            tileIndeces[(i*width)+j] = (y/tileset->tile_len + i)*basePtrWidth+(x/tileset->tile_len + j);
+        }
     }
-    else if(!dx&&dy){
-        dy=(dy+16-1)/16;
-        mask_on_mapGuide(x/16,y/16,tiles_wide,dy);
-    }
-    else{ //diagonal (ish) motion
-        printf("wip"); //i nono wanna
-    }
+    //caveats: only works for one sprite, NO collisions allowed
+}
 
-    this->x = x0;
-    this->y = x0;
+void Sprite::spriteMask(){
+    //loop through the 'rows' of bufPtr, until there are no more data in buf
+    //as you increment through the necessary offsets, you can det. which tile to
+    //alter, switching as you go
     
+    //make a copy of the right tiles based on calcTileIndeces in heap
+    //
+    //alter them accordingly
+    //?send the tiles to base, call base functions to alter tilemap?
 }
 
 void Sprite::render(){ //need to account for alpha processing...
+    //sprite render should just be a way to reinitialize/change positions/tiles
     int counter=0;
     //'blindly' render; IF there is alpha processing or a sprite isn't rendered 
     //on a tile, then update the tile guide so base object can re-render 
@@ -207,35 +242,10 @@ void Sprite::render(){ //need to account for alpha processing...
     
     for(int i = 0; i<tiles_high; i++){
         for(int j = 0; j<tiles_wide; j++){
-            //please assume a 16-length tileset
-            if(mapBuf[counter]==255){
-                counter++;
-                mask_on_mapGuide(((x/16)+j),((y/16)+i),1,1);
-                //edge case to implement: off-tiles.
-                //this implementation assumes that the 
-                //sprite is squarely on a tile!!!!
-            }
-            else {
-                tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
-                counter++;
-            }
+               tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
         }
     }
     basePtr->printMapGuide();
-}
-
-//!!! @param : by tiles, not by pixel!!!
-void Sprite::mask_on_mapGuide(uint8_t x0, uint8_t y0, uint8_t width, uint8_t height){
-    //@brief: params: tileGuide's x coord, tileGuide's y coord, tiles wide, height
-    uint8_t* temp = basePtr->mapGuidePtr+(y0*20)+x0;
-    printf("0x%d\n", temp);
-    for(uint8_t i=y0;i<height+y0;i++){
-        for(uint8_t j=x0;j<width+x0;j++){
-            *temp=1;
-            temp++;
-        }
-        temp+=(20-width);
-    }
 }
 
 Font::Font(){}
