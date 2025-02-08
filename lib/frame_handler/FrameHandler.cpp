@@ -168,20 +168,27 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     //BUFPTR needs to be contiguous so that it can be handles piecewise
     bufPtr = new uint8_t[len]; 
 
-    //populate bufPtr with the tilemap's tiles line by line
-    int counter; //control counter var with offsets...
-    for(int i = 0; i<(tileset->tile_len*tiles_high); i++){
-        for(int j = 0; j<(tileset->tile_len*tiles_wide); j++){
-            
-            //do incrementing of counter here...
-            uint8_t* temp=tileset->getTileData(mapBuf[counter]);
-            for(int k = 0; k<(tileset->tile_len); k++){ //after each row you have to change counter
-                                                        //to get the data from the next tile
-                bufPtr[i*(tileset->tile_len*tiles_wide)+j]=;
+    int counter = 0;
+    int counterOffset = 0;
+    int bufPtrOffset = 0;
+    int tilesetOffset = 0; //poorly named vars...
+    
+    for(int i = 0; i<(tileset->tile_len*tiles_high); i++){ //all the rows processed in the array
+        for(int j = 0; j<(tiles_wide); j++){ //loop through the entire row of a sprite
+            for(int k = 0; k<(tileset->tile_len); k++){ //loop through a row of a tile
+                bufPtr[bufPtrOffset+k] = *(tileset->getTileData(counter)+(tilesetOffset+k));
             }
+            //increment the buffer offsets here
+            counter++;
+            bufPtrOffset+=tileset->tile_len;
+            tilesetOffset+=(tileset->tile_len)*(i%tileset->tile_len);
         }
-        //what the fuck
+        if(counter%tiles_wide){
+            counter-=tiles_wide;
+        } 
     }
+
+    //this should make bufPtr viable for use
 
     calcTileIndeces(); //define the appropriate base tilemap indeces
     spriteMask(); //make the appropriate masked tiles based on the sectors ...
@@ -194,7 +201,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
 
 Sprite::~Sprite(){} //will really need this LMAO
 
-void Sprite::calcTileIndeces(){
+void Sprite::calcTileIndeces(){ //ok?
 
     uint8_t width, height; //WIDTH HEIGHT of the blocks that sprite takes up on base
     if(!((tileset->tile_len+x)%(tileset->tile_len))){
