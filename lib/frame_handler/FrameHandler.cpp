@@ -186,7 +186,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
         if(counter%tiles_wide){
             counter-=tiles_wide;
         } 
-    }
+    } //this array must be tested!!!
 
     //this should make bufPtr viable for use
 
@@ -201,6 +201,14 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
 
 Sprite::~Sprite(){} //will really need this LMAO
 
+void Sprite::printBufPtr(){
+    //testing here
+    ili9341_setAddrWindow(10,10,(tileset->tile_len*tiles_wide),(tileset->tile_len*tiles_high));
+    for(int i = 0; i<(tileset->tile_len*tiles_wide); i++){
+        ili9341_writeColorByIndex(bufPtr[i]);
+    }
+    ili9341_writeData(NOOP);
+}
 void Sprite::calcTileIndeces(){ //ok?
 
     uint8_t width, height; //WIDTH HEIGHT of the blocks that sprite takes up on base

@@ -97,6 +97,7 @@ public:
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
     void render(); 
+    void printBufPtr();
 };
 
 struct Char_16{ //simplified hash-map structure for storing font data
