@@ -16,6 +16,7 @@ public:
     Tile(int tile_len, uint8_t* buf_ptr);
     Tile& operator=(const Tile& other);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
+    void changePixel(uint16_t x, uint16_t y, uint8_t color); //bot left corner (x,y)
 };
 
 struct Tileset{
@@ -95,7 +96,7 @@ public:
     uint8_t* bufPtr;//plain buf made in Sprite constructor
     size_t buf_len;
 
-    //other positional data...
+    // positional data;
     int x,y;
     //describes the height/width of the spritemap
     uint8_t tiles_wide, tiles_high; 

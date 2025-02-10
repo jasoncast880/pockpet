@@ -44,6 +44,10 @@ void Tile::render(uint16_t x, uint16_t y) {
     ili9341_writeCommand(NOOP);
 }
 
+void Tile::changePixel(uint16_t x, uint16_t y, uint8_t color){
+    this->buf_ptr[(x+(this->tile_len*y))]=color;
+}
+
 Tileset::Tileset() { //unused
 }
 
@@ -280,8 +284,29 @@ Tileset* Sprite::spriteMask(){
     //tempTileset is filled with copies of the tiles in the base map
 
     //offset vars here
+    uint8_t tilesetNumber;
+    uint16_t xOffset, yOffset;
+    uint8_t xPix, yPix; //pixel positional pointer inside a tile
+                        //need to hash this to make it
+                        //relative to which ever tile in tilemap i'm 
+                        //writing to
+    
+    xPix = x%(tileset->tile_len);
+    yPix = y%(tileset->tile_len);
+
+    //run through bufPtr, position on pixels in Tile objects
     for(int i=0;i<buf_len;i++){
-        
+        for(int j=0;j<tile_len;j++){ 
+            if(bufPtr[i]!=255){
+                (tempTileset->tileArr[tilesetNumber]).changePixel(
+                        xPix,
+                        yPix,
+                        *bufPtr
+                        );
+            } else{/**/} 
+            xPix = (j!=tile_len) ? xPix+1 : xPix;
+        }
+        yPix++;
     }
 
     return tempTileset;
