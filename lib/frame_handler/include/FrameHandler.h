@@ -19,9 +19,10 @@ public:
 };
 
 struct Tileset{
+private:
+    uint8_t* bufPtr; //sole purpose to populate tileArr
 public:
     int tile_len;
-    uint8_t* bufPtr;
     uint8_t numTiles;
 
     Tile* tileArr;
@@ -29,6 +30,7 @@ public:
     //default constructor for passing by reference
     Tileset();
     Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles);
+    Tileset(Tile* tiles, uint8_t numTiles); //test
     virtual void render(uint16_t x, uint16_t y, uint8_t tileNum); 
     uint8_t* getTileData(uint8_t tileNum);
     void setTileData(uint8_t tileNum);
@@ -88,8 +90,17 @@ private:
     void calcTileIndeces(); //get the needed indices for the tilemap
     Tileset* spriteMask(); //mask the tiles as u go
 public:
+    
     Base* basePtr;
-    uint8_t* bufPtr; //filled with pure buffer in Sprite(~)
+    uint8_t* bufPtr;//plain buf made in Sprite constructor
+    size_t buf_len;
+
+    //other positional data...
+    int x,y;
+    //describes the height/width of the spritemap
+    uint8_t tiles_wide, tiles_high; 
+    //describes the height/width of the tileset of base replacement tiles
+    uint8_t width, height;
 
     uint8_t* tileIndeces; //
     Tileset* tempTiles; //this is what's passed to the base object.

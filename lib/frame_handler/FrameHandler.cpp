@@ -48,14 +48,24 @@ Tileset::Tileset() { //unused
 }
 
 Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
-    this->tile_len = tile_len;
     this->bufPtr = bufPtr;
+
+    this->tile_len = tile_len;
     this->numTiles = numTiles;
 
-    tileArr = new Tile[numTiles];
+    //populate the Tile* tileArr
+    this->tileArr = new Tile[numTiles];
     for (int i=0;i<numTiles;i++){
         tileArr[i] = Tile(tile_len,(bufPtr+(i*tile_len*tile_len)));
     }
+}
+
+Tileset::Tileset(Tile* tiles, uint8_t numTiles) { //tiles MUST be populated before instantiation
+    //bufPtr unused 
+    this->tile_len = tiles[0].tile_len; 
+    this->numTiles = numTiles;
+
+    this->tileArr = tiles; //up to the caller to allocate the tiles...
 }
 
 Tileset::~Tileset(){}
@@ -163,10 +173,11 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->tiles_high = tiles_high;
     this->tileset = tileset;
     this->mapBuf = mapBuf;
+    //width and height are initialized in calcIndeces
 
-    size_t len = (tileset->tile_len*tiles_wide)*(tileset->tile_len*tiles_high);
+    this->buf_len = (tileset->tile_len*tiles_wide)*(tileset->tile_len*tiles_high);
     //BUFPTR needs to be contiguous so that it can be handles piecewise
-    bufPtr = new uint8_t[len]; 
+    bufPtr = new uint8_t[buf_len]; 
 
     int counter = 0;
     int counterOffset = 0;
@@ -212,7 +223,6 @@ void Sprite::printBufPtr(){
 
 void Sprite::calcTileIndeces(){ //ok?
 
-    uint8_t width, height; //WIDTH HEIGHT of the blocks that sprite takes up on base
     if(!((tileset->tile_len+x)%(tileset->tile_len))){
         width = tiles_wide;
     } else{
@@ -238,7 +248,7 @@ void Sprite::calcTileIndeces(){ //ok?
     //caveats: only works for one sprite (for now.), NO collisions allowed
 }
 
-Tileset Sprite::spriteMask(){
+Tileset* Sprite::spriteMask(){
     //loop through the 'rows' of bufPtr, until there are no more data in buf
     //as you increment through the necessary offsets, you can det. which tile to
     //alter, switching as you go
@@ -253,15 +263,28 @@ Tileset Sprite::spriteMask(){
     //...)increment pointer
     //
     
-    while(bufPtr){
-
+    Tile* tempTiles = new Tile[width*height];
+    //populate tempTiles, etc
+    for(int i=0;i<height;i++){
+        for(int j=0;j<width;j++){
+            tempTiles[i] = Tile(
+                    tileset->tile_len, 
+                    //this might have to be a copy instead of get
+                    //ie cpyTileData....
+                    tileset->getTileData(basePtr->mapBuf[(i*basePtr->tiles_wide)+j])
+                    );
+        }
     }
-    
 
-    //make a copy of the right tiles based on calcTileIndeces in heap
-    //
-    //alter them accordingly
-    //?send the tiles to base, call base functions to alter tilemap?
+    Tileset* tempTileset = new Tileset(tempTiles, width*height);
+    //tempTileset is filled with copies of the tiles in the base map
+
+    //offset vars here
+    for(int i=0;i<buf_len;i++){
+        
+    }
+
+    return tempTileset;
 }
 
 void Sprite::render(){ //need to account for alpha processing...
