@@ -86,16 +86,17 @@ struct Sprite: public Tilemap{
 private:
     //helper functions
     void calcTileIndeces(); //get the needed indices for the tilemap
-    void spriteMask(); //mask the tiles as u go
+    Tileset* spriteMask(); //mask the tiles as u go
 public:
     Base* basePtr;
-    uint8_t* bufPtr; //
+    uint8_t* bufPtr; //filled with pure buffer in Sprite(~)
 
     uint8_t* tileIndeces; //
     Tileset* tempTiles; //this is what's passed to the base object.
 
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
+
     void render(); 
     void printBufPtr();
 };

@@ -209,6 +209,7 @@ void Sprite::printBufPtr(){
     }
     ili9341_writeData(NOOP);
 }
+
 void Sprite::calcTileIndeces(){ //ok?
 
     uint8_t width, height; //WIDTH HEIGHT of the blocks that sprite takes up on base
@@ -231,17 +232,32 @@ void Sprite::calcTileIndeces(){ //ok?
     uint8_t basePtrWidth = basePtr->tiles_wide;
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
-            tileIndeces[(i*width)+j] = (y/tileset->tile_len + i)*basePtrWidth+(x/tileset->tile_len + j);
+            tileIndeces[(i*width)+j] = (y/tileset->tile_len + i)*basePtrWidth+(x/tileset->tile_len+j);
         }
     }
-    //caveats: only works for one sprite, NO collisions allowed
+    //caveats: only works for one sprite (for now.), NO collisions allowed
 }
 
-void Sprite::spriteMask(){
+Tileset Sprite::spriteMask(){
     //loop through the 'rows' of bufPtr, until there are no more data in buf
     //as you increment through the necessary offsets, you can det. which tile to
     //alter, switching as you go
     
+    //STEPS:
+    //1) start at beginning of the buffer
+    //2)find the first tile to be changed, copy the contents of the tile so that they can be masked
+    //3)alter a row in that tile
+    //4)head to adjacent rows in order to do the same thing, until both conditions are fulfilled
+    //4a) width of the sprite is used up
+    //4b) 
+    //...)increment pointer
+    //
+    
+    while(bufPtr){
+
+    }
+    
+
     //make a copy of the right tiles based on calcTileIndeces in heap
     //
     //alter them accordingly
@@ -249,18 +265,10 @@ void Sprite::spriteMask(){
 }
 
 void Sprite::render(){ //need to account for alpha processing...
-    //sprite render should just be a way to reinitialize/change positions/tiles
-    int counter=0;
-    //'blindly' render; IF there is alpha processing or a sprite isn't rendered 
-    //on a tile, then update the tile guide so base object can re-render 
-    //during the rendering loop;
-    
-    for(int i = 0; i<tiles_high; i++){
-        for(int j = 0; j<tiles_wide; j++){
-               tileset->render((x+j*16),(y+i*16),mapBuf[counter]);
-        }
-    }
-    basePtr->printMapGuide();
+    //call on Sprite::spriteMask();
+    //gives api space to do spritemap changes and stuff
+    //something like 
+    //setSpareTiles(spriteMask(),...);
 }
 
 Font::Font(){}
