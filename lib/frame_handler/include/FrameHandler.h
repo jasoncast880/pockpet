@@ -88,7 +88,6 @@ public:
 struct Sprite: public Tilemap{
 private:
     //
-    void calcTileIndeces(); //get the needed indices for the tilemap
     Tileset* spriteMask(); //mask the tiles as u go
 public:
     
@@ -103,8 +102,8 @@ public:
     //describes the height/width of the tileset of base replacement tiles
     uint8_t width, height;
 
-    uint8_t* tileIndeces; //
-    Tileset* tempTiles; //this is what's passed to the base object.
+    uint8_t* tempTileIndeces; //
+    Tileset* tempTileset; //this is what's passed to the base object.
 
     Sprite();
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);

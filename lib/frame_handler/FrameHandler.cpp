@@ -32,6 +32,7 @@ Tile& Tile::operator=(const Tile& copySource){
     buf_ptr = new uint8_t[tile_len*tile_len];
     std::memcpy(buf_ptr,copySource.buf_ptr, tile_len*tile_len);
     return *this;
+    
 }
 
 //this renders indexed color
@@ -48,8 +49,7 @@ void Tile::changePixel(uint16_t index, uint8_t color){
     this->buf_ptr[index]=color;
 }
 
-Tileset::Tileset() { //unused
-}
+Tileset::Tileset(){}
 
 Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
     this->bufPtr = bufPtr;
@@ -203,12 +203,11 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
         if(counter%tiles_wide){
             counter-=tiles_wide;
         } 
-    } //this array must be tested!!!
+    } 
 
     //this should make bufPtr viable for use
 
-    calcTileIndeces(); //define the appropriate base tilemap indeces
-    spriteMask(); //make the appropriate masked tiles based on the sectors ...
+    tempTileset = spriteMask(); //make the appropriate masked tiles based on the sectors ...
                   
     //polymorphism: Sprite::render() will alter the tileset of Base, 
     //swap temp and original, use a identical queue in order to keep track
@@ -216,42 +215,25 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
 
 }
 
-Sprite::~Sprite(){} //will really need this LMAO
+Sprite::~Sprite(){
+    delete bufPtr;
 
-void Sprite::printBufPtr(){
+    /*
+    for(i=0;i<height;i++){
+        for(j=0;j<width;j++){
+            basePtr->mapGuidePtr[]; //reset the things on base guide
+        }
+    }
+    */
+} 
+
+void Sprite::printBufPtr(){ //debugging purposes
     //testing here
     ili9341_setAddrWindow(10,10,(tileset->tile_len*tiles_wide),(tileset->tile_len*tiles_high));
     for(int i = 0; i<(tileset->tile_len*tiles_wide); i++){
         ili9341_writeColorByIndex(bufPtr[i]);
     }
     ili9341_writeData(NOOP);
-}
-
-void Sprite::calcTileIndeces(){ //ok?
-
-    if(!((tileset->tile_len+x)%(tileset->tile_len))){
-        width = tiles_wide;
-    } else{
-        width = tiles_wide+1;
-    }
-
-    if(!((tileset->tile_len+y)%(tileset->tile_len))){
-        height = tiles_high;
-    } else{
-        height = tiles_high+1;
-    }
-
-    tileIndeces = new uint8_t[width*height];
-
-    //gives you the indeces of the tiles you must change on mapGuide, base tilemap
-    uint8_t basePtrHeight = basePtr->tiles_high;
-    uint8_t basePtrWidth = basePtr->tiles_wide;
-    for(int i=0;i<height;i++){
-        for(int j=0;j<width;j++){
-            tileIndeces[(i*width)+j] = (y/tileset->tile_len + i)*basePtrWidth+(x/tileset->tile_len+j);
-        }
-    }
-    //caveats: only works for one sprite (for now.), NO collisions allowed
 }
 
 Tileset* Sprite::spriteMask(){
@@ -269,16 +251,31 @@ Tileset* Sprite::spriteMask(){
     //...)increment pointer
     //
     
+    if(!((tileset->tile_len+x)%(tileset->tile_len))){
+        width = tiles_wide;
+    } else{
+        width = tiles_wide+1;
+    }
+
+    if(!((tileset->tile_len+y)%(tileset->tile_len))){
+        height = tiles_high;
+    } else{
+        height = tiles_high+1;
+    }
+    
+    //with width and height params i can find the tileindeces
+
+
+    tempTileIndeces = new uint8_t[width*height];
     Tile* tempTiles = new Tile[width*height];
+
     //populate tempTiles, etc
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
-            tempTiles[i] = Tile(
-                    tileset->tile_len, 
-                    //this might have to be a copy instead of get
-                    //ie cpyTileData....
-                    tileset->getTileData(basePtr->mapBuf[(i*basePtr->tiles_wide)+j])
-                    );
+            tempTileIndeces[(i*width)+j] = (
+                        ((y/tileset->tile_len+i)*width)+
+                        x/tileset->tile_len+j);
+            tempTiles[i]=basePtr->tileset->tileArr[tempTileIndeces[(i*width)+j]];
         }
     }
 
@@ -344,13 +341,19 @@ Tileset* Sprite::spriteMask(){
     return tempTileset;
 }
 
-//
+void Sprite::render(){ 
+    //take the tempTileset and place on top of the base map
 
-void Sprite::render(){ //need to account for alpha processing...
-    //call on Sprite::spriteMask();
-    //gives api space to do spritemap changes and stuff
-    //something like 
-    //setSpareTiles(spriteMask(),...);
+    for(int i=0;i<height;i++){
+        for(int j=0;j<width;j++){
+            //x,y,tilenum
+            tempTileset->render((j*tileset->tile_len)+x,(i*tileset->tile_len)+y,(i*width)+j);
+            //if rendered, will base's map need to be updated? alpha processing is already acounted for,
+            //
+            //my guess is that i will have to do updating of base map inside 
+            //of the destructor
+        }
+    }
 }
 
 Font::Font(){}
