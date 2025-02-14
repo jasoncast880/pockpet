@@ -6,6 +6,8 @@
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 
+#include "jetSprite_16.h" //tileset for jet demo sprite
+
 #include "ili9341.h"
 #include "FrameHandler.h"
 
@@ -54,13 +56,18 @@ void graphics_test(){ //testing the HAL abstractions
     sleep_ms(2000);
 }
 
-Tileset amp_tileset, rook_tileset;
+Tileset amp_tileset, rook_tileset, jet_tileset;
 Base baseSprite;
+Sprite testSprite;
 //Font rookFont;
 
 void tileset_font_init(){
     amp_tileset = Tileset(16, (uint8_t*)&ampalaya_tileset_16[0], 40);
     baseSprite = Base((Tileset*)&amp_tileset, (uint8_t*)&tile_bg_16[0]);
+
+    jet_tileset = Tileset(16, (uint8_t*)&jetSprite_16[0], 16);
+
+    testSprite = Sprite((Base*)&baseSprite, 10, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
 }
 
 

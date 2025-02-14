@@ -44,8 +44,8 @@ void Tile::render(uint16_t x, uint16_t y) {
     ili9341_writeCommand(NOOP);
 }
 
-void Tile::changePixel(uint16_t x, uint16_t y, uint8_t color){
-    this->buf_ptr[(x+(this->tile_len*y))]=color;
+void Tile::changePixel(uint16_t index, uint8_t color){
+    this->buf_ptr[index]=color;
 }
 
 Tileset::Tileset() { //unused
@@ -169,6 +169,8 @@ void Base::printMapGuide(){
     printf("EOA\n");
 }
 
+Sprite::Sprite(){}
+
 Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
     this->basePtr = basePtr;
     this->x = x;
@@ -286,31 +288,63 @@ Tileset* Sprite::spriteMask(){
     //offset vars here
     uint8_t tilesetNumber;
     uint16_t xOffset, yOffset;
-    uint8_t xPix, yPix; //pixel positional pointer inside a tile
+    uint16_t xPix, yPix; //pixel positional pointer inside a tileset
                         //need to hash this to make it
                         //relative to which ever tile in tilemap i'm 
                         //writing to
     
-    xPix = x%(tileset->tile_len);
-    yPix = y%(tileset->tile_len);
+    xPix = x/tileset->tile_len + x%(tileset->tile_len);
+    yPix = y/tileset->tile_len + y%(tileset->tile_len);
+    //could be a vector in later integrations, keep it simple for now.
+
+    struct hashPos{
+        uint8_t tileNum; //tile in tileset
+        int index; //the index of buffer of tile
+        uint8_t tile_len;
+        uint8_t tiles_wide;
+                
+        uint8_t xTile, yTile; 
+        uint8_t xIndex, yIndex; 
+
+        hashPos(uint8_t tile_len, uint8_t tiles_wide, uint16_t xPix, uint16_t yPix){
+            this->tile_len = tile_len;
+            this->tiles_wide = tiles_wide;
+
+            xTile = xPix/this->tile_len;
+            yTile = yPix/this->tile_len;
+
+            xIndex = xPix%(this->tile_len);
+            yIndex = yPix%(this->tile_len);
+
+            this->tileNum = yTile*tiles_wide+xTile;
+
+            this->index = (yIndex)*this->tile_len+(xIndex);
+        }
+    };
+
 
     //run through bufPtr, position on pixels in Tile objects
     for(int i=0;i<buf_len;i++){
-        for(int j=0;j<tile_len;j++){ 
+        //get tileset number
+        tilesetNumber=tileset->tile_len;
+        for(int j=0;j<tileset->tile_len;j++){ 
             if(bufPtr[i]!=255){
-                (tempTileset->tileArr[tilesetNumber]).changePixel(
-                        xPix,
-                        yPix,
+                hashPos hash = hashPos(tileset->tile_len, this->tiles_wide, xPix, yPix);
+                //make a func in tileset to find which tile you're in using x y cords
+                (tempTileset->tileArr[hash.tileNum]).changePixel(
+                        hash.index,
                         *bufPtr
                         );
-            } else{/**/} 
-            xPix = (j!=tile_len) ? xPix+1 : xPix;
+            } else{/*dont do shizzle*/} 
+            xPix = (j!=tileset->tile_len) ? xPix+1 : xPix;
         }
         yPix++;
     }
 
     return tempTileset;
 }
+
+//
 
 void Sprite::render(){ //need to account for alpha processing...
     //call on Sprite::spriteMask();

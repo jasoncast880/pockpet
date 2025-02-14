@@ -16,7 +16,7 @@ public:
     Tile(int tile_len, uint8_t* buf_ptr);
     Tile& operator=(const Tile& other);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
-    void changePixel(uint16_t x, uint16_t y, uint8_t color); //bot left corner (x,y)
+    void changePixel(uint16_t index, uint8_t color); //bot left corner (x,y)
 };
 
 struct Tileset{
@@ -87,7 +87,7 @@ public:
 
 struct Sprite: public Tilemap{
 private:
-    //helper functions
+    //
     void calcTileIndeces(); //get the needed indices for the tilemap
     Tileset* spriteMask(); //mask the tiles as u go
 public:
@@ -106,6 +106,7 @@ public:
     uint8_t* tileIndeces; //
     Tileset* tempTiles; //this is what's passed to the base object.
 
+    Sprite();
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
 
