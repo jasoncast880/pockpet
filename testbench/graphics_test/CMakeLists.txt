@@ -9,6 +9,7 @@ target_include_directories(graphics_test PRIVATE
 target_link_libraries(graphics_test
     pico_stdlib
     hardware_spi
+    hardware_irq
     ili9341_pico_driver
     assets_lib
     frame_handler

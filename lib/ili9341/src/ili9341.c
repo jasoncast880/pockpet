@@ -185,4 +185,8 @@ void ili9341_writeColorByIndex(uint8_t index){
         ili9341_writeData(0x00);
         ili9341_writeData(0x4e);
     }
+    else if(index==255){
+        ili9341_writeData(0xf8);
+        ili9341_writeData(0x1f);
+    }
 }

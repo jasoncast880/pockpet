@@ -31,7 +31,13 @@ public:
     //default constructor for passing by reference
     Tileset();
     Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles);
-    Tileset(Tile* tiles, uint8_t numTiles); //test
+    Tileset(Tile* tiles, uint8_t numTiles); 
+
+    Tileset(const Tileset& other);
+    Tileset& operator=(const Tileset& other);
+    //Tileset(const Tileset && other);
+    //Tileset& operator=(const Tileset && other);
+
     virtual void render(uint16_t x, uint16_t y, uint8_t tileNum); 
     uint8_t* getTileData(uint8_t tileNum);
     void setTileData(uint8_t tileNum);
@@ -110,6 +116,7 @@ public:
     ~Sprite();
 
     void render(); 
+    void tileset_validator();
     void printBufPtr();
 };
 

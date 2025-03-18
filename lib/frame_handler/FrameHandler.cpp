@@ -72,6 +72,49 @@ Tileset::Tileset(Tile* tiles, uint8_t numTiles) { //tiles MUST be populated befo
     this->tileArr = tiles; //up to the caller to allocate the tiles...
 }
 
+
+Tileset::Tileset(const Tileset& copySource){
+    tile_len = copySource.tile_len;
+    numTiles = copySource.numTiles;
+
+    bufPtr = new uint8_t[numTiles*copySource.tile_len*copySource.tile_len+1];
+
+    //copy from the source into local buffer
+    std::memcpy(bufPtr,copySource.bufPtr, numTiles*copySource.tile_len*copySource.tile_len);
+
+    tileArr = new Tile[numTiles];
+    for(int i = 0; i<numTiles; i++){
+        tileArr[i] = copySource.tileArr[i];
+    }
+}
+
+
+Tileset& Tileset::operator=(const Tileset& copySource){
+    if((this!=&copySource) && (copySource.bufPtr!=NULL)){
+        if (bufPtr!=NULL) 
+            delete[] bufPtr;
+        if (tileArr!=NULL) 
+            delete[] tileArr;
+
+        //ensure a deep copy by allocating buffer space
+
+        tile_len = copySource.tile_len;
+        numTiles = copySource.numTiles;
+
+        bufPtr = new uint8_t[numTiles*copySource.tile_len*copySource.tile_len+1];
+
+        //copy from the source into local buffer
+        std::memcpy(bufPtr,copySource.bufPtr, numTiles*copySource.tile_len*copySource.tile_len);
+
+        tileArr = new Tile[numTiles];
+        for(int i = 0; i<numTiles; i++){
+            tileArr[i] = copySource.tileArr[i];
+        }
+    }
+   
+    return *this;
+}
+
 Tileset::~Tileset(){}
 
 uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
@@ -177,14 +220,17 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->y = y;
     this->tiles_wide = tiles_wide;
     this->tiles_high = tiles_high;
-    this->tileset = tileset;
+    this->tileset = tileset; //ASSIGNMENT OP
     this->mapBuf = mapBuf;
     //width and height are initialized in calcIndeces
 
     this->buf_len = (tileset->tile_len*tiles_wide)*(tileset->tile_len*tiles_high);
-    //BUFPTR needs to be contiguous so that it can be handles piecewise
     bufPtr = new uint8_t[buf_len]; 
 
+    sleep_ms(2000);
+    tileset_validator();
+
+    /*
     int counter = 0;
     int counterOffset = 0;
     int bufPtrOffset = 0;
@@ -213,6 +259,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     //swap temp and original, use a identical queue in order to keep track
     //on destructor call, replace all of the things somehow...
 
+    */
 }
 
 Sprite::~Sprite(){
@@ -234,6 +281,15 @@ void Sprite::printBufPtr(){ //debugging purposes
         ili9341_writeColorByIndex(bufPtr[i]);
     }
     ili9341_writeData(NOOP);
+}
+
+void Sprite::tileset_validator(){
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0; j<tiles_wide;j++){
+            tileset->render(tileset->tile_len*j,tileset->tile_len*i,i*tiles_wide+j);
+        }
+    }
+    printf("tileset OK");
 }
 
 Tileset* Sprite::spriteMask(){
@@ -346,6 +402,8 @@ void Sprite::render(){
 
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
+
+
             //x,y,tilenum
             tempTileset->render((j*tileset->tile_len)+x,(i*tileset->tile_len)+y,(i*width)+j);
             //if rendered, will base's map need to be updated? alpha processing is already acounted for,

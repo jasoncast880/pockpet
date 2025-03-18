@@ -11,6 +11,12 @@
 #include "ili9341.h"
 #include "FrameHandler.h"
 
+void debug_print(){
+    for(int i=0; i<=100; i++){
+//        printf("%d",pepe);
+    }
+}
+
 //serves as a testbench for the things
 void graphics_test(){ //testing the HAL abstractions
     ili9341_setAddrWindow(40,40,150,150);
@@ -67,9 +73,17 @@ void tileset_font_init(){
 
     jet_tileset = Tileset(16, (uint8_t*)&jetSprite_16[0], 16);
 
-    testSprite = Sprite((Base*)&baseSprite, 10, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
+    //gonna add the font later
 }
 
+void tileset_test(Tileset* tileset,int rows, int columns){
+    for(int i = 0; i<rows; i++){
+        for(int j = 0; j<columns; j++){
+            tileset->render(j*16,i*16,(i*columns)+j);
+        }
+    }
+    sleep_ms(1000);
+}
 
 int main() {
     stdio_init_all();
@@ -77,20 +91,32 @@ int main() {
     sleep_ms(4500);
     printf("GO\n");
 
-    ili9341_initialize(17,20,21,19,18,16);
+    ili9341_initialize(17,20,21,19,18,16); //cs, rst, dc, mosi, sclk, miso
 
     tileset_font_init();
 
+    printf("%p\n", &jet_tileset);
+
     //tileset test OK
     sleep_ms(2000);
-    for(int i = 0; i<5; i++){
-        for(int j = 0; j<6; j++){
-            amp_tileset.render(j*16,i*16,(i*6)+j);
-        }
-    }
+    tileset_test((Tileset*)&amp_tileset,5,6);
+    printf("base tileset render ok\n");
 
+    
     //base test OK
     sleep_ms(2000);
     baseSprite.render();
+    printf("base render ok\n");
 
+    testSprite = Sprite((Base*)&baseSprite, 10, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
+    printf("sprite constructor ok\n");
+
+    sleep_ms(2000);
+    tileset_test((Tileset*)&testSprite.tileset,4,4);
+    printf("sprite tileset render ok\n");
+
+
+    //testSprite.render();
+    //printf("Sprite render ok");
+    //show debug print msg here
 }

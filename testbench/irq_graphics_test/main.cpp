@@ -1,4 +1,4 @@
-//irq graphics testbench
+//irqk graphics testbench
 #include <stdio.h>
 #include "pico/stdlib.h"
 

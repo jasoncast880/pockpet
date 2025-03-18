@@ -105,12 +105,13 @@ void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,i
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
+void ili9341_writeColorByIndex(uint8_t index);
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); 
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa); 
 void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
 void ili9341_exitScrollMode(); 
 
-void ili9341_writeColorByIndex(uint8_t index);
+void ili9341_writeDataBuffer_DMA(uint8_t* dataBuf, size_t len);
 
 #ifdef __cplusplus
 }
