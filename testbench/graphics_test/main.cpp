@@ -95,20 +95,17 @@ int main() {
 
     tileset_font_init();
 
-    printf("%p\n", &jet_tileset);
-
     //tileset test OK
     sleep_ms(2000);
     tileset_test((Tileset*)&amp_tileset,5,6);
     printf("base tileset render ok\n");
-
     
     //base test OK
     sleep_ms(2000);
     baseSprite.render();
     printf("base render ok\n");
 
-    testSprite = Sprite((Base*)&baseSprite, 10, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
+    testSprite = Sprite((Base*)&baseSprite, 16, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
     printf("sprite constructor ok\n");
 
     sleep_ms(2000);

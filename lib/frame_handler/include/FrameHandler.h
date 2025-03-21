@@ -39,8 +39,8 @@ public:
     //Tileset& operator=(const Tileset && other);
 
     virtual void render(uint16_t x, uint16_t y, uint8_t tileNum); 
-    uint8_t* getTileData(uint8_t tileNum);
-    void setTileData(uint8_t tileNum);
+    Tile* getTileData(uint8_t tileNum);
+    void setTileData(uint8_t tileNum, Tile tile);
 
     ~Tileset();
 };
@@ -94,29 +94,32 @@ public:
 struct Sprite: public Tilemap{
 private:
     //
-    Tileset* spriteMask(); //mask the tiles as u go
+
 public:
     
     Base* basePtr;
-    uint8_t* bufPtr;//plain buf made in Sprite constructor
-    size_t buf_len;
 
     // positional data;
     int x,y;
     //describes the height/width of the spritemap
     uint8_t tiles_wide, tiles_high; 
-    //describes the height/width of the tileset of base replacement tiles
-    uint8_t width, height;
+    Tileset* tileset;
+    uint8_t* mapBuf;
 
-    uint8_t* tempTileIndeces; //
-    Tileset* tempTileset; //this is what's passed to the base object.
 
     Sprite();
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
 
+    Tileset* spriteMask(); //mask the tiles as u go
+    uint8_t* getDims();
+    // members created after mashing 
+    size_t sprite_width, sprite_height, sprite_size;
+    Tileset* sprite_Tileset;
+
     void render(); 
-    void tileset_validator();
+    uint8_t hashPos(int x_pix,int y_pix); //get base's tilemap index of current tile idx via x/y
+    void tileset_validator(Tileset*,int w, int h);
     void printBufPtr();
 };
 

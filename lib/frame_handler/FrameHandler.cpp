@@ -32,7 +32,8 @@ Tile& Tile::operator=(const Tile& copySource){
     buf_ptr = new uint8_t[tile_len*tile_len];
     std::memcpy(buf_ptr,copySource.buf_ptr, tile_len*tile_len);
     return *this;
-    
+
+    //in order for these to be in effect (on screen), you have to reinitialize the tileset this tile belongs to...
 }
 
 //this renders indexed color
@@ -64,7 +65,7 @@ Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
     }
 }
 
-Tileset::Tileset(Tile* tiles, uint8_t numTiles) { //tiles MUST be populated before instantiation
+Tileset::Tileset(Tile* tiles, uint8_t numTiles) { 
     //bufPtr unused 
     this->tile_len = tiles[0].tile_len; 
     this->numTiles = numTiles;
@@ -74,20 +75,14 @@ Tileset::Tileset(Tile* tiles, uint8_t numTiles) { //tiles MUST be populated befo
 
 
 Tileset::Tileset(const Tileset& copySource){
-    tile_len = copySource.tile_len;
-    numTiles = copySource.numTiles;
-
-    bufPtr = new uint8_t[numTiles*copySource.tile_len*copySource.tile_len+1];
-
-    //copy from the source into local buffer
-    std::memcpy(bufPtr,copySource.bufPtr, numTiles*copySource.tile_len*copySource.tile_len);
+    this->tile_len = copySource.tile_len;
+    this->numTiles = copySource.numTiles;
 
     tileArr = new Tile[numTiles];
     for(int i = 0; i<numTiles; i++){
         tileArr[i] = copySource.tileArr[i];
     }
 }
-
 
 Tileset& Tileset::operator=(const Tileset& copySource){
     if((this!=&copySource) && (copySource.bufPtr!=NULL)){
@@ -101,11 +96,6 @@ Tileset& Tileset::operator=(const Tileset& copySource){
         tile_len = copySource.tile_len;
         numTiles = copySource.numTiles;
 
-        bufPtr = new uint8_t[numTiles*copySource.tile_len*copySource.tile_len+1];
-
-        //copy from the source into local buffer
-        std::memcpy(bufPtr,copySource.bufPtr, numTiles*copySource.tile_len*copySource.tile_len);
-
         tileArr = new Tile[numTiles];
         for(int i = 0; i<numTiles; i++){
             tileArr[i] = copySource.tileArr[i];
@@ -117,8 +107,12 @@ Tileset& Tileset::operator=(const Tileset& copySource){
 
 Tileset::~Tileset(){}
 
-uint8_t* Tileset::getTileData(uint8_t tileNum){//return tileset's tile no. data buf-ptr
-    return tileArr[tileNum].buf_ptr; //imp later
+Tile* Tileset::getTileData(uint8_t tileNum){
+    return &tileArr[tileNum]; 
+}
+
+void Tileset::setTileData(uint8_t tileNum, Tile tile){
+    tileArr[tileNum] = tile;
 }
 
 void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
@@ -223,75 +217,92 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->tileset = tileset; //ASSIGNMENT OP
     this->mapBuf = mapBuf;
     //width and height are initialized in calcIndeces
-
-    this->buf_len = (tileset->tile_len*tiles_wide)*(tileset->tile_len*tiles_high);
-    bufPtr = new uint8_t[buf_len]; 
+    
+    //
+    // 1) gain raw pointer access to the sprite tileset (validated :3)
+    // 2) gain raw pointer access to the base pointer tileset (validated :3)
+    // 3) demonstrate that you can alter the base pointer using sprite tileset
+    //
 
     sleep_ms(2000);
-    tileset_validator();
+    tileset_validator(tileset,tiles_wide, tiles_high);
+    sleep_ms(2000);
+    tileset_validator(basePtr->tileset,6,5);
 
-    /*
-    int counter = 0;
-    int counterOffset = 0;
-    int bufPtrOffset = 0;
-    int tilesetOffset = 0; //poorly named vars...
+    //raw pointer access is ok on both, time to copy from both sets and 'mash together'
+    //create a tileset with the right amount of tiles to cover the sprite superimposed on the frame.
+
+    uint8_t* nums = getDims();
+    sprite_width = nums[0];
+    sprite_height = nums[1];
+    sprite_size = sprite_height*sprite_width;
+
+    Tile* tiles = new Tile[sprite_size];
     
-    for(int i = 0; i<(tileset->tile_len*tiles_high); i++){ //all the rows processed in the array
-        for(int j = 0; j<(tiles_wide); j++){ //loop through the entire row of a sprite
-            for(int k = 0; k<(tileset->tile_len); k++){ //loop through a row of a tile
-                bufPtr[bufPtrOffset+k] = *(tileset->getTileData(counter)+(tilesetOffset+k));
-            }
-            //increment the buffer offsets here
-            counter++;
-            bufPtrOffset+=tileset->tile_len;
-            tilesetOffset+=(tileset->tile_len)*(i%tileset->tile_len);
+    Tileset* sprite_Tileset = new Tileset(tiles, sprite_size);
+
+    printf("inside sprite constructor\n %d\n", nums[0]);
+    printf("%d\n", nums[1]);
+    //then mash the two sets together appropriately
+    //monsterMash();
+    
+    //*copy* the tiles from the base tileset and prep them to be modified
+    for(int i = 0;i<sprite_height;i++){
+        for(int j = 0;j<sprite_width;j++){
+
+            Tile cursor_tile = *(tileset->getTileData(hashPos(j*tileset->tile_len,i*tileset->tile_len)));
+            sprite_Tileset->setTileData((i*sprite_width+j), cursor_tile);
         }
-        if(counter%tiles_wide){
-            counter-=tiles_wide;
-        } 
-    } 
+    }
 
-    //this should make bufPtr viable for use
+    tileset_validator(sprite_Tileset, sprite_width, sprite_height);
+    
+}
 
-    tempTileset = spriteMask(); //make the appropriate masked tiles based on the sectors ...
-                  
-    //polymorphism: Sprite::render() will alter the tileset of Base, 
-    //swap temp and original, use a identical queue in order to keep track
-    //on destructor call, replace all of the things somehow...
+uint8_t* Sprite::getDims(){
+    uint8_t* dims = new uint8_t[2];
+    //assume no edge cases (no buffer overflow)
+    if(x>tileset->tile_len && x%tileset->tile_len){
+        dims[0] = tiles_wide+1;
+    } else if( tileset->tile_len%x){
+        dims[0] = tiles_wide+1;
+    }
 
-    */
+    if(y>tileset->tile_len && y%tileset->tile_len){
+        dims[1] = tiles_high+1;
+    } else if( tileset->tile_len%y){
+        dims[1] = tiles_high+1;
+    }
+
+    printf("width: %d, height: %d\n", dims[0], dims[1]);
+    return dims;
 }
 
 Sprite::~Sprite(){
-    delete bufPtr;
+    //delete bufPtr;
 
-    /*
-    for(i=0;i<height;i++){
-        for(j=0;j<width;j++){
-            basePtr->mapGuidePtr[]; //reset the things on base guide
+    for(int i=0;i<basePtr->tiles_high;i++){
+        for(int j=0;j<basePtr->tiles_wide;j++){
+            basePtr->mapGuidePtr[i*tiles_wide+j]=0; //reset the things on base guide
         }
     }
-    */
 } 
 
-void Sprite::printBufPtr(){ //debugging purposes
-    //testing here
-    ili9341_setAddrWindow(10,10,(tileset->tile_len*tiles_wide),(tileset->tile_len*tiles_high));
-    for(int i = 0; i<(tileset->tile_len*tiles_wide); i++){
-        ili9341_writeColorByIndex(bufPtr[i]);
-    }
-    ili9341_writeData(NOOP);
+uint8_t Sprite::hashPos(int x_pix, int y_pix){
+    return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(tiles_wide*tileset->tile_len));
+    //does not account for edge cases where the sprite goes over the top-right bounds
 }
 
-void Sprite::tileset_validator(){
-    for(int i=0; i<tiles_high; i++){
-        for(int j=0; j<tiles_wide;j++){
-            tileset->render(tileset->tile_len*j,tileset->tile_len*i,i*tiles_wide+j);
+void Sprite::tileset_validator(Tileset* tiles, int w, int h){
+    for(int i=0; i<h; i++){
+        for(int j=0; j<w;j++){
+            tiles->render(tiles->tile_len*j,tiles->tile_len*i,i*w+j);
         }
     }
-    printf("tileset OK");
+    printf("tileset OK\n");
 }
 
+/*
 Tileset* Sprite::spriteMask(){
     //loop through the 'rows' of bufPtr, until there are no more data in buf
     //as you increment through the necessary offsets, you can det. which tile to
@@ -388,7 +399,7 @@ Tileset* Sprite::spriteMask(){
                         hash.index,
                         *bufPtr
                         );
-            } else{/*dont do shizzle*/} 
+            } else{} 
             xPix = (j!=tileset->tile_len) ? xPix+1 : xPix;
         }
         yPix++;
@@ -413,6 +424,7 @@ void Sprite::render(){
         }
     }
 }
+*/
 
 Font::Font(){}
 //only works for 16 pixel fonts!!
