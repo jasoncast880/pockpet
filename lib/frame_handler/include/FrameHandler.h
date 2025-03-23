@@ -17,6 +17,7 @@ public:
     Tile& operator=(const Tile& other);
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
     void changePixel(uint16_t index, uint8_t color); //bot left corner (x,y)
+    uint8_t getPixel(uint16_t x,uint16_t y); //return indexed color value
 };
 
 struct Tileset{
@@ -93,7 +94,13 @@ public:
 
 struct Sprite: public Tilemap{
 private:
-    //
+    struct tempPosData;
+    void getDims();
+    uint8_t sprite_width, sprite_height, sprite_size;
+    uint8_t statusReg = 0x00;
+
+    void spliceX(); //after splicing, insert into sprite_Tileset
+    void spliceY();
 
 public:
     
@@ -112,9 +119,7 @@ public:
     ~Sprite();
 
     Tileset* spriteMask(); //mask the tiles as u go
-    uint8_t* getDims();
     // members created after mashing 
-    size_t sprite_width, sprite_height, sprite_size;
     Tileset* sprite_Tileset;
 
     void render(); 

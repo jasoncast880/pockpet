@@ -50,6 +50,10 @@ void Tile::changePixel(uint16_t index, uint8_t color){
     this->buf_ptr[index]=color;
 }
 
+uint8_t Tile::getPixel(uint16_t x, uint16_t y){
+    return buf_ptr[x+(y*tile_len)];
+}
+
 Tileset::Tileset(){}
 
 Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
@@ -223,7 +227,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->mapBuf = mapBuf;
     //width and height are initialized in calcIndeces
     
-    printf("%d / %d\n", tiles_wide, tiles_high);
+    printf("%d / %d / 0x%X\n", tiles_wide, tiles_high, statusReg);
 
     //
     // 1) gain raw pointer access to the sprite tileset (validated :3)
@@ -241,16 +245,16 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     //raw pointer access is ok on both, time to copy from both sets and 'mash together'
     //create a tileset with the right amount of tiles to cover the sprite superimposed on the frame.
 
-    uint8_t* nums = getDims();
-    sprite_width = nums[0];
-    sprite_height = nums[1];
-    sprite_size = sprite_height*sprite_width;
+    sprite_width = tiles_wide;
+    sprite_height = tiles_high;
+    sprite_size = sprite_width*sprite_height;
+    getDims();
 
     Tile* tiles = new Tile[sprite_size];
     
     Tileset* sprite_Tileset = new Tileset(tiles, sprite_size);
 
-    printf("inside sprite constructor %d / %d\n", sprite_width, sprite_height);
+    printf("inside sprite constr %d / %d / 0x%02X\n", sprite_width, sprite_height, statusReg);
     
     //*copy* the tiles from the base tileset and prep them to be modified
     for(int i = 0;i<sprite_height;i++){
@@ -260,18 +264,19 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
             printf("ok1");
             sleep_ms(200);
             Tile cursor_tile = *(basePtr->getTileData(ans));
-            cursor_tile.render(x+i*tileset->tile_len, y+j*tileset->tile_len);
+            cursor_tile.render(x+j*tileset->tile_len, y+i*tileset->tile_len);
             printf("ok2");
             sleep_ms(200);
-            sprite_Tileset->setTileData((i*sprite_width+j), cursor_tile);
-            printf("ok3");
+            //sprite_Tileset->setTileData((i*sprite_width+j), cursor_tile); //broken?
+                                                                          //tile ass. op 
+            printf("ok3\n");
             sleep_ms(200);
             printf("n.%d\n", ans);
         }
     }
 
-    tileset_validator(sprite_Tileset, sprite_width, sprite_height);
-    printf("copied tileset ok\n");
+//    tileset_validator(sprite_Tileset, sprite_width, sprite_height);
+//    printf("copied tileset ok\n");
     
 
     //then mash the two sets together appropriately
@@ -283,26 +288,43 @@ uint8_t Sprite::hashPos(int x_pix, int y_pix){
     //does not account for edge cases where the sprite goes over the top-right bounds
 }
 
-uint8_t* Sprite::getDims(){
-    uint8_t* dims = new uint8_t[2]{tiles_wide,tiles_high};
-    //assume no edge cases (no buffer overflow)
+void Sprite::getDims(){
+    //0x00:no move
+    //0x01:x move
+    //0x02:y move
+    //0x03:x&y move
+    //
+    //
+    //for now, assume no edge cases (no buffer overflow)
 
     //for x - width
     if(x>tileset->tile_len){
         if(x%tileset->tile_len!=0){
-            dims[0] = tiles_wide+1;
+            sprite_width += 1;
+            statusReg |= 0b0001;
         } 
     } else if (tileset->tile_len>x){
         if(tileset->tile_len>x!=0){
-            dims[1] = tiles_high+1;
+            sprite_width += 1;
+            statusReg |= 0b0001;
         }
     }
 
     //for y - height
+    if(y>tileset->tile_len){
+        if(y%tileset->tile_len!=0){
+            sprite_height += 1;
+            statusReg |= 0b0010;
+        } 
+    } else if (tileset->tile_len>y){
+        if(tileset->tile_len>y!=0){
+            sprite_height += 1;
+            statusReg |= 0b0010;
+        }
+    }
 
 
-    printf("getDims width: %d, height: %d\n", dims[0], dims[1]);
-    return dims;
+    printf("getDims width: %d, height: %d, hexcode: 0x%02X\n", sprite_width, sprite_height, statusReg);
 }
 
 Sprite::~Sprite(){
