@@ -145,6 +145,11 @@ void Tilemap::render(){
     }
 }
 
+Tile* Tilemap::getTileData(uint8_t tileNum){
+    printf("Tilemap calls getTileData(%d)\n", tileNum);
+    return (tileset->getTileData(mapBuf[tileNum]));
+}
+
 //need to account for edge case rendering
 Base::Base(){}
 Base::Base(Tileset* tileset, uint8_t* mapBuf){ 
@@ -218,6 +223,8 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->mapBuf = mapBuf;
     //width and height are initialized in calcIndeces
     
+    printf("%d / %d\n", tiles_wide, tiles_high);
+
     //
     // 1) gain raw pointer access to the sprite tileset (validated :3)
     // 2) gain raw pointer access to the base pointer tileset (validated :3)
@@ -226,8 +233,10 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
 
     sleep_ms(2000);
     tileset_validator(tileset,tiles_wide, tiles_high);
+    printf("inside sprite(..) : sprite tileset ok\n");
     sleep_ms(2000);
     tileset_validator(basePtr->tileset,6,5);
+    printf("inside sprite(..) : pointer to base tileset ok\n");
 
     //raw pointer access is ok on both, time to copy from both sets and 'mash together'
     //create a tileset with the right amount of tiles to cover the sprite superimposed on the frame.
@@ -241,40 +250,58 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     
     Tileset* sprite_Tileset = new Tileset(tiles, sprite_size);
 
-    printf("inside sprite constructor\n %d\n", nums[0]);
-    printf("%d\n", nums[1]);
-    //then mash the two sets together appropriately
-    //monsterMash();
+    printf("inside sprite constructor %d / %d\n", sprite_width, sprite_height);
     
     //*copy* the tiles from the base tileset and prep them to be modified
     for(int i = 0;i<sprite_height;i++){
         for(int j = 0;j<sprite_width;j++){
-
-            Tile cursor_tile = *(tileset->getTileData(hashPos(j*tileset->tile_len,i*tileset->tile_len)));
+            printf("try %d: on base tilemap ", (i*sprite_width+j));
+            uint8_t ans = hashPos(x+j*tileset->tile_len,y+i*tileset->tile_len);
+            printf("ok1");
+            sleep_ms(200);
+            Tile cursor_tile = *(basePtr->getTileData(ans));
+            cursor_tile.render(x+i*tileset->tile_len, y+j*tileset->tile_len);
+            printf("ok2");
+            sleep_ms(200);
             sprite_Tileset->setTileData((i*sprite_width+j), cursor_tile);
+            printf("ok3");
+            sleep_ms(200);
+            printf("n.%d\n", ans);
         }
     }
 
     tileset_validator(sprite_Tileset, sprite_width, sprite_height);
+    printf("copied tileset ok\n");
     
+
+    //then mash the two sets together appropriately
+    //monsterMash();
+}
+
+uint8_t Sprite::hashPos(int x_pix, int y_pix){
+    return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(basePtr->tiles_wide));
+    //does not account for edge cases where the sprite goes over the top-right bounds
 }
 
 uint8_t* Sprite::getDims(){
-    uint8_t* dims = new uint8_t[2];
+    uint8_t* dims = new uint8_t[2]{tiles_wide,tiles_high};
     //assume no edge cases (no buffer overflow)
-    if(x>tileset->tile_len && x%tileset->tile_len){
-        dims[0] = tiles_wide+1;
-    } else if( tileset->tile_len%x){
-        dims[0] = tiles_wide+1;
+
+    //for x - width
+    if(x>tileset->tile_len){
+        if(x%tileset->tile_len!=0){
+            dims[0] = tiles_wide+1;
+        } 
+    } else if (tileset->tile_len>x){
+        if(tileset->tile_len>x!=0){
+            dims[1] = tiles_high+1;
+        }
     }
 
-    if(y>tileset->tile_len && y%tileset->tile_len){
-        dims[1] = tiles_high+1;
-    } else if( tileset->tile_len%y){
-        dims[1] = tiles_high+1;
-    }
+    //for y - height
 
-    printf("width: %d, height: %d\n", dims[0], dims[1]);
+
+    printf("getDims width: %d, height: %d\n", dims[0], dims[1]);
     return dims;
 }
 
@@ -288,10 +315,7 @@ Sprite::~Sprite(){
     }
 } 
 
-uint8_t Sprite::hashPos(int x_pix, int y_pix){
-    return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(tiles_wide*tileset->tile_len));
-    //does not account for edge cases where the sprite goes over the top-right bounds
-}
+
 
 void Sprite::tileset_validator(Tileset* tiles, int w, int h){
     for(int i=0; i<h; i++){
@@ -299,7 +323,6 @@ void Sprite::tileset_validator(Tileset* tiles, int w, int h){
             tiles->render(tiles->tile_len*j,tiles->tile_len*i,i*w+j);
         }
     }
-    printf("tileset OK\n");
 }
 
 /*

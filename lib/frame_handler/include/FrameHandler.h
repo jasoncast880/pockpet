@@ -69,7 +69,7 @@ public:
     Tilemap();
     Tilemap(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
-
+    Tile* getTileData(uint8_t tileNum);
     void alterTile(Tile* tile, Tile* newTile);
 }; 
 
