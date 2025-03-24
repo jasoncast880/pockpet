@@ -41,7 +41,7 @@ public:
 
     virtual void render(uint16_t x, uint16_t y, uint8_t tileNum); 
     Tile* getTileData(uint8_t tileNum);
-    void setTileData(uint8_t tileNum, Tile tile);
+    void setTileData(uint8_t tileNum, Tile* tile);
 
     ~Tileset();
 };
@@ -97,10 +97,10 @@ private:
     struct tempPosData;
     void getDims();
     uint8_t sprite_width, sprite_height, sprite_size;
-    uint8_t statusReg = 0x00;
+    uint8_t statusFlag = 0x00;
 
     void spliceX(); //after splicing, insert into sprite_Tileset
-    void spliceY();
+    Tile* spliceY(Tile* tile1, Tile* tile2, uint8_t cutoff);
 
 public:
     
