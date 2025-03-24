@@ -105,7 +105,7 @@ int main() {
     baseSprite.render();
     printf("base render ok\n");
 
-    testSprite = Sprite((Base*)&baseSprite, 16, 10, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
+    testSprite = Sprite((Base*)&baseSprite, 10, 16, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
     printf("sprite constructor ok\n");
 
     sleep_ms(2000);
