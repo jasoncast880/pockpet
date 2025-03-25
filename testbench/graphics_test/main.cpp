@@ -108,12 +108,9 @@ int main() {
     testSprite = Sprite((Base*)&baseSprite, 10, 16, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
     printf("sprite constructor ok\n");
 
+    /*
     sleep_ms(2000);
-    tileset_test((Tileset*)&testSprite.tileset,4,4);
+    testSprite.render();
     printf("sprite tileset render ok\n");
-
-
-    //testSprite.render();
-    //printf("Sprite render ok");
-    //show debug print msg here
+    */
 }

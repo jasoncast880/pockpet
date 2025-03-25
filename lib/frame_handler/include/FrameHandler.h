@@ -101,6 +101,11 @@ private:
 
     Tile* spliceX(Tile* tile1, Tile* tile2, uint8_t cutoff); //after splicing, insert into sprite_Tileset
     Tile* spliceY(Tile* tile1, Tile* tile2, uint8_t cutoff);
+    Tile* merge(Tile* tile1, Tile* tile2);
+
+    uint8_t hashPos(int x_pix,int y_pix); //get base's tilemap index of current tile idx via x/y
+    Tileset* sprite_Tileset;
+    void tileset_validator(Tileset*,int w, int h);
 
 public:
     
@@ -118,14 +123,10 @@ public:
     Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
 
-    Tileset* spriteMask(); //mask the tiles as u go
     // members created after mashing 
-    Tileset* sprite_Tileset;
+    Tileset* processed_Tiles;
 
     void render(); 
-    uint8_t hashPos(int x_pix,int y_pix); //get base's tilemap index of current tile idx via x/y
-    void tileset_validator(Tileset*,int w, int h);
-    void printBufPtr();
 };
 
 struct Char_16{ //simplified hash-map structure for storing font data

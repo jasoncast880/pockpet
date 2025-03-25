@@ -267,7 +267,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
                 uint8_t diff = (x>tileset->tile_len)?x%tileset->tile_len:tileset->tile_len%x;
                 Tile* proc_tile = spliceX(cursor_tile, cursor_tile_2, diff); 
 
-                proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
                 tiles[i*sprite_width+j] = *proc_tile;
                 printf("n.%d\n", ans);
             }
@@ -286,7 +286,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
                 uint8_t diff = (y>tileset->tile_len)?y%tileset->tile_len:tileset->tile_len%y;
                 Tile* proc_tile = spliceY(cursor_tile, cursor_tile_2, diff); 
 
-                proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
                 tiles[i*sprite_width+j] = *proc_tile;
                 printf("n.%d\n", ans);
             } //add other sf cases
@@ -294,12 +294,31 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     } else if(this->statusFlag==0x00){ //no change
         printf("splicing skipped\n"); 
     } else{ printf("ERROR: 0x03 sf not supported\n"); }
-    
-    Tileset* sprite_Tileset = new Tileset(tiles, sprite_size);
+    printf("splice ok\n");
+
+    sprite_Tileset = new Tileset(tiles, sprite_size);
+    printf("tileset allocation ok\n");
     //tileset_validator(sprite_Tileset, sprite_width, sprite_height); //OK
     
-    //then mash the two sets together appropriately
-    //monsterMash();
+    Tile* final_tiles = new Tile[sprite_size];
+    for(int i = 0;i<sprite_height;i++){
+        for(int j = 0;j<sprite_width;j++){
+            
+            Tile* base_tile = sprite_Tileset->getTileData(i*sprite_width+j);
+            Tile* sprite_tile = tileset->getTileData(i*sprite_width+j);
+
+            Tile* proc_tile = merge(base_tile, sprite_tile); 
+
+            proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+            sleep_ms(100);
+            final_tiles[i*sprite_width+j] = *proc_tile;
+        } 
+    }
+
+    processed_Tiles = new Tileset(final_tiles, sprite_size);
+    
+    printf("inside constructor ok, final tileset constructed\n");
+    //renderable from here
 }
 
 uint8_t Sprite::hashPos(int x_pix, int y_pix){
@@ -319,12 +338,12 @@ void Sprite::getDims(){
     //for x - width
     if(x>tileset->tile_len){
         if(x%tileset->tile_len!=0){
-            sprite_width += 1;
+            //sprite_width += 1;
             statusFlag |= 0b0001;
         } 
     } else if (tileset->tile_len>x){
         if(tileset->tile_len>x!=0){
-            sprite_width += 1;
+            //sprite_width += 1;
             statusFlag |= 0b0001;
         }
     }
@@ -332,12 +351,12 @@ void Sprite::getDims(){
     //for y - height
     if(y>tileset->tile_len){
         if(y%tileset->tile_len!=0){
-            sprite_height += 1;
+            //sprite_height += 1;
             statusFlag |= 0b0010;
         } 
     } else if (tileset->tile_len>y){
         if(tileset->tile_len>y!=0){
-            sprite_height += 1;
+            //sprite_height += 1;
             statusFlag |= 0b0010;
         }
     }
@@ -396,6 +415,24 @@ Tile* Sprite::spliceY(Tile* tile1, Tile* tile2, uint8_t cutoff){ //means a y off
     return ansTile;
 }
 
+Tile* Sprite::merge(Tile* baseTile, Tile* spriteTile){
+    int tile_len = baseTile->tile_len;
+    uint8_t* tileBuf = new uint8_t[(tile_len)*(tile_len)];
+
+    for(int i = 0;i<tile_len;i++){
+        for(int j=0;j<tile_len;j++){
+            if(spriteTile->getPixel(j,i)==255){
+                tileBuf[i*tile_len+j]=baseTile->getPixel(j,i);
+            } else {
+                tileBuf[i*tile_len+j]=spriteTile->getPixel(j,i);
+            }
+        }
+    }
+
+    Tile* ansTile = new Tile(tile_len, tileBuf);
+    return ansTile;
+}
+
 void Sprite::tileset_validator(Tileset* tiles, int w, int h){
     for(int i=0; i<h; i++){
         for(int j=0; j<w;j++){
@@ -404,129 +441,16 @@ void Sprite::tileset_validator(Tileset* tiles, int w, int h){
     }
 }
 
-/*
-Tileset* Sprite::spriteMask(){
-    //loop through the 'rows' of bufPtr, until there are no more data in buf
-    //as you increment through the necessary offsets, you can det. which tile to
-    //alter, switching as you go
-    
-    //STEPS:
-    //1) start at beginning of the buffer
-    //2)find the first tile to be changed, copy the contents of the tile so that they can be masked
-    //3)alter a row in that tile
-    //4)head to adjacent rows in order to do the same thing, until both conditions are fulfilled
-    //4a) width of the sprite is used up
-    //4b) 
-    //...)increment pointer
-    //
-    
-    if(!((tileset->tile_len+x)%(tileset->tile_len))){
-        width = tiles_wide;
-    } else{
-        width = tiles_wide+1;
-    }
-
-    if(!((tileset->tile_len+y)%(tileset->tile_len))){
-        height = tiles_high;
-    } else{
-        height = tiles_high+1;
-    }
-    
-    //with width and height params i can find the tileindeces
-
-
-    tempTileIndeces = new uint8_t[width*height];
-    Tile* tempTiles = new Tile[width*height];
-
-    //populate tempTiles, etc
-    for(int i=0;i<height;i++){
-        for(int j=0;j<width;j++){
-            tempTileIndeces[(i*width)+j] = (
-                        ((y/tileset->tile_len+i)*width)+
-                        x/tileset->tile_len+j);
-            tempTiles[i]=basePtr->tileset->tileArr[tempTileIndeces[(i*width)+j]];
-        }
-    }
-
-    Tileset* tempTileset = new Tileset(tempTiles, width*height);
-    //tempTileset is filled with copies of the tiles in the base map
-
-    //offset vars here
-    uint8_t tilesetNumber;
-    uint16_t xOffset, yOffset;
-    uint16_t xPix, yPix; //pixel positional pointer inside a tileset
-                        //need to hash this to make it
-                        //relative to which ever tile in tilemap i'm 
-                        //writing to
-    
-    xPix = x/tileset->tile_len + x%(tileset->tile_len);
-    yPix = y/tileset->tile_len + y%(tileset->tile_len);
-    //could be a vector in later integrations, keep it simple for now.
-
-    struct hashPos{
-        uint8_t tileNum; //tile in tileset
-        int index; //the index of buffer of tile
-        uint8_t tile_len;
-        uint8_t tiles_wide;
-                
-        uint8_t xTile, yTile; 
-        uint8_t xIndex, yIndex; 
-
-        hashPos(uint8_t tile_len, uint8_t tiles_wide, uint16_t xPix, uint16_t yPix){
-            this->tile_len = tile_len;
-            this->tiles_wide = tiles_wide;
-
-            xTile = xPix/this->tile_len;
-            yTile = yPix/this->tile_len;
-
-            xIndex = xPix%(this->tile_len);
-            yIndex = yPix%(this->tile_len);
-
-            this->tileNum = yTile*tiles_wide+xTile;
-
-            this->index = (yIndex)*this->tile_len+(xIndex);
-        }
-    };
-
-
-    //run through bufPtr, position on pixels in Tile objects
-    for(int i=0;i<buf_len;i++){
-        //get tileset number
-        tilesetNumber=tileset->tile_len;
-        for(int j=0;j<tileset->tile_len;j++){ 
-            if(bufPtr[i]!=255){
-                hashPos hash = hashPos(tileset->tile_len, this->tiles_wide, xPix, yPix);
-                //make a func in tileset to find which tile you're in using x y cords
-                (tempTileset->tileArr[hash.tileNum]).changePixel(
-                        hash.index,
-                        *bufPtr
-                        );
-            } else{} 
-            xPix = (j!=tileset->tile_len) ? xPix+1 : xPix;
-        }
-        yPix++;
-    }
-
-    return tempTileset;
-}
-
-void Sprite::render(){ 
-    //take the tempTileset and place on top of the base map
-
-    for(int i=0;i<height;i++){
-        for(int j=0;j<width;j++){
-
-
-            //x,y,tilenum
-            tempTileset->render((j*tileset->tile_len)+x,(i*tileset->tile_len)+y,(i*width)+j);
-            //if rendered, will base's map need to be updated? alpha processing is already acounted for,
-            //
-            //my guess is that i will have to do updating of base map inside 
-            //of the destructor
+void Sprite::render(){
+    for(int i=0; i<sprite_height; i++){
+        for(int j=0; j<sprite_width;j++){
+            processed_Tiles->render(
+                    x+tileset->tile_len*j,
+                    y+tileset->tile_len*i,
+                    i*sprite_width+j);
         }
     }
 }
-*/
 
 Font::Font(){}
 //only works for 16 pixel fonts!!
