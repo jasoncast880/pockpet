@@ -18,6 +18,8 @@ public:
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
     void changePixel(uint16_t index, uint8_t color); //bot left corner (x,y)
     uint8_t getPixel(uint16_t x,uint16_t y); //return indexed color value
+                                             //
+    ~Tile(); //ok
 };
 
 struct Tileset{
@@ -43,7 +45,7 @@ public:
     Tile* getTileData(uint8_t tileNum);
     void setTileData(uint8_t tileNum, Tile* tile);
 
-    ~Tileset();
+    ~Tileset(); //need to fix
 };
 
 /* maps to the frame, so it should be (assuming 16 pix tilemaps)
@@ -90,13 +92,14 @@ public:
     Base(Tileset* tileset, uint8_t* mapBuf); //take the whole screen
     void render();
     void printMapGuide();
+    
+    //base will never be destroyed (so far)
 };
 
 struct Sprite: public Tilemap{
 private:
-    struct tempPosData;
     void getDims();
-    uint8_t sprite_width, sprite_height, sprite_size;
+    uint8_t sprite_size;
     uint8_t statusFlag = 0x00;
 
     Tile* spliceX(Tile* tile1, Tile* tile2, uint8_t cutoff); //after splicing, insert into sprite_Tileset
@@ -120,13 +123,20 @@ public:
 
 
     Sprite();
-    Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+    Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* mapBuf);
     ~Sprite();
 
     // members created after mashing 
     Tileset* processed_Tiles;
 
     void render(); 
+    void render(const uint8_t* spriteMapBuf); 
+    void getBaseTileset();
+    void getFinalTileset();
+
+    void setPosition(uint16_t x, uint16_t y);
+    void setSprite(const uint8_t* mapBuf);
+
 };
 
 struct Char_16{ //simplified hash-map structure for storing font data

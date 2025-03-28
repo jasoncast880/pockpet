@@ -32,7 +32,22 @@ const uint8_t tile_menu_spr_16[] = { //11 tall, 16 high; 2 tiles of padding each
 24,4,4,4,4,4,4,4,4,4,4,4,4,4,4,25
 };
 
-const uint8_t demo_spritemap_16[] = {
+const uint8_t demo_spritemap_1[] = {
+0,1,
+4,5
+};
+
+const uint8_t demo_spritemap_2[] = {
 1,2,
-5,6
+6,7
+};
+
+const uint8_t demo_spritemap_3[] = {
+8,9,
+12,13
+};
+
+const uint8_t demo_spritemap_4[] = {
+10,11,
+14,15
 };

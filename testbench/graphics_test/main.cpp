@@ -96,18 +96,42 @@ int main() {
     tileset_font_init();
 
     //tileset test OK
-    sleep_ms(2000);
+    sleep_ms(1000);
     tileset_test((Tileset*)&amp_tileset,5,6);
     printf("base tileset render ok\n");
     
     //base test OK
-    sleep_ms(2000);
+    sleep_ms(1000);
     baseSprite.render();
     printf("base render ok\n");
 
-    testSprite = Sprite((Base*)&baseSprite, 10, 16, 4 , 4, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_16[0]);
+    testSprite = Sprite((Base*)&baseSprite, 100, 16*3, 2 , 2, (Tileset*)&jet_tileset, demo_spritemap_1);
+    sleep_ms(1000);
     printf("sprite constructor ok\n");
 
+    testSprite.render();
+    sleep_ms(500);
+    printf("first render OK\n");
+    
+    /*
+    while(true){ 
+        testSprite.render(demo_spritemap_1);
+        sleep_ms(500);
+
+        testSprite.render(demo_spritemap_2);
+        sleep_ms(500);
+
+        testSprite.render(demo_spritemap_3);
+        sleep_ms(500);
+
+        testSprite.render(demo_spritemap_4);
+        sleep_ms(500);
+        printf("render loop ok\n");
+    }
+    */
+
+    // needs to test how the destructors perform. check for memory leakage
+    
     /*
     sleep_ms(2000);
     testSprite.render();

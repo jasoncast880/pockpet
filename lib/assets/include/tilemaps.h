@@ -8,7 +8,10 @@ extern const uint8_t tile_menu_16[];
 
 extern const uint8_t tile_menu_spr_16[];
 
-extern const uint8_t demo_spritemap_16[];
+extern const uint8_t demo_spritemap_1[];
+extern const uint8_t demo_spritemap_2[];
+extern const uint8_t demo_spritemap_3[];
+extern const uint8_t demo_spritemap_4[];
 
 
 #endif

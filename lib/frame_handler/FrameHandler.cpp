@@ -21,7 +21,10 @@ Tile::Tile(){
 } 
 Tile::Tile(int tile_len, uint8_t* buf_ptr){
     this->tile_len = tile_len;
-    this->buf_ptr = buf_ptr;
+    this->buf_ptr = new uint8_t[tile_len*tile_len];
+    for(int i = 0; i<tile_len*tile_len;i++){
+        this->buf_ptr[i] = buf_ptr[i];
+    }
 }
 
 Tile& Tile::operator=(const Tile& copySource){
@@ -55,6 +58,10 @@ uint8_t Tile::getPixel(uint16_t x, uint16_t y){
     return buf_ptr[x+(y*tile_len)];
 }
 
+Tile::~Tile(){
+    delete[] buf_ptr;
+}
+
 Tileset::Tileset(){}
 
 Tileset::Tileset(int tile_len, uint8_t* bufPtr, uint8_t numTiles) {
@@ -75,7 +82,11 @@ Tileset::Tileset(Tile* tiles, uint8_t numTiles) {
     this->tile_len = tiles[0].tile_len; 
     this->numTiles = numTiles;
 
-    this->tileArr = tiles; //up to the caller to allocate the tiles...
+    this->tileArr = new Tile[numTiles];
+    for (int i=0;i<numTiles;i++){
+        tileArr[i] = tiles[i]; //call on tile ass. op
+                               //tiles is safe to delete
+    }
 }
 
 
@@ -110,7 +121,8 @@ Tileset& Tileset::operator=(const Tileset& copySource){
     return *this;
 }
 
-Tileset::~Tileset(){}
+Tileset::~Tileset(){
+}
 
 Tile* Tileset::getTileData(uint8_t tileNum){
     return &tileArr[tileNum]; 
@@ -218,115 +230,69 @@ void Base::printMapGuide(){
 
 Sprite::Sprite(){}
 
-Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* mapBuf){
+
+    //assumptions:::::::
+    //basePtr, points to tilemap & associated data this sprite is rendered on top of
     this->basePtr = basePtr;
+
+    //positional data
     this->x = x;
     this->y = y;
+
+    //tiles wide, high, dimensions of the rendered sprite
     this->tiles_wide = tiles_wide;
     this->tiles_high = tiles_high;
-    this->tileset = tileset;
-    this->mapBuf = mapBuf;
-    
-    //
-    // 1) gain raw pointer access to the sprite tileset (validated :3)
-    // 2) gain raw pointer access to the base pointer tileset (validated :3)
-    // 3) demonstrate that you can alter the base pointer using sprite tileset
-    //
+    this->sprite_size = tiles_wide*tiles_high;
 
+    //tileset of sprite;; should have the pink alpha filter 
+    this->tileset = tileset;
+
+    //tilemap data, can be stored in an array in assets, (may change later)
+    for(int i = 0;i<tiles_high;i++){
+        for(int j = 0;j<tiles_wide;j++){
+            this->mapBuf[i*tiles_wide+j] = mapBuf[i*tiles_wide+j];
+        }
+    }
+    
+    /*
     sleep_ms(2000);
     tileset_validator(tileset,tiles_wide, tiles_high);
     printf("inside sprite(..) : sprite tileset ok\n");
-    /*
+
     sleep_ms(2000);
     tileset_validator(basePtr->tileset,6,5);
     printf("inside sprite(..) : pointer to base tileset ok\n");
     */
 
-    //raw pointer access is ok on both, time to copy from both sets and 'mash together'
-    //create a tileset with the right amount of tiles to cover the sprite superimposed on the frame.
-
-    sprite_width = tiles_wide;
-    sprite_height = tiles_high;
-    getDims(); //modified width and height, assined a status flag as well!!!!
-    sprite_size = sprite_width*sprite_height;
-
-    Tile* tiles = new Tile[sprite_size];
-
-    //*copy* the tiles from the base tileset and prep them to be modified
-    if(this->statusFlag==0x01){ //dx
-        for(int i = 0;i<sprite_height;i++){
-            for(int j = 0;j<sprite_width;j++){
-                printf("try %d: on base tilemap ", (i*sprite_width+j));
-                uint8_t ans = hashPos(x+j*tileset->tile_len,y+i*tileset->tile_len);
-                Tile* cursor_tile = basePtr->getTileData(ans);
-                Tile* cursor_tile_2 = basePtr->getTileData(ans+1);
-
-                //here condition check based on status register (fornow assume sf = 0x02)
-                //sf=0x02 implies that tile2 is the tile directly above it.
-                //
-                uint8_t diff = (x>tileset->tile_len)?x%tileset->tile_len:tileset->tile_len%x;
-                Tile* proc_tile = spliceX(cursor_tile, cursor_tile_2, diff); 
-
-                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
-                tiles[i*sprite_width+j] = *proc_tile;
-                printf("n.%d\n", ans);
-            }
-        }
-    } else if(this->statusFlag==0x02){ //dy
-        for(int i = 0;i<sprite_height;i++){
-            for(int j = 0;j<sprite_width;j++){
-                printf("try %d: on base tilemap ", (i*sprite_width+j));
-                uint8_t ans = hashPos(x+j*tileset->tile_len,y+i*tileset->tile_len);
-                Tile* cursor_tile = basePtr->getTileData(ans);
-                Tile* cursor_tile_2 = basePtr->getTileData(ans+basePtr->tiles_wide);
-
-                //here condition check based on status register (fornow assume sf = 0x02)
-                //sf=0x02 implies that tile2 is the tile directly above it.
-                //
-                uint8_t diff = (y>tileset->tile_len)?y%tileset->tile_len:tileset->tile_len%y;
-                Tile* proc_tile = spliceY(cursor_tile, cursor_tile_2, diff); 
-
-                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
-                tiles[i*sprite_width+j] = *proc_tile;
-                printf("n.%d\n", ans);
-            } //add other sf cases
-        }
-    } else if(this->statusFlag==0x00){ //no change
-        printf("splicing skipped\n"); 
-    } else{ printf("ERROR: 0x03 sf not supported\n"); }
-    printf("splice ok\n");
-
-    sprite_Tileset = new Tileset(tiles, sprite_size);
-    printf("tileset allocation ok\n");
-    //tileset_validator(sprite_Tileset, sprite_width, sprite_height); //OK
+    getBaseTileset();
     
-    Tile* final_tiles = new Tile[sprite_size];
-    for(int i = 0;i<sprite_height;i++){
-        for(int j = 0;j<sprite_width;j++){
-            
-            Tile* base_tile = sprite_Tileset->getTileData(i*sprite_width+j);
-            Tile* sprite_tile = tileset->getTileData(i*sprite_width+j);
+    getFinalTileset();
 
-            Tile* proc_tile = merge(base_tile, sprite_tile); 
+    printf("inside constructor ok\n");
+}
 
-            proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
-            sleep_ms(100);
-            final_tiles[i*sprite_width+j] = *proc_tile;
-        } 
+//if yes move position, no change sprite
+void Sprite::setPosition(uint16_t x, uint16_t y){ 
+    this->x = x;
+    this->y = y;
+
+    getBaseTileset();
+    getFinalTileset();
+}
+
+//if no move position, yes change sprite
+void Sprite::setSprite(const uint8_t* mapBuf){ 
+    for(int i = 0;i<tiles_high;i++){
+        for(int j = 0;j<tiles_wide;j++){
+            this->mapBuf[i*tiles_wide+j] = mapBuf[i*tiles_wide+j];
+        }
     }
 
-    processed_Tiles = new Tileset(final_tiles, sprite_size);
-    
-    printf("inside constructor ok, final tileset constructed\n");
-    //renderable from here
+    getFinalTileset();
 }
 
-uint8_t Sprite::hashPos(int x_pix, int y_pix){
-    return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(basePtr->tiles_wide));
-    //does not account for edge cases where the sprite goes over the top-right bounds
-}
-
-void Sprite::getDims(){
+void Sprite::getBaseTileset(){
     //0x00:no move
     //0x01:x move
     //0x02:y move
@@ -338,12 +304,12 @@ void Sprite::getDims(){
     //for x - width
     if(x>tileset->tile_len){
         if(x%tileset->tile_len!=0){
-            //sprite_width += 1;
+            //tiles_wide += 1;
             statusFlag |= 0b0001;
         } 
     } else if (tileset->tile_len>x){
         if(tileset->tile_len>x!=0){
-            //sprite_width += 1;
+            //tiles_wide += 1;
             statusFlag |= 0b0001;
         }
     }
@@ -351,18 +317,105 @@ void Sprite::getDims(){
     //for y - height
     if(y>tileset->tile_len){
         if(y%tileset->tile_len!=0){
-            //sprite_height += 1;
+            //tiles_high += 1;
             statusFlag |= 0b0010;
         } 
     } else if (tileset->tile_len>y){
         if(tileset->tile_len>y!=0){
-            //sprite_height += 1;
+            //tiles_high += 1;
             statusFlag |= 0b0010;
         }
     }
 
+    printf("getDims width: %d, height: %d, hexcode: 0x%02X\n", tiles_wide, tiles_high, statusFlag);
 
-    printf("getDims width: %d, height: %d, hexcode: 0x%02X\n", sprite_width, sprite_height, statusFlag);
+    Tile* tiles = new Tile[sprite_size];
+
+    //*copy* the tiles from the base tileset and prep them to be modified
+    if(this->statusFlag==0x01){ //dx
+        for(int i = 0;i<tiles_high;i++){
+            for(int j = 0;j<tiles_wide;j++){
+                printf("try %d: on base tilemap ", (i*tiles_wide+j));
+                uint8_t ans = hashPos(x+j*tileset->tile_len,y+i*tileset->tile_len);
+                Tile* cursor_tile = basePtr->getTileData(ans);
+                Tile* cursor_tile_2 = basePtr->getTileData(ans+1);
+
+                //here condition check based on status register (fornow assume sf = 0x02)
+                //sf=0x02 implies that tile2 is the tile directly above it.
+                //
+                uint8_t diff = (x>tileset->tile_len)?x%tileset->tile_len:tileset->tile_len%x;
+                Tile* proc_tile = spliceX(cursor_tile, cursor_tile_2, diff); 
+
+                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+                tiles[i*tiles_wide+j] = *proc_tile;
+                printf("n.%d\n", ans);
+            }
+        }
+    } else if(this->statusFlag==0x02){ //dy
+        for(int i = 0;i<tiles_high;i++){
+            for(int j = 0;j<tiles_wide;j++){
+                printf("try %d: on base tilemap ", (i*tiles_wide+j));
+                uint8_t ans = hashPos(x+j*tileset->tile_len,y+i*tileset->tile_len);
+                Tile* cursor_tile = basePtr->getTileData(ans);
+                Tile* cursor_tile_2 = basePtr->getTileData(ans+basePtr->tiles_wide);
+
+                //here condition check based on status register (fornow assume sf = 0x02)
+                //sf=0x02 implies that tile2 is the tile directly above it.
+                //
+                uint8_t diff = (y>tileset->tile_len)?y%tileset->tile_len:tileset->tile_len%y;
+                Tile* proc_tile = spliceY(cursor_tile, cursor_tile_2, diff); 
+
+                //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+                tiles[i*tiles_wide+j] = *proc_tile;
+                printf("n.%d\n", ans);
+            } //add other sf cases
+        }
+    } else if(this->statusFlag==0x00){ //no change
+        printf("splicing skipped\n"); 
+    } else{ printf("ERROR: 0x03 sf not supported\n"); }
+    printf("splice ok\n");
+
+    sprite_Tileset = new Tileset(tiles, sprite_size);
+    printf("tileset allocation ok\n");
+
+    //delete[] tiles;
+
+    //tileset_validator(sprite_Tileset, tiles_wide, tiles_high); //OK
+
+}
+
+void Sprite::getFinalTileset(){
+    Tile* final_tiles = new Tile[sprite_size];
+    //
+    uint8_t demoArr []={0,1,4,5};
+    //
+    for(int i = 0;i<tiles_high;i++){
+        for(int j = 0;j<tiles_wide;j++){
+            
+            Tile* base_tile = sprite_Tileset->getTileData(i*tiles_wide+j);
+            printf("got base tile ");
+            Tile* sprite_tile = tileset->getTileData(demoArr[i*tiles_wide+j]);
+            printf("got spr tile \n");
+
+            Tile* proc_tile = merge(base_tile, sprite_tile); 
+            printf("merge ok\n");
+
+            proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
+            sleep_ms(100);
+            final_tiles[i*tiles_wide+j] = *proc_tile;
+        } 
+    }
+
+    processed_Tiles = new Tileset(final_tiles, sprite_size);
+    
+    printf("final tileset constructed\n");
+    //renderable from here
+}
+
+
+uint8_t Sprite::hashPos(int x_pix, int y_pix){
+    return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(basePtr->tiles_wide));
+    //does not account for edge cases where the sprite goes over the top-right bounds
 }
 
 Sprite::~Sprite(){
@@ -442,12 +495,29 @@ void Sprite::tileset_validator(Tileset* tiles, int w, int h){
 }
 
 void Sprite::render(){
-    for(int i=0; i<sprite_height; i++){
-        for(int j=0; j<sprite_width;j++){
+    int count = 0;
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0; j<tiles_wide;j++){
             processed_Tiles->render(
                     x+tileset->tile_len*j,
                     y+tileset->tile_len*i,
-                    i*sprite_width+j);
+                    i*tiles_wide+j);
+            count++;
+        }
+    }
+}
+
+void Sprite::render(const uint8_t* spriteMapBuf){ //helper functions for the api
+    setSprite(spriteMapBuf);
+
+    int count = 0;
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0; j<tiles_wide;j++){
+            processed_Tiles->render(
+                    x+tileset->tile_len*j,
+                    y+tileset->tile_len*i,
+                    mapBuf[count]);
+            count++;
         }
     }
 }
