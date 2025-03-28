@@ -123,19 +123,18 @@ public:
 
 
     Sprite();
-    Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* mapBuf);
+    Sprite(Base* basePtr, int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
     ~Sprite();
 
     // members created after mashing 
     Tileset* processed_Tiles;
 
     void render(); 
-    void render(const uint8_t* spriteMapBuf); 
+    void render(uint8_t* spriteMapBuf); 
     void getBaseTileset();
     void getFinalTileset();
 
     void setPosition(uint16_t x, uint16_t y);
-    void setSprite(const uint8_t* mapBuf);
 
 };
 

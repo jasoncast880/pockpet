@@ -230,7 +230,7 @@ void Base::printMapGuide(){
 
 Sprite::Sprite(){}
 
-Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* mapBuf){
+Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
 
     //assumptions:::::::
     //basePtr, points to tilemap & associated data this sprite is rendered on top of
@@ -249,11 +249,7 @@ Sprite::Sprite(Base* basePtr, int x, int y, uint8_t tiles_wide, uint8_t tiles_hi
     this->tileset = tileset;
 
     //tilemap data, can be stored in an array in assets, (may change later)
-    for(int i = 0;i<tiles_high;i++){
-        for(int j = 0;j<tiles_wide;j++){
-            this->mapBuf[i*tiles_wide+j] = mapBuf[i*tiles_wide+j];
-        }
-    }
+    this->mapBuf = mapBuf;
     
     /*
     sleep_ms(2000);
@@ -281,16 +277,6 @@ void Sprite::setPosition(uint16_t x, uint16_t y){
     getFinalTileset();
 }
 
-//if no move position, yes change sprite
-void Sprite::setSprite(const uint8_t* mapBuf){ 
-    for(int i = 0;i<tiles_high;i++){
-        for(int j = 0;j<tiles_wide;j++){
-            this->mapBuf[i*tiles_wide+j] = mapBuf[i*tiles_wide+j];
-        }
-    }
-
-    getFinalTileset();
-}
 
 void Sprite::getBaseTileset(){
     //0x00:no move
@@ -394,14 +380,17 @@ void Sprite::getFinalTileset(){
             
             Tile* base_tile = sprite_Tileset->getTileData(i*tiles_wide+j);
             printf("got base tile ");
-            Tile* sprite_tile = tileset->getTileData(demoArr[i*tiles_wide+j]);
+            //Tile* sprite_tile = tileset->getTileData(demoArr[i*tiles_wide+j]);
+            Tile* sprite_tile = tileset->getTileData(mapBuf[i*tiles_wide+j]);
             printf("got spr tile \n");
 
             Tile* proc_tile = merge(base_tile, sprite_tile); 
             printf("merge ok\n");
 
+            /*
             proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
             sleep_ms(100);
+            */
             final_tiles[i*tiles_wide+j] = *proc_tile;
         } 
     }
@@ -495,29 +484,27 @@ void Sprite::tileset_validator(Tileset* tiles, int w, int h){
 }
 
 void Sprite::render(){
-    int count = 0;
     for(int i=0; i<tiles_high; i++){
         for(int j=0; j<tiles_wide;j++){
             processed_Tiles->render(
                     x+tileset->tile_len*j,
                     y+tileset->tile_len*i,
                     i*tiles_wide+j);
-            count++;
         }
     }
 }
 
-void Sprite::render(const uint8_t* spriteMapBuf){ //helper functions for the api
-    setSprite(spriteMapBuf);
+void Sprite::render(uint8_t* spriteMapBuf){ //helper functions for the api
+    this->mapBuf = spriteMapBuf;
 
-    int count = 0;
+    getFinalTileset();
+
     for(int i=0; i<tiles_high; i++){
         for(int j=0; j<tiles_wide;j++){
             processed_Tiles->render(
                     x+tileset->tile_len*j,
                     y+tileset->tile_len*i,
-                    mapBuf[count]);
-            count++;
+                    i*tiles_wide+j);
         }
     }
 }

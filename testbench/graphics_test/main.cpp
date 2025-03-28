@@ -105,7 +105,7 @@ int main() {
     baseSprite.render();
     printf("base render ok\n");
 
-    testSprite = Sprite((Base*)&baseSprite, 100, 16*3, 2 , 2, (Tileset*)&jet_tileset, demo_spritemap_1);
+    testSprite = Sprite((Base*)&baseSprite, 100, 16*3, 2 , 2, (Tileset*)&jet_tileset, (uint8_t*)&demo_spritemap_1[0]);
     sleep_ms(1000);
     printf("sprite constructor ok\n");
 
@@ -113,22 +113,25 @@ int main() {
     sleep_ms(500);
     printf("first render OK\n");
     
-    /*
     while(true){ 
-        testSprite.render(demo_spritemap_1);
+        testSprite.render((uint8_t*)&demo_spritemap_1[0]);
         sleep_ms(500);
+        printf("1 ");
 
-        testSprite.render(demo_spritemap_2);
+        testSprite.render((uint8_t*)&demo_spritemap_2[0]);
         sleep_ms(500);
+        printf("2 ");
 
-        testSprite.render(demo_spritemap_3);
+        testSprite.render((uint8_t*)&demo_spritemap_3[0]);
         sleep_ms(500);
+        printf("3 ");
 
-        testSprite.render(demo_spritemap_4);
+        testSprite.render((uint8_t*)&demo_spritemap_4[0]);
         sleep_ms(500);
+        printf("4 ");
+
         printf("render loop ok\n");
     }
-    */
 
     // needs to test how the destructors perform. check for memory leakage
     
