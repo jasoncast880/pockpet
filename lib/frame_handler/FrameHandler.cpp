@@ -59,6 +59,7 @@ uint8_t Tile::getPixel(uint16_t x, uint16_t y){
 }
 
 Tile::~Tile(){
+    printf("tile destructor invoked ");
     delete[] buf_ptr;
 }
 
@@ -82,6 +83,7 @@ Tileset::Tileset(Tile* tiles, uint8_t numTiles) {
     this->tile_len = tiles[0].tile_len; 
     this->numTiles = numTiles;
 
+    //deepcopy
     this->tileArr = new Tile[numTiles];
     for (int i=0;i<numTiles;i++){
         tileArr[i] = tiles[i]; //call on tile ass. op
@@ -122,6 +124,8 @@ Tileset& Tileset::operator=(const Tileset& copySource){
 }
 
 Tileset::~Tileset(){
+    printf("tileset destructor invoked\n");
+    delete[] tileArr;
 }
 
 Tile* Tileset::getTileData(uint8_t tileNum){
@@ -136,7 +140,9 @@ void Tileset::render(uint16_t x, uint16_t y, uint8_t tileNum) {
     tileArr[tileNum].render(x,y);
 }
 
-Tilemap::Tilemap(){} //default constructor (not used)
+Tilemap::Tilemap(){
+    printf("Tilemap def constructor invoked");
+} //default constructor (not used)
 
 Tilemap::Tilemap(Tileset* tileset, uint8_t* mapBuf){
     this->tileset = tileset;
@@ -164,7 +170,11 @@ void Tilemap::render(){
 
 Tile* Tilemap::getTileData(uint8_t tileNum){
     printf("Tilemap calls getTileData(%d)\n", tileNum);
-    return (tileset->getTileData(mapBuf[tileNum]));
+    return(tileset->getTileData(mapBuf[tileNum]));
+}
+
+Tilemap::~Tilemap(){
+    printf("Tilemap Destructor invoked\n");
 }
 
 //need to account for edge case rendering
@@ -335,6 +345,7 @@ void Sprite::getBaseTileset(){
                 //proc_tile->render(x+j*tileset->tile_len, y+i*tileset->tile_len); //check
                 tiles[i*tiles_wide+j] = *proc_tile;
                 printf("n.%d\n", ans);
+                delete proc_tile;
             }
         }
     } else if(this->statusFlag==0x02){ //dy
@@ -361,26 +372,25 @@ void Sprite::getBaseTileset(){
     } else{ printf("ERROR: 0x03 sf not supported\n"); }
     printf("splice ok\n");
 
-    sprite_Tileset = new Tileset(tiles, sprite_size);
+    baseTiles = new Tileset(tiles, sprite_size);
     printf("tileset allocation ok\n");
 
-    //delete[] tiles;
+    printf("deleting tiles tile array:\n");
+    delete[] tiles;
+    printf("\n");
 
-    //tileset_validator(sprite_Tileset, tiles_wide, tiles_high); //OK
+    //tileset_validator(baseTiles, tiles_wide, tiles_high); //OK
 
 }
 
 void Sprite::getFinalTileset(){
     Tile* final_tiles = new Tile[sprite_size];
-    //
-    uint8_t demoArr []={0,1,4,5};
-    //
+
     for(int i = 0;i<tiles_high;i++){
         for(int j = 0;j<tiles_wide;j++){
             
-            Tile* base_tile = sprite_Tileset->getTileData(i*tiles_wide+j);
+            Tile* base_tile = baseTiles->getTileData(i*tiles_wide+j);
             printf("got base tile ");
-            //Tile* sprite_tile = tileset->getTileData(demoArr[i*tiles_wide+j]);
             Tile* sprite_tile = tileset->getTileData(mapBuf[i*tiles_wide+j]);
             printf("got spr tile \n");
 
@@ -392,15 +402,19 @@ void Sprite::getFinalTileset(){
             sleep_ms(100);
             */
             final_tiles[i*tiles_wide+j] = *proc_tile;
+            delete proc_tile;
         } 
     }
 
-    processed_Tiles = new Tileset(final_tiles, sprite_size);
+    finishedTiles = new Tileset(final_tiles, sprite_size);
+
+    printf("deleting final_tiles tile array:\n");
+    delete[] final_tiles;
+    printf("\n");
     
     printf("final tileset constructed\n");
     //renderable from here
 }
-
 
 uint8_t Sprite::hashPos(int x_pix, int y_pix){
     return ((x_pix/tileset->tile_len)+(y_pix/tileset->tile_len)*(basePtr->tiles_wide));
@@ -433,6 +447,8 @@ Tile* Sprite::spliceX(Tile* tile1, Tile* tile2, uint8_t cutoff){
     }
 
     Tile* ansTile = new Tile(tile_len, tileBuf);
+    delete[] tileBuf;
+
     return ansTile;
 }
 
@@ -454,6 +470,8 @@ Tile* Sprite::spliceY(Tile* tile1, Tile* tile2, uint8_t cutoff){ //means a y off
     }
 
     Tile* ansTile = new Tile(tile_len, tileBuf);
+    delete[] tileBuf;
+
     return ansTile;
 }
 
@@ -472,6 +490,8 @@ Tile* Sprite::merge(Tile* baseTile, Tile* spriteTile){
     }
 
     Tile* ansTile = new Tile(tile_len, tileBuf);
+    delete[] tileBuf;
+
     return ansTile;
 }
 
@@ -486,7 +506,7 @@ void Sprite::tileset_validator(Tileset* tiles, int w, int h){
 void Sprite::render(){
     for(int i=0; i<tiles_high; i++){
         for(int j=0; j<tiles_wide;j++){
-            processed_Tiles->render(
+            finishedTiles->render(
                     x+tileset->tile_len*j,
                     y+tileset->tile_len*i,
                     i*tiles_wide+j);
@@ -496,12 +516,32 @@ void Sprite::render(){
 
 void Sprite::render(uint8_t* spriteMapBuf){ //helper functions for the api
     this->mapBuf = spriteMapBuf;
+    delete finishedTiles;
 
     getFinalTileset();
 
     for(int i=0; i<tiles_high; i++){
         for(int j=0; j<tiles_wide;j++){
-            processed_Tiles->render(
+            finishedTiles->render(
+                    x+tileset->tile_len*j,
+                    y+tileset->tile_len*i,
+                    i*tiles_wide+j);
+        }
+    }
+}
+
+void Sprite::render(uint16_t x, uint16_t y){
+    this->x = x;
+    this->y = y;
+    delete baseTiles;
+    delete finishedTiles;
+
+    getBaseTileset();
+    getFinalTileset();
+
+    for(int i=0; i<tiles_high; i++){
+        for(int j=0; j<tiles_wide;j++){
+            finishedTiles->render(
                     x+tileset->tile_len*j,
                     y+tileset->tile_len*i,
                     i*tiles_wide+j);

@@ -18,7 +18,7 @@ public:
     void render(uint16_t x, uint16_t y); //bot left corner (x,y)
     void changePixel(uint16_t index, uint8_t color); //bot left corner (x,y)
     uint8_t getPixel(uint16_t x,uint16_t y); //return indexed color value
-                                             //
+                                             
     ~Tile(); //ok
 };
 
@@ -74,6 +74,8 @@ public:
     void render();
     Tile* getTileData(uint8_t tileNum);
     void alterTile(Tile* tile, Tile* newTile);
+
+    virtual ~Tilemap();
 }; 
 
 struct Base: public Tilemap{
@@ -107,11 +109,10 @@ private:
     Tile* merge(Tile* tile1, Tile* tile2);
 
     uint8_t hashPos(int x_pix,int y_pix); //get base's tilemap index of current tile idx via x/y
-    Tileset* sprite_Tileset;
+    Tileset* baseTiles;
     void tileset_validator(Tileset*,int w, int h);
 
 public:
-    
     Base* basePtr;
 
     // positional data;
@@ -127,15 +128,15 @@ public:
     ~Sprite();
 
     // members created after mashing 
-    Tileset* processed_Tiles;
+    Tileset* finishedTiles;
 
     void render(); 
     void render(uint8_t* spriteMapBuf); 
+    void render(uint16_t x, uint16_t y); 
     void getBaseTileset();
     void getFinalTileset();
 
     void setPosition(uint16_t x, uint16_t y);
-
 };
 
 struct Char_16{ //simplified hash-map structure for storing font data
