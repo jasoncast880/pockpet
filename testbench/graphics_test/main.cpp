@@ -65,15 +65,28 @@ void graphics_test(){ //testing the HAL abstractions
 Tileset amp_tileset, rook_tileset, jet_tileset;
 Base baseSprite;
 Sprite testSprite;
-//Font rookFont;
+Font rookFont;
 
-void tileset_font_init(){
+void tileset_initializer(){
     amp_tileset = Tileset(16, (uint8_t*)&ampalaya_tileset_16[0], 40);
     baseSprite = Base((Tileset*)&amp_tileset, (uint8_t*)&tile_bg_16[0]);
 
     jet_tileset = Tileset(16, (uint8_t*)&jetSprite_16[0], 16);
+}
 
-    //gonna add the font later
+void font_initializer(){
+    rook_tileset = Tileset(16, (uint8_t*)&rook_tileset_16[0],15*15);
+
+    static char charArr[] = { //order of tiles for the rook tileset
+         '/','.','-',',','+','*',')','(','\'','%','$','#','\"','!',' ',
+        '?','>','=','<',';',':','9','8','7','6','5','4','3','2','1','0',
+        'O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','@',
+        '_','^',']','\\','[','Z','Y','X','W','V','U','T','S','R','Q','P',
+        'o','n','m','l','k','j','i','h','g','f','e','d','c','b','a','~', //last is placeholder
+        '~','~','}','|','{','z','y','x','w','v','u','t','s','r','q','p' //first two in this row are placeholders
+    };
+
+    rookFont = Font(&rook_tileset, &charArr[0], (sizeof(charArr)/sizeof(char)));
 }
 
 void tileset_test(Tileset* tileset,int rows, int columns){
@@ -93,7 +106,7 @@ int main() {
 
     ili9341_initialize(17,20,21,19,18,16); //cs, rst, dc, mosi, sclk, miso
 
-    tileset_font_init();
+    tileset_initializer();
 
     //tileset test OK
     sleep_ms(1000);
@@ -113,6 +126,9 @@ int main() {
     sleep_ms(500);
     printf("first render OK\n");
     
+    font_initializer();
+    rookFont.printFont(10,10,"peepee!?69");
+
     while(true){ 
         testSprite.render((uint8_t*)&demo_spritemap_1[0]);
         sleep_ms(500);
@@ -132,12 +148,4 @@ int main() {
 
         printf("render loop ok\n");
     }
-
-    // needs to test how the destructors perform. check for memory leakage
-    
-    /*
-    sleep_ms(2000);
-    testSprite.render();
-    printf("sprite tileset render ok\n");
-    */
 }
