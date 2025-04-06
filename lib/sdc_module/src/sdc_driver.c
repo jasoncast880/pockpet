@@ -149,13 +149,14 @@ bool sdc_write(uint8_t *buf, uint32_t sector, uint32_t count){
 
         //write 512 bytes
         for(int j=0;j<512;j++){ 
-            spi_write_blocking(spi0,&buf[i*512+j],1);
+            spi_write_blocking(spi0,&buf[j],1);
         }
         //crc irrelevant
         spi_write_blocking(spi0,0xFF,1);
         spi_write_blocking(spi0,0xFF,1);
 
-        return true;   
+        spi_read_blocking(spi0, 0xFF, &token, 1);
+        return (token & 0x1F) == 0x05;
 
     case CMD25:
         if(sdc_send_command(CMDX,sector)!=0x00) return false;
