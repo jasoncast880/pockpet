@@ -27,7 +27,8 @@ extern "C" {
 #endif
 
 #if !defined(FFCONF_DEF)
-#include "ffconf.h"		/* FatFs configuration options */
+#include "conf/ffconf.h"		/* FatFs configuration options */
+#include "diskio.h"
 #endif
 #if FF_DEFINED != FFCONF_DEF
 #error Wrong configuration file (ffconf.h).

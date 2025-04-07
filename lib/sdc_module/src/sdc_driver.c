@@ -175,7 +175,7 @@ bool sdc_write(uint8_t *buf, uint32_t sector, uint32_t count){
         }
 
         //send trans. stop token, etc.
-        uint8_t token = 0xFD;
+        token = 0xFD;
         //send a dummy byte
         spi_write_blocking(spi0,0xFF,1);
 

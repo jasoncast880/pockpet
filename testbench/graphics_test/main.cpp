@@ -11,6 +11,9 @@
 #include "ili9341.h"
 #include "FrameHandler.h"
 
+#include "ff.h"
+#include "diskio.h"
+
 void debug_print(){
     for(int i=0; i<=100; i++){
 //        printf("%d",pepe);
@@ -129,7 +132,7 @@ int main() {
     font_initializer();
     rookFont.printFont(10,10,"peepee!?69");
 
-    while(true){ 
+//    while(true){ 
         testSprite.render((uint8_t*)&demo_spritemap_1[0]);
         sleep_ms(500);
         printf("1 ");
@@ -147,5 +150,31 @@ int main() {
         printf("4 ");
 
         printf("render loop ok\n");
+//    }
+
+    //test the file system 
+    //
+    FATFS fs;        // File system object
+    FIL file;        // File object
+    FRESULT fr;      // Result code
+
+    fr = f_mount(&fs, "", 1);  // Mount to default drive, with forced mount
+    if (fr != FR_OK) {
+        printf("mounting err");
     }
+
+    fr = f_open(&file, "test.txt", FA_WRITE | FA_CREATE_ALWAYS);
+    if (fr != FR_OK) {
+        printf("file open err");
+    }
+
+    const char *text = "Hello, Pico + FatFs!\r\n";
+    UINT bytes_written;
+
+    fr = f_write(&file, text, strlen(text), &bytes_written);
+    if (fr != FR_OK || bytes_written != strlen(text)) {
+        printf("write error");
+    }
+
+    f_close(&file);
 }

@@ -2,9 +2,13 @@ add_executable(graphics_test
     main.cpp
 )
 
-target_include_directories(graphics_test PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/include #has class headers, ie peripheral HAL abstractions, encapsulations
-)
+###
+#target_include_directories(graphics_test PRIVATE
+#    ${CMAKE_CURRENT_LIST_DIR}/include #has class headers, ie peripheral HAL abstractions, encapsulations
+#)
+###
+
+#target_compile_features(graphics_test PRIVATE c_std_99)
 
 target_link_libraries(graphics_test
     pico_stdlib
@@ -13,6 +17,8 @@ target_link_libraries(graphics_test
     ili9341_pico_driver
     assets_lib
     frame_handler
+
+    fatfs
 )
 
 pico_enable_stdio_usb(graphics_test 1)

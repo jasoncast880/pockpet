@@ -18,9 +18,11 @@ extern int8_t _SDC_SCLK;
 //define cmd names
 #define CMD0 0 //go idle state
 #define CMD8 8 //send if condition
+#define CMD12 12
 #define CMD17 17 //read single block
 #define CMD18 18 //read multiple block
 #define CMD24 24 //write single block
+#define CMD25 25 //write multiple block
 #define CMD55 55 //app_cmd(whatever that menans)
 #define CMD58 58 //read op-cond-reg (OCR)
 #define ACMD41 41 //send OP con (app command)
