@@ -4,6 +4,8 @@
 #include "hardware/spi.h"
 #include "hardware/gpio.h"
 
+#include "diskio.h"
+
 #ifdef __cplusplus
 extern "C"{
 #endif

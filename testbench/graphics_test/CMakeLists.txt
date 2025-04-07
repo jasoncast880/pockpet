@@ -11,14 +11,14 @@ add_executable(graphics_test
 #target_compile_features(graphics_test PRIVATE c_std_99)
 
 target_link_libraries(graphics_test
+    sdc_driver
+    fatfs
     pico_stdlib
     hardware_spi
     hardware_irq
     ili9341_pico_driver
     assets_lib
     frame_handler
-
-    fatfs
 )
 
 pico_enable_stdio_usb(graphics_test 1)

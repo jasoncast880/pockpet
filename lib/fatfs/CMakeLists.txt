@@ -5,7 +5,6 @@ target_sources(fatfs PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/ff.c
     ${CMAKE_CURRENT_LIST_DIR}/ffsystem.c
     ${CMAKE_CURRENT_LIST_DIR}/ffunicode.c
-    ${CMAKE_CURRENT_LIST_DIR}/diskio.c
 )
 
 target_include_directories(fatfs PUBLIC

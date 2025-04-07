@@ -9,8 +9,7 @@
 extern "C" {
 #endif
 
-#include "ff.h"			/* Obtains integer types */
-#include "sdc_driver.h"  
+#include "ff.h"
 
 /* Status of Disk Functions */
 typedef BYTE	DSTATUS;
@@ -78,3 +77,4 @@ DRESULT disk_ioctl (BYTE pdrv, BYTE cmd, void* buff);
 #endif
 
 #endif
+

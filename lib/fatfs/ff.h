@@ -27,8 +27,8 @@ extern "C" {
 #endif
 
 #if !defined(FFCONF_DEF)
+#include "ff.h"
 #include "conf/ffconf.h"		/* FatFs configuration options */
-#include "diskio.h"
 #endif
 #if FF_DEFINED != FFCONF_DEF
 #error Wrong configuration file (ffconf.h).
@@ -429,3 +429,4 @@ void ff_mutex_give (int vol);		/* Unlock sync object */
 #endif
 
 #endif /* FF_DEFINED */
+

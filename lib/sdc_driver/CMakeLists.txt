@@ -14,5 +14,6 @@ target_link_libraries(sdc_driver
 
 target_include_directories(sdc_driver PUBLIC
   ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/lib/fatfs
 )
 
