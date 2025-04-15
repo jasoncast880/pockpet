@@ -6,3 +6,5 @@ add_subdirectory(assets)
 add_subdirectory(fatfs)
 add_subdirectory(sdc_driver)
 
+add_subdirectory(freertos)
+
