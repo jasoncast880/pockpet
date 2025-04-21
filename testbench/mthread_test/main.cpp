@@ -3,6 +3,13 @@
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 
+//drivers below: they hold the tasks and stuff
+#include "displayHandler.h"
+/*
+#include "sdcHandler.h"
+#include "wifiHandler.h"
+*/
+
 #ifdef CYW43_WL_GPIO_LED_PIN
 #include "pico/cyw43_arch.h"
 #endif
@@ -123,7 +130,17 @@ void main_task(__unused void *params) {
     // start the led blinking
     xTaskCreate(blink_task, "BlinkThread", BLINK_TASK_STACK_SIZE, NULL, BLINK_TASK_PRIORITY, NULL);
 #endif
-    int count = 0;
+    int count = 0; //why isnt blink task running in my app?
+
+    /* **SETUP SPI BUS & RELATED PERIHPERALS, etc. */
+
+    //setup spi with cs tied to the display
+    //run an intro animation
+    //terminal mode write msg, check the drivers, ie sdc check, cyw43 check, cyw43_LED blink test.
+    // -> as running checks, do a loading bar to indicate driver/hw check progress.
+
+    //
+
     while(true) {
 #if configNUMBER_OF_CORES > 1
         static int last_core_id = -1;
@@ -156,9 +173,11 @@ int main( void )
     
     stdio_init_all();
 
-    sleep_ms(2000);
+    sleep_ms(3000);
     printf("GO\n");
 
+
+    
     /* Configure the hardware ready to run the demo. */
     const char *rtos_name;
 #if (configNUMBER_OF_CORES > 1)
