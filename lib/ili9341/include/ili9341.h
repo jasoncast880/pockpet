@@ -101,7 +101,7 @@ static void ili9341_hard_reset();
 static void ili9341_init_sub_pwr(); 
 static void ili9341_init_sub_vram(); 
 
-void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso);
+void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso); //running on spi0 bus
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len);
@@ -110,6 +110,10 @@ void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h);
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa); 
 void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
 void ili9341_exitScrollMode(); 
+
+//for locking access to the spi0 bus
+void ili9341_setCS_HIGH();
+void ili9341_setCS_LOW();
 
 void ili9341_writeDataBuffer_DMA(uint8_t* dataBuf, size_t len); //once the thing is 
 

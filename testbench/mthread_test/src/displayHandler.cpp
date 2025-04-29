@@ -6,7 +6,7 @@
 // Stack sizes of our threads in words (4 bytes)
 #define DISPLAY_WORKER_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 
-static async_context_t* get_async_ctx(void){
+async_context_t* get_async_ctx(void){
     async_context_freertos_config_t config = async_context_freertos_default_config();
     config.task_priority = DISPLAY_WORKER_TASK_PRIORITY;
     config.task_stack_size = DISPLAY_WORKER_TASK_STACK_SIZE;
@@ -15,12 +15,12 @@ static async_context_t* get_async_ctx(void){
         return &async_ctx.core;
 }
 
-static void displayHandling(async_context_t* context, async_at_time_worker_t *worker){
+void displayHandling(async_context_t* context, async_at_time_worker_t *worker){
     //check the queue after 10 ms !!!!
     async_context_add_at_time_worker_in_ms(context, worker,10); //call this method in 10 ms
 
     lcd_msg_t msg;
-    while(xQueueReceive(displayQueue, &msg, 0) == pdPASS){
+    while(xQueueReceive(displayQueue_h, &msg, 0) == pdPASS){
         if(msg.command==0){
             //fill rect w color
             ili9341_setAddrWindow(msg.x,msg.y,msg.rect_color.w,msg.rect_color.h);
@@ -34,16 +34,15 @@ static void displayHandling(async_context_t* context, async_at_time_worker_t *wo
             }
         }
     }
-
 }
 async_at_time_worker_t worker_timeout = {.do_work = displayHandling}; // !!!!!!!
 
-static bool initDisplay(void){ // 'main' display task : call this from main as its own async??
+bool initDisplay(void){ // 'main' display task : call this from main as its own async??
 //initialize spi (you can do pin assignments here) and run an introductory animation 
-    ili9341_initialize(1,2,3,4,5,6); //check the pinout sheet again
+    ili9341_initialize(17,20,21,19,18,16); //pcb ver should use different pins
 
     //create the queue
-    QueueHandle_t displayQueueHandle = xQueueCreate(30,16); //30 items, 2 bytes
+    QueueHandle_t displayQueue_h = xQueueCreate(30,16); //30 items, 2 bytes
 
     //calls the queue check every 10 ms
     async_context_t *context = get_async_ctx();

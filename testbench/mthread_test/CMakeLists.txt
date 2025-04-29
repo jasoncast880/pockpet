@@ -1,10 +1,10 @@
 add_executable(mthread_test
     main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/displayHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/networkHandler.c
 
     #
+    #${CMAKE_CURRENT_SOURCE_DIR}/src/displayHandler.cpp
     #sdcHandler.cpp
-    #wifiHandler.cpp
     #      
 )
 target_include_directories(mthread_test PRIVATE

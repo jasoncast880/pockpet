@@ -34,18 +34,18 @@ extern "C"{
 
 
 //kernel structures/tasks, async_contexts relevant
-QueueHandle_t displayQueue; 
-async_at_time_worker_t queue_worker;
-static async_context_freertos_t async_ctx;
+extern QueueHandle_t displayQueue_h; 
+extern async_at_time_worker_t worker_timeout;
+async_context_freertos_t async_ctx;
 
 //create an async context
-static async_context_t* get_async_ctx(void);
+extern async_context_t* get_async_ctx(void);
 
 //use context to read queue, spawn appropriate async context to handle. consume queue
-static void displayHandling(async_context_t* context, async_at_time_worker_t *worker);
+extern void displayHandling(async_context_t* context, async_at_time_worker_t *worker);
 //use 'worker_timeout' as the display's worker thread
 
-static bool initDisplay(); //hardcode the pins in the method directly, spawn the callback asynchronousely
+bool initDisplay(); //hardcode the pins in the method directly, spawn the callback asynchronousely
 
 //message struct defs, sub defs
 typedef enum{
