@@ -7,6 +7,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+#include "network_handler.h"
+
 // Which core to run on if configNUMBER_OF_CORES==1
 #ifndef RUN_FREE_RTOS_ON_CORE
 #define RUN_FREE_RTOS_ON_CORE 0
@@ -34,7 +36,7 @@ static async_context_t* context_init(void) {
     return &async_context_instance.core;
 }
 
-void led_task(void *param) {
+void led_task(void* param) {
     if (cyw43_arch_init()) vTaskDelete(NULL);
 
     while (1) {
@@ -45,7 +47,7 @@ void led_task(void *param) {
     }
 }
 
-static void do_work(async_context_t *context, async_at_time_worker_t *worker) {
+static void do_work(async_context_t* context, async_at_time_worker_t* worker) {
     async_context_add_at_time_worker_in_ms(context, worker, 10000);
     static uint32_t count = 0;
     printf("Hello from worker count=%u\n", count++);
@@ -53,10 +55,9 @@ static void do_work(async_context_t *context, async_at_time_worker_t *worker) {
 async_at_time_worker_t worker_timeout = { .do_work = do_work };
 
 void main_task(__unused void *params) {
-
-    async_context_t* context = context_init();
-    async_context_add_at_time_worker_in_ms(context, &worker_timeout, 0); //what it do
-    xTaskCreate(led_task, "LED", 256, NULL, BLINK_TASK_PRIORITY, NULL);
+    async_context_t* context = network_context_init();
+    async_context_add_at_time_worker_in_ms(context, &network_worker_timeout, 0); //what it do
+    xTaskCreate(blink_task, "LED", 256, NULL, BLINK_TASK_PRIORITY, NULL);
     int count = 0;
     while(1){
         printf("Hello from main, count = %d\n",count++);

@@ -1,9 +1,11 @@
 add_executable(rtos_test
     main.c
+    src/network_handler.c
 )
 target_include_directories(rtos_test PRIVATE
     ${CMAKE_SOURCE_DIR}/lib/freertos/include #has the freertos config
     ${CMAKE_CURRENT_LIST_DIR}/config #lwipopts inside
+    ${CMAKE_CURRENT_LIST_DIR}/include 
 )
 target_link_libraries(rtos_test PRIVATE
     pico_stdlib
