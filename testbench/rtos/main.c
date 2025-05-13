@@ -4,6 +4,9 @@
 //#include "pico/multicore.h"
 #include "pico/cyw43_arch.h"
 
+#include "lwip/netif.h"
+#include "lwip/ip4_addr.h"
+
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -17,47 +20,39 @@
 // Priorities of our threads - higher numbers are higher priority
 #define MAIN_TASK_PRIORITY      ( tskIDLE_PRIORITY + 2UL )
 #define BLINK_TASK_PRIORITY     ( tskIDLE_PRIORITY + 1UL )
-#define WORKER_TASK_PRIORITY    ( tskIDLE_PRIORITY + 4UL )
 
 // Stack sizes of our threads in words (4 bytes)
 #define MAIN_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 #define BLINK_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
-#define WORKER_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 
-#include "pico/async_context_freertos.h"
+void main_wifi_cnxn_task(__unused void* param) {
+    printf("init wifi...\n");
+    if (cyw43_arch_init()) {
+        printf("cyw43 init failed\n");
+        vTaskDelete(NULL);
+    }
 
-static async_context_freertos_t async_context_instance;
-static async_context_t* context_init(void) {
-    async_context_freertos_config_t config = async_context_freertos_default_config();
-    config.task_priority = WORKER_TASK_PRIORITY;
-    config.task_stack_size = WORKER_TASK_STACK_SIZE;
-    if(!async_context_freertos_init(&async_context_instance, &config))
-        return NULL;
-    return &async_context_instance.core;
-}
+    printf("Connecting to WiFi...\n");
+    if (cyw43_arch_wifi_connect_timeout_ms(SSID, PWD, CYW43_AUTH_WPA2_AES_PSK, 30000)) {
+        printf("failed to connect.\n");
+        vTaskDelete(NULL);
+    } else {
+        printf("Connected.\n");
+    }
 
-void led_task(void* param) {
-    if (cyw43_arch_init()) vTaskDelete(NULL);
+//    xTaskCreate(blink_task, "blink", BLINK_TASK_STACK_SIZE, NULL, BLINK_TASK_PRIORITY, NULL);
 
     while (1) {
-        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(500));
-        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
-static void do_work(async_context_t* context, async_at_time_worker_t* worker) {
-    async_context_add_at_time_worker_in_ms(context, worker, 10000);
-    static uint32_t count = 0;
-    printf("Hello from worker count=%u\n", count++);
-}
-async_at_time_worker_t worker_timeout = { .do_work = do_work };
-
 void main_task(__unused void *params) {
+    /*
     async_context_t* context = network_context_init();
     async_context_add_at_time_worker_in_ms(context, &network_worker_timeout, 0); //what it do
-    xTaskCreate(blink_task, "LED", 256, NULL, BLINK_TASK_PRIORITY, NULL);
+    */
+    xTaskCreate(main_wifi_cnxn_task, "wifi", 4096, NULL, BLINK_TASK_PRIORITY, NULL);
     int count = 0;
     while(1){
         printf("Hello from main, count = %d\n",count++);
@@ -67,7 +62,7 @@ void main_task(__unused void *params) {
 
 void vLaunch( void) {
     TaskHandle_t main_task_h;
-    xTaskCreate(main_task, "MainThread", MAIN_TASK_STACK_SIZE, NULL, MAIN_TASK_PRIORITY, &main_task_h);
+    xTaskCreate(main_task, "MainThread", 4096, NULL, MAIN_TASK_PRIORITY, &main_task_h);
 
 #if configUSE_CORE_AFFINITY && configNUMBER_OF_CORES > 1 //not used??
     // we must bind the main task to one core (well at least while the init is called)
@@ -78,12 +73,17 @@ void vLaunch( void) {
     vTaskStartScheduler();
 }
 
+void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName) {
+    printf("Stack overflow in task: %s\n", pcTaskName);
+    while (1); // halt for debugging
+}
+
 int main( void )
 {
     
     stdio_init_all();
 
-    sleep_ms(3000);
+    sleep_ms(5000);
     printf("GO\n");
 
     vLaunch();
