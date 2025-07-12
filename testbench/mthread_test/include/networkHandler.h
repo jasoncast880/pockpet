@@ -1,27 +1,40 @@
-#pragma once
-
-#ifdef __cplusplus
-extern "C" { 
-#endif
+#ifndef NETWORKHANDLER_H
+#define NETWORKHANDLER_H
 
 #include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
+
 #include "pico/async_context_freertos.h"
+
+#include "pico/cyw43_arch.h"
+#include "lwip/netif.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
 
+class WifiHandler {
+private:
 
-void network_handler_task(void *params); //check connection && correct if needbe; !!! send blink to the led if connected!!!!
-void network_handler_init(void); 
-int network_handler_connect(const char* ssid, const char* pwd); //set & forget, connect to wifi
+    int network_handler_connect(); //set & forget, connect to wifi
 
-//sockets!!!!
+    //pico w led things
+    void pico_set_led(bool state);
+    void pico_init_led();
+    void blink();
 
-//configure tcp socket
-//transmit tcp to stream
-//recieve tcp to stream
+public:
+    WifiHandler();  
 
-#ifdef __cplusplus
-}
-#endif
+    void network_handler_init(void); 
+    static void network_connect_task(void *params); 
+    static void blink_task(void *params);
+    
+    //sockets!!!!
+
+    //configure tcp socket
+    //transmit tcp to stream
+    //recieve tcp to stream
+
+    //remember to add a destructor
+};
+
+#endif //NETWORKHANDLER_H

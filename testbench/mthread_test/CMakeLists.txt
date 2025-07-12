@@ -1,16 +1,19 @@
 add_executable(mthread_test
     main.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/src/networkHandler.c
+    ${CMAKE_CURRENT_LIST_DIR}/src/networkHandler.cpp
 
     #
     #${CMAKE_CURRENT_SOURCE_DIR}/src/displayHandler.cpp
     #sdcHandler.cpp
     #      
 )
+
 target_include_directories(mthread_test PRIVATE
     ${CMAKE_SOURCE_DIR}/lib/freertos/include
+    ${CMAKE_SOURCE_DIR}/secrets
     #my includes are below
     ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/config
 )
 target_link_libraries(mthread_test PRIVATE
     pico_async_context_freertos
@@ -18,13 +21,10 @@ target_link_libraries(mthread_test PRIVATE
     pico_stdlib
     ili9341_pico_driver
     frame_handler
+
+    pico_cyw43_arch_lwip_sys_freertos
 )
 
-if(PICO_CYW43_SUPPORTED)
-    target_link_libraries(mthread_test PRIVATE
-        pico_cyw43_arch_lwip_sys_freertos
-    )
-endif()
 target_compile_definitions(mthread_test PRIVATE
     configNUMBER_OF_CORES=1
 )
