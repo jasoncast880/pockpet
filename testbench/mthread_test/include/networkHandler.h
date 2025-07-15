@@ -1,11 +1,9 @@
 #ifndef NETWORKHANDLER_H
 #define NETWORKHANDLER_H
 
+#include "pico/cyw43_arch.h"
 #include "pico/stdlib.h"
 
-#include "pico/async_context_freertos.h"
-
-#include "pico/cyw43_arch.h"
 #include "lwip/netif.h"
 
 #include "FreeRTOS.h"
