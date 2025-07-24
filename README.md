@@ -13,4 +13,19 @@ Ampalaya is still in breadboard phase. Once the firmware for all of my periphera
 
 
 
+-should be:
+debuggable
+all of the peripherals should be thread safe, easily portable to other similar type systems.
+should have a robust and flexible power system
+should have robust error handling
+
+notes on the hardware:
+-bad.
+-needs to have a seperate components for lcd tft, sdc in the future? 
+    -so i can have an easier time routing the spi bus
+    -so i dont have to worry about dependencies if this particular pcb were to go out of stock
+    -just better craftsmanship and form in general 
+-bad emi, need an actual electrical engineer to help
+-debugging and testing needed on power delivery system.
+-in the future, sound should be delivered via audio jack; however this poses different techinical challenges entirely due to the fact that the rp2040 lacks a dac converter...
 
