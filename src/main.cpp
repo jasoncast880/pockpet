@@ -3,6 +3,7 @@
 #include "pico/cyw43_arch.h"
 #include "lwip/ip4_addr.h"
 
+#include "hardware/gpio.h"
 #include "hardware/irq.h"
 
 #include "FreeRTOS.h"
@@ -20,16 +21,19 @@ const uint BUTTON_PINS[NUM_BUTTONS] = {2, 3, 4, 5, 6, 7, 8, 9};
 
 QueueHandle_t button_queue;
 
-void gpio_task_handler(uint gpio, uint32_t event_mask) {
+void gpio_irq_handler(void) {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
-    for(int i = 0; i<NUM_BUTTONS; i++) {
-        if(gpio==BUTTON_PINS[i]){
-            uint button_id = i;
-            xQueueSendFromISR( button_queue, &button_id, &xHigherPriorityTaskWoken );
-            break;
+    for( uint gpio = 2; gpio<9; gpio++) {
+        uint32_t events = gpio_get_irq_event_mask(gpio);
+        if(events & GPIO_IRQ_EDGE_FALL){
+            gpio_acknowledge_irq(gpio, GPIO_IRQ_EDGE_FALL);
+
+            xQueueSendFromISR(button_queue, &gpio, &xHigherPriorityTaskWoken);
         }
     }
+
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
 void buttons_handler_task( void *pvParameters ) {
@@ -49,7 +53,6 @@ void buttons_handler_task( void *pvParameters ) {
 
 void setup(){ //irq setups, other peripheral setups
 
-
     for(int i = 0; i < NUM_BUTTONS; i++) {
         gpio_init(BUTTON_PINS[i]);
         gpio_set_dir(BUTTON_PINS[i], GPIO_IN);
@@ -62,7 +65,6 @@ void setup(){ //irq setups, other peripheral setups
 
     irq_set_exclusive_handler(IO_IRQ_BANK0, gpio_irq_handler);
     irq_set_enabled(IO_IRQ_BANK0, true);
-
 
 }
 

@@ -16,10 +16,13 @@ target_link_libraries(tactigachi PRIVATE
 
     #externals..
     FreeRTOS-Kernel-Heap4
-    pico_async_context_freertos
     pico_cyw43_arch_lwip_sys_freertos
+    hardware_irq
+    hardware_gpio
 
-    #drivers..
+    #drivers.. etc..
+    #pico_async_context_freertos
+
     #ili9341_pico_driver #broken
     #sdc_pico_driver  #broken
 )
