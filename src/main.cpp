@@ -27,7 +27,7 @@ void gpio_irq_handler(void) {
     for( uint gpio = 2; gpio<9; gpio++) {
         uint32_t events = gpio_get_irq_event_mask(gpio);
         if(events & GPIO_IRQ_EDGE_FALL){
-            gpio_acknowledge_irq(gpio, GPIO_IRQ_EDGE_FALL);
+            gpio_acknowledge_irq(gpio, GPIO_IRQ_EDGE_FALL); //acknowledg this does not account for the button hold; only for press
 
             xQueueSendFromISR(button_queue, &gpio, &xHigherPriorityTaskWoken);
         }
@@ -36,19 +36,25 @@ void gpio_irq_handler(void) {
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
-void buttons_handler_task( void *pvParameters ) {
+void buttons_queue_task( void *pvParameters ) { //new improved version of 'buttons_handler_task'..
     const TickType_t xMaxExpectedBlockTime = pdMS_TO_TICKS( 500 );
+
     uint8_t button_id;
+    uint32_t time_last_pressed[9] = {0};
 
     for ( ;; ) {
         if(xQueueReceive(button_queue, &button_id, xMaxExpectedBlockTime)) {
-            printf("Button %d pressed\n",button_id);
-            //later use this to pass to global memory pool....
-            //needs to be accesible in the other peripherals' code..
-        } else {
-            vTaskDelay(50);
+            uint32_t now = xTaskGetTickCount();
+            if( (now-time_last_pressed[button_id]) >= pdMS_TO_TICKS(20) ) {
+                printf("%d ", button_id);
+                time_last_pressed[button_id] = now;
+            } else { 
+                //disregard
+            }
+        } else { 
+            printf("\n");
         }
-    } 
+    }
 }
 
 void setup(){ //irq setups, other peripheral setups
@@ -99,11 +105,10 @@ int main() {
     setup(); //init button interrupts
              
     xTaskCreate(main_task, "main", 1000, NULL, 3, NULL );
-    xTaskCreate(buttons_handler_task, "buttons", 1000, NULL, 1, NULL );
+    xTaskCreate(buttons_queue_task, "buttons", 1000, NULL, 1, NULL );
 
     
     vTaskStartScheduler();
 
     while (1) tight_loop_contents();
 }
-
