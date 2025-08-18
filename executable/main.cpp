@@ -10,6 +10,7 @@
 #include "task.h"
 #include "semphr.h"
 #include "queue.h"
+#include "display_handler.h"
 
 #include "secrets.h" //temporarily holds wifi creds & not pushed to git
 
@@ -17,7 +18,7 @@
 #define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
 
 #define NUM_BUTTONS 8
-const uint BUTTON_PINS[NUM_BUTTONS] = {2, 3, 4, 5, 6, 7, 8, 9};
+const uint8_t BUTTON_PINS[NUM_BUTTONS] = {2, 3, 4, 5, 6, 7, 8, 9};
 
 QueueHandle_t button_queue;
 
@@ -74,6 +75,8 @@ void setup(){ //irq setups, other peripheral setups
 
 }
 
+void sdc_handler_task(void* pvParameters) { }
+
 void main_task(void *pvParameters) {
     /*
     if (cyw43_arch_init()) {
@@ -96,6 +99,8 @@ int main() {
     sleep_ms(5000);
     printf("GO\n");
 
+    //do the initializatation video seq here
+
     button_queue = xQueueCreate(10, sizeof(uint8_t));
     if(!button_queue) {
         printf("button queue no space :(\n");
@@ -104,9 +109,13 @@ int main() {
 
     setup(); //init button interrupts
              
-    xTaskCreate(main_task, "main", 1000, NULL, 3, NULL );
-    xTaskCreate(buttons_queue_task, "buttons", 1000, NULL, 1, NULL );
+    xTaskCreate( main_task, "main", 1000, NULL, 3, NULL );
 
+    //defined in display_handler file
+    xTaskCreate( lcd_write_task, "lcd_write_task", 2000, NULL, 2, NULL );
+    xTaskCreate( lcd_render_task, "lcd_render_task", 2000, NULL, 2, NULL );
+
+    xTaskCreate( buttons_queue_task, "buttons", 1000, NULL, 1, NULL );
     
     vTaskStartScheduler();
 

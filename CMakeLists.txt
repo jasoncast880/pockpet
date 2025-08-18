@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 set(PICO_BOARD pico_w)
 
+#Run cmake -B build to generate build/compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
+
 # Name project
 SET(ProjectName ampalaya)
 SET(CMAKE_CXX_STANDARD 11)
@@ -25,4 +28,7 @@ add_subdirectory(lib)
 #add_subdirectory(testbench/mthread_test)
 #add_subdirectory(testbench/net_test)
 
-add_subdirectory(src)
+add_subdirectory(executable)
+
+#IMPORTANT:only works because i have LCD_FrameHandler in ./~
+add_subdirectory("../LCD_FrameHandler" "${CMAKE_BINARY_DIR}/LCD_FrameHandler_build")

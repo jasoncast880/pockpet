@@ -9,14 +9,10 @@ int8_t _ILI9341_MOSI;
 int8_t _ILI9341_SCLK;
 int8_t _ILI9341_MISO;
 
-/*
-static uint16_t _cursorx_ = 0x0000;
-static uint16_t _cursorx_ = 0x0000;
-*/
 
 void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sclk, int8_t miso){
     /*
-     * testbench:
+     * test:
      * cs - blue - gp17
      * rst - ylo - gp20
      * dc - grn  - gp 21
@@ -75,14 +71,7 @@ void ili9341_writeData(uint8_t dataByte){
     gpio_put(_ILI9341_CS, true);
 }
 
-void ili9341_writeData16Buffer(uint8_t* dataBuf, size_t len){ //testing
-    gpio_put(_ILI9341_DC, true);
-    gpio_put(_ILI9341_CS, false);
-    spi_write_blocking(spi0, dataBuf, len);
-    gpio_put(_ILI9341_CS, true);
-}
-
-void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len){
+void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ //testing
     gpio_put(_ILI9341_DC, true);
     gpio_put(_ILI9341_CS, false);
     spi_write_blocking(spi0, dataBuf, len);
@@ -90,7 +79,6 @@ void ili9341_writeDataBuffer(uint8_t* dataBuf, size_t len){
 }
 
 //commands abstracted
-
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa){
     ili9341_writeCommand(VSCR_DEF);
     ili9341_writeData((uint8_t)(tfa>>8));
@@ -113,6 +101,7 @@ void ili9341_setScrollPtr(uint16_t vsp){
  *      |   |
  * (0,0).___.
  */
+//RELEVANT FOR PARTIAL UPDATING 
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) { 
     uint16_t x1 = x0+w-1;
     uint16_t y1 = y0+h-1;

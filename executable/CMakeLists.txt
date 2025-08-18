@@ -7,7 +7,7 @@ target_include_directories(tactigachi PRIVATE
     ${CMAKE_SOURCE_DIR}/secrets
 
     ${CMAKE_CURRENT_SOURCE_DIR}/config
-    #    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 
@@ -20,10 +20,11 @@ target_link_libraries(tactigachi PRIVATE
     hardware_irq
     hardware_gpio
 
-    #drivers.. etc..
-    #pico_async_context_freertos
+    #drivers
+    ili9341_pico_driver
+    frame_handler #see top level cmake explanation
+    assets_lib
 
-    #ili9341_pico_driver #broken
     #sdc_pico_driver  #broken
 )
 
