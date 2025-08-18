@@ -18,10 +18,18 @@
 Base base;
 Sprite sprites[10]; //10 inst max
 
-//global tasks
+//global tasks; do in c for name manglin
+#ifdef __cplusplus
+extern "C" { 
+#endif
+
 SemaphoreHandle_t xDisplaySemaphore; //signal for render-write loop
 void lcd_render_task(void* pvParameters); //
 void lcd_write_task(void* pvParameters); //spi write to lcd
+
+#ifdef __cplusplus
+}                                         
+#endif
 
 //dedicated display handler SINGLETON class
 class DisplayHandler { 
@@ -39,6 +47,5 @@ public:
 
     Tileset* getTileset();
 };
-
 
 #endif //DISPLAYHANDLER_H

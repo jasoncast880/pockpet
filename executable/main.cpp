@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+
+/* wifi is bad!!!!!
 #include "pico/cyw43_arch.h"
 #include "lwip/ip4_addr.h"
+*/
 
 #include "hardware/gpio.h"
 #include "hardware/irq.h"

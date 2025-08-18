@@ -1,5 +1,7 @@
 add_executable(tactigachi
     main.cpp
+    #add the handlers here as needed
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/display_handler.cpp
 )
 
 target_include_directories(tactigachi PRIVATE
