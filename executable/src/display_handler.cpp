@@ -1,4 +1,5 @@
 #include "display_handler.h"
+
 #include "ampalaya_tileset_16.h"
 
 //display_handler will call the lcd-related tasks
@@ -8,10 +9,11 @@ DisplayHandler::DisplayHandler(uint8_t mode) {
     ili9341_initialize(17,20,21,19,18,16);
     
     //needs an initial tileset; assets can provide
-    Tileset* tileset = new Tileset(16,&ampalaya_tileset_16[0],40);
+    Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],40);
 
-    int mapBuf[] = { 1 ,2, 3, 4, 5,67};
-    base = new Base(tileset, &mapBuf[0]);
+    uint8_t mapBuf[] = { 1 ,2, 3, 4, 5,67};
+    //base is global
+    base = Base(tileset, (uint8_t*)&mapBuf[0]);
 }
 //how will i add sprites? how do i access this class without 
 //overcomplicating, etc.
@@ -61,8 +63,8 @@ void lcd_write_task(void* pvParameters) {
                 ili9341_setAddrWindow(x0,y0,tile_len,tile_len);
                 ili9341_writeCommand(RAM_WR);
                 
-                Tile tile = base.tileset->getTilesetData(base.getTilemapData(i));
-                uint16_t* buf = tile.buf_ptr;
+                Tile* tile = base.getTilemapData(i);
+                uint16_t* buf = tile->buf_ptr;
 
 
                 ili9341_writeDataBuffer16(buf, tile_len*tile_len);
