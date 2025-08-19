@@ -15,15 +15,17 @@
 #include "semphr.h"
 
 //need a queue to send from system to
-Base base;
-Sprite sprites[10]; //10 inst max
+
+extern Base base;
+extern Sprite sprites[10];
+
+extern SemaphoreHandle_t xDisplaySemaphore;
 
 //global tasks; do in c for name manglin
 #ifdef __cplusplus
 extern "C" { 
 #endif
 
-SemaphoreHandle_t xDisplaySemaphore; //signal for render-write loop
 void lcd_render_task(void* pvParameters); //
 void lcd_write_task(void* pvParameters); //spi write to lcd
 
@@ -35,7 +37,7 @@ void lcd_write_task(void* pvParameters); //spi write to lcd
 class DisplayHandler { 
 private:
     //make a singleton class
-    DisplayHandler(uint8_t mode); //assign frame memory map, if need be
+    DisplayHandler(); //assign frame memory map, if need be
     DisplayHandler(const DisplayHandler&) = delete;
     const DisplayHandler& operator=(const DisplayHandler&) = delete;
 

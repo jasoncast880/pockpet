@@ -4,7 +4,7 @@
 
 //display_handler will call the lcd-related tasks
 
-DisplayHandler::DisplayHandler(uint8_t mode) {
+DisplayHandler::DisplayHandler() {
     //call the display initializers
     ili9341_initialize(17,20,21,19,18,16);
     
@@ -15,6 +15,13 @@ DisplayHandler::DisplayHandler(uint8_t mode) {
     //base is global
     base = Base(tileset, (uint8_t*)&mapBuf[0]);
 }
+
+DisplayHandler& DisplayHandler::GetInstance() {
+    static DisplayHandler onlyInstance;
+    return onlyInstance;
+}
+
+
 //how will i add sprites? how do i access this class without 
 //overcomplicating, etc.
 
@@ -51,6 +58,7 @@ void lcd_write_task(void* pvParameters) {
         //use the DisplayHandler class here; assume mode 0, partial screen render
         //explanation: the base's tile mapguide is what controls which tiles get rendered..
         
+        //WRONG: YOU HAVE TO DO THIS IN THE PRIV. singleton CLASS
         
         uint16_t TIME_MS_TO_TRANSMIT = 20; //change
         xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));

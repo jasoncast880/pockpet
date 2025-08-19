@@ -96,6 +96,11 @@ void main_task(void *pvParameters) {
     }
 }
 
+Base base;
+Sprite sprites[10]; //10 inst max
+
+SemaphoreHandle_t xDisplaySemaphore; //signal for render-write loop
+
 int main() {
 
     stdio_init_all();
