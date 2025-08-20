@@ -96,10 +96,12 @@ void main_task(void *pvParameters) {
     }
 }
 
+//def in display handler
 Base base;
 Sprite sprites[10]; //10 inst max
 
 SemaphoreHandle_t xDisplaySemaphore; //signal for render-write loop
+//
 
 int main() {
 
