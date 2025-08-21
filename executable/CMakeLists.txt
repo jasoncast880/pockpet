@@ -2,6 +2,7 @@ add_executable(tactigachi
     main.cpp
     #add the handlers here as needed
     ${CMAKE_CURRENT_SOURCE_DIR}/src/display_handler.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/button_handler.c
 )
 
 target_include_directories(tactigachi PRIVATE

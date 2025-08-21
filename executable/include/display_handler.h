@@ -19,7 +19,6 @@
 extern Base base;
 extern Sprite sprites[10];
 
-extern xQueueHandle xDisplayHandlerQueue;
 
 //global tasks; do in c for name manglin
 #ifdef __cplusplus
@@ -27,6 +26,7 @@ extern "C" {
 #endif
 
 static SemaphoreHandle_t xDisplaySemaphore;
+extern QueueHandle_t xDisplayHandlerQueue;
 
 void lcd_render_task(void* pvParameters); //
 void lcd_write_task(void* pvParameters); //spi write to lcd
