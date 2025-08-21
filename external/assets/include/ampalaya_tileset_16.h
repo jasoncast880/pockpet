@@ -3,6 +3,6 @@
 
 #include <cstdint>
 
-extern const uint8_t ampalaya_tileset_16[];
+extern const uint16_t ampalaya_tileset_16[];
 
 #endif

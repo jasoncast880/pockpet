@@ -13,6 +13,8 @@
 #include "task.h"
 #include "semphr.h"
 #include "queue.h"
+
+//task handlers here
 #include "display_handler.h"
 
 #include "secrets.h" //temporarily holds wifi creds & not pushed to git
@@ -98,9 +100,8 @@ void main_task(void *pvParameters) {
 
 //def in display handler
 Base base;
-Sprite sprites[10]; //10 inst max
+Sprite sprites[]; //10 inst max
 
-SemaphoreHandle_t xDisplaySemaphore; //signal for render-write loop
 //
 
 int main() {
