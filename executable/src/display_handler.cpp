@@ -4,52 +4,58 @@
 
 //display_handler will call the lcd-related tasks
 
-DisplayHandler::DisplayHandler() {
+
+void display_setup(){
     //call the display initializers
-    ili9341_initialize(17,20,21,19,18,16);
+    ili9341_initialize(17,20,21,19,18,16); //make these defs
     
-    //needs an initial tileset; assets can provide
     Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],40);
-
-    uint8_t mapBuf[] = { 1 ,2, 3, 4, 5,67};
-    //base is global
+    uint8_t mapBuf[] = { 1 ,2, 3, 4, 5,67 }; 
     base = Base(tileset, (uint8_t*)&mapBuf[0]);
-}
+    //fix up
 
-DisplayHandler& DisplayHandler::GetInstance() {
-    static DisplayHandler onlyInstance;
-    return onlyInstance;
+    QueueHandle_t xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
+    
 }
-
 
 //how will i add sprites? how do i access this class without 
 //overcomplicating, etc.
 
-// define the globals here..
-// PARTIAL SCREEN UPDATES!!!
-
 void lcd_render_task(void* pvParameters) {
     for( ;; ) {
         xSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(67));
-        //add a queue here for i.p.c!!!
-        //so that program tasks can seamlessly/easily account for position, layering, spr. changes
-        //without thinking about underlying api
-        
+
+        spriteInfo recv;
+        for( int i = 0; i<10; i++ ) {
+            xQueueReceive( xDisplayHandlerQueue, &recv, (TickType_t)0 );
+            if(recv.sprite){
+                //check for recv matches sprites[x]
+                for( int i = 0;i<10; i++ ) {
+                    if(&sprites[i] == recv.sprite){
+                        if( ( sprites[i].x!=recv.x || sprites[i].y!=recv.y && sprites[i].mapBuf==recv.tilemap)) { 
+                            sprites[i].render(recv.x,recv.y);
+                        } else if( ( sprites[i].x==recv.x && sprites[i].y==recv.y) && sprites[i].mapBuf!=recv.tilemap) { 
+                            sprites[i].render(recv.tilemap);
+                        } else {
+                            sprites[i].render(recv.x,recv.y,recv.tilemap);
+                        }
+                    }
+                }
+            } else {}
+            
+            //reset recv.
+            recv.sprite = NULL; //implied rest of fields are junk value
+        }
+
+        //renders all sprites
         base.render(); 
-        // base will already go through and render all sprites internally
         
         xSemaphoreGive(xDisplaySemaphore);
+    
     }
 } 
 
-//....
-//IMPORTANT::::
-//by this method call, there is already established data in the buffers of this class, all need to do is to print them blocking via spi; all peripheral
-//
-// no ipc, just read from class objects' members and draw via spi
-
 void lcd_write_task(void* pvParameters) {
-    DisplayHandler& display_handler = DisplayHandler::GetInstance();
     //do a initialization for ui, menu, whatever
     
     uint16_t numTiles = (base.tiles_wide*base.tiles_high);
@@ -57,8 +63,6 @@ void lcd_write_task(void* pvParameters) {
     for( ;; ) {
         //use the DisplayHandler class here; assume mode 0, partial screen render
         //explanation: the base's tile mapguide is what controls which tiles get rendered..
-        
-        //WRONG: YOU HAVE TO DO THIS IN THE PRIV. singleton CLASS
         
         uint16_t TIME_MS_TO_TRANSMIT = 20; //change
         xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));
@@ -80,7 +84,6 @@ void lcd_write_task(void* pvParameters) {
                 base.mapGuide[i] = 0; //now the mapGuide[x] is clean!!! 
             }
             ili9341_writeCommand(NOOP);
-
         }
 
         xSemaphoreGive(xDisplaySemaphore);

@@ -14,13 +14,15 @@
 #include "task.h"
 #include "semphr.h"
 
-//need a queue to send from system to
+struct spriteInfo {
+   Sprite* sprite;   //4 bytes
+   uint16_t x,y;     //4 byte (x2 16-bit ints by value)
+   uint8_t* tilemap; //4 bytes
+}; //12 BY total
 
 extern Base base;
 extern Sprite sprites[10];
 
-
-//global tasks; do in c for name manglin
 #ifdef __cplusplus
 extern "C" { 
 #endif
@@ -28,28 +30,13 @@ extern "C" {
 static SemaphoreHandle_t xDisplaySemaphore;
 extern QueueHandle_t xDisplayHandlerQueue;
 
-void lcd_render_task(void* pvParameters); //
-void lcd_write_task(void* pvParameters); //spi write to lcd
+void lcd_render_task(void* pvParameters); 
+void lcd_write_task(void* pvParameters); 
 
 #ifdef __cplusplus
-}                                         
+}
 #endif
 
-//dedicated display handler SINGLETON class
-class DisplayHandler { 
-private:
-    //make a singleton class
-    DisplayHandler(); //assign frame memory map, if need be
-    DisplayHandler(const DisplayHandler&) = delete;
-    const DisplayHandler& operator=(const DisplayHandler&) = delete;
+void display_setup();
 
-public:
-    static DisplayHandler& GetInstance();
-
-    void writeBuf(uint16_t* buf, size_t size);
-    void writeByte(uint8_t byte);
-
-    Tileset* getTileset();
-};
-
-#endif //DISPLAYHANDLER_H
+#endif //D*ISPLAYHANDLER_H

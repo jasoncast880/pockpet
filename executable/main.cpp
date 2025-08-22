@@ -24,6 +24,7 @@ Sprite sprites[]; //10 inst max
 //
                   
 void setup(){
+    display_setup();
     button_setup();
 }
 
@@ -31,7 +32,7 @@ void main_task(void *pvParameters) {
 
     for( ;; ){
         printf("periodic main task\n");
-        vTaskDelay(pdMS_TO_TICKS(100));
+        vTaskDelay(pdMS_TO_TICKS(5000));
     }
 
 }
@@ -49,7 +50,6 @@ int main() {
 
     xButtonQueue = xQueueCreate(10, sizeof(uint8_t));
     if(!xButtonQueue) {
-        printf("button queue no space :(\n");
         while(1);
     }
 
@@ -57,10 +57,10 @@ int main() {
              
     xTaskCreate( main_task, "main", 1000, NULL, 3, NULL );
     
-    //defined in display_handler file
     xTaskCreate( lcd_write_task, "lcd_write_task", 2000, NULL, 2, NULL );
     xTaskCreate( lcd_render_task, "lcd_render_task", 2000, NULL, 2, NULL );
-    xTaskCreate( buttons_queue_task, "buttons", 1000, NULL, 1, NULL );
+
+    xTaskCreate( buttons_queue_task, "buttons", 1000, NULL, 3, NULL );
     
     vTaskStartScheduler();
 
