@@ -39,4 +39,4 @@ void lcd_write_task(void* pvParameters);
 
 void display_setup();
 
-#endif //D*ISPLAYHANDLER_H
+#endif //DISPLAYHANDLER_H

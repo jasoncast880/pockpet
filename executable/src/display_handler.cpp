@@ -28,16 +28,19 @@ void lcd_render_task(void* pvParameters) {
         spriteInfo recv;
         for( int i = 0; i<10; i++ ) {
             xQueueReceive( xDisplayHandlerQueue, &recv, (TickType_t)0 );
-            if(recv.sprite){
+            if(recv.sprite == NULL){
                 //check for recv matches sprites[x]
                 for( int i = 0;i<10; i++ ) {
                     if(&sprites[i] == recv.sprite){
                         if( ( sprites[i].x!=recv.x || sprites[i].y!=recv.y && sprites[i].mapBuf==recv.tilemap)) { 
                             sprites[i].render(recv.x,recv.y);
+                            break;
                         } else if( ( sprites[i].x==recv.x && sprites[i].y==recv.y) && sprites[i].mapBuf!=recv.tilemap) { 
                             sprites[i].render(recv.tilemap);
+                            break;
                         } else {
                             sprites[i].render(recv.x,recv.y,recv.tilemap);
+                            break;
                         }
                     }
                 }
@@ -61,8 +64,6 @@ void lcd_write_task(void* pvParameters) {
     uint16_t numTiles = (base.tiles_wide*base.tiles_high);
 
     for( ;; ) {
-        //use the DisplayHandler class here; assume mode 0, partial screen render
-        //explanation: the base's tile mapguide is what controls which tiles get rendered..
         
         uint16_t TIME_MS_TO_TRANSMIT = 20; //change
         xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));

@@ -13,6 +13,13 @@ void button_setup() {
 
     irq_set_exclusive_handler(IO_IRQ_BANK0, gpio_irq_handler);
     irq_set_enabled(IO_IRQ_BANK0, true);
+
+    xButtonQueue = xQueueCreate(10, sizeof(uint8_t));
+    if(!xButtonQueue) {
+        while(1);
+    }
+
+
 }
 
 void gpio_irq_handler(void) {

@@ -28,13 +28,43 @@ void setup(){
     button_setup();
 }
 
+//application code for now runs through here
 void main_task(void *pvParameters) {
 
+    //process button queue, and convert the user input into system commands.
+    //ie; press up and sprite moves up
+    //
     for( ;; ){
         printf("periodic main task\n");
         vTaskDelay(pdMS_TO_TICKS(5000));
-    }
 
+        uint8_t recv;
+        xQueueReceive(xButtonQueue, &recv, 0);
+        if(recv) {
+            //process here:
+            if(recv==6){ //left??
+                //FOR EXAMPLE
+                spriteInfo msg;
+                msg.sprite = &base.spriteArr[1];
+                msg.x = (msg.sprite->x) - 1;
+                msg.y = (msg.sprite->y);
+                msg.tilemap = (msg.sprite->mapBuf);
+
+                xQueueSendToBack(xDisplayHandlerQueue, &msg, 10);
+            }
+            else if(recv==7){
+            }
+            else if(recv==8){
+            }
+            else if(recv==9){ //these should be header defs
+            }
+
+        } 
+        recv = 0;
+        
+
+    }
+    
 }
 
 //to scaffold: 1) sdc general on-wire funcs spi (same bus)
@@ -47,11 +77,6 @@ int main() {
     printf("GO\n");
 
     //do the initializatation video seq here
-
-    xButtonQueue = xQueueCreate(10, sizeof(uint8_t));
-    if(!xButtonQueue) {
-        while(1);
-    }
 
     setup(); 
              

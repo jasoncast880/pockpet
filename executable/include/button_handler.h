@@ -18,6 +18,7 @@ extern "C" {
 
 #define NUM_BUTTONS 8
 const uint8_t BUTTON_PINS[NUM_BUTTONS] = {2, 3, 4, 5, 6, 7, 8, 9};
+//IDK IF THIS IS TRU: a | b | start | sel | left | up | down | right
 
 void button_setup();
 
