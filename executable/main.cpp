@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "pinout.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -42,7 +43,7 @@ void main_task(void *pvParameters) {
         xQueueReceive(xButtonQueue, &recv, 0);
         if(recv) {
             //process here:
-            if(recv==6){ //left??
+            if(recv==BTN_LEFT){ //left??
                 //FOR EXAMPLE
                 spriteInfo msg;
                 msg.sprite = &base.spriteArr[1];
@@ -52,11 +53,11 @@ void main_task(void *pvParameters) {
 
                 xQueueSendToBack(xDisplayHandlerQueue, &msg, 10);
             }
-            else if(recv==7){
+            else if(recv==BTN_UP){
             }
-            else if(recv==8){
+            else if(recv==BTN_RIGHT){
             }
-            else if(recv==9){ //these should be header defs
+            else if(recv==BTN_DOWN){ //these should be header defs
             }
 
         } 

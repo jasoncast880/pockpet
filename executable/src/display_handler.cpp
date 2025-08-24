@@ -1,4 +1,5 @@
 #include "display_handler.h"
+#include "pinout.h"
 
 #include "ampalaya_tileset_16.h"
 
@@ -7,8 +8,9 @@
 
 void display_setup(){
     //call the display initializers
-    ili9341_initialize(17,20,21,19,18,16); //make these defs
+    ili9341_initialize(SPI0_CS,ILI9341_RST,ILI9341_DC,SPI0_TX,SPI0_SCLK,SPI0_RX); 
     
+    //use legitimate sprites, tilesets
     Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],40);
     uint8_t mapBuf[] = { 1 ,2, 3, 4, 5,67 }; 
     base = Base(tileset, (uint8_t*)&mapBuf[0]);

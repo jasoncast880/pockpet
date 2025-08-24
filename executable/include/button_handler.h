@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "pinout.h"
+
 #include "hardware/gpio.h"
 #include "hardware/irq.h"
 
@@ -17,8 +19,7 @@ extern "C" {
 //SETUP FUNCTION
 
 #define NUM_BUTTONS 8
-const uint8_t BUTTON_PINS[NUM_BUTTONS] = {2, 3, 4, 5, 6, 7, 8, 9};
-//IDK IF THIS IS TRU: a | b | start | sel | left | up | down | right
+const uint8_t BUTTON_PINS[NUM_BUTTONS] = {BTN_A, BTN_B, BTN_START, BTN_SELECT, BTN_LEFT, BTN_UP, BTN_RIGHT, BTN_DOWN};
 
 void button_setup();
 
