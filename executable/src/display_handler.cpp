@@ -2,6 +2,7 @@
 #include "pinout.h"
 
 #include "ampalaya_tileset_16.h"
+#include "tilemaps.h"
 
 //display_handler will call the lcd-related tasks
 
@@ -11,13 +12,14 @@ void display_setup(){
     ili9341_initialize(SPI0_CS,ILI9341_RST,ILI9341_DC,SPI0_TX,SPI0_SCLK,SPI0_RX); 
     
     //use legitimate sprites, tilesets
-    Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],40);
-    uint8_t mapBuf[] = { 1 ,2, 3, 4, 5,67 }; 
-    base = Base(tileset, (uint8_t*)&mapBuf[0]);
+    Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],30);
+
+    base = Base(tileset, (uint8_t*)&tile_bg_16[0]);
     //fix up
 
     QueueHandle_t xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
-    
+
+    printf("display_setup OK\n");
 }
 
 //how will i add sprites? how do i access this class without 
@@ -25,7 +27,7 @@ void display_setup(){
 
 void lcd_render_task(void* pvParameters) {
     for( ;; ) {
-        xSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(67));
+        xSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(100));
 
         spriteInfo recv;
         for( int i = 0; i<10; i++ ) {
@@ -80,7 +82,6 @@ void lcd_write_task(void* pvParameters) {
                 
                 Tile* tile = base.getTilemapData(i);
                 uint16_t* buf = tile->buf_ptr;
-
 
                 ili9341_writeDataBuffer16(buf, tile_len*tile_len);
 

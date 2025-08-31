@@ -19,7 +19,7 @@ void button_setup() {
         while(1);
     }
 
-
+    printf("button_setup OK\n");
 }
 
 void gpio_irq_handler(void) {

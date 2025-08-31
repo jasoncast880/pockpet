@@ -37,13 +37,13 @@ void main_task(void *pvParameters) {
     //
     for( ;; ){
         printf("periodic main task\n");
-        vTaskDelay(pdMS_TO_TICKS(5000));
 
+        /*
         uint8_t recv;
         xQueueReceive(xButtonQueue, &recv, 0);
         if(recv) {
             //process here:
-            if(recv==BTN_LEFT){ //left??
+            if(recv==BTN_LEFT){ 
                 //FOR EXAMPLE
                 spriteInfo msg;
                 msg.sprite = &base.spriteArr[1];
@@ -57,15 +57,13 @@ void main_task(void *pvParameters) {
             }
             else if(recv==BTN_RIGHT){
             }
-            else if(recv==BTN_DOWN){ //these should be header defs
+            else if(recv==BTN_DOWN){ 
             }
-
         } 
         recv = 0;
-        
-
+        */
+        vTaskDelay(pdMS_TO_TICKS(5000));
     }
-    
 }
 
 //to scaffold: 1) sdc general on-wire funcs spi (same bus)
@@ -91,4 +89,5 @@ int main() {
     vTaskStartScheduler();
 
     while (1) tight_loop_contents(); 
+
 }

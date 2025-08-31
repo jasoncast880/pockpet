@@ -4,6 +4,7 @@ set(PICO_BOARD pico_w)
 
 #Run cmake -B build to generate build/compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
+set(CMAKE_BUILD_TYPE Debug)
 
 # Name project
 SET(ProjectName ampalaya)
