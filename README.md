@@ -1,6 +1,12 @@
 # Tacti~Gotchi PDA Project
 
-## Goals:
+## Build
+```
+cd build
+rm -rf ./* -- optional
+cmake ..
+make -j${nproc}
+```
 
 ## Debugging Reference (GDB with OpenOCD on Windows+WSL Ubuntu)
 1. Ensure that tactigachi can be built. (refer to build steps above)
