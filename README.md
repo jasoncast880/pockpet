@@ -19,7 +19,7 @@ usbipd list
   You should get a message like:
 |  BUSID  | VID:PID | DEVICE  | STATE |
 | ------- | ------- | ------  | ----- |
-| <BUSID> | FFFF:FFFF | CMSIS-DAP v2 Interface, USB Serial Device (COM6) | Shared |
+| BUSID | FFFF:FFFF | CMSIS-DAP v2 Interface, USB Serial Device (COM6) | Shared |
 
 4. After verifying your machine sees the CMSIS-DAP probe, give WSL access to the probe.
 ```powershell (Admin)
@@ -38,7 +38,7 @@ lsusb
 ```
 8. In another terminal, navigate to the build folder (directory where the .elf file is generated) and run the following commands: 
 ```bash
-*gdb-multiarch ./*<b><elf-file-name></b>*.elf*  
+*gdb-multiarch ./<elf-file-name>.elf  
 ```
 from inside the gdb interface:
 ```gdb
