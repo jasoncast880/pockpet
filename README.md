@@ -3,7 +3,7 @@
 ## Build
 ```bash
 cd build
-rm -rf ./* -- optional
+rm -rf ./* 
 cmake ..
 make -j${nproc}
 ```
