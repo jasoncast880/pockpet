@@ -1,4 +1,4 @@
-# Tactigachi PDA Project
+# Tacti~Gotchi PDA Project
 
 ## Goals:
 
