@@ -1,6 +1,10 @@
 #include "button_handler.h"
 
 void button_setup() {
+
+    irq_set_exclusive_handler(IO_IRQ_BANK0, gpio_irq_handler);
+    irq_set_enabled(IO_IRQ_BANK0, true);
+
     for(int i = 0; i < NUM_BUTTONS; i++) {
         gpio_init(BUTTON_PINS[i]);
         gpio_set_dir(BUTTON_PINS[i], GPIO_IN);
@@ -10,9 +14,6 @@ void button_setup() {
                 GPIO_IRQ_EDGE_FALL,
                 true);
     }
-
-    irq_set_exclusive_handler(IO_IRQ_BANK0, gpio_irq_handler);
-    irq_set_enabled(IO_IRQ_BANK0, true);
 
     xButtonQueue = xQueueCreate(10, sizeof(uint8_t));
     if(!xButtonQueue) {
