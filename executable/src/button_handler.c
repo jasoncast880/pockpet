@@ -38,7 +38,7 @@ void gpio_irq_handler(void) {
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
-void buttons_queue_task( void *pvParameters ) { //new improved version of 'buttons_handler_task'..
+void buttons_queue_task( void *pvParameters ) { 
     const TickType_t xMaxExpectedBlockTime = pdMS_TO_TICKS( 500 );
 
     uint8_t button_id;

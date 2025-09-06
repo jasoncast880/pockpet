@@ -6,6 +6,11 @@ set(PICO_BOARD pico_w)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
 set(CMAKE_BUILD_TYPE Debug)
 
+#set no optimizations for max. visibility
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")
+
+
 # Name project
 SET(ProjectName ampalaya)
 SET(CMAKE_CXX_STANDARD 11)

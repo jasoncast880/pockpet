@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "pinout.h"
@@ -17,7 +18,8 @@
 #define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
 
 //globs
-QueueHandle_t xButtonQueue, xDisplayHandlerQueue;
+QueueHandle_t xButtonQueue = NULL;
+QueueHandle_t xDisplayHandlerQueue = NULL;
 
 //def in display handler
 Base base;
@@ -38,30 +40,6 @@ void main_task(void *pvParameters) {
     for( ;; ){
         printf("periodic main task\n");
 
-        /*
-        uint8_t recv;
-        xQueueReceive(xButtonQueue, &recv, 0);
-        if(recv) {
-            //process here:
-            if(recv==BTN_LEFT){ 
-                //FOR EXAMPLE
-                spriteInfo msg;
-                msg.sprite = &base.spriteArr[1];
-                msg.x = (msg.sprite->x) - 1;
-                msg.y = (msg.sprite->y);
-                msg.tilemap = (msg.sprite->mapBuf);
-
-                xQueueSendToBack(xDisplayHandlerQueue, &msg, 10);
-            }
-            else if(recv==BTN_UP){
-            }
-            else if(recv==BTN_RIGHT){
-            }
-            else if(recv==BTN_DOWN){ 
-            }
-        } 
-        recv = 0;
-        */
         vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }
@@ -90,4 +68,20 @@ int main() {
 
     while (1) tight_loop_contents(); 
 
+}
+
+extern "C" { //hooks and stuff
+#include "FreeRTOS.h"
+#include "task.h"
+
+void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
+    printf("%s Task Stack Overflow failed\n", pcTaskName);
+}
+
+__attribute__((used)) void keep_heap_symbols(void) {
+    // Volatile cast prevents the compiler from optimizing the calls away
+    volatile size_t tmp;
+    tmp = xPortGetFreeHeapSize();
+    tmp = xPortGetMinimumEverFreeHeapSize();
+}
 }

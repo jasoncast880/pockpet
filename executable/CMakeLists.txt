@@ -13,6 +13,10 @@ target_include_directories(tactigachi PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
+set_source_files_properties(
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+    PROPERTIES COMPILE_FLAGS "-fno-lto -fno-inline -fno-function-sections -fno-data-sections"
+)
 
 target_link_libraries(tactigachi PRIVATE
     pico_stdlib
