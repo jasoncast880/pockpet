@@ -23,6 +23,8 @@ void display_setup(){
         while(1);  // trap here for debugging
     }
 
+    xDisplaySemaphore = xSemaphoreCreateMutex();
+
     printf("display_setup OK\n");
 }
 

@@ -76,6 +76,7 @@ extern "C" { //hooks and stuff
 
 void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
     printf("%s Task Stack Overflow failed\n", pcTaskName);
+    while(1);
 }
 
 __attribute__((used)) void keep_heap_symbols(void) {
