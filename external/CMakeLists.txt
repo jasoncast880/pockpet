@@ -1,6 +1,7 @@
 # add libs here
 add_subdirectory(ili9341)
 add_subdirectory(assets)
+add_subdirectory(LCD_FrameHandler) #library is simply called 'framehandler'
 
 add_subdirectory(freertos_config)
 

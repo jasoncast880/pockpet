@@ -29,12 +29,5 @@ pico_sdk_init()
 add_subdirectory(external) 
 add_subdirectory(executable)
 
-#!!!!testbenches, comment out the one that is testing!!!!!
-#these won't work anymore...
-#add_subdirectory(testbench/graphics_test)
-#add_subdirectory(testbench/mthread_test)
-#add_subdirectory(testbench/net_test)
-
-
-#IMPORTANT:only works because i have LCD_FrameHandler in ./~
-add_subdirectory("../LCD_FrameHandler" "${CMAKE_BINARY_DIR}/LCD_FrameHandler_build")
+#removed because i interated it internally
+#add_subdirectory("../LCD_FrameHandler" "${CMAKE_BINARY_DIR}/LCD_FrameHandler_build")
