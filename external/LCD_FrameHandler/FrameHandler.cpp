@@ -442,30 +442,3 @@ void Sprite::render(uint16_t x, uint16_t y, uint8_t* spriteMapBuf){
         }
     }
 }
-
-/*
-Font::Font(){}
-//only works for 16 pixel fonts!!
-//Font: Char_16 fontArr[100]
-Font::Font(Tileset* tileset, char* charBuf, size_t len){
-    //printf("size of struct Char_16: %zu bytes\n",sizeof(struct Char_16));
-    this->tileset = tileset;
-    for(int i=0;i<(int)len;i++){
-        size_t index = static_cast<size_t>(*charBuf);
-        fontArr[index].glyph=*charBuf;
-        fontArr[index].tileNum=(222-i); //specific to rook tileset
-        charBuf++;
-    } //hashes all of the chars.
-    //printf("finished loop");
-}
-
-void Font::printFont(uint8_t x, uint8_t y, std::string txt){
-    for(int i=0; i<txt.size(); i++){
-        uint8_t temp=fontArr[static_cast<size_t>(txt[i])].tileNum;
-
-        tileset->render(x+(16*i)+2, y, temp);
-        ili9341_writeCommand(NOOP);
-        sleep_ms(250);
-    }
-}
-*/

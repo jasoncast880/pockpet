@@ -20,6 +20,7 @@ struct spriteInfo {
    uint8_t* tilemap; //4 bytes
 }; //12 BY total
 
+//must be global; used between the 2 
 extern Base base;
 extern Sprite sprites[10];
 

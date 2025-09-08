@@ -13,10 +13,18 @@ void display_setup(){
     
     //use legitimate sprites, tilesets
     Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],30);
-
     base = Base(tileset, (uint8_t*)&tile_bg_16[0]);
-    //fix up
 
+    //sprites block
+    Tileset* jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
+    sprites[0] = Sprite(&base, 30, 30, 2, 2, jet_tileset, &demo_spritemap_1[0]);
+    /*
+    sprites[1] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_2[0]);
+    sprites[2] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_3[0]);
+    sprites[3] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_4[0]);
+    */
+
+    //configAssert???
     xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
     if (xDisplayHandlerQueue == NULL) {
         printf("Failed to create display queue!\n");
@@ -36,6 +44,7 @@ void lcd_render_task(void* pvParameters) {
         spriteInfo recv;
         for( int i = 0; i<10; i++ ) {
             xQueueReceive( xDisplayHandlerQueue, &recv, (TickType_t)0 );
+            /*
             if(recv.sprite == NULL){
                 //check for recv matches sprites[x]
                 for( int i = 0;i<10; i++ ) {
@@ -53,6 +62,8 @@ void lcd_render_task(void* pvParameters) {
                     }
                 }
             } else {}
+             *
+            */
             
             //reset recv.
             recv.sprite = NULL; //implied rest of fields are junk value
