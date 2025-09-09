@@ -15,7 +15,7 @@ void button_setup() {
                 true);
     }
 
-    xButtonQueue = xQueueCreate(10, sizeof(uint8_t));
+    xButtonQueue = xQueueCreate(10, sizeof(uint32_t));
     if(!xButtonQueue) {
         while(1);
     }
@@ -41,7 +41,7 @@ void gpio_irq_handler(void) {
 void buttons_queue_task( void *pvParameters ) { 
     const TickType_t xMaxExpectedBlockTime = pdMS_TO_TICKS( 500 );
 
-    uint8_t button_id;
+    uint32_t button_id;
     uint32_t time_last_pressed[9] = {0};
 
     for ( ;; ) {
@@ -53,9 +53,7 @@ void buttons_queue_task( void *pvParameters ) {
             } else { 
                 //disregard
             }
-        } else { 
-            printf("\n");
-        }
+        } 
     }
 }
 
