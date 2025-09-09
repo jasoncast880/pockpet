@@ -5,6 +5,7 @@
 #include <cstring>
 #include <string>
 #include <queue>
+#include <memory>
 
 #define ALPHA_CLR_565 0xF81F //a 565 magenta color
 
