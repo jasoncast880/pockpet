@@ -9,44 +9,47 @@
 
 #define ALPHA_CLR_565 0xF81F //a 565 magenta color
 
-struct Tilemap;
-struct Tileset;
-
 struct Tile { //implement assuming indexed color
+    uint8_t tile_len;
+    std::unique_ptr<uint16_t[]> buf;
 public:
-    int tile_len;        
-    uint16_t* buf_ptr;
 
-    Tile();
-    Tile(int tile_len, uint16_t* buf_ptr);
-    Tile& operator=(const Tile& other);
-    void changePixel(uint16_t index, uint16_t value); //bot left corner (x,y)
-    uint16_t getPixel(uint16_t x,uint16_t y); //return indexed color value
+    Tile();                             //default 16x16
+    Tile(int tile_len, uint16_t* srcBuf);  //builds from a buffer
+
+    Tile(const Tile& other);
+    Tile& operator=(const Tile& copySource);
+
+    Tile(Tile&&) noexcept = default;
+    Tile& operator=(Tile&&) noexcept = default;
+
+    void changePixel(uint16_t index, uint16_t value); 
+    uint16_t getPixel(uint16_t x,uint16_t y); 
                                              
-    ~Tile(); //ok
+    ~Tile() = default; 
 };
 
 struct Tileset{
-private:
-    uint16_t* bufPtr; //sole purpose to populate tileArr
-public:
-    int tile_len;
     uint8_t numTiles;
+    uint16_t* buf; //sole purpose to populate tileArr, when using 3-param constructor
 
-    Tile* tileArr;
+    std::unique_ptr<Tile[]> tiles;
+public:
 
-    //default constructor for passing by reference
-    Tileset();
-    Tileset(int tile_len, uint16_t* bufPtr, uint8_t numTiles);
     Tileset(Tile* tiles, uint8_t numTiles); 
+    Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles); 
+;
 
     Tileset(const Tileset& other);
     Tileset& operator=(const Tileset& other);
 
+    Tileset(Tileset&&) noexcept = default;
+    Tileset& operator=(Tileset&&) noexcept = default;
+
     Tile* getTilesetData(uint8_t tileNum);
     void setTileData(uint8_t tileNum, Tile* tile);
 
-    ~Tileset(); //need to fix
+    ~Tileset() = default;
 };
 
 /* maps to the frame, so it should be (assuming 16 pix tilemaps)

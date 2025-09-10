@@ -5,118 +5,104 @@
  *
  * */
 
+class Tile {
+    uint8_t tile_len;
+    std::unique_ptr<uint16_t[]> buf;
+public:
+    Tile()
+        : tile_len(16), buf(std::unique_ptr<uint16_t[]>(new uint16_t[16*16])) {}
+    Tile(int tile_len, uint16_t* srcBuf)
+        : tile_len(tile_len), 
+          buf(std::unique_ptr<uint16_t[]>(new uint16_t[tile_len*tile_len])) {
+               for (int i = 0 ; i < tile_len*tile_len ; i++) {
+                  buf[i] = srcBuf[i];
+              }
+          }
 
-Tile::Tile(){
-    this->tile_len = 16;
-    this->buf_ptr = new uint16_t[tile_len*tile_len];
-} 
-Tile::Tile(int tile_len, uint16_t* buf_ptr){
-    this->tile_len = tile_len;
-    this->buf_ptr = new uint16_t[tile_len*tile_len];
-    for(int i = 0; i<tile_len*tile_len;i++){
-        this->buf_ptr[i] = buf_ptr[i];
-    }
-}
-
-Tile& Tile::operator=(const Tile& copySource){
-    //self-assignment check
-    if(this == &copySource) return *this;
-        
-    delete[] buf_ptr; //free old mem
-    tile_len = copySource.tile_len;
-
-    //allocate new mem and cpy data
-    buf_ptr = new uint16_t[tile_len*tile_len];
-    std::memcpy(buf_ptr,copySource.buf_ptr, tile_len*tile_len);
-    return *this;
-}
-
-void Tile::changePixel(uint16_t index, uint16_t value){
-    this->buf_ptr[index]=value;
-}
-
-uint16_t Tile::getPixel(uint16_t x, uint16_t y){
-    return buf_ptr[x+(y*tile_len)];
-}
-
-Tile::~Tile(){
-    printf("tile destructor invoked ");
-    delete[] buf_ptr;
-}
-
-Tileset::Tileset(){}
-
-//for working w raw assets, stored in formatted style
-Tileset::Tileset(int tile_len, uint16_t* bufPtr, uint8_t numTiles) { 
-    this->bufPtr = bufPtr;
-    this->tile_len = tile_len;
-    this->numTiles = numTiles;
-
-    //populate the Tile* tileArr
-    this->tileArr = new Tile[numTiles];
-    for (int i=0;i<numTiles;i++){
-        tileArr[i] = Tile(this->tile_len,this->bufPtr+(i*tile_len*tile_len));
-    }
-}
-
-//for working with established tile arrays, converting tilesets
-Tileset::Tileset(Tile* tiles, uint8_t numTiles) { 
-    //bufPtr unused 
-    this->bufPtr = NULL;
-    this->tile_len = tiles[0].tile_len; 
-    this->numTiles = numTiles;
-
-    //deepcopy
-    this->tileArr = new Tile[numTiles];
-    for (int i=0;i<numTiles;i++){
-        tileArr[i] = tiles[i]; 
-    }
-}
-
-
-Tileset::Tileset(const Tileset& copySource){
-    this->tile_len = copySource.tile_len;
-    this->numTiles = copySource.numTiles;
-
-    tileArr = new Tile[numTiles];
-    for(int i = 0; i<numTiles; i++){
-        tileArr[i] = copySource.tileArr[i];
-    }
-}
-
-Tileset& Tileset::operator=(const Tileset& copySource){
-    if((this!=&copySource) && (copySource.bufPtr!=NULL)){
-        if (bufPtr!=NULL) 
-            delete[] bufPtr;
-        if (tileArr!=NULL) 
-            delete[] tileArr;
-
-        //ensure a deep copy by allocating buffer space
-
+    Tile(const Tile& other)
+        : tile_len(other.tile_len),
+          buf(std::unique_ptr<uint16_t[]>(new uint16_t[other.tile_len*other.tile_len])) {
+              for (int i = 0 ; i < tile_len*tile_len ; i++) {
+                  buf[i] = other.buf[i];
+              }
+          }
+    Tile& operator=(const Tile& copySource) {
+        if (this == &copySource) return *this;
         tile_len = copySource.tile_len;
-        numTiles = copySource.numTiles;
-
-        tileArr = new Tile[numTiles];
-        for(int i = 0; i<numTiles; i++){
-            tileArr[i] = copySource.tileArr[i];
+        buf = std::unique_ptr<uint16_t[]>(new uint16_t[tile_len*tile_len]);
+        for (int i = 0 ; i < tile_len*tile_len ; i++) {
+            buf[i] = copySource.buf[i];
         }
     }
-   
-    return *this;
-}
 
-Tileset::~Tileset(){
-    printf("tileset destructor invoked\n");
-    delete[] tileArr;
-}
+    Tile(Tile&&) noexcept = default;
+    Tile& operator=(Tile&&) noexcept = default;
 
-Tile* Tileset::getTilesetData(uint8_t tileNum){
-    return &tileArr[tileNum]; 
-}
+    void changePixel(uint16_t index, uint16_t value) {
+        buf[index] = value;
+    }
 
-void Tileset::setTileData(uint8_t tileNum, Tile* tile){
-    tileArr[tileNum] = *tile;
-}
+    uint16_t getPixel(uint16_t x,uint16_t y) {
+        int index = (y*tile_len)+x;
+        return buf[index];
+    }
+                                             
+    ~Tile() = default;
+};
+
+
+struct Tileset{
+    uint8_t numTiles;
+    uint16_t* buf; //sole purpose to populate tileArr, when using 3-param constructor
+
+    std::unique_ptr<Tile[]> tiles;
+public: //SLOW STEP
+    Tileset(Tile* tiles, uint8_t numTiles) //deep copy tiles..
+        : numTiles(numTiles), 
+          tiles(std::unique_ptr<Tile>(new Tile[numTiles])) {
+              for (int i = 0 ; i < numTiles ; i++) {
+                  Tile[i] = *tiles;
+                  tiles++;
+              }
+          }
+    Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles) 
+        : numTiles(numTiles),
+        tiles(std::unique_ptr<Tile>(new Tile[numTiles])) {
+            uint16_t[] tileBuf = new uint16_t [tile_len*tile_len];
+            for(int i = 0 ; i < numTiles ; i++) {
+                for(int j = 0 ; j < (tile_len*tile_len) ; j++){
+                    tileBuf[j] = *bufPtr;
+                }
+                //now load the tileBuf into Tile constructor
+                tiles[i] = new Tile(tile_len, &tileBuf[0]); 
+            }
+            delete tileBuf;
+        }
+
+
+    Tileset(const Tileset& other)
+        : numTiles(numTiles),
+        tiles(std::unique_ptr<Tile>(new Tile[numTiles])) {
+            for (int i = 0 ; i < numTiles ; i++) {
+                Tile[i] = other->tiles[i];
+            }
+        }
+    Tileset& operator=(const Tileset& other) {
+        if (this == &other) return *this;
+        numTiles = copySource.numTiles;
+        tiles = std::unique_ptr<Tile>(new Tile[numTiles]);
+        for (int i = 0 ; i < numTiles; i++) {
+            tiles[i] = other->tiles[i];
+    }
+
+    Tileset(Tileset&&) noexcept = default;
+    Tileset& operator=(Tileset&&) noexcept = default;
+
+    Tile* getTilesetData(uint8_t tileNum);
+    void setTileData(uint8_t tileNum, Tile* tile);
+
+    ~Tileset() = default;
+};
 
 Tilemap::Tilemap(){} 
 
