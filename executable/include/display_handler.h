@@ -14,16 +14,6 @@
 #include "task.h"
 #include "semphr.h"
 
-struct spriteInfo {
-   Sprite* sprite;   //4 bytes
-   uint16_t x,y;     //4 byte (x2 16-bit ints by value)
-   uint8_t* tilemap; //4 bytes
-}; //12 BY total
-
-//must be global; used between the 2 
-extern Base base;
-extern Sprite sprites[10];
-
 #ifdef __cplusplus
 extern "C" { 
 #endif

@@ -4,25 +4,28 @@
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 
-//display_handler will call the lcd-related tasks
+//globals
 
+    Tileset* sys_tileset;
+    Tileset* jet_tileset;
+
+    Scene* base;
+    Sprite* jetsprite;
+    RenderController* render;
+
+    uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
 void display_setup(){
     //call the display initializers
     ili9341_initialize(SPI0_CS,ILI9341_RST,ILI9341_DC,SPI0_TX,SPI0_SCLK,SPI0_RX); 
     
-    //use legitimate sprites, tilesets
-    Tileset* tileset = new Tileset(16,(uint16_t*)&ampalaya_tileset_16[0],30);
-    base = Base(tileset, (uint8_t*)&tile_bg_16[0]);
+    sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
+    jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
-    //sprites block
-    Tileset* jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
-    sprites[0] = Sprite(&base, 30, 30, 2, 2, jet_tileset, &demo_spritemap_1[0]);
-    /*
-    sprites[1] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_2[0]);
-    sprites[2] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_3[0]);
-    sprites[3] = new Sprite(base, 30, 30, 2, 2, jet_tileset, &demospritemap_4[0]);
-    */
+    base = new Scene(*sys_tileset, (uint8_t*)&tile_bg_16[0]);
+    jetsprite = new Sprite(*jet_tileset, maps[0]);
+
+    render = new RenderController(*base);
 
     //configAssert???
     xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
@@ -32,78 +35,55 @@ void display_setup(){
     }
 
     xDisplaySemaphore = xSemaphoreCreateMutex();
-
     printf("display_setup OK\n");
 }
 
 void lcd_render_task(void* pvParameters) {
+    RenderController& r = *render;
+    Sprite& cursor = *jetsprite;
+
+    r.render();
+    r.sprite_add(cursor);
+
     for( ;; ) {
         xSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(100));
+
         printf("start render \n");
-
-        spriteInfo recv;
-        for( int i = 0; i<10; i++ ) {
-            xQueueReceive( xDisplayHandlerQueue, &recv, (TickType_t)0 );
-            /*
-            if(recv.sprite == NULL){
-                //check for recv matches sprites[x]
-                for( int i = 0;i<10; i++ ) {
-                    if(&sprites[i] == recv.sprite){
-                        if( ( sprites[i].x!=recv.x || sprites[i].y!=recv.y && sprites[i].mapBuf==recv.tilemap)) { 
-                            sprites[i].render(recv.x,recv.y);
-                            break;
-                        } else if( ( sprites[i].x==recv.x && sprites[i].y==recv.y) && sprites[i].mapBuf!=recv.tilemap) { 
-                            sprites[i].render(recv.tilemap);
-                            break;
-                        } else {
-                            sprites[i].render(recv.x,recv.y,recv.tilemap);
-                            break;
-                        }
-                    }
-                }
-            } else {}
-             *
-            */
-            
-            //reset recv.
-            recv.sprite = NULL; //implied rest of fields are junk value
-        }
-
-        //renders all sprites
-        base.render(); 
-        
+        uint16_t x = 50;
+        uint16_t y = 50;
+        for(int i = 0; i<30; i++) {
+            for(int j = 0; j<4 ; j++) {
+                sprite_update(cursor.getID(), x+i, y+i, maps[j]);  //does this set for me ???
+            }
+        } 
         xSemaphoreGive(xDisplaySemaphore);
-    
     }
-} 
+}
 
 void lcd_write_task(void* pvParameters) {
-    //do a initialization for ui, menu, whatever
-    
-    uint16_t numTiles = (base.tiles_wide*base.tiles_high);
+    RenderController& r = *render;
+
+    //reserve a max screen buffer space for writes? for now
+    uint16_t* screenBuf = new uint16_t[240*320];
+    uint16_t numTiles = (r.base.tiles_high*r.base.tiles_wide);
 
     for( ;; ) {
-        
         uint16_t TIME_MS_TO_TRANSMIT = 20; //change
         xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));
 
         printf("start write \n");
 
-        uint8_t tile_len = base.tileset->tile_len;
-        for( int i = 0; i < (base.tiles_wide * base.tiles_high) ; i++ ){
-            if(base.mapGuide[i]!=0) {
-                uint32_t x0 = (i%base.tiles_wide)*tile_len;
-                uint32_t y0 = (i/base.tiles_wide)*tile_len;
-                ili9341_setAddrWindow(x0,y0,tile_len,tile_len);
-                ili9341_writeCommand(RAM_WR);
-                
-                Tile* tile = base.getTilemapData(i);
-                uint16_t* buf = tile->buf_ptr;
+        for( int i = 0; i < (numTiles) ; i++ ){
+            uint32_t x0 = (i%r.base.tiles_wide)*16; //magic numbers grrr
+            uint32_t y0 = (i/r.base.tiles_wide)*16;
+            ili9341_setAddrWindow(x0,y0,16,16);
+            ili9341_writeCommand(RAM_WR);
+            
+            Tile* tile = r.base.getTilemapData(i);
+            uint16_t* buf = tile->buf;
 
-                ili9341_writeDataBuffer16(buf, tile_len*tile_len);
+            ili9341_writeDataBuffer16(buf, 16*16);
 
-                base.mapGuide[i] = 0; //now the mapGuide[x] is clean!!! 
-            }
             ili9341_writeCommand(NOOP);
         }
 

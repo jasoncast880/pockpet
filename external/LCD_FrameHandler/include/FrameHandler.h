@@ -14,9 +14,8 @@ struct Tile { //implement assuming indexed color
     uint8_t tile_len;
     std::unique_ptr<uint16_t[]> buf;
 public:
-
     Tile();                             //default 16x16
-    Tile(int tile_len, uint16_t* srcBuf);  //builds from a buffer
+    Tile(int tile_len, uint16_t* srcBuf);  
 
     Tile(const Tile& other);
     Tile& operator=(const Tile& copySource);
@@ -25,7 +24,8 @@ public:
     Tile& operator=(Tile&&) noexcept = default;
 
     void changePixel(uint16_t index, uint16_t value); 
-    uint16_t getPixel(uint16_t x,uint16_t y); 
+    uint16_t getPixel(uint16_t x,uint16_t y) const; 
+    uint16_t* getBuf() const;
                                              
     ~Tile() = default; 
 };
@@ -33,6 +33,7 @@ public:
 struct Tileset{
     uint8_t numTiles;
     uint16_t* buf; //sole purpose to populate tileArr, when using 3-param constructor
+    uint8_t tile_len;
 
     std::unique_ptr<Tile[]> tiles;
 public:
@@ -46,8 +47,9 @@ public:
     Tileset(Tileset&&) noexcept = default;
     Tileset& operator=(Tileset&&) noexcept = default;
 
-    Tile* getTilesetData(uint8_t tileNum);
+    Tile& getTilesetData(uint8_t tileNum);
     void setTileData(uint8_t tileNum, Tile* tile);
+    uint8_t getTileLen(); //convenience
 
     ~Tileset() = default;
 };
@@ -62,32 +64,31 @@ public:
  */ 
 
 struct Tilemap{ 
-    uint8_t x, y;
-    uint8_t tiles_wide, tiles_high;
-    Tileset* tileset;
     std::unique_ptr<uint16_t[]> map; //map tileset num. to tilespace
-public:
-    Tilemap();
-    Tilemap(Tileset* tileset, uint8_t* mapBuf,uint8_t tiles_wide, uint8_t tiles_high); 
+    uint16_t x, y;
+    Tileset* tileset;
+    uint8_t tiles_wide, tiles_high;
+
+    Tilemap() = default;
+    Tilemap(Tileset& tileset, uint8_t* mapBuf,uint8_t tiles_wide, uint8_t tiles_high); 
+    Tilemap(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
 
     Tile* getTilemapData(uint16_t tileNum);
     void setTilemap(uint16_t tileNum, uint16_t newTile);
 
-    virtual ~Tilemap()=defualt;
+    virtual ~Tilemap()=0;
 }; 
 
 class Scene: public Tilemap{ //only make 1
 public:
-    Scene(Tileset* tileset, uint8_t* mapBuf); 
+    Scene(Tileset& tileset, uint8_t* mapBuf); 
 };
 
 class Sprite: public Tilemap{
-    uint8_t final_tiles_wide, final_tiles_high, spriteid; 
-    std::vector<uint16_t> tiles_buf; //for final tiles
-                                 
+    uint8_t sprite_id = -1;
 public:
-    Sprite(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
-    ~Sprite();
+
+    Sprite(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
 
     Sprite(const Sprite& other);
     Sprite& operator=(const Sprite& other);
@@ -95,20 +96,23 @@ public:
     Sprite(Sprite&&) noexcept = default;
     Sprite& operator=(Sprite&&) noexcept = default;
 
+    void setPosition(uint16_t x, uint16_t y);
     void setMap(uint8_t* mapBuf); //change the entire map
-    void writeTilesBuf(uint16_t* src, size_t size);
-    void resetTilesBuf();
+    uint8_t getID();
+    void setID(uint8_t id);
+
+    //positional context vars
+    std::vector<uint16_t> map_vec; //tilemap tiles the sprite superimposes
+    uint8_t x_offset, y_offset; //+ve offset from tile bounds
+                                //top and left most bounds
+    void setMapVector_Offsets(Tilemap& tilemap); 
+    void resetMapVector_Offsets();
 
     ~Sprite()=default;
 };
 
-class RenderController { //masher
-    Scene base;
-    uint8_t numSprites;
-    Sprite[] sprites;
 
-    uint8_t[] mapGuide; // helps keeps count of dirty, clean tiles
-    size_t guideLen;//number of elements in mapGuide&mapBuf
+class RenderController { //masher
      /*
     mapGuide[x] = 0: CLEAN : dont do nothing
     mapGuide[x] = 1: DIRTY : replace tile 'x' with tileset->tiles[mapBuf[x]] 
@@ -119,14 +123,34 @@ class RenderController { //masher
     */
 
     uint8_t hashPos(int x_pix,int y_pix); 
+    Tilemap* getBaseTilemap();  //change dat //change dat
 
-    Tilemap* getBaseTilemap(); 
-    set setSpriteTileset();
+    void writeTilesBuf(Tile& tile);
+
+    //tempBufs for storing tileData for mashing. reset every
+    //render loop iteration
+    std::vector<uint16_t> spriteBuf;
+    std::vector<uint16_t> baseBuf;
 public:
+    Scene* base;
+    uint8_t* mapGuide; // helps keeps count of dirty, clean tiles
+    size_t guideLen;//number of elements in mapGuide&mapBuf
+                    
+    std::vector<Sprite> sprites; 
+
+    //resize together
+    std::vector<Tile> renderedTiles;
+    std::vector<uint8_t> indexList;
+
+    void sprite_render(uint8_t id);
+    RenderController(Scene& base);
+
+
     void render(); 
-    void sprite_render(int spriteid, uint8_t* spriteMapBuf); 
-    void sprite_render(int spriteid, uint16_t x, uint16_t y); 
-    void sprite_render(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf); 
+    void sprite_add(Sprite& sprite);
+    void sprite_update(int spriteid, uint8_t* spriteMapBuf); 
+    void sprite_update(int spriteid, uint16_t x, uint16_t y); 
+    void sprite_update(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf); 
 };
 
 #endif
