@@ -11,9 +11,10 @@
 #define ALPHA_CLR_565 0xF81F //a 565 magenta color
 
 struct Tile { //implement assuming indexed color
-    uint8_t tile_len;
     std::unique_ptr<uint16_t[]> buf;
 public:
+    uint8_t tile_len;
+
     Tile();                             //default 16x16
     Tile(int tile_len, uint16_t* srcBuf);  
 
@@ -76,7 +77,6 @@ struct Tilemap{
     Tile* getTilemapData(uint16_t tileNum);
     void setTilemap(uint16_t tileNum, uint16_t newTile);
 
-    virtual ~Tilemap()=0;
 }; 
 
 class Scene: public Tilemap{ //only make 1

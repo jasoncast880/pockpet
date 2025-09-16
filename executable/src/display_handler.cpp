@@ -22,8 +22,8 @@ void display_setup(){
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
     jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
-    base = new Scene(*sys_tileset, (uint8_t*)&tile_bg_16[0]);
-    jetsprite = new Sprite(*jet_tileset, maps[0]);
+    base = new Scene((Tileset&)sys_tileset, &tile_bg_16[0]);
+    jetsprite = new Sprite(30,30,2,2,(Tileset&)jet_tileset, maps[0]);
 
     render = new RenderController(*base);
 
@@ -53,7 +53,7 @@ void lcd_render_task(void* pvParameters) {
         uint16_t y = 50;
         for(int i = 0; i<30; i++) {
             for(int j = 0; j<4 ; j++) {
-                sprite_update(cursor.getID(), x+i, y+i, maps[j]);  //does this set for me ???
+                r.sprite_update(cursor.getID(), x+i, y+i, maps[j]);  
             }
         } 
         xSemaphoreGive(xDisplaySemaphore);
@@ -65,7 +65,7 @@ void lcd_write_task(void* pvParameters) {
 
     //reserve a max screen buffer space for writes? for now
     uint16_t* screenBuf = new uint16_t[240*320];
-    uint16_t numTiles = (r.base.tiles_high*r.base.tiles_wide);
+    uint16_t numTiles = (r.base->tiles_high*r.base->tiles_wide);
 
     for( ;; ) {
         uint16_t TIME_MS_TO_TRANSMIT = 20; //change
@@ -74,13 +74,13 @@ void lcd_write_task(void* pvParameters) {
         printf("start write \n");
 
         for( int i = 0; i < (numTiles) ; i++ ){
-            uint32_t x0 = (i%r.base.tiles_wide)*16; //magic numbers grrr
-            uint32_t y0 = (i/r.base.tiles_wide)*16;
+            uint32_t x0 = (i%r.base->tiles_wide)*16; //magic numbers grrr
+            uint32_t y0 = (i/r.base->tiles_wide)*16;
             ili9341_setAddrWindow(x0,y0,16,16);
             ili9341_writeCommand(RAM_WR);
             
-            Tile* tile = r.base.getTilemapData(i);
-            uint16_t* buf = tile->buf;
+            Tile* tile = r.base->getTilemapData(i);
+            uint16_t* buf = tile->getBuf();
 
             ili9341_writeDataBuffer16(buf, 16*16);
 

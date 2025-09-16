@@ -91,6 +91,10 @@ void Tileset::setTileData(uint8_t tileNum, Tile* tile) {
     tiles[tileNum] = *tile;
 }
 
+uint8_t Tileset::getTileLen() {
+    return this->tiles[0].tile_len;
+}
+
 Tilemap::Tilemap(Tileset& tileset, uint8_t* mapBuf, uint8_t tiles_wide, uint8_t tiles_high){
     this->x=0;
     this->y=0;

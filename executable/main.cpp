@@ -22,8 +22,7 @@ QueueHandle_t xButtonQueue = NULL;
 QueueHandle_t xDisplayHandlerQueue = NULL;
 
 //def in display handler
-Base base;
-Sprite sprites[]; //10 inst max
+//Scene* base;
 //
                   
 void setup(){
