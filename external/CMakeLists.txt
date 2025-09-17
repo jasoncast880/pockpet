@@ -1,11 +1,6 @@
 # add libs here
-add_subdirectory(ili9341)
-add_subdirectory(assets)
-add_subdirectory(LCD_FrameHandler) #library is simply called 'framehandler'
-
+add_subdirectory(ili9341) #ili9341_pico_driver
+add_subdirectory(assets) #assets_lib
+add_subdirectory(LCD_FrameHandler) #frame_handler
 add_subdirectory(freertos_config)
-
-#add_subdirectory(sdc_driver) #broken
-
-#add_subdirectory(fatfs) moved to ~
-#add_subdirectory(frame_handler) moved to ~
+add_subdirectory(fatFs) #fatfs

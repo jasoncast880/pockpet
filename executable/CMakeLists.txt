@@ -31,8 +31,8 @@ target_link_libraries(tactigachi PRIVATE
     ili9341_pico_driver
     frame_handler #see top level cmake explanation
     assets_lib
+    fatfs
 
-    #sdc_pico_driver  #broken
 )
 
 target_compile_definitions(tactigachi PRIVATE configNUMBER_OF_CORES=1)

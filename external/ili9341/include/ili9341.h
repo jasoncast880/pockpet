@@ -1,9 +1,3 @@
-/*
- * ili9341 shouuld control all of the reg hardware assignments and 
- * be an abstraction layer for all low level writes and commands..
- * the driver should have a setup that can later be integrated into cpp
- */
-
 #pragma once
 
 #include "pico/stdlib.h"
@@ -69,13 +63,12 @@ extern "C"{
                                   
 #define GAMMA_CORR_INIT_SEQ_1 {1,2,3,4} //example
 
-//gpio abstraction function implementations
-extern int8_t _ILI9341_CS;
-extern int8_t _ILI9341_RST;
-extern int8_t _ILI9341_DC;
-extern int8_t _ILI9341_MOSI;
-extern int8_t _ILI9341_SCLK;
-extern int8_t _ILI9341_MISO;
+extern uint8_t _ILI9341_CS;
+extern uint8_t _ILI9341_RST;
+extern uint8_t _ILI9341_DC;
+extern uint8_t _ILI9341_MOSI;
+extern uint8_t _ILI9341_SCLK;
+extern uint8_t _ILI9341_MISO;
 
 #define _CS_INIT gpio_init(_ILI9341_CS)
 #define _RST_INIT gpio_init(_ILI9341_RST)
@@ -108,9 +101,6 @@ void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len);
 
-void ili9341_writeColorByIndex(uint8_t index); // ! remove this and abstract to application code, or to the frame handler lib !
-
-//all this stuff is a little unconventional to me, needs to be tested once hw is built
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); 
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa); 
 void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual

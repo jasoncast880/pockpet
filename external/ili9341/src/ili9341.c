@@ -2,13 +2,12 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-int8_t _ILI9341_CS;
-int8_t _ILI9341_RST;
-int8_t _ILI9341_DC;
-int8_t _ILI9341_MOSI;
-int8_t _ILI9341_SCLK;
-int8_t _ILI9341_MISO;
-
+uint8_t _ILI9341_CS;
+uint8_t _ILI9341_RST;
+uint8_t _ILI9341_DC;
+uint8_t _ILI9341_MOSI;
+uint8_t _ILI9341_SCLK;
+uint8_t _ILI9341_MISO;
 
 void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sclk, int8_t miso){
     /*
@@ -74,7 +73,7 @@ void ili9341_writeData(uint8_t dataByte){
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ //testing
     gpio_put(_ILI9341_DC, true);
     gpio_put(_ILI9341_CS, false);
-    spi_write_blocking(spi0, dataBuf, len);
+    spi_write16_blocking(spi0, dataBuf, len);
     gpio_put(_ILI9341_CS, true);
 }
 
@@ -135,7 +134,6 @@ static void ili9341_init_sub_pwr(){
     sleep_ms(120);
     ili9341_writeCommand(DISPON);
     sleep_ms(100);
-
 }
 
 static void ili9341_init_sub_vram(){
@@ -146,36 +144,4 @@ static void ili9341_init_sub_vram(){
     ili9341_writeCommand(MADCTL);
     ili9341_writeData(0xAC);
     ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. THIS WORKS....
-}
-
-void ili9341_writeColorByIndex(uint8_t index){
-    //ensure that you're in Write RAM mode before calling this funct
-    if(index==0){
-        ili9341_writeData(0x00);
-        ili9341_writeData(0x00);
-    }
-    else if(index==1){ //wht
-        ili9341_writeData(0xff);
-        ili9341_writeData(0xff);
-    }
-    else if(index==2){ //ylo
-        ili9341_writeData(0xff);
-        ili9341_writeData(0xd0);
-    }
-    else if(index==3){ //orng
-        ili9341_writeData(0xfc);
-        ili9341_writeData(0x66);
-    }
-    else if(index==4){ //grn
-        ili9341_writeData(0x67);
-        ili9341_writeData(0xf7);
-    }
-    else if(index==5){ //dark blu
-        ili9341_writeData(0x00);
-        ili9341_writeData(0x4e);
-    }
-    else if(index==255){
-        ili9341_writeData(0xf8);
-        ili9341_writeData(0x1f);
-    }
 }
