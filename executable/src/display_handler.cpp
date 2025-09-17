@@ -3,6 +3,8 @@
 
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
+#include <stdexcept>
+#include <vector>
 
 //globals
 
@@ -22,8 +24,8 @@ void display_setup(){
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
     jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
-    base = new Scene((Tileset&)sys_tileset, &tile_bg_16[0]);
-    jetsprite = new Sprite(30,30,2,2,(Tileset&)jet_tileset, maps[0]);
+    base = new Scene(*sys_tileset, &tile_bg_16[0]);
+    jetsprite = new Sprite(30,30,2,2,*jet_tileset, maps[0]);
 
     render = new RenderController(*base);
 
@@ -67,20 +69,34 @@ void lcd_write_task(void* pvParameters) {
     uint16_t* screenBuf = new uint16_t[240*320];
     uint16_t numTiles = (r.base->tiles_high*r.base->tiles_wide);
 
-    for( ;; ) {
-        uint16_t TIME_MS_TO_TRANSMIT = 20; //change
-        xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));
-
-        printf("start write \n");
-
-        for( int i = 0; i < (numTiles) ; i++ ){
-            uint32_t x0 = (i%r.base->tiles_wide)*16; //magic numbers grrr
+    xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(20));
+    for( int i = 0; i < (numTiles) ; i++ ){
+            uint32_t x0 = (i%r.base->tiles_wide)*16; 
             uint32_t y0 = (i/r.base->tiles_wide)*16;
             ili9341_setAddrWindow(x0,y0,16,16);
             ili9341_writeCommand(RAM_WR);
             
             Tile* tile = r.base->getTilemapData(i);
             uint16_t* buf = tile->getBuf();
+
+            ili9341_writeDataBuffer16(buf, 16*16);
+
+            ili9341_writeCommand(NOOP);
+    }
+    xSemaphoreGive(xDisplaySemaphore);
+
+    for( ;; ) {
+        uint16_t TIME_MS_TO_TRANSMIT = 20; //change
+        xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));
+
+        for( int i = 0; i < (r.renderedTiles.size()) ; i++ ){
+            uint32_t x0 = ((r.indexList.at(i))%r.base->tiles_wide)*16; 
+            uint32_t y0 = (r.indexList.at(i)/r.base->tiles_wide)*16;
+            ili9341_setAddrWindow(x0,y0,16,16);
+            ili9341_writeCommand(RAM_WR);
+            
+            Tile& tile = r.renderedTiles.at(i);
+            uint16_t* buf = tile.getBuf();
 
             ili9341_writeDataBuffer16(buf, 16*16);
 
