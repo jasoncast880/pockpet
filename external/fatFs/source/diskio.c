@@ -10,10 +10,18 @@
 #include "ff.h"			/* Obtains integer types */
 #include "diskio.h"		/* Declarations of disk functions */
 
+#include "pico/stdlib.h"
+#include "hardware/spi.h"
+#include "hardware/gpio.h"
+#include "pinout.h"
+
 /* Definitions of physical drive number for each drive */
-#define DEV_RAM		0	/* Example: Map Ramdisk to physical drive 0 */
-#define DEV_MMC		1	/* Example: Map MMC/SD card to physical drive 1 */
-#define DEV_USB		2	/* Example: Map USB MSD to physical drive 2 */
+#define DEV_MMC		0	/* Example: Map MMC/SD card to physical drive 1 */
+//if i add more later (i won't <@:) )
+/*
+#define DEV_RAM		1	
+#define DEV_USB		2	
+*/
 
 
 /*-----------------------------------------------------------------------*/
@@ -25,34 +33,18 @@ DSTATUS disk_status (
 )
 {
 	DSTATUS stat;
-	int result;
 
 	switch (pdrv) {
-	case DEV_RAM :
-		result = RAM_disk_status();
+    case DEV_MMC :
+        
+        if(spi_is_busy((spi_inst_t*)spi0_hw)) {
+            stat = STA_PROTECT;
+        }
+        return stat;
 
-		// translate the reslut code here
-
-		return stat;
-
-	case DEV_MMC :
-		result = MMC_disk_status();
-
-		// translate the reslut code here
-
-		return stat;
-
-	case DEV_USB :
-		result = USB_disk_status();
-
-		// translate the reslut code here
-
-		return stat;
-	}
-	return STA_NOINIT;
-}
-
-
+    default: stat = STA_OK;
+    } return stat;
+} 
 
 /*-----------------------------------------------------------------------*/
 /* Inidialize a Drive                                                    */
@@ -66,31 +58,18 @@ DSTATUS disk_initialize (
 	int result;
 
 	switch (pdrv) {
-	case DEV_RAM :
-		result = RAM_disk_initialize();
-
-		// translate the reslut code here
-
-		return stat;
-
 	case DEV_MMC :
-		result = MMC_disk_initialize();
+        //is this necessary??
+        result = spi_init((spi_inst_t*)spi0_hw, 8000*1000); //6MHz
+        //result is the baud rate
 
-		// translate the reslut code here
+        if(result == 0) {
+            stat = STA_NOINIT;
+        }
 
-		return stat;
-
-	case DEV_USB :
-		result = USB_disk_initialize();
-
-		// translate the reslut code here
-
-		return stat;
-	}
-	return STA_NOINIT;
+    default: stat = STA_OK;
+	} return stat;
 }
-
-
 
 /*-----------------------------------------------------------------------*/
 /* Read Sector(s)                                                        */
@@ -107,38 +86,16 @@ DRESULT disk_read (
 	int result;
 
 	switch (pdrv) {
-	case DEV_RAM :
-		// translate the arguments here
-
-		result = RAM_disk_read(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-
 	case DEV_MMC :
 		// translate the arguments here
 
-		result = MMC_disk_read(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-
-	case DEV_USB :
-		// translate the arguments here
-
-		result = USB_disk_read(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-	}
-
-	return RES_PARERR;
+        result = spi_read16_blocking((spi_inst_t*)spi0_hw, (uint16_t)0xff, buff, count);
+        if (result == count) return RES_OK;
+        else return RES_ERROR;
+        
+    default: res = RES_PARERR;
+    } return res;
 }
-
-
 
 /*-----------------------------------------------------------------------*/
 /* Write Sector(s)                                                       */
@@ -151,41 +108,19 @@ DRESULT disk_write (
 	const BYTE *buff,	/* Data to be written */
 	LBA_t sector,		/* Start sector in LBA */
 	UINT count			/* Number of sectors to write */
-)
-{
+){
 	DRESULT res;
 	int result;
 
 	switch (pdrv) {
-	case DEV_RAM :
-		// translate the arguments here
-
-		result = RAM_disk_write(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-
 	case DEV_MMC :
 		// translate the arguments here
-
-		result = MMC_disk_write(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-
-	case DEV_USB :
-		// translate the arguments here
-
-		result = USB_disk_write(buff, sector, count);
-
-		// translate the reslut code here
-
-		return res;
-	}
-
-	return RES_PARERR;
+        result = spi_write16_blocking((spi_inst_t*)spi0_hw, buff, count);
+        if (result == count) return RES_OK;
+        else return RES_ERROR;
+        
+    default: res = RES_PARERR;
+    } return res;
 }
 
 #endif
@@ -198,32 +133,19 @@ DRESULT disk_write (
 DRESULT disk_ioctl (
 	BYTE pdrv,		/* Physical drive nmuber (0..) */
 	BYTE cmd,		/* Control code */
-	void *buff		/* Buffer to send/receive control data */
+	BYTE *buff		/* Buffer to send/receive control data */
 )
 {
 	DRESULT res;
 	int result;
 
 	switch (pdrv) {
-	case DEV_RAM :
-
-		// Process of the command for the RAM drive
-
-		return res;
-
 	case DEV_MMC :
-
-		// Process of the command for the MMC/SD card
-
-		return res;
-
-	case DEV_USB :
-
-		// Process of the command the USB drive
-
-		return res;
-	}
-
-	return RES_PARERR;
+        spi_write_blocking((spi_inst_t*)spi0_hw, &cmd, 1);
+        spi_read_blocking((spi_inst_t*)spi0_hw, 0xff, buff, 1);
+        if ( *buff==0xff ) return RES_OK; //idk
+        else return RES_ERROR;
+        
+    default: res = RES_PARERR;
+    } return res;
 }
-

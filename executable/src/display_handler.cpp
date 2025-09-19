@@ -17,7 +17,7 @@
 
     uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
-void display_setup(){
+void display_setup(){ //initialize tasks from here? perchance
     //call the display initializers
     ili9341_initialize(SPI0_CS,ILI9341_RST,ILI9341_DC,SPI0_TX,SPI0_SCLK,SPI0_RX); 
     

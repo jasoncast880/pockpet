@@ -3,6 +3,7 @@ add_executable(tactigachi
     #add the handlers here as needed
     ${CMAKE_CURRENT_SOURCE_DIR}/src/display_handler.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/button_handler.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/sdc_handler.cpp
 )
 
 target_include_directories(tactigachi PRIVATE
@@ -21,15 +22,13 @@ set_source_files_properties(
 target_link_libraries(tactigachi PRIVATE
     pico_stdlib
 
-    #externals..
     FreeRTOS-Kernel-Heap4
     pico_cyw43_arch_lwip_sys_freertos
     hardware_irq
     hardware_gpio
 
-    #drivers
     ili9341_pico_driver
-    frame_handler #see top level cmake explanation
+    frame_handler 
     assets_lib
     fatfs
 
