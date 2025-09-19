@@ -17,13 +17,14 @@
 #define BTN_SELECT 5
 
 //spi0 bus pins, related special pins
-#define SPI0_CS    17
+#define SPI0_CS    17 //PLS REFACTOR
 #define SPI0_TX    16
 #define SPI0_RX    19
 #define SPI0_SCLK  18
 
 #define ILI9341_RST 20
 #define ILI9341_DC  21
+#define SDC_CS      22
 
 //audio pins will define here
 

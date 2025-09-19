@@ -89,7 +89,7 @@ DRESULT disk_read (
 	case DEV_MMC :
 		// translate the arguments here
 
-        result = spi_read16_blocking((spi_inst_t*)spi0_hw, (uint16_t)0xff, buff, count);
+        result = spi_read_blocking((spi_inst_t*)spi0_hw, (uint16_t)0xff, buff, count);
         if (result == count) return RES_OK;
         else return RES_ERROR;
         
@@ -115,7 +115,7 @@ DRESULT disk_write (
 	switch (pdrv) {
 	case DEV_MMC :
 		// translate the arguments here
-        result = spi_write16_blocking((spi_inst_t*)spi0_hw, buff, count);
+        result = spi_write_blocking((spi_inst_t*)spi0_hw, buff, count);
         if (result == count) return RES_OK;
         else return RES_ERROR;
         
@@ -134,8 +134,7 @@ DRESULT disk_ioctl (
 	BYTE pdrv,		/* Physical drive nmuber (0..) */
 	BYTE cmd,		/* Control code */
 	BYTE *buff		/* Buffer to send/receive control data */
-)
-{
+){
 	DRESULT res;
 	int result;
 
