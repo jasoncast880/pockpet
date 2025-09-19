@@ -59,9 +59,12 @@ DSTATUS disk_initialize (
 
 	switch (pdrv) {
 	case DEV_MMC :
-        //is this necessary??
-        result = spi_init((spi_inst_t*)spi0_hw, 8000*1000); //6MHz
-        //result is the baud rate
+
+        gpio_init(SDC_CS);
+        gpio_set_dir(SDC_CS, GPIO_OUT);
+        gpio_put(SDC_CS, 1);
+
+        result = 1;
 
         if(result == 0) {
             stat = STA_NOINIT;
@@ -89,7 +92,9 @@ DRESULT disk_read (
 	case DEV_MMC :
 		// translate the arguments here
 
+        gpio_put(SDC_CS, 0);
         result = spi_read_blocking((spi_inst_t*)spi0_hw, (uint16_t)0xff, buff, count);
+        gpio_put(SDC_CS, 1);
         if (result == count) return RES_OK;
         else return RES_ERROR;
         
@@ -115,7 +120,9 @@ DRESULT disk_write (
 	switch (pdrv) {
 	case DEV_MMC :
 		// translate the arguments here
+        gpio_put(SDC_CS, 0);
         result = spi_write_blocking((spi_inst_t*)spi0_hw, buff, count);
+        gpio_put(SDC_CS, 1);
         if (result == count) return RES_OK;
         else return RES_ERROR;
         
@@ -140,8 +147,11 @@ DRESULT disk_ioctl (
 
 	switch (pdrv) {
 	case DEV_MMC :
+        gpio_put(SDC_CS, 0);
         spi_write_blocking((spi_inst_t*)spi0_hw, &cmd, 1);
         spi_read_blocking((spi_inst_t*)spi0_hw, 0xff, buff, 1);
+        gpio_put(SDC_CS, 1);
+
         if ( *buff==0xff ) return RES_OK; //idk
         else return RES_ERROR;
         

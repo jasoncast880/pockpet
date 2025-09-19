@@ -4,6 +4,7 @@
 #include "pinout.h"
 
 #include "FreeRTOS.h"
+#include "sdc_handler.h"
 #include "task.h"
 #include "semphr.h"
 #include "queue.h"
@@ -26,8 +27,21 @@ QueueHandle_t xDisplayHandlerQueue = NULL;
 //
                   
 void setup(){
-    display_setup();
+
+    static SemaphoreHandle_t xSPI0_MUTEX = xSemaphoreCreateMutex();
+    spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
+                                 
+    gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
+    gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
+    gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
+    //
+
     button_setup();
+
+    //spi0 bus users
+    display_setup();
+    sdc_setup();
+
 }
 
 //application code for now runs through here
@@ -43,8 +57,9 @@ void main_task(void *pvParameters) {
     }
 }
 
-//to scaffold: 1) sdc general on-wire funcs spi (same bus)
-//             2) sound .wav file buffering system
+//to scaffold: 
+// file integrity tester
+// sound .wav file buffering system
 
 int main() {
 

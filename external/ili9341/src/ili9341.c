@@ -9,7 +9,7 @@ uint8_t _ILI9341_MOSI;
 uint8_t _ILI9341_SCLK;
 uint8_t _ILI9341_MISO;
 
-void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sclk, int8_t miso){
+void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc){
     /*
      * test:
      * cs - blue - gp17
@@ -20,61 +20,46 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc, int8_t mosi, int8_t sc
      * led - vcc line
      * miso - blk - gp16
      */
+    //for file-wide access
+    uint8_t _ILI9341_CS = cs;
+    uint8_t _ILI9341_RST = rst;
+    uint8_t _ILI9341_DC = dc;
 
-    _ILI9341_CS = cs;
-    _ILI9341_RST = rst;
-    _ILI9341_DC = dc;
-    _ILI9341_MOSI = mosi;
-    _ILI9341_SCLK = sclk;
-    _ILI9341_MISO = miso;
- 
-    _CS_INIT;
-    _RST_INIT;
-    _DC_INIT;
-    _MOSI_INIT;
-    _SCLK_INIT;
-    _MISO_INIT;   
+    gpio_init(cs);
+    gpio_init(rst);
+    gpio_init(dc);
    
-    _CS_SetDigitalOut;
-    _RST_SetDigitalOut;
-    _DC_SetDigitalOut;
-    _MOSI_SetDigitalOut;
-    _SCLK_SetDigitalOut;
-    _MISO_SetDigitalOut;
+    gpio_set_dir(cs, GPIO_OUT);
+    gpio_set_dir(rst, GPIO_OUT);
+    gpio_set_dir(dc, GPIO_OUT);
 
-    gpio_put(_ILI9341_DC, 0);
-    gpio_put(_ILI9341_CS, 1);
-
-    //initialize hardware spi instance type and speed
-    spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
-    _SCLK_SPI_FUNC;
-    _MOSI_SPI_FUNC;
+    gpio_put(dc, 0);
+    gpio_put(cs, 1);
 
     ili9341_hard_reset(); 
     ili9341_init_sub_pwr();
     ili9341_init_sub_vram();
-    //screen is now set to the breadboard config, with rgb
 }
 
 void ili9341_writeCommand(uint8_t commandByte){
-    gpio_put(_ILI9341_DC, false);
-    gpio_put(_ILI9341_CS, false);
+    gpio_put(_ILI9341_DC, 0);
+    gpio_put(_ILI9341_CS, 0);
     spi_write_blocking(spi0, &commandByte, 1);
-    gpio_put(_ILI9341_CS, true);
+    gpio_put(_ILI9341_CS, 1);
 }
 
 void ili9341_writeData(uint8_t dataByte){
-    gpio_put(_ILI9341_DC, true);
-    gpio_put(_ILI9341_CS, false);
+    gpio_put(_ILI9341_DC, 1);
+    gpio_put(_ILI9341_CS, 0);
     spi_write_blocking(spi0, &dataByte, 1);
-    gpio_put(_ILI9341_CS, true);
+    gpio_put(_ILI9341_CS, 1);
 }
 
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ //testing
-    gpio_put(_ILI9341_DC, true);
-    gpio_put(_ILI9341_CS, false);
+    gpio_put(_ILI9341_DC, 1);
+    gpio_put(_ILI9341_CS, 0);
     spi_write16_blocking(spi0, dataBuf, len);
-    gpio_put(_ILI9341_CS, true);
+    gpio_put(_ILI9341_CS, 1);
 }
 
 //commands abstracted
@@ -96,11 +81,6 @@ void ili9341_setScrollPtr(uint16_t vsp){
     sleep_ms(10);
 }
 
-/*      .___.(320,240)
- *      |   |
- * (0,0).___.
- */
-//RELEVANT FOR PARTIAL UPDATING 
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) { 
     uint16_t x1 = x0+w-1;
     uint16_t y1 = y0+h-1;
@@ -119,11 +99,11 @@ void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) {
 }
 
 static void ili9341_hard_reset(){
-    gpio_put(_ILI9341_RST, true);
+    gpio_put(_ILI9341_RST, 1);
     sleep_ms(10);
-    gpio_put(_ILI9341_RST, false);
+    gpio_put(_ILI9341_RST, 0);
     sleep_ms(10);
-    gpio_put(_ILI9341_RST, true);
+    gpio_put(_ILI9341_RST, 1);
     sleep_ms(120);
 }
 

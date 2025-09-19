@@ -63,32 +63,6 @@ extern "C"{
                                   
 #define GAMMA_CORR_INIT_SEQ_1 {1,2,3,4} //example
 
-extern uint8_t _ILI9341_CS;
-extern uint8_t _ILI9341_RST;
-extern uint8_t _ILI9341_DC;
-extern uint8_t _ILI9341_MOSI;
-extern uint8_t _ILI9341_SCLK;
-extern uint8_t _ILI9341_MISO;
-
-#define _CS_INIT gpio_init(_ILI9341_CS)
-#define _RST_INIT gpio_init(_ILI9341_RST)
-#define _DC_INIT gpio_init(_ILI9341_DC)
-#define _MOSI_INIT gpio_init(_ILI9341_MOSI)
-#define _SCLK_INIT gpio_init(_ILI9341_SCLK)
-#define _MISO_INIT gpio_init(_ILI9341_MISO)
-
-#define _CS_SetDigitalOut gpio_set_dir(_ILI9341_CS, GPIO_OUT)
-#define _RST_SetDigitalOut gpio_set_dir(_ILI9341_RST, GPIO_OUT)
-#define _DC_SetDigitalOut gpio_set_dir(_ILI9341_DC, GPIO_OUT)
-#define _MOSI_SetDigitalOut gpio_set_dir(_ILI9341_MOSI, GPIO_OUT)
-#define _SCLK_SetDigitalOut gpio_set_dir(_ILI9341_SCLK, GPIO_IN)
-#define _MISO_SetDigitalOut gpio_set_dir(_ILI9341_MISO, GPIO_OUT)
-
-//MISO not used. keep in mind
-
-#define _SCLK_SPI_FUNC gpio_set_function(_ILI9341_SCLK, GPIO_FUNC_SPI)
-#define _MOSI_SPI_FUNC gpio_set_function(_ILI9341_MOSI, GPIO_FUNC_SPI)
-
 //internal funcs
 static void ili9341_hard_reset();
 static void ili9341_init_sub_pwr(); 
@@ -96,7 +70,7 @@ static void ili9341_init_sub_vram();
 
 static void startup_video_sequence(); //
 
-void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc,int8_t mosi,int8_t sclk,int8_t miso); //running on spi0 bus
+void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc); //running on spi0 bus
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len);
