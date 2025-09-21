@@ -41,9 +41,12 @@ lsusb
 *gdb-multiarch ./<elf-file-name>.elf  
 ```
 from inside the gdb interface:
-```gdb
+```bash
 target remote localhost:3333
 load
+monitor reset run # Resets the target and immediately lets it run.
+monitor reset halt # Resets the target and immediately halts it at the reset vector.
+monitor reset init # Resets the target, halts it, and then executes a board-specific initialization script (if configured in the GDB server).
 ```
 You can now set breakpoints, step through functions from this point onwards.
 
