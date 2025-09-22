@@ -16,7 +16,7 @@ static SemaphoreHandle_t xSDC_semphr;
 static QueueHandle_t xFileOps_Queue;
 
 void sdc_read_task(void* pvParameters);
-void sdc_write_task(void* pvParameters);
+void sdc_access_file_task(void* pvParameters);
 
 #ifdef __cplusplus
 }

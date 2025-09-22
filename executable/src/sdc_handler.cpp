@@ -15,6 +15,8 @@ void sdc_setup() {
     } else {
         printf("sdc OK");
     }
+    
+    xTaskCreate( sdc_access_file_task, "filetask", 1000, NULL, 1, NULL );
 }
 
 void sdc_access_file_task(void* pvParameters) {

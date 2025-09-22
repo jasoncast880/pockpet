@@ -36,7 +36,26 @@ void display_setup(){ //initialize tasks from here? perchance
     }
 
     xDisplaySemaphore = xSemaphoreCreateMutex();
+
+    xTaskCreate( lcd_write_task, "lcd_write_task", 2000, NULL, 2, NULL );
+    xTaskCreate( lcd_render_task, "lcd_render_task", 2000, NULL, 2, NULL );
+
     printf("display_setup OK\n");
+
+    //do a test of tile/data integrity here. 
+    for( int i = 0; i < 15 ; i++ ){
+        for( int j = 0; j < 20 ; j++ ){ //rember tl-br
+        uint32_t x0 = j*16;
+        uint32_t y0 = i*16;
+
+        Tile* tile = base->getTilemapData(i*20+j);
+        uint16_t* buf = tile->getBuf();
+        ili9341_setAddrWindow(x0,y0,16,16);
+        ili9341_writeCommand(RAM_WR);
+        ili9341_writeDataBuffer16(buf, 16*16);
+        ili9341_writeCommand(NOOP);
+        }
+    }
 }
 
 void lcd_render_task(void* pvParameters) {

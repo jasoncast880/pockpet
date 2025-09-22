@@ -40,7 +40,7 @@ void setup(){
 
     //spi0 bus users
     display_setup();
-    sdc_setup();
+    //sdc_setup();
 
 }
 
@@ -72,12 +72,6 @@ int main() {
     setup(); 
              
     xTaskCreate( main_task, "main", 1000, NULL, 3, NULL );
-    
-    xTaskCreate( lcd_write_task, "lcd_write_task", 2000, NULL, 2, NULL );
-    xTaskCreate( lcd_render_task, "lcd_render_task", 2000, NULL, 2, NULL );
-
-    xTaskCreate( buttons_queue_task, "buttons", 1000, NULL, 3, NULL );
-    
     vTaskStartScheduler();
 
     while (1) tight_loop_contents(); 

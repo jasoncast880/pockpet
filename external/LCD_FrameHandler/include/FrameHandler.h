@@ -65,7 +65,7 @@ public:
  */ 
 
 struct Tilemap{ 
-    std::unique_ptr<uint16_t[]> map; //map tileset num. to tilespace
+    std::unique_ptr<uint8_t[]> map; //map tileset num. to tilespace
     uint16_t x, y;
     Tileset* tileset;
     uint8_t tiles_wide, tiles_high;
@@ -76,16 +76,15 @@ struct Tilemap{
 
     Tile* getTilemapData(uint16_t tileNum);
     void setTilemap(uint16_t tileNum, uint16_t newTile);
-
 }; 
 
-class Scene: public Tilemap{ //only make 1
+class Scene: public Tilemap{ 
 public:
     Scene(Tileset& tileset, uint8_t* mapBuf); 
 };
 
 class Sprite: public Tilemap{
-    uint8_t sprite_id = -1;
+    uint8_t sprite_id = 0;
 public:
 
     Sprite(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
@@ -103,7 +102,8 @@ public:
 
     //positional context vars
     std::vector<uint16_t> map_vec; //tilemap tiles the sprite superimposes
-    uint8_t x_offset, y_offset; //+ve offset from tile bounds
+    uint8_t x_offset = 0; //+ve offset from tile bounds
+    uint8_t y_offset = 0; //+ve offset from tile bounds
                                 //top and left most bounds
     void setMapVector_Offsets(Tilemap& tilemap); 
     void resetMapVector_Offsets();
@@ -144,7 +144,6 @@ public:
 
     void sprite_render(uint8_t id);
     RenderController(Scene& base);
-
 
     void render(); 
     void sprite_add(Sprite& sprite);

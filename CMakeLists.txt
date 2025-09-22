@@ -22,5 +22,3 @@ pico_sdk_init()
 add_subdirectory(external) 
 add_subdirectory(executable)
 
-#removed because i interated it internally
-#add_subdirectory("../LCD_FrameHandler" "${CMAKE_BINARY_DIR}/LCD_FrameHandler_build")

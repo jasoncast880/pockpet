@@ -20,6 +20,7 @@ void button_setup() {
         while(1);
     }
 
+    xTaskCreate( buttons_queue_task, "buttons", 1000, NULL, 3, NULL );
     printf("button_setup OK\n");
 }
 

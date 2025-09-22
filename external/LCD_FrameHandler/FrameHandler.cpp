@@ -102,7 +102,7 @@ Tilemap::Tilemap(Tileset& tileset, uint8_t* mapBuf, uint8_t tiles_wide, uint8_t 
     this->tiles_high = tiles_high;
 
     this->tileset = &tileset;
-    map = std::unique_ptr<uint16_t[]>(new uint16_t[tiles_wide*tiles_high]);
+    map = std::unique_ptr<uint8_t[]>(new uint8_t[tiles_wide*tiles_high]);
     for (int i = 0; i < tiles_wide*tiles_high ; i++) {
         map[i] = *mapBuf;
         mapBuf++;
@@ -115,7 +115,7 @@ Tilemap::Tilemap(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& ti
     this->tiles_wide = tiles_wide;
     this->tiles_high = tiles_high;
     this->tileset = &tileset;
-    map = std::unique_ptr<uint16_t[]>(new uint16_t[tiles_wide*tiles_high]);
+    map = std::unique_ptr<uint8_t[]>(new uint8_t[tiles_wide*tiles_high]);
     for (int i = 0; i < tiles_wide*tiles_high ; i++) {
         map[i] = *mapBuf;
         mapBuf++;
@@ -137,7 +137,7 @@ Scene::Scene(Tileset& tileset, uint8_t* mapBuf){ //basically a hardware config
     this->tiles_high = 15;
 
     this->tileset = &tileset; 
-    map = std::unique_ptr<uint16_t[]>(new uint16_t[tiles_wide*tiles_high]);
+    map = std::unique_ptr<uint8_t[]>(new uint8_t[tiles_wide*tiles_high]);
     for (int i = 0; i < tiles_wide*tiles_high ; i++) {
         map[i] = *mapBuf;
         mapBuf++;
@@ -153,7 +153,7 @@ Sprite::Sprite(const Sprite& other) {
     this->tiles_high = other.tiles_high;
     this->tileset = other.tileset;
 
-    map = std::unique_ptr<uint16_t[]>(new uint16_t[tiles_wide*tiles_high]);
+    map = std::unique_ptr<uint8_t[]>(new uint8_t[tiles_wide*tiles_high]);
     for (int i = 0; i < tiles_wide*tiles_high ; i++) {
         this->map[i] = other.map[i];
     }       
@@ -168,7 +168,7 @@ Sprite& Sprite::operator=(const Sprite& other) {
     this->tiles_high = other.tiles_high;
     this->tileset = other.tileset;
 
-    map = std::unique_ptr<uint16_t[]>(new uint16_t[tiles_wide*tiles_high]);
+    map = std::unique_ptr<uint8_t[]>(new uint8_t[tiles_wide*tiles_high]);
     for (int i = 0; i < tiles_wide*tiles_high ; i++) {
         this->map[i] = other.map[i];
     }       

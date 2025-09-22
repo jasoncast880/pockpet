@@ -9,6 +9,7 @@
 #include "hardware/irq.h"
 
 #include "FreeRTOS.h"
+#include "task.h"
 #include "queue.h"
 
 
