@@ -34,16 +34,19 @@ lsusb
 6. If not done so already, power on the target system, either via adequate external power supply, or via micro-usb port.
 7. Open OpenOCD Server; in WSL, go to your openocd application folder and run the following command in terminal.
 ```bash
-*~/embedded\_tools/openocd$ sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
+sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" #from directory like *~/embedded\_tools/openocd$* 
 ```
 8. In another terminal, navigate to the build folder (directory where the .elf file is generated) and run the following commands: 
 ```bash
-*gdb-multiarch ./<elf-file-name>.elf  
+gdb-multiarch ./<elf-file-name>.elf  
 ```
 from inside the gdb interface:
-```gdb
+```bash
 target remote localhost:3333
 load
+monitor reset run # Resets the target and immediately lets it run.
+monitor reset halt # Resets the target and immediately halts it at the reset vector.
+monitor reset init # Resets the target, halts it, and then executes a board-specific initialization script (if configured in the GDB server).
 ```
 You can now set breakpoints, step through functions from this point onwards.
 
