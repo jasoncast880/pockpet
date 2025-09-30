@@ -59,8 +59,8 @@ Tileset::Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles)
         for(int i = 0 ; i < numTiles ; i++) {
             for(int j = 0 ; j < (tile_len*tile_len) ; j++){
                 tileBuf[j] = *bufPtr;
+                bufPtr++;
             }
-            //now load the tileBuf into Tile constructor
             tiles[i] = Tile(tile_len, &tileBuf[0]); 
         }
         delete[] tileBuf;

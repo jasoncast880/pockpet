@@ -12,6 +12,7 @@
 //task handlers here
 #include "display_handler.h"
 #include "button_handler.h"
+//#include "sdc_handler.h"
 
 #include "secrets.h" //temporarily holds wifi creds & not pushed to git
 
@@ -22,10 +23,6 @@
 QueueHandle_t xButtonQueue = NULL;
 QueueHandle_t xDisplayHandlerQueue = NULL;
 
-//def in display handler
-//Scene* base;
-//
-                  
 void setup(){
 
     static SemaphoreHandle_t xSPI0_MUTEX = xSemaphoreCreateMutex();

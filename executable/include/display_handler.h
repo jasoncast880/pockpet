@@ -25,6 +25,8 @@ extern QueueHandle_t xDisplayHandlerQueue;
 void lcd_render_task(void* pvParameters); 
 void lcd_write_task(void* pvParameters); 
 
+void driver_test();
+
 #ifdef __cplusplus
 }
 #endif

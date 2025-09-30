@@ -18,6 +18,9 @@
     uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
 void display_setup(){ //initialize tasks from here? perchance
+    //try doing a ili9341 driver lib test here
+    driver_test();
+
     ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
     
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
@@ -66,7 +69,7 @@ void lcd_render_task(void* pvParameters) {
     r.sprite_add(cursor);
 
     for( ;; ) {
-        xSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(100));
+        xSemaphoreTake(xDisplaySemaphore, portMAX_DELAY);
 
         printf("start render \n");
         uint16_t x = 50;
@@ -87,7 +90,7 @@ void lcd_write_task(void* pvParameters) {
     uint16_t* screenBuf = new uint16_t[240*320];
     uint16_t numTiles = (r.base->tiles_high*r.base->tiles_wide);
 
-    xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(20));
+    xSemaphoreTake(xDisplaySemaphore,portMAX_DELAY);
     for( int i = 0; i < (numTiles) ; i++ ){
             uint32_t x0 = (i%r.base->tiles_wide)*16; 
             uint32_t y0 = (i/r.base->tiles_wide)*16;
@@ -104,8 +107,7 @@ void lcd_write_task(void* pvParameters) {
     xSemaphoreGive(xDisplaySemaphore);
 
     for( ;; ) {
-        uint16_t TIME_MS_TO_TRANSMIT = 20; //change
-        xSemaphoreTake(xDisplaySemaphore,pdMS_TO_TICKS(TIME_MS_TO_TRANSMIT));
+        xSemaphoreTake(xDisplaySemaphore,portMAX_DELAY);
 
         for( int i = 0; i < (r.renderedTiles.size()) ; i++ ){
             uint32_t x0 = ((r.indexList.at(i))%r.base->tiles_wide)*16; 
@@ -122,5 +124,14 @@ void lcd_write_task(void* pvParameters) {
         }
 
         xSemaphoreGive(xDisplaySemaphore);
+    }
+}
+
+void driver_test() {
+    ili9341_hard_reset();
+    ili9341_setAddrWindow(30,30,30,30);
+    for(int i = 0 ; i<30*30*2; i++) {
+        ili9341_writeData(0xFF);
+        ili9341_writeData(0xD0);
     }
 }
