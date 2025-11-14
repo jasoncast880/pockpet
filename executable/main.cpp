@@ -14,7 +14,9 @@
 #include "button_handler.h"
 //#include "sdc_handler.h"
 
-#include "secrets.h" //temporarily holds wifi creds & not pushed to git
+/*
+#include "secrets.h" 
+*/
 
 #define MAIN_TASK_PRIORITY      (tskIDLE_PRIORITY + 2) // is 0 + 2
 #define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
@@ -79,15 +81,15 @@ extern "C" { //hooks and stuff
 #include "FreeRTOS.h"
 #include "task.h"
 
-void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
-    printf("%s Task Stack Overflow failed\n", pcTaskName);
-    while(1);
-}
+	void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
+			printf("%s Task Stack Overflow failed\n", pcTaskName);
+			while(1);
+	}
 
-__attribute__((used)) void keep_heap_symbols(void) {
-    // Volatile cast prevents the compiler from optimizing the calls away
-    volatile size_t tmp;
-    tmp = xPortGetFreeHeapSize();
-    tmp = xPortGetMinimumEverFreeHeapSize();
-}
+	__attribute__((used)) void keep_heap_symbols(void) {
+			// Volatile cast prevents the compiler from optimizing the calls away
+			volatile size_t tmp;
+			tmp = xPortGetFreeHeapSize();
+			tmp = xPortGetMinimumEverFreeHeapSize();
+	}
 }

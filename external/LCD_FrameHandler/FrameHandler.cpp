@@ -1,86 +1,79 @@
 #include "include/FrameHandler.h"
+#include <algorithm>
+#include <memory>
 
 /*
  * @brief: this class will handle all of the buffer rendering *before* the sprites are added. tilemaps & sets used to reduce wram size.
  *
  * */
 
-Tile::Tile()
-    : tile_len(16), buf(std::unique_ptr<uint16_t[]>(new uint16_t[16*16])) {}
+Tile::Tile()  //seems like a waste to call this; quite mem intensive
+	: tile_len(16), buf(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {}
 Tile::Tile(int tile_len, uint16_t* srcBuf)
-    : tile_len(tile_len), 
-      buf(std::unique_ptr<uint16_t[]>(new uint16_t[tile_len*tile_len])) {
-           for (int i = 0 ; i < tile_len*tile_len ; i++) {
-              buf[i] = srcBuf[i];
-          }
-      }
+	: tile_len(tile_len), buf(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
+	for (int i = 0 ; i < tile_len*tile_len ; i++) {
+		buf[i] = srcBuf[i];
+	}
+}
 
-Tile::Tile(const Tile& other)
-    : tile_len(other.tile_len),
-      buf(std::unique_ptr<uint16_t[]>(new uint16_t[other.tile_len*other.tile_len])) {
-          for (int i = 0 ; i < tile_len*tile_len ; i++) {
-              buf[i] = other.buf[i];
-          }
-      }
-Tile& Tile::operator=(const Tile& copySource) {
-    if (this == &copySource) return *this;
-    tile_len = copySource.tile_len;
-    buf = std::unique_ptr<uint16_t[]>(new uint16_t[tile_len*tile_len]);
-    for (int i = 0 ; i < tile_len*tile_len ; i++) {
-        buf[i] = copySource.buf[i];
-    }
-    return *this;
+Tile::Tile(const Tile& copySrc) noexcept
+	: tile_len(copySrc.tile_len), buf(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
+	std::copy(copySrc.getBuf(), copySrc.getBuf()+(tile_len*tile_len), this->buf.get());
+}
+Tile& Tile::operator=(const Tile& cpySrc) noexcept {
+	if(this != &cpySrc) {
+		tile_len = cpySrc.tile_len;
+		buf = (std::make_unique<uint16_t[]>(tile_len*tile_len));
+		std::copy(cpySrc.getBuf(), cpySrc.getBuf()+(tile_len*tile_len), this->buf.get());
+	}
+	return *this;
 }
 
 void Tile::changePixel(uint16_t index, uint16_t value) {
-    buf[index] = value;
+	buf[index] = value;
 }
 
-uint16_t Tile::getPixel(uint16_t x,uint16_t y) const {
-    int index = (y*tile_len)+x;
-    return buf[index];
+uint16_t Tile::getPixel(uint16_t x,uint16_t y) const { //maybe not needed
+  int index = (y*tile_len)+x;
+  return buf[index];
 }
 
 uint16_t* Tile::getBuf() const {
-    return buf.get();
+  return buf.get();
 }
 
+Tileset::Tileset() {
+}
 Tileset::Tileset(Tile* tiles, uint8_t numTiles) //deep copy tiles..
-    : numTiles(numTiles), 
-      tiles(std::unique_ptr<Tile[]>(new Tile[numTiles])) {
-          for (int i = 0 ; i < numTiles ; i++) {
-              this->tiles[i] = tiles[i];
-          }
-      }
+	: numTiles(numTiles), tiles(std::make_unique<Tile[]>(numTiles)) {
+		for (int i = 0 ; i < numTiles ; i++) {
+			this->tiles[i] = tiles[i];
+		}
+	}
 Tileset::Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles) 
-    : numTiles(numTiles),
-    tiles(std::unique_ptr<Tile[]>(new Tile[numTiles])) {
-        uint16_t* tileBuf = new uint16_t [tile_len*tile_len];
-        for(int i = 0 ; i < numTiles ; i++) {
-            for(int j = 0 ; j < (tile_len*tile_len) ; j++){
-                tileBuf[j] = *bufPtr;
-                bufPtr++;
-            }
-            tiles[i] = Tile(tile_len, &tileBuf[0]); 
-        }
-        delete[] tileBuf;
-    }
+	: numTiles(numTiles), tiles(std::make_unique<Tile[]>(numTiles)) {
+		uint16_t* tileBuf = new uint16_t [tile_len*tile_len];
+		for(int i = 0 ; i < numTiles ; i++) {
+			for(int j = 0 ; j < (tile_len*tile_len) ; j++){
+				tileBuf[j] = *bufPtr;
+				bufPtr++;
+			}
+			Tile* _tileArr = tiles.get();
+			_tileArr[i] = Tile(tile_len, &tileBuf[0]); 
+		}
+		delete[] tileBuf;
+	}
 
-Tileset::Tileset(const Tileset& other)
-    : numTiles(other.numTiles),
-    tiles(std::unique_ptr<Tile[]>(new Tile[numTiles])) {
-        for (int i = 0 ; i < numTiles ; i++) {
-            this->tiles[i] = other.tiles[i];
-        }
-    }
-Tileset& Tileset::operator=(const Tileset& other) {
-    if (this == &other) return *this;
-    numTiles = other.numTiles;
-    tiles = std::unique_ptr<Tile[]>(new Tile[numTiles]);
-    for (int i = 0 ; i < numTiles; i++) {
-        tiles[i] = other.tiles[i];
-    }
-    return *this;
+Tileset::Tileset(const Tileset& copySrc) noexcept{
+	numTiles = copySrc.numTiles;
+	std::copy(copySrc.getTiles(), copySrc.getTiles()+(numTiles), getTiles());
+}
+Tileset& Tileset::operator=(const Tileset& copySrc) noexcept {
+	if(this != &copySrc) {
+		numTiles = copySrc.numTiles;
+		std::copy(copySrc.getTiles(), copySrc.getTiles()+(numTiles), getTiles());
+	}
+	return *this;
 }
 
 Tile& Tileset::getTilesetData(uint8_t tileNum) {
@@ -91,8 +84,8 @@ void Tileset::setTileData(uint8_t tileNum, Tile* tile) {
     tiles[tileNum] = *tile;
 }
 
-uint8_t Tileset::getTileLen() {
-    return this->tiles[0].tile_len;
+Tile* Tileset::getTiles() const{
+	return tiles.get();
 }
 
 Tilemap::Tilemap(Tileset& tileset, uint8_t* mapBuf, uint8_t tiles_wide, uint8_t tiles_high){
@@ -196,7 +189,7 @@ void Sprite::setID(uint8_t id) {
 
 //remember: top-left to bottom-right
 void Sprite::setMapVector_Offsets(Tilemap& tilemap) {
-    uint8_t tile_len = tileset->getTileLen();
+    uint8_t tile_len = tileset->tile_len;
     this->x_offset = x%tile_len;
     this->y_offset = y%tile_len;
 
@@ -246,7 +239,7 @@ void RenderController::render() {
             spriteBuf.clear();
 
             sprite.setMapVector_Offsets((Scene&)*base);
-            uint8_t tile_len = base->tileset->getTileLen();
+            uint8_t tile_len = base->tileset->tile_len;
 
             //get the base tiles to alter
             for(int j = 0; j<sprite.map_vec.size(); j++) {

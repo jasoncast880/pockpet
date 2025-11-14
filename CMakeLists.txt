@@ -7,15 +7,15 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_BUILD_TYPE Debug)
 
 # Name project
-SET(ProjectName ampalaya)
-SET(CMAKE_CXX_STANDARD 11)
+SET(ProjectName tactigachi)
+SET(CMAKE_CXX_STANDARD 17) #baseline compatibility is c++ 11
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Import those libraries
-include(pico_sdk_import.cmake)
+project(${ProjectName} C CXX ASM)
 
-# Define project
-project(${ProjectName} C CXX )
+# Import those libraries
+set(PICO_SDK_PATH "~/pico-sdk")
+include(pico_sdk_import.cmake)
 
 pico_sdk_init()
 

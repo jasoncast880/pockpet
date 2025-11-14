@@ -18,11 +18,13 @@
     uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
 void display_setup(){ //initialize tasks from here? perchance
-    //try doing a ili9341 driver lib test here
-    driver_test();
 
     ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
     
+
+    //try doing a ili9341 driver lib test here
+    //driver_test();
+
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
     jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
@@ -30,6 +32,8 @@ void display_setup(){ //initialize tasks from here? perchance
     jetsprite = new Sprite(30,30,2,2,*jet_tileset, maps[0]);
 
     render = new RenderController(*base);
+
+		render->render(); //test this
 
     //configAssert???
     xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );

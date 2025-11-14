@@ -1,4 +1,4 @@
-# Tacti~Gotchi PDA Project
+# Tactigachi PDA Project
 
 ## Build
 ```bash

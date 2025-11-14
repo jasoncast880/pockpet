@@ -9,48 +9,49 @@
 #include <vector>
 
 #define ALPHA_CLR_565 0xF81F //a 565 magenta color
+#define DEFAULT_TILE_LEN 16
 
 struct Tile { //implement assuming indexed color
     std::unique_ptr<uint16_t[]> buf;
 public:
-    uint8_t tile_len;
+    uint8_t tile_len = DEFAULT_TILE_LEN;
 
     Tile();                             //default 16x16
     Tile(int tile_len, uint16_t* srcBuf);  
 
-    Tile(const Tile& other);
-    Tile& operator=(const Tile& copySource);
+    Tile(const Tile& copySrc) noexcept;
+    Tile& operator=(const Tile& copySrc) noexcept; 
 
     Tile(Tile&&) noexcept = default;
-    Tile& operator=(Tile&&) noexcept = default;
+    Tile& operator=(Tile&& moveSrc) noexcept = default;
 
     void changePixel(uint16_t index, uint16_t value); 
     uint16_t getPixel(uint16_t x,uint16_t y) const; 
     uint16_t* getBuf() const;
                                              
-    ~Tile() = default; 
+    ~Tile() = default; //allow for automatic memory free via smart pointer
 };
 
 struct Tileset{
-    uint8_t numTiles;
-    uint16_t* buf; //sole purpose to populate tileArr, when using 3-param constructor
-    uint8_t tile_len;
-
+private:
     std::unique_ptr<Tile[]> tiles;
 public:
+    uint8_t tile_len = DEFAULT_TILE_LEN;
+    uint8_t numTiles;
 
+		Tileset();
     Tileset(Tile* tiles, uint8_t numTiles); 
     Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles); 
 
-    Tileset(const Tileset& other);
-    Tileset& operator=(const Tileset& other);
+    Tileset(const Tileset& copySrc) noexcept;
+    Tileset& operator=(const Tileset& copySrc) noexcept;
 
     Tileset(Tileset&&) noexcept = default;
     Tileset& operator=(Tileset&&) noexcept = default;
 
     Tile& getTilesetData(uint8_t tileNum);
     void setTileData(uint8_t tileNum, Tile* tile);
-    uint8_t getTileLen(); //convenience
+		Tile* getTiles() const;
 
     ~Tileset() = default;
 };
