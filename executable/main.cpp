@@ -40,7 +40,6 @@ void setup(){
     //spi0 bus users
     display_setup();
     //sdc_setup();
-
 }
 
 //application code for now runs through here

@@ -22,7 +22,8 @@ void display_setup(){ //initialize tasks from here? perchance
     ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
     
 
-    //try doing a ili9341 driver lib test here
+    //try doing a ili9341 driver lib test here; 
+		//no sprite/tilemap objects, just seeing if the spi bus is sending the right signals
     //driver_test();
 
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);

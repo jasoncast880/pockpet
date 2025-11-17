@@ -11,11 +11,11 @@ SET(ProjectName tactigachi)
 SET(CMAKE_CXX_STANDARD 17) #baseline compatibility is c++ 11
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(${ProjectName} C CXX ASM)
 
 # Import those libraries
-set(PICO_SDK_PATH "~/pico-sdk")
-include(pico_sdk_import.cmake)
+include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+
+project(${ProjectName} C CXX ASM)
 
 pico_sdk_init()
 
