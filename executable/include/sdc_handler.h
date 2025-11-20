@@ -1,10 +1,15 @@
+//consider renaming to filesystem_handler.h
 #ifndef  SDCHANDLER_H
 #define  SDCHANDLER_H
 
+#include "ff.h"
+
 #include "pinout.h"
+
 #include "FreeRTOS.h"
 #include "task.h"
 #include "semphr.h"
+
 
 #include <stdexcept>
 

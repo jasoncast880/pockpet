@@ -8,6 +8,7 @@
 
 #include "FrameHandler.h"
 
+#include "pinout.h"
 #include "pico/stdlib.h"
 #include "ili9341.h"
 

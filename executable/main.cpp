@@ -12,7 +12,7 @@
 //task handlers here
 #include "display_handler.h"
 #include "button_handler.h"
-//#include "sdc_handler.h"
+#include "sdc_handler.h"
 
 /*
 #include "secrets.h" 
@@ -39,7 +39,7 @@ void setup(){
 
     //spi0 bus users
     display_setup();
-    //sdc_setup();
+    sdc_setup();
 }
 
 //application code for now runs through here

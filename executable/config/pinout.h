@@ -26,6 +26,6 @@
 
 #define SDC_CS      22 //also on spi0 bus
 
-//audio pins will define here
+//audio pins will define here later
 
 #endif //PINOUT_H

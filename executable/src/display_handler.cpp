@@ -1,6 +1,4 @@
 #include "display_handler.h"
-#include "pinout.h"
-
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 #include <stdexcept>
