@@ -1,8 +1,14 @@
 #include "display_handler.h"
+#include "pinout.h"
+
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 #include <stdexcept>
 #include <vector>
+
+//curent goals: 
+//1. prove the memory integrity of tiles class ; deep copying allowed, check for ok implementations using tilset class
+//2. check to see if hardware works ok
 
 //globals
 
@@ -15,15 +21,10 @@
 
     uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
-void display_setup(){ //initialize tasks from here? perchance
+void display_setup(){ 
 
     ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
     
-
-    //try doing a ili9341 driver lib test here; 
-		//no sprite/tilemap objects, just seeing if the spi bus is sending the right signals
-    //driver_test();
-
     sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
     jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
@@ -31,8 +32,6 @@ void display_setup(){ //initialize tasks from here? perchance
     jetsprite = new Sprite(30,30,2,2,*jet_tileset, maps[0]);
 
     render = new RenderController(*base);
-
-		render->render(); //test this
 
     //configAssert???
     xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
@@ -127,14 +126,5 @@ void lcd_write_task(void* pvParameters) {
         }
 
         xSemaphoreGive(xDisplaySemaphore);
-    }
-}
-
-void driver_test() {
-    ili9341_hard_reset();
-    ili9341_setAddrWindow(30,30,30,30);
-    for(int i = 0 ; i<30*30*2; i++) {
-        ili9341_writeData(0xFF);
-        ili9341_writeData(0xD0);
     }
 }

@@ -25,23 +25,6 @@
 QueueHandle_t xButtonQueue = NULL;
 QueueHandle_t xDisplayHandlerQueue = NULL;
 
-void setup(){
-
-    static SemaphoreHandle_t xSPI0_MUTEX = xSemaphoreCreateMutex();
-    spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
-                                 
-    gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
-    gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
-    gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
-    //
-
-    button_setup();
-
-    //spi0 bus users
-    display_setup();
-    sdc_setup();
-}
-
 //application code for now runs through here
 void main_task(void *pvParameters) {
 
@@ -65,15 +48,24 @@ int main() {
     sleep_ms(5000);
     printf("GO\n");
 
-    //do the initializatation video seq here
+		//spi0 setup
+    static SemaphoreHandle_t xSPI0_MUTEX = xSemaphoreCreateMutex();
+    spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
+    gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
+    gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
+    gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
+		/*--------------*/
 
-    setup(); 
+    button_setup();
+
+    //spi0 bus users
+    display_setup();
+    //sdc_setup();
              
     xTaskCreate( main_task, "main", 1000, NULL, 3, NULL );
     vTaskStartScheduler();
 
-    while (1) tight_loop_contents(); 
-
+    while (1) tight_loop_contents(); //should never reach here
 }
 
 extern "C" { //hooks and stuff

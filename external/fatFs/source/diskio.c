@@ -1,3 +1,8 @@
+//TODO:
+//Write definitions for the Commands based on elmchan docs' abbrev. table
+//
+
+
 /*-----------------------------------------------------------------------*/
 /* Low level disk I/O module SKELETON for FatFs     (C)ChaN, 2019        */
 /*-----------------------------------------------------------------------*/
@@ -23,6 +28,46 @@
 #define DEV_USB		2	
 */
 
+/* utility methods */
+
+//MUST pass a valid pointer with 4 consecutive bytes for arg
+uint8_t sdc_writeCommand(uint8_t cmd, uint8_t* arg){ 
+	uint8_t cmdByte = (cmd | 0x40);
+	
+	spi_write_blocking((spi_inst_t*)spi0_hw, &cmdByte, 1);
+	spi_write_blocking((spi_inst_t*)spi0_hw, arg, 4);
+
+	//dummy byte for crc
+	uint8_t crcDummy = 0xFF;
+	spi_write_blocking((spi_inst_t*)spi0_hw, &crcDummy, 1);
+
+	sleep_ms(10); //how long is N_cr supposed to be???
+
+	// now read the response and continue
+	if(cmd!=0xFF || cmd!=0xFF) {
+		uint8_t resp;
+		spi_read_blocking((spi_inst_t *)spi0_hw, 0xFF, &resp, (size_t)1);
+		
+		return resp;
+	} else {
+
+		/*
+		uint8_t* resp = (uint8_t*)malloc(5*sizeof(uint8_t)); //i've never called malloc before
+		spi_read_blocking((spi_inst_t *)spi0_hw, 0xFF, resp, (size_t)5);
+		*/
+		
+		//i assume there's more info in the ocr that i need to parse first; TODO; 
+		return 0x00;
+	}
+}
+
+uint8_t* recvPacket() {
+}
+
+int sendPacket(uint8_t* buf, size_t size) {
+}
+
+/* */
 
 /*-----------------------------------------------------------------------*/
 /* Get Drive Status                                                      */
@@ -69,26 +114,28 @@ DSTATUS disk_initialize (
 		sleep_ms(10);
 
 		//software reset (CMD0, CS LOW)
-		cmdByte = 0x00; //cmd 0; VERIFY WHAT CMD0 IS 
 
+		uint8_t dummy = 0x00;
 		gpio_put(SDC_CS, 0);
-		spi_write_blocking(spi0, &cmdByte, 1);
+		sdc_writeCommand(0x00, &dummy);
 		gpio_put(SDC_CS, 1);
 
-		cmdByte = 0x08; // try ACMD 41
-		spi_write_blocking(spi0, &cmdByte, 1);
+		uint8_t scratch;
+		scratch = sdc_writeCommand(0x08, &dummy);
 
-		//Initialization SubRoutine
-		cmdByte = 0x29; // try ACMD 41
-		spi_write_blocking(spi0, &cmdByte, 1);
-
-		if(response) {
-			//initialization is complete
-		} else {
-			cmdByte = 0x01; //try CMD1
-			spi_write_blocking(spi0, &cmdByte, 1);
+		if(scratch | 0x04) { //v1.0 sd card
+			sdc_writeCommand(0x55, &dummy); //for ACMD
+			scratch = sdc_writeCommand(0x41, &dummy);
+			while(scratch | 0x01) {
+				sleep_ms(10);
+				scratch = sdc_writeCommand(0x41, &dummy);
+				if(scratch | 0x04) {break;}
+			}
+		} else { //v2.0+ sd card
+			if(!scratch) {
+				
+			}
 		}
-		//Sanity Check, Debugging variables phase
 
 		if(result == 0) {
 				stat = STA_NOINIT;
@@ -175,40 +222,6 @@ DRESULT disk_ioctl (
         
     default: res = RES_PARERR;
     } return res;
-}
-
-//MUST pass a valid pointer with 4 consecutive bytes for arg
-uint8_t writeCommand(uint8_t cmd, uint8_t* arg){ 
-	uint8_t cmdByte = (cmd | 0x40);
-	
-	spi_write_blocking((spi_inst_t*)spi0_hw, &cmdByte, 1);
-	spi_write_blocking((spi_inst_t*)spi0_hw, arg, 4);
-
-	//dummy byte for crc
-	uint8_t crcDummy = 0xFF;
-	spi_write_blocking((spi_inst_t*)spi0_hw, &crcDummy, 1);
-
-	sleep_ms(10); //how long is N_cr supposed to be???
-
-	// now read the response and continue
-	if(cmd!=0xFF || cmd!=0xFF) {
-		uint8_t resp;
-		spi_read_blocking((spi_inst_t *)spi0_hw, 0xFF, &resp, (size_t)1);
-		
-		return resp;
-	} else {
-		uint8_t* resp = (uint8_t*)malloc(5*sizeof(uint8_t)); //i've never called malloc before
-		spi_read_blocking((spi_inst_t *)spi0_hw, 0xFF, resp, (size_t)5);
-		
-		//i assume there's more info in the ocr that i need to parse first; TODO;
-		return resp[0];
-	}
-}
-
-uint8_t* recvPacket() {
-}
-
-int sendPacket(uint8_t* buf, size_t size) {
 }
 
 

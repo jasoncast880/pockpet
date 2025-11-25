@@ -68,8 +68,6 @@ static void ili9341_hard_reset();
 static void ili9341_init_sub_pwr(); 
 static void ili9341_init_sub_vram(); 
 
-static void startup_video_sequence(); //
-
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc); //running on spi0 bus
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);

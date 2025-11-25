@@ -2,28 +2,18 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-uint8_t _ILI9341_CS;
-uint8_t _ILI9341_RST;
-uint8_t _ILI9341_DC;
-uint8_t _ILI9341_MOSI;
-uint8_t _ILI9341_SCLK;
-uint8_t _ILI9341_MISO;
+static uint8_t _ILI9341_CS;
+static uint8_t _ILI9341_RST;
+static uint8_t _ILI9341_DC;
+static uint8_t _ILI9341_MOSI;
+static uint8_t _ILI9341_SCLK;
+static uint8_t _ILI9341_MISO;
 
-void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc){
-    /*
-     * test:
-     * cs - blue - gp17
-     * rst - ylo - gp20
-     * dc - grn  - gp 21
-     * mosi - wht - gp19
-     * sck - blu - gp6
-     * led - vcc line
-     * miso - blk - gp16
-     */
-    //for file-wide access
-    uint8_t _ILI9341_CS = cs;
-    uint8_t _ILI9341_RST = rst;
-    uint8_t _ILI9341_DC = dc;
+void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
+
+    _ILI9341_CS = cs;
+    _ILI9341_RST = rst;
+    _ILI9341_DC = dc;
 
     gpio_init(cs);
     gpio_init(rst);
@@ -123,5 +113,5 @@ static void ili9341_init_sub_vram(){
 
     ili9341_writeCommand(MADCTL);
     ili9341_writeData(0xAC);
-    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. THIS WORKS....
+    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. 
 }
