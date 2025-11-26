@@ -105,7 +105,6 @@ DSTATUS disk_initialize (
 	switch (pdrv) {
 	case DEV_MMC :
 
-		uint8_t cmdByte;
 		//power ON/card insertion 
 		sleep_ms(10);
 		gpio_init(SDC_CS); //todo: adding a pattern to control spi periph. thread safe.

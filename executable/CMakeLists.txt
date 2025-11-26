@@ -37,5 +37,6 @@ target_link_libraries(tactigachi PRIVATE
 
 target_compile_definitions(tactigachi PRIVATE configNUMBER_OF_CORES=1)
 
-pico_enable_stdio_usb(tactigachi 1)
+pico_enable_stdio_usb(tactigachi  1)
+pico_enable_stdio_uart(tactigachi 0)
 pico_add_extra_outputs(tactigachi)
