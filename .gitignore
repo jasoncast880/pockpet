@@ -1,3 +1,4 @@
 /build/
+/.cache/
 /secrets/
 compile_commands.json
