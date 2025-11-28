@@ -2,7 +2,13 @@
 #include "pinout.h"
 
 #include "ampalaya_tileset_16.h"
+#include "portmacro.h"
 #include "tilemaps.h"
+#include <hardware/dma.h>
+#include <hardware/irq.h>
+#include <hardware/regs/intctrl.h>
+#include <hardware/spi.h>
+#include <pico/platform/common.h>
 #include <stdexcept>
 #include <vector>
 
@@ -10,18 +16,40 @@
 //1. prove the memory integrity of tiles class ; deep copying allowed, check for ok implementations using tilset class
 //2. check to see if hardware works ok
 
-//globals
+Tileset* sys_tileset;
+Tileset* jet_tileset;
 
-    Tileset* sys_tileset;
-    Tileset* jet_tileset;
+Scene* base;
+Sprite* jetsprite;
+RenderController* render;
 
-    Scene* base;
-    Sprite* jetsprite;
-    RenderController* render;
+uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
-    uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
+//dma things
+static int dma_chan = -1;
+static SemaphoreHandle_t dma_smphr = NULL;
+
+static spi_inst_t* driver_spi;
+
+static int display_dma_transfer_sync(const void *buf, size_t size, TickType_t timeout) {
+	
+}
+//
+
+void dma_irq_handler {
+	tight_loop_contents();
+}
 
 void display_setup(){ 
+	//configure dma channel appropriately
+	driver_spi = spi0;
+	dma_smphr = xSemaphoreCreateBinary();
+	dma_chan = dma_claim_unused_channel(true);
+	//irq??
+	dma_channel_set_irq0_enabled(dma_chan, true);
+	irq_set_exclusive_handler(DMA_IRQ_0, dma_irq_handler);
+	irq_set_enabled(DMA_IRQ_0, 0);
+	//
 
     ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
     

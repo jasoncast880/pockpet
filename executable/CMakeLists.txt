@@ -27,6 +27,7 @@ target_link_libraries(tactigachi PRIVATE
     pico_cyw43_arch_lwip_sys_freertos
     hardware_irq
     hardware_gpio
+		hardware_dma
 
     ili9341_pico_driver
     frame_handler 
