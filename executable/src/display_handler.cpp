@@ -1,9 +1,15 @@
 #include "display_handler.h"
 #include "pinout.h"
+#include "ili9341.h"
+#include "FrameHandler.h"
 
-#include "ampalaya_tileset_16.h"
-#include "portmacro.h"
+#include "projdefs.h"
 #include "tilemaps.h"
+#include "ampalaya_tileset_16.h"
+
+#include "semphr.h"
+#include "portmacro.h"
+
 #include <hardware/dma.h>
 #include <hardware/irq.h>
 #include <hardware/regs/intctrl.h>
@@ -12,147 +18,92 @@
 #include <stdexcept>
 #include <vector>
 
-//curent goals: 
-//1. prove the memory integrity of tiles class ; deep copying allowed, check for ok implementations using tilset class
-//2. check to see if hardware works ok
-
-Tileset* sys_tileset;
-Tileset* jet_tileset;
-
-Scene* base;
-Sprite* jetsprite;
-RenderController* render;
-
-uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
-
-//dma things
-static int dma_chan = -1;
-static SemaphoreHandle_t dma_smphr = NULL;
-
-static spi_inst_t* driver_spi;
-
-static int display_dma_transfer_sync(const void *buf, size_t size, TickType_t timeout) {
+void display_setup(){
+	xDisplaySemaphore = xSemaphoreCreateBinary();
+	xDisplayQueue = xQueueCreate(10, sizeof(display_msg_t));
 	
-}
-//
+	xTaskCreate( lcd_write_task, "lcd_write", 2000, NULL, 2, NULL );
+	xTaskCreate( lcd_render_task, "lcd_read", 2000, NULL, 2, NULL );
 
-void dma_irq_handler {
-	tight_loop_contents();
+	printf("display_setup done");
 }
 
-void display_setup(){ 
-	//configure dma channel appropriately
-	driver_spi = spi0;
-	dma_smphr = xSemaphoreCreateBinary();
+void lcd_render_task(void* pvParameters) { //SOFTWARE
+	sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
+	jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
+	render = new RenderController(*base);
+
+	base = new Scene(*sys_tileset, &tile_bg_16[0]);
+	jetsprite = new Sprite(30,30,2,2,*jet_tileset, maps[0]);
+
+	for( ;; ) { //recv from display queue process appropriately
+	}
+
+}
+
+void lcd_write_task(void* pvParameters) {  //HARDWARE
+	dma_spi0_smphr = xSemaphoreCreateBinary();
+
 	dma_chan = dma_claim_unused_channel(true);
-	//irq??
+	driver_spi = spi0;
 	dma_channel_set_irq0_enabled(dma_chan, true);
 	irq_set_exclusive_handler(DMA_IRQ_0, dma_irq_handler);
-	irq_set_enabled(DMA_IRQ_0, 0);
-	//
+	irq_set_enabled(DMA_IRQ_0, true);
 
-    ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC); 
-    
-    sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
-    jet_tileset = new Tileset(16, (uint16_t*)&jet_tileset[0], 16);
 
-    base = new Scene(*sys_tileset, &tile_bg_16[0]);
-    jetsprite = new Sprite(30,30,2,2,*jet_tileset, maps[0]);
 
-    render = new RenderController(*base);
+	spi_init(driver_spi, 8000 * 1000); //spi freq @ 8Mhz
+	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
+	gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
+	gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
 
-    //configAssert???
-    xDisplayHandlerQueue = xQueueCreate( (UBaseType_t)10, (UBaseType_t)2 );
-    if (xDisplayHandlerQueue == NULL) {
-        printf("Failed to create display queue!\n");
-        while(1);  // trap here for debugging
-    }
+	ili9341_initialize( ILI9341_CS, ILI9341_RST , ILI9341_DC );
+	sleep_ms(100);
 
-    xDisplaySemaphore = xSemaphoreCreateMutex();
+	display_msg_t q;
 
-    xTaskCreate( lcd_write_task, "lcd_write_task", 2000, NULL, 2, NULL );
-    xTaskCreate( lcd_render_task, "lcd_render_task", 2000, NULL, 2, NULL );
+	for( ;; ) { //receive/read events, send to display queue 
 
-    printf("display_setup OK\n");
+		xQueueReceive( xDisplayQueue, &q, pdMS_TO_TICKS(100)); 
 
-    //do a test of tile/data integrity here. 
-    for( int i = 0; i < 15 ; i++ ){
-        for( int j = 0; j < 20 ; j++ ){ //rember tl-br
-        uint32_t x0 = j*16;
-        uint32_t y0 = i*16;
+		dma_channel_config cfg = dma_channel_get_default_config(dma_chan);
+		channel_config_set_transfer_data_size(&cfg, DMA_SIZE_8);
+		channel_config_set_read_increment(&cfg, true);
+		channel_config_set_write_increment(&cfg, false);
 
-        Tile* tile = base->getTilemapData(i*20+j);
-        uint16_t* buf = tile->getBuf();
-        ili9341_setAddrWindow(x0,y0,16,16);
-        ili9341_writeCommand(RAM_WR);
-        ili9341_writeDataBuffer16(buf, 16*16);
-        ili9341_writeCommand(NOOP);
-        }
-    }
+		channel_config_set_dreq(&cfg, spi_get_dreq(spi0, true));
+
+		//configure dma write, spi read
+		volatile void *spi_tx_fifo = &spi_get_hw(spi0)->dr;
+
+		xQueueSemaphoreTake(xDisplaySemaphore, pdMS_TO_TICKS(100)); //rand time
+		ili9341_setCS_LOW();
+		ili9341_writeCommand(RAM_WR);
+
+		display_dma_transfer_blocking(const void *buf, size_t size, TickType_t timeout);
+		//something like p_thing, p_size, pdMS_TO_TICKS(PortMaxDelay)
+
+		
+
+	}
 }
 
-void lcd_render_task(void* pvParameters) {
-    RenderController& r = *render;
-    Sprite& cursor = *jetsprite;
+static int display_dma_transfer_blocking(const void *buf, size_t size, TickType_t timeout) {
+	dma_channel_configure(
+		dma_chan,
+		&cfg,
+		spi_tx_fifo,
+		buf, 
+		size,
+		true
+	); //at end of this transfer will trigger dma isr
 
-    r.render();
-    r.sprite_add(cursor);
 
-    for( ;; ) {
-        xSemaphoreTake(xDisplaySemaphore, portMAX_DELAY);
-
-        printf("start render \n");
-        uint16_t x = 50;
-        uint16_t y = 50;
-        for(int i = 0; i<30; i++) {
-            for(int j = 0; j<4 ; j++) {
-                r.sprite_update(cursor.getID(), x+i, y+i, maps[j]);  
-            }
-        } 
-        xSemaphoreGive(xDisplaySemaphore);
-    }
 }
 
-void lcd_write_task(void* pvParameters) {
-    RenderController& r = *render;
-
-    //reserve a max screen buffer space for writes? for now
-    uint16_t* screenBuf = new uint16_t[240*320];
-    uint16_t numTiles = (r.base->tiles_high*r.base->tiles_wide);
-
-    xSemaphoreTake(xDisplaySemaphore,portMAX_DELAY);
-    for( int i = 0; i < (numTiles) ; i++ ){
-            uint32_t x0 = (i%r.base->tiles_wide)*16; 
-            uint32_t y0 = (i/r.base->tiles_wide)*16;
-            ili9341_setAddrWindow(x0,y0,16,16);
-            ili9341_writeCommand(RAM_WR);
-            
-            Tile* tile = r.base->getTilemapData(i);
-            uint16_t* buf = tile->getBuf();
-
-            ili9341_writeDataBuffer16(buf, 16*16);
-
-            ili9341_writeCommand(NOOP);
-    }
-    xSemaphoreGive(xDisplaySemaphore);
-
-    for( ;; ) {
-        xSemaphoreTake(xDisplaySemaphore,portMAX_DELAY);
-
-        for( int i = 0; i < (r.renderedTiles.size()) ; i++ ){
-            uint32_t x0 = ((r.indexList.at(i))%r.base->tiles_wide)*16; 
-            uint32_t y0 = (r.indexList.at(i)/r.base->tiles_wide)*16;
-            ili9341_setAddrWindow(x0,y0,16,16);
-            ili9341_writeCommand(RAM_WR);
-            
-            Tile& tile = r.renderedTiles.at(i);
-            uint16_t* buf = tile.getBuf();
-
-            ili9341_writeDataBuffer16(buf, 16*16);
-
-            ili9341_writeCommand(NOOP);
-        }
-
-        xSemaphoreGive(xDisplaySemaphore);
-    }
+static void dma_irq_handler(){
+//keep simple; acknowledge the interrupt, set flags and pass prio to the right thread.	
+	BaseType_t woken = pdFALSE;
+	xSemaphoreGiveFromISR(xDisplaySemaphore, pdFALSE);
+	portYIELD_FROM_ISR(woken);
 }

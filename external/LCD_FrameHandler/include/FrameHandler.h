@@ -135,8 +135,8 @@ class RenderController { //masher
 public:
     Scene* base;
     uint8_t* mapGuide; // helps keeps count of dirty, clean tiles
-    size_t guideLen;//number of elements in mapGuide&mapBuf
-                    
+    size_t guideLen;//number of elements in mapGuide&mapBuf 
+
     std::vector<Sprite> sprites; 
 
     //resize together
@@ -146,11 +146,19 @@ public:
     void sprite_render(uint8_t id);
     RenderController(Scene& base);
 
+		//for exposing to dislay handler SOFTWARE
     void render(); 
     void sprite_add(Sprite& sprite);
     void sprite_update(int spriteid, uint8_t* spriteMapBuf); 
     void sprite_update(int spriteid, uint16_t x, uint16_t y); 
-    void sprite_update(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf); 
+    void sprite_update(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf);
+
+		struct display_msg_t { 
+			std::vector<Tile> *renderedTiles;
+			std::vector<uint8_t> *indexList;
+			size_t size;
+		}
+		display_msg_t giveTiles(size_t s); //for exposing to the display handler hardware; for passing to queue
 };
 
 #endif

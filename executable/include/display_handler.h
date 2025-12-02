@@ -9,8 +9,6 @@
 #ifndef DISPLAYHANDLER_H
 #define DISPLAYHANDLER_H
 
-#include "FrameHandler.h"
-
 #include "pinout.h"
 #include "pico/stdlib.h"
 
@@ -18,30 +16,54 @@
 #include "hardware/irq.h"
 #include "hardware/spi.h"
 
-#include "ili9341.h"
-
 #include "FreeRTOS.h"
 #include "task.h"
 #include "semphr.h"
 
-
 #ifdef __cplusplus
 extern "C" { 
 #endif
-	static SemaphoreHandle_t xDisplaySemaphore;
-	extern QueueHandle_t xDisplayHandlerQueue;
+
+	struct display_msg_t { //members of the render class
+	std::vector<Tile> *renderedTiles;
+	std::vector<uint8_t> *indexList;
+	size_t size;
+	}
+
+	//init these on setup
+	static SemaphoreHandle_t xDisplaySemaphore; //for syncing the two tasks' ram access
+	static QueueHandle_t xDisplayQueue;
+
+
+	/*!!!---RENDER TASK---!!!*/
+	Tileset* sys_tileset;
+	Tileset* jet_tileset;
+
+	Scene* base;
+	Sprite* jetsprite;
+	RenderController* render;
+
+	uint8_t* maps[4] = {&demo_spritemap_1[0], &demo_spritemap_2[0], &demo_spritemap_3[0], &demo_spritemap_4[0]};
 
 	void lcd_render_task(void* pvParameters); 
+	/*-----------------------*/
+
+
+	/*!!!---WRITE TASK---!!!*/
+	static int dma_chan;
+	static SemaphoreHandle_t dma_spi0_smphr; //this will have to change based on spi bus
+	static spi_inst_t* driver_spi;
+
+	static int display_dma_transfer_blocking(const void *buf, size_t size, TickType_t timeout); //rtos aware dma handler (BLOCKING)
+	static void dma_irq_handler();
+
 	void lcd_write_task(void* pvParameters); 
+	/*-----------------------*/
 
-
-	//dma handling: reserve a channel (of 12) for bulk spi transfers; ie for 2d image draws
-	static int display_dma_transfer_sync(const void *buf, size_t size, TickType_t timeout); //rtos aware dma handler (BLOCKING)
 #ifdef __cplusplus
 }
 #endif
 
-void dma_irq_handler();
 void display_setup();
 
 #endif //DISPLAYHANDLER_H

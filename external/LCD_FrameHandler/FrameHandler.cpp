@@ -231,64 +231,68 @@ RenderController::RenderController(Scene& scene) { //modify the tilemap variants
 
 //built and optimized for partial frame updates
 void RenderController::render() {
-    for(int i = 0 ; i < sprites.size() ; i++) {
-        Sprite& sprite = sprites[i];
-        
-        if(true) { //add logic to see if sprite pos has changed...
-            baseBuf.clear();
-            spriteBuf.clear();
+	for(int i = 0 ; i < sprites.size() ; i++) {
+		Sprite& sprite = sprites[i];
+		
+		if(true) { //add logic to see if sprite pos has changed...
+			baseBuf.clear();
+			spriteBuf.clear();
 
-            sprite.setMapVector_Offsets((Scene&)*base);
-            uint8_t tile_len = base->tileset->tile_len;
+			sprite.setMapVector_Offsets((Scene&)*base);
+			uint8_t tile_len = base->tileset->tile_len;
 
-            //get the base tiles to alter
-            for(int j = 0; j<sprite.map_vec.size(); j++) {
-                Tile* tempTile = base->getTilemapData(sprite.map_vec[j]);
-                uint16_t* buf = tempTile->getBuf();
-                for(int k = 0; k<tile_len*tile_len; k++) {
-                    baseBuf.push_back(*buf);
-                    buf++;
-                }
+			//get the base tiles to alter
+			for(int j = 0; j<sprite.map_vec.size(); j++) {
+				Tile* tempTile = base->getTilemapData(sprite.map_vec[j]);
+				uint16_t* buf = tempTile->getBuf();
+				for(int k = 0; k<tile_len*tile_len; k++) {
+					baseBuf.push_back(*buf);
+					buf++;
+				}
 
-                //alter the mapGuide
-                mapGuide[sprite.map_vec.at(j)] = 1;
-            }
+				//alter the mapGuide
+				mapGuide[sprite.map_vec.at(j)] = 1;
+			}
 
-            //get the sprit tiles to alter
-            for(int j = 0; j<sprite.tiles_wide*sprite.tiles_high; j++) {
-                Tile* tempTile = sprite.getTilemapData(j);
-                uint16_t* buf = tempTile->getBuf();
-                for(int k = 0; k<tile_len*tile_len; k++) { //reuse tile_len from base
-                    spriteBuf.push_back(*buf);
-                    buf++;
-                }
-            }
+			//get the sprit tiles to alter
+			for(int j = 0; j<sprite.tiles_wide*sprite.tiles_high; j++) {
+				Tile* tempTile = sprite.getTilemapData(j);
+				uint16_t* buf = tempTile->getBuf();
+				for(int k = 0; k<tile_len*tile_len; k++) { //reuse tile_len from base
+					spriteBuf.push_back(*buf);
+					buf++;
+				}
+			}
 
-            //iterate through the bufs and mash
-            int baseBuf_pix_width = tile_len*base->tiles_wide;
-            int baseBuf_pix_height = tile_len*base->tiles_high;
-            bool x_cond, y_cond;
-            int counter = 0;
-            for(int j = 0; j<baseBuf_pix_height; j++) {
-                y_cond = (j>=sprite.y_offset) ? true : false;
-                for(int k = 0; k<baseBuf_pix_width; k++) {
-                    x_cond = (k>=sprite.x_offset) ? true : false;
-                    if( x_cond&& y_cond && (counter<spriteBuf.size())
-                        && (spriteBuf[counter]!=ALPHA_CLR_565)) {
-                        baseBuf[(i*baseBuf_pix_width)+j] = spriteBuf[counter]; //FILTERED
-                    }
-                }
-            } //now convert this to a tiles
+			//iterate through the bufs and mash
+			int baseBuf_pix_width = tile_len*base->tiles_wide;
+			int baseBuf_pix_height = tile_len*base->tiles_high;
+			bool x_cond, y_cond;
+			int counter = 0;
+			for(int j = 0; j<baseBuf_pix_height; j++) {
+				y_cond = (j>=sprite.y_offset) ? true : false;
+				for(int k = 0; k<baseBuf_pix_width; k++) {
+					x_cond = (k>=sprite.x_offset) ? true : false;
+					if( x_cond&& y_cond && (counter<spriteBuf.size())
+						&& (spriteBuf[counter]!=ALPHA_CLR_565)) {
+						baseBuf[(i*baseBuf_pix_width)+j] = spriteBuf[counter]; //FILTERED
+					}
+				}
+			} //now convert this to a tiles
 
-            for(int j = 0; j<sprite.map_vec.size(); j++) {
-                uint16_t* buf = baseBuf.data();
-                renderedTiles.push_back(Tile(tile_len, buf));
-                buf+=tile_len*tile_len;
+			for(int j = 0; j<sprite.map_vec.size(); j++) {
+				uint16_t* buf = baseBuf.data();
+				renderedTiles.push_back(Tile(tile_len, buf));
+				buf+=tile_len*tile_len;
 
-                indexList.push_back(sprite.map_vec[i]);
-            }
-        }
-    }
+				indexList.push_back(sprite.map_vec[i]);
+			}
+		}
+	}
+}
+
+display_msg_t RenderController::giveTiles(size_t s) {
+	//TODO
 }
 
 void RenderController::sprite_add(Sprite& sprite) {
