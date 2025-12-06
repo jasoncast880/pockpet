@@ -138,9 +138,11 @@ void Tilemap::byteBlit( uint16_t* dst ) {
 	switch(order_code) {
 
 		case DRAW_ORDER_ROW_MAJOR:
-			for(int i = 0; i<tiles_high*DEFAULT_TILE_LEN; i++) {
+			int i = 0;
+			int j = 0;
+			for(; i<tiles_high*DEFAULT_TILE_LEN; i++) {
 				int y_offset__ = i%DEFAULT_TILE_LEN;
-				for(int j = 0; j<tiles_wide; j++) {
+				for(; j<tiles_wide; j++) {
 					int tilemapIdx = i/DEFAULT_TILE_LEN*tiles_wide + j;
 
 					//get the row's pixel data 
@@ -157,11 +159,9 @@ void Tilemap::byteBlit( uint16_t* dst ) {
 					}
 				}
 			}
-			break;
 
 		case DRAW_ORDER_TILE_COLUMN_MAJOR:
 			printf("PEE");
-			break;
 	}
 }
 
@@ -305,12 +305,18 @@ void RenderController::render() {
 
 }
 
-RenderController::display_msg_t RenderController::give_block() {
+struct RenderController::display_msg_t { 
+	uint16_t* buf;
+	size_t numPixels;
+};
+
+display_msg_t RenderController::give_block() {
 	display_msg_t msg;
-	msg.buf = scratchBuf->data();
-	msg.numPixels = cursor->tiles_high*DEFAULT_TILE_LEN*cursor->tiles_wide*DEFAULT_TILE_LEN;
+	msg.buf = &scratchBuf;
+	msg.numPixels = cursor.tiles_high*DEFAULT_TILE_LEN*cursor.tiles_wide*DEFAULT_TILE_LEN;
 
 	return msg;
+
 }
 
 

@@ -4,6 +4,10 @@
 #include "pinout.h"
 
 #include "ili9341.h"
+#include "FrameHandler.h"
+
+#include <ampalaya_tileset_16.h>
+#include <tilemaps.h>
 
 //test the screen hardware
 int main() {
@@ -31,4 +35,9 @@ int main() {
 		sleep_ms(10);
         printf("draw pix %d\n", i);
     }
+		printf("Simple draw OK");
+
+		Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
+		Scene* base = new Scene(*sys_tileset, &tile_bg_16[0]);
+		//test these datas
 }

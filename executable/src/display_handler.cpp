@@ -3,10 +3,10 @@
 #include "ili9341.h"
 #include "FrameHandler.h"
 
-#include "projdefs.h"
 #include "tilemaps.h"
 #include "ampalaya_tileset_16.h"
 
+#include "projdefs.h" //apparently this is for freertos? dont delete
 #include "semphr.h"
 #include "portmacro.h"
 

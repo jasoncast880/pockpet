@@ -150,20 +150,20 @@ public:
 
     void sprite_render(uint8_t id);
 
+
+		void render(); //test; for now won't have any cleanup
+
 		struct display_msg_t { 
 			uint16_t* buf;
 			size_t numPixels;
 		};
-
-		void render(); //test; for now won't have any cleanup
-		display_msg_t give_block();
+		struct display_msg_t give_block();
 
     RenderController(Scene& base);
 
     void sprite_update( uint8_t* spriteMapBuf); 
     void sprite_update( uint16_t x, uint16_t y); 
     void sprite_update( uint16_t x, uint16_t y,uint8_t* spriteMapBuf);
-
 };
 
 #endif
