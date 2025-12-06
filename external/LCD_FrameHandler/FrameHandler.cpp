@@ -1,3 +1,4 @@
+//TODO: REFACTOR THIS TO 2d engine or something; fix so its 2 spaced tabs, NOT 4
 #include "include/FrameHandler.h"
 #include <algorithm>
 #include <memory>
@@ -115,12 +116,58 @@ Tilemap::Tilemap(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& ti
     }       
 }
 
-
 Tile* Tilemap::getTilemapData(uint16_t tileNum) {
     return &(tileset->getTilesetData(map[tileNum]));
 }
 void Tilemap::setTilemap(uint16_t tileNum, uint16_t newTile) {
-    map[tileNum] = newTile;
+	map[tileNum] = newTile;
+}
+
+//NOTE: THIS IS THE BLITTING ALGO.
+//consider using an iterator
+void Tilemap::byteBlit( uint16_t* dst ) { 
+
+	/*
+	 * IMPLICATION:
+	 * I will load a buffer the size of sprite into memory; effectively i'm 
+	 * copying a x by y tiles sized buffer for the EXPRESS purpose 
+	 * of background filtering.
+	 * Should be used relatively sparingly, for UI/sprites.
+	 */
+	
+	switch(order_code) {
+
+		case DRAW_ORDER_ROW_MAJOR:
+			int i = 0;
+			int j = 0;
+			for(; i<tiles_high*DEFAULT_TILE_LEN; i++) {
+				int y_offset__ = i%DEFAULT_TILE_LEN;
+				for(; j<tiles_wide; j++) {
+					tilemapIdx = i/DEFAULT_TILE_LEN*tiles_wide + j;
+
+					//get the row's pixel data 
+					Tile tile_ = *getTilemapData(tilemapIdx); 
+					uint16_t* ptr = tile_.getBuf()+=(y_offset__*DEFAULT_TILE_LEN);
+
+					for(int count = 0 ; count<DEFAULT_TILE_LEN ; count++) {
+						if(*ptr!=ALPHA_CLR_565) {
+							*dst = *ptr;
+						} 				
+						dst++;
+						ptr++;
+					}
+				}
+			}
+
+		case DRAW_ORDER_TILE_COLUMN_MAJOR:
+	}
+}
+
+uint16_t Tilemap::contextualize(uint8_t x, uint8_t y) {
+	uint16_t idx = x/DEFAULT_TILE_LEN*tiles_wide+y/DEFAULT_TILE_LEN;
+	Tile* tile =  getTilemapData(idx);
+	
+	return tile->getPixel(x%DEFAULT_TILE_LEN, y%DEFAULT_TILE_LEN);
 }
 
 Scene::Scene(Tileset& tileset, uint8_t* mapBuf){ //basically a hardware config
@@ -229,89 +276,56 @@ RenderController::RenderController(Scene& scene) { //modify the tilemap variants
     sprites.reserve(10); //this is super variable
 }
 
-//built and optimized for partial frame updates
+// partial frame updates; write a render block and then await clr;
+// THIS IS FRAME-BY-FRAME
+// TODO : update in a contiguous block ; reflect in indexList
 void RenderController::render() {
-	for(int i = 0 ; i < sprites.size() ; i++) {
-		Sprite& sprite = sprites[i];
-		
-		if(true) { //add logic to see if sprite pos has changed...
-			baseBuf.clear();
-			spriteBuf.clear();
+	//check for sprite updates
+	//determine region(s) of change and index
+	//do bit blitting algo, use dirty rendering
+	//return
+	cursor->setPosition(67, 67);
+	cursor->setMapVector_Offsets(*base); 
+	
+	size_t s=cursor.tiles_high*DEFAULT_TILE_LEN*cursor.tiles_wide*DEFAULT_TILE_LEN;
+	scratchBuf = new std::vector<uint8_t>(s); //allocation step
 
-			sprite.setMapVector_Offsets((Scene&)*base);
-			uint8_t tile_len = base->tileset->tile_len;
-
-			//get the base tiles to alter
-			for(int j = 0; j<sprite.map_vec.size(); j++) {
-				Tile* tempTile = base->getTilemapData(sprite.map_vec[j]);
-				uint16_t* buf = tempTile->getBuf();
-				for(int k = 0; k<tile_len*tile_len; k++) {
-					baseBuf.push_back(*buf);
-					buf++;
-				}
-
-				//alter the mapGuide
-				mapGuide[sprite.map_vec.at(j)] = 1;
-			}
-
-			//get the sprit tiles to alter
-			for(int j = 0; j<sprite.tiles_wide*sprite.tiles_high; j++) {
-				Tile* tempTile = sprite.getTilemapData(j);
-				uint16_t* buf = tempTile->getBuf();
-				for(int k = 0; k<tile_len*tile_len; k++) { //reuse tile_len from base
-					spriteBuf.push_back(*buf);
-					buf++;
-				}
-			}
-
-			//iterate through the bufs and mash
-			int baseBuf_pix_width = tile_len*base->tiles_wide;
-			int baseBuf_pix_height = tile_len*base->tiles_high;
-			bool x_cond, y_cond;
-			int counter = 0;
-			for(int j = 0; j<baseBuf_pix_height; j++) {
-				y_cond = (j>=sprite.y_offset) ? true : false;
-				for(int k = 0; k<baseBuf_pix_width; k++) {
-					x_cond = (k>=sprite.x_offset) ? true : false;
-					if( x_cond&& y_cond && (counter<spriteBuf.size())
-						&& (spriteBuf[counter]!=ALPHA_CLR_565)) {
-						baseBuf[(i*baseBuf_pix_width)+j] = spriteBuf[counter]; //FILTERED
-					}
-				}
-			} //now convert this to a tiles
-
-			for(int j = 0; j<sprite.map_vec.size(); j++) {
-				uint16_t* buf = baseBuf.data();
-				renderedTiles.push_back(Tile(tile_len, buf));
-				buf+=tile_len*tile_len;
-
-				indexList.push_back(sprite.map_vec[i]);
-			}
+	int i = 0;
+	int j = 0;
+	for(; i<cursor.tiles_high*DEFAULT_TILE_LEN; i++) {
+		for(; j<cursor.tiles_wide*DEFAULT_TILE_LEN; i++) {
+			scratch_buf.push_back(base->contextualize(cursor.x_offset+j, cursor->y_offset+i));
+			//NOTE: BOTTLENECK!!!!!!!!!!!!!
 		}
 	}
+
+	cursor->byteBlit(&scratchBuf);
+	//now read scratch buf
+
 }
 
-display_msg_t RenderController::giveTiles(size_t s) {
-	//TODO
+display_msg_t RenderController::give_block() {
+	display_msg_t msg;
+	msg.buf = &scratchBuf;
+	msg.numPixels = cursor.tiles_high*DEFAULT_TILE_LEN*cursor.tiles_wide*DEFAULT_TILE_LEN;
+
+	return msg;
+
 }
 
-void RenderController::sprite_add(Sprite& sprite) {
-    sprites.push_back(sprite);
-    sprite.setID(sprites.size());
+
+void RenderController::sprite_update( uint8_t* spriteMapBuf) {
+	Sprite& sprite = sprites.at(spriteid);
+	sprite.setMap(spriteMapBuf);
 }
 
-void RenderController::sprite_update(int spriteid, uint8_t* spriteMapBuf) {
-    Sprite& sprite = sprites.at(spriteid);
-    sprite.setMap(spriteMapBuf);
+void RenderController::sprite_update( uint16_t x, uint16_t y) {
+	Sprite& sprite = sprites.at(spriteid);
+	sprite.setPosition(x,y);
 }
 
-void RenderController::sprite_update(int spriteid, uint16_t x, uint16_t y) {
-    Sprite& sprite = sprites.at(spriteid);
-    sprite.setPosition(x,y);
-}
-
-void RenderController::sprite_update(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf) {
-    Sprite& sprite = sprites.at(spriteid);
-    sprite.setMap(spriteMapBuf);
-    sprite.setPosition(x,y);
+void RenderController::sprite_update( uint16_t x, uint16_t y,uint8_t* spriteMapBuf) {
+	Sprite& sprite = sprites.at(spriteid);
+	sprite.setMap(spriteMapBuf);
+	sprite.setPosition(x,y);
 }

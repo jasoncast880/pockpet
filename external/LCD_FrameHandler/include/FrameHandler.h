@@ -8,8 +8,15 @@
 #include <memory>
 #include <vector>
 
-#define ALPHA_CLR_565 0xF81F //a 565 magenta color
+#define ALPHA_CLR_565    0xF81F //a 565 magenta color; type is uint16_t
 #define DEFAULT_TILE_LEN 16
+
+#define DRAW_ORDER_ROW_MAJOR 0x00
+#define DRAW_ORDER_TILE_COLUMN_MAJOR 0x01
+static uint8_t order_code = DRAW_ORDER_ROW_MAJOR;
+
+#define ILI9341_TILES_TALL 15
+#define ILI9341_TILES_WIDE 20
 
 struct Tile { //implement assuming indexed color
     std::unique_ptr<uint16_t[]> buf;
@@ -28,7 +35,7 @@ public:
     void changePixel(uint16_t index, uint16_t value); 
     uint16_t getPixel(uint16_t x,uint16_t y) const; 
     uint16_t* getBuf() const;
-                                             
+
     ~Tile() = default; //allow for automatic memory free via smart pointer
 };
 
@@ -66,17 +73,20 @@ public:
  */ 
 
 struct Tilemap{ 
-    std::unique_ptr<uint8_t[]> map; //map tileset num. to tilespace
-    uint16_t x, y;
-    Tileset* tileset;
-    uint8_t tiles_wide, tiles_high;
+	std::unique_ptr<uint8_t[]> map; //map tileset num. to tilespace
+	uint16_t x, y;
+	Tileset* tileset;
+	uint8_t tiles_wide, tiles_high;
 
-    Tilemap() = default;
-    Tilemap(Tileset& tileset, uint8_t* mapBuf,uint8_t tiles_wide, uint8_t tiles_high); 
-    Tilemap(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
+	Tilemap() = default;
+	Tilemap(Tileset& tileset, uint8_t* mapBuf,uint8_t tiles_wide, uint8_t tiles_high); 
+	Tilemap(int x,int y,uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
 
-    Tile* getTilemapData(uint16_t tileNum);
-    void setTilemap(uint16_t tileNum, uint16_t newTile);
+	Tile* getTilemapData(uint16_t tileNum);
+	void setTilemap(uint16_t tileNum, uint16_t newTile);
+
+	void byteBlit(uint16_t* dst); //Assume that dst buffer is same size as the tilemap
+	uint16_t contextualize(uint8_t x, uint8_t y); // aka which pixel am i on given x,y
 }; 
 
 class Scene: public Tilemap{ 
@@ -113,7 +123,7 @@ public:
 };
 
 
-class RenderController { //masher
+class RenderController { //masher; expose to the system
      /*
     mapGuide[x] = 0: CLEAN : dont do nothing
     mapGuide[x] = 1: DIRTY : replace tile 'x' with tileset->tiles[mapBuf[x]] 
@@ -121,44 +131,39 @@ class RenderController { //masher
       * mapGuide[x] = 0 should only be called if the class 
       * user has drawn base->tileset->tileArr[x]::
       * 
+			* for now, QOL, assume only 1 sprite layer
     */
 
-    uint8_t hashPos(int x_pix,int y_pix); 
-    Tilemap* getBaseTilemap();  //change dat //change dat
+		std::vector<uint16_t>* scratchBuf;
 
-    void writeTilesBuf(Tile& tile);
+		Sprite* cursor; //temp for simplicity, testing with render()
 
-    //tempBufs for storing tileData for mashing. reset every
-    //render loop iteration
-    std::vector<uint16_t> spriteBuf;
-    std::vector<uint16_t> baseBuf;
-public:
     Scene* base;
-    uint8_t* mapGuide; // helps keeps count of dirty, clean tiles
-    size_t guideLen;//number of elements in mapGuide&mapBuf 
+    size_t guideLen;//number of elements in mapGuide
+    uint8_t* mapGuide; // keeps count of dirty, clean tiles
 
-    std::vector<Sprite> sprites; 
+public:
 
     //resize together
     std::vector<Tile> renderedTiles;
     std::vector<uint8_t> indexList;
 
     void sprite_render(uint8_t id);
-    RenderController(Scene& base);
-
-		//for exposing to dislay handler SOFTWARE
-    void render(); 
-    void sprite_add(Sprite& sprite);
-    void sprite_update(int spriteid, uint8_t* spriteMapBuf); 
-    void sprite_update(int spriteid, uint16_t x, uint16_t y); 
-    void sprite_update(int spriteid, uint16_t x, uint16_t y,uint8_t* spriteMapBuf);
 
 		struct display_msg_t { 
-			std::vector<Tile> *renderedTiles;
-			std::vector<uint8_t> *indexList;
-			size_t size;
-		}
-		display_msg_t giveTiles(size_t s); //for exposing to the display handler hardware; for passing to queue
+			uint16_t* buf;
+			size_t numPixels;
+		};
+
+		void render(); //test; for now won't have any cleanup
+		display_msg_t give_block();
+
+    RenderController(Scene& base);
+
+    void sprite_update( uint8_t* spriteMapBuf); 
+    void sprite_update( uint16_t x, uint16_t y); 
+    void sprite_update( uint16_t x, uint16_t y,uint8_t* spriteMapBuf);
+
 };
 
 #endif

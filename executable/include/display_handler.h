@@ -54,7 +54,7 @@ extern "C" {
 	static SemaphoreHandle_t dma_spi0_smphr; //this will have to change based on spi bus
 	static spi_inst_t* driver_spi;
 
-	static int display_dma_transfer_blocking(const void *buf, size_t size, TickType_t timeout); //rtos aware dma handler (BLOCKING)
+	static void display_dma_transfer(const void *buf, size_t size, TickType_t timeout);
 	static void dma_irq_handler();
 
 	void lcd_write_task(void* pvParameters); 
