@@ -17,7 +17,7 @@ void drawTilemap(Scene* p) {
             Tile* tile_ = p->getTilemapData(tile_idx);
             uint16_t* buf = tile_->getBuf();
 
-            ili9341_setAddrWindow(i*DEFAULT_TILE_LEN,j*DEFAULT_TILE_LEN,16,16);
+            ili9341_setAddrWindow(j*DEFAULT_TILE_LEN,i*DEFAULT_TILE_LEN,16,16);
             ili9341_writeCommand(RAM_WR);
             ili9341_writeDataBuffer16( buf, DEFAULT_TILE_LEN*DEFAULT_TILE_LEN );
         }
