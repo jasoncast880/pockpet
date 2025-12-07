@@ -46,7 +46,7 @@ public:
     uint8_t tile_len = DEFAULT_TILE_LEN;
     uint8_t numTiles;
 
-		Tileset();
+	Tileset();
     Tileset(Tile* tiles, uint8_t numTiles); 
     Tileset(uint8_t tile_len, uint16_t* bufPtr, uint8_t numTiles); 
 

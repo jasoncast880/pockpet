@@ -9,6 +9,22 @@
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
 
+void drawTilemap(Scene* p) {
+    for(int i = 0; i < p->tiles_high; i++){
+        for(int j = 0; j < p->tiles_wide; j++){
+            int tile_idx = i*p->tiles_wide+j;
+            printf("draw tilemap tile no. %d\n", tile_idx);
+            Tile* tile_ = p->getTilemapData(tile_idx);
+            uint16_t* buf = tile_->getBuf();
+
+            ili9341_setAddrWindow(i*DEFAULT_TILE_LEN,j*DEFAULT_TILE_LEN,16,16);
+            ili9341_writeCommand(RAM_WR);
+            ili9341_writeDataBuffer16( buf, DEFAULT_TILE_LEN*DEFAULT_TILE_LEN );
+        }
+    }
+    ili9341_writeCommand(NOOP);
+}
+
 //test the screen hardware
 int main() {
     stdio_init_all();
@@ -35,9 +51,14 @@ int main() {
 		sleep_ms(10);
         printf("draw pix %d\n", i);
     }
-		printf("Simple draw OK");
+    ili9341_writeCommand(NOOP);
+    printf("Simple draw OK");
 
-		Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
-		Scene* base = new Scene(*sys_tileset, &tile_bg_16[0]);
-		//test these datas
+    Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
+    Scene* base = new Scene(*sys_tileset, &tile_bg_16[0]);
+    //seems ok, test 2: draw the tiles from the structures in heap
+    //
+    drawTilemap(base);
 }
+
+
