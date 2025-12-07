@@ -45,7 +45,8 @@ void ili9341_writeData(uint8_t dataByte){
     gpio_put(_ILI9341_CS, 1);
 }
 
-void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ //testing
+//NOTE: By def. the spi frame format is at 8 bits. Change to 16 using spi_set_format
+void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ 
     gpio_put(_ILI9341_DC, 1);
     gpio_put(_ILI9341_CS, 0);
     spi_write16_blocking(spi0, dataBuf, len);

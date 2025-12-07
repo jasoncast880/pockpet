@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <hardware/spi.h>
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "pinout.h"
@@ -34,6 +35,7 @@ int main() {
 	sleep_ms(1000);
 
     spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
+		spi_set_format(spi0, 16, 0, 0, SPI_MSB_FIRST);
     gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
     gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
     gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
@@ -46,9 +48,9 @@ int main() {
     //ramwr
     ili9341_writeCommand(RAM_WR);
     for(int i = 0 ; i<30*30; i++) {
-        ili9341_writeData(0xFF);
-        ili9341_writeData(0xFF);
-		sleep_ms(10);
+				uint16_t dummy = 0xFFE0;
+        ili9341_writeDataBuffer16(&dummy,1);
+				sleep_ms(1);
         printf("draw pix %d\n", i);
     }
     ili9341_writeCommand(NOOP);
@@ -60,5 +62,3 @@ int main() {
     //
     drawTilemap(base);
 }
-
-
