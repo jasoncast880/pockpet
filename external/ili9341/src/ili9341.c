@@ -28,6 +28,29 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
 
     ili9341_hard_reset(); 
     ili9341_init_sub_pwr();
+
+    ili9341_writeCommand(0xC0); // Power Control 1
+    ili9341_writeData(0x23);
+
+    ili9341_writeCommand(0xC1); // Power Control 2
+    ili9341_writeData(0x10);
+
+    ili9341_writeCommand(0xC5); // VCOM control 1
+    ili9341_writeData(0x3e);
+    ili9341_writeData(0x28);
+
+    ili9341_writeCommand(0xC7); // VCOM control 2
+    ili9341_writeData(0x86);
+
+    ili9341_writeCommand(0xB1); // Frame Rate Control
+    ili9341_writeData(0x00);
+    ili9341_writeData(0x18);
+
+    ili9341_writeCommand(0xB6); // Display Function Control
+    ili9341_writeData(0x08);
+    ili9341_writeData(0x82);
+    ili9341_writeData(0x27);
+
     ili9341_init_sub_vram();
 }
 
@@ -112,6 +135,6 @@ static void ili9341_init_sub_vram(){
     ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
 
     ili9341_writeCommand(MADCTL);
-    ili9341_writeData(0xAC);
+    ili9341_writeData(0xE8);
     ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame. 
 }

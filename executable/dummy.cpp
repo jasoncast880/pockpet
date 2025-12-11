@@ -63,6 +63,7 @@ int main() {
     gpio_put(ILI9341_CS,1);
 	spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
+	sleep_ms(1000);
     printf("Simple draw OK");
 
     Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
