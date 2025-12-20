@@ -11,64 +11,64 @@
 #include <tilemaps.h>
 
 void drawTilemap(Scene* p) {
-    for(int i = 0; i < p->tiles_high; i++){
-        for(int j = 0; j < p->tiles_wide; j++){
-            int tile_idx = i*p->tiles_wide+j;
-            printf("draw tilemap tile no. %d\n", tile_idx);
-            Tile* tile_ = p->getTilemapData(tile_idx);
-            uint16_t* buf = tile_->getBuf();
+	for(int i = 0; i < p->tiles_high; i++){
+		for(int j = 0; j < p->tiles_wide; j++){
+			int tile_idx = i*p->tiles_wide+j;
+			printf("draw tilemap tile no. %d\n", tile_idx);
+			Tile* tile_ = p->getTilemapData(tile_idx);
+			uint16_t* buf = tile_->getBuf();
 
 
-            ili9341_setAddrWindow(j*DEFAULT_TILE_LEN,i*DEFAULT_TILE_LEN,16,16);
-            ili9341_writeCommand(RAM_WR);
+			ili9341_setAddrWindow(j*DEFAULT_TILE_LEN,i*DEFAULT_TILE_LEN,16,16);
+			ili9341_writeCommand(RAM_WR);
 
-	        spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-            gpio_put(ILI9341_CS,0);
-            ili9341_writeDataBuffer16( buf, DEFAULT_TILE_LEN*DEFAULT_TILE_LEN );
-            gpio_put(ILI9341_CS,1); //condnse?
-	        spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-        }
-    }
-    ili9341_writeCommand(NOOP);
+			spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+			gpio_put(ILI9341_CS,0);
+			ili9341_writeDataBuffer16( buf, DEFAULT_TILE_LEN*DEFAULT_TILE_LEN );
+			gpio_put(ILI9341_CS,1); //condnse?
+			spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+		}
+	}
+	ili9341_writeCommand(NOOP);
 }
 
 //test the screen hardware
 int main() {
-    stdio_init_all();
+	stdio_init_all();
 
 	sleep_ms(5000);
-    printf("GO");
+	printf("GO");
 	sleep_ms(1000);
 
-    spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
-    gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
-    gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
-    gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
+	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz
+	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
+	gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
+	gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
 
-    ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC);
+	ili9341_initialize(ILI9341_CS,ILI9341_RST,ILI9341_DC);
 
-    ili9341_setAddrWindow(30,30,30,30);
-		sleep_ms(10);
+	ili9341_setAddrWindow(30,30,30,30);
+	sleep_ms(10);
 
-    //ramwr
-    ili9341_writeCommand(RAM_WR);
+	//ramwr
+	ili9341_writeCommand(RAM_WR);
 	uint16_t dummy = 0xFFE0;
 
 	spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-    gpio_put(ILI9341_CS,0);
-    for(int i = 0 ; i<30*30; i++) {
-        ili9341_writeDataBuffer16(&dummy,1);
-        printf("draw pix %d\n", i);
-    }
-    gpio_put(ILI9341_CS,1);
+	gpio_put(ILI9341_CS,0);
+	for(int i = 0 ; i<30*30; i++) {
+		ili9341_writeDataBuffer16(&dummy,1);
+		printf("draw pix %d\n", i);
+	}
+	gpio_put(ILI9341_CS,1);
 	spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
 	sleep_ms(1000);
-    printf("Simple draw OK");
+	printf("Simple draw OK");
 
-    Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
-    Scene* base = new Scene(*sys_tileset, &tile_bg_16[0]);
-    //seems ok, test 2: draw the tiles from the structures in heap
-    //
-    drawTilemap(base);
+	Tileset* sys_tileset = new Tileset(16, (uint16_t*)&ampalaya_tileset_16[0], 30);
+	Scene* base = new Scene(*sys_tileset, &tile_bg_16[0]);
+	//seems ok, test 2: draw the tiles from the structures in heap
+	//
+	drawTilemap(base);
 }
