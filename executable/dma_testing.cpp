@@ -1,7 +1,11 @@
 #include <cstddef>
+#include <hardware/gpio.h>
+#include <hardware/regs/intctrl.h>
 #include <hardware/spi.h>
 #include <hardware/dma.h>
 #include <hardware/irq.h>
+#include <hardware/gpio.h>
+#include <hardware/regs/io_bank0.h>
 
 #include <hardware/structs/spi.h>
 #include <pico/stdio.h>
@@ -10,8 +14,23 @@
 #include "pinout.h"
 #include "ili9341.h"
 
-static void dma_handler() {
-	dma_hw->ints0 = 1u << dma_chan;
+typedef enum{
+	SYS_A = 2,
+	SYS_B,
+	SYS_START,
+	SYS_SEL,
+	SYS_LEFT,
+	SYS_UP,
+	SYS_RIGHT,
+	SYS_DOWN
+} btn_layout_t;
+
+static void button_handler( void ) {
+	IO_BANK0->INTR[i] = pending_bits;
+}
+
+static void dma_handler( void ) {
+	dma_hw->ints0 = 1u << dma_chan; //
 }
 
 //test the screen hardware
@@ -58,8 +77,21 @@ int main() {
 
 	//define control blocks structure and assign values
 	//start channels, await interrupts
-	dma_start_channel_mask( 1u << ctl_chan ); //no isr necessary, all handling is handled
-																						//via ctl chan
-																						//write isr for handling the reconfig of control blocks??
+	dma_start_channel_mask( 1u << ctl_chan ); 
+
 	//do a busy loop; led blink for example
+	gpio_init(PICO_DEFAULT_LED_PIN_INVERTED);
+	gpio_set_dir(PICO_DEFAULT_LED_PIN_INVERTED, GPIO_OUT);
+	bool status = true;
+
+	//buttons
+	irq_set_excusive_handler(IO_IRQ_BANK0, button_handler);
+	irq_set_enabled(IO_IRQ_BANK0, true);
+
+	while(1) {
+		gpio_put(PICO_DEFAULT_LED_PIN_INVERTED, status);
+		sleep_ms(100);
+
+		status = !status;
+	}
 }
