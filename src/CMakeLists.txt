@@ -25,13 +25,13 @@ target_link_libraries(tactigachi PRIVATE
 
 	# core HAL
 	pico_stdlib
-	#pico_cyw43_arch_lwip_sys_freertos
 	hardware_irq
 	hardware_gpio
 	hardware_dma
 
 	# drivers/other HAL
 	ili9341_rp2040
+	usb_dev_cdc
 
 	# core dependencies
 	FreeRTOS-Kernel-Heap4
