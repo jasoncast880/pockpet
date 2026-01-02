@@ -8,9 +8,6 @@ add_executable(tactigachi
 )
 
 target_include_directories(tactigachi PRIVATE
-    ${CMAKE_SOURCE_DIR}/lib/freertos_config/include #theres nothing in here..
-    ${CMAKE_SOURCE_DIR}/secrets
-
     ${CMAKE_CURRENT_SOURCE_DIR}/config
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
@@ -20,24 +17,37 @@ set_source_files_properties(
     PROPERTIES COMPILE_FLAGS "-fno-lto -fno-inline -fno-function-sections -fno-data-sections"
 )
 
+add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
+
 target_link_libraries(tactigachi PRIVATE
-    pico_stdlib
+	# macro config
+	tactigachi_cfg
 
-    FreeRTOS-Kernel-Heap4
-    pico_cyw43_arch_lwip_sys_freertos
-    hardware_irq
-    hardware_gpio
-		hardware_dma
+	# core HAL
+	pico_stdlib
+	#pico_cyw43_arch_lwip_sys_freertos
+	hardware_irq
+	hardware_gpio
+	hardware_dma
 
-    ili9341_pico_driver
-    frame_handler 
-    assets_lib
-    fatfs
+	# drivers/other HAL
+	ili9341_rp2040
+
+	# core dependencies
+	FreeRTOS-Kernel-Heap4
+	tile_engine 
+	fatfs
+
+	# misc.
+	assets
 
 )
 
 target_compile_definitions(tactigachi PRIVATE configNUMBER_OF_CORES=1)
 
-pico_enable_stdio_usb(tactigachi  1)
+pico_enable_stdio_usb(tactigachi 1)
 pico_enable_stdio_uart(tactigachi 0)
+
 pico_add_extra_outputs(tactigachi)
+
+#TODO: make some kind of message system to see how much is built, how much ram has been allocated..

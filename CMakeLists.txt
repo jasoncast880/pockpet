@@ -19,6 +19,10 @@ project(${ProjectName} C CXX ASM)
 
 pico_sdk_init()
 
-add_subdirectory(external) 
-add_subdirectory(executable)
+add_library( tactigachi_cfg INTERFACE) #holds macro config files, pinout macros
+target_include_directories( tactigachi_cfg INTERFACE config )
+
+add_subdirectory(drivers) 
+add_subdirectory(assets) 
+add_subdirectory(src)
 

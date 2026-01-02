@@ -7,6 +7,8 @@ add_library(fatfs STATIC
 target_link_libraries(fatfs
     pico_stdlib 
     hardware_spi
+
+		tactigachi_cfg #for the config file
 )
 
 target_include_directories(fatfs PUBLIC

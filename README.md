@@ -1,5 +1,21 @@
 # Tactigachi PDA Project
 
+## Notes
+At it's core, tactigachi is a PDA that interfaces with lots of different peripherals, taking advantage of the many peripheral hardware features (SPI, USB, PIO, DMA) that make the 
+pico powerful in the first place.
+
+Thus, the software design is centered around 4 folders:
+src/ - holds the main loop file, calls setup and the scheduler start. This means all setup functions defined in external api, etc. should be called from the main.cpp file. app code.
+     - also holds the task handlers. Essentially just extensions of main executable in the form of RTOS tasks. application code. 
+     src/lib: hold the core-abstraction/hal-dependent stuff here. Fatfs, graphics engine, audio engine (later). 
+             - to become libraries
+
+drivers/ - rp2040-specific drivers. should be simple and RTOS-agnostic. (reminder for myself)
+         - to be added as libraries.
+assets/  - statically allocated ram. converted images to asset arrays for testing the graphics libs, system font settings, etc stored here also
+
+
+
 ## Build
 ```bash
 cd build
