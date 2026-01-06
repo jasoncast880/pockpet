@@ -68,13 +68,13 @@ void lcd_write_task(void* pvParameters) {  //HARDWARE
 		ili9341_setCS_LOW();
 		ili9341_writeCommand(RAM_WR);
 
-		display_dma_transfer_blocking(const void *buf, size_t size, TickType_t timeout);
+		//display_dma_transfer(const void *buf, size_t size, TickType_t timeout);
 		//something like p_thing, p_size, pdMS_TO_TICKS(PortMaxDelay)
 
 	}
 }
 
-static void display_dma_transfer(const void *buf, size_t size, TickType_t timeout) {
+void display_dma_transfer(const void *buf, size_t size, TickType_t timeout) {
 	volatile void *spi_tx_fifo = &spi_get_hw(spi0)->dr;
 	
 	dma_channel_config cfg = dma_channel_get_default_config(dma_chan);

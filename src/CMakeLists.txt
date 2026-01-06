@@ -1,14 +1,12 @@
 add_executable(tactigachi
-		dummy.cpp #vid hardware test
-		#main.cpp #target
-    #add the handlers here as needed
-		#${CMAKE_CURRENT_SOURCE_DIR}/src/display_handler.cpp //adjust once the dummy is clear
-		#${CMAKE_CURRENT_SOURCE_DIR}/src/button_handler.c
-		#${CMAKE_CURRENT_SOURCE_DIR}/src/sdc_handler.cpp
+	#dummy.cpp #vid hardware test
+	main.cpp 
+  #add the handlers here as needed
+	${CMAKE_CURRENT_SOURCE_DIR}/src/display.c
+	${CMAKE_CURRENT_SOURCE_DIR}/src/button_handler.c
 )
 
 target_include_directories(tactigachi PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/config
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
@@ -23,7 +21,7 @@ target_link_libraries(tactigachi PRIVATE
 	# macro config
 	tactigachi_cfg
 
-	# core HAL
+	# core HAL as required
 	pico_stdlib
 	hardware_irq
 	hardware_gpio
@@ -40,7 +38,6 @@ target_link_libraries(tactigachi PRIVATE
 
 	# misc.
 	assets
-
 )
 
 target_compile_definitions(tactigachi PRIVATE configNUMBER_OF_CORES=1)

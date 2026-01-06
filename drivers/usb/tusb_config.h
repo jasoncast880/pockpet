@@ -11,6 +11,10 @@
  extern "C" {
 #endif
 
+#ifndef CFG_TUSB_OS
+#define CFG_TUSB_OS							(OPT_OS_FREERTOS)
+#endif
+
 #define CFG_TUD_ENABLED         (1)
 
 // Legacy RHPORT configuration

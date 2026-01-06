@@ -9,6 +9,7 @@
 #ifndef DISPLAYHANDLER_H
 #define DISPLAYHANDLER_H
 
+#include "FrameHandler.h"
 #include "pinout.h"
 #include "pico/stdlib.h"
 
@@ -20,6 +21,8 @@
 #include "task.h"
 #include "semphr.h"
 
+#include "tilemaps.h"
+
 #ifdef __cplusplus
 extern "C" { 
 #endif
@@ -28,10 +31,10 @@ extern "C" {
 	std::vector<Tile> *renderedTiles;
 	std::vector<uint8_t> *indexList;
 	size_t size;
-	}
+	};
 
 	//init these on setup
-	static SemaphoreHandle_t xDisplaySemaphore; //for syncing the two tasks' ram access
+  static SemaphoreHandle_t xDisplaySemaphore; //for syncing the two tasks' ram access
 	static QueueHandle_t xDisplayQueue;
 
 
@@ -54,7 +57,7 @@ extern "C" {
 	static SemaphoreHandle_t dma_spi0_smphr; //this will have to change based on spi bus
 	static spi_inst_t* driver_spi;
 
-	static void display_dma_transfer(const void *buf, size_t size, TickType_t timeout);
+	void display_dma_transfer(const void *buf, size_t size, TickType_t timeout);
 	static void dma_irq_handler();
 
 	void lcd_write_task(void* pvParameters); 

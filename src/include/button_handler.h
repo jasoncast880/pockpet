@@ -17,8 +17,6 @@
 extern "C" {
 #endif 
 
-//SETUP FUNCTION
-
 #define NUM_BUTTONS 8
 const uint8_t BUTTON_PINS[NUM_BUTTONS] = {BTN_A, BTN_B, BTN_START, BTN_SELECT, BTN_LEFT, BTN_UP, BTN_RIGHT, BTN_DOWN};
 
