@@ -5,8 +5,8 @@
 
 void display_setup() {
 
-	xDisplay_queue = xQueueCreate(10, sizeof(display_item_t));
-	xDisplay_mutex = xSemaphoreCreateMutex();
+	xDisplayQueue = xQueueCreate(10, sizeof(display_item_t));
+	xDisplayMutex = xSemaphoreCreateMutex();
 
 	xTaskCreate(lcd_write, "lcd_write_task", 2000, NULL, 2, NULL);
 	xTaskCreate(lcd_render, "lcd_render_task", 2000, NULL, 2, NULL);
@@ -26,7 +26,7 @@ void lcd_render(void* pvParameters) {
 	}
 }
 
-void lcd_write(void* pvParameters) {
+void lcd_write(void* pvParameters) { //queue reciever
 
 	int dma_chan = dma_claim_unused_channel(true);
 	dma_channel_set_irq0_enabled(dma_chan, true);
@@ -39,13 +39,18 @@ void lcd_write(void* pvParameters) {
 
 	ili9341_initialize(ILI9341_CS, ILI9341_RST , ILI9341_DC);
 
+	display_item_t recv;
+	const TickType_t xTicksToWait = pdMS_TO_TICKS(100);
 	for(;;) {
-		if(xSemaphoreTake(xDisplay_mutex, pdMS_TO_TICKS(100))==pdTRUE) {
-			/*
-			 * do thangs
-			 */
-			xSemaphoreGive(xDisplay_nutex));
-		}
-		
+		if(xQueueReceive(xDisplayQueue, &recv, xTicksToWait) == pdPASS) {
+			if(xSemaphoreTake(xDisplayMutex, pdMS_TO_TICKS(100))==pdTRUE) {
+					if(recv.IS_CB_FORMAT) { control_block_handle(recv); } else {
+						std_draw();
+					}
+				xSemaphoreGive(xDisplayMutex);
+			} else { }
+		} else { }
 	}
 }
+
+void control_block_hanandl

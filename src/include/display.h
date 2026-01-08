@@ -24,19 +24,21 @@
 extern "C" { 
 #endif
 
-struct {
+
+typedef struct {
+	bool IS_CB_FORMAT;
 	uint16_t* buf;
 	size_t size;
 } display_item_t;
 
-QueueHandle_t xDisplay_queue;
-SemaphoreHandle_t xDisplay_mutex;
+QueueHandle_t xDisplayQueue;
+SemaphoreHandle_t xDisplayMutex;
 
 void display_setup();
 
 int write_halfword(uint16_t hword); //for drawing a pixel ; SLOW
 int write_block(uint16_t* buf, size_t size); //for drawing a pixel ; SLOW
-void control_block_handler(); //for render to grab this.
+void control_block_handle(display_item_t recv); //for render to grab this.
 
 
 
