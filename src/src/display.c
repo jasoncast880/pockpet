@@ -1,6 +1,7 @@
 #include "display.h"
 #include "ili9341.h"
 #include "portmacro.h"
+#include "projdefs.h"
 
 void display_setup() {
 
@@ -36,10 +37,15 @@ void lcd_write(void* pvParameters) {
 	gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
 	gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
 
-	ili9341_initialize( ILI9341_CS, ILI9341_RST , ILI9341_DC );
+	ili9341_initialize(ILI9341_CS, ILI9341_RST , ILI9341_DC);
 
 	for(;;) {
-		xSemaphoreTake
-	
+		if(xSemaphoreTake(xDisplay_mutex, pdMS_TO_TICKS(100))==pdTRUE) {
+			/*
+			 * do thangs
+			 */
+			xSemaphoreGive(xDisplay_nutex));
+		}
+		
 	}
 }
