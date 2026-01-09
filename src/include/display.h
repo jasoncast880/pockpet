@@ -26,9 +26,9 @@ extern "C" {
 
 
 typedef struct {
-	bool IS_CB_FORMAT;
-	uint16_t* buf;
-	size_t size;
+	bool IS_CB_FORMAT; //if you need to do tiles.
+	uint16_t* buf; //first pixel
+	size_t size; //num pixels
 } display_item_t;
 
 QueueHandle_t xDisplayQueue;
@@ -36,14 +36,15 @@ SemaphoreHandle_t xDisplayMutex;
 
 void display_setup();
 
-int write_halfword(uint16_t hword); //for drawing a pixel ; SLOW
-int write_block(uint16_t* buf, size_t size); //for drawing a pixel ; SLOW
-void control_block_handle(display_item_t recv); //for render to grab this.
 
 
 
 //in order of priority...
-void lcd_write(void* pvParameters); //hardware-facing
+void lcd_write(void* pvParameters); 
+
+int cfg_write_block(display_item_t block); // return a dma chan.
+void control_block_handle(display_item_t recv); //for render to grab this.
+
 void lcd_render(void* pvParameters); //engine-facing
 
 #ifdef __cplusplus

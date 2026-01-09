@@ -3,6 +3,8 @@
 #include "portmacro.h"
 #include "projdefs.h"
 #include <hardware/dma.h>
+#include <hardware/regs/dreq.h>
+#include <hardware/structs/spi.h>
 
 void display_setup() {
 
@@ -39,6 +41,7 @@ void lcd_write(void* pvParameters) { //queue reciever
 	display_item_t recv;
 	const TickType_t xTicksToWait = pdMS_TO_TICKS(100);
 	for(;;) {
+
 		if(xQueueReceive(xDisplayQueue, &recv, xTicksToWait) == pdPASS) {
 			if(xSemaphoreTake(xDisplayMutex, pdMS_TO_TICKS(100))==pdTRUE) {
 					if(recv.IS_CB_FORMAT) { control_block_handle(recv); } else {
@@ -50,27 +53,44 @@ void lcd_write(void* pvParameters) { //queue reciever
 	}
 }
 
-void control_block_hanandl
 
-int write_block(uint16_t* buf, size_t size) {
+int cfg_write_block(display_item_t block) { //returns dma chan
 	int data_chan = dma_claim_unused_channel(true);
 
-	//channel configure
-	dma_channel_config c = dma_channel_get_default_config(data_chan);
-	channel_config_set_transfer_data_size(&c, DMA_SIZE_16); //for sending 565-pixel data 
-	channel_config_set_dreq(&c, uint dreq); //
-	//chain dependent on the display item; IS IT TILED OR IS IT PURE BUFFER?
+	dma_channel_config data_cfg = dma_channel_get_default_config(data_chan);
+	channel_config_set_transfer_data_size(&data_cfg, DMA_SIZE_16); //for sending 565-pixel data 
+	channel_config_set_dreq(&data_cfg, DREQ_SPI0_TX); //
+	channel_config_set_irq_quiet(&data_cfg, true);
+	
+	if(block.IS_CB_FORMAT){ //setup a ctl channel, use the tile engine as a ref?
+		int ctl_chan = dma_claim_unused_channel(true);
+		
+		dma_channel_config ctl_cfg = dma_channel_get_default_config(ctl_chan);
+		channel_config_set_transfer_data_size(&ctl_cfg, DMA_SIZE_32); //size of each reg. of dma csr
+		channel_config_set_read_increment(&ctl_cfg, true);
+		channel_config_set_read_increment(&ctl_cfg, true);
 
-	channel_config_set_chain_to(dma_channel_config_t *c, uint chain_to); ///WRAP IN CONDITIONALS
-																																			 
-	channel_config_set_irq_quiet(&c, true);
+		dma_channel_configure(ctl_chan,
+			&ctl_cfg,
+			&dma_hw->ch[data_chan].al3_read_addr_trig,
+			const volatile void *read_addr, //!!!!!!! modify engine to make this easier TODO
+			1, //just write to register
+			false
+			);
+
+
+		channel_config_set_chain_to(&data_cfg, ctl_chan ); //chain data to this control channel
+	}
 
 	dma_channel_configure(data_chan,
 		&c,
-		volatile void *write_addr,
-		const volatile void *read_addr,
+		&spi_get_hw(spi0)->dr,
+		NULL, //read addr and tc are variable;??? TODO account for this..
 		0,
-		true //will start the channel imediately
+		false 
 		);
-	//note this i within thread
+
+	//TODO start the channels and control the interrupts...
+
+	return data_chan;
 }
