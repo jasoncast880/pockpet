@@ -28,7 +28,6 @@ void lcd_render(void* pvParameters) { //do tile engine initializations,
 	Tileset* jet_tiles = new Tileset(16, &jet_sprite_16[0], 16);
 
 	Scene* base = new Scene(system_tiles, &tile_bg_16[0]);
-
 	Sprite* cursor = new Sprite(x,y,2,2,jet_tiles, &demo_spritemap_1[0]);
 	
 	for(;;) { //based on input received, alter the tilemaps and pass a display item to the HW wrapper

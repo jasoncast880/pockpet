@@ -1,11 +1,10 @@
 file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
-
 add_library(tile_engine STATIC
-  FrameHandler.cpp
+  tile_engine.cpp
 )
 
 target_include_directories(tile_engine PUBLIC
-	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR} #to pull in tile_engine.h
 )
 
 target_link_libraries(tile_engine 
