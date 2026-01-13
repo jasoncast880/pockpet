@@ -1,9 +1,9 @@
 add_executable(tactigachi
-	#dummy.cpp #vid hardware test
-	main.cpp 
+	dummy.cpp 
+	#main.cpp 
   #add the handlers here as needed
-	${CMAKE_CURRENT_SOURCE_DIR}/src/display.c
-	${CMAKE_CURRENT_SOURCE_DIR}/src/button_handler.c
+	${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/services/button_handler.c
 )
 
 target_include_directories(tactigachi PRIVATE

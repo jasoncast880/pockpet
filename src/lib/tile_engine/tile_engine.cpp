@@ -82,6 +82,7 @@ void Layer::render() override {
 }
 void Layer::clear() {
 	dirty_tiles.clear();
+	//TODO:do clean tiles on where the dirt tiles were.
 }
 
 void Sprite::render() override{ //todo: for now this assumes that its blitting on layer-0
@@ -112,8 +113,6 @@ tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) override {
 	return tc;
 }
 
-
-
 Tile* Sprite::blit_tile(uint16_t idx) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
@@ -129,5 +128,5 @@ Tile* Sprite::blit_tile(uint16_t idx) { //consider caching optimizations.
 		}
 	}
 	Tile blit_tile = new Tile(&buf[0]); //create on heap. TODO deletion.
-	return &blit_tile
+	return &blit_tile;
 }

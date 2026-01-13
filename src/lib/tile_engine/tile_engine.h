@@ -14,7 +14,7 @@
 #define DEFAULT_SCREEN_TILES_X 20
 
 typedef struct {
-	uint8_t* buf;
+	uint16_t* buf;
 	uint16_t x,y;
 } tile_item_t;
 
@@ -85,10 +85,8 @@ class Layer: public Tilemap{
 	uint8_t id; //TODO enforce ID-0 as 320x240 base-screen..
 
 	std::vector<Sprite> sprites;
-	std::vector<tile_item_t> dirty_tiles; //tiles to throw at the hw
 
 	void dirty_tiles_add( Tile* tile, uint16_t x0, uint16_t y0 );
-	void dirty_tiles_delete_all();
 
 public:
 	Layer() = {};
@@ -102,6 +100,8 @@ public:
 	void render() override;
 
 	void clear();
+
+	std::vector<tile_item_t> dirty_tiles; //tiles to throw at the hw
 
 	~Layer() override;
 };
@@ -125,20 +125,6 @@ class Sprite: public Tilemap { //touched by Layer only
 	void blit_tile(uint16_t idx);
 
 	~Sprite() override;
-};
-
-class RenderController { 
-	Layer* layers;
-	Sprite* sprites;
-	
-public:
-	std::vector<tile_item_t> tile_items;
-	size_t size;
-	
-	RenderController();
-
-	void render();
-
 };
 
 #endif //TILE_ENGINE_H

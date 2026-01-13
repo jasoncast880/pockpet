@@ -14,38 +14,13 @@
 
 #include "ili9341.h"
 
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
+#include "tile_engine.h" 
 
-#include "FrameHandler.h" 
+tile_item_t* tiles;
 
-#ifdef __cplusplus //TASKS, RTOS THINGS
-extern "C" { 
-#endif
-
-
-typedef struct {
-	bool IS_CB_FORMAT; //if you need to do tiles.
-	uint16_t* buf; //first pixel
-	size_t size; //num pixels
-} display_item_t;
-
-QueueHandle_t xDisplayQueue;
-SemaphoreHandle_t xDisplayMutex;
-
-void display_setup();
-
-//in order of priority...
-void lcd_write(void* pvParameters); 
-
-int cfg_write_block(display_item_t block); // return a dma chan.
-void control_block_handle(display_item_t recv); //for render to grab this.
-
-void lcd_render(void* pvParameters); //engine-facing
-
-#ifdef __cplusplus
-}
-#endif
+void display_setup(); //no tasks yet
+int data_chan;
+int draw_tiles(); //use the tiling lib; interface library.
+void tiling_handler();
 
 #endif //DISPLAY_H
