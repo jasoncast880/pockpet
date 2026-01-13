@@ -13,14 +13,10 @@
 #define DEFAULT_SCREEN_TILES_Y 15
 #define DEFAULT_SCREEN_TILES_X 20
 
-typedef struct {
-	uint16_t* buf;
-	uint16_t x,y;
-} tile_item_t;
-
 struct Tile {
 	Tile();
 	Tile(uint16_t* src);
+	Tile(uint16_t* src,uint16_t x, uint16_t y);
 
 	Tile(const Tile& copySrc) noexcept;
 	Tile& operator=(const Tile& copySrc) noexcept; 
@@ -34,6 +30,9 @@ struct Tile {
 	
 private:
 	std::unique_ptr<uint16_t[]> pixels;
+
+	//FOR DIRTY TILES ONLY:
+	uint16_t x,y;
 };
 
 struct Tileset{ 
@@ -101,7 +100,7 @@ public:
 
 	void clear();
 
-	std::vector<tile_item_t> dirty_tiles; //tiles to throw at the hw
+	std::vector<Tile> dirty_tiles; //tiles to throw at the hw
 
 	~Layer() override;
 };

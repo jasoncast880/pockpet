@@ -88,12 +88,15 @@ void Layer::clear() {
 void Sprite::render() override{ //todo: for now this assumes that its blitting on layer-0
 	for(int i = 0; i<tiles_high; i++) {
 		for(int j = 0; j<tiles_wide; j++) {
-			this->associated_layer->dirty_tiles_add(blit_tile(i*tiles_wide + j),
-			x+j*DEFAULT_TILE_LEN,
-			y+i*DEFAULT_TILE_LEN
-			);
+			this->associated_layer->dirty_tiles_add( blit_tile(i*tiles_wide + j),
+				x+j*DEFAULT_TILE_LEN,
+				y+i*DEFAULT_TILE_LEN );
 		}
 	}
+}
+
+void Layer::dirty_tiles_add(Tile* tile) {
+	dirty_tiles.push_back(tile);
 }
 
 tile_context_t Layer::contextualize(uint16_t x, uint16_t y) override {} //todo
@@ -127,6 +130,7 @@ Tile* Sprite::blit_tile(uint16_t idx) { //consider caching optimizations.
 			}
 		}
 	}
-	Tile blit_tile = new Tile(&buf[0]); //create on heap. TODO deletion.
+	Tile blit_tile = new Tile(&buf[0], x, y ); //!!!!!TODO!!!!!
+																						 //fix tile_context positional reference-chain
 	return &blit_tile;
 }

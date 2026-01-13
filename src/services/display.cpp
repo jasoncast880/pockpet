@@ -70,7 +70,7 @@ void tiling_handler() {
 }
 
 int draw_tiles() { //returns dma chan
-	//optional handling logic??
+	//optional handling logic?? change pointers to layer heap object
 	tiling_handler(); 
 	return data_chan;
 }
