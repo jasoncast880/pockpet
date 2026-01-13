@@ -56,43 +56,78 @@ void Tilemap::set_map(uint8_t* map) { this->map = map; }
 
 Layer::Layer(const uint8_t tiles_wide,const uint8_t tiles_high,const Tileset& tileset, uint8_t* map, uint8_t id) 
 	:tiles_wide(tiles_wide), tiles_high(tiles_high), tileset(tileset), map(map), id(id) {
-	//allocate memory for the blitted tiles
+}
+
+uint8_t Layer::sprite_add(Sprite* sprite) {
+	sprites.push_back(sprite);
+
+	sprite->id = (sprites.size-1); 
+	return sprite->id;
+}
+
+void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
+	Sprite* sprite = sprites.at(id);
+	sprite->set_position(x,y)
+	sprite->set_map(map);
+}
+
+void Layer::sprite_delete_by_id(uint8_t id) {
+	sprites.erase(id);
+}
+
+void Layer::render() override {
+	for( int i = 0 ; i < num_sprites ; i++ ) {
+		sprites[i].render();
+	}
+}
+void Layer::clear() {
+	dirty_tiles.clear();
+}
+
+void Sprite::render() override{ //todo: for now this assumes that its blitting on layer-0
+	for(int i = 0; i<tiles_high; i++) {
+		for(int j = 0; j<tiles_wide; j++) {
+			this->associated_layer->dirty_tiles_add(blit_tile(i*tiles_wide + j),
+			x+j*DEFAULT_TILE_LEN,
+			y+i*DEFAULT_TILE_LEN
+			);
+		}
+	}
 }
 
 tile_context_t Layer::contextualize(uint16_t x, uint16_t y) override {} //todo
 
 tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) override {
-	tile_context_t tc;
-	
-	uint16_t x_tile_, y_tile_;
-	x_tile_ = x/DEFAULT_TILE_LEN;
-	y_tile_ = y/DEFAULT_TILE_LEN;
-
+	/*
+	 * returns the tile, tile index in reference to the current layer.
+	 * Sprite position always is in reference to the layer it resides in.
+	 */
+	tile_context_t tc; uint16_t x_tile_ = x/DEFAULT_TILE_LEN; uint16_t y_tile_ = y/DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_ + this->associated_layer->tiles_wide*y_tile_;
 
-	uint16_t x_tile_offset, y_tile_offset;
-	x_tile_offset = x % DEFAULT_TILE_LEN;
-	y_tile_offset = y % DEFAULT_TILE_LEN;
-	
+	uint16_t x_tile_offset = x % DEFAULT_TILE_LEN;
+	uint16_t y_tile_offset = y % DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
 
 	return tc;
 }
 
 
-void Sprite::blit() {
 
+Tile* Sprite::blit_tile(uint16_t idx) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
 		for(int y = 0; y<DEFAULT_TILE_LEN; y++) {
-			if(check_filter((uint16_t) x, (uint16_t) y)){
+			tile_context_t tc = this->contextualize((uint16_t) x, (uint16_t) y);
+			uint16_t pixel = this->tileset->get_tile(idx)->get_pixel(x+y*DEFAULT_TILE_LEN);
+			if(pixel == ALPHA_FILTER){
 				tile_context_t tc = this->contextualize((uint16_t) x, (uint16_t) y);
-				//get the ass. layer's pixel in context w. sprite position.
-				buf[x+y*DEFAULT_TILE_LEN] = associated_layer->get_tile(map_idx)->get_pixel(idx);
+				buf[x+y*DEFAULT_TILE_LEN] = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
 			} else {
-				
+				buf[x+y*DEFAULT_TILE_LEN] = pixel;
 			}
 		}
 	}
+	Tile blit_tile = new Tile(&buf[0]); //create on heap. TODO deletion.
+	return &blit_tile
 }
-

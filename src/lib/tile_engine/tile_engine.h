@@ -75,34 +75,40 @@ public:
 
 	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
 
+	virtual void render() = 0;
+
 	virtual ~Tilemap() = 0;
 }; 
 
-//position, size enforced in context with layer id-0 (fullscreen)
+class Sprite;
 class Layer: public Tilemap{
-	uint8_t id; //enforce ID-0 as 320x240 base-screen..
-							//ID acts as priority.	
+	uint8_t id; //TODO enforce ID-0 as 320x240 base-screen..
+
+	std::vector<Sprite> sprites;
 	std::vector<tile_item_t> dirty_tiles; //tiles to throw at the hw
-																				//NOTE: STORED SEQUENTIALLY
-	tile_item_t* render();
 
-	void set_tile(uint16_t idx, Tile* tile);
-
-	void sprite_add(Sprite sprit);
-	void sprite_update( uint16_t x, uint16_t y, uint8_t* map);
-	void sprite_delete_by_id(uint8_t id);
+	void dirty_tiles_add( Tile* tile, uint16_t x0, uint16_t y0 );
+	void dirty_tiles_delete_all();
 
 public:
-	Layer();
+	Layer() = {};
 	Layer(const uint8_t tiles_wide,const uint8_t tiles_high,const Tileset& tileset, uint8_t* map, uint8_t id);
 	uint8_t get_id();
 	
+	uint8_t sprite_add(Sprite sprite); //return id
+	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
+	void sprite_delete_by_id(uint8_t id);
+
+	void render() override;
+
+	void clear();
+
 	~Layer() override;
 };
 
 //position enforced in context with associated_layer
-class Sprite: public Tilemap { 
-	uint8_t id;
+class Sprite: public Tilemap { //touched by Layer only
+	uint8_t id = 0;//set by the Layer.
 	Layer* associated_layer;
 
 	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
@@ -113,27 +119,26 @@ class Sprite: public Tilemap {
 	Sprite& operator=(Sprite&&) noexcept = default;
 
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
-	bool check_filter(uint16_t x, uint16_t y);
+	static bool check_filter(uint16_t x, uint16_t y);
 
-	void blit();
+	void render() override;
+	void blit_tile(uint16_t idx);
+
+	~Sprite() override;
 };
 
-
-class RenderController { //masher; expose to the system
-	
-	//users: 
-	//1) hardware wrapper task, uses tile_items for its cb. structure.
-	//2) main code, acts as input via Layer.add, sprite_add, etc.
-
-	Layer base_layer;
-	std::vector<tile_item_t> tile_items; //expose.
-	void add_item(tile_item_t);
-	void clear_items(); //call after a hardware read.
+class RenderController { 
+	Layer* layers;
+	Sprite* sprites;
 	
 public:
-	void render(Layer layer); 
-
+	std::vector<tile_item_t> tile_items;
+	size_t size;
+	
 	RenderController();
+
+	void render();
+
 };
 
 #endif //TILE_ENGINE_H
