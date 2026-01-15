@@ -2,14 +2,14 @@
 #include "tile_engine.h"
 #include "ili9341.h"
 #include "pinout.h"
-#include "portmacro.h"
-#include "projdefs.h"
+
 #include <cstdint>
 #include <hardware/dma.h>
 #include <hardware/gpio.h>
 #include <hardware/irq.h>
 #include <hardware/regs/dreq.h>
 #include <hardware/structs/spi.h>
+#include <wchar.h>
 
 #include "ampalaya_tileset_16.h"
 #include "jet_sprite.h"
@@ -47,10 +47,6 @@ void display_setup() {
 	//data chann will fire irq0 flag when done a block
 	dma_channel_set_irq0_enabled(pixel_chan, true);
 
-	//enable and cfg irq0
-	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);
-	irq_set_enabled(DMA_IRQ_0, true);
-
 	dma_channel_config cmd_cfg = dma_channel_get_default_config(cmd_chan);
 
 	channel_config_set_transfer_data_size(&cmd_cfg, DMA_SIZE_8); 
@@ -66,7 +62,7 @@ void display_setup() {
 		);
 
 	//chann will fire irq0 flag when done a block
-	dma_channel_set_irq0_enabled(cmd_chan, true)
+	dma_channel_set_irq0_enabled(cmd_chan, true);
 
 	//enable and cfg irq0
 	irq_set_exclusive_handler(DMA_IRQ_0, cmd_handler);
@@ -75,10 +71,16 @@ void display_setup() {
 }
 
 //TEMP
-Sprite* sprite1 = new Sprite(...)
 
-Layer *screen;
-uint32_t count = 0 ; //for dirty-tile element access.
+Layer* screen = new Layer(
+	DEFAULT_SCREEN_TILES_X,
+	DEFAULT_SCREEN_TILES_Y,
+	new Tileset(&ampalaya_tileset_16, static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)),
+	&tile_bg_16,
+	0
+	);
+size_t max_count = screen->dirty_tiles.size();
+uint32_t count = 0;
 //Sprites, sprite handling ...
 
 
@@ -125,13 +127,15 @@ void cmd_handler() {
 	switch (tiling_state) {
 	case CASET_CMD:
 		gpio_put( ILI9341_DC, 1 );
-		dma_channel_set_read_addr( cmd_chan, const volatile void *read_addr, false );
+		dma_channel_set_read_addr( cmd_chan, &caset_params[0] , false );
 		dma_channel_set_transfer_count( cmd_chan, 4, true );
-tiling_state = CASET_DATA; break;
+
+		tiling_state = CASET_DATA;
+		break;
+
 	case CASET_DATA:
-		temp = (uint8_t)RASET;
 		gpio_put( ILI9341_DC, 0 );
-		dma_channel_set_read_addr( cmd_chan, &temp, false );
+		dma_channel_set_read_addr( cmd_chan, &raset_cmd, false );
 		dma_channel_set_transfer_count( cmd_chan, 1, true );
 
 		tiling_state = RASET_CMD;
@@ -139,15 +143,14 @@ tiling_state = CASET_DATA; break;
 
 	case RASET_CMD:
 		gpio_put( ILI9341_DC, 1 );
-		dma_channel_set_read_addr( cmd_chan, const volatile void *read_addr, false );
+		dma_channel_set_read_addr( cmd_chan, &raset_params[0], false );
 		dma_channel_set_transfer_count( cmd_chan, 4, true );
 
 		tiling_state = RASET_DATA;
 		break;
 
 	case RASET_DATA:
-		temp = (uint8_t)RAM_WR;
-		dma_channel_set_read_addr(cmd_chan, &temp, false );
+		dma_channel_set_read_addr(cmd_chan, &ramwr_cmd, false );
 		dma_channel_set_transfer_count( cmd_chan, 1, true );
 		//start channel
 
@@ -156,9 +159,37 @@ tiling_state = CASET_DATA; break;
 	
 	case RAMWR_CMD:
 
-		dma_channel_set_read_addr(pixel_chan, const volatile void *read_addr, bool trigger);
+		dma_channel_set_read_addr(pixel_chan, &pixel_buf_16[0], true);
 
-		//tiling_state = PIX_BUF;
+		tiling_state = PIX_BUF; 
+		break;
+
+	case PIX_BUF:
+			
+		dma_hw->ints0 = 1u << pixel_chan;
+		if(count<max_count) {
+			Tile* tile = screen->dirty_tiles.at(count);
+			uint16_t x0 = tile->x;
+			uint16_t y0 = tile->y;
+
+			caset_params[0]= x0>>8;
+			caset_params[1]= x0&0xff;
+			caset_params[2]= (x0+15)>>8;
+			caset_params[3]= (x0+15)&0xff;
+
+			raset_params[0] = y0>>8;
+			raset_params[1] = y0&0xff;
+			raset_params[2] = (y0+15)>>8;
+			raset_params[3] = (y0+15)&0xff;
+			
+			pixel_buf_16 = tile->get_buffer();
+
+			gpio_put( ILI9341_DC, 0 );
+			dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
+			dma_channel_set_transfer_count( cmd_chan, 1, true);
+
+			tiling_state = CASET_CMD;
+		} else { /*finish, channels will not run without an explicit start command*/ }
 	}
 }
 
