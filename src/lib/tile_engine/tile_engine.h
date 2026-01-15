@@ -14,6 +14,8 @@
 #define DEFAULT_SCREEN_TILES_X 20
 
 struct Tile {
+	std::unique_ptr<uint16_t[]> pixels;
+
 	Tile();
 	Tile(uint16_t* src);
 	Tile(uint16_t* src,uint16_t x, uint16_t y);
@@ -28,11 +30,10 @@ struct Tile {
 	uint16_t get_pixel(uint16_t idx);
 	uint16_t* get_buffer();
 	
-private:
-	std::unique_ptr<uint16_t[]> pixels;
 
 	//FOR DIRTY TILES ONLY:
 	uint16_t x,y;
+
 };
 
 struct Tileset{ 
@@ -53,7 +54,7 @@ private:
 class Tilemap{ 
 public:
 	uint8_t* map; 
-	uint16_t x, y; //top left corner of entity.
+	uint16_t x0, y0; //top left corner of entity.
 	Tileset* tileset;
 	uint8_t tiles_wide, tiles_high;
 
