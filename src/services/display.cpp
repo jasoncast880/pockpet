@@ -67,65 +67,39 @@ void display_setup() {
 	//enable and cfg irq0
 	irq_set_exclusive_handler(DMA_IRQ_0, cmd_handler);
 	irq_set_enabled(DMA_IRQ_0, true);
-	
 }
 
-//TEMP
-
+//TEMP required globs
 Layer* screen = new Layer(
 	DEFAULT_SCREEN_TILES_X,
 	DEFAULT_SCREEN_TILES_Y,
 	new Tileset(&ampalaya_tileset_16, static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)),
 	&tile_bg_16,
-	0
+	0 //id not relevant yet ? TODO: id handling system.
 	);
-size_t max_count = screen->dirty_tiles.size();
-uint32_t count = 0;
-//Sprites, sprite handling ...
+uint32_t max_count, count;
+bool dirty_flag;
 
-
-Tile* dirty_tiles = screen->dirty_tiles.data();
-size_t max_count = screen->dirty_tiles.size();
-uint32_t count = 0;
-
-//TEMP
-
-void tile_handler() { //signals the end of the tile. reconfigure things
-	//pix buf
-	dma_hw->ints0 = 1u << pixel_chan;
+int draw_frame() {
+	dirty_flag = false;
+	//draw clean tiles
+	max_count = DEFAULT_SCREEN_TILES_X*DEFAULT_SCREEN_TILES_Y;
+	count = 0;
+	tiling_state = PIX_BUF;
 	
-	if(count<max_count) {
-
-		Tile* tile = screen->dirty_tiles.at(count);
-		uint16_t x0 = tile->x;
-		uint16_t y0 = tile->y;
-
-		caset_params[0]= x0>>8;
-		caset_params[1]= x0&0xff;
-		caset_params[2]= (x0+15)>>8;
-		caset_params[3]= (x0+15)&0xff;
-
-		raset_params[0] = y0>>8;
-		raset_params[1] = y0&0xff;
-		raset_params[2] = (y0+15)>>8;
-		raset_params[3] = (y0+15)&0xff;
-		
-		pixel_buf_16 = tile->get_buffer();
-
-		gpio_put( ILI9341_DC, 0 );
-		dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
-		dma_channel_set_transfer_count( cmd_chan, 1, true);
-
-		tiling_state = CASET_CMD;
-	} else { /*finish, channels will not run without an explicit start command*/ }
+	//man trigger the isr.
+	dma_hw->intf0 = 1u << cmd_chan; //starts with clean tiles, auto goes to dirty via 
+																	//isr + flags.
 
 }
+// TEMP
 
 void cmd_handler() {
 	dma_hw->ints0 = 1u << cmd_chan; 
 	
 	switch (tiling_state) {
 	case CASET_CMD:
+
 		gpio_put( ILI9341_DC, 1 );
 		dma_channel_set_read_addr( cmd_chan, &caset_params[0] , false );
 		dma_channel_set_transfer_count( cmd_chan, 4, true );
@@ -164,32 +138,64 @@ void cmd_handler() {
 		tiling_state = PIX_BUF; 
 		break;
 
-	case PIX_BUF:
-			
+	case PIX_BUF: //key-section
 		dma_hw->ints0 = 1u << pixel_chan;
-		if(count<max_count) {
-			Tile* tile = screen->dirty_tiles.at(count);
-			uint16_t x0 = tile->x;
-			uint16_t y0 = tile->y;
+		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
+			if(count<max_count) {
+				Tile* tile = screen->dirty_tiles.at(count);
+				uint16_t x0 = tile->x;
+				uint16_t y0 = tile->y;
 
-			caset_params[0]= x0>>8;
-			caset_params[1]= x0&0xff;
-			caset_params[2]= (x0+15)>>8;
-			caset_params[3]= (x0+15)&0xff;
+				caset_params[0]= x0>>8;
+				caset_params[1]= x0&0xff;
+				caset_params[2]= (x0+15)>>8;
+				caset_params[3]= (x0+15)&0xff;
 
-			raset_params[0] = y0>>8;
-			raset_params[1] = y0&0xff;
-			raset_params[2] = (y0+15)>>8;
-			raset_params[3] = (y0+15)&0xff;
-			
-			pixel_buf_16 = tile->get_buffer();
+				raset_params[0] = y0>>8;
+				raset_params[1] = y0&0xff;
+				raset_params[2] = (y0+15)>>8;
+				raset_params[3] = (y0+15)&0xff;
+				
+				pixel_buf_16 = tile->get_buffer();
 
-			gpio_put( ILI9341_DC, 0 );
-			dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
-			dma_channel_set_transfer_count( cmd_chan, 1, true);
+				gpio_put( ILI9341_DC, 0 );
+				dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
+				dma_channel_set_transfer_count( cmd_chan, 1, true);
 
-			tiling_state = CASET_CMD;
-		} else { /*finish, channels will not run without an explicit start command*/ }
+				tiling_state = CASET_CMD;
+			} else { 
+				/*
+				 * once this section is reached, the layer is done rendering. 
+				 * TODO:try writing an isr handler and assigning irq for 'vsync'-like functionality
+				*/
+			}
+
+		} else if (!dirty_flag) { // DRAW CLEAN TILE PIXELS
+			if(count<max_count) {
+				Tile* tile = screen->tileset->get_tile(count);
+
+				uint16_t x0 = count%DEFAULT_SCREEN_TILES_X;
+				uint16_t y0 = count/DEFAULT_SCREEN_TILES_Y;
+
+				caset_params[0]= x0>>8;
+				caset_params[1]= x0&0xff;
+				caset_params[2]= (x0+15)>>8;
+				caset_params[3]= (x0+15)&0xff;
+
+				raset_params[0] = y0>>8;
+				raset_params[1] = y0&0xff;
+				raset_params[2] = (y0+15)>>8;
+				raset_params[3] = (y0+15)&0xff;
+				
+				pixel_buf_16 = tile->get_buffer();
+
+				gpio_put( ILI9341_DC, 0 );
+				dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
+				dma_channel_set_transfer_count( cmd_chan, 1, true);
+
+				tiling_state = CASET_CMD;
+			} else { dirty_flag = !dirty_flag; }
+		}
 	}
 }
 

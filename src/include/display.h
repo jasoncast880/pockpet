@@ -35,7 +35,7 @@ void cmd_handler();
 cmd_sequence_t tiling_state = CASET_CMD;
 
 //runtime-related. (conceptual)
-int frame_draw(); 
+int draw_frame(Layer* layer); 
 
 //need static-alloc buffers to hold the command params
 static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
@@ -48,7 +48,5 @@ static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
 
 //pixel-buffer on heap via tile engine
 uint16_t *pixel_buf_16;
-
-
 
 #endif //DISPLAY_H
