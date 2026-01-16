@@ -71,10 +71,10 @@ void display_setup() {
 
 //TEMP required globs
 Layer* screen = new Layer(
-	DEFAULT_SCREEN_TILES_X,
-	DEFAULT_SCREEN_TILES_Y,
-	new Tileset(&ampalaya_tileset_16, static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)),
-	&tile_bg_16,
+	static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
+	static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
+	new Tileset((uint16_t*)&ampalaya_tileset_16[0], static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)),
+	&tile_bg_16[0],
 	0 //id not relevant yet ? TODO: id handling system.
 	);
 uint32_t max_count, count;

@@ -1,3 +1,6 @@
+#ifndef TILE_ENGINE_H
+#define TILE_ENGINE_H
+
 #include <cstddef>
 #include <stdint.h>
 
@@ -14,8 +17,6 @@
 #define DEFAULT_SCREEN_TILES_X 20
 
 struct Tile {
-	std::unique_ptr<uint16_t[]> pixels;
-
 	Tile();
 	Tile(uint16_t* src);
 	Tile(uint16_t* src,uint16_t x, uint16_t y);
@@ -30,9 +31,10 @@ struct Tile {
 	uint16_t get_pixel(uint16_t idx);
 	uint16_t* get_buffer();
 	
-
 	//FOR DIRTY TILES ONLY:
 	uint16_t x,y;
+private:
+	std::unique_ptr<uint16_t[]> pixels;
 
 };
 
@@ -86,29 +88,34 @@ class Layer: public Tilemap{
 
 	std::vector<Sprite> sprites;
 
-	void dirty_tiles_add( Tile* tile, uint16_t x0, uint16_t y0 );
+	void dirty_tiles_add( Tile* tile);
+	void render() override;
 
 public:
-	Layer() = {};
-	Layer(const uint8_t tiles_wide,const uint8_t tiles_high,const Tileset& tileset, uint8_t* map, uint8_t id);
-	uint8_t get_id();
+	Layer();
+	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id);
 	
-	uint8_t sprite_add(Sprite sprite); //return id
+	uint8_t sprite_add(Sprite* sprite); //return id
 	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
-	void sprite_delete_by_id(uint8_t id);
+	void sprite_delete_by_id(uint8_t id); //TODO
 
-	void render() override;
+	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 
 	void clear();
 
 	std::vector<Tile> dirty_tiles; //tiles to throw at the hw
 
 	~Layer() override;
+
+	friend Sprite;
 };
 
 //position enforced in context with associated_layer
 class Sprite: public Tilemap { //touched by Layer only
+private:
+public:
 	uint8_t id = 0;//set by the Layer.
+
 	Layer* associated_layer;
 
 	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
@@ -121,10 +128,11 @@ class Sprite: public Tilemap { //touched by Layer only
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 	static bool check_filter(uint16_t x, uint16_t y);
 
-	void render() override;
-	void blit_tile(uint16_t idx);
+	Tile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
 
 	~Sprite() override;
+	uint8_t* get_id();
+	void render() override;
 };
 
 #endif //TILE_ENGINE_H
