@@ -16,13 +16,12 @@
 #include "tilemaps.h"
 
 //static alloc setup vars
-int cmd_chan = dma_claim_unused_channel(true); //send command bytes & associated paraneters
-int pixel_chan = dma_claim_unused_channel(true);
+int cmd_chan = 0; //temp. call the sdk function after hw. is established
+int pixel_chan = 0;
+uint16_t* pixel_buf_16 = nullptr;
+cmd_sequence_t tiling_state = CASET_CMD; 
 
-cmd_sequence_t tiling_state = CASET_CMD; //test
-																				 
 void display_setup() {
-
 
 	//SPI SETUP
 	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
@@ -33,6 +32,9 @@ void display_setup() {
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	
 	//DMA SETUP
+
+	cmd_chan = dma_claim_unused_channel(true); 
+	pixel_chan = dma_claim_unused_channel(true);
 
 	dma_channel_config pixel_cfg = dma_channel_get_default_config(pixel_chan);
 

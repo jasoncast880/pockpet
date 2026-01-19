@@ -1,7 +1,16 @@
 #include "tile_engine.h"
 
+Tile::Tile() {}
+
 Tile::Tile(uint16_t* src)
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
+	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
+		pixels[i] = src[i];
+	}
+}
+
+Tile::Tile(uint16_t* src, uint16_t x, uint16_t y ) //FOR DIRT TILE
+	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)), x(x) , y(y){
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
 		pixels[i] = src[i];
 	}
@@ -148,11 +157,17 @@ Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider cachi
 			buf[x+y*DEFAULT_TILE_LEN] = pixel;
 		}
 	}
-	Tile* tile = new Tile(&buf[0], x, y ); 
+	Tile* tile = new Tile(&buf[0], (uint16_t)x, (uint16_t)y ); 
 	return tile;
 }
 
+uint8_t* Sprite::get_id() {
+	return &id;
+}
 
+Tilemap::~Tilemap() {
+	
+}
 
 Layer::~Layer() {
 	//kill the vector and the sprites on the layer

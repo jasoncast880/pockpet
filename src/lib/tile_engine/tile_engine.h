@@ -79,7 +79,7 @@ public:
 
 	virtual void render() = 0;
 
-	virtual ~Tilemap() = 0;
+	~Tilemap();
 }; 
 
 class Sprite;
@@ -105,7 +105,7 @@ public:
 
 	std::vector<Tile> dirty_tiles; //tiles to throw at the hw
 
-	~Layer() override;
+	~Layer();
 
 	friend Sprite;
 };
@@ -130,7 +130,7 @@ public:
 
 	Tile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
 
-	~Sprite() override;
+	~Sprite();
 	uint8_t* get_id();
 	void render() override;
 };

@@ -26,7 +26,6 @@ extern Tile* tiles; //TODO: optimization/caching
 void display_setup(); 
 extern int cmd_chan;
 extern int pixel_chan;
-//
 //pixel-buffer on heap via tile engine
 extern uint16_t *pixel_buf_16;
 
