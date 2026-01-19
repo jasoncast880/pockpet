@@ -15,7 +15,14 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
+//static alloc setup vars
+int cmd_chan = dma_claim_unused_channel(true); //send command bytes & associated paraneters
+int pixel_chan = dma_claim_unused_channel(true);
+
+cmd_sequence_t tiling_state = CASET_CMD; //test
+																				 
 void display_setup() {
+
 
 	//SPI SETUP
 	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
@@ -26,8 +33,6 @@ void display_setup() {
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	
 	//DMA SETUP
-	pixel_chan = dma_claim_unused_channel(true);
-	cmd_chan = dma_claim_unused_channel(true); //send command bytes & associated paraneters
 
 	dma_channel_config pixel_cfg = dma_channel_get_default_config(pixel_chan);
 
@@ -90,7 +95,7 @@ int draw_frame() {
 	//man trigger the isr.
 	dma_hw->intf0 = 1u << cmd_chan; //starts with clean tiles, auto goes to dirty via 
 																	//isr + flags.
-
+	return 1; //idk
 }
 // TEMP
 
@@ -142,7 +147,7 @@ void cmd_handler() {
 		dma_hw->ints0 = 1u << pixel_chan;
 		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
 			if(count<max_count) {
-				Tile* tile = screen->dirty_tiles.at(count);
+				Tile* tile = &(screen->dirty_tiles.at(count));
 				uint16_t x0 = tile->x;
 				uint16_t y0 = tile->y;
 

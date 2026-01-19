@@ -151,3 +151,20 @@ Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider cachi
 	Tile* tile = new Tile(&buf[0], x, y ); 
 	return tile;
 }
+
+
+
+Layer::~Layer() {
+	//kill the vector and the sprites on the layer
+	/*
+	for( int i = 0; i < sprites.size() ; i++ ) {
+		sprite_delete_by_id(i);
+	}
+	*/
+	//dirty tiles should auto-delete its elements??
+}
+
+Sprite::~Sprite() {
+
+}
+

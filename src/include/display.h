@@ -16,12 +16,19 @@
 
 #include "tile_engine.h" 
 
-Tile* tiles; //TODO: optimization/caching
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern Tile* tiles; //TODO: optimization/caching
 
 //setup spi
 void display_setup(); 
-int cmd_chan;
-int pixel_chan;
+extern int cmd_chan;
+extern int pixel_chan;
+//
+//pixel-buffer on heap via tile engine
+extern uint16_t *pixel_buf_16;
 
 enum cmd_sequence_t {
 	CASET_CMD,
@@ -32,7 +39,8 @@ enum cmd_sequence_t {
 	PIX_BUF
 };
 void cmd_handler();
-cmd_sequence_t tiling_state = CASET_CMD;
+
+extern cmd_sequence_t tiling_state;
 
 //runtime-related. (conceptual)
 int draw_frame(Layer* layer); 
@@ -46,7 +54,8 @@ static uint8_t raset_params[4];
 
 static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
 
-//pixel-buffer on heap via tile engine
-uint16_t *pixel_buf_16;
+#ifdef __cplusplus
+}
+#endif
 
 #endif //DISPLAY_H

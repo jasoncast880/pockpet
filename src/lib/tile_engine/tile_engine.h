@@ -97,7 +97,7 @@ public:
 	
 	uint8_t sprite_add(Sprite* sprite); //return id
 	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
-	void sprite_delete_by_id(uint8_t id); //TODO
+	//void sprite_delete_by_id(uint8_t id); //TODO
 
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 

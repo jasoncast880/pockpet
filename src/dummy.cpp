@@ -4,12 +4,11 @@
 #include "pico/stdlib.h"
 #include "pinout.h"
 
-#include "ili9341.h"
-#include "tile_engine.h"
 #include "display.h"
 
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
+
 
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
@@ -20,7 +19,6 @@ int main() {
 	//Layer things, sprite things...
 	
 	while(true) {
-
 
 	}
 }
