@@ -119,8 +119,9 @@ public:
 	Layer* associated_layer;
 
 	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
-	Sprite(const Sprite& other);
-	Sprite& operator=(const Sprite& other);
+
+	Sprite(const Sprite& copy);
+	Sprite& operator=(const Sprite& copy);
 
 	Sprite(Sprite&&) noexcept = default;
 	Sprite& operator=(Sprite&&) noexcept = default;

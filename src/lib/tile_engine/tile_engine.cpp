@@ -179,6 +179,25 @@ Layer::~Layer() {
 	//dirty tiles should auto-delete its elements??
 }
 
+Sprite::Sprite(const Sprite& copy) {
+	map = copy.map;
+	x0 = copy.x0;
+	y0 = copy.y0;
+	tileset = copy.tileset;
+	tiles_wide = copy.tiles_wide;
+	tiles_high = copy.tiles_high;
+
+}
+
+Sprite& Sprite::operator=(const Sprite& copy) {
+	map = copy.map;
+	x0 = copy.x0;
+	y0 = copy.y0;
+	tileset = copy.tileset;
+	tiles_wide = copy.tiles_wide;
+	tiles_high = copy.tiles_high;
+}
+
 Sprite::~Sprite() {
 
 }
