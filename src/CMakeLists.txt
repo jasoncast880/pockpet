@@ -1,18 +1,21 @@
-add_executable(tactigachi
-	dummy.cpp 
+#add_executable(tactigachi
 	#main.cpp 
   #add the handlers here as needed
+	#${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
+	#${CMAKE_CURRENT_SOURCE_DIR}/services/buttons.c
+#)
+
+add_executable(tactigachi dummy.cpp ) #for now
+
+pico_generate_pio_header(tactigachi ${CMAKE_CURRENT_LIST_DIR}/services/buttons.pio)
+
+target_sources( tactigachi PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/services/button_handler.c
+	${CMAKE_CURRENT_SOURCE_DIR}/services/buttons.c
 )
 
 target_include_directories(tactigachi PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-set_source_files_properties(
-    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-    PROPERTIES COMPILE_FLAGS "-fno-lto -fno-inline -fno-function-sections -fno-data-sections"
+    ${CMAKE_CURRENT_SOURCE_DIR}/services/include
 )
 
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
@@ -26,6 +29,7 @@ target_link_libraries(tactigachi PRIVATE
 	hardware_irq
 	hardware_gpio
 	hardware_dma
+	hardware_pio
 
 	# drivers/other HAL
 	ili9341_rp2040

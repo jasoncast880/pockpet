@@ -1,0 +1,22 @@
+.pio_version 0 
+
+.program buttons
+
+; polling the gpio for input. not to be used on system buttons. Only for user-level.
+
+loop:
+	pull
+	out pins, 1
+	jmp loop
+	
+% c-sdk {
+static inline void button_pio_init(PIO pio, uint sm, uint offset) {
+	pio_sm_config c = pio_get_default_sm_config();
+
+	//initialize
+	pio_sm_init(pio, sm, offset, &c);
+	//run
+	pio_sm_set_enabled(pio, sm, true);
+
+}
+%}

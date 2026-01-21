@@ -5,6 +5,7 @@
 #include "pinout.h"
 
 #include "display.h"
+#include "buttons.h"
 
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
@@ -19,6 +20,6 @@ int main() {
 	//Layer things, sprite things...
 	
 	while(true) {
-
+		
 	}
 }
