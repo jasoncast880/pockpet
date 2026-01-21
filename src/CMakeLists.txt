@@ -7,8 +7,6 @@
 
 add_executable(tactigachi dummy.cpp ) #for now
 
-pico_generate_pio_header(tactigachi ${CMAKE_CURRENT_LIST_DIR}/services/buttons.pio)
-
 target_sources( tactigachi PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/services/buttons.c

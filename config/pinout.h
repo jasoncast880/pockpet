@@ -5,16 +5,17 @@
 //ALL VARS IN THIS FILE REFER TO GPIO PINS
 
 //USR INPUT
-#define BTN_LEFT   6
-#define BTN_UP     7
-#define BTN_RIGHT  8
-#define BTN_DOWN   9
-
 #define BTN_A      2
 #define BTN_B      3
 
 #define BTN_START  4
 #define BTN_SELECT 5
+
+#define BTN_LEFT   6
+#define BTN_UP     7
+#define BTN_RIGHT  8
+#define BTN_DOWN   9
+//
 
 #define SPI0_TX    16
 #define SPI0_RX    19
