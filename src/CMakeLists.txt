@@ -13,7 +13,7 @@ target_sources( tactigachi PRIVATE
 )
 
 target_include_directories(tactigachi PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/services/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/services/include
 )
 
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.

@@ -16,10 +16,12 @@
 int main() {
 
 	display_setup(); //spi setup, driver initializized, dma data chan setup.
-	
-	//Layer things, sprite things...
+	button_setup();
 	
 	while(true) {
+		sleep_ms(50);
+		int8_t input_flag = btn_sample;
+
 		
 	}
 }

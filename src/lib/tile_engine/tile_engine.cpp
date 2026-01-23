@@ -196,6 +196,7 @@ Sprite& Sprite::operator=(const Sprite& copy) {
 	tileset = copy.tileset;
 	tiles_wide = copy.tiles_wide;
 	tiles_high = copy.tiles_high;
+	return *this;
 }
 
 Sprite::~Sprite() {

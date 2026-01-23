@@ -1,5 +1,6 @@
 #include <hardware/gpio.h>
 #include <hardware/timer.h>
+#include <pico/time.h>
 #include <stdio.h>
 
 #include <pico/types.h>
@@ -7,10 +8,8 @@
 #include "pinout.h"
 //assmbled program and associated initializer-c-function
 
-uint8_t btn_sample = 0; //this flag is the only thing you need to measure user input,
-												//assuming it is regularly cleared and properly handled.
-uint32_t time_last_sampled;
-//0b 0000 0000
+volatile uint32_t time_last_sampled[8] = {};
+volatile uint8_t btn_sample = 0b00000000;
 
 void button_setup() {
 	for( int i = (int)BTN_B; i <= (int)BTN_DOWN ; i++ ) {
@@ -21,15 +20,22 @@ void button_setup() {
 			system_button_handler
 		);
 	}
-
-	time_last_sampled = time_us_32();
+	
+	struct repeating_timer timer;
+	add_repeating_timer_ms(500, clear_sample_timer, NULL, &timer);
 }
 
 void system_button_handler(uint gpio, uint32_t events) {
-	btn_sample = btn_sample | (1u << ((uint8_t)gpio - 1));
-	time_last_sampled = time_us_32();
+	uint32_t last_time = time_last_sampled[gpio-2];
+	if( (time_us_32()-last_time) >= DEBOUNCE_US ) {
+		last_time = time_us_32();
+		btn_sample = btn_sample | (1u << ((uint8_t)gpio - 1));
+	} else {}
 }
 
-
+bool clear_sample_timer(__unused repeating_timer_t *t) {
+	btn_sample = 0b00000000;
+	return true;
+}
 
 
