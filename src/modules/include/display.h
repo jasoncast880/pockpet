@@ -20,6 +20,10 @@
 extern "C" {
 #endif
 
+class DisplayHandler {
+public:
+}
+
 extern Tile* tiles; //TODO: optimization/caching
 
 //setup spi

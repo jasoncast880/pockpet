@@ -1,22 +1,16 @@
-#add_executable(tactigachi
-	#main.cpp 
-  #add the handlers here as needed
-	#${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
-	#${CMAKE_CURRENT_SOURCE_DIR}/services/buttons.c
-#)
-
-add_executable(tactigachi dummy.cpp ) #for now
+add_executable(tactigachi dummy.cpp ) #for now ; TODO
 
 target_sources( tactigachi PRIVATE
-	${CMAKE_CURRENT_SOURCE_DIR}/services/display.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/services/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
 )
 
 target_include_directories(tactigachi PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/services/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules/include
 )
 
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
+add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
 target_link_libraries(tactigachi PRIVATE
 	# macro config

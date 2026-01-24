@@ -1,4 +1,3 @@
-//TODO: REFACTOR THIS TO 2d engine or something; fix so its 2 spaced tabs, NOT 4
 #include "include/FrameHandler.h"
 #include <algorithm>
 #include <memory>
