@@ -20,19 +20,6 @@
 extern "C" {
 #endif
 
-class DisplayHandler {
-public:
-}
-
-extern Tile* tiles; //TODO: optimization/caching
-
-//setup spi
-void display_setup(); 
-extern int cmd_chan;
-extern int pixel_chan;
-//pixel-buffer on heap via tile engine
-extern uint16_t *pixel_buf_16;
-
 enum cmd_sequence_t {
 	CASET_CMD,
 	CASET_DATA,
@@ -41,21 +28,40 @@ enum cmd_sequence_t {
 	RAMWR_CMD,
 	PIX_BUF
 };
-void cmd_handler();
 
-extern cmd_sequence_t tiling_state;
+class DisplayHandler {
+private:
+	//hw resources-related
+	int cmd_chan;
+	int pixel_chan;
 
-//runtime-related. (conceptual)
-int draw_frame(Layer* layer); 
+	uint16_t *pixel_buf_16;
 
-//need static-alloc buffers to hold the command params
-static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
-static uint8_t caset_params[4];
+	//need static-alloc buffers to hold the command params
+	static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
+	static uint8_t caset_params[4];
 
-static const uint8_t raset_cmd = static_cast<uint8_t>(RASET);
-static uint8_t raset_params[4];
+	static const uint8_t raset_cmd = static_cast<uint8_t>(RASET);
+	static uint8_t raset_params[4];
 
-static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
+	static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
+
+	//tiling trackers
+	
+	cmd_sequence_t tiling_state;
+	
+	DisplayHandler();
+	~DisplayHandler();
+public:
+	static DisplayHandler& setup(); //enforce singleton
+	DisplayHandler(const DisplayHandler& copy) = delete; //enforce singleton
+	DisplayHandler& operator=(const DisplayHandler& copy) = delete; //enforce singleton
+
+	//runtime-related. (conceptual)
+	int draw_frame(Layer* layer); 
+};
+
+void cmd_handler(); //DMA-TRIGGERED ISR . Not optimized..
 
 #ifdef __cplusplus
 }

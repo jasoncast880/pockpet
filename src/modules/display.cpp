@@ -15,14 +15,12 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-//static alloc setup vars
-int cmd_chan = 0; //temp. call the sdk function after hw. is established
-int pixel_chan = 0;
-uint16_t* pixel_buf_16 = nullptr;
-cmd_sequence_t tiling_state = CASET_CMD; 
+static DisplayHandler& DisplayHandler::setup() {
+	static DisplayHandler instance;
+	return instance;
+}
 
-void display_setup() {
-
+DisplayHandler::DisplayHandler() {
 	//SPI SETUP
 	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
 	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
@@ -36,6 +34,7 @@ void display_setup() {
 	cmd_chan = dma_claim_unused_channel(true); 
 	pixel_chan = dma_claim_unused_channel(true);
 
+	cmd_sequence_t tiling_state = CASET_CMD; 
 	dma_channel_config pixel_cfg = dma_channel_get_default_config(pixel_chan);
 
 	channel_config_set_transfer_data_size(&pixel_cfg, DMA_SIZE_16); 
@@ -74,6 +73,7 @@ void display_setup() {
 	//enable and cfg irq0
 	irq_set_exclusive_handler(DMA_IRQ_0, cmd_handler);
 	irq_set_enabled(DMA_IRQ_0, true);
+
 }
 
 //TEMP required globs
@@ -86,8 +86,9 @@ Layer* screen = new Layer(
 	);
 uint32_t max_count, count;
 bool dirty_flag;
+//TEMP
 
-int draw_frame() {
+int DisplayHandler::draw_frame(Layer *layer) {
 	dirty_flag = false;
 	//draw clean tiles
 	max_count = DEFAULT_SCREEN_TILES_X*DEFAULT_SCREEN_TILES_Y;
@@ -99,7 +100,6 @@ int draw_frame() {
 																	//isr + flags.
 	return 1; //idk
 }
-// TEMP
 
 void cmd_handler() {
 	dma_hw->ints0 = 1u << cmd_chan; 

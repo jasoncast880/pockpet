@@ -15,13 +15,14 @@
 
 int main() {
 
-	display_setup(); //spi setup, driver initializized, dma data chan setup.
+	DisplayHandler& display = DisplayHandler::setup();
 	button_setup();
 	
 	while(true) {
 		sleep_ms(50);
 		int8_t input_flag = btn_sample;
 
+		//stack is setup. relatively thread-safe. display.draw_frame(Layer);
 		
 	}
 }
