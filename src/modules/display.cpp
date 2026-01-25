@@ -15,10 +15,12 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-static DisplayHandler& DisplayHandler::setup() {
+DisplayHandler& DisplayHandler::setup() {
 	static DisplayHandler instance;
 	return instance;
 }
+
+DisplayHandler::~DisplayHandler() {}
 
 DisplayHandler::DisplayHandler() {
 	//SPI SETUP
@@ -101,17 +103,14 @@ int DisplayHandler::draw_frame(Layer *layer) {
 	return 1; //idk
 }
 
-void cmd_handler() {
-	dma_hw->ints0 = 1u << cmd_chan; 
-	
+cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 	switch (tiling_state) {
 	case CASET_CMD:
-
 		gpio_put( ILI9341_DC, 1 );
-		dma_channel_set_read_addr( cmd_chan, &caset_params[0] , false );
-		dma_channel_set_transfer_count( cmd_chan, 4, true );
+		dma_channel_set_read_addr( cmd_chan, &raset_cmd, false );
+		dma_channel_set_transfer_count( cmd_chan, 1, true );
 
-		tiling_state = CASET_DATA;
+		tiling_state = CASET_CMD;
 		break;
 
 	case CASET_DATA:
@@ -204,6 +203,15 @@ void cmd_handler() {
 			} else { dirty_flag = !dirty_flag; }
 		}
 	}
+
+	return tiling_state;
+}
+
+void cmd_handler() {
+	dma_hw->ints0 = 1u << DisplayHandler::cmd_chan; 
+	
+	DisplayHandler::state_fromISR(DisplayHandler::tiling_state);
+
 }
 
 

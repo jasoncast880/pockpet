@@ -31,34 +31,35 @@ enum cmd_sequence_t {
 
 class DisplayHandler {
 private:
-	//hw resources-related
-	int cmd_chan;
-	int pixel_chan;
-
-	uint16_t *pixel_buf_16;
-
-	//need static-alloc buffers to hold the command params
-	static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
-	static uint8_t caset_params[4];
-
-	static const uint8_t raset_cmd = static_cast<uint8_t>(RASET);
-	static uint8_t raset_params[4];
-
-	static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
-
-	//tiling trackers
-	
-	cmd_sequence_t tiling_state;
-	
 	DisplayHandler();
 	~DisplayHandler();
 public:
+	//hw resources-related
+	inline static int cmd_chan = 0;
+	inline static int pixel_chan = 0;
+	inline static uint16_t *pixel_buf_16 = nullptr;
+
+	//need static-alloc buffers to hold the command params
+	inline static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
+	inline static uint8_t caset_params[4];
+
+	inline static const uint8_t raset_cmd = static_cast<uint8_t>(RASET);
+	inline static uint8_t raset_params[4];
+
+	inline static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
+
+	//tiling trackers
+	
+	
 	static DisplayHandler& setup(); //enforce singleton
 	DisplayHandler(const DisplayHandler& copy) = delete; //enforce singleton
 	DisplayHandler& operator=(const DisplayHandler& copy) = delete; //enforce singleton
 
 	//runtime-related. (conceptual)
 	int draw_frame(Layer* layer); 
+
+	inline static cmd_sequence_t tiling_state = PIX_BUF;
+	static cmd_sequence_t state_fromISR(cmd_sequence_t state);
 };
 
 void cmd_handler(); //DMA-TRIGGERED ISR . Not optimized..
