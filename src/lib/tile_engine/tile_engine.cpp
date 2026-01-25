@@ -203,3 +203,10 @@ Sprite::~Sprite() {
 
 }
 
+Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+	this->tileset = tileset;
+	this->tiles_wide = tiles_wide;
+	this->tiles_high = tiles_high;
+	this->map = mapBuf;
+}
+

@@ -1,11 +1,13 @@
 #include <cstddef>
 #include <hardware/spi.h>
 #include <stdio.h>
+#include "jet_sprite.h"
 #include "pico/stdlib.h"
 #include "pinout.h"
 
 #include "display.h"
 #include "buttons.h"
+#include "tile_engine.h"
 
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
@@ -28,16 +30,38 @@ int main() {
 		0 //id not relevant yet ? TODO: id handling system.
 	);
 
+	uint8_t cursor = screen->sprite_add(
+		new Sprite(
+			2,
+			2,
+			new Tileset(
+				(uint16_t*)&jet_sprite_16[0],
+				static_cast<size_t>(16)
+			),
+			&demo_spritemap_1[0]
+		)
+	);
+	
+
+	int x = 100;
+	int y = 100;
 	DisplayHandler& display = DisplayHandler::setup(screen);
 	button_setup();
 
-	dma_hw->intf0 = 1u << DisplayHandler::cmd_chan; //CRUCIAL: kick start the isr
 
 	while(true) {
-		sleep_ms(50);
+		sleep_ms(500); 
 		int8_t input_flag = btn_sample;
 
-		//stack is setup. relatively thread-safe. display.draw_frame(Layer);
+		//do some kind of software (tile engine calls) render 
+		if(input_flag & 0b0000'1000) {
+			x--;
+			screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
+		}
 
+		sleep_ms(500);
+		display.draw_frame(screen);
+
+		sleep_ms(500);
 	}
 }

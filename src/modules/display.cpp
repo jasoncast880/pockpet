@@ -80,9 +80,9 @@ DisplayHandler::DisplayHandler(Layer* base) {
 
 }
 
+//TEMP, figure out where to put later...
 uint32_t max_count, count;
 bool dirty_flag;
-//TEMP
 
 int DisplayHandler::draw_frame(Layer *layer) {
 	dirty_flag = false;
@@ -198,13 +198,13 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		}
 	}
 
-	return tiling_state;
+	return tiling_state; //unused
 }
 
 void cmd_handler() {
 	dma_hw->ints0 = 1u << DisplayHandler::cmd_chan; 
 	
-	DisplayHandler::state_fromISR(DisplayHandler::tiling_state);
+	DisplayHandler::state_fromISR(DisplayHandler::tiling_state); //big compute
 
 }
 

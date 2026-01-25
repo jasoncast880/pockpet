@@ -13,6 +13,9 @@ volatile uint8_t btn_sample = 0b00000000;
 
 void button_setup() {
 	for( int i = (int)BTN_B; i <= (int)BTN_DOWN ; i++ ) {
+		gpio_set_dir(i, false); //set input
+		gpio_pull_down(i); 
+
 		gpio_set_irq_enabled_with_callback(
 			i,
 			GPIO_IRQ_EDGE_FALL,

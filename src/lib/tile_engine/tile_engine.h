@@ -95,7 +95,7 @@ public:
 	Layer();
 	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id);
 	
-	uint8_t sprite_add(Sprite* sprite); //return id
+	uint8_t sprite_add(Sprite* sprite); //TODO: enforce sprite instantiation as private.
 	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
 	//void sprite_delete_by_id(uint8_t id); //TODO
 
@@ -118,7 +118,7 @@ public:
 
 	Layer* associated_layer;
 
-	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset& tileset, uint8_t* mapBuf);
+	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
 
 	Sprite(const Sprite& copy);
 	Sprite& operator=(const Sprite& copy);
