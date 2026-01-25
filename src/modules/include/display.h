@@ -31,7 +31,7 @@ enum cmd_sequence_t {
 
 class DisplayHandler {
 private:
-	DisplayHandler();
+	DisplayHandler(Layer* base);
 	~DisplayHandler();
 public:
 	//hw resources-related
@@ -51,18 +51,19 @@ public:
 	//tiling trackers
 	
 	
-	static DisplayHandler& setup(); //enforce singleton
+	static DisplayHandler& setup(Layer* base); //enforce singleton
 	DisplayHandler(const DisplayHandler& copy) = delete; //enforce singleton
 	DisplayHandler& operator=(const DisplayHandler& copy) = delete; //enforce singleton
 
 	//runtime-related. (conceptual)
 	int draw_frame(Layer* layer); 
 
+	inline static Layer* base_layer = nullptr;
 	inline static cmd_sequence_t tiling_state = PIX_BUF;
 	static cmd_sequence_t state_fromISR(cmd_sequence_t state);
 };
 
-void cmd_handler(); //DMA-TRIGGERED ISR . Not optimized..
+void cmd_handler(); 
 
 #ifdef __cplusplus
 }

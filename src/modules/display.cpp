@@ -15,14 +15,16 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-DisplayHandler& DisplayHandler::setup() {
-	static DisplayHandler instance;
+DisplayHandler& DisplayHandler::setup(Layer* base) {
+	static DisplayHandler instance = DisplayHandler(base);
 	return instance;
 }
 
 DisplayHandler::~DisplayHandler() {}
 
-DisplayHandler::DisplayHandler() {
+DisplayHandler::DisplayHandler(Layer* base) {
+	base_layer = base;
+
 	//SPI SETUP
 	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
 	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
@@ -78,14 +80,6 @@ DisplayHandler::DisplayHandler() {
 
 }
 
-//TEMP required globs
-Layer* screen = new Layer(
-	static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
-	static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
-	new Tileset((uint16_t*)&ampalaya_tileset_16[0], static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)),
-	&tile_bg_16[0],
-	0 //id not relevant yet ? TODO: id handling system.
-	);
 uint32_t max_count, count;
 bool dirty_flag;
 //TEMP
@@ -148,7 +142,7 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		dma_hw->ints0 = 1u << pixel_chan;
 		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
 			if(count<max_count) {
-				Tile* tile = &(screen->dirty_tiles.at(count));
+				Tile* tile = &(DisplayHandler::base_layer->dirty_tiles.at(count));
 				uint16_t x0 = tile->x;
 				uint16_t y0 = tile->y;
 
@@ -178,7 +172,7 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 
 		} else if (!dirty_flag) { // DRAW CLEAN TILE PIXELS
 			if(count<max_count) {
-				Tile* tile = screen->tileset->get_tile(count);
+				Tile* tile = DisplayHandler::base_layer->tileset->get_tile(count);
 
 				uint16_t x0 = count%DEFAULT_SCREEN_TILES_X;
 				uint16_t y0 = count/DEFAULT_SCREEN_TILES_Y;
