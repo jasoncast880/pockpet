@@ -9,12 +9,47 @@ Tile::Tile(uint16_t* src)
 	}
 }
 
-Tile::Tile(uint16_t* src, uint16_t x, uint16_t y ) //FOR DIRT TILE
-	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)), x(x) , y(y){
+DirtyTile::DirtyTile(uint16_t* src, uint16_t x, uint16_t y ) //FOR DIRT TILE
+	:  x(x) , y(y){
+	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN));
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
 		pixels[i] = src[i];
 	}
 }
+
+DirtyTile::DirtyTile(const DirtyTile& copy) noexcept {
+	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN));
+	x = copy.x;
+	y = copy.y;
+
+	uint16_t* src = this->pixels.get();
+	uint16_t* dst = copy.pixels.get();
+	if(copy.pixels!=nullptr) {
+		for( int i = 0 ; i<(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); i++ ) {
+			*src = *dst;
+			src++;
+			dst++;
+		}
+	}	
+}
+
+DirtyTile& DirtyTile::operator=(const DirtyTile& copy) noexcept {
+	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN));
+	x = copy.x;
+	y = copy.y;
+
+	uint16_t* src = this->pixels.get();
+	uint16_t* dst = copy.pixels.get();
+	if(this != &copy && copy.pixels!=nullptr) {
+		for( int i = 0 ; i<(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); i++ ) {
+			*src = *dst;
+			src++;
+			dst++;
+		}
+	}
+	return *this;
+}
+
 
 Tile::Tile(const Tile& copy) noexcept //not really used.
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
@@ -86,7 +121,9 @@ Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t*
 	this->id =id;
 }
 
-uint8_t Layer::sprite_add(Sprite* sprite) {
+uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
+	Sprite* sprite = new Sprite(tiles_wide, tiles_high, ts, map);
+	sprite->associated_layer = this;
 	sprites.push_back(*sprite);
 	uint8_t* id = sprite->get_id();
 	*id = (sprites.size()-1); 
@@ -121,7 +158,7 @@ void Sprite::render() { //todo: for now this assumes that its blitting on layer-
 	}
 }
 
-void Layer::dirty_tiles_add(Tile* tile) {	dirty_tiles.push_back(*tile); }
+void Layer::dirty_tiles_add(DirtyTile* tile) {	dirty_tiles.push_back(*tile); }
 
 Layer::tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
 	tile_context_t dummy;
@@ -143,7 +180,7 @@ Layer::tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 	return tc;
 }
 
-Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
+DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
 		for(int y = 0; y<DEFAULT_TILE_LEN; y++) {
@@ -157,7 +194,7 @@ Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider cachi
 			buf[x+y*DEFAULT_TILE_LEN] = pixel;
 		}
 	}
-	Tile* tile = new Tile(&buf[0], (uint16_t)x, (uint16_t)y ); 
+	DirtyTile* tile = new DirtyTile(&buf[0], (uint16_t)x, (uint16_t)y ); 
 	return tile;
 }
 
@@ -200,7 +237,6 @@ Sprite& Sprite::operator=(const Sprite& copy) {
 }
 
 Sprite::~Sprite() {
-
 }
 
 Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
@@ -209,4 +245,3 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 	this->tiles_high = tiles_high;
 	this->map = mapBuf;
 }
-

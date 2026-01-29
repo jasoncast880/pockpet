@@ -27,27 +27,20 @@ int main() {
 			static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)
 			),
 		&tile_bg_16[0],
-		0 //id not relevant yet ? TODO: id handling system.
-	);
+		0 
+		); //id not relevant yet ? TODO: id handling system.
 
 	uint8_t cursor = screen->sprite_add(
-		new Sprite(
-			2,
-			2,
-			new Tileset(
-				(uint16_t*)&jet_sprite_16[0],
-				static_cast<size_t>(16)
-			),
-			&demo_spritemap_1[0]
-		)
+		2,
+		2,
+		new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(16)),
+		&demo_spritemap_1[0]
 	);
-	
 
 	int x = 100;
 	int y = 100;
-	DisplayHandler& display = DisplayHandler::setup(screen);
+	DisplayHandler& display = DisplayHandler::setup(screen); //setup should call layer-0
 	button_setup();
-
 
 	while(true) {
 		sleep_ms(500); 
@@ -57,6 +50,7 @@ int main() {
 		if(input_flag & 0b0000'1000) {
 			x--;
 			screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
+			screen->render();
 		}
 
 		sleep_ms(500);

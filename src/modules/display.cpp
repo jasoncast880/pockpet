@@ -80,10 +80,6 @@ DisplayHandler::DisplayHandler(Layer* base) {
 
 }
 
-//TEMP, figure out where to put later...
-uint32_t max_count, count;
-bool dirty_flag;
-
 int DisplayHandler::draw_frame(Layer *layer) {
 	dirty_flag = false;
 	//draw clean tiles
@@ -138,11 +134,11 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		tiling_state = PIX_BUF; 
 		break;
 
-	case PIX_BUF: //key-section
+	case PIX_BUF: //KEY SECTION : TODO : OPTIMIZE - Caching, branching considerations
 		dma_hw->ints0 = 1u << pixel_chan;
 		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
 			if(count<max_count) {
-				Tile* tile = &(DisplayHandler::base_layer->dirty_tiles.at(count));
+				DirtyTile* tile = &(DisplayHandler::base_layer->dirty_tiles.at(count));
 				uint16_t x0 = tile->x;
 				uint16_t y0 = tile->y;
 
@@ -169,7 +165,6 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 				 * TODO:try writing an isr handler and assigning irq for 'vsync'-like functionality
 				*/
 			}
-
 		} else if (!dirty_flag) { // DRAW CLEAN TILE PIXELS
 			if(count<max_count) {
 				Tile* tile = DisplayHandler::base_layer->tileset->get_tile(count);
@@ -198,7 +193,7 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		}
 	}
 
-	return tiling_state; //unused
+	return tiling_state; //unused as return value. still tho
 }
 
 void cmd_handler() {
@@ -207,5 +202,3 @@ void cmd_handler() {
 	DisplayHandler::state_fromISR(DisplayHandler::tiling_state); //big compute
 
 }
-
-

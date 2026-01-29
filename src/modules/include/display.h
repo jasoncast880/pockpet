@@ -34,36 +34,35 @@ private:
 	DisplayHandler(Layer* base);
 	~DisplayHandler();
 public:
-	//hw resources-related
-	inline static int cmd_chan = 0;
-	inline static int pixel_chan = 0;
+	
+	//TILE-RELATED - Run-Access within ISR.
+	inline static uint32_t max_count, count = 0;
+	inline static bool dirty_flag = false;
 	inline static uint16_t *pixel_buf_16 = nullptr;
 
+	inline static int cmd_chan = 0;
+	inline static int pixel_chan = 0;
+	
 	//need static-alloc buffers to hold the command params
 	inline static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
 	inline static uint8_t caset_params[4];
-
 	inline static const uint8_t raset_cmd = static_cast<uint8_t>(RASET);
 	inline static uint8_t raset_params[4];
-
 	inline static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
-
-	//tiling trackers
-	
-	
-	static DisplayHandler& setup(Layer* base); //enforce singleton
-	DisplayHandler(const DisplayHandler& copy) = delete; //enforce singleton
-	DisplayHandler& operator=(const DisplayHandler& copy) = delete; //enforce singleton
-
-	//runtime-related. (conceptual)
-	int draw_frame(Layer* layer); 
 
 	inline static Layer* base_layer = nullptr;
 	inline static cmd_sequence_t tiling_state = PIX_BUF;
-	static cmd_sequence_t state_fromISR(cmd_sequence_t state);
+	//END OF TILE-RELATED
+	static cmd_sequence_t state_fromISR(cmd_sequence_t state); //called within ISR ; slow
+
+	static DisplayHandler& setup(Layer* base);
+	DisplayHandler(const DisplayHandler& copy) = delete; 
+	DisplayHandler& operator=(const DisplayHandler& copy) = delete; 
+
+	int draw_frame(Layer* layer); 
 };
 
-void cmd_handler(); 
+void cmd_handler(); //ISR ; DMA-Triggered
 
 #ifdef __cplusplus
 }

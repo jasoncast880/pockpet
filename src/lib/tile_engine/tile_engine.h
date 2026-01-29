@@ -19,7 +19,6 @@
 struct Tile {
 	Tile();
 	Tile(uint16_t* src);
-	Tile(uint16_t* src,uint16_t x, uint16_t y);
 
 	Tile(const Tile& copySrc) noexcept;
 	Tile& operator=(const Tile& copySrc) noexcept; 
@@ -31,11 +30,19 @@ struct Tile {
 	uint16_t get_pixel(uint16_t idx);
 	uint16_t* get_buffer();
 	
-	//FOR DIRTY TILES ONLY:
-	uint16_t x,y;
-private:
 	std::unique_ptr<uint16_t[]> pixels;
+};
 
+struct DirtyTile : public Tile {
+	DirtyTile(uint16_t* src,uint16_t x, uint16_t y);
+	uint16_t x,y;
+
+	DirtyTile(const DirtyTile& copySrc) noexcept;
+	DirtyTile& operator=(const DirtyTile& copySrc) noexcept; 
+	DirtyTile(DirtyTile&&) noexcept = default;
+	DirtyTile& operator=(DirtyTile&& moveSrc) noexcept = default;
+	//copy semantics...
+	
 };
 
 struct Tileset{ 
@@ -84,41 +91,37 @@ public:
 
 class Sprite;
 class Layer: public Tilemap{
+public:
 	uint8_t id; //TODO enforce ID-0 as 320x240 base-screen..
 
 	std::vector<Sprite> sprites;
 
-	void dirty_tiles_add( Tile* tile);
-	void render() override;
+	void dirty_tiles_add( DirtyTile* tile);
 
-public:
+	void render() override;
 	Layer();
 	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id);
 	
-	uint8_t sprite_add(Sprite* sprite); //TODO: enforce sprite instantiation as private.
+	uint8_t sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map); 
 	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
-	//void sprite_delete_by_id(uint8_t id); //TODO
 
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 
 	void clear();
 
-	std::vector<Tile> dirty_tiles; //tiles to throw at the hw
+	std::vector<DirtyTile> dirty_tiles; //tiles to throw at the hw
 
 	~Layer();
-
-	friend Sprite;
 };
 
 //position enforced in context with associated_layer
 class Sprite: public Tilemap { //touched by Layer only
 private:
+	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
 public:
 	uint8_t id = 0;//set by the Layer.
 
-	Layer* associated_layer;
-
-	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
+	Layer* associated_layer = nullptr;
 
 	Sprite(const Sprite& copy);
 	Sprite& operator=(const Sprite& copy);
@@ -129,11 +132,13 @@ public:
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 	static bool check_filter(uint16_t x, uint16_t y);
 
-	Tile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
+	DirtyTile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
 
 	~Sprite();
 	uint8_t* get_id();
 	void render() override;
+
+	friend Layer;
 };
 
 #endif //TILE_ENGINE_H
