@@ -44,7 +44,7 @@ int main() {
 
 	while(true) {
 		sleep_ms(500); 
-		int8_t input_flag = btn_sample;
+		int8_t input_flag = btn_sample; //TODO: Segault occurs here
 
 		//do some kind of software (tile engine calls) render 
 		if(input_flag & 0b0000'1000) {

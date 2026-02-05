@@ -9,7 +9,7 @@
 //assmbled program and associated initializer-c-function
 
 volatile uint32_t time_last_sampled[8] = {};
-volatile uint8_t btn_sample = 0b00000000;
+volatile uint8_t btn_sample = 0x00;
 
 void button_setup() {
 	for( int i = (int)BTN_B; i <= (int)BTN_DOWN ; i++ ) {

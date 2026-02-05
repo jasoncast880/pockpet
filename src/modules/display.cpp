@@ -20,7 +20,7 @@ DisplayHandler& DisplayHandler::setup(Layer* base) {
 	return instance;
 }
 
-DisplayHandler::~DisplayHandler() {}
+DisplayHandler::~DisplayHandler() {} //default ; unused
 
 DisplayHandler::DisplayHandler(Layer* base) {
 	base_layer = base;
@@ -71,7 +71,7 @@ DisplayHandler::DisplayHandler(Layer* base) {
 		false 
 		);
 
-	//chann will fire irq0 flag when done a block
+	//chan will fire irq0 flag when done a block
 	dma_channel_set_irq0_enabled(cmd_chan, true);
 
 	//enable and cfg irq0
