@@ -12,13 +12,9 @@
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
 
-
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
-
-	
-	//TEMP required globs
 	Layer* screen = new Layer(
 		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
 		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
@@ -44,7 +40,7 @@ int main() {
 
 	while(true) {
 		sleep_ms(500); 
-		int8_t input_flag = btn_sample; //TODO: Segault occurs here
+		int8_t input_flag = btn_sample; //TODO: hard-fault occurs here
 
 		//do some kind of software (tile engine calls) render 
 		if(input_flag & 0b0000'1000) {
