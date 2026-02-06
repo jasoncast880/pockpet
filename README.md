@@ -1,14 +1,22 @@
 # Tactigachi PDA
 
 ## Notes
-At it's core, tactigachi is a PDA that interfaces with lots of different peripherals, taking advantage of the many peripheral hardware features (SPI, USB, PIO, DMA) that make the 
-pico powerful in the first place.
 
 Tactigachi is a PDA project based on the low-cost, low power RP2040 MCU solution. 
-It leverages the numerous and flexible hardware interfaces of the rp2040 to provide a responsive User Interface/HMI, simple file storage, and 
+Hardware:
+It leverages the numerous and flexible hardware interfaces of the rp2040 to provide a responsive User Interface, simple file storage, USB interface for PC application access, Simple Audio processing and audio jack output:
 
-Thus, the software design is centered around 4 folders:
+Display: Driven by SPI bus 0, fed via DMA channel.
+SDC: Driven by SPI bus 0
+Audio: PIO, I2C elements.. WIP
+USB Interface: RP2040 native USB interface
 
+Software:
+
+Display: Custom-made ILI9341 Driver, Tile-Based Engine for simple UI.
+SDC: Fat Fs.
+Audio: ...
+USB Interface: ...
 
 ## Build
 ```bash
@@ -17,6 +25,7 @@ rm -rf ./*
 cmake ..
 make -j${nproc} <TARGET>
 ```
+
 ## Target List:
 |   NAME   | PURPOSE | 
 | -------- | ------- |
@@ -25,7 +34,7 @@ make -j${nproc} <TARGET>
 
 ## Debugging Reference (GDB with OpenOCD on Windows+WSL Ubuntu)
 1. Ensure that tactigachi can be built. (refer to build steps above)
-   GDB needs at the very least, a buildable system to send an .elf file to the mcu.
+   GDB needs a buildable system to send a .elf file to the mcu.
 2. Wire the UART & SWD according to the Official Debug Probe instructions.
 3. Plug the Debug Probe into your machine's USB Port. To ensure that the probe is visible to your machine, check in Admin Powershell:
 ```powershell (Admin)
