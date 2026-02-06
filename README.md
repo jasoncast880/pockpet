@@ -23,7 +23,7 @@ cmake ..
 make -j${nproc} <TARGET>
 ```
 
-## <TARGET> Options:
+## 'TARGET' Options:
 |   NAME   | PURPOSE | 
 | -------- | ------- |
 | tactigachi_bm | baremetal, no rtos interference for testing. |
