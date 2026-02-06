@@ -1,6 +1,6 @@
 # Tactigachi PDA
 
-## Notes
+## Synopsis 
 
 Tactigachi is a PDA project based on the low-cost, low power RP2040 MCU solution. 
 Hardware:
@@ -10,6 +10,12 @@ Display: Driven by SPI bus 0, fed via DMA channel.
 SDC: Driven by SPI bus 0
 Audio: PIO, I2C elements.. WIP
 USB Interface: RP2040 native USB interface
+| Peripheral Subsystem | On-Board Hardware | Software/Drivers | 
+| -------------------- | ----------------- | ---------------- |
+| Display | ILI9341 Display Module => RP2040 SPI0, DMA-Driven Interrupts | Custom-made Display Driver & Tile Engine
+| SD Card | SDC Module => RP2040 SPI0 | fatfs (by elmchan) & Wrapper Class |
+| Audio | ... | ... |
+
 
 Software:
 
@@ -26,7 +32,7 @@ cmake ..
 make -j${nproc} <TARGET>
 ```
 
-## Target List:
+## <TARGET> Options:
 |   NAME   | PURPOSE | 
 | -------- | ------- |
 | tactigachi_bm | baremetal, no rtos interference for testing. |
