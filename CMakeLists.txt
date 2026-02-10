@@ -4,7 +4,6 @@ set(PICO_BOARD pico_w)
 
 #Run cmake -B build to generate build/compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
-set(CMAKE_BUILD_TYPE Debug)
 
 # Name project
 SET(ProjectName tactigachi)
@@ -16,6 +15,9 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(${ProjectName} C CXX ASM)
+
+set(CMAKE_C_FLAGS_DEBUG "-g -Og -fno-omit-frame-pointer") #for debugging
+set(CMAKE_CXX_FLAGS_DEBUG "-g -Og -fno-omit-frame-pointer")
 
 pico_sdk_init()
 

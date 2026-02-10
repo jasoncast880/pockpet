@@ -36,7 +36,7 @@ int main() {
 	int x = 100;
 	int y = 100;
 	DisplayHandler& display = DisplayHandler::setup(screen); //setup should call layer-0
-	button_setup();
+	//button_setup();
 
 	while(true) {
 		sleep_ms(500); 
