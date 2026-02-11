@@ -100,7 +100,7 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		dma_channel_set_read_addr( cmd_chan, &raset_cmd, false );
 		dma_channel_set_transfer_count( cmd_chan, 1, true );
 
-		tiling_state = CASET_CMD;
+		tiling_state = CASET_DATA;
 		break;
 
 	case CASET_DATA:
@@ -128,14 +128,12 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 		break;
 	
 	case RAMWR_CMD:
-
 		dma_channel_set_read_addr(pixel_chan, &pixel_buf_16[0], true);
-
+        count++;
 		tiling_state = PIX_BUF; 
 		break;
 
 	case PIX_BUF: //KEY SECTION : TODO : OPTIMIZE - Caching, branching considerations
-		dma_hw->ints0 = 1u << pixel_chan;
 		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
 			if(count<max_count) {
 				DirtyTile* tile = &(DisplayHandler::base_layer->dirty_tiles.at(count));
@@ -164,6 +162,7 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 				 * once this section is reached, the layer is done rendering. 
 				 * TODO:try writing an isr handler and assigning irq for 'vsync'-like functionality
 				*/
+                __breakpoint();
 			}
 		} else if (!dirty_flag) { // DRAW CLEAN TILE PIXELS
 			if(count<max_count) {
@@ -199,6 +198,9 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 void cmd_handler() {
 	dma_hw->ints0 = 1u << DisplayHandler::cmd_chan; 
 	
+    uint32_t status = dma_hw->ints0;
+    dma_hw->ints0 = status;
+
 	DisplayHandler::state_fromISR(DisplayHandler::tiling_state); //big compute
 
 }
