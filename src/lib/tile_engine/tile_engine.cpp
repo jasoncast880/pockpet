@@ -86,7 +86,7 @@ void Tile::set_pixel(uint16_t idx, uint16_t val) {
 uint16_t Tile::get_pixel(uint16_t idx) {
 	uint16_t* pix = this->get_buffer();
 	uint16_t val = *(pix+idx);
-    return val;
+  return val;
 }
 
 uint16_t* Tile::get_buffer() {
@@ -187,20 +187,20 @@ DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider 
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 
     for(int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN; i++) {
-        Tile* ref_tile = this->tileset->get_tile(idx);
-        uint16_t ref_pix = ref_tile->get_pixel(i);
-        buf[i] = ref_pix;
+			Tile* ref_tile = this->tileset->get_tile(idx);
+			uint16_t ref_pix = ref_tile->get_pixel(i);
+			buf[i] = ref_pix; //TODO: condense to reduce cycles after testing.
     }
 
 	for(int col = 0; col<DEFAULT_TILE_LEN; col++) {
 		for(int row = 0; row<DEFAULT_TILE_LEN; row++) {
 			tile_context_t tc;
-            uint16_t pixel = buf[col+row*DEFAULT_TILE_LEN];
-			if( pixel == static_cast<uint16_t>(ALPHA_FILTER) ){
-                tc = this->contextualize((uint16_t) x+col, (uint16_t) y+row);
-				buf[col+row*DEFAULT_TILE_LEN] = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
+				uint16_t pixel = buf[col+row*DEFAULT_TILE_LEN];
+				if( pixel == static_cast<uint16_t>(ALPHA_FILTER) ){
+					tc = this->contextualize((uint16_t) x+col, (uint16_t) y+row);
+					buf[col+row*DEFAULT_TILE_LEN] = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
 			}
-        }
+    }
 	}
 	DirtyTile* tile = new DirtyTile(&buf[0], (uint16_t)x, (uint16_t)y ); 
 	return tile;
@@ -233,7 +233,6 @@ Sprite::Sprite(const Sprite& copy) {
 	tileset = copy.tileset;
 	tiles_wide = copy.tiles_wide;
 	tiles_high = copy.tiles_high;
-
 }
 
 Sprite& Sprite::operator=(const Sprite& copy) {
@@ -254,8 +253,8 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
 	this->map = mapBuf;
-    this->associated_layer = associated_layer;
+	this->associated_layer = associated_layer;
 
-    this->x0 = 0;
-    this->y0 = 0;
+	this->x0 = 0;
+	this->y0 = 0;
 }

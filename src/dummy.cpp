@@ -14,21 +14,20 @@
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
+	Tileset* sys_tileset = new Tileset( (uint16_t*)&ampalaya_tileset_16[0], static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30) );
 	Layer* screen = new Layer(
 		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
 		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
-		new Tileset(
-			(uint16_t*)&ampalaya_tileset_16[0],
-			static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30)
-			),
+		sys_tileset,
 		&tile_bg_16[0],
-		0 
+		0
 		); //id not relevant yet ? TODO: id handling system.
 
+	Tileset* jet_tileset = new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(16));
 	uint8_t cursor = screen->sprite_add(
 		2,
 		2,
-		new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(16)),
+		jet_tileset,
 		&demo_spritemap_1[0]
 	);
 
@@ -42,9 +41,9 @@ int main() {
 		int8_t input_flag = btn_sample; //TODO: hard-fault occurs here
 
 		//if(input_flag & 0b0000'1000) {
-            x--;
-            screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
-            screen->render();
+				x--;
+				screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
+				screen->render();
 		//}
 
 		sleep_ms(500);
