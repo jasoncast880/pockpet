@@ -84,8 +84,9 @@ void Tile::set_pixel(uint16_t idx, uint16_t val) {
 }
 
 uint16_t Tile::get_pixel(uint16_t idx) {
-	uint16_t* pix = this->get_buffer()+idx;
-	return *pix;
+	uint16_t* pix = this->get_buffer();
+	uint16_t val = *(pix+idx);
+    return val;
 }
 
 uint16_t* Tile::get_buffer() {
@@ -122,12 +123,12 @@ Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t*
 }
 
 uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
-	Sprite* sprite = new Sprite(tiles_wide, tiles_high, ts, map);
-	sprite->associated_layer = this;
-	sprites.push_back(*sprite);
-	uint8_t* id = sprite->get_id();
-	*id = (sprites.size()-1); 
-	return *id;
+	Sprite sprite;
+	sprites.push_back( Sprite(tiles_wide, tiles_high, ts, map, this) );
+    //for now id is not useful
+	//uint8_t* id = sprite.get_id(); 
+	//*id = (sprites.size()-1); 
+	return 0;//*id;
 }
 
 void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
@@ -135,6 +136,8 @@ void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map
 	sprite->set_position(x,y);
 	sprite->set_map(map);
 }
+
+//TODO: delete_by_id 
 
 void Layer::render() {
 	for( int i = 0 ; i < sprites.size() ; i++ ) {
@@ -175,24 +178,29 @@ Layer::tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 
 	uint16_t x_tile_offset = x % DEFAULT_TILE_LEN;
 	uint16_t y_tile_offset = y % DEFAULT_TILE_LEN;
-	tc.map_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
+	tc.tile_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
 
 	return tc;
 }
 
 DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
-	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
-		for(int y = 0; y<DEFAULT_TILE_LEN; y++) {
-			tile_context_t tc = this->contextualize((uint16_t) x, (uint16_t) y);
-			uint16_t pixel;
+
+    for(int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN; i++) {
+        Tile* ref_tile = this->tileset->get_tile(idx);
+        uint16_t ref_pix = ref_tile->get_pixel(i);
+        buf[i] = ref_pix;
+    }
+
+	for(int col = 0; col<DEFAULT_TILE_LEN; col++) {
+		for(int row = 0; row<DEFAULT_TILE_LEN; row++) {
+			tile_context_t tc;
+            uint16_t pixel = buf[col+row*DEFAULT_TILE_LEN];
 			if( pixel == static_cast<uint16_t>(ALPHA_FILTER) ){
-				pixel = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
-			} else {
-				pixel = this->tileset->get_tile(idx)->get_pixel(x+y*DEFAULT_TILE_LEN);
+                tc = this->contextualize((uint16_t) x+col, (uint16_t) y+row);
+				buf[col+row*DEFAULT_TILE_LEN] = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
 			}
-			buf[x+y*DEFAULT_TILE_LEN] = pixel;
-		}
+        }
 	}
 	DirtyTile* tile = new DirtyTile(&buf[0], (uint16_t)x, (uint16_t)y ); 
 	return tile;
@@ -215,6 +223,8 @@ Layer::~Layer() {
 	*/
 	//dirty tiles should auto-delete its elements??
 }
+
+Sprite::Sprite() {}
 
 Sprite::Sprite(const Sprite& copy) {
 	map = copy.map;
@@ -239,9 +249,13 @@ Sprite& Sprite::operator=(const Sprite& copy) {
 Sprite::~Sprite() {
 }
 
-Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf){
+Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer){
 	this->tileset = tileset;
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
 	this->map = mapBuf;
+    this->associated_layer = associated_layer;
+
+    this->x0 = 0;
+    this->y0 = 0;
 }

@@ -2,8 +2,7 @@
 #include <hardware/spi.h>
 #include <stdio.h>
 #include "jet_sprite.h"
-#include "pico/stdlib.h"
-#include "pinout.h"
+#include "pico/stdlib.h" #include "pinout.h"
 
 #include "display.h"
 #include "buttons.h"
@@ -42,12 +41,11 @@ int main() {
 		sleep_ms(500); 
 		int8_t input_flag = btn_sample; //TODO: hard-fault occurs here
 
-		//do some kind of software (tile engine calls) render 
-		if(input_flag & 0b0000'1000) {
-			x--;
-			screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
-			screen->render();
-		}
+		//if(input_flag & 0b0000'1000) {
+            x--;
+            screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
+            screen->render();
+		//}
 
 		sleep_ms(500);
 		display.draw_frame(screen);

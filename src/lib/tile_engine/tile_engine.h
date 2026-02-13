@@ -63,11 +63,11 @@ private:
 class Tilemap{ 
 public:
 	uint8_t* map; 
+	uint16_t x_offset, y_offset; // w. reference to container
 	uint16_t x0, y0; //top left corner of entity.
 	Tileset* tileset;
 	uint8_t tiles_wide, tiles_high;
 
-	static uint16_t x_offset, y_offset; // w. reference to container
 
 	Tilemap();
 
@@ -117,11 +117,13 @@ public:
 //position enforced in context with associated_layer
 class Sprite: public Tilemap { //touched by Layer only
 private:
-	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf);
 public:
 	uint8_t id = 0;//set by the Layer.
 
 	Layer* associated_layer = nullptr;
+
+	Sprite();
+	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer);
 
 	Sprite(const Sprite& copy);
 	Sprite& operator=(const Sprite& copy);
