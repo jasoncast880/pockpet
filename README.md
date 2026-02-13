@@ -61,17 +61,15 @@ sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5
 ```bash
 gdb-multiarch ./<elf-file-name>.elf  
 ```
-OR
+
 From root dir, run the preset debug script
 ```bash
 gdb-multiarch -x rp2040.gdb  
 ```
-from inside the gdb terminal interface:
+ORRR from inside the gdb terminal interface:
 ```bash
 target remote localhost:3333 # connect gdb to the open ocd server
 load               # puts program into the mcu flash/prog space 
-monitor reset run  # Resets the target and immediately lets it run.
 monitor reset halt # Resets the target and immediately halts it at the reset vector.
-monitor reset init # Resets the target, halts it, and then executes a board-specific initialization script (if configured in the GDB server).
 ```
 You can now set breakpoints, step through functions from this point onwards.
