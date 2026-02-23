@@ -2,7 +2,8 @@
 #include <hardware/spi.h>
 #include <stdio.h>
 #include "jet_sprite.h"
-#include "pico/stdlib.h" #include "pinout.h"
+#include "pico/stdlib.h" 
+#include "pinout.h"
 
 #include "display.h"
 #include "buttons.h"
@@ -47,7 +48,7 @@ int main() {
 		//}
 
 		sleep_ms(500);
-		display.draw_frame(screen);
+		display.draw_dirty_tiles(screen);
 
 		sleep_ms(500);
 	}

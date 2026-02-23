@@ -80,20 +80,18 @@ DisplayHandler::DisplayHandler(Layer* base) {
 
 }
 
-int DisplayHandler::draw_frame(Layer *layer) {
-	dirty_flag = false;
+int DisplayHandler::draw_dirty_tiles(Layer *layer) {
 	//draw clean tiles
-	max_count = DEFAULT_SCREEN_TILES_X*DEFAULT_SCREEN_TILES_Y;
-	count = 0;
-	tiling_state = PIX_BUF;
-	
+	current_tile = layer->dirty_tiles.data();
+	end_tile = layer->dirty_tiles.data()+( layer->dirty_tiles.size() );
+
 	//man trigger the isr.
-	dma_hw->intf0 = 1u << cmd_chan; //starts with clean tiles, auto goes to dirty via 
-																	//isr + flags.
+	dma_hw->intf0 = 1u << cmd_chan; 
+
 	return 1; //idk
 }
 
-cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
+cmd_sequence_t DisplayHandler::state_fromISR() {
 	switch (tiling_state) {
 	case CASET_CMD:
 		gpio_put( ILI9341_DC, 1 );
@@ -129,78 +127,53 @@ cmd_sequence_t DisplayHandler::state_fromISR(cmd_sequence_t state) {
 	
 	case RAMWR_CMD:
 		dma_channel_set_read_addr(pixel_chan, &pixel_buf_16[0], true);
-        count++;
+
 		tiling_state = PIX_BUF; 
 		break;
 
-	case PIX_BUF: //KEY SECTION : TODO : OPTIMIZE - Caching, branching considerations
-		if(dirty_flag) { // DRAW DIRTY TILE PIXELS
-			if(count<max_count) {
-				DirtyTile* tile = &(DisplayHandler::base_layer->dirty_tiles.at(count));
-				uint16_t x0 = tile->x;
-				uint16_t y0 = tile->y;
-
-				caset_params[0]= x0>>8;
-				caset_params[1]= x0&0xff;
-				caset_params[2]= (x0+15)>>8;
-				caset_params[3]= (x0+15)&0xff;
-
-				raset_params[0] = y0>>8;
-				raset_params[1] = y0&0xff;
-				raset_params[2] = (y0+15)>>8;
-				raset_params[3] = (y0+15)&0xff;
-				
-				pixel_buf_16 = tile->get_buffer();
-
-				gpio_put( ILI9341_DC, 0 );
-				dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
-				dma_channel_set_transfer_count( cmd_chan, 1, true);
-
-				tiling_state = CASET_CMD;
-			} else { 
-				/*
-				 * once this section is reached, the layer is done rendering. 
-				 * TODO:try writing an isr handler and assigning irq for 'vsync'-like functionality
-				*/
-                __breakpoint();
+	case PIX_BUF: //configure data for feeding
+		if(current_tile!=end_tile) {
+			
+			for(int i = 0 ; i<4 ; i++) {
+				caset_params[i] = current_tile->display_params[i];
 			}
-		} else if (!dirty_flag) { // DRAW CLEAN TILE PIXELS
-			if(count<max_count) {
-				Tile* tile = DisplayHandler::base_layer->tileset->get_tile(count);
+			for(int i = 0 ; i<4 ; i++) {
+				raset_params[i] = current_tile->display_params[i+4];
+			}
+			
+			pixel_buf_16 = current_tile->get_buffer();
 
-				uint16_t x0 = count%DEFAULT_SCREEN_TILES_X;
-				uint16_t y0 = count/DEFAULT_SCREEN_TILES_Y;
+			gpio_put( ILI9341_DC, 0 );
+			dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
+			dma_channel_set_transfer_count( cmd_chan, 1, true);
 
-				caset_params[0]= x0>>8;
-				caset_params[1]= x0&0xff;
-				caset_params[2]= (x0+15)>>8;
-				caset_params[3]= (x0+15)&0xff;
-
-				raset_params[0] = y0>>8;
-				raset_params[1] = y0&0xff;
-				raset_params[2] = (y0+15)>>8;
-				raset_params[3] = (y0+15)&0xff;
-				
-				pixel_buf_16 = tile->get_buffer();
-
-				gpio_put( ILI9341_DC, 0 );
-				dma_channel_set_read_addr( cmd_chan, &caset_cmd, false );
-				dma_channel_set_transfer_count( cmd_chan, 1, true);
-
-				tiling_state = CASET_CMD;
-			} else { dirty_flag = !dirty_flag; }
+			current_tile++;
+		} else { 
+			dirty_flag = !dirty_flag;
 		}
+
+		tiling_state = CASET_CMD;
+		break;
 	}
 
 	return tiling_state; //unused as return value. still tho
 }
 
 void cmd_handler() {
-	dma_hw->ints0 = 1u << DisplayHandler::cmd_chan; 
 	
-    uint32_t status = dma_hw->ints0;
-    dma_hw->ints0 = status;
+	uint32_t status = dma_hw->ints0;
+	if( status & (1u<<DisplayHandler::cmd_chan) ) {
+		dma_hw->ints0 = 1u << DisplayHandler::cmd_chan;
+		DisplayHandler::state_fromISR(); 
+	}
+	if( status & (1u<<DisplayHandler::pixel_chan) ) {
+		dma_hw->ints0 = 1u << DisplayHandler::pixel_chan;
 
-	DisplayHandler::state_fromISR(DisplayHandler::tiling_state); //big compute
+		if(DisplayHandler::dirty_flag){
+			DisplayHandler::state_fromISR();
+		} else {
+			__breakpoint; //DONE DIRTY TILES
+		}
+	}
 
 }

@@ -11,10 +11,21 @@ Tile::Tile(uint16_t* src)
 
 DirtyTile::DirtyTile(uint16_t* src, uint16_t x, uint16_t y ) //FOR DIRT TILE
 	:  x(x) , y(y){
+
 	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN));
+
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
 		pixels[i] = src[i];
 	}
+	display_params[0]= x>>8;
+	display_params[1]= x&0xff;
+	display_params[2]= (x+15)>>8;
+	display_params[3]= (x+15)&0xff;
+	display_params[4] = y>>8;
+	display_params[5] = y&0xff;
+	display_params[6] = (y+15)>>8;
+	display_params[7] = (y+15)&0xff;
+
 }
 
 DirtyTile::DirtyTile(const DirtyTile& copy) noexcept {

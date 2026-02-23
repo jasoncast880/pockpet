@@ -36,8 +36,11 @@ private:
 public:
 	
 	//TILE-RELATED - Run-Access within ISR.
-	inline static uint32_t max_count, count = 0;
-	inline static bool dirty_flag = false;
+	inline static DirtyTile* current_tile = nullptr;//iteration through Layer::dirty_tiles
+	inline static DirtyTile* end_tile = nullptr;
+
+	inline static bool dirty_flag = true; //signaling; when false, tiles are done
+
 	inline static uint16_t *pixel_buf_16 = nullptr;
 
 	inline static int cmd_chan = 0;
@@ -53,13 +56,14 @@ public:
 	inline static Layer* base_layer = nullptr;
 	inline static cmd_sequence_t tiling_state = PIX_BUF;
 	//END OF TILE-RELATED
-	static cmd_sequence_t state_fromISR(cmd_sequence_t state); //called within ISR ; slow
+
+	static cmd_sequence_t state_fromISR(); //called within ISR ; slow
 
 	static DisplayHandler& setup(Layer* base);
 	DisplayHandler(const DisplayHandler& copy) = delete; 
 	DisplayHandler& operator=(const DisplayHandler& copy) = delete; 
 
-	int draw_frame(Layer* layer); 
+	int draw_dirty_tiles(Layer* layer); 
 };
 
 void cmd_handler(); //ISR ; DMA-Triggered
