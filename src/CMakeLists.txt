@@ -1,4 +1,4 @@
-add_executable(tactigachi_bm dummy.cpp ) #for now ; TODO
+add_executable(tactigachi_bm dummy.cpp ) 
 add_executable( tactigachi_rtos main.cpp )
 
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
@@ -8,11 +8,15 @@ if(TARGET tactigachi_bm)
 target_sources( tactigachi_bm PRIVATE
 	dummy.cpp
 
+	#add on peripherals as you go
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb.cpp
+
 )
 
 target_include_directories(tactigachi_bm PRIVATE
+	#for all modules visibility into the executable
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/include
 )
 
@@ -30,7 +34,7 @@ target_link_libraries(tactigachi_bm PRIVATE
 
 	# drivers/other HAL
 	ili9341_rp2040
-	usb_dev_cdc
+	usb_rp2040 # pulls in bsp/board api, tusb??
 
 	# core dependencies
 	tile_engine 
@@ -54,6 +58,7 @@ add_custom_command(TARGET tactigachi_bm POST_BUILD # command to enable static me
 endif() #tactigachi_bm
 
 ##########################
+
 if(TARGET tactigachi_rtos)
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
@@ -77,6 +82,9 @@ target_link_libraries(tactigachi_rtos PRIVATE
 	hardware_gpio
 	hardware_dma
 	hardware_pio
+
+	# 3rd party SDK lib presets (in sdk w.p)
+	tinyusb_device
 
 	# drivers/other HAL
 	ili9341_rp2040

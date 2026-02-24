@@ -12,6 +12,10 @@
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>
 
+//
+#include "usb.h"
+//
+
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
@@ -24,7 +28,7 @@ int main() {
 		0
 		); //id not relevant yet ? TODO: id handling system.
 
-	Tileset* jet_tileset = new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(16));
+	Tileset* jet_tileset = new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(4096));
 	uint8_t cursor = screen->sprite_add(
 		2,
 		2,
@@ -36,7 +40,9 @@ int main() {
 	int y = 100;
 	DisplayHandler& display = DisplayHandler::setup(screen); //setup should call layer-0
 	//button_setup();
-
+	
+	usb_setup();
+	
 	while(true) {
 		sleep_ms(500); 
 		int8_t input_flag = btn_sample; //TODO: hard-fault occurs here
