@@ -148,11 +148,12 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 			dma_channel_set_transfer_count( cmd_chan, 1, true);
 
 			current_tile++;
+
+		    tiling_state = CASET_CMD;
 		} else { 
 			dirty_flag = !dirty_flag;
 		}
 
-		tiling_state = CASET_CMD;
 		break;
 	}
 
@@ -172,7 +173,7 @@ void cmd_handler() {
 		if(DisplayHandler::dirty_flag){
 			DisplayHandler::state_fromISR();
 		} else {
-			__breakpoint; //DONE DIRTY TILES
+			__breakpoint; //DONE DIRTY TILES ; need to reach here.
 		}
 	}
 

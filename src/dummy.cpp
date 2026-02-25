@@ -41,7 +41,7 @@ int main() {
 	DisplayHandler& display = DisplayHandler::setup(screen); //setup should call layer-0
 	//button_setup();
 	
-	usb_setup();
+	//usb_setup();
 	
 	while(true) {
 		sleep_ms(500); 

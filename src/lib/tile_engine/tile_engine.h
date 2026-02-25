@@ -9,7 +9,7 @@
 #include <vector>
 #include <algorithm>
 
-#define ALPHA_FILTER 0xF881F
+#define ALPHA_FILTER 0xF81F
 
 #define DEFAULT_TILE_LEN 16
 
