@@ -20,6 +20,8 @@
 extern "C" {
 #endif
 
+#define DMA_DISPLAY_CH 0x00
+
 enum cmd_sequence_t {
 	CASET_CMD,
 	CASET_DATA,
@@ -43,8 +45,8 @@ public:
 
 	inline static uint16_t *pixel_buf_16 = nullptr;
 
-	inline static int cmd_chan = 0;
-	inline static int pixel_chan = 0;
+	inline static int display_chan;
+	inline static dma_channel_config cfg;
 	
 	//need static-alloc buffers to hold the command params
 	inline static const uint8_t caset_cmd = static_cast<uint8_t>(CASET);
@@ -66,7 +68,7 @@ public:
 	int draw_dirty_tiles(Layer* layer); 
 };
 
-void cmd_handler(); //ISR ; DMA-Triggered
+void dma_handler(); //ISR ; DMA-Triggered
 
 #ifdef __cplusplus
 }
