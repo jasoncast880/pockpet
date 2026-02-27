@@ -141,13 +141,11 @@ void dma_handler() { //
 	uint32_t status = dma_hw->ints0; //
 	if( (status & (1u<<DisplayHandler::display_chan)) && DisplayHandler::tiling_state!=RAMWR_CMD ) {
 
-<<<<<<< HEAD
 		if(DisplayHandler::dirty_flag){
 			DisplayHandler::state_fromISR();
 		} else {
 			__breakpoint; //DONE DIRTY TILES ; need to reach here.
 		}
-=======
 		dma_hw->ints0 = 1u << DisplayHandler::display_chan;
 
 		//spam reconfig dma size
@@ -182,7 +180,6 @@ void dma_handler() { //
 			);
 
 		DisplayHandler::state_fromISR(); 
->>>>>>> b673431 (swapped to a 1-channel model for disp handler)
 	}
 
 }
