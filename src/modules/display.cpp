@@ -69,46 +69,7 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) {
 
 cmd_sequence_t DisplayHandler::state_fromISR() {
 	switch (tiling_state) {
-	case CASET_CMD:
-		gpio_put( ILI9341_DC, 1 );
-		dma_channel_set_read_addr( display_chan, &raset_cmd, false );
-		dma_channel_set_transfer_count( display_chan, 1, true );
-
-		tiling_state = CASET_DATA;
-		break;
-
-	case CASET_DATA:
-		gpio_put( ILI9341_DC, 0 );
-		dma_channel_set_read_addr( display_chan, &raset_cmd, false );
-		dma_channel_set_transfer_count( display_chan, 1, true );
-
-		tiling_state = RASET_CMD;
-		break;
-
-	case RASET_CMD:
-		gpio_put( ILI9341_DC, 1 );
-		dma_channel_set_read_addr( display_chan, &raset_params[0], false );
-		dma_channel_set_transfer_count( display_chan, 4, true );
-
-		tiling_state = RASET_DATA;
-		break;
-
-	case RASET_DATA:
-		dma_channel_set_read_addr(display_chan, &ramwr_cmd, false );
-		dma_channel_set_transfer_count( display_chan, 1, true );
-		//start channel
-
-		tiling_state = RAMWR_CMD;
-		break;
-	
-	case RAMWR_CMD: //reconfigure required before DMA chan start.
-		dma_channel_set_read_addr(display_chan, &pixel_buf_16[0], false);
-		dma_channel_set_transfer_count( display_chan, 256, true );
-
-		tiling_state = PIX_BUF; 
-		break;
-
-	case PIX_BUF: //configure data for feeding
+	case CASET_CMD: //configure data for feeding
 		if(current_tile!=end_tile) {
 			
 			for(int i = 0 ; i<4 ; i++) {
@@ -126,11 +87,51 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 
 			current_tile++;
 
-		    tiling_state = CASET_CMD;
+		    tiling_state = CASET_DATA;
 		} else { 
-			dirty_flag = !dirty_flag;
+			dirty_flag = false;
 		}
 
+		break;
+
+	case CASET_DATA:
+		gpio_put( ILI9341_DC, 1 );
+		dma_channel_set_read_addr( display_chan, &caset_params[0], false );
+		dma_channel_set_transfer_count( display_chan, 4, true );
+
+		tiling_state = RASET_CMD;
+		break;
+
+	case RASET_CMD:
+		gpio_put( ILI9341_DC, 0 );
+		dma_channel_set_read_addr( display_chan, &raset_cmd, false );
+		dma_channel_set_transfer_count( display_chan, 1, true );
+
+		tiling_state = RASET_DATA;
+		break;
+
+	case RASET_DATA:
+		gpio_put( ILI9341_DC, 1 );
+		dma_channel_set_read_addr( display_chan, &raset_params[0], false );
+		dma_channel_set_transfer_count( display_chan, 4, true );
+
+		tiling_state = RAMWR_CMD;
+		break;
+
+	case RAMWR_CMD:
+		gpio_put( ILI9341_DC, 0 );
+		dma_channel_set_read_addr(display_chan, &ramwr_cmd, false );
+		dma_channel_set_transfer_count( display_chan, 1, true );
+		//start channel
+
+		tiling_state = PIX_BUF;
+		break;
+	
+	case PIX_BUF: //reconfigure required before DMA chan start.
+		dma_channel_set_read_addr(display_chan, &pixel_buf_16[0], false);
+		dma_channel_set_transfer_count( display_chan, 256*2, true );
+
+		tiling_state = CASET_CMD; 
 		break;
 	}
 
@@ -139,47 +140,14 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 
 void dma_handler() { //
 	uint32_t status = dma_hw->ints0; //
-	if( (status & (1u<<DisplayHandler::display_chan)) && DisplayHandler::tiling_state!=RAMWR_CMD ) {
+	if( (status & (1u<<DisplayHandler::display_chan)) ) {
+		dma_hw->ints0 = 1u << DisplayHandler::display_chan;
 
 		if(DisplayHandler::dirty_flag){
 			DisplayHandler::state_fromISR();
 		} else {
 			__breakpoint; //DONE DIRTY TILES ; need to reach here.
 		}
-		dma_hw->ints0 = 1u << DisplayHandler::display_chan;
 
-		//spam reconfig dma size
-		channel_config_set_transfer_data_size(&DisplayHandler::cfg, DMA_SIZE_8); 
-		dma_channel_configure(
-			DisplayHandler::display_chan,
-			&DisplayHandler::cfg,
-			&spi_get_hw(spi0)->dr,
-			NULL, 
-			(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN),
-			false 
-			);
-		//data chann will fire irq0 flag when done a block
-
-		DisplayHandler::state_fromISR(); 
 	}	
-
-	//reconfiguration toggle dma chan width
-	if( (status & (1u<<DisplayHandler::display_chan)) && DisplayHandler::tiling_state==RAMWR_CMD ) {
-
-		dma_hw->ints0 = 1u << DisplayHandler::display_chan;
-
-		//reconfig the dma size
-		channel_config_set_transfer_data_size(&DisplayHandler::cfg, DMA_SIZE_16); 
-		dma_channel_configure(
-			DisplayHandler::display_chan,
-			&DisplayHandler::cfg,
-			&spi_get_hw(spi0)->dr,
-			NULL, 
-			(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN),
-			false 
-			);
-
-		DisplayHandler::state_fromISR(); 
-	}
-
 }

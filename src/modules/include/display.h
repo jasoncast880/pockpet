@@ -45,7 +45,7 @@ public:
 
 	inline static uint16_t *pixel_buf_16 = nullptr;
 
-	inline static int display_chan;
+	inline static uint display_chan = DMA_DISPLAY_CH;
 	inline static dma_channel_config cfg;
 	
 	//need static-alloc buffers to hold the command params
@@ -55,8 +55,8 @@ public:
 	inline static uint8_t raset_params[4];
 	inline static const uint8_t ramwr_cmd = static_cast<uint8_t>(RAM_WR);
 
-	inline static Layer* base_layer = nullptr;
-	inline static cmd_sequence_t tiling_state = PIX_BUF;
+	volatile inline static Layer* base_layer = nullptr;
+	volatile inline static cmd_sequence_t tiling_state = CASET_CMD;
 	//END OF TILE-RELATED
 
 	static cmd_sequence_t state_fromISR(); //called within ISR ; slow
