@@ -19,10 +19,10 @@ DirtyTile::DirtyTile(uint16_t* src, uint16_t x, uint16_t y ) //FOR DIRT TILE
 	}
 
 
-	display_params[0]= x>>8; //start
-	display_params[1]= x&0xff; 
-	display_params[2]= (x+15)>>8; //end colum
-	display_params[3]= (x+15)&0xff;
+	display_params[0] = x>>8; //start
+	display_params[1] = x&0xff; 
+	display_params[2] = (x+15)>>8; //end colum
+	display_params[3] = (x+15)&0xff;
 	display_params[4] = y>>8; //start row
 	display_params[5] = y&0xff;
 	display_params[6] = (y+15)>>8; //end row
@@ -44,6 +44,9 @@ DirtyTile::DirtyTile(const DirtyTile& copy) noexcept {
 			dst++;
 		}
 	}	
+    for(int i = 0; i < 8; i++) {
+        display_params[i] = copy.display_params[i];
+    }
 }
 
 DirtyTile& DirtyTile::operator=(const DirtyTile& copy) noexcept {
@@ -60,6 +63,9 @@ DirtyTile& DirtyTile::operator=(const DirtyTile& copy) noexcept {
 			dst++;
 		}
 	}
+    for(int i = 0; i < 8; i++) {
+        display_params[i] = copy.display_params[i];
+    }
 	return *this;
 }
 

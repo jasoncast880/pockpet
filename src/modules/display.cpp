@@ -34,9 +34,11 @@ DisplayHandler::DisplayHandler(Layer* base) {
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	
 	//DMA SETUP
+    dma_channel_claim(DMA_DISPLAY_CH);
 	cfg = dma_channel_get_default_config(DMA_DISPLAY_CH);
 	channel_config_set_transfer_data_size(&cfg, DMA_SIZE_8); 
 	channel_config_set_dreq(&cfg, DREQ_SPI0_TX); 
+    channel_config_set_read_increment(&cfg, true);
 	
 	dma_channel_configure(
 		display_chan,
@@ -85,6 +87,7 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 			dma_channel_set_read_addr( display_chan, &caset_cmd, false );
 			dma_channel_set_transfer_count( display_chan, 1, true);
 
+            tile_count++;
 			current_tile++;
 
 		    tiling_state = CASET_DATA;

@@ -38,9 +38,8 @@ int main() {
 
 	int x = 100;
 	int y = 100;
-	DisplayHandler& display = DisplayHandler::setup(screen); //setup should call layer-0
+	DisplayHandler& display = DisplayHandler::setup(screen); 
 	//button_setup();
-	
 	//usb_setup();
 	
 	while(true) {
