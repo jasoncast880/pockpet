@@ -37,6 +37,12 @@ struct DirtyTile : public Tile {
 	DirtyTile(uint16_t* src,uint16_t x, uint16_t y);
 	uint16_t x,y;
 	uint8_t display_params[8];
+	/*  DISP_PARAMS ORDER: (L.E)
+	 *	CASET START 2 by
+	 *	CASET END   2 by
+	 *	RASET START 2 by
+	 *	RASET END   2 by
+	 */
 
 	DirtyTile(const DirtyTile& copySrc) noexcept;
 	DirtyTile& operator=(const DirtyTile& copySrc) noexcept; 

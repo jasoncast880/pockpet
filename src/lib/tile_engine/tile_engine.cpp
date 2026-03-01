@@ -44,9 +44,9 @@ DirtyTile::DirtyTile(const DirtyTile& copy) noexcept {
 			dst++;
 		}
 	}	
-    for(int i = 0; i < 8; i++) {
-        display_params[i] = copy.display_params[i];
-    }
+	for(int i = 0; i < 8; i++) {
+			display_params[i] = copy.display_params[i];
+	}
 }
 
 DirtyTile& DirtyTile::operator=(const DirtyTile& copy) noexcept {
@@ -63,9 +63,9 @@ DirtyTile& DirtyTile::operator=(const DirtyTile& copy) noexcept {
 			dst++;
 		}
 	}
-    for(int i = 0; i < 8; i++) {
-        display_params[i] = copy.display_params[i];
-    }
+	for(int i = 0; i < 8; i++) {
+			display_params[i] = copy.display_params[i];
+	}
 	return *this;
 }
 
@@ -205,12 +205,13 @@ Layer::tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 
-    for(int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN; i++) {
-			Tile* ref_tile = this->tileset->get_tile(idx);
-			uint16_t ref_pix = ref_tile->get_pixel(i);
-			buf[i] = ref_pix; //TODO: condense to reduce cycles after testing.
-    }
+	Tile* ref_tile = this->tileset->get_tile(idx);
+	for(int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN; i++) {
+		uint16_t ref_pix = ref_tile->get_pixel(i);
+		buf[i] = ref_pix; 
+	}
 
+	//apply alpha filter
 	for(int col = 0; col<DEFAULT_TILE_LEN; col++) {
 		for(int row = 0; row<DEFAULT_TILE_LEN; row++) {
 			tile_context_t tc;

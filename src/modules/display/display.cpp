@@ -15,7 +15,30 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-//#define DMA_DRAW 1 //IMPORTANT CHANGE AT COMPILE TIME
+#ifdef RTOS_MODE
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#endif
+
+//#ifdef RTOS_MODE
+static SemaphoreHandle_t display_semphr = xSemaphoreCreateMutex();
+void DisplayHandler::vRenderTask( void * pvParameters ) {
+	for( ;; ) {
+		//consume input/buttons queue
+		//call on the tile engine to do a frame compute.
+		//when compute is done, suspend and give access to DisplayTask
+	}
+}
+void DisplayHandler::vDisplayTask( void * pvParameters )
+	for( ;; ) {
+		//consume input/buttons queue
+		//call on the tile engine to do a frame compute.
+		//when compute is done, suspend and give access to DisplayTask
+	}
+}
+//#endif
 
 DisplayHandler& DisplayHandler::setup(Layer* base) {
 	static DisplayHandler instance = DisplayHandler(base);
@@ -23,7 +46,6 @@ DisplayHandler& DisplayHandler::setup(Layer* base) {
 }
 
 DisplayHandler::~DisplayHandler() {} //default ; unused
-#ifdef DMA_DRAW
 
 DisplayHandler::DisplayHandler(Layer* base) {
 	base_layer = base;
@@ -37,11 +59,9 @@ DisplayHandler::DisplayHandler(Layer* base) {
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	
 	//DMA SETUP
-    dma_channel_claim(DMA_DISPLAY_CH);
 	cfg = dma_channel_get_default_config(DMA_DISPLAY_CH);
 	channel_config_set_transfer_data_size(&cfg, DMA_SIZE_8); 
 	channel_config_set_dreq(&cfg, DREQ_SPI0_TX); 
-    channel_config_set_read_increment(&cfg, true);
 	
 	dma_channel_configure(
 		display_chan,
@@ -90,10 +110,9 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 			dma_channel_set_read_addr( display_chan, &caset_cmd, false );
 			dma_channel_set_transfer_count( display_chan, 1, true);
 
-            tile_count++;
 			current_tile++;
+		  tiling_state = CASET_DATA;
 
-		    tiling_state = CASET_DATA;
 		} else { 
 			dirty_flag = false;
 		}
@@ -157,48 +176,3 @@ void dma_handler() { //
 
 	}	
 }
-
-#endif 
-
-/*
-#############################################################################
-#############################################################################
-*/
-
-#ifndef DMA_DRAW //normal spi transmission (for testing the engine)
-
-DisplayHandler::DisplayHandler(Layer* base) {
-	base_layer = base;
-
-	//SPI SETUP
-	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
-	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
-	gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
-	gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
-
-	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
-	//consider doing a draw on the base here..
-}
-
-int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will block
-	current_tile = layer->dirty_tiles.data();
-	end_tile = layer->dirty_tiles.data()+( layer->dirty_tiles.size() );
-
-	while(current_tile!=end_tile) {
-		ili9341_writeCommand(CASET);
-		for(int i = 0 ; i < 4 ; i++) {
-			ili9341_writeData(current_tile->display_params[i]);
-		}
-		ili9341_writeCommand(RASET);
-		for(int i = 4 ; i < 8 ; i++) {
-			ili9341_writeData(current_tile->display_params[i]);
-		}
-		ili9341_writeCommand(RAM_WR);
-		ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
-
-		current_tile++;
-	}
-	return 1; //idk
-}
-
-#endif //SPI DRAW

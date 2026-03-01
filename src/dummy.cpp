@@ -38,23 +38,29 @@ int main() {
 
 	int x = 100;
 	int y = 100;
+	int i = 1;
 	DisplayHandler& display = DisplayHandler::setup(screen); 
 	//button_setup();
 	//usb_setup();
 	
 	while(true) {
 		sleep_ms(500); 
-		int8_t input_flag = btn_sample; //TODO: hard-fault occurs here
 
-		//if(input_flag & 0b0000'1000) {
-				x--;
-				screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
-				screen->render();
-		//}
+		switch( i ) {
+		case 1:
+		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
+		case 2:
+		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_2[0]);
+		case 3:
+		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_3[0]);
+		case 4:
+		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
+		}
+		screen->render();
 
-		sleep_ms(500);
 		display.draw_dirty_tiles(screen);
-
-		sleep_ms(500);
+		
+		x--;
+		i =	(i == 4) ? 0 : i++;
 	}
 }
