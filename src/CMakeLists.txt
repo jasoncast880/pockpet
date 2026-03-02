@@ -9,15 +9,17 @@ target_sources( tactigachi_bm PRIVATE
 	dummy.cpp
 
 	#add on peripherals as you go
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/display.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/usb.cpp
 
 )
 
 target_include_directories(tactigachi_bm PRIVATE
 	#for all modules visibility into the executable
-  ${CMAKE_CURRENT_SOURCE_DIR}/modules/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 )
 
 
@@ -63,12 +65,12 @@ if(TARGET tactigachi_rtos)
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
 
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/display.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/butons/buttons.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/modules/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
 )
 
 
