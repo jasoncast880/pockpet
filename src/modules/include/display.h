@@ -66,6 +66,7 @@ public:
 	DisplayHandler(const DisplayHandler& copy) = delete; 
 	DisplayHandler& operator=(const DisplayHandler& copy) = delete; 
 
+	int draw_clean_tiles(Layer* layer); 
 	int draw_dirty_tiles(Layer* layer); 
 };
 

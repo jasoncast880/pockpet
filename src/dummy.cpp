@@ -46,21 +46,13 @@ int main() {
 	while(true) {
 		sleep_ms(500); 
 
-		switch( i ) {
-		case 1:
-		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_1[0]);
-		case 2:
-		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_2[0]);
-		case 3:
-		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_3[0]);
-		case 4:
-		  screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
-		}
+        screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
 		screen->render();
 
+        display.draw_clean_tiles(screen);
 		display.draw_dirty_tiles(screen);
 		
 		x--;
-		i =	(i == 4) ? 0 : i++;
+		//i =	(i == 4) ? 0 : i++;
 	}
 }

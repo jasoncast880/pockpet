@@ -109,7 +109,7 @@ void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) {
     ili9341_writeData((uint8_t)(y0&0xFF));
     ili9341_writeData((uint8_t)(y1>>8));
     ili9341_writeData((uint8_t)(y1&0xFF));
-}
+} //YOU MUST FOLLOW WITH A RAMWR, THEN DO A 16 bit write
 
 static void ili9341_hard_reset(){
     gpio_put(_ILI9341_RST, 1);

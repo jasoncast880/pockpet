@@ -176,8 +176,23 @@ DisplayHandler::DisplayHandler(Layer* base) {
 	gpio_set_function(SPI0_RX, GPIO_FUNC_SPI);
 	gpio_set_function(SPI0_TX, GPIO_FUNC_SPI);
 
+	spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	//consider doing a draw on the base here..
+}
+
+int DisplayHandler::draw_clean_tiles(Layer *layer) { //this definitely will block
+    gpio_put(ILI9341_CS, 0);
+    ili9341_setAddrWindow( 10, 0, 300, 240);
+    spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+    uint16_t red = 0xf800;
+    for(int i = 0; i<240*320 ; i++) {
+        ili9341_writeDataBuffer16( &red, 1 );
+    }
+    gpio_put(ILI9341_CS,1); 
+    spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+
+    return 1;
 }
 
 int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will block
@@ -193,8 +208,14 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 		for(int i = 4 ; i < 8 ; i++) {
 			ili9341_writeData(current_tile->display_params[i]);
 		}
+
 		ili9341_writeCommand(RAM_WR);
-		ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+
+        spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+        gpio_put(ILI9341_CS,0);
+        ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+        gpio_put(ILI9341_CS,1); //condnse?
+	    spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
 		current_tile++;
 	}
