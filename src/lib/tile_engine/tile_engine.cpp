@@ -113,7 +113,11 @@ uint16_t* Tile::get_buffer() {
 }
 
 Tile::~Tile(){
-	this->pixels.release();
+	pixels.release();
+}
+
+DirtyTile::~DirtyTile() {
+	pixels.release();
 }
 
 Tileset::Tileset( uint16_t* buf, size_t size ) : buf(buf), num_tiles(size/(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)){

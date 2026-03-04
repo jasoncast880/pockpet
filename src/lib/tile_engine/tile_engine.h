@@ -49,6 +49,7 @@ struct DirtyTile : public Tile {
 	DirtyTile(DirtyTile&&) noexcept = default;
 	DirtyTile& operator=(DirtyTile&& moveSrc) noexcept = default;
 	
+	~DirtyTile();
 };
 
 struct Tileset{ 

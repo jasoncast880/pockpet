@@ -239,12 +239,11 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 		}
 
 		ili9341_writeCommand(RAM_WR);
-
-        spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-        gpio_put(ILI9341_CS,0);
-        ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
-        gpio_put(ILI9341_CS,1); //condnse?
-	    spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+		spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+		gpio_put(ILI9341_CS,0);
+		ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+		gpio_put(ILI9341_CS,1); 
+		spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
 		current_tile++;
 	}
