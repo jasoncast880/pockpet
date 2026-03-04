@@ -8,6 +8,7 @@
 #include <hardware/gpio.h>
 #include <hardware/irq.h>
 #include <hardware/regs/dreq.h>
+#include <hardware/spi.h>
 #include <hardware/structs/spi.h>
 #include <wchar.h>
 
@@ -182,15 +183,43 @@ DisplayHandler::DisplayHandler(Layer* base) {
 }
 
 int DisplayHandler::draw_clean_tiles(Layer *layer) { //this definitely will block
-    gpio_put(ILI9341_CS, 0);
-    ili9341_setAddrWindow( 10, 0, 300, 240);
-    spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-    uint16_t red = 0xf800;
-    for(int i = 0; i<240*320 ; i++) {
-        ili9341_writeDataBuffer16( &red, 1 );
-    }
-    gpio_put(ILI9341_CS,1); 
+
     spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+    for(int i = 0 ; i < layer->tiles_high ; i++) {
+        for(int j = 0 ; j < layer->tiles_wide ; j++ ){
+
+	        Tile* tile = layer->get_tile( i*layer->tiles_wide + j );
+
+            uint16_t x0 = (j*DEFAULT_TILE_LEN);
+            uint16_t x1 = x0+15;
+            uint16_t y0 = (i*DEFAULT_TILE_LEN);
+            uint16_t y1 = y0+15;
+            ili9341_writeCommand(CASET);
+            ili9341_writeData( x0 >> 8 );
+            ili9341_writeData( x0 & 0xff );
+            ili9341_writeData( x1 >> 8 );
+            ili9341_writeData( x1 & 0xff );
+            ili9341_writeCommand(RASET);
+            ili9341_writeData( y0 >> 8 );
+            ili9341_writeData( y0 & 0xff );
+            ili9341_writeData( y1 >> 8 );
+            ili9341_writeData( y1 & 0xff );
+            ili9341_writeCommand(RAM_WR);
+
+            spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+            gpio_put(ILI9341_CS,0);
+            ili9341_writeDataBuffer16(tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+            gpio_put(ILI9341_CS,1); 
+	        spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+            
+            /*
+            gpio_put(ILI9341_CS,0);
+            spi_write_blocking(spi0, (uint8_t*)tile->get_buffer(), 
+                    DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2);
+            gpio_put(ILI9341_CS,1); 
+            */
+        }
+    }
 
     return 1;
 }

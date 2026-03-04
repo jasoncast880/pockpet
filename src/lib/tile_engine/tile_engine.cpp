@@ -159,6 +159,7 @@ void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map
 //TODO: delete_by_id 
 
 void Layer::render() {
+    dirty_tiles.clear();
 	for( int i = 0 ; i < sprites.size() ; i++ ) {
 		sprites[i].render();
 	}

@@ -40,13 +40,15 @@ int main() {
 	//button_setup();
 	//usb_setup();
 	
+
+    display.draw_clean_tiles(screen);
+	sleep_ms(2000); 
 	while(true) {
 		sleep_ms(500); 
 
         screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
 		screen->render();
 
-        display.draw_clean_tiles(screen);
 		display.draw_dirty_tiles(screen);
 		
 		x--;

@@ -52,6 +52,9 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
     ili9341_writeData(0x27);
 
     ili9341_init_sub_vram();
+
+    ili9341_writeCommand(DISPON);
+    sleep_ms(100);
 }
 
 void ili9341_writeCommand(uint8_t commandByte){
@@ -123,10 +126,9 @@ static void ili9341_hard_reset(){
 static void ili9341_init_sub_pwr(){
     //call to set power & electrical presets
     ili9341_writeCommand(SWRESET);
+    sleep_ms(150);
     ili9341_writeCommand(SLPOUT);
     sleep_ms(120);
-    ili9341_writeCommand(DISPON);
-    sleep_ms(100);
 }
 
 static void ili9341_init_sub_vram(){

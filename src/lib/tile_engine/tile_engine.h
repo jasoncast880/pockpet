@@ -59,11 +59,11 @@ struct Tileset{
 
 	~Tileset();
 
+	size_t num_tiles;
 private:
 	Tile* tiles;
 	uint16_t* buf;
 	uint8_t tile_len = DEFAULT_TILE_LEN;
-	size_t num_tiles;
 };
 
 class Tilemap{ 
