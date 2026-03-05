@@ -40,7 +40,7 @@ int main() {
 	//button_setup();
 	//usb_setup();
 
-	display.draw_clean_tiles(screen);
+	display.draw_clean_tiles(screen); //if in dma mode, nothing happens (yet)
 	sleep_ms(2000); 
 	while(true) {
 		sleep_ms(500); 
@@ -48,9 +48,9 @@ int main() {
 		screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
 		screen->render();
 
-		display.draw_dirty_tiles(screen);
-		
+		if(display.draw_dirty_tiles(screen) < 0 )
+			return 0; //note this has to return eventually
+	
 		x--;
-		//i =	(i == 4) ? 0 : i++;
 	}
 }

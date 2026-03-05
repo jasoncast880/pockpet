@@ -41,7 +41,10 @@ public:
 	inline static DirtyTile* current_tile = nullptr;//iteration through Layer::dirty_tiles
 	inline static DirtyTile* end_tile = nullptr;
 
-	volatile inline static bool dirty_flag = true; 
+	volatile inline static int dirty_flag = 1; 
+	// -1, waiting reset
+	// 0, done all tiles
+	// 1, tile writing in prog.
 
 	inline static uint8_t *pixel_buf_8 = nullptr;
   //inline static uint16_t *pixel_buf_16 = nullptr;

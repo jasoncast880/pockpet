@@ -71,7 +71,7 @@ void ili9341_writeData(uint8_t dataByte){
 
 void ili9341_writeDataBuffer8(uint8_t* dataBuf, size_t len){ 
     gpio_put(_ILI9341_DC, 1);
-		spi_write_blocking(spi0, dataBuf, len);
+    spi_write_blocking(spi0, dataBuf, len);
 }
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ 
     gpio_put(_ILI9341_DC, 1);

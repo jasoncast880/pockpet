@@ -25,12 +25,7 @@ DisplayHandler& DisplayHandler::setup(Layer* base) {
 
 DisplayHandler::~DisplayHandler() {} //default ; unused
 
-/*
-####################################################################################
-####################################################################################
-*/
 #ifdef DMA_DRAW
-
 DisplayHandler::DisplayHandler(Layer* base) {
 	base_layer = base;
 
@@ -43,11 +38,11 @@ DisplayHandler::DisplayHandler(Layer* base) {
 	ili9341_initialize( ILI9341_CS , ILI9341_RST , ILI9341_DC );
 	
 	//DMA SETUP
-    dma_channel_claim(DMA_DISPLAY_CH);
+	dma_channel_claim(DMA_DISPLAY_CH);
 	cfg = dma_channel_get_default_config(DMA_DISPLAY_CH);
 	channel_config_set_transfer_data_size(&cfg, DMA_SIZE_8); 
 	channel_config_set_dreq(&cfg, DREQ_SPI0_TX); 
-    channel_config_set_read_increment(&cfg, true);
+	channel_config_set_read_increment(&cfg, true);
 	
 	dma_channel_configure(
 		display_chan,
@@ -72,6 +67,8 @@ int DisplayHandler::draw_clean_tiles(Layer *layer) {
 }
 
 int DisplayHandler::draw_dirty_tiles(Layer *layer) {
+	int ret;
+
 	//draw clean tiles
 	current_tile = layer->dirty_tiles.data();
 	end_tile = layer->dirty_tiles.data()+( layer->dirty_tiles.size() );
@@ -79,7 +76,14 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) {
 	//man trigger the isr.
 	dma_hw->intf0 = 1u << display_chan; 
 
-	return 1; //idk
+	//do a countdown, if int i = 
+	for(int ct = 0 ; ct < 500; ct++) {
+		sleep_ms(10);
+		if(dirty_flag==-1) {
+			break;
+		}
+	}
+	ret = (dirty_flag==-1) ? -1 : 1
 }
 
 cmd_sequence_t DisplayHandler::state_fromISR() {
@@ -104,7 +108,7 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 
 			tiling_state = CASET_DATA;
 		} else { 
-			dirty_flag = false;
+			dirty_flag = 0;
 		}
 
 		break;
@@ -161,19 +165,17 @@ void dma_handler() { //
 
 		if(DisplayHandler::dirty_flag){
 			DisplayHandler::state_fromISR();
+			return;
 		} else {
-			__breakpoint; //DONE DIRTY TILES ; need to reach here.
+			DisplayHandler::dirty_flag = -1; //reset the flag.
+			return;
+			//__breakpoint; //DONE DIRTY TILES ; need to reach here.
 		}
 
 	}	
 }
 
 #endif 
-
-/*
-#############################################################################
-#############################################################################
-*/
 
 #ifndef DMA_DRAW //normal spi transmission (for testing the engine)
 
