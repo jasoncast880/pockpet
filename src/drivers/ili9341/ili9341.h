@@ -71,6 +71,7 @@ static void ili9341_init_sub_vram();
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc); //running on spi0 bus
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
+void ili9341_writeDataBuffer8(uint8_t* dataBuf, size_t len);
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len);
 
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); 

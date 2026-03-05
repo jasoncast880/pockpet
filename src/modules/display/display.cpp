@@ -16,7 +16,7 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-//#define DMA_DRAW 1 //IMPORTANT CHANGE AT COMPILE TIME
+#define DMA_DRAW 1 //IMPORTANT CHANGE AT COMPILE TIME
 
 DisplayHandler& DisplayHandler::setup(Layer* base) {
 	static DisplayHandler instance = DisplayHandler(base);
@@ -24,6 +24,11 @@ DisplayHandler& DisplayHandler::setup(Layer* base) {
 }
 
 DisplayHandler::~DisplayHandler() {} //default ; unused
+
+/*
+####################################################################################
+####################################################################################
+*/
 #ifdef DMA_DRAW
 
 DisplayHandler::DisplayHandler(Layer* base) {
@@ -62,6 +67,10 @@ DisplayHandler::DisplayHandler(Layer* base) {
 
 }
 
+int DisplayHandler::draw_clean_tiles(Layer *layer) {
+  return 1;
+}
+
 int DisplayHandler::draw_dirty_tiles(Layer *layer) {
 	//draw clean tiles
 	current_tile = layer->dirty_tiles.data();
@@ -85,16 +94,15 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 				raset_params[i] = current_tile->display_params[i+4];
 			}
 			
-			pixel_buf_16 = current_tile->get_buffer();
+			pixel_buf_8 = (uint8_t*)current_tile->get_buffer();
 
 			gpio_put( ILI9341_DC, 0 );
 			dma_channel_set_read_addr( display_chan, &caset_cmd, false );
 			dma_channel_set_transfer_count( display_chan, 1, true);
 
-            tile_count++;
 			current_tile++;
 
-		    tiling_state = CASET_DATA;
+			tiling_state = CASET_DATA;
 		} else { 
 			dirty_flag = false;
 		}
@@ -135,7 +143,8 @@ cmd_sequence_t DisplayHandler::state_fromISR() {
 		break;
 	
 	case PIX_BUF: //reconfigure required before DMA chan start.
-		dma_channel_set_read_addr(display_chan, &pixel_buf_16[0], false);
+		gpio_put( ILI9341_DC, 0 );
+		dma_channel_set_read_addr(display_chan, &pixel_buf_8[0], false);
 		dma_channel_set_transfer_count( display_chan, 256*2, true );
 
 		tiling_state = CASET_CMD; 
@@ -184,44 +193,44 @@ DisplayHandler::DisplayHandler(Layer* base) {
 
 int DisplayHandler::draw_clean_tiles(Layer *layer) { //this definitely will block
 
-    spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-    for(int i = 0 ; i < layer->tiles_high ; i++) {
-        for(int j = 0 ; j < layer->tiles_wide ; j++ ){
+	spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+	for(int i = 0 ; i < layer->tiles_high ; i++) {
+			for(int j = 0 ; j < layer->tiles_wide ; j++ ){
 
-	        Tile* tile = layer->get_tile( i*layer->tiles_wide + j );
+				gpio_put(ILI9341_CS,0);
 
-            uint16_t x0 = (j*DEFAULT_TILE_LEN);
-            uint16_t x1 = x0+15;
-            uint16_t y0 = (i*DEFAULT_TILE_LEN);
-            uint16_t y1 = y0+15;
-            ili9341_writeCommand(CASET);
-            ili9341_writeData( x0 >> 8 );
-            ili9341_writeData( x0 & 0xff );
-            ili9341_writeData( x1 >> 8 );
-            ili9341_writeData( x1 & 0xff );
-            ili9341_writeCommand(RASET);
-            ili9341_writeData( y0 >> 8 );
-            ili9341_writeData( y0 & 0xff );
-            ili9341_writeData( y1 >> 8 );
-            ili9341_writeData( y1 & 0xff );
-            ili9341_writeCommand(RAM_WR);
+				Tile* tile = layer->get_tile( i*layer->tiles_wide + j );
 
-            spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-            gpio_put(ILI9341_CS,0);
-            ili9341_writeDataBuffer16(tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
-            gpio_put(ILI9341_CS,1); 
-	        spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-            
-            /*
-            gpio_put(ILI9341_CS,0);
-            spi_write_blocking(spi0, (uint8_t*)tile->get_buffer(), 
-                    DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2);
-            gpio_put(ILI9341_CS,1); 
-            */
-        }
-    }
+				uint16_t x0 = (j*DEFAULT_TILE_LEN);
+				uint16_t x1 = x0+15;
+				uint16_t y0 = (i*DEFAULT_TILE_LEN);
+				uint16_t y1 = y0+15;
+				ili9341_writeCommand(CASET);
+				ili9341_writeData( x0 >> 8 );
+				ili9341_writeData( x0 & 0xff );
+				ili9341_writeData( x1 >> 8 );
+				ili9341_writeData( x1 & 0xff );
+				ili9341_writeCommand(RASET);
+				ili9341_writeData( y0 >> 8 );
+				ili9341_writeData( y0 & 0xff );
+				ili9341_writeData( y1 >> 8 );
+				ili9341_writeData( y1 & 0xff );
+				ili9341_writeCommand(RAM_WR);
 
-    return 1;
+				/*
+				spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+				ili9341_writeDataBuffer16(tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+				spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+				*/
+					
+				ili9341_writeDataBuffer8( (uint8_t*)tile->get_buffer(), 
+								DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2);
+
+				gpio_put(ILI9341_CS,1); 
+			}
+	}
+
+	return 1;
 }
 
 int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will block
@@ -229,6 +238,9 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 	end_tile = layer->dirty_tiles.data()+( layer->dirty_tiles.size() );
 
 	while(current_tile!=end_tile) {
+
+		gpio_put(ILI9341_CS,0);
+
 		ili9341_writeCommand(CASET);
 		for(int i = 0 ; i < 4 ; i++) {
 			ili9341_writeData(current_tile->display_params[i]);
@@ -240,12 +252,12 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 
 		ili9341_writeCommand(RAM_WR);
 		spi_set_format(spi0, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-		gpio_put(ILI9341_CS,0);
 		ili9341_writeDataBuffer16(current_tile->get_buffer(), DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
-		gpio_put(ILI9341_CS,1); 
 		spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
 		current_tile++;
+
+		gpio_put(ILI9341_CS,1); 
 	}
 	return 1; //idk
 }

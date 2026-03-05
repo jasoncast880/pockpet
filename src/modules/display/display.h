@@ -40,11 +40,11 @@ public:
 	//TILE-RELATED - Run-Access within ISR.
 	inline static DirtyTile* current_tile = nullptr;//iteration through Layer::dirty_tiles
 	inline static DirtyTile* end_tile = nullptr;
-	volatile inline static uint32_t tile_count = 0x00; //temp
 
 	volatile inline static bool dirty_flag = true; 
 
-	inline static uint16_t *pixel_buf_16 = nullptr;
+	inline static uint8_t *pixel_buf_8 = nullptr;
+  //inline static uint16_t *pixel_buf_16 = nullptr;
 
 	inline static uint display_chan = DMA_DISPLAY_CH;
 	inline static dma_channel_config cfg;

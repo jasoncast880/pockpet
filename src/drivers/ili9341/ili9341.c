@@ -1,6 +1,7 @@
 #include "ili9341.h"
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include <hardware/spi.h>
 
 static uint8_t _ILI9341_CS;
 static uint8_t _ILI9341_RST;
@@ -9,7 +10,8 @@ static uint8_t _ILI9341_MOSI;
 static uint8_t _ILI9341_SCLK;
 static uint8_t _ILI9341_MISO;
 
-void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
+//note after init, you still have to put cs low in order to write spi.
+void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) { 
 
     _ILI9341_CS = cs;
     _ILI9341_RST = rst;
@@ -59,20 +61,18 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
 
 void ili9341_writeCommand(uint8_t commandByte){
     gpio_put(_ILI9341_DC, 0);
-    gpio_put(_ILI9341_CS, 0);
     spi_write_blocking(spi0, &commandByte, 1);
-    gpio_put(_ILI9341_CS, 1);
 }
 
 void ili9341_writeData(uint8_t dataByte){
     gpio_put(_ILI9341_DC, 1);
-    gpio_put(_ILI9341_CS, 0);
     spi_write_blocking(spi0, &dataByte, 1);
-    gpio_put(_ILI9341_CS, 1);
 }
 
-//NOTE: By def. the spi frame format is at 8 bits. Change to 16 using spi_set_format
-//NOTE: Manually set the cs, wrap around this call
+void ili9341_writeDataBuffer8(uint8_t* dataBuf, size_t len){ 
+    gpio_put(_ILI9341_DC, 1);
+		spi_write_blocking(spi0, dataBuf, len);
+}
 void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ 
     gpio_put(_ILI9341_DC, 1);
     spi_write16_blocking(spi0, dataBuf, len);
