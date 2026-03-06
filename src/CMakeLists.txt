@@ -10,8 +10,8 @@ target_sources( tactigachi_bm PRIVATE
 
 	#add on peripherals as you go
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons.c
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/usb.cpp
+    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
+		#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
 
 )
 
@@ -19,7 +19,7 @@ target_include_directories(tactigachi_bm PRIVATE
 	#for all modules visibility into the executable
     ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
     #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
+		#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 )
 
 
@@ -59,18 +59,21 @@ add_custom_command(TARGET tactigachi_bm POST_BUILD # command to enable static me
 
 endif() #tactigachi_bm
 
-##########################
+####################################################################################################################################################################################
 
 if(TARGET tactigachi_rtos)
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/butons/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
 )
 
 
@@ -90,12 +93,12 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 	# drivers/other HAL
 	ili9341_rp2040
-	usb_dev_cdc
+	usb_rp2040 # pulls in bsp/board api, tusb??
 
 	# core dependencies
 	FreeRTOS-Kernel-Heap4
 	tile_engine 
-	fatfs
+	#fatfs
 
 	# misc.
 	assets
@@ -104,8 +107,14 @@ target_link_libraries(tactigachi_rtos PRIVATE
 target_compile_definitions(tactigachi_rtos PRIVATE configNUMBER_OF_CORES=1) #perhaps add on multicore support if possible...
 
 #pico_enable_stdio_usb(tactigachi_rtos 1) #perhaps disable if not using/debugging via gdb
-pico_enable_stdio_uart(tactigachi_rtos 1)
+#pico_enable_stdio_uart(tactigachi_rtos 1)
 pico_add_extra_outputs(tactigachi_rtos)
+
+#TODO: add more info for things like rtos stack, config settings, as needed.
+add_custom_command(TARGET tactigachi_rtos POST_BUILD # command to enable static mem/sanity check.
+    COMMAND arm-none-eabi-size $<TARGET_FILE:tactigachi_rtos>
+    COMMENT "--- Manual Static Memory Report ---"
+) 
 
 endif() #tactigachi_rtos
 

@@ -14,7 +14,6 @@
 extern "C" {
 #endif 
 
-void usb_setup();
 void usb_task();
 
 //weak-linked from descriptors

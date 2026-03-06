@@ -6,9 +6,10 @@
 #include "pinout.h"
 
 #include "display.h"
+#include "tile_engine.h"
+
 //#include "buttons.h"
 //#include "usb.h"
-#include "tile_engine.h"
 
 #include <ampalaya_tileset_16.h>
 #include <tilemaps.h>

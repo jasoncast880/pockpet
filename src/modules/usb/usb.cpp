@@ -37,5 +37,4 @@ void tud_cdc_rx_complete_cb(uint8_t itf) {
 }
 
 void tud_cdc_line_state_cb(uint8_t itf, bool dtr, bool rts) {
-	//explode
 }

@@ -13,8 +13,9 @@
 #include <pico/platform/common.h>
 
 #include "ili9341.h"
-
 #include "tile_engine.h" 
+
+#include "FreeRTOS.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -30,6 +31,9 @@ enum cmd_sequence_t {
 	RAMWR_CMD,
 	PIX_BUF
 };
+
+void display_task( void* pvParameters ); //rtos, for rtos things. declare here, define in 
+																				 //main.cpp (for now)
 
 class DisplayHandler {
 private:

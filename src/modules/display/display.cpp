@@ -83,7 +83,7 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) {
 			break;
 		}
 	}
-	ret = (dirty_flag==-1) ? -1 : 1
+	ret = (dirty_flag==-1) ? -1 : 1;
 }
 
 cmd_sequence_t DisplayHandler::state_fromISR() {
