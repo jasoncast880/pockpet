@@ -16,7 +16,7 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-#define DMA_DRAW 1 //IMPORTANT CHANGE AT COMPILE TIME
+//#define DMA_DRAW 1 //IMPORTANT CHANGE AT COMPILE TIME
 
 DisplayHandler& DisplayHandler::setup(Layer* base) {
 	static DisplayHandler instance = DisplayHandler(base);
