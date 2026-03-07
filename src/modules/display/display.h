@@ -15,8 +15,6 @@
 #include "ili9341.h"
 #include "tile_engine.h" 
 
-#include "FreeRTOS.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif

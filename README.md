@@ -57,6 +57,14 @@ lsusb
 ```bash
 sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
 ```
+OR if using rtos .elf variant:
+```bash
+openocd \
+-f interface/cmsis-dap.cfg \
+-f target/rp2040.cfg \
+-c "rp2040.core0 configure -rtos FreeRTOS"
+```
+
 8. In another terminal, navigate to the build folder (directory where the .elf file is generated) and run the following commands: 
 ```bash
 gdb-multiarch ./<elf-file-name>.elf  
@@ -64,7 +72,7 @@ gdb-multiarch ./<elf-file-name>.elf
 
 From root dir, run the preset debug script
 ```bash
-gdb-multiarch -x rp2040.gdb  
+gdb-multiarch -x ./scripts/<script-name>.gdb
 ```
 ORRR from inside the gdb terminal interface:
 ```bash

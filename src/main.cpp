@@ -22,6 +22,7 @@ QueueHandle_t xDisplayHandlerQueue = NULL;
 void main_task(void *pvParameters) {
 
 	for( ;; ){
+		vTaskDelay(pdMS_TO_TICKS(500));
 	}
 }
 
@@ -61,17 +62,18 @@ void display_task(void* pvParameters) {
 		screen->sprite_update_by_id(cursor, x, y, demo_spritemap_1);
 		screen->render();
 
-		if(display.draw_dirty_tiles(screen) < 0 )
-			__breakpoint; //return 0; //note this has to return eventually
+		if(display.draw_dirty_tiles(screen) < 0 ) {
+		    x--; //pos change for engine to chew on
+			//__breakpoint; 
+        }
 	
-		x--; //pos change for engine to chew on
 	}
 }
 
 void usb_task(void* pvParameters) {
 
 	for( ;; ) {
-		tight_loop_contents();
+		vTaskDelay(pdMS_TO_TICKS(500));
 	}
 }
 
