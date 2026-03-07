@@ -62,8 +62,11 @@ endif() #tactigachi_bm
 ####################################################################################################################################################################################
 
 if(TARGET tactigachi_rtos)
+target_compile_definitions(tactigachi_rtos PRIVATE PICO_CXX_DISABLE_ALLOCATION_OVERRIDES=1) #allow for override of new, delete.
+
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
+	mem_override.cpp 
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp

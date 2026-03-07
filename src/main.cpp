@@ -10,13 +10,12 @@
 #include "semphr.h"
 #include "queue.h"
 
-
-#define MAIN_TASK_PRIORITY      (tskIDLE_PRIORITY + 2) // is 0 + 2
-#define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
-
-//globs
-QueueHandle_t xButtonQueue = NULL;
-QueueHandle_t xDisplayHandlerQueue = NULL;
+enum {
+	BLINK_NOT_MOUNTED = 20,
+	BLINK_MOUNTED = 1000,
+	BLINK_SUSPENDED = 500,
+};
+static uint32_t BLINK_INTERVAL_MS = BLINK_NOT_MOUNTED;
 
 //blink for status indicator
 void main_task(void *pvParameters) {
@@ -77,6 +76,7 @@ void usb_task(void* pvParameters) {
 	}
 }
 
+#define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
 int main() {
 
 	stdio_init_all();
@@ -84,9 +84,9 @@ int main() {
 	printf("GO\n");
 
 
-	xTaskCreate( main_task, "main", 1000, NULL, 3, NULL );
-	xTaskCreate( display_task, "display", 1000, NULL, 3, NULL );//change to accom. stack
-	xTaskCreate( usb_task, "usb", 1000, NULL, 3, NULL );
+	xTaskCreate( main_task, "main", 1000, NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( usb_task, "usb", 1000, NULL, tskIDLE_PRIORITY+1, NULL );
 	vTaskStartScheduler();
 
 
@@ -95,19 +95,17 @@ int main() {
 	}
 }
 
-extern "C" { //hooks and stuff
-#include "FreeRTOS.h"
-#include "task.h"
+extern "C" {
 
 	void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
 		printf("%s Task Stack Overflow failed\n", pcTaskName);
 		while(1);
 	}
 
-	__attribute__((used)) void keep_heap_symbols(void) {
-		// Volatile cast prevents the compiler from optimizing the calls away
+	__attribute__((used)) void keep_heap_symbols(void) { 
 		volatile size_t tmp;
 		tmp = xPortGetFreeHeapSize();
 		tmp = xPortGetMinimumEverFreeHeapSize();
 	}
+
 }
