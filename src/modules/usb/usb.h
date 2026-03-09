@@ -8,17 +8,15 @@
 
 #include <pico/stdio.h>
 
-
-
 #ifdef __cplusplus
 extern "C" {
 #endif 
 
-void usb_task();
+void usb_setup();
+void usb_task(); //implemented in main
 
 //weak-linked from descriptors
-void tud_cdc_tx_complete_cb(uint8_t itf); 
-void tud_cdc_rx_complete_cb(uint8_t itf);
+void tud_cdc_rx_cb(uint8_t itf);
 void tud_cdc_line_state_cb(uint8_t itf, bool dtr, bool rts);
 
 #ifdef __cplusplus

@@ -1,5 +1,7 @@
 #include <cstddef>
+#include <hardware/gpio.h>
 #include <stdio.h>
+#include "class/cdc/cdc_device.h"
 #include "pico/stdlib.h"
 #include "pinout.h"
 
@@ -19,9 +21,27 @@ static uint32_t BLINK_INTERVAL_MS = BLINK_NOT_MOUNTED;
 
 //blink for status indicator
 void main_task(void *pvParameters) {
-
 	for( ;; ){
+		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
+		gpio_put( PICO_DEFAULT_LED_PIN_INVERTED , true );
+		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
+		gpio_put( PICO_DEFAULT_LED_PIN_INVERTED , false );
+	}
+}
+
+#include "usb.h"
+void usb_task(void* pvParameters) {
+	usb_setup();
+
+	for( ;; ) {
 		vTaskDelay(pdMS_TO_TICKS(500));
+		tud_task();
+
+		if( tud_cdc_available() ) {
+			uint8_t buf[64]; 
+			uint32_t ct = tud_cdc_read(buf, sizeof(buf));
+			//read buf, and see if there is dynamic updates. 
+		}
 	}
 }
 
@@ -42,7 +62,7 @@ void display_task(void* pvParameters) {
 		0
 		); //id not relevant yet ? TODO: id handling system.
 
-	Tileset* jet_tileset = new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(4096));
+	Tileset* jet_tileset = new Tileset( (uint16_t*)&jet_sprite_16[0], static_cast<size_t>(4096) );
 	uint8_t cursor = screen->sprite_add(
 		2,
 		2,
@@ -63,32 +83,22 @@ void display_task(void* pvParameters) {
 
 		if(display.draw_dirty_tiles(screen) < 0 ) {
 		    x--; //pos change for engine to chew on
-			//__breakpoint; 
-        }
-	
+    }
 	}
 }
 
-void usb_task(void* pvParameters) {
 
-	for( ;; ) {
-		vTaskDelay(pdMS_TO_TICKS(500));
-	}
-}
 
-#define MAIN_TASK_STACK_SIZE    (configMINIMAL_STACK_SIZE * 4)
 int main() {
 
 	stdio_init_all();
 	sleep_ms(5000);
 	printf("GO\n");
 
-
-	xTaskCreate( main_task, "main", 1000, NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( main_task, "main", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
-	xTaskCreate( usb_task, "usb", 1000, NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( usb_task, "usb", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 	vTaskStartScheduler();
-
 
 	while(1) {
 		tight_loop_contents();
