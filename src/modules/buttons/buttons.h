@@ -24,14 +24,13 @@ enum INPUT{
 	INPUT_UP, 
 	INPUT_RIGHT,
 	INPUT_DOWN
-}
+};
 
-//rtos only, due to time-sensitive nature.
-
-QueueHandle_t xButtonBuf;
+static QueueHandle_t xButtonQueue; //for use in a rtos build
+static uint8_t xButtonItem; 
 
 void button_setup();
-void buton_task( void * pvParameters ); //implement in main
+void button_task( void * pvParameters ); //implement in main
 
 void button_handler();
 

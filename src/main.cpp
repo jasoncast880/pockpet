@@ -3,6 +3,7 @@
 #include <pico/stdio.h>
 #include <stdio.h>
 #include "class/cdc/cdc_device.h"
+#include "modules/buttons/buttons.h"
 #include "pico/stdlib.h"
 #include "pinout.h"
 
@@ -60,6 +61,17 @@ void usb_task(void* pvParameters) {
 	}
 }
 
+#include "buttons.h"
+#define BUTTON_SUPER_LATENCY_MS 10
+void button_task(void* pvParameters) {
+	button_setup();
+
+	for( ;; ) {
+		if(xButtonItem)
+			xQueueSendToBack(xButtonQueue, &xButtonItem, BUTTON_SUPER_LATENCY_MS);
+	}
+}
+
 #include "display.h"
 #include "tile_engine.h"
 #include <ampalaya_tileset_16.h>
@@ -108,9 +120,10 @@ int main() {
 	//stdio_init_all();
 	//printf("START");
 
-	xTaskCreate( main_task, "main", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( main_task, "main_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 	//xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
-	xTaskCreate( usb_task, "usb", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( usb_task, "usb_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
+	xTaskCreate( button_task, "buttons_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 	vTaskStartScheduler();
 
 	while(1) {

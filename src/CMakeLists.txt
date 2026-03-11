@@ -64,21 +64,24 @@ endif() #tactigachi_bm
 if(TARGET tactigachi_rtos)
 target_compile_definitions(tactigachi_rtos PRIVATE PICO_CXX_DISABLE_ALLOCATION_OVERRIDES=1) #allow for override of new, delete.
 
+####MODULES#####
+
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
 	mem_override.cpp #will override new, delete. TODO: confirm viability.
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
-	#${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
-	#${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
 )
 
+####MODULES#####
 
 target_link_libraries(tactigachi_rtos PRIVATE
 	# macro config
