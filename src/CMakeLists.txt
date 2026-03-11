@@ -1,5 +1,5 @@
-add_executable(tactigachi_bm dummy.cpp ) 
-add_executable( tactigachi_rtos main.cpp )
+add_executable( tactigachi_bm ) 
+add_executable( tactigachi_rtos )
 
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
 add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
@@ -66,7 +66,7 @@ target_compile_definitions(tactigachi_rtos PRIVATE PICO_CXX_DISABLE_ALLOCATION_O
 
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
-	mem_override.cpp 
+	mem_override.cpp #will override new, delete. TODO: confirm viability.
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
@@ -113,7 +113,6 @@ target_compile_definitions(tactigachi_rtos PRIVATE configNUMBER_OF_CORES=1) #per
 #pico_enable_stdio_uart(tactigachi_rtos 1)
 pico_add_extra_outputs(tactigachi_rtos)
 
-#TODO: add more info for things like rtos stack, config settings, as needed.
 add_custom_command(TARGET tactigachi_rtos POST_BUILD # command to enable static mem/sanity check.
     COMMAND arm-none-eabi-size $<TARGET_FILE:tactigachi_rtos>
     COMMENT "--- Manual Static Memory Report ---"

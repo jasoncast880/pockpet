@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <hardware/gpio.h>
+#include <pico/stdio.h>
 #include <stdio.h>
 #include "class/cdc/cdc_device.h"
 #include "pico/stdlib.h"
@@ -23,24 +24,38 @@ static uint32_t BLINK_INTERVAL_MS = BLINK_NOT_MOUNTED;
 void main_task(void *pvParameters) {
 	for( ;; ){
 		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
-		gpio_put( PICO_DEFAULT_LED_PIN_INVERTED , true );
-		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
-		gpio_put( PICO_DEFAULT_LED_PIN_INVERTED , false );
+		//blink();
 	}
 }
 
 #include "usb.h"
 void usb_task(void* pvParameters) {
-	usb_setup();
+	//usb_setup();
+
+	tusb_rhport_init_t dev_init = {
+    .role = TUSB_ROLE_DEVICE,
+    .speed = TUSB_SPEED_AUTO
+  };
+  tusb_init(BOARD_TUD_RHPORT, &dev_init);
+
+  if (board_init_after_tusb) {
+    board_init_after_tusb();
+  }
 
 	for( ;; ) {
-		vTaskDelay(pdMS_TO_TICKS(500));
 		tud_task();
+
+		if( tud_cdc_connected() ) {
+			tud_cdc_write_str("Hello World");
+			tud_cdc_write_flush();
+		}
 
 		if( tud_cdc_available() ) {
 			uint8_t buf[64]; 
 			uint32_t ct = tud_cdc_read(buf, sizeof(buf));
-			//read buf, and see if there is dynamic updates. 
+
+			tud_cdc_write(buf, sizeof(buf));
+			tud_cdc_write_flush();
 		}
 	}
 }
@@ -87,16 +102,14 @@ void display_task(void* pvParameters) {
 	}
 }
 
-
-
 int main() {
 
-	stdio_init_all();
 	sleep_ms(5000);
-	printf("GO\n");
+	//stdio_init_all();
+	//printf("START");
 
 	xTaskCreate( main_task, "main", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
-	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
+	//xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
 	xTaskCreate( usb_task, "usb", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 	vTaskStartScheduler();
 
@@ -108,7 +121,7 @@ int main() {
 extern "C" {
 
 	void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName ) {
-		printf("%s Task Stack Overflow failed\n", pcTaskName);
+		//printf("%s Task Stack Overflow failed\n", pcTaskName);
 		while(1);
 	}
 

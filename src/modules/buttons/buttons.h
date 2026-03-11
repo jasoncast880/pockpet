@@ -6,10 +6,8 @@
 #include "pico/stdlib.h"
 #include "pinout.h"
 
-#include "hardware/gpio.h"
-#include "hardware/irq.h"
-#include "hardware/pio.h"
-#include "hardware/timer.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 
 #define DEBOUNCE_US 10
 
@@ -17,12 +15,25 @@
 extern "C" {
 #endif 
 
-extern volatile uint32_t time_last_sampled[8];
-extern volatile uint8_t btn_sample;
+enum INPUT{
+	INPUT_A = BTN_A, 
+	INPUT_B, 
+	INPUT_START, 
+	INPUT_SELECT, 
+	INPUT_LEFT, 
+	INPUT_UP, 
+	INPUT_RIGHT,
+	INPUT_DOWN
+}
+
+//rtos only, due to time-sensitive nature.
+
+QueueHandle_t xButtonBuf;
 
 void button_setup();
-void system_button_handler(uint gpio, uint32_t events); 
-bool clear_sample_timer(__unused repeating_timer_t *t);
+void buton_task( void * pvParameters ); //implement in main
+
+void button_handler();
 
 #ifdef __cplusplus
 }
