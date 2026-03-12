@@ -4,7 +4,11 @@ add_executable( tactigachi_rtos )
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
 add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
+
 if(TARGET tactigachi_bm)
+
+target_compile_definitions(tactigachi_bm PRIVATE RTOS_MODE = 0)
+
 target_sources( tactigachi_bm PRIVATE
 	dummy.cpp
 
@@ -64,6 +68,8 @@ endif() #tactigachi_bm
 if(TARGET tactigachi_rtos)
 target_compile_definitions(tactigachi_rtos PRIVATE PICO_CXX_DISABLE_ALLOCATION_OVERRIDES=1) #allow for override of new, delete.
 
+target_compile_definitions(tactigachi_bm PRIVATE RTOS_MODE = 1)
+
 ####MODULES#####
 
 target_sources( tactigachi_rtos PRIVATE
@@ -73,12 +79,14 @@ target_sources( tactigachi_rtos PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/system_rtos/system.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/system_rtos
 )
 
 ####MODULES#####
