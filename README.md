@@ -1,6 +1,6 @@
 
-<img width="571" height="770" alt="image" src="https://github.com/user-attachments/assets/16c1fc38-6eb0-40af-aab0-2f747dd53a3f" />
-<img width="539" height="753" alt="image" src="https://github.com/user-attachments/assets/7a3869a0-3fd9-4803-bd70-66a81832eeac" />
+<img width="571/2" height="770/2" alt="image" src="https://github.com/user-attachments/assets/16c1fc38-6eb0-40af-aab0-2f747dd53a3f" />
+<img width="539/2" height="753/2" alt="image" src="https://github.com/user-attachments/assets/7a3869a0-3fd9-4803-bd70-66a81832eeac" />
 
 # Tactigachi PDA
 
