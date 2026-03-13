@@ -16,7 +16,7 @@
 #include "jet_sprite.h"
 #include "tilemaps.h"
 
-//#define DMA_DRAW 1 //if commented out, will do spi draw.
+//#define DMA_DRAW 1
 
 DisplayHandler& DisplayHandler::setup(Layer* base) {
 	static DisplayHandler instance = DisplayHandler(base);
@@ -265,3 +265,47 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 }
 
 #endif //SPI DRAW
+
+
+#ifdef RTOS_MODE
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+void display_task(void* pvParameters) {
+
+	Tileset* sys_tileset = new Tileset( (uint16_t*)&ampalaya_tileset_16[0], static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30) );
+	Layer* screen = new Layer(
+		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
+		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
+		sys_tileset,
+		&tile_bg_16[0],
+		0
+		); //id not relevant yet ? TODO: id handling system.
+
+	Tileset* jet_tileset = new Tileset( (uint16_t*)&jet_sprite_16[0], static_cast<size_t>(4096) );
+	uint8_t cursor = screen->sprite_add(
+		2,
+		2,
+		jet_tileset,
+		&demo_spritemap_1[0]
+	);
+
+	DisplayHandler& display = DisplayHandler::setup(screen); 
+
+	static int x = 100;
+	static int y = 100;
+
+	for( ;; ) {
+		vTaskDelay(pdMS_TO_TICKS(500));
+
+		screen->sprite_update_by_id(cursor, x, y, demo_spritemap_1);
+		screen->render();
+
+		if(display.draw_dirty_tiles(screen) < 0 ) {
+		    x--; //pos change for engine to chew on
+    }
+	}
+}
+
+#endif //RTOS CODE

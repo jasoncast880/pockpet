@@ -7,8 +7,6 @@ add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
 if(TARGET tactigachi_bm)
 
-target_compile_definitions(tactigachi_bm PRIVATE RTOS_MODE = 0)
-
 target_sources( tactigachi_bm PRIVATE
 	dummy.cpp
 
@@ -68,7 +66,7 @@ endif() #tactigachi_bm
 if(TARGET tactigachi_rtos)
 target_compile_definitions(tactigachi_rtos PRIVATE PICO_CXX_DISABLE_ALLOCATION_OVERRIDES=1) #allow for override of new, delete.
 
-target_compile_definitions(tactigachi_bm PRIVATE RTOS_MODE = 1)
+target_compile_definitions(tactigachi_rtos PRIVATE RTOS_MODE)
 
 ####MODULES#####
 

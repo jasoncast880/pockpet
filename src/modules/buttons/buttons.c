@@ -22,6 +22,21 @@ void button_handler() {
 			//!!!!!
 		}
 	} //from the task, send out the button item, contingent on available queue space.
-	
-	
 }
+
+#ifdef RTOS_MODE
+
+#define BUTTON_SUPER_LATENCY_MS 10
+void button_task(void* pvParameters) {
+
+	button_setup();
+
+	for( ;; ) { //needs a consumer task
+		if(xButtonItem) {
+			xQueueSendToBack(xButtonQueue, &xButtonItem, BUTTON_SUPER_LATENCY_MS);
+			xButtonItem = 0x00; //reset
+		}
+	}
+}
+
+#endif //RTOS_MODE

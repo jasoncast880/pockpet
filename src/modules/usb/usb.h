@@ -13,11 +13,12 @@ extern "C" {
 #endif 
 
 void usb_setup();
-void usb_task(); //implemented in main
 
 //weak-linked from descriptors
 void tud_cdc_rx_cb(uint8_t itf);
 void tud_cdc_line_state_cb(uint8_t itf, bool dtr, bool rts);
+
+void usb_task( void* pvParameters ); 
 
 #ifdef __cplusplus
 }
