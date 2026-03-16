@@ -18,7 +18,6 @@
 			vPortFree(p);
 	}
 
-	// Don't forget the array versions for things like Tile* map = new Tile[100];
 	void* operator new[](size_t size) {
 			return pvPortMalloc(size);
 	}

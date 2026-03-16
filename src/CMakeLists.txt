@@ -118,7 +118,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 target_compile_definitions(tactigachi_rtos PRIVATE configNUMBER_OF_CORES=1) #perhaps add on multicore support if possible...
 
-#pico_enable_stdio_usb(tactigachi_rtos 1) #perhaps disable if not using/debugging via gdb
+pico_enable_stdio_usb(tactigachi_rtos 1) #perhaps disable if not using/debugging via gdb
 #pico_enable_stdio_uart(tactigachi_rtos 1)
 pico_add_extra_outputs(tactigachi_rtos)
 

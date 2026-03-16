@@ -45,7 +45,7 @@ void usb_task(void* pvParameters) {
 			tud_cdc_write_flush();
 		}
 
-		if( tud_cdc_available() ) {
+		if( tud_cdc_available() ) { //echo chamber
 			uint8_t buf[64]; 
 			uint32_t ct = tud_cdc_read(buf, sizeof(buf));
 
@@ -53,38 +53,20 @@ void usb_task(void* pvParameters) {
 			tud_cdc_write_flush();
 		}
 	}
+}
+
+#include "display.h"
+typedef struct {
+	Layer* lyr;
+} xDisplayItem;
+
+void display_override_task( void * pvParameters ) {
+	//how can i access the display object if it's enforced by a singleton design pattern?
+	// 1 - try doing a queue send-over? probably could work. use the engine to make something inheap and then send over pointers to a layer object for display to eat.
+	// 2 - !!!!! make the display object's pointers globals and use semphr access 
+	// to mutate them according to your needs.
 }
 
 #endif //RTOS_MODE
 
-void usb_task(void* pvParameters) {
-	//usb_setup();
-
-	tusb_rhport_init_t dev_init = {
-    .role = TUSB_ROLE_DEVICE,
-    .speed = TUSB_SPEED_AUTO
-  };
-  tusb_init(BOARD_TUD_RHPORT, &dev_init);
-
-  if (board_init_after_tusb) {
-    board_init_after_tusb();
-  }
-
-	for( ;; ) {
-		tud_task();
-
-		if( tud_cdc_connected() ) {
-			tud_cdc_write_str("Hello World");
-			tud_cdc_write_flush();
-		}
-
-		if( tud_cdc_available() ) {
-			uint8_t buf[64]; 
-			uint32_t ct = tud_cdc_read(buf, sizeof(buf));
-
-			tud_cdc_write(buf, sizeof(buf));
-			tud_cdc_write_flush();
-		}
-	}
-}
 

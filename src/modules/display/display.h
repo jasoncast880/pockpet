@@ -35,6 +35,7 @@ void display_task( void* pvParameters ); //rtos, for rtos things. declare here, 
 
 class DisplayHandler {
 private:
+	DisplayHandler();
 	DisplayHandler(Layer* base);
 	~DisplayHandler();
 public:
