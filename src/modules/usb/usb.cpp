@@ -2,18 +2,8 @@
 
 #include "bsp/board_api.h"
 #include "class/cdc/cdc_device.h"
+#include "projdefs.h"
 #include "tusb.h"
-
-void usb_setup() {
-	board_init();
-
-	tud_init(BOARD_TUD_RHPORT);
-
-	if(board_init_after_tusb) {
-		board_init_after_tusb();
-	}
-}
-
 
 /*
 void tud_cdc_rx_cb(uint8_t itf) {
@@ -25,48 +15,54 @@ void tud_cdc_rx_cb(uint8_t itf) {
 #ifdef RTOS_MODE
 
 void usb_task(void* pvParameters) {
-	//usb_setup();
+    board_init();
+    tusb_init();
 
-	tusb_rhport_init_t dev_init = {
-    .role = TUSB_ROLE_DEVICE,
-    .speed = TUSB_SPEED_AUTO
-  };
-  tusb_init(BOARD_TUD_RHPORT, &dev_init);
+    // TinyUSB board init callback after init
+    if (board_init_after_tusb) {
+        board_init_after_tusb();
+    }
 
-  if (board_init_after_tusb) {
-    board_init_after_tusb();
-  }
+    // let pico sdk use the first cdc interface for std io
+    stdio_init_all();
 
 	for( ;; ) {
 		tud_task();
 
-		if( tud_cdc_connected() ) {
+		if( tud_cdc_n_connected(0) ) {
 			tud_cdc_write_str("Hello World");
 			tud_cdc_write_flush();
-		}
-
-		if( tud_cdc_available() ) { //echo chamber
-			uint8_t buf[64]; 
-			uint32_t ct = tud_cdc_read(buf, sizeof(buf));
-
-			tud_cdc_write(buf, sizeof(buf));
-			tud_cdc_write_flush();
+            vTaskDelay(pdMS_TO_TICKS(5000));
 		}
 	}
 }
 
-#include "display.h"
-typedef struct {
-	Layer* lyr;
-} xDisplayItem;
 
-void display_override_task( void * pvParameters ) {
-	//how can i access the display object if it's enforced by a singleton design pattern?
-	// 1 - try doing a queue send-over? probably could work. use the engine to make something inheap and then send over pointers to a layer object for display to eat.
-	// 2 - !!!!! make the display object's pointers globals and use semphr access 
-	// to mutate them according to your needs.
+// callback when data is received on a CDC interface
+void tud_cdc_rx_cb(uint8_t itf)
+{
+    // allocate buffer for the data in the stack
+    uint8_t buf[CFG_TUD_CDC_RX_BUFSIZE];
+
+    printf("RX CDC %d\n", itf);
+
+    // read the available data 
+    // | IMPORTANT: also do this for CDC0 because otherwise
+    // | you won't be able to print anymore to CDC0
+    // | next time this function is called
+    uint32_t count = tud_cdc_n_read(itf, buf, sizeof(buf));
+
+    // check if the data was received on the second cdc interface
+    if (itf == 1) {
+        // process the received data
+        buf[count] = 0; // null-terminate the string
+        // now echo data back to the console on CDC 0
+        printf("Received on CDC 1: %s\n", buf);
+
+        // and echo back OK on CDC 1
+        tud_cdc_n_write(itf, (uint8_t const *) "OK\r\n", 4);
+        tud_cdc_n_write_flush(itf);
+    }
 }
 
-#endif //RTOS_MODE
-
-
+#endif //RTOS MODE
