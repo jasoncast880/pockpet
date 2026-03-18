@@ -5,13 +5,6 @@
 #include "projdefs.h"
 #include "tusb.h"
 
-/*
-void tud_cdc_rx_cb(uint8_t itf) {
-	uint8_t buf[64];
-	uint32_t count = tud_cdc_n_read(itf, buf, sizeof(buf));
-}
-*/
-
 #ifdef RTOS_MODE
 
 void usb_task(void* pvParameters) {
@@ -29,39 +22,45 @@ void usb_task(void* pvParameters) {
 	for( ;; ) {
 		tud_task();
 
+        /*
 		if( tud_cdc_n_connected(0) ) {
 			tud_cdc_write_str("Hello World");
 			tud_cdc_write_flush();
             vTaskDelay(pdMS_TO_TICKS(5000));
 		}
+        */
+        vTaskDelay(pdMS_TO_TICKS(1));
 	}
 }
 
+static char line_buf[128];
+static uint32_t line_len = 0;
 
-// callback when data is received on a CDC interface
 void tud_cdc_rx_cb(uint8_t itf)
 {
-    // allocate buffer for the data in the stack
-    uint8_t buf[CFG_TUD_CDC_RX_BUFSIZE];
-
-    printf("RX CDC %d\n", itf);
-
-    // read the available data 
-    // | IMPORTANT: also do this for CDC0 because otherwise
-    // | you won't be able to print anymore to CDC0
-    // | next time this function is called
+    uint8_t buf[64];
     uint32_t count = tud_cdc_n_read(itf, buf, sizeof(buf));
 
-    // check if the data was received on the second cdc interface
-    if (itf == 1) {
-        // process the received data
-        buf[count] = 0; // null-terminate the string
-        // now echo data back to the console on CDC 0
-        printf("Received on CDC 1: %s\n", buf);
+    for ( uint32_t i = 0 ; i<count ; i++ ) {
+        char c = buf[i];
 
-        // and echo back OK on CDC 1
-        tud_cdc_n_write(itf, (uint8_t const *) "OK\r\n", 4);
-        tud_cdc_n_write_flush(itf);
+        if( c=='\n' || c=='\r' ) {
+
+            line_buf[line_len] = '\0';
+
+            tud_cdc_write(line_buf, line_len);
+            tud_cdc_write_str("\r\n");
+            tud_cdc_write_flush();
+
+            line_len = 0;
+        } else {
+            if( line_len<sizeof(line_buf)-1 ) {
+                line_buf[line_len++] = c;
+            }
+
+            tud_cdc_write_char(c);
+            tud_cdc_write_flush();
+        }
     }
 }
 
