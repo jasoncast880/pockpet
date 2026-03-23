@@ -77,14 +77,12 @@ target_sources( tactigachi_rtos PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/system_rtos/system.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/system_rtos
 )
 
 ####MODULES#####
