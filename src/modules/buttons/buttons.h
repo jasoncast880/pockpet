@@ -11,31 +11,27 @@
 
 #define DEBOUNCE_US 10
 
-#ifdef __cplusplus
-extern "C" {
-#endif 
+//no need for cpp, just implement interrupt handlers/deffered processing as needed.
 
-enum INPUT{
-	INPUT_A = BTN_A, 
+typedef enum {
+	INPUT_A = BTN_A, // GPIO 02
 	INPUT_B, 
 	INPUT_START, 
 	INPUT_SELECT, 
 	INPUT_LEFT, 
 	INPUT_UP, 
 	INPUT_RIGHT,
-	INPUT_DOWN
-};
+	INPUT_DOWN      // GPIO 09
+} INPUT;
+
+static uint8_t byte = 0x00;
+static uint32_t time_current;
 
 static QueueHandle_t xButtonQueue; //for use in a rtos build
-static uint8_t xButtonItem; 
 
-void button_setup();
+void buttons_setup(); //unused
+void buttons_cb();
+
 void button_task( void * pvParameters ); //implement in main
-
-void button_handler();
-
-#ifdef __cplusplus
-}
-#endif 
 
 #endif //BUTTONS_H
