@@ -15,10 +15,6 @@
 #include "ili9341.h"
 #include "tile_engine.h" 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define DMA_DISPLAY_CH 0x00
 
 enum cmd_sequence_t {
@@ -30,8 +26,16 @@ enum cmd_sequence_t {
 	PIX_BUF
 };
 
-void display_task( void* pvParameters ); //rtos, for rtos things. declare here, define in 
-																				 //main.cpp (for now)
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "sync_common.h"
+void display_task( void* pvParameters ); 
+
+#ifdef __cplusplus
+}
+#endif
 
 class DisplayHandler {
 private:
@@ -78,8 +82,5 @@ public:
 
 void dma_handler(); //ISR ; DMA-Triggered
 
-#ifdef __cplusplus
-}
-#endif
 
 #endif //DISPLAY_H

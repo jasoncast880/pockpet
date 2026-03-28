@@ -80,6 +80,7 @@ target_sources( tactigachi_rtos PRIVATE
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/modules #for common.h
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
