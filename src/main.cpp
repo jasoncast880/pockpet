@@ -30,6 +30,7 @@ void main_task(void *pvParameters) {
 #include "buttons.h"
 #include "display.h"
 #include "usb.h"
+#include "sync_common.h"
 
 int main() {
 
@@ -40,8 +41,8 @@ int main() {
 	spi0_sync_t = xSemaphoreCreateBinary();
 
 	xTaskCreate( main_task, "main_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
-//	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
 	xTaskCreate( usb_task, "usb_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
+//	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
 //	xTaskCreate( button_task, "buttons_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
 
 	vTaskStartScheduler();

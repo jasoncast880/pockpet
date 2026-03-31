@@ -9,4 +9,5 @@ the challenges faced:
 -formatting standardization, using indexed colors vs 565.
 -formatting tools! how to use scripting and terminal to build something i like
 
-
+TODO: 
+Build a FreeRTOS Port to replace the new, delete with PvPortMalloc, Delete.

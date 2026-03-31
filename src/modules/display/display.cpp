@@ -266,6 +266,7 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 
 #endif //SPI DRAW
 
+#ifdef RTOS_MODE
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -304,9 +305,11 @@ void display_task(void* pvParameters) {
 		if(display.draw_dirty_tiles(screen) < 0 ) {
 		    x--; //pos change for engine to chew on
     }
-
-		xSemaphoreGive(spi0_syc_t);
+	
+		xSemaphoreGive(spi0_sync_t);
 	}
 
 }
+
+#endif
 

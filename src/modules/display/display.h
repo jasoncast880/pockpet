@@ -26,15 +26,13 @@ enum cmd_sequence_t {
 	PIX_BUF
 };
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#ifdef RTOS_MODE
 
 #include "sync_common.h"
+extern "C" {
 void display_task( void* pvParameters ); 
-
-#ifdef __cplusplus
 }
+
 #endif
 
 class DisplayHandler {
@@ -81,6 +79,5 @@ public:
 };
 
 void dma_handler(); //ISR ; DMA-Triggered
-
 
 #endif //DISPLAY_H

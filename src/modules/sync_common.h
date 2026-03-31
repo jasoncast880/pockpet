@@ -8,6 +8,6 @@
 //for the modules to see their kernel structures, for ease of sync.
 
 //SPI0 - used by modules display/ & sdc/ (WIP)
-extern xSemaphoreHandle spi0_sync_t;
+static xSemaphoreHandle spi0_sync_t;
 
 #endif //SYNC_COMMON_H

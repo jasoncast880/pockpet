@@ -51,7 +51,6 @@ int main() {
 
 		if(display.draw_dirty_tiles(screen) < 0 )
 			return 0; //note this has to return eventually
-	
 		x--;
 	}
 }

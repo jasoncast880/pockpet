@@ -72,7 +72,7 @@ target_compile_definitions(tactigachi_rtos PRIVATE RTOS_MODE)
 
 target_sources( tactigachi_rtos PRIVATE
 	main.cpp
-	mem_override.cpp #will override new, delete. TODO: confirm viability.
+	#mem_override.cpp 
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
