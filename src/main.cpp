@@ -16,15 +16,15 @@ static uint32_t BLINK_INTERVAL_MS = BLINK_NOT_MOUNTED;
 #include "task.h"
 
 void main_task(void *pvParameters) {
-    hard_assert(cyw43_arch_init() == PICO_OK);
-    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
-    for( ;; ){
-        vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
-        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
-        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
+	hard_assert(cyw43_arch_init() == PICO_OK);
+	cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
+	for( ;; ){
+		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
+		cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
+		vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
+		cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
 
-    }
+	}
 }
 #include "buttons.h"
 #include "display.h"
@@ -64,6 +64,4 @@ extern "C" {
 		tmp = xPortGetFreeHeapSize();
 		tmp = xPortGetMinimumEverFreeHeapSize();
 	}
-
 }
-

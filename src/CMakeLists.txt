@@ -94,7 +94,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 	# core HAL as required
 	pico_stdlib
-    pico_cyw43_arch_none
+  pico_cyw43_arch_none
 	hardware_irq
 	hardware_gpio
 	hardware_dma
@@ -105,6 +105,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 	# drivers/other HAL
 	ili9341_rp2040
+	#sd_rp2040 #my handmade sdc driver.ear
 	usb_rp2040 # pulls in bsp/board api, tusb??
 
 	# core dependencies
