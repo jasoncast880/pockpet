@@ -267,8 +267,6 @@ int DisplayHandler::draw_dirty_tiles(Layer *layer) { //this definitely will bloc
 #endif //SPI DRAW
 
 
-#ifdef RTOS_MODE
-
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -297,7 +295,8 @@ void display_task(void* pvParameters) {
 	static int y = 100;
 
 	for( ;; ) {
-		vTaskDelay(pdMS_TO_TICKS(500));
+		//vTaskDelay(pdMS_TO_TICKS(500));
+		xSemaphoreTake(spi0_sync_t, portMAX_DELAY);
 
 		screen->sprite_update_by_id(cursor, x, y, demo_spritemap_1);
 		screen->render();
@@ -305,7 +304,9 @@ void display_task(void* pvParameters) {
 		if(display.draw_dirty_tiles(screen) < 0 ) {
 		    x--; //pos change for engine to chew on
     }
+
+		xSemaphoreGive(spi0_syc_t);
 	}
+
 }
 
-#endif //RTOS CODE

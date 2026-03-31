@@ -10,5 +10,4 @@
 //SPI0 - used by modules display/ & sdc/ (WIP)
 extern xSemaphoreHandle spi0_sync_t;
 
-
 #endif //SYNC_COMMON_H
