@@ -24,9 +24,8 @@ void main_task(void *pvParameters) {
         vTaskDelay(pdMS_TO_TICKS(BLINK_INTERVAL_MS));
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
 
-<<<<<<< HEAD
     }
-=======
+}
 #include "buttons.h"
 #include "display.h"
 #include "usb.h"
@@ -35,8 +34,10 @@ void main_task(void *pvParameters) {
 int main() {
 
 	sleep_ms(5000);
+    /*
 	stdio_init_all();
 	printf("START");
+    */
 
 	spi0_sync_t = xSemaphoreCreateBinary();
 
@@ -50,7 +51,6 @@ int main() {
 	while(1) {
 		tight_loop_contents();
 	}
->>>>>>> 593a7ceb259d42c2145dc82a7b609c56a765ffee
 }
 
 extern "C" {
@@ -66,29 +66,4 @@ extern "C" {
 	}
 
 }
-
-#include "FreeRTOS.h"
-#include "task.h"
-
-#include "buttons.h"
-#include "display.h"
-#include "usb.h"
-int main() {
-
-	sleep_ms(5000);
-	stdio_init_all();
-	printf("START");
-
-	xTaskCreate( main_task, "main_task", (configMINIMAL_STACK_SIZE * 6) , NULL, tskIDLE_PRIORITY+1, NULL );
-//  xTaskCreate( usb_task, "usb_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
-//	xTaskCreate( button_task, "buttons_task", (configMINIMAL_STACK_SIZE * 4) , NULL, tskIDLE_PRIORITY+1, NULL );
-//	xTaskCreate( display_task, "display", 5000, NULL, tskIDLE_PRIORITY+1, NULL );
-
-	vTaskStartScheduler();
-
-	while(1) {
-		tight_loop_contents();
-	}
-}
-
 

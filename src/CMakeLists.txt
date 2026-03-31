@@ -94,6 +94,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 	# core HAL as required
 	pico_stdlib
+    pico_cyw43_arch_none
 	hardware_irq
 	hardware_gpio
 	hardware_dma
