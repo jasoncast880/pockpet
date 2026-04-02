@@ -1,5 +1,6 @@
 #include "usb.h"
 
+#include "FreeRTOSConfig.h"
 #include "bsp/board_api.h"
 #include "class/cdc/cdc_device.h"
 #include "portmacro.h"
@@ -84,6 +85,7 @@ void tud_cdc_rx_cb(uint8_t itf) {
 extern "C" {
 
 	void usb_task(void* pvParameters) {
+		xTaskCreate(shell_task, "shell_daemon", (configMINIMAL_STACK_SIZE * 4) , NULL,  tskIDLE_PRIORITY, NULL); //TEST THIS
 		board_init();
 		tusb_init();
 

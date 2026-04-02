@@ -105,7 +105,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 
 	# drivers/other HAL
 	ili9341_rp2040
-	#sd_rp2040 #my handmade sdc driver.ear
+	sd_rp2040 
 	usb_rp2040 # pulls in bsp/board api, tusb??
 
 	# core dependencies

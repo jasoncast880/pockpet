@@ -17,6 +17,7 @@
 #define BTN_DOWN   9
 //
 
+#define SPI0_BUS ((spi_inst_t *) spi0)
 #define SPI0_TX    16
 #define SPI0_RX    19
 #define SPI0_SCLK  18
