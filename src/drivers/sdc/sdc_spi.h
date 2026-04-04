@@ -5,14 +5,22 @@
 #include "hardware/spi.h"
 #include "hardware/gpio.h"
 
-//gp defines; 
+//COMMAND Defines ; max 6 bits width
+#define CMD_GO_IDLE_ST  0x00
+#define CMD8						0x08
+#define CMD58   
 
-//general-purpose registers
-#define CMD0    0x00
+//APP_COMMAND Defines: Note must be preceded with APP_CMD (CMD55)
+#define ACMD41  
 
-void sdc_initialize(int8_t cs, spi_inst_t* bus); //running on spi0 bus
-void sdc_writeCommand(uint8_t commandByte);
-void sdc_writeDataBuffer8(uint8_t* dataBuf, size_t len);
-void sdc_writeDataBuffer16(uint16_t* dataBuf, size_t len);
+static uint32_t cmd [2]; //global accessible thing
+static uint8_t generate_CRC_7(uint32_t* val);
+static uint16_t generate_CRC_16(uint32_t* val);
+
+//command is structured as 1 and a half word; thus to send a cmd you need to do a formatted buffer, based on cmd index, (optional) argument, crc, and app. padding as needed...
+//perhaps 
+int send_cmd(uint8_t idx, uint32_t arg);
+int send_data(uint32_t* buf, size_t size);
+int recv(uint32_t* buf, size_t size);
 
 #endif //SDC_H
