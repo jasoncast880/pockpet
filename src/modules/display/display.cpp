@@ -177,7 +177,7 @@ void dma_handler() { //
 
 #endif 
 
-#ifndef DMA_DRAW //normal spi transmission (for testing the engine)
+#ifndef DMA_DRAW //non-DMA spi transmission (for testing the engine)
 
 DisplayHandler::DisplayHandler(Layer* base) {
 	base_layer = base;

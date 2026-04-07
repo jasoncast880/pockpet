@@ -10,6 +10,15 @@
 #define SEND_IF_COND    0x08 //cmd08
 #define READ_OCR        0x3A //cmd58
 
+#define STOP_TRANS		  0x0c //cmd12
+
+#define SET_BLOCKLEN		0x10 //cmd16
+#define RD_SINGLE_BLOCK 0x11 //cmd17
+#define RD_MULT_BLOCK   0x12 //cmd18
+
+#define WR_SINGLE_BLOCK 0x18 //cmd24
+#define WR_MULT_BLOCK   0x19 //cmd25
+
 //APP_COMMAND Defines: Note must be preceded with APP_CMD (CMD55)
 #define APP_CMD         0x37 //cmd55
 #define SD_SEND_OP_COND 0x29 //acmd41

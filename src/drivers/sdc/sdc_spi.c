@@ -1,4 +1,5 @@
 #include "sdc_spi.h"
+#include <hardware/gpio.h>
 #include <hardware/spi.h>
 
 static spi_inst_t* _SDC_BUS;
@@ -8,8 +9,23 @@ static uint8_t _SDC_SCLK;
 static uint8_t _SDC_MOSI;
 static uint8_t _SDC_MISO;
 
-void sdc_initialize(int8_t cs, spi_inst_t* bus) {
-}
+int sdc_initialize(uint8_t cs, spi_inst_t* bus) { //spi bus initialize, assume spi periph
+																									//already init-ed, or ASSERT/chck
+
+	_SDC_CS = cs;
+	_SDC_BUS= bus;
+
+	gpio_init(_SDC_CS);
+	gpio_set_dir(_SDC_CS, GPIO_OUT);
+
+
+	sdc_CS_HI();
+	uint8_t dummy = 0xff;
+	spi_write_blocking( _SDC_BUS, &dummy, 200 ); //priming for initialization sequence
+																							 //done in diskio.c : initialize
+	sdc_CS_LO();
+	return 0;	
+} //note, TRUE initialization happens in diskio.c
 
 static uint8_t generate_CRC_7(uint64_t val) {
 	/*
@@ -65,7 +81,7 @@ static int send_cmd(uint8_t idx, uint32_t arg) {
 }
 
 static int recv(uint8_t* buf, size_t size) {
-    for(int i = 0 ; i < size ; i++) {
+    for(int i = 0 ; i < size ; i++) { //reset the recv buffer
         buf[i] = 0;
     }
     spi_read_blocking(_SDC_BUS, 0xff, buf, size);

@@ -13,6 +13,7 @@
 /*-----------------------------------------------------------------------*/
 
 #include "ff.h"			/* Obtains integer types */
+#include <hardware/spi.h>
 #include "diskio.h"		/* Declarations of disk functions */
 
 
@@ -36,7 +37,7 @@ DSTATUS disk_status (
 )
 {
 	DSTATUS stat;
-
+	
 
 } 
 
@@ -48,14 +49,14 @@ DSTATUS disk_initialize (
 	BYTE pdrv				/* Physical drive nmuber to identify the drive */
 )
 {
-	DSTATUS stat;
+DSTATUS stat;
 
-    sdc_initialize(SDC_CS, SPI0_BUS);
+    sdc_initialize(SDC_CS, SPI0_BUS); 
     sdc_CS_LO();
 
     send_cmd(CMD_GO_IDLE_ST, 0);
     recv(recv_buf, 1);
-    if(recv_buf[1]) {
+    if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
 
@@ -74,7 +75,7 @@ DSTATUS disk_initialize (
         return STA_NOINIT;
     }
     uint8_t ocr = recv_buf[3] & 0x00; //!!!!
-    //check ocr
+    //check ocr, identify card type.
 
     send_cmd(APP_CMD, 0);
     recv(recv_buf, 1);
@@ -85,7 +86,7 @@ DSTATUS disk_initialize (
     recv_buf[0] = 0x01; //idle state 0x01
     size_t timeout = 0; 
 
-    while(recv_buf[0] == 0x01 ) {
+    while(recv_buf[0] != 0x00 ) {
         send_cmd(SD_SEND_OP_COND, (uint32_t) ocr << 29 );
         recv(recv_buf, 1);
 
@@ -100,7 +101,7 @@ DSTATUS disk_initialize (
     if(recv_buf[0]) {
         return STA_NOINIT;
     }
-    //read the ccs for capacity information
+    //read the ccs for capacity information, etc.
 
     return STA_OK;
 
@@ -119,14 +120,47 @@ DRESULT disk_read (
 )
 {
 	DRESULT res;
-	int result;
+	uint32_t arg = 0;
 
-	switch (pdrv) {
-	case DEV_MMC :
-		// translate the arguments here
+	//assume you have a 512by block
+	if(count == 1) {
+		send_cmd(RD_SINGLE_BLOCK, sector*512);
+		recv(recv_buf, 1);
+		if(recv_buf[0]) {
+			return RES_ERROR; 
+		}
 
-    default: res = RES_PARERR;
-    } return res;
+		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
+			return RES_ERROR;
+		} else return RES_OK;
+
+	} else { //mult
+		send_cmd(RD_MULT_BLOCK, sector*512);
+
+		recv(recv_buf, 1);
+		if(recv_buf[0]) {
+			return RES_ERROR; 
+		}
+
+		//loop through until 'count' sectors doing reads, then send out the stop command
+		recv(buff);
+		send_cmd(STOP_TRANS, 0);
+
+		recv(recv_buf, 2);
+		while(recv_buf[1]==0) {
+			recv(recv_buf, 2);
+			if(recv_buf[0]) {
+				return RES_ERROR; 
+			} 
+		} return RES_OK;
+
+		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
+			return RES_ERROR;
+		} else return RES_OK;
+	}
+	//
+
+
 }
 
 /*-----------------------------------------------------------------------*/

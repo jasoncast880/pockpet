@@ -27,8 +27,8 @@ enum cmd_sequence_t {
 };
 
 #ifdef RTOS_MODE
-
 #include "sync_common.h"
+
 extern "C" {
 void display_task( void* pvParameters ); 
 }

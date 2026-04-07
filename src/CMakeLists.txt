@@ -12,16 +12,18 @@ target_sources( tactigachi_bm PRIVATE
 
 	#add on peripherals as you go
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
-		#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc/sdc.cpp
+  #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
 
 )
 
 target_include_directories(tactigachi_bm PRIVATE
 	#for all modules visibility into the executable
-    ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
-    #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
-		#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
+	#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 )
 
 
@@ -75,13 +77,18 @@ target_sources( tactigachi_rtos PRIVATE
 	#mem_override.cpp 
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc/sdc.cpp
+
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
 )
 
 target_include_directories(tactigachi_rtos PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/modules #for common.h
+
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/display
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc
+
   ${CMAKE_CURRENT_SOURCE_DIR}/modules/usb
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
 )
