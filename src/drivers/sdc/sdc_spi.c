@@ -65,6 +65,12 @@ static int send_cmd(uint8_t idx, uint32_t arg) {
 }
 
 static int recv(uint8_t* buf, size_t size) {
+    for(int i = 0 ; i < size ; i++) {
+        buf[i] = 0;
+    }
     spi_read_blocking(_SDC_BUS, 0xff, buf, size);
     return 0 ;
 }
+
+int sdc_CS_LO() { gpio_put(_SDC_CS , 0); }
+int sdc_CS_HI() { gpio_put(_SDC_CS , 1); }

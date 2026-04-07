@@ -27,21 +27,17 @@
 /* Get Drive Status                                                      */
 /*-----------------------------------------------------------------------*/
 
+
+#include "pinout.h"
+#include "sdc_spi.h"
+
 DSTATUS disk_status (
 	BYTE pdrv		/* Physical drive nmuber to identify the drive */
 )
 {
 	DSTATUS stat;
 
-	switch (pdrv) {
-        
-		if(spi_is_busy((spi_inst_t*)spi0_hw)) {
-				stat = STA_PROTECT;
-		}
-		return stat;
 
-    default: stat = STA_OK;
-    } return stat;
 } 
 
 /*-----------------------------------------------------------------------*/
@@ -53,49 +49,63 @@ DSTATUS disk_initialize (
 )
 {
 	DSTATUS stat;
-	int result;
 
-	switch (pdrv) {
-	case DEV_MMC :
+    sdc_initialize(SDC_CS, SPI0_BUS);
+    sdc_CS_LO();
 
-		//power ON/card insertion 
-		sleep_ms(10);
-		gpio_init(SDC_CS); //todo: adding a pattern to control spi periph. thread safe.
-		gpio_put(SPI0_TX, 1);
-		gpio_put(SDC_CS, 1);
-		sleep_ms(10);
+    send_cmd(CMD_GO_IDLE_ST, 0);
+    recv(recv_buf, 1);
+    if(recv_buf[1]) {
+        return STA_NOINIT;
+    }
 
-		//software reset (CMD0, CS LOW)
+    send_cmd(SEND_IF_COND, 0x000001AA);
+    recv(recv_buf, 5);
+    if(recv_buf[0]!=0x01) {
+        return STA_NOINIT;
+    }
+    if(recv_buf[4]!=0xAA) {
+        return STA_NOINIT;
+    }
 
-		uint8_t dummy = 0x00;
-		gpio_put(SDC_CS, 0);
-		sdc_writeCommand(0x00, &dummy);
-		gpio_put(SDC_CS, 1);
+    send_cmd(READ_OCR, 0);
+    recv(recv_buf, 5);
+    if(recv_buf[0]!=0x01) {
+        return STA_NOINIT;
+    }
+    uint8_t ocr = recv_buf[3] & 0x00; //!!!!
+    //check ocr
 
-		uint8_t scratch;
-		scratch = sdc_writeCommand(0x08, &dummy);
+    send_cmd(APP_CMD, 0);
+    recv(recv_buf, 1);
+    if(recv_buf[0]!=0x01) {
+        return STA_NOINIT;
+    }
 
-		if(scratch | 0x04) { //v1.0 sd card
-			sdc_writeCommand(0x55, &dummy); //for ACMD
-			scratch = sdc_writeCommand(0x41, &dummy);
-			while(scratch | 0x01) {
-				sleep_ms(10);
-				scratch = sdc_writeCommand(0x41, &dummy);
-				if(scratch | 0x04) {break;}
-			}
-		} else { //v2.0+ sd card
-			if(!scratch) {
-				
-			}
-		}
+    recv_buf[0] = 0x01; //idle state 0x01
+    size_t timeout = 0; 
 
-		if(result == 0) {
-				stat = STA_NOINIT;
-		}
+    while(recv_buf[0] == 0x01 ) {
+        send_cmd(SD_SEND_OP_COND, (uint32_t) ocr << 29 );
+        recv(recv_buf, 1);
 
-    default: stat = STA_OK;
-	} return stat;
-}
+        timeout++;
+        if(timeout==1000) {
+            return STA_NOINIT;
+        }
+    }
+    
+    send_cmd(READ_OCR, 0);
+    recv(recv_buf, 5);
+    if(recv_buf[0]) {
+        return STA_NOINIT;
+    }
+    //read the ccs for capacity information
+
+    return STA_OK;
+
+}   
+
 
 /*-----------------------------------------------------------------------*/
 /* Read Sector(s)                                                        */

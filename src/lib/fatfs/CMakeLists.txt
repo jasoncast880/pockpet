@@ -5,10 +5,10 @@ add_library(fatfs STATIC
 )
 
 target_link_libraries(fatfs
-	
+	sd_rp2040
 )
 
 target_include_directories(fatfs PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/source
-    ${CMAKE_SOURCE_DIR}/executable/config #for accessing pinout.h
+    ${CMAKE_SOURCE_DIR}/config #for accessing pinout.h
 )
