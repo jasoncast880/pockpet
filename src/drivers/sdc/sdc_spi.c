@@ -74,7 +74,7 @@ static int send_cmd(uint8_t idx, uint32_t arg) {
     bytes[2] = (uint8_t)(cmd>>24) & 0xff;
     bytes[3] = (uint8_t)(cmd>>16) & 0xff;
     bytes[4] = (uint8_t)(cmd>>8)  & 0xff;
-    bytes[5] = (uint8_t)cmd       & 0xff;
+    bytes[5] = (uint8_t)(cmd)     & 0xff;
 
     spi_write_blocking(_SDC_BUS, &bytes[0], 6);
     return 0;

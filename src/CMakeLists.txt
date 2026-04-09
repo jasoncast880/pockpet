@@ -118,7 +118,7 @@ target_link_libraries(tactigachi_rtos PRIVATE
 	# core dependencies
 	FreeRTOS-Kernel-Heap4
 	tile_engine 
-	#fatfs
+	fatfs
 
 	# misc.
 	assets

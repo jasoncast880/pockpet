@@ -122,45 +122,35 @@ DRESULT disk_read (
 	DRESULT res;
 	uint32_t arg = 0;
 
-	//assume you have a 512by block
+	//assume you have a 512by block TODO 
 	if(count == 1) {
 		send_cmd(RD_SINGLE_BLOCK, sector*512);
 		recv(recv_buf, 1);
 		if(recv_buf[0]) {
 			return RES_ERROR; 
 		}
-
 		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
 			return RES_ERROR;
-		} else return RES_OK;
+		}
 
+		return RES_OK;
 	} else { //mult
 		send_cmd(RD_MULT_BLOCK, sector*512);
-
 		recv(recv_buf, 1);
 		if(recv_buf[0]) {
 			return RES_ERROR; 
 		}
-
-		//loop through until 'count' sectors doing reads, then send out the stop command
-		recv(buff);
-		send_cmd(STOP_TRANS, 0);
-
-		recv(recv_buf, 2);
-		while(recv_buf[1]==0) {
-			recv(recv_buf, 2);
-			if(recv_buf[0]) {
-				return RES_ERROR; 
-			} 
-		} return RES_OK;
-
 		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
 			return RES_ERROR;
-		} else return RES_OK;
+		} 
+		send_cmd(STOP_TRANS, 0);
+		recv(recv_buf, 2);
+		if(recv_buf[0]) {
+			return RES_ERROR; 
+		} //TODO consider second by
+
+		return RES_OK;
 	}
-	//
-
-
 }
 
 /*-----------------------------------------------------------------------*/
