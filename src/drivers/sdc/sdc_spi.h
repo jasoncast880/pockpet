@@ -38,8 +38,6 @@
 #define SD_SEND_OP_COND 0x29 
 #define ACMD41 SD_SEND_OP_COND 
 
-static bool shdc; //diskio will set this flag
-                  
 static uint64_t sdc_cmd;
 int sdc_initialize(uint8_t cs, spi_inst_t* spi);
 

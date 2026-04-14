@@ -65,7 +65,7 @@ DSTATUS disk_initialize (
     t=0; 
     send_cmd(CMD_GO_IDLE_ST, 0);
     do { 
-        recv_n_blocking(recv_buf, 1);
+        recv_cmd_blocking(recv_buf, 1);
     } while( !recv_buf[0] && (t++ != time_limit) );
 
     if(recv_buf[0]!=0x01) {
@@ -73,7 +73,7 @@ DSTATUS disk_initialize (
     }
 
     send_cmd(SEND_IF_COND, 0x000001AA);
-    recv_n_blocking(recv_buf, 5);
+    recv_cmd_blocking(recv_buf, 5);
     if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
@@ -82,7 +82,7 @@ DSTATUS disk_initialize (
     }
 
     send_cmd(READ_OCR, 0);
-    recv_n_blocking(recv_buf, 5);
+    recv_cmd_blocking(recv_buf, 5);
     if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
@@ -99,11 +99,11 @@ DSTATUS disk_initialize (
 
     do{
         send_cmd(APP_CMD, 0);
-        recv_n_blocking(recv_buf, 1);
+        recv_cmd_blocking(recv_buf, 1);
         if (recv_buf[0] > 0x01) return STA_NOINIT;
 
         send_cmd(SD_SEND_OP_COND, hcs);
-        recv_n_blocking(recv_buf, 1);
+        recv_cmd_blocking(recv_buf, 1);
 
     } while(recv_buf[0] != 0x00 && t<=time_limit);
     if(recv_buf[0]==0x00) { 
@@ -111,7 +111,7 @@ DSTATUS disk_initialize (
     }
     
     send_cmd(READ_OCR, 0); //retrieve CCS
-    recv_n_blocking(recv_buf, 5);
+    recv_cmd_blocking(recv_buf, 5);
     if(recv_buf[0]) {
         return STA_NOINIT;
     }
