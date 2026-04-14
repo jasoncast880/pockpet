@@ -37,31 +37,43 @@ DSTATUS disk_status (
 )
 {
 	DSTATUS stat;
-	
-
 } 
 
 /*-----------------------------------------------------------------------*/
-/* Inidialize a Drive                                                    */
+/* Initialize a Drive                                                    */
 /*-----------------------------------------------------------------------*/
 
+static bool is_sdhc;
 DSTATUS disk_initialize (
 	BYTE pdrv				/* Physical drive nmuber to identify the drive */
 )
 {
-DSTATUS stat;
+    DSTATUS stat;
+
+    uint32_t t;
+    uint32_t time_limit = 100000;
+
+    uint8_t recv_buf[5];
 
     sdc_initialize(SDC_CS, SPI0_BUS); 
-    sdc_CS_LO();
 
+	sdc_CS_HI();
+    uint8_t dummy = 0xff;
+    spi_write_blocking( SPI0_BUS, &dummy, 200 ); 
+	sdc_CS_LO();
+
+    t=0; 
     send_cmd(CMD_GO_IDLE_ST, 0);
-    recv(recv_buf, 1);
+    do { 
+        recv_n_blocking(recv_buf, 1);
+    } while( !recv_buf[0] && (t++ != time_limit) );
+
     if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
 
     send_cmd(SEND_IF_COND, 0x000001AA);
-    recv(recv_buf, 5);
+    recv_n_blocking(recv_buf, 5);
     if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
@@ -70,47 +82,63 @@ DSTATUS stat;
     }
 
     send_cmd(READ_OCR, 0);
-    recv(recv_buf, 5);
+    recv_n_blocking(recv_buf, 5);
     if(recv_buf[0]!=0x01) {
         return STA_NOINIT;
     }
-    uint8_t ocr = recv_buf[3] & 0x00; //!!!!
-    //check ocr, identify card type.
 
-    send_cmd(APP_CMD, 0);
-    recv(recv_buf, 1);
-    if(recv_buf[0]!=0x01) {
-        return STA_NOINIT;
-    }
+    uint32_t ocr = (recv_buf[1]<<24) |
+                   (recv_buf[2]<<16) |
+                   (recv_buf[3]<<8) |
+                   (recv_buf[4]);
+
+    uint32_t hcs = (1 << 30);
 
     recv_buf[0] = 0x01; //idle state 0x01
-    size_t timeout = 0; 
+    t = 0; 
 
-    while(recv_buf[0] != 0x00 ) {
-        send_cmd(SD_SEND_OP_COND, (uint32_t) ocr << 29 );
-        recv(recv_buf, 1);
+    do{
+        send_cmd(APP_CMD, 0);
+        recv_n_blocking(recv_buf, 1);
+        if (recv_buf[0] > 0x01) return STA_NOINIT;
 
-        timeout++;
-        if(timeout==1000) {
-            return STA_NOINIT;
-        }
+        send_cmd(SD_SEND_OP_COND, hcs);
+        recv_n_blocking(recv_buf, 1);
+
+    } while(recv_buf[0] != 0x00 && t<=time_limit);
+    if(recv_buf[0]==0x00) { 
+        return STA_NOINIT;
     }
     
-    send_cmd(READ_OCR, 0);
-    recv(recv_buf, 5);
+    send_cmd(READ_OCR, 0); //retrieve CCS
+    recv_n_blocking(recv_buf, 5);
     if(recv_buf[0]) {
         return STA_NOINIT;
     }
-    //read the ccs for capacity information, etc.
+    if(recv_buf[1] & 0x40) { //indication of sdhc
+        is_sdhc = true;
+        return STA_OK;
+    } else {
+        is_sdhc = false;
+        return STA_OK;
+    }
 
-    return STA_OK;
-
+    sdc_CS_HI();
+    spi_write_blocking(SPI0_BUS, (uint8_t[]){0xff}, 1);
 }   
 
 
 /*-----------------------------------------------------------------------*/
 /* Read Sector(s)                                                        */
 /*-----------------------------------------------------------------------*/
+
+static uint32_t get_addr(LBA_t sector) {
+    if (!is_sdhc) {
+        return sector;
+    } else { 
+        return sector * 512;
+    }
+}
 
 DRESULT disk_read (
 	BYTE pdrv,		/* Physical drive nmuber to identify the drive */
@@ -122,35 +150,42 @@ DRESULT disk_read (
 	DRESULT res;
 	uint32_t arg = 0;
 
-	//assume you have a 512by block TODO 
+    uint8_t recv_buf[5];
+
+    sdc_CS_LO();
 	if(count == 1) {
-		send_cmd(RD_SINGLE_BLOCK, sector*512);
-		recv(recv_buf, 1);
+		send_cmd(RD_SINGLE_BLOCK, get_addr(sector));
+		recv_cmd_blocking(recv_buf, 1);
 		if(recv_buf[0]) {
 			return RES_ERROR; 
-		}
-		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
-			return RES_ERROR;
 		}
 
-		return RES_OK;
-	} else { //mult
+        res = recv_data_blocking( (uint8_t*) buff );
+		return res;
+
+	} else { 
 		send_cmd(RD_MULT_BLOCK, sector*512);
-		recv(recv_buf, 1);
+		recv_cmd_blocking(recv_buf, 1);
 		if(recv_buf[0]) {
 			return RES_ERROR; 
 		}
-		if(recv( (uint8_t*) buff, (size_t) count*512 )) {
-			return RES_ERROR;
-		} 
-		send_cmd(STOP_TRANS, 0);
-		recv(recv_buf, 2);
+
+        for(uint i=0;i<count;i++){
+            res = recv_data_blocking( (uint8_t*)buff+(i*512) );
+        }
+
+		send_cmd(STOP_TRANS, 0); //TODO timing may be off
+		recv_cmd_blocking(recv_buf, 1);
 		if(recv_buf[0]) {
 			return RES_ERROR; 
-		} //TODO consider second by
+		}
 
 		return RES_OK;
 	}
+
+    sdc_CS_HI();
+    spi_write_blocking(SPI0_BUS, (uint8_t[]){0xff}, 1);
+
 }
 
 /*-----------------------------------------------------------------------*/

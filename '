@@ -67,26 +67,21 @@ int send_cmd(uint8_t idx, uint32_t arg) {
     bytes[5] = (uint8_t)(cmd)     & 0xff;
 
     spi_write_blocking(_SDC_BUS, &bytes[0], 6);
-
-    uint8_t dummy = 0xFF;
-    spi_write_blocking(_SDC_BUS, &dummy, 1);
     return 0;
 }
 
 static uint8_t recv_r1() { //block until r1
-    uint8_t r1;
+    uint8_t by;
     uint32_t timeout = 100000;
 
     do {
-        spi_read_blocking(_SDC_BUS, 0xff, &r1, 1);
+        spi_read_blocking(_SDC_BUS, 0xff, &by, 1);
         timeout--;
-    } while (r1==0xff && timeout);
-    if(!timeout) { 
-        return 0xff;
-    } else return r1;
+    } while (by==0xff && timeout);
+    return by;
 }
 
-static uint8_t recv_data_token_blocking() { //different pattern for m.block wr
+uint8_t recv_data_token(uint8_t* by) { //different pattern for m.block wr
     uint8_t resp_token;
     uint32_t timeout = 100000;
 
@@ -94,36 +89,18 @@ static uint8_t recv_data_token_blocking() { //different pattern for m.block wr
         spi_read_blocking(_SDC_BUS, 0xff, &resp_token, 1);
         timeout--;
     } while (resp_token==0xff && timeout);
-    if(!timeout) { 
-        return 0xff;
-    } else return resp_token; //correct is 0xfe return
+    return resp_token;
 }
 
-int recv_cmd_blocking(uint8_t* buf, size_t size) {
+
+
+int recv_n_blocking(uint8_t* buf, size_t size) {
     buf[0] = recv_r1();
     
     if(size > 1) {
         spi_read_blocking(_SDC_BUS, 0xff, buf+1, size-1);
-    } 
-
-    uint8_t dummy;
-    spi_read_blocking(_SDC_BUS, 0xff, &dummy, 1); //idling 
-    return 0;
-}
-
-int recv_data_blocking(uint8_t* buf) { //1 block only!!!
-    int recv;
-    if(recv_data_token_blocking()!=0xfe) {
-        return 1;
     }
-    //512 byte data-block + 2 byte crc
-    recv = spi_read_blocking(_SDC_BUS, 0xff, buf, 512); 
-    uint8_t discard_crc[2];
-    spi_read_blocking(_SDC_BUS, 0xff, discard_crc, 2); 
-
-    uint8_t dummy;
-    spi_read_blocking(_SDC_BUS, 0xff, &dummy, 1); //idling 
-    return recv;
+    return 0 ;
 }
 
 int sdc_CS_LO() { gpio_put(_SDC_CS , 0); }
