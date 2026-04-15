@@ -203,17 +203,6 @@ DRESULT disk_write (
 	DRESULT res;
 	int result;
 
-	switch (pdrv) {
-	case DEV_MMC :
-		// translate the arguments here
-        gpio_put(SDC_CS, 0);
-        result = spi_write_blocking((spi_inst_t*)spi0_hw, buff, count);
-        gpio_put(SDC_CS, 1);
-        if (result == count) return RES_OK;
-        else return RES_ERROR;
-        
-    default: res = RES_PARERR;
-    } return res;
 }
 
 #endif
@@ -231,18 +220,24 @@ DRESULT disk_ioctl (
 	DRESULT res;
 	int result;
 
-	switch (pdrv) {
-	case DEV_MMC :
-        gpio_put(SDC_CS, 0);
-        spi_write_blocking((spi_inst_t*)spi0_hw, &cmd, 1);
-        spi_read_blocking((spi_inst_t*)spi0_hw, 0xff, buff, 1);
-        gpio_put(SDC_CS, 1);
+	switch(cmd) {
+		case CTRL_SYNC:
+			//TODO: add in case READONLY == 1 
+			//for now unneeded
+			return 0;
+		
+		case GET_SECTOR_COUNT:
+			return 0 ;
 
-        if ( *buff==0xff ) return RES_OK; //idk
-        else return RES_ERROR;
-        
-    default: res = RES_PARERR;
-    } return res;
+		case GET_SECTOR_SIZE:
+			//unneeded
+			return 0;
+
+		case GET_BLOCK_SIZE:
+			return 0;
+
+		case CTRL_TRIM:
+			return 0;
+	};
+
 }
-
-

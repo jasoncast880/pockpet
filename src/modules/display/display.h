@@ -30,7 +30,9 @@ enum cmd_sequence_t {
 #include "sync_common.h"
 
 extern "C" {
+
 void display_task( void* pvParameters ); 
+
 }
 
 #endif
