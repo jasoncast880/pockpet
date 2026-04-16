@@ -93,7 +93,7 @@ target_include_directories(tactigachi_rtos PRIVATE
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons
 )
 
-####MODULES#####
+#### DEPENDENCIES #####
 
 target_link_libraries(tactigachi_rtos PRIVATE
 	# macro config

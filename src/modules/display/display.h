@@ -45,8 +45,9 @@ private:
 public:
 	
 	//TILE-RELATED - Run-Access within ISR.
-	inline static DirtyTile* current_tile = nullptr;//iteration through Layer::dirty_tiles
-	inline static DirtyTile* end_tile = nullptr;
+
+	static uint8_t* current_tile;
+	static uint8_t* end_tile;
 
 	volatile inline static int dirty_flag = 1; 
 	// -1, waiting reset

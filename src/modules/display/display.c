@@ -1,42 +1,38 @@
 #include "display.h"
 
-#include <hardware/dma.h>
 #include <tile_engine.h>
 #include "ili9341.h"
 
-//#ifdef RTOS_MODE
-
-#include "FreeRTOS.h"
-#include "portmacro.h"
-#include "task.h"
-#include "semphr.h"
+#ifdef RTOS_MODE
 
 #include "sync_common.h"
 
-void display_task( void* pvParameters ) {
-	//run base system tileset & map pointer initializer
-	add_Layer(base-layer);
-	add_Sprite(cursor-shi);
-	
-	//setup the dma channels for bulk processing
-	dma_claim_mask(1u << 0);
-	
+void render_task( void* pvParameters ) {
 	for(;;) {
-		/*
-		 * basic render cycle: 
-		 * render via tile engine -> push data ->
-		 * parse inputs from other modules into render commands -> repeat
-		 */
-
-		xSemaphoreTake(spi0_sync_t, portMAX_DELAY);
-
-		update_sprite(id, x, y, map);
-		eng_render();
-
-		//crazy display state machine shi
-
-		xSemaphoreGive(spi0_sync_t);
+		//parse system commands into render-able stuff
+		//every loop do a render cycle
+		//use c-wrapper functions to interact with the engine
 	}
 }
 
-//#endif 
+void display_task( void* pvParameters ) {
+	for(;;) {
+		//pure pusher
+		//dma state machine, use linked list or smilar to address
+		//blabla
+
+	}
+}
+
+#endif 
+
+/*
+ * BLOCKERS:
+ * Fix tile engine to be C-Compatible
+ * diagrams on the tile engine accessible structures.
+ *
+ * revisit the driver and make it more reliable, consistent semantics
+ */
+
+
+

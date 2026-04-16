@@ -1,6 +1,6 @@
-file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 add_library(tile_engine STATIC
   tile_engine.cpp
+	wrapper.cpp #so i can use this in my c-based modules
 )
 
 target_include_directories(tile_engine PUBLIC

@@ -281,6 +281,8 @@ void display_task(void* pvParameters) {
 		&tile_bg_16[0],
 		0
 		); //id not relevant yet ? TODO: id handling system.
+	
+	
 
 	Tileset* jet_tileset = new Tileset( (uint16_t*)&jet_sprite_16[0], static_cast<size_t>(4096) );
 	uint8_t cursor = screen->sprite_add(

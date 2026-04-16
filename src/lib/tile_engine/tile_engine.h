@@ -16,9 +16,11 @@
 #define DEFAULT_SCREEN_TILES_Y 15
 #define DEFAULT_SCREEN_TILES_X 20
 
+#define NUM_LAYERS 2
 /*
  * C INTERFACE METHODS!!
  */
+
 uint8_t add_layer(uint16_t* tileset, size_t num_tiles, 
 	uint8_t tilemap, uint8_t tiles_wide, uint8_t tiles_long ); //return id
 
@@ -27,7 +29,7 @@ uint8_t add_sprite(uint16_t* tileset, size_t num_tiles,
 	uint8_t layer_id); //return id
 void update_sprite(uint8_t* map, uint8_t x, uint8_t y);
 
-void render();
+void render(uint8_t layer_id); //crunch da numbers
 
 extern "C" {
 
