@@ -1,6 +1,5 @@
 #include "tile_engine.h"
 
-
 Tile::Tile(uint16_t* src)
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
@@ -78,18 +77,20 @@ Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t*
 	this->id =id;
 }
 
-uint8_t Layer::sprite_add(Sprite* sprite) {
-	sprites.push_back(*sprite);
-	uint8_t* id = sprite->get_id();
-	*id = (sprites.size()-1); 
-	return *id;
+uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
+	if(sprites.size <= MAX_SPRITES_PER_LAYER) {
+		Sprite* sprite = new Sprite(tiles_wide, tiles_high, ts, map, this);
+		sprites.push_back(sprite);
+		sprite->id = sprites.size(); //id is size of vector.
+		return sprite->id;
+	} else return 0; //0 id means no space on the layer.
 }
-
 void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
-	Sprite* sprite = &sprites.at(id);
-	sprite->set_position(x,y);
-	sprite->set_map(map);
+	Sprite sprite = sprites.at(id);
+	sprite.set_position(x,y);
+	sprite.set_map(map);
 }
+void Layer::sprite_delete_by_id(uint8_t id) {} //no delete by index on vec
 
 void Layer::render() {
 	for( int i = 0 ; i < sprites.size() ; i++ ) {
@@ -167,3 +168,53 @@ Layer::~Layer() {
 
 Sprite::~Sprite() {
 }
+
+
+extern "C" {
+
+static uint8_t layer_count = 0;
+struct LayerHandle_t {
+	Tileset* tiles;
+	Layer* layer;
+	uint8_t sprite_count = 0;
+
+	uint8_t id;
+};
+struct SpriteHandle_t {
+	Tileset* tiles;
+	
+	LayerHandle_t layer_handle;
+	uint8_t id;
+};
+
+LayerHandle_t add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
+	LayerHandle_t handle;
+	handle.tiles  = new Tileset(tiles, num_tiles);
+	handle.layer  = new Layer(tiles_wide, tiles_high, handle.tiles, tilemap, )
+	handle.id = (layer_count++ <= MAX_LAYERS) ? layer_count : 0;
+
+	return handle;
+}
+SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer) {
+	SpriteHandle_t handle;
+	handle.tiles = new Tileset(tiles, num_tiles);
+	handle.layer_handle = associated_layer;
+	handle.id = associated_layer.layer->sprite_add(tiles_wide,tiles_high, handle.tiles, tilemap);
+
+	return handle;
+}
+
+int update_layer(LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y) {
+	layer_handle.layer->set_position(x,y);
+	layer_handle.layer->set_map(map);
+}
+int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
+	layer_handle.layer->sprite_update_by_id(sprite_id, x, y, map);
+	return 0;
+}
+
+void soft_render() {
+}
+
+} //extern "C"
+

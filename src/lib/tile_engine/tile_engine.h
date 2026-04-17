@@ -11,27 +11,12 @@
 
 #define ALPHA_FILTER 0xF81F
 
+//TODO: KEEP ALL THIS STUFF IN A CONFIG FILE SO EASY FOR ALL TO READ
 #define DEFAULT_TILE_LEN 16
-
 #define DEFAULT_SCREEN_TILES_Y 15
 #define DEFAULT_SCREEN_TILES_X 20
-
-#define NUM_LAYERS 2
-/*
- * C INTERFACE METHODS!!
- */
-
-uint8_t add_layer(uint16_t* tileset, size_t num_tiles, 
-	uint8_t tilemap, uint8_t tiles_wide, uint8_t tiles_long ); //return id
-
-uint8_t add_sprite(uint16_t* tileset, size_t num_tiles, 
-	uint8_t tilemap, uint8_t tiles_wide, uint8_t tiles_long, 
-	uint8_t layer_id); //return id
-void update_sprite(uint8_t* map, uint8_t x, uint8_t y);
-
-void render(uint8_t layer_id); //crunch da numbers
-
-extern "C" {
+#define MAX_LAYERS 2
+#define MAX_SPRITES_PER_LAYER 5
 
 struct Tile {
 	Tile();
@@ -92,6 +77,7 @@ public:
 	Tileset* tileset;
 	uint8_t tiles_wide, tiles_high;
 
+	uint8_t id; 
 
 	Tilemap();
 
@@ -116,7 +102,6 @@ public:
 class Sprite;
 class Layer: public Tilemap{
 public:
-	uint8_t id; //TODO enforce ID-0 as 320x240 base-screen..
 
 	std::vector<Sprite> sprites;
 
@@ -128,6 +113,7 @@ public:
 	
 	uint8_t sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map); 
 	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
+	void sprite_delete_by_id(uint8_t id); 
 
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 
@@ -139,11 +125,8 @@ public:
 };
 
 //position enforced in context with associated_layer
-class Sprite: public Tilemap { //touched by Layer only
+class Sprite: public Tilemap { //touched by Layer only ; id is index within 'sprites' field
 private:
-public:
-	uint8_t id = 0;//set by the Layer.
-
 	Layer* associated_layer = nullptr;
 
 	Sprite();
@@ -161,11 +144,26 @@ public:
 	DirtyTile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
 
 	~Sprite();
-	uint8_t* get_id();
 	void render() override;
 
 	friend Layer;
 };
+
+extern "C" {
+
+struct LayerHandle_t;
+struct SpriteHandle_t;
+
+LayerHandle_t add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
+SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer);
+
+int update_layer(LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y);
+int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y);
+
+int delete_layer(LayerHandle_t layer);
+int delete_sprite(SpriteHandle_t sprite);
+
+void soft_render();
 
 }
 
