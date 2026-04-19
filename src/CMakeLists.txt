@@ -4,14 +4,12 @@ add_executable( tactigachi_rtos )
 add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
 add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
-
 if(TARGET tactigachi_bm)
-
 target_sources( tactigachi_bm PRIVATE
 	dummy.cpp
 
 	#add on peripherals as you go
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.c
 	#${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc/sdc.cpp
   #${CMAKE_CURRENT_SOURCE_DIR}/modules/buttons/buttons.c
 	#${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp

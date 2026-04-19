@@ -126,7 +126,7 @@ public:
 
 //position enforced in context with associated_layer
 class Sprite: public Tilemap { //touched by Layer only ; id is index within 'sprites' field
-private:
+public:
 	Layer* associated_layer = nullptr;
 
 	Sprite();
@@ -148,23 +148,4 @@ private:
 
 	friend Layer;
 };
-
-extern "C" {
-
-struct LayerHandle_t;
-struct SpriteHandle_t;
-
-LayerHandle_t add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
-SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer);
-
-int update_layer(LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y);
-int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y);
-
-int delete_layer(LayerHandle_t layer);
-int delete_sprite(SpriteHandle_t sprite);
-
-void soft_render();
-
-}
-
 #endif //TILE_ENGINE_H

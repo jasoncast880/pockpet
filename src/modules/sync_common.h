@@ -8,6 +8,8 @@
 //for the modules to see their kernel structures, for ease of sync.
 
 //SPI0 - used by modules display/ & sdc/ (WIP)
+#define SPI0_BUS_SPEED 8000*(1000)
+static bool spi0_initialized;
 static xSemaphoreHandle spi0_sync_t;
 
 #endif //SYNC_COMMON_H

@@ -1,5 +1,4 @@
-#include "tile_engine.h"
-
+#include "tile_engine.hpp"
 Tile::Tile(uint16_t* src)
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
@@ -78,11 +77,11 @@ Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t*
 }
 
 uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
-	if(sprites.size <= MAX_SPRITES_PER_LAYER) {
-		Sprite* sprite = new Sprite(tiles_wide, tiles_high, ts, map, this);
+	if(sprites.size() <= MAX_SPRITES_PER_LAYER) {
+		Sprite sprite(tiles_wide, tiles_high, ts, map, this);
 		sprites.push_back(sprite);
-		sprite->id = sprites.size(); //id is size of vector.
-		return sprite->id;
+		sprite.id = sprites.size(); //id is size of vector.
+		return sprite.id;
 	} else return 0; //0 id means no space on the layer.
 }
 void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
@@ -114,7 +113,7 @@ void Sprite::render() { //todo: for now this assumes that its blitting on layer-
 	}
 }
 
-void Layer::dirty_tiles_add(Tile* tile) {	dirty_tiles.push_back(*tile); }
+void Layer::dirty_tiles_add( DirtyTile* tile) {	dirty_tiles.push_back(*tile); }
 
 Layer::tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
 	tile_context_t dummy;
@@ -136,7 +135,7 @@ Layer::tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 	return tc;
 }
 
-Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
+DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
 	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
 		for(int y = 0; y<DEFAULT_TILE_LEN; y++) {
@@ -150,7 +149,7 @@ Tile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider cachi
 			buf[x+y*DEFAULT_TILE_LEN] = pixel;
 		}
 	}
-	Tile* tile = new Tile(&buf[0], x, y ); 
+	DirtyTile* tile = new DirtyTile(&buf[0], x, y ); 
 	return tile;
 }
 
@@ -169,8 +168,7 @@ Layer::~Layer() {
 Sprite::~Sprite() {
 }
 
-
-extern "C" {
+#include "engine_api.h"
 
 static uint8_t layer_count = 0;
 struct LayerHandle_t {
@@ -189,14 +187,16 @@ struct SpriteHandle_t {
 
 LayerHandle_t add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
 	LayerHandle_t handle;
+
 	handle.tiles  = new Tileset(tiles, num_tiles);
-	handle.layer  = new Layer(tiles_wide, tiles_high, handle.tiles, tilemap, )
 	handle.id = (layer_count++ <= MAX_LAYERS) ? layer_count : 0;
+	handle.layer  = new Layer(tiles_wide, tiles_high, handle.tiles, tilemap, handle.id);
 
 	return handle;
 }
 SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer) {
 	SpriteHandle_t handle;
+
 	handle.tiles = new Tileset(tiles, num_tiles);
 	handle.layer_handle = associated_layer;
 	handle.id = associated_layer.layer->sprite_add(tiles_wide,tiles_high, handle.tiles, tilemap);
@@ -207,6 +207,8 @@ SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, u
 int update_layer(LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y) {
 	layer_handle.layer->set_position(x,y);
 	layer_handle.layer->set_map(map);
+
+	return 0;
 }
 int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
 	layer_handle.layer->sprite_update_by_id(sprite_id, x, y, map);
@@ -216,5 +218,6 @@ int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, u
 void soft_render() {
 }
 
-} //extern "C"
+
+
 

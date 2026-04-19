@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include <hardware/spi.h>
+#include <pico/time.h>
 
 static uint8_t _ILI9341_CS;
 static uint8_t _ILI9341_RST;
@@ -29,7 +30,7 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
     gpio_put(_ILI9341_CS, 0);
 
     ili9341_hard_reset(); 
-    ili9341_init_sub_pwr();
+    ili9341_soft_reset();
 
     ili9341_writeCommand(0xC0); // Power Control 1
     ili9341_writeData(0x23);
@@ -55,7 +56,17 @@ void ili9341_initialize(int8_t cs, int8_t rst, int8_t dc) {
 
     gpio_put(_ILI9341_CS, 1);
 
-    ili9341_init_sub_vram();
+    gpio_put(_ILI9341_CS, 0);
+    //call to set controller's display orientation, pixel format
+    ili9341_writeCommand(PIXSET);
+    ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
+
+    ili9341_writeCommand(MADCTL);
+    ili9341_writeData(0xE8);
+    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame
+    gpio_put(_ILI9341_CS, 1);
+
+		sleep_ms(500);
 
     ili9341_writeCommand(DISPON);
     sleep_ms(100);
@@ -75,16 +86,9 @@ void ili9341_writeDataBuffer8(uint8_t* dataBuf, size_t len){
     gpio_put(_ILI9341_DC, 1);
     spi_write_blocking(spi0, dataBuf, len);
 }
-void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len){ 
-    gpio_put(_ILI9341_DC, 1);
-    spi_write16_blocking(spi0, dataBuf, len);
-}
 
 //commands abstracted
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa){
-
-    gpio_put(_ILI9341_CS, 0);
-
     ili9341_writeCommand(VSCR_DEF);
     ili9341_writeData((uint8_t)(tfa>>8));
     ili9341_writeData((uint8_t)(tfa&0xFF));
@@ -93,23 +97,16 @@ void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa){
     ili9341_writeData((uint8_t)(bfa>>8));
     ili9341_writeData((uint8_t)(bfa&0xFF));
     sleep_ms(10);
-
-    gpio_put(_ILI9341_CS, 1);
 }
 
 void ili9341_setScrollPtr(uint16_t vsp){
-    gpio_put(_ILI9341_CS, 1);
-
     ili9341_writeCommand(VSCR_ADD);
     ili9341_writeData((uint8_t)(vsp>>8));
     ili9341_writeData((uint8_t)(vsp&0xFF));
     sleep_ms(10);
-
-    gpio_put(_ILI9341_CS, 1);
 }
 
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) { 
-    gpio_put(_ILI9341_CS, 0);
     uint16_t x1 = x0+w-1;
     uint16_t y1 = y0+h-1;
 
@@ -124,45 +121,30 @@ void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h) {
     ili9341_writeData((uint8_t)(y0&0xFF));
     ili9341_writeData((uint8_t)(y1>>8));
     ili9341_writeData((uint8_t)(y1&0xFF));
-    gpio_put(_ILI9341_CS, 1);
 
 } //YOU MUST FOLLOW WITH A RAMWR, THEN DO A 16 bit write
 
-static void ili9341_hard_reset(){
-    gpio_put(_ILI9341_CS, 0);
-
+void ili9341_hard_reset(){
     gpio_put(_ILI9341_RST, 1);
     sleep_ms(10);
     gpio_put(_ILI9341_RST, 0);
     sleep_ms(10);
     gpio_put(_ILI9341_RST, 1);
     sleep_ms(120);
-
-    gpio_put(_ILI9341_CS, 1);
 }
 
-static void ili9341_init_sub_pwr(){
-    gpio_put(_ILI9341_CS, 0);
-
+void ili9341_soft_reset(){
     //call to set power & electrical presets
     ili9341_writeCommand(SWRESET);
     sleep_ms(150);
     ili9341_writeCommand(SLPOUT);
     sleep_ms(120);
-
-    gpio_put(_ILI9341_CS, 1);
 }
 
-static void ili9341_init_sub_vram(){
-    gpio_put(_ILI9341_CS, 0);
-    //
-    //call to set controller's display orientation, pixel format
-    ili9341_writeCommand(PIXSET);
-    ili9341_writeData(0x55); //set the pixel format to RGB 5-6-5
-
-    ili9341_writeCommand(MADCTL);
-    ili9341_writeData(0xE8);
-    ili9341_setAddrWindow(0,0,320,240); //recalibrate addressing to fit the whole frame
-
-    gpio_put(_ILI9341_CS, 1);
+void ili9341_setCS_HI() { 
+	gpio_put(_ILI9341_CS, 1);
 }
+void ili9341_setCS_LO() {
+	gpio_put(_ILI9341_CS, 0);
+}
+

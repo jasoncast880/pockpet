@@ -63,10 +63,8 @@ extern "C"{
                                   
 #define GAMMA_CORR_INIT_SEQ_1 {1,2,3,4} //example
 
-//internal funcs
-static void ili9341_hard_reset();
-static void ili9341_init_sub_pwr(); 
-static void ili9341_init_sub_vram(); 
+void ili9341_hard_reset();
+void ili9341_soft_reset(); 
 
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc); //running on spi0 bus
 void ili9341_writeCommand(uint8_t commandByte);
@@ -80,8 +78,8 @@ void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
 void ili9341_exitScrollMode(); 
 
 //for locking access to the spi0 bus
-void ili9341_setCS_HIGH();
-void ili9341_setCS_LOW();
+void ili9341_setCS_HI();
+void ili9341_setCS_LO();
 
 #ifdef __cplusplus
 }

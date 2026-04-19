@@ -1,56 +1,42 @@
 #include <cstddef>
 #include <hardware/spi.h>
 #include <stdio.h>
-#include "jet_sprite.h"
 #include "pico/stdlib.h" 
 #include "pinout.h"
+#include "graphics_conf.h"
 
 #include "display.h"
-#include "tile_engine.h"
-
-//#include "buttons.h"
-//#include "usb.h"
-
-#include <ampalaya_tileset_16.h>
-#include <tilemaps.h>
 
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
-	Tileset* sys_tileset = new Tileset( (uint16_t*)&ampalaya_tileset_16[0], static_cast<size_t>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*30) );
-	Layer* screen = new Layer(
-		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_X),
-		static_cast<uint8_t>(DEFAULT_SCREEN_TILES_Y),
-		sys_tileset,
-		&tile_bg_16[0],
-		0
-		); //id not relevant yet ? TODO: id handling system.
 
-	Tileset* jet_tileset = new Tileset((uint16_t*)&jet_sprite_16[0],static_cast<size_t>(4096));
-	uint8_t cursor = screen->sprite_add(
-		2,
-		2,
-		jet_tileset,
-		&demo_spritemap_1[0]
-	);
+	uint8_t blue[2] = {0x00,0x1f};
+	uint8_t red[2]  = {0xf8,0x00};
 
-	int x = 100;
-	int y = 100;
-	int i = 1;
-	DisplayHandler& display = DisplayHandler::setup(screen); 
-	//button_setup();
-	//usb_setup();
+	for(int i = 0 ; i < 10 ; i++) {
+		ili9341_setCS_LO();
 
-	display.draw_clean_tiles(screen); //if in dma mode, nothing happens (yet)
-	sleep_ms(2000); 
-	while(true) {
-		sleep_ms(500); 
+		ili9341_setAddrWindow(0, i * DEFAULT_TILE_LEN, DEFAULT_TILE_LEN, DEFAULT_TILE_LEN);
+		for(int j = 0 ; j < DEFAULT_TILE_LEN * DEFAULT_TILE_LEN ; j++) {
+			ili9341_writeData(blue[0]);
+			ili9341_writeData(blue[1]);
+		}
 
-		screen->sprite_update_by_id(cursor, x, y, &demo_spritemap_4[0]);
-		screen->render();
+		ili9341_setCS_HI();
 
-		if(display.draw_dirty_tiles(screen) < 0 )
-			return 0; //note this has to return eventually
-		x--;
+		sleep_ms(100);
+
+		ili9341_setCS_LO();
+
+		ili9341_setAddrWindow(DEFAULT_TILE_LEN, i * DEFAULT_TILE_LEN, DEFAULT_TILE_LEN, DEFAULT_TILE_LEN);
+		for(int j = 0 ; j < DEFAULT_TILE_LEN * DEFAULT_TILE_LEN ; j++) {
+			ili9341_writeData(red[0]);
+			ili9341_writeData(red[1]);
+		}
+
+		ili9341_setCS_HI();
+
 	}
+	
 }
