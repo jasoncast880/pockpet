@@ -6,8 +6,7 @@ add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
 if(TARGET tactigachi_bm)
 target_sources( tactigachi_bm PRIVATE
-	dummy.cpp
-
+	dummy.c
 	#add on peripherals as you go
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.c
 	#${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc/sdc.cpp
@@ -74,7 +73,7 @@ target_sources( tactigachi_rtos PRIVATE
 	main.cpp
 	#mem_override.cpp 
 
-	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/modules/display/display.c
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/sdc/sdc.cpp
 
 	${CMAKE_CURRENT_SOURCE_DIR}/modules/usb/usb.cpp

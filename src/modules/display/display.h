@@ -1,7 +1,7 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#include <pico/stdlib.h>
+#include "pico/stdlib.h"
 #include <stddef.h>
 #include <stdint.h>
 
@@ -17,6 +17,10 @@
 
 #define DMA_DISPLAY_CH 0x00
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 enum cmd_sequence_t {
 	CASET_CMD,
 	CASET_DATA,
@@ -26,14 +30,18 @@ enum cmd_sequence_t {
 	PIX_BUF
 };
 
+void display_setup();
+
 #ifdef RTOS_MODE
 #include "sync_common.h"
-
-extern "C" {
-
 void display_task( void* pvParameters ); 
 
 }
-
 #endif
+
+
+#ifdef __cplusplus
+} //extern "C"
+#endif
+
 #endif //DISPLAY_H

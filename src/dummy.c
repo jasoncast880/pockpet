@@ -1,4 +1,4 @@
-#include <cstddef>
+#include <stddef.h>
 #include <hardware/spi.h>
 #include <stdio.h>
 #include "pico/stdlib.h" 
@@ -10,6 +10,8 @@
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
+
+	display_setup();
 
 	uint8_t blue[2] = {0x00,0x1f};
 	uint8_t red[2]  = {0xf8,0x00};
