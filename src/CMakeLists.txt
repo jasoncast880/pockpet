@@ -34,6 +34,7 @@ target_link_libraries(tactigachi_bm PRIVATE
 	hardware_gpio
 	hardware_dma
 	hardware_pio
+	hardware_pwm
 
 	# drivers/other HAL
 	ili9341_rp2040
@@ -49,7 +50,7 @@ target_link_libraries(tactigachi_bm PRIVATE
 
 target_compile_definitions(tactigachi_bm PRIVATE configNUMBER_OF_CORES=1)
 
-#pico_enable_stdio_usb(tactigachi_bm 1) #perhaps disable if not using/debugging via gdb
+pico_enable_stdio_usb(tactigachi_bm 1) #perhaps disable if not using/debugging via gdb
 pico_enable_stdio_uart(tactigachi_bm 1)
 pico_add_extra_outputs(tactigachi_bm)
 
