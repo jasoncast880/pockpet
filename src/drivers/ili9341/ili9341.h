@@ -11,6 +11,7 @@ extern "C"{
 //gp defines; 
 //ili9341 modes, reg addressing refer to strionix ili9341 10.1 table
 
+
 //general-purpose registers
 #define NOOP    0x00
 #define SWRESET 0x01
@@ -42,6 +43,8 @@ extern "C"{
 #define MADCTL  0x36 /* see above.. */
 
 //scrolling-related registers here
+static volatile bool NORMAL_MODE = true;
+
 #define VSCR_DEF 0x33 /* config vert. scrolling */
 #define VSCR_ADD 0x37 /* assign vert. scrolling pointer */
 
@@ -53,29 +56,21 @@ extern "C"{
 #define FRMCTR1 0xB1 /* frame rate control */
 #define PIXSET  0x3A /* config color format */
 
-//define subroutine initialization sequnces here;
-//these sequences should be preset parameters for commands; not commands themselves
-#define PWR_INIT_SEQ_1 {1,2,3,4} //example
-#define PWR_INIT_SEQ_2 {1,2,3,4} //example
-
-#define VRAM_INIT_SEQ_1 {1,2,3,4} //example
-#define VRAM_INIT_SEQ_2 {1,2,3,4} //example
-                                  
-#define GAMMA_CORR_INIT_SEQ_1 {1,2,3,4} //example
-
-void ili9341_hard_reset();
-void ili9341_soft_reset(); 
+static void ili9341_hard_reset();
+static void ili9341_soft_reset(); 
 
 void ili9341_initialize(int8_t cs,int8_t rst,int8_t dc); //running on spi0 bus
+
+//wrapped in CS toggling.
 void ili9341_writeCommand(uint8_t commandByte);
 void ili9341_writeData(uint8_t dataByte);
 void ili9341_writeDataBuffer8(uint8_t* dataBuf, size_t len);
-void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len);
+void ili9341_writeDataBuffer16(uint16_t* dataBuf, size_t len); //consider ridding
 
+//CS toggling handled
 void ili9341_setAddrWindow(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h); 
 void ili9341_setScrollWindow(uint16_t tfa, uint16_t vsa, uint16_t bfa); 
 void ili9341_setScrollPtr(uint16_t vsp); //page 123 of strionix manual
-void ili9341_exitScrollMode(); 
 
 //for locking access to the spi0 bus
 void ili9341_setCS_HI();

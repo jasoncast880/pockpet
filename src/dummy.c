@@ -1,3 +1,4 @@
+#include <pico/stdio.h>
 #include <stddef.h>
 #include <hardware/spi.h>
 #include <stdio.h>
@@ -10,6 +11,9 @@
 //DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
 
 int main() {
+	stdio_init_all();
+	sleep_ms(5000);
+	printf("GO");
 
 	display_setup();
 
