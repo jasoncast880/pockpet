@@ -1,10 +1,9 @@
 #include <hardware/gpio.h>
 #include <pico/platform/common.h>
-#include <pico/stdio.h>
+#include <stdio.h>
 #include <stddef.h>
 #include <hardware/spi.h>
 #include <hardware/pwm.h>
-#include <stdio.h>
 #include "pico/stdlib.h" 
 #include "pinout.h"
 #include "graphics_conf.h"

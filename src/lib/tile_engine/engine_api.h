@@ -1,6 +1,8 @@
 #ifndef ENGINE_API_H
 #define ENGINE_API_H
 
+#include "pico/stddef.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif 
@@ -17,7 +19,15 @@ int update_sprite(struct LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t*
 int delete_layer(struct LayerHandle_t layer);
 int delete_sprite(struct SpriteHandle_t sprite);
 
-void soft_render();
+
+/*
+ * use static globals to provide easy hw. access..
+ */
+typedef struct RenderInfo_t {
+	uint32_t render_ct;
+	uint8_t* render_tiles;
+};
+RenderInfo_t engine_render(Layer_handle_t layer); //needs to return a contiguous arr
 
 #ifdef __cplusplus
 } //extern "C"

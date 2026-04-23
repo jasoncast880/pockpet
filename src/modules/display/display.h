@@ -32,6 +32,8 @@ enum cmd_sequence_t {
 
 void display_setup();
 
+void tile_handler();
+
 #ifdef RTOS_MODE
 #include "sync_common.h"
 void display_task( void* pvParameters ); 
