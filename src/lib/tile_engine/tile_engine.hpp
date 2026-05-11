@@ -103,6 +103,9 @@ class Sprite;
 class Layer: public Tilemap{
 public:
 
+	//TEMP : temp allocate memory for a full frame buffer. (do in constructor)
+	uint16_t* framebuf_data; //keep as 16-bit 565 pixel data, de-compress via masking after.
+	
 	std::vector<Sprite> sprites;
 
 	void dirty_tiles_add( DirtyTile* tile);

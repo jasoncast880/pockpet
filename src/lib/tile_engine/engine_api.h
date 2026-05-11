@@ -7,6 +7,7 @@
 extern "C" {
 #endif 
 
+
 struct LayerHandle_t;
 struct SpriteHandle_t;
 
@@ -16,13 +17,15 @@ struct SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* til
 int update_layer(struct LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y);
 int update_sprite(struct LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y);
 
+uint8_t* get_framebuf_data(struct LayerHandle_t layer_handle);
+
 int delete_layer(struct LayerHandle_t layer);
 int delete_sprite(struct SpriteHandle_t sprite);
 
+//for full frame updates:
+static const uint8_t* frame_data; 
 
-/*
- * use static globals to provide easy hw. access..
- */
+//for partial tile updates:
 typedef struct RenderInfo_t {
 	uint32_t render_ct;
 	uint8_t* render_tiles;

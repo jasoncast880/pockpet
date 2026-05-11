@@ -38,7 +38,13 @@ void display_setup() {
 
 	//configure isr for read address re-alignment
 	dma_channel_set_irq0_enabled(spi0_dma_chan, true);
+
+#if   PARTIAL_RENDER == 0 //FULLSCREEN RENDER
+	irq_set_exclusive_handler(DMA_IRQ_0, frame_handler);
+#else 
 	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);
+#endif
+
 	irq_set_enabled(DMA_IRQ_0, true);
 	
 	// DEMO
@@ -51,15 +57,29 @@ void display_setup() {
 	r = engine_render(system);
 }
 
+void frame_handler() {
+	//reset the framedata pointer
+	//run the commands to the display controller for reconfiguration
+	dma_channel_set_trans_count( spi0_dma_chan, 
+			240 * 320 * 2, 
+			false );
+
+	dma_channel_set_read_addr(spi0_dma_chan,
+			const volatile void *read_addr, //TODO: Engine needs to provide a global, read-only address for start of f-b
+			true );
+}
+
+/*
 void tile_handler() {
 	//TODO: add a check to see which tile you are on.
-	if(tiles_drawn<=render_ct) 
+	if(tiles_drawn<=render_ct)
 	
 	//TODO: tile x0, x1, AddrWindow configuration.
 	dma_channel_set_read_addr(spi0_dma_chan,
 		dma_hw->ch[spi0_dma_chan].read_addr+=( DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2 ),
 		true );
 }
+*/
 
 
 #ifdef RTOS_MODE

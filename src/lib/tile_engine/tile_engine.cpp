@@ -69,6 +69,8 @@ Tile* Tilemap::get_tile(uint16_t idx) { return tileset->get_tile(map[idx]); }
 void Tilemap::set_map(uint8_t* map) { this->map = map; }
 
 Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id) {
+	framebuf_data = new uint8_t[ (tiles_wide*tiles_high) * (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN) ];
+
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
 	this->tileset = tileset;
@@ -84,6 +86,7 @@ uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, u
 		return sprite.id;
 	} else return 0; //0 id means no space on the layer.
 }
+
 void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
 	Sprite sprite = sprites.at(id);
 	sprite.set_position(x,y);
@@ -95,6 +98,24 @@ void Layer::render() {
 	for( int i = 0 ; i < sprites.size() ; i++ ) {
 		sprites[i].render();
 	}
+
+	//TEMP ?
+	//use the dirty tile buffer to superimpose a buffer.
+	int i = 0;
+	int j = 0;
+	for( ; i < this->tiles_high ; i++ ) {
+		for( ; j < this->tiles_wide ; j++ ) {
+			Tile* tile = this->tileset->get_tile(i*tiles_wide + j);
+			uint16_t* buf = tile->get_buffer();
+
+			for( int k = 0 ; k < (DEFAULT_TILE_LEN * DEFAULT_TILE_LEN) ; k++ ) {
+				uint16_t* p = (framebuf_data+(i*tiles_wide+j)*(DEFAULT_TILE_LEN * DEFAULT_TILE_LEN)) + k;
+				*p = *buf;
+				buf++;
+			}
+		}
+	}
+
 }
 void Layer::clear() {
 	dirty_tiles.clear();
@@ -215,9 +236,9 @@ int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, u
 	return 0;
 }
 
-void soft_render() {
+uint8_t* get_framebuf_data(struct LayerHandle_t layer_handle) {
+	return layer_handle.layer->framebuf_data;
 }
 
-
-
-
+void soft_render() {
+}
