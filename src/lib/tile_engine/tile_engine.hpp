@@ -46,7 +46,7 @@ struct DirtyTile : public Tile {
 	 *	RASET END   2 by
 	 */
 
-	DirtyTile(const DirtyTile& copySrc) noexcept;
+	DirtyTile(const DirtyTile& copySrc) noexcept = default;//patch todo
 	DirtyTile& operator=(const DirtyTile& copySrc) noexcept; 
 	DirtyTile(DirtyTile&&) noexcept = default;
 	DirtyTile& operator=(DirtyTile&& moveSrc) noexcept = default;
@@ -135,8 +135,8 @@ public:
 	Sprite();
 	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer);
 
-	Sprite(const Sprite& copy);
-	Sprite& operator=(const Sprite& copy);
+	Sprite(const Sprite& copy) = default;
+	Sprite& operator=(const Sprite& copy) = default;
 
 	Sprite(Sprite&&) noexcept = default;
 	Sprite& operator=(Sprite&&) noexcept = default;
@@ -152,6 +152,7 @@ public:
 	friend Layer;
 };
 
+#include "engine_api.h"
 //API THINGS
 static uint8_t layer_count = 0;
 struct LayerHandle_t {

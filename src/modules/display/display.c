@@ -3,7 +3,8 @@
 #include <hardware/irq.h>
 #include <hardware/structs/spi.h>
 #include "graphics_conf.h"
-#include "engine_api.h"
+
+
 
 //idea:
 //use the dma to stream data from memory to the spi0 data register.
@@ -12,7 +13,7 @@
 //
 uint32_t spi0_dma_chan;
 uint32_t tiles_drawn = 0;
-struct RenderInfo_t r;
+struct RenderInfo_t* r;
 void display_setup() {
 	spi_init(spi0, 8000 * 1000); //spi freq @ 8Mhz 
 	gpio_set_function(SPI0_SCLK, GPIO_FUNC_SPI);
@@ -48,12 +49,15 @@ void display_setup() {
 	irq_set_enabled(DMA_IRQ_0, true);
 	
 	// DEMO
-	struct LayerHandle_t system = add_layer(uint16_t *tiles, size_t num_tiles, uint8_t *tilemap, uint8_t tiles_wide, uint8_t tiles_high);
+#include "ampalaya_tileset_16.h"
+#include "tilemaps.h"
+
+	struct LayerHandle_t* system = add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFAULT_TILE_LEN,  240/DEFAULT_TILE_LEN);
 	
 	volatile uint32_t tile_count = 0; //TODO: build engine api to give easy data
 
 	//TODO: tile x0, x1, AddrWindow configuration.
-	dma_channel_set_read_addr( spi0_dma_chan, r.render_tiles, true );
+	dma_channel_set_read_addr( spi0_dma_chan, r->render_tiles, true );
 	r = engine_render(system);
 }
 
@@ -65,7 +69,7 @@ void frame_handler() {
 			false );
 
 	dma_channel_set_read_addr(spi0_dma_chan,
-			const volatile void *read_addr, //TODO: Engine needs to provide a global, read-only address for start of f-b
+			&frame_data[0],
 			true );
 }
 

@@ -1,7 +1,7 @@
 #ifndef TILEMAPS_H
 #define TILEMAPS_H
 
-#include <cstdint>
+#include <stdint.h>
 
 extern uint8_t tile_bg_16[];
 extern const uint8_t tile_menu_16[];

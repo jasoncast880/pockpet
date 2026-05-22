@@ -17,6 +17,7 @@ int main() {
 	sleep_ms(5000);
 	printf("GO");
 
+	/*
 	gpio_set_function(2, GPIO_FUNC_PWM);
 	uint slice = pwm_gpio_to_slice_num(2);
 
@@ -28,4 +29,7 @@ int main() {
 	while(1) {
 		tight_loop_contents();
 	}
+	*/
+
+	display_setup();
 }

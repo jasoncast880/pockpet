@@ -1,13 +1,8 @@
-
-<img width="571/2" height="770/2" alt="image" src="https://github.com/user-attachments/assets/16c1fc38-6eb0-40af-aab0-2f747dd53a3f" />
-<img width="539/2" height="753/2" alt="image" src="https://github.com/user-attachments/assets/7a3869a0-3fd9-4803-bd70-66a81832eeac" />
-
-# Tactigachi PDA
+# Tactigachi PDA Firmware 
 
 ## Synopsis 
 
 Tactigachi is a PDA project based on the low-cost, low power RP2040 MCU solution. 
-Hardware:
 It leverages the numerous and flexible hardware interfaces of the rp2040 to provide a responsive User Interface, simple file storage, USB interface for PC application access, Simple Audio processing and audio jack output:
 
 | Peripheral Subsystem | On-Board Hardware | Software/Drivers | 
@@ -19,12 +14,26 @@ It leverages the numerous and flexible hardware interfaces of the rp2040 to prov
 Hardware Schematics, PCB Images:
 <...>
 
-## Build
+## Building Project
+External/3rd Party Dependencies:
+Ensure you have these repos cloned and their filepaths set as environment variables. In bash, this is done by adding to .bashrc file.
 ```bash
-cd build
-rm -rf ./* 
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j${nproc} <TARGET>
+export <ENV_VARIABLE_NAME>="<LIB_FILEPATH>"
+```
+
+|  Library/Dependency  | Env Variable Name |  Github Link | 
+| -------------------- | ----------------- |  ----------- |
+| RPi Pico SDK | PICO_SDK_PATH | https://github.com/raspberrypi/pico-sdk.git | 
+| FreeRTOS Kernel | FREERTOS_KERNEL_PATH | https://github.com/FreeRTOS/FreeRTOS-Kernel.git |
+
+
+```bash
+# run from top level directory
+mkdir -p build
+cmake -B build
+
+#once built, make target from list of availables (see table below)
+cmake --build build -t <target_name>
 ```
 
 ## 'TARGET' Options:

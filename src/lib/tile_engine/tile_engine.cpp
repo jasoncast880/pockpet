@@ -1,12 +1,12 @@
 #include "tile_engine.hpp"
 
+Tile::Tile() {}
 Tile::Tile(uint16_t* src)
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
 		pixels[i] = src[i];
 	}
 }
-
 Tile::Tile(const Tile& copy) noexcept //not really used.
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
 	uint16_t* src = this->pixels.get();
@@ -19,7 +19,6 @@ Tile::Tile(const Tile& copy) noexcept //not really used.
 		}
 	}	
 }
-
 Tile& Tile::operator=(const Tile& copy) noexcept {
 	uint16_t* src = this->pixels.get();
 	uint16_t* dst = copy.pixels.get();
@@ -33,21 +32,16 @@ Tile& Tile::operator=(const Tile& copy) noexcept {
 
 	return *this;
 }
-
-
 void Tile::set_pixel(uint16_t idx, uint16_t val) {
 	*(this->get_buffer()+idx) = val;
 }
-
 uint16_t Tile::get_pixel(uint16_t idx) {
 	uint16_t* pix = this->get_buffer()+idx;
 	return *pix;
 }
-
 uint16_t* Tile::get_buffer() {
   return pixels.get();
 }
-
 Tile::~Tile(){
 	this->pixels.release();
 }
@@ -59,7 +53,6 @@ Tileset::Tileset( uint16_t* buf, size_t size ) : buf(buf), num_tiles(size/(DEFAU
 		buf+=DEFAULT_TILE_LEN*DEFAULT_TILE_LEN;
 	}
 }
-
 Tile* Tileset::get_tile(uint8_t idx) { return &tiles[idx]; }
 size_t Tileset::get_num_tiles(uint8_t idx) { return num_tiles; }
 Tileset::~Tileset() { delete tiles; }
@@ -211,9 +204,32 @@ int update_sprite(LayerHandle_t* layer_handle, uint8_t sprite_id, uint8_t* map, 
 	return 0;
 }
 
-uint16_t* get_framebuf_data( struct LayerHandle_t* layer_handle) {
+uint16_t* get_framebuf_data( struct LayerHandle_t* layer_handle ) {
 	return layer_handle->layer->framebuf_data;
 }
 
 void soft_render() {
+}
+
+struct RenderInfo_t* engine_render( struct LayerHandle_t* layer_handle ) {
+	//do shi
+	//return new RenderInfo_t();
+	return nullptr;
+}
+
+Tilemap::~Tilemap() {}
+DirtyTile::~DirtyTile() {}
+
+DirtyTile::DirtyTile(uint16_t* src,uint16_t x, uint16_t y) : x(x), y(y){
+	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) ;
+	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
+		pixels[i] = src[i];
+	}
+}
+Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer) {
+	this->tiles_wide = tiles_wide;
+	this->tiles_high = tiles_wide;
+	this->tileset = tileset;
+	this->map = mapBuf;
+	this->associated_layer = associated_layer;
 }
