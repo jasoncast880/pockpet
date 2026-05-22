@@ -151,4 +151,36 @@ public:
 
 	friend Layer;
 };
+
+//API THINGS
+static uint8_t layer_count = 0;
+struct LayerHandle_t {
+	Tileset* tiles;
+	Layer* layer;
+	uint8_t sprite_count = 0;
+
+	uint8_t id;
+
+	LayerHandle_t() {}
+	LayerHandle_t(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
+		this->tiles = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
+		this->layer = new Layer( tiles_wide, tiles_high, this->tiles, tilemap, 0); //replace magic nums todo
+		
+	}
+};
+
+struct SpriteHandle_t {
+	Tileset* tiles;
+	Sprite* sprite;
+	
+	LayerHandle_t layer_handle;
+	uint8_t id;
+
+	SpriteHandle_t();
+	SpriteHandle_t( uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct LayerHandle_t* associated_layer ) {
+		this->tiles = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
+		this->sprite =new Sprite( tiles_wide, tiles_high, this->tiles, tilemap, associated_layer->layer );
+	}
+};
+
 #endif //TILE_ENGINE_H

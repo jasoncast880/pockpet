@@ -31,7 +31,7 @@ void display_setup() {
 
 	dma_channel_configure(spi0_dma_chan,
 		 &c,
-		 spi0_hw->dr,
+		 &spi0_hw->dr,
 		 NULL, //set read addr in a static helper func.
 		 DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2, //every tile has DEFAULT_TILE_LEN^2, and 2 8-bit transfers per pixel-unit
 		 false );

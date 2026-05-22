@@ -1,4 +1,5 @@
 #include "tile_engine.hpp"
+
 Tile::Tile(uint16_t* src)
 	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
@@ -69,7 +70,7 @@ Tile* Tilemap::get_tile(uint16_t idx) { return tileset->get_tile(map[idx]); }
 void Tilemap::set_map(uint8_t* map) { this->map = map; }
 
 Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id) {
-	framebuf_data = new uint8_t[ (tiles_wide*tiles_high) * (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN) ];
+	framebuf_data = new uint16_t[ (tiles_wide*tiles_high) * (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN) ];
 
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
@@ -190,54 +191,28 @@ Sprite::~Sprite() {
 }
 
 #include "engine_api.h"
-
-static uint8_t layer_count = 0;
-struct LayerHandle_t {
-	Tileset* tiles;
-	Layer* layer;
-	uint8_t sprite_count = 0;
-
-	uint8_t id;
-};
-struct SpriteHandle_t {
-	Tileset* tiles;
-	
-	LayerHandle_t layer_handle;
-	uint8_t id;
-};
-
-LayerHandle_t add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
-	LayerHandle_t handle;
-
-	handle.tiles  = new Tileset(tiles, num_tiles);
-	handle.id = (layer_count++ <= MAX_LAYERS) ? layer_count : 0;
-	handle.layer  = new Layer(tiles_wide, tiles_high, handle.tiles, tilemap, handle.id);
-
+struct LayerHandle_t* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
+	LayerHandle_t* handle = new LayerHandle_t( tiles, num_tiles, tilemap, tiles_wide, tiles_high);
 	return handle;
 }
-SpriteHandle_t add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer) {
-	SpriteHandle_t handle;
-
-	handle.tiles = new Tileset(tiles, num_tiles);
-	handle.layer_handle = associated_layer;
-	handle.id = associated_layer.layer->sprite_add(tiles_wide,tiles_high, handle.tiles, tilemap);
-
+struct SpriteHandle_t* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer) {
+	SpriteHandle_t* handle = new SpriteHandle_t( tiles, num_tiles, tilemap, tiles_wide, tiles_high, &associated_layer );
 	return handle;
 }
 
-int update_layer(LayerHandle_t layer_handle, uint8_t* map, uint8_t x, uint8_t y) {
-	layer_handle.layer->set_position(x,y);
-	layer_handle.layer->set_map(map);
+int update_layer(LayerHandle_t* layer_handle, uint8_t* map, uint8_t x, uint8_t y) {
+	layer_handle->layer->set_position(x,y);
+	layer_handle->layer->set_map(map);
 
 	return 0;
 }
-int update_sprite(LayerHandle_t layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
-	layer_handle.layer->sprite_update_by_id(sprite_id, x, y, map);
+int update_sprite(LayerHandle_t* layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
+	layer_handle->layer->sprite_update_by_id(sprite_id, x, y, map);
 	return 0;
 }
 
-uint8_t* get_framebuf_data(struct LayerHandle_t layer_handle) {
-	return layer_handle.layer->framebuf_data;
+uint16_t* get_framebuf_data( struct LayerHandle_t* layer_handle) {
+	return layer_handle->layer->framebuf_data;
 }
 
 void soft_render() {
