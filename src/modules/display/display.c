@@ -40,10 +40,13 @@ void display_setup() {
 	//configure isr for read address re-alignment
 	dma_channel_set_irq0_enabled(spi0_dma_chan, true);
 
-#if   PARTIAL_RENDER == 0 //FULLSCREEN RENDER
-	irq_set_exclusive_handler(DMA_IRQ_0, frame_handler);
-#else 
+	//hand off allocation, mem-mgmt to the engine
+#if   DIRTY_RENDER
 	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);
+#elif FULSCREEN_RENDER
+	irq_set_exclusive_handler(DMA_IRQ_0, frame_handler);
+#elif HSCANLINE_RENDER
+	irq_set_exclusive_handler(DMA_IRQ_0, hscanline_handler);
 #endif
 
 	irq_set_enabled(DMA_IRQ_0, true);
@@ -61,11 +64,7 @@ void display_setup() {
 	r = engine_render(system);
 }
 
-//for scanline reconfiguration
-void hscanline_serv() {
-}
-
-void frame_handler() {
+void frame_handler() { //manage a static 240x320 pix buffer via engine
 	//reset the framedata pointer
 	//run the commands to the display controller for reconfiguration
 	dma_channel_set_trans_count( spi0_dma_chan, 
@@ -77,8 +76,15 @@ void frame_handler() {
 			true );
 }
 
-/*
-void tile_handler() {
+//for scanline reconfiguration
+void hscanline_handler() { //manage a static ?x320 buf (configurable via graphics conf.) 
+	//based on the  
+}
+
+
+
+void tile_handler() { //manage a std::Vector ?? or something similar (dynamic allocation)
+	/*
 	//TODO: add a check to see which tile you are on.
 	if(tiles_drawn<=render_ct)
 	
@@ -86,8 +92,8 @@ void tile_handler() {
 	dma_channel_set_read_addr(spi0_dma_chan,
 		dma_hw->ch[spi0_dma_chan].read_addr+=( DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2 ),
 		true );
+	*/
 }
-*/
 
 
 #ifdef RTOS_MODE

@@ -12,6 +12,11 @@
 #define ALPHA_FILTER 0xF81F
 #include "graphics_conf.h" 
 
+typedef struct {
+	uint8_t map_idx; //index of the map in current layer
+	uint16_t tile_idx; //index of tile in the current map
+} tile_context_t; //gets returned given x,y
+
 struct Tile {
 	Tile();
 	Tile(uint16_t* src);
@@ -81,10 +86,6 @@ public:
 	Tile* get_tile(uint16_t idx); 
 	void set_map(uint8_t* map); 
 
-	typedef struct {
-		uint8_t map_idx; //index of the map in current layer
-		uint16_t tile_idx; //index of tile in the current map
-	} tile_context_t; //gets returned given x,y
 
 	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
 
@@ -176,6 +177,20 @@ struct SpriteHandle_t {
 		this->tiles = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
 		this->sprite =new Sprite( tiles_wide, tiles_high, this->tiles, tilemap, associated_layer->layer );
 	}
+};
+
+struct Engine {
+	Engine();
+	Engine(Layer* layer);
+
+	Layer* layer;
+	uint16_t* pix_buf;
+
+	uint16_t* hscanline_render();
+	uint16_t* fullscreen_render();
+private: //cursor convenience rendering vars
+	uint16_t x,y; //for buf. true count
+	uint8_t x_tile, y_tile; //for tile-by-tile read.
 };
 
 #endif //TILE_ENGINE_H

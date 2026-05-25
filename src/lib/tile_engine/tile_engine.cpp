@@ -130,12 +130,12 @@ void Sprite::render() { //todo: for now this assumes that its blitting on layer-
 
 void Layer::dirty_tiles_add( DirtyTile* tile) {	dirty_tiles.push_back(*tile); }
 
-Layer::tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
+tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
 	tile_context_t dummy;
 	return dummy;
 } //todo
 
-Layer::tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
+tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 	/*
 	 * returns the tile, tile index in reference to the current layer.
 	 * Sprite position always is in reference to the layer it resides in.
@@ -211,6 +211,7 @@ uint16_t* get_framebuf_data( struct LayerHandle_t* layer_handle ) {
 void soft_render() {
 }
 
+
 struct RenderInfo_t* engine_render( struct LayerHandle_t* layer_handle ) {
 	//do shi
 	//return new RenderInfo_t();
@@ -233,3 +234,44 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 	this->map = mapBuf;
 	this->associated_layer = associated_layer;
 }
+
+Engine::Engine() {
+#if   DIRTY_RENDER
+	//vector alloc, too lazy to write 
+#elif FULSCREEN_RENDER
+	pix_buf = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN * DEFAULT_SCREEN_TILES_X * DEFAULT_SCREEN_TILES_Y];
+#elif HSCANLINE_RENDER
+	pix_buf = new uint16_t[DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN*HSCANLINE_SIZE];
+#endif
+}
+
+uint16_t* Engine::hscanline_render() {
+	for(int i = 0 ; i<(DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; i++ ) {
+		//gather the tilemap layer data
+		for( int j = 0 ; j < HSCANLINE_SIZE*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++) {
+			if(this->x == (DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) - 1) {
+				this->x = 0;
+				this->y++;
+			}
+
+			tile_context_t context = this->layer->contextualize(this->x, this->y);
+			Tile* tile = layer->tileset->get_tile(context.map_idx);
+			uint16_t pix = tile->get_pixel(context.tile_idx);
+			
+			pix_buf[j] = pix;
+		}
+		for( int j = 0 ; j < this->layer->sprites.size() ; j++ ) {
+			//TODO: store indices of occupation on render call or something
+
+
+			
+		}
+
+		//iff sprites:
+		//add on the sprites' data based on their position (x,y,z) and/or blit.
+	
+	}
+	
+	return &pix_buf[0];
+}
+

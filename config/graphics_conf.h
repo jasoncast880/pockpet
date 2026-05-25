@@ -12,7 +12,14 @@
 #define MAX_SPRITES_PER_LAYER 5
 //
 
+// TEMPORARY: For allocation purposes/optimization
+// pls 1 only at a time
+#define DIRTY_RENDER 0
+#define FULLSCREEN_RENDER 0
+#define HSCANLINE_RENDER  1
 //h-scanline
+#define HSCANLINE_SIZE 16
+
 
 
 #endif //GRAPHICS_CONF_H

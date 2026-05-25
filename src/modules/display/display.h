@@ -17,10 +17,6 @@
 
 #define DMA_DISPLAY_CH 0x00
 
-// TEMPORARY!!!!!
-#define PARTIAL_RENDER 0
-#define FULLSCREEN_RENDER 1
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -38,6 +34,7 @@ void display_setup();
 
 void tile_handler(); //for tile-by-tile PARTIAL rendering ISR
 void frame_handler(); //for full framebuffer rendering    ISR
+void hscanline_handler(); //for full framebuffer rendering    ISR
 
 #ifdef RTOS_MODE
 #include "sync_common.h"
