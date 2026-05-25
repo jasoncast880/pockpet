@@ -10,13 +10,7 @@
 #include <algorithm>
 
 #define ALPHA_FILTER 0xF81F
-
-//TODO: KEEP ALL THIS STUFF IN A CONFIG FILE SO EASY FOR ALL TO READ
-#define DEFAULT_TILE_LEN 16
-#define DEFAULT_SCREEN_TILES_Y 15
-#define DEFAULT_SCREEN_TILES_X 20
-#define MAX_LAYERS 2
-#define MAX_SPRITES_PER_LAYER 5
+#include "graphics_conf.h" 
 
 struct Tile {
 	Tile();

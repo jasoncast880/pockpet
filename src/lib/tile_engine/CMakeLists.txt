@@ -4,6 +4,7 @@ add_library(tile_engine STATIC
 
 target_include_directories(tile_engine PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR} #to pull in tile_engine.h
+    ${CMAKE_SOURCE_DIR}/config #for graphics_conf
 )
 
 target_link_libraries(tile_engine 
