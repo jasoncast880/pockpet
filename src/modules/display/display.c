@@ -2,15 +2,15 @@
 #include <hardware/dma.h>
 #include <hardware/irq.h>
 #include <hardware/structs/spi.h>
+
 #include "graphics_conf.h"
-
-
 
 //idea:
 //use the dma to stream data from memory to the spi0 data register.
 //Problems;
 //need to reconfigure read address after every tile. - use an irq to set the pointer
 //
+
 uint32_t spi0_dma_chan;
 uint32_t tiles_drawn = 0;
 struct RenderInfo_t* r;
@@ -61,6 +61,10 @@ void display_setup() {
 	r = engine_render(system);
 }
 
+//for scanline reconfiguration
+void hscanline_serv() {
+}
+
 void frame_handler() {
 	//reset the framedata pointer
 	//run the commands to the display controller for reconfiguration
@@ -88,7 +92,10 @@ void tile_handler() {
 
 #ifdef RTOS_MODE
 
-void display_task( void* pvParameters ) {
+void display_task( void* pvParameters ) { //allocate time & sync for 
+										  //1 - flash-to-ram buffer: tile-by-tile -> row-by-row pixel configuration
+										  //2 - ram-buff -> hardware via DMA.
+										  // Needs to have a turn-dial config setting for tuning.
 	for(;;) {
 
 	}
