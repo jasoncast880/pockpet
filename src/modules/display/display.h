@@ -28,7 +28,8 @@ enum cmd_sequence_t {
 	RASET_DATA,
 	RAMWR_CMD,
 	PIX_BUF
-};
+}; //this is a little outdated but its good reference to remember
+   //the driver sequence without looking at the DS
 
 void display_setup();
 
@@ -36,11 +37,24 @@ void tile_handler(); //for tile-by-tile PARTIAL rendering ISR
 void frame_handler(); //for full framebuffer rendering    ISR
 void hscanline_handler(); //for full framebuffer rendering    ISR
 
-#ifdef RTOS_MODE
-#include "sync_common.h"
-void display_task( void* pvParameters ); 
+//user-app things
 
-}
+#ifdef RTOS_MODE
+
+#include <FreeRTOS.h>
+#include "task.h"
+#include "semphr.h"
+
+#include "sync_common.h"
+
+SemaphoreHandle_t render_token;
+
+void display_task( void* pvParameters ); 
+void render_task( void* pvParameters );
+#endif
+#ifndef RTOSMODE 
+
+static bool render_flag;
 #endif
 
 

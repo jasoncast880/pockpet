@@ -11,6 +11,7 @@
 
 #define ALPHA_FILTER 0xF81F
 #include "graphics_conf.h" 
+#include "engine_api.h"
 
 typedef struct {
 	uint8_t map_idx; //index of the map in current layer
@@ -145,52 +146,6 @@ public:
 	void render() override;
 
 	friend Layer;
-};
-
-#include "engine_api.h"
-//API THINGS
-static uint8_t layer_count = 0;
-struct LayerHandle_t {
-	Tileset* tiles;
-	Layer* layer;
-	uint8_t sprite_count = 0;
-
-	uint8_t id;
-
-	LayerHandle_t() {}
-	LayerHandle_t(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
-		this->tiles = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
-		this->layer = new Layer( tiles_wide, tiles_high, this->tiles, tilemap, 0); //replace magic nums todo
-		
-	}
-};
-
-struct SpriteHandle_t {
-	Tileset* tiles;
-	Sprite* sprite;
-	
-	LayerHandle_t layer_handle;
-	uint8_t id;
-
-	SpriteHandle_t();
-	SpriteHandle_t( uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct LayerHandle_t* associated_layer ) {
-		this->tiles = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
-		this->sprite =new Sprite( tiles_wide, tiles_high, this->tiles, tilemap, associated_layer->layer );
-	}
-};
-
-struct Engine {
-	Engine();
-	Engine(Layer* layer);
-
-	Layer* layer;
-	uint16_t* pix_buf;
-
-	uint16_t* hscanline_render();
-	uint16_t* fullscreen_render();
-private: //cursor convenience rendering vars
-	uint16_t x,y; //for buf. true count
-	uint8_t x_tile, y_tile; //for tile-by-tile read.
 };
 
 #endif //TILE_ENGINE_H

@@ -8,32 +8,27 @@
 extern "C" {
 #endif 
 
-/*
-struct LayerHandle_t* layer;
-struct SpriteHandle_t* sprite;
-*/
+typedef struct { 
+	struct Layer* layer;
+	uint16_t* render_data; //variable size, constant location.
 
-struct LayerHandle_t* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
-struct SpriteHandle_t* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct LayerHandle_t* associated_layer);
+	uint16_t x,y; //for buf. true count
+	uint8_t x_tile, y_tile; //for tile-by-tile read.
+} Engine;
 
-int update_layer(struct LayerHandle_t* layer_handle, uint8_t* map, uint8_t x, uint8_t y);
-int update_sprite(struct LayerHandle_t* layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y);
+Engine* engine_init(struct Layer* layer);
+uint16_t* engine_render(Engine* e); //needs to return a contiguous arr
 
-uint16_t* get_framebuf_data(struct LayerHandle_t* layer_handle);
+struct Layer* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
+struct Sprite* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct Layer* associated_layer);
 
+int update_layer(struct Layer* layer, uint8_t* map, uint8_t x, uint8_t y);
+int update_sprite(struct Layer* layer, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y);
 
-int delete_layer(struct LayerHandle_t* layer);
-int delete_sprite(struct SpriteHandle_t* sprite);
+uint16_t* get_framebuf_data(struct Layer* layer);
 
-//for full frame updates:
-static const volatile uint16_t* frame_data; 
-
-//for partial tile updates:
-struct RenderInfo_t {
-	uint32_t render_ct;
-	uint8_t* render_tiles;
-};
-struct RenderInfo_t* engine_render(struct LayerHandle_t* layer); //needs to return a contiguous arr
+int delete_layer(struct Layer* layer);
+int delete_sprite(struct Sprite* sprite);
 
 #ifdef __cplusplus
 } //extern "C"

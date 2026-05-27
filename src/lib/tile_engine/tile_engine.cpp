@@ -131,8 +131,17 @@ void Sprite::render() { //todo: for now this assumes that its blitting on layer-
 void Layer::dirty_tiles_add( DirtyTile* tile) {	dirty_tiles.push_back(*tile); }
 
 tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
-	tile_context_t dummy;
-	return dummy;
+	tile_context_t tc;
+
+	uint16_t x_tile_ = x/DEFAULT_TILE_LEN;
+	uint16_t y_tile_ = y/DEFAULT_TILE_LEN;
+	tc.map_idx = x_tile_ + this->associated_layer->tiles_wide*y_tile_;
+
+	uint16_t x_tile_offset = x % DEFAULT_TILE_LEN;
+	uint16_t y_tile_offset = y % DEFAULT_TILE_LEN;
+	tc.map_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
+
+	return tc;
 } //todo
 
 tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
@@ -184,38 +193,33 @@ Sprite::~Sprite() {
 }
 
 #include "engine_api.h"
-struct LayerHandle_t* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
-	LayerHandle_t* handle = new LayerHandle_t( tiles, num_tiles, tilemap, tiles_wide, tiles_high);
-	return handle;
-}
-struct SpriteHandle_t* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, LayerHandle_t associated_layer) {
-	SpriteHandle_t* handle = new SpriteHandle_t( tiles, num_tiles, tilemap, tiles_wide, tiles_high, &associated_layer );
+struct Layer* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
+
+	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
+	Layer* handle = new Layer( tiles_wide, tiles_high, ts, tilemap, 0 );
 	return handle;
 }
 
-int update_layer(LayerHandle_t* layer_handle, uint8_t* map, uint8_t x, uint8_t y) {
-	layer_handle->layer->set_position(x,y);
-	layer_handle->layer->set_map(map);
+struct Sprite* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, Layer* associated_layer) {
+	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*tiles_wide*tiles_high);
+
+	Sprite* s = new Sprite( tiles_wide, tiles_high , ts, tilemap , associated_layer );
+	return s;
+}
+
+int update_layer(Layer* layer, uint8_t* map, uint8_t x, uint8_t y) {
+	layer->set_position(x,y);
+	layer->set_map(map);
 
 	return 0;
 }
-int update_sprite(LayerHandle_t* layer_handle, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
-	layer_handle->layer->sprite_update_by_id(sprite_id, x, y, map);
+int update_sprite(Layer* layer, uint8_t sprite_id, uint8_t* map, uint8_t x, uint8_t y) {
+	layer->sprite_update_by_id(sprite_id, x, y, map);
 	return 0;
 }
 
-uint16_t* get_framebuf_data( struct LayerHandle_t* layer_handle ) {
-	return layer_handle->layer->framebuf_data;
-}
-
-void soft_render() {
-}
-
-
-struct RenderInfo_t* engine_render( struct LayerHandle_t* layer_handle ) {
-	//do shi
-	//return new RenderInfo_t();
-	return nullptr;
+uint16_t* get_framebuf_data( struct Layer* layer ) {
+	return layer->framebuf_data;
 }
 
 Tilemap::~Tilemap() {}
@@ -235,43 +239,49 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 	this->associated_layer = associated_layer;
 }
 
-Engine::Engine() {
+//ENGINE's API CODE !!! LEAVE AT BOTTOM
+Engine* engine_init(struct Layer* layer) {
+	Engine* e = new Engine();
 #if   DIRTY_RENDER
 	//vector alloc, too lazy to write 
 #elif FULSCREEN_RENDER
-	pix_buf = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN * DEFAULT_SCREEN_TILES_X * DEFAULT_SCREEN_TILES_Y];
+	e->render_data = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN * DEFAULT_SCREEN_TILES_X * DEFAULT_SCREEN_TILES_Y];
 #elif HSCANLINE_RENDER
-	pix_buf = new uint16_t[DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN*HSCANLINE_SIZE];
+	e->render_data = new uint16_t[DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN*HSCANLINE_SIZE];
 #endif
+
+	e->layer = layer;
+	return e;
 }
 
-uint16_t* Engine::hscanline_render() {
-	for(int i = 0 ; i<(DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; i++ ) {
+#if HSCANLINE_RENDER
+uint16_t* engine_render(Engine* e) { 
+
+	uint16_t* p = e->render_data;
+
+	for(int i = e->y*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; i<i+(DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; i++ ) {
 		//gather the tilemap layer data
+
 		for( int j = 0 ; j < HSCANLINE_SIZE*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++) {
-			if(this->x == (DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) - 1) {
-				this->x = 0;
-				this->y++;
+			if(e->x == (DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) - 1) {
+				e->x = 0;
+				e->y++;
 			}
 
-			tile_context_t context = this->layer->contextualize(this->x, this->y);
-			Tile* tile = layer->tileset->get_tile(context.map_idx);
+			tile_context_t context = e->layer->contextualize(e->x, e->y);
+			Tile* tile = e->layer->tileset->get_tile(context.map_idx);
 			uint16_t pix = tile->get_pixel(context.tile_idx);
 			
-			pix_buf[j] = pix;
+			p[j] = pix;
 		}
-		for( int j = 0 ; j < this->layer->sprites.size() ; j++ ) {
+		for( int j = 0 ; j < e->layer->sprites.size() ; j++ ) {
 			//TODO: store indices of occupation on render call or something
-
-
+			
 			
 		}
-
-		//iff sprites:
-		//add on the sprites' data based on their position (x,y,z) and/or blit.
-	
 	}
 	
-	return &pix_buf[0];
+	return &p[0];
 }
+#endif //TODO: implement other forms of rendering as needed
 
