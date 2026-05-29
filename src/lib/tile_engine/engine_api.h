@@ -11,6 +11,9 @@ extern "C" {
 typedef struct { 
 	struct Layer* layer;
 	uint16_t* render_data; //variable size, constant location.
+	size_t render_buf_size;
+
+	uint8_t h_scanline_counter; //use for hscanline renders
 
 	uint16_t x,y; //for buf. true count
 	uint8_t x_tile, y_tile; //for tile-by-tile read.

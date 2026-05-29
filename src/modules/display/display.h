@@ -49,8 +49,9 @@ void hscanline_handler(); //for full framebuffer rendering    ISR
 
 SemaphoreHandle_t render_token;
 
-void display_task( void* pvParameters ); 
-void render_task( void* pvParameters );
+void push_pixels( void* pvParameters );
+void render( void* pvParameters );
+void update_entities( void* pvParams );
 #endif
 #ifndef RTOSMODE 
 

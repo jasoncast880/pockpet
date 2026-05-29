@@ -87,6 +87,7 @@ public:
 	Tile* get_tile(uint16_t idx); 
 	void set_map(uint8_t* map); 
 
+
 	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
 
 	virtual void render() = 0;
@@ -95,7 +96,7 @@ public:
 }; 
 
 class Sprite;
-class Layer: public Tilemap {
+class Layer: public Tilemap{
 public:
 
 	//TEMP : temp allocate memory for a full frame buffer. (do in constructor)
