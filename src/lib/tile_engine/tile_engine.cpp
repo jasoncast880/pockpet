@@ -310,7 +310,7 @@ uint16_t* engine_render(Engine* e) {
 				for(int m = 0 ; m < sprite->tiles_wide ; m++ ) {
 					uint8_t map_index = sprite->tiles_wide*((sprite->y0-y0+l)/DEFAULT_TILE_LEN)+m;
 					Tile* tile = sprite->get_tile(map_index); //TODO m.l
-					for(int n=0 ; n < DEFAULT_TILE_LEN; n++ ) {
+					for(int n = 0 ; n < DEFAULT_TILE_LEN ; n++ ) {
 						uint8_t tile_index = n + (l%DEFAULT_TILE_LEN)*DEFAULT_TILE_LEN;
 						uint16_t pix = tile->get_pixel(tile_index);
 						

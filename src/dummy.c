@@ -29,46 +29,38 @@ int main() {
 	sleep_ms(5000);
 	printf("GO");
 
-	/*
-	gpio_set_function(2, GPIO_FUNC_PWM);
-	uint slice = pwm_gpio_to_slice_num(2);
-
-	pwm_set_wrap(slice, 1000);              // frequency control
-	pwm_set_chan_level(slice, PWM_CHAN_A, 500); // 50% duty cycle
-
-	pwm_set_enabled(slice, true);
-	
-	while(1) {
-		tight_loop_contents();
-	}
-	*/
-
 	display_setup();
-
-    Engine* e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFAULT_TILE_LEN,  240/DEFAULT_TILE_LEN)); 
 
 	while(true) {
 		//BUTTON PROC
 		
-		//DISPLAY PROC
-		if(!render_flag) {
-
-
+		//DISPLAY 
+		if(render_flag) {
 			engine_render(e);
-			//todo: parse inputs into engine api calls
 
-			render_flag = true;
+		if( e->h_scanline_counter < HSCANLINE_MAX ) {
+			engine_render(e); //TODO how much time does this take?
+			e->h_scanline_counter++;
+		} else {
+			e->h_scanline_counter = 0; 
+			//TODO increment sprite entities here
+		}
+
+			render_flag = false;
 		} 
 
-		if(render_flag) {
+		if(!render_flag) {
 #if HSCANLINE_RENDER
 			//reconfigure the hw display write window to the next scanline
 			
-			uint16_t y0 = 0; //TODO needs to increment based on hsline counter
+			ili9341_setCS_LO();
+
+			uint16_t y0 = e->h_scanline_counter * HSCANLINE_SIZE;
 			ili9341_setAddrWindow(0, y0, DEFAULT_TILE_LEN*DEFAULT_SCREEN_TILES_X, HSCANLINE_SIZE);
 			
-			//reconfigure the dma channel to start of engine's render_data
-			//start the channel and let it run, on end it will set flags via isr
+			ili9341_writeCommand(RAM_WR);
+			
+
 #endif
 		}
 	}

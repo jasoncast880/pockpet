@@ -9,8 +9,7 @@
 #include "ampalaya_tileset_16.h"
 #include "tilemaps.h"
 
-static Engine* e; //software
-uint32_t spi0_dma_chan; //hardware
+static uint32_t spi0_dma_chan; //hardware
 
 void display_setup() {
 e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFAULT_TILE_LEN,  240/DEFAULT_TILE_LEN)); //pass by pointer
@@ -102,8 +101,9 @@ void render( void* pvParameters ) {
 		xSemaphoreTake(render_token, portMAX_DELAY);
 
 #if HSCANLINE_RENDER
-		if( e->h_scanline_counter < HLINE_MAX ) {
-			e->engine_render(); //TODO how much time does this take?
+		if( e->h_scanline_counter < HSCANLINE_MAX ) {
+			engine_render(e); //TODO how much time does this take?
+			h_scanline_counter++;
 		} else {
 			h_scanline_counter = 0; //TODO give update entities access to run
 		}

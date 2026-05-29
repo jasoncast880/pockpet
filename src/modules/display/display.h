@@ -38,6 +38,7 @@ void frame_handler(); //for full framebuffer rendering    ISR
 void hscanline_handler(); //for full framebuffer rendering    ISR
 
 //user-app things
+static Engine* e; //software
 
 #ifdef RTOS_MODE
 
