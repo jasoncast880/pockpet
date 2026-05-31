@@ -1,65 +1,34 @@
 #include "tile_engine.hpp"
 
 Tile::Tile() {}
-Tile::Tile(uint16_t* src)
-	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
+Tile::Tile(uint16_t* src) : buf(src) {
+	buf = new uint16_t[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
 	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
-		pixels[i] = src[i];
+		buf[i] = src[i]; //TRUE RAM TO FLASH facilitated by cpu
 	}
 }
-Tile::Tile(const Tile& copy) noexcept //not really used.
-	: pixels(std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) {
-	uint16_t* src = this->pixels.get();
-	uint16_t* dst = copy.pixels.get();
-	if(copy.pixels!=nullptr) {
-		for( int i = 0 ; i<(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); i++ ) {
-			*src = *dst;
-			src++;
-			dst++;
-		}
-	}	
-}
-Tile& Tile::operator=(const Tile& copy) noexcept {
-	uint16_t* src = this->pixels.get();
-	uint16_t* dst = copy.pixels.get();
-	if(this != &copy && copy.pixels!=nullptr) {
-		for( int i = 0 ; i<(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); i++ ) {
-			*src = *dst;
-			src++;
-			dst++;
-		}
-	}
 
-	return *this;
-}
-void Tile::set_pixel(uint16_t idx, uint16_t val) {
-	*(this->get_buffer()+idx) = val;
-}
 uint16_t Tile::get_pixel(uint16_t idx) {
-	uint16_t* pix = this->get_buffer()+idx;
+	uint16_t* pix = this->buf+idx;
 	return *pix;
 }
-uint16_t* Tile::get_buffer() {
-  return pixels.get();
-}
+
 Tile::~Tile(){
-	this->pixels.release();
+	delete this->buf;
 }
 
-Tileset::Tileset( uint16_t* buf, size_t size ) : buf(buf), num_tiles(size/(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)){
-	tiles = new Tile[num_tiles];
-	for(int i = 0; i<num_tiles ; i++) {
-		tiles[i] = Tile(buf);
-		buf+=DEFAULT_TILE_LEN*DEFAULT_TILE_LEN;
-	}
+Tileset::Tileset( uint16_t* tileset_buf, size_t num_tiles ) : buf(tileset_buf), num_tiles(num_tiles) {
+
 }
-Tile* Tileset::get_tile(uint8_t idx) { return &tiles[idx]; }
-size_t Tileset::get_num_tiles(uint8_t idx) { return num_tiles; }
-Tileset::~Tileset() { delete tiles; }
+
+Tile Tileset::get_tile(uint8_t idx) { 
+	uint16_t* p = this->buf + (idx * DEFAULT_TILE_LEN * DEFAULT_TILE_LEN );
+	return Tile(p); 
+} 
 
 Tilemap::Tilemap(){}
 void Tilemap::set_position(uint16_t x, uint16_t y) { this->x0 = x; this->y0 = y;}
-Tile* Tilemap::get_tile(uint16_t idx) { return tileset->get_tile(map[idx]); }
+Tile Tilemap::get_tile(uint16_t idx) { return tileset->get_tile(map[idx]); }
 void Tilemap::set_map(uint8_t* map) { this->map = map; }
 
 Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id) {
@@ -114,23 +83,16 @@ void Layer::render() {
 
 }
 void Layer::clear() {
-	dirty_tiles.clear();
 	//TODO:do clean tiles on where the dirt tiles were.
 }
 
 void Sprite::render() { //todo: for now this assumes that its blitting on layer-0
 	for(int i = 0; i<tiles_high; i++) {
 		for(int j = 0; j<tiles_wide; j++) {
-			this->associated_layer->dirty_tiles_add( 
-				blit_tile(
-					i*tiles_wide + j,
-					x0+j*DEFAULT_TILE_LEN,
-					y0+i*DEFAULT_TILE_LEN));
 		}
 	}
 }
 
-void Layer::dirty_tiles_add( DirtyTile* tile) {	dirty_tiles.push_back(*tile); }
 
 tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
 	tile_context_t tc;
@@ -162,26 +124,6 @@ tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
 
 	return tc;
 }
-
-DirtyTile* Sprite::blit_tile(uint16_t idx, uint16_t x, uint16_t y) { //consider caching optimizations.
-	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN];
-	for(int x = 0; x<DEFAULT_TILE_LEN; x++) {
-		for(int y = 0; y<DEFAULT_TILE_LEN; y++) {
-			tile_context_t tc = this->contextualize((uint16_t) x, (uint16_t) y);
-			uint16_t pixel;
-			if( pixel == static_cast<uint16_t>(ALPHA_FILTER) ){
-				pixel = associated_layer->get_tile(tc.map_idx)->get_pixel(tc.tile_idx);
-			} else {
-				pixel = this->tileset->get_tile(idx)->get_pixel(x+y*DEFAULT_TILE_LEN);
-			}
-			buf[x+y*DEFAULT_TILE_LEN] = pixel;
-		}
-	}
-	DirtyTile* tile = new DirtyTile(&buf[0], x, y ); 
-	return tile;
-}
-
-
 
 Layer::~Layer() {
 	//kill the vector and the sprites on the layer
@@ -227,14 +169,7 @@ uint16_t* get_framebuf_data( struct Layer* layer ) {
 }
 
 Tilemap::~Tilemap() {}
-DirtyTile::~DirtyTile() {}
 
-DirtyTile::DirtyTile(uint16_t* src,uint16_t x, uint16_t y) : x(x), y(y){
-	pixels = (std::make_unique<uint16_t[]>(DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)) ;
-	for (int i = 0 ; i < DEFAULT_TILE_LEN*DEFAULT_TILE_LEN ; i++) {
-		pixels[i] = src[i];
-	}
-}
 Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer) {
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_wide;
@@ -274,8 +209,8 @@ uint16_t* engine_render(Engine* e) {
 	for(int i = e->y ; i<y0+HSCANLINE_SIZE ; i++ ) { //TODO on incr. whats value of e->y, y0??
 		for(int j = 0; j< DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++ ) {
 			tile_context_t ctx = e->layer->contextualize(j,i);
-			Tile* tile = e->layer->tileset->get_tile(ctx.map_idx); //TODO Rework this to auto dealloc
-			p[j] = tile->get_pixel(ctx.tile_idx); 
+			Tile tile = e->layer->tileset->get_tile(ctx.map_idx); //TODO Rework this to auto dealloc
+			p[j] = tile.get_pixel(ctx.tile_idx); 
 		}
 	}
 
@@ -290,10 +225,10 @@ uint16_t* engine_render(Engine* e) {
 			for(int l = diff_a ; l < (HSCANLINE_SIZE-diff_a) ; l++ ) {
 				for(int m = 0 ; m < sprite->tiles_wide ; m++ ) {
 					uint8_t map_index = sprite->tiles_wide*((sprite->y0-y0+l)/DEFAULT_TILE_LEN)+m;
-					Tile* tile = sprite->get_tile(map_index); //TODO m.l
+					Tile tile = sprite->get_tile(map_index); //TODO m.l
 					for(int n=0 ; n < DEFAULT_TILE_LEN; n++ ) {
 						uint8_t tile_index = n + (l%DEFAULT_TILE_LEN)*DEFAULT_TILE_LEN;
-						uint16_t pix = tile->get_pixel(tile_index);
+						uint16_t pix = tile.get_pixel(tile_index);
 						
 						//now you need to tranlate this optimized value into the scanline's value
 						if(pix!=ALPHA_FILTER){
@@ -309,10 +244,10 @@ uint16_t* engine_render(Engine* e) {
 			for(int l = y0 ; l < (L_MAX) ; l++) {
 				for(int m = 0 ; m < sprite->tiles_wide ; m++ ) {
 					uint8_t map_index = sprite->tiles_wide*((sprite->y0-y0+l)/DEFAULT_TILE_LEN)+m;
-					Tile* tile = sprite->get_tile(map_index); //TODO m.l
+					Tile tile = sprite->get_tile(map_index); //TODO m.l
 					for(int n = 0 ; n < DEFAULT_TILE_LEN ; n++ ) {
 						uint8_t tile_index = n + (l%DEFAULT_TILE_LEN)*DEFAULT_TILE_LEN;
-						uint16_t pix = tile->get_pixel(tile_index);
+						uint16_t pix = tile.get_pixel(tile_index);
 						
 						//now you need to tranlate this optimized value into the scanline's value
 						if(pix!=ALPHA_FILTER){

@@ -77,7 +77,7 @@ void hscanline_handler() {
 		spi0_dma_chan, 
 		e->render_data,
 		false
-	)
+	);
 
 }
 

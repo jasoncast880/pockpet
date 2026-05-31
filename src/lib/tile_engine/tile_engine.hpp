@@ -18,56 +18,29 @@ typedef struct {
 	uint16_t tile_idx; //index of tile in the current map
 } tile_context_t; //gets returned given x,y
 
+//
 struct Tile {
 	Tile();
 	Tile(uint16_t* src);
 
-	Tile(const Tile& copySrc) noexcept;
-	Tile& operator=(const Tile& copySrc) noexcept; 
-	Tile(Tile&&) noexcept = default;
-	Tile& operator=(Tile&& moveSrc) noexcept = default;
-	~Tile();
-
-	void set_pixel(uint16_t idx, uint16_t val);
 	uint16_t get_pixel(uint16_t idx);
-	uint16_t* get_buffer();
-	
-	std::unique_ptr<uint16_t[]> pixels;
-};
 
-struct DirtyTile : public Tile {
-	DirtyTile(uint16_t* src,uint16_t x, uint16_t y);
-	uint16_t x,y;
-	uint8_t display_params[8];
-	/*  DISP_PARAMS ORDER: (L.E)
-	 *	CASET START 2 by
-	 *	CASET END   2 by
-	 *	RASET START 2 by
-	 *	RASET END   2 by
-	 */
-
-	DirtyTile(const DirtyTile& copySrc) noexcept = default;//patch todo
-	DirtyTile& operator=(const DirtyTile& copySrc) noexcept; 
-	DirtyTile(DirtyTile&&) noexcept = default;
-	DirtyTile& operator=(DirtyTile&& moveSrc) noexcept = default;
-	
-	~DirtyTile();
+	~Tile(); //essentially this is now just a tileset-friendly unique ptr
+private:
+	uint16_t* buf;
 };
 
 struct Tileset{ 
-	Tileset( uint16_t* buf, size_t size );
+	Tileset( uint16_t* tileset_buf, size_t num_tiles ); 
 
-	Tile* get_tile(uint8_t idx); 
+	Tile get_tile(uint8_t idx); 
 	size_t get_num_tiles(uint8_t idx); 
 
-	~Tileset();
-
-	size_t num_tiles;
 private:
-	Tile* tiles;
 	uint16_t* buf;
-	uint8_t tile_len = DEFAULT_TILE_LEN;
+	size_t num_tiles; // errhandle/bounds-check
 };
+//
 
 class Tilemap{ 
 public:
@@ -84,7 +57,7 @@ public:
 	void set_position(uint16_t x, uint16_t y);
 
 	//simple shared accessor/modifiers
-	Tile* get_tile(uint16_t idx); 
+	Tile get_tile(uint16_t idx); 
 	void set_map(uint8_t* map); 
 
 	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
@@ -103,7 +76,6 @@ public:
 	
 	std::vector<Sprite> sprites;
 
-	void dirty_tiles_add( DirtyTile* tile);
 
 	void render() override;
 	Layer();
@@ -118,7 +90,6 @@ public:
 	void clear();
 
 	std::vector<uint8_t> dirty_indices; 
-	std::vector<DirtyTile> dirty_tiles; //tiles to throw at the hw
 
 	~Layer();
 };
@@ -140,7 +111,6 @@ public:
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 	static bool check_filter(uint16_t x, uint16_t y);
 
-	DirtyTile* blit_tile(uint16_t idx, uint16_t x, uint16_t y); //TODO
 
 	~Sprite();
 	void render() override;
