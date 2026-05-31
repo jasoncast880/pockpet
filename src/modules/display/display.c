@@ -34,7 +34,7 @@ e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFA
 
 	channel_config_set_transfer_data_size(&c, DMA_SIZE_16);
 	channel_config_set_dreq(&c, DREQ_SPI0_RX);
-	channel_config_set_ring(&c, false, e->render_buf_size);
+	//channel_config_set_ring(&c, false, e->render_buf_size); //projected buffer size is not aligned to ring configuration
 	dma_channel_configure(spi0_dma_chan,
 		 &c,
 		 &spi0_hw->dr,
@@ -72,6 +72,12 @@ void hscanline_handler() {
 	//flag engine to render via gl. static flag
 	render_flag = !render_flag;
 #endif
+
+	dma_channel_set_read_addr(
+		spi0_dma_chan, 
+		e->render_data,
+		false
+	)
 
 }
 
