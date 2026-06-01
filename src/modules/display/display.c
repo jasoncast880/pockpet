@@ -51,9 +51,6 @@ e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFA
 #ifdef RTOS_MODE
 	render_token = xSemaphoreCreateBinary();
 #endif
-#ifndef RTOS_MODE
-	render_flag = true;
-#endif 
 }
 
 volatile uint32_t tile_count = 0; //TODO: build engine api to give easy data
@@ -66,11 +63,6 @@ void hscanline_handler() {
 #ifdef RTOS_MODE
 	//flag engine to render via semphr
 	xSemaphoreGiveFromISR(render_token);
-#endif
-
-#ifndef RTOS_MODE
-	//flag engine to render via gl. static flag
-	render_flag = !render_flag;
 #endif
 
 	dma_channel_set_read_addr(

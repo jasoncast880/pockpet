@@ -35,8 +35,7 @@ int main() {
 		//BUTTON PROC
 		
 		//DISPLAY 
-		if(render_flag) {
-			engine_render(e);
+		engine_render(e);
 
 		if( e->h_scanline_counter < HSCANLINE_MAX ) {
 			engine_render(e); //TODO how much time does this take?
@@ -46,23 +45,16 @@ int main() {
 			//TODO increment sprite entities here
 		}
 
-			render_flag = false;
-		} 
 
-		if(!render_flag) {
 #if HSCANLINE_RENDER
-			//reconfigure the hw display write window to the next scanline
-			
-			ili9341_setCS_LO();
+		//reconfigure the hw display write window to the next scanline
+		
+		ili9341_setCS_LO();
 
-			uint16_t y0 = e->h_scanline_counter * HSCANLINE_SIZE;
-			ili9341_setAddrWindow(0, y0, DEFAULT_TILE_LEN*DEFAULT_SCREEN_TILES_X, HSCANLINE_SIZE);
-			
-			ili9341_writeCommand(RAM_WR);
-			
-
+		uint16_t y0 = e->h_scanline_counter * HSCANLINE_SIZE;
+		ili9341_setAddrWindow(0, y0, DEFAULT_TILE_LEN*DEFAULT_SCREEN_TILES_X, HSCANLINE_SIZE);
+		ili9341_writeCommand(RAM_WR);
 #endif
-		}
 	}
 }
 	

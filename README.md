@@ -2,7 +2,7 @@
 
 ## Synopsis 
 
-Tactigachi is a PDA project based on the low-cost, low power RP2040 MCU solution. 
+Tactigachi is a PDA firmware-PCB project based on the low-cost, low power RP2040 MCU solution. 
 It leverages the numerous and flexible hardware interfaces of the rp2040 to provide a responsive User Interface, simple file storage, USB interface for PC application access, Simple Audio processing and audio jack output:
 
 | Peripheral Subsystem | On-Board Hardware | Software/Drivers | 
@@ -12,7 +12,7 @@ It leverages the numerous and flexible hardware interfaces of the rp2040 to prov
 | Audio | (WIP) | (WIP) |
 
 Hardware Schematics, PCB Images:
-<...>
+<TODO add link to hardware github repo>
 
 ## Building Project
 External/3rd Party Dependencies:
@@ -94,3 +94,25 @@ load               # puts program into the mcu flash/prog space
 monitor reset halt # Resets the target and immediately halts it at the reset vector.
 ```
 You can now set breakpoints, step through functions from this point onwards.
+
+## Display Firmware
+Tactigachi Display uses a 240 x 320 pixel res. LCD TFT Display. The biggest challenge associated with providing display for the RP2040 is managing RAM usage while still providing a way to manage entities on screen (ie; cursor, pop-up icons, simple sprites, etc) and maintain a consistent FPS.
+
+Hardware Resources used:
+DMA : Reduces overall program latency by facilitating pixel transfer from ram buf. to SPI display without requiring explicit CPU oversight.
+Dedicated SPI Peripheral : RP2040 has a dedicated SPI module & associated SPI HAL functions. This means that I can push to the SPI display interface without having to resort to bit-banging.
+Flash : Raw-Bitmap Tilemaps are kept in flash memory as it is cheaper than RAM and only called upon when the tile engine deems necessary. The software written to manage and blit tiles and configure their data into one cohesive RAM buffer is the core of the Display Firmware.
+
+### Core Philosophy Behind Tile Engines
+
+something something inspired by GB Engines/classic low-ram approach.
+
+<Memory Heiarchy Triangle Here>
+
+tradeoffs between different types of rendering (Fullscreen, HScanline, Tile Buffer)
+
+Key to maintaining graphics pipeline in a multi-peripheral system (use an rtos with good synchronization, be mindful of how much ram is drawn by the render method)
+That being said, what needs memory in the display? (free-store)
+1) Framebuffer/HScanline (usually static, exception is a tile-based fs. buffer)
+2) Entity Objects (kept in a vector field ie Layer::sprites. Pretty small compared to the buffer, reserve 1?? kB)
+

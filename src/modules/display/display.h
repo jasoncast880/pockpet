@@ -54,11 +54,6 @@ void push_pixels( void* pvParameters );
 void render( void* pvParameters );
 void update_entities( void* pvParams );
 #endif
-#ifndef RTOSMODE 
-
-static bool render_flag;
-#endif
-
 
 #ifdef __cplusplus
 } //extern "C"

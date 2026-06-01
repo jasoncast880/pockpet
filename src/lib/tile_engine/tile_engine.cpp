@@ -185,7 +185,6 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 //ENGINE's API CODE !!! LEAVE AT BOTTOM
 Engine* engine_init(struct Layer* layer) {
 	Engine* e = new Engine();
-	//TODO: Moove this to the layer constructor for better decoupling??
 #if   DIRTY_RENDER
 	//vector alloc, too lazy to write 
 #elif FULSCREEN_RENDER
@@ -209,7 +208,7 @@ uint16_t* engine_render(Engine* e) {
 	for(int i = e->y ; i<y0+HSCANLINE_SIZE ; i++ ) { //TODO on incr. whats value of e->y, y0??
 		for(int j = 0; j< DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++ ) {
 			tile_context_t ctx = e->layer->contextualize(j,i);
-			Tile tile = e->layer->tileset->get_tile(ctx.map_idx); //TODO Rework this to auto dealloc
+			Tile tile = e->layer->tileset->get_tile(ctx.map_idx); 
 			p[j] = tile.get_pixel(ctx.tile_idx); 
 		}
 	}
@@ -225,7 +224,7 @@ uint16_t* engine_render(Engine* e) {
 			for(int l = diff_a ; l < (HSCANLINE_SIZE-diff_a) ; l++ ) {
 				for(int m = 0 ; m < sprite->tiles_wide ; m++ ) {
 					uint8_t map_index = sprite->tiles_wide*((sprite->y0-y0+l)/DEFAULT_TILE_LEN)+m;
-					Tile tile = sprite->get_tile(map_index); //TODO m.l
+					Tile tile = sprite->get_tile(map_index); 
 					for(int n=0 ; n < DEFAULT_TILE_LEN; n++ ) {
 						uint8_t tile_index = n + (l%DEFAULT_TILE_LEN)*DEFAULT_TILE_LEN;
 						uint16_t pix = tile.get_pixel(tile_index);
@@ -244,7 +243,7 @@ uint16_t* engine_render(Engine* e) {
 			for(int l = y0 ; l < (L_MAX) ; l++) {
 				for(int m = 0 ; m < sprite->tiles_wide ; m++ ) {
 					uint8_t map_index = sprite->tiles_wide*((sprite->y0-y0+l)/DEFAULT_TILE_LEN)+m;
-					Tile tile = sprite->get_tile(map_index); //TODO m.l
+					Tile tile = sprite->get_tile(map_index); 
 					for(int n = 0 ; n < DEFAULT_TILE_LEN ; n++ ) {
 						uint8_t tile_index = n + (l%DEFAULT_TILE_LEN)*DEFAULT_TILE_LEN;
 						uint16_t pix = tile.get_pixel(tile_index);
@@ -261,7 +260,6 @@ uint16_t* engine_render(Engine* e) {
 	}
 #endif //TODO: implement other forms of rendering as needed
 	   
-
 	return &p[0];
 }
 
