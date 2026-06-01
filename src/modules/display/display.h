@@ -31,7 +31,7 @@ enum cmd_sequence_t {
 }; //this is a little outdated but its good reference to remember
    //the driver sequence without looking at the DS
 
-void display_setup();
+void display_setup(Engine* engine);
 
 void tile_handler(); //for tile-by-tile PARTIAL rendering ISR
 void frame_handler(); //for full framebuffer rendering    ISR

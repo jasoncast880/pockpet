@@ -11,25 +11,26 @@
 
 //temp for assets
 #include "ampalaya_tileset_16.h"
+#include "jet_sprite.h"
 #include "tilemaps.h"
 
 #include "display.h"
 
-//DUMMY.CPP PURPOSE: Test drivers, services without RTOS bloat/interference.
-int alloc_system_tileset() {
-	return 0 ;	
-}
-
-int run_system_startup() {
-	return 0 ;
-}
+//DUMMY.CPP PURPOSE: Test display drivers without RTOS bloat/interference.
 
 int main() {
 	stdio_init_all();
 	sleep_ms(5000);
 	printf("GO");
 
-	display_setup();
+
+	struct Layer* system_layer = add_layer(ampalaya_tileset_16, 30, tile_bg_16, 
+			DEFAULT_SCREEN_TILES_X, DEFAULT_SCREEN_TILES_Y );
+	Engine* e = engine_init(system_layer);
+	
+	display_setup(e);
+	
+	add_sprite(&jet_sprite_16[0], 4, &demo_spritemap_1[0], 2, 2, system_layer);
 
 	while(true) {
 		//BUTTON PROC

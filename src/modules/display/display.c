@@ -11,8 +11,8 @@
 
 static uint32_t spi0_dma_chan; //hardware
 
-void display_setup() {
-e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFAULT_TILE_LEN,  240/DEFAULT_TILE_LEN)); //pass by pointer
+void display_setup(Engine* engine) {
+e = engine;
 
 #if   DIRTY_RENDER
 	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);
@@ -43,11 +43,8 @@ e = engine_init(add_layer( &ampalaya_tileset_16[0], 30, &tile_bg_16[0], 320/DEFA
 		 false ); //CHANNEL CONFIGURED, DO NOT START
 	dma_channel_set_irq0_enabled(spi0_dma_chan, true);
 
-
 	irq_set_enabled(DMA_IRQ_0, true);
 	
-
-
 #ifdef RTOS_MODE
 	render_token = xSemaphoreCreateBinary();
 #endif
