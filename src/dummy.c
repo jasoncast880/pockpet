@@ -28,7 +28,7 @@ int main() {
 	struct Layer* system_layer = add_layer(ampalaya_tileset_16, 30, tile_bg_16, 
 			DEFAULT_SCREEN_TILES_X, DEFAULT_SCREEN_TILES_Y );
 
-	Engine* e = engine_init(system_layer); //soft init
+	engine_init(system_layer); //soft init
 	display_setup(e); //hardwares
 
 	Entity_Handle* sprite = add_sprite(&jet_sprite_16[0], 4, &demo_spritemap_1[0], 2, 2, system_layer);
@@ -37,7 +37,7 @@ int main() {
 	while(true) {
 		//DISPLAY 
 		if( e->h_scanline_counter < HSCANLINE_MAX ) {
-			engine_render(e); //TODO how much time does this take?
+			engine_render(); //TODO how much time does this take?
 		} else {
 			e->h_scanline_counter = 0;
 			increment_sprite_x(sprite); //todo implement these

@@ -24,7 +24,6 @@ Tile Tileset::get_tile(uint8_t idx) {
 size_t Tileset::get_num_tiles(uint8_t idx) { return this->num_tiles; }
 
 Tilemap::Tilemap(){}
-void Tilemap::set_position(int16_t x, int16_t y) { this->x0 = x; this->y0 = y;}
 Tile Tilemap::get_tile(uint16_t idx) { 
 	return tileset->get_tile(map[idx]); 
 }
@@ -32,21 +31,19 @@ void Tilemap::set_map(uint8_t* map) { this->map = map; }
 Tilemap::~Tilemap(){}
 
 Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* map, uint8_t id) {
-	framebuf_data = new uint16_t[ (tiles_wide*tiles_high) * (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN) ];
-
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
 	this->tileset = tileset;
 	this->map = map;
+
+	this->sprites.reserve(SPRITE_RESERVE_SIZE);
 }
 
-uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
+uint8_t Layer::sprite_add(Sprite* s) {
 	if(this->sprites.size() <= MAX_SPRITES_PER_LAYER) {
-		Sprite sprite(tiles_wide, tiles_high, ts, map, this);
-		this->sprites.push_back(sprite);
-		sprite.id = sprites.size(); //id is size of vector.
-		return sprite.id;
-	} else return 0; //0 id means no space on the layer.
+		this->sprites.push_back(*s);
+		return (sprites.size()-1);
+	} else return -1; 
 }
 
 void Layer::sprite_update_by_id(uint8_t id, int16_t x, int16_t y, uint8_t* map) {
@@ -95,6 +92,11 @@ tile_context_t Sprite::contextualize(int16_t x, int16_t y) {
 	return tc;
 }
 
+void Sprite::set_position(int16_t x, int16_t y) {
+	this->x0 = x0;
+	this->y0 = y0;
+}
+
 Layer::Layer() {}
 Layer::~Layer() {
 	//kill the vector and the sprites on the layer
@@ -116,8 +118,7 @@ struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilema
 	Layer* handle = new Layer( tiles_wide, tiles_high, ts, tilemap, 0 );
 	return handle;
 }
-int update_layer(Layer* layer, uint8_t* map, uint8_t x, uint8_t y) {
-	layer->set_position(x,y);
+int update_layer(Layer* layer, uint8_t* map) {
 	layer->set_map(map);
 
 	return 0;
@@ -126,50 +127,68 @@ int update_layer(Layer* layer, uint8_t* map, uint8_t x, uint8_t y) {
 Entity_Handle* add_sprite(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, Layer* associated_layer) {
 	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*tiles_wide*tiles_high);
 
+	Entity_Handle* eh = new Entity_Handle();
 	Sprite* s = new Sprite( tiles_wide, tiles_high , ts, tilemap , associated_layer );
 
-	return new Entity_Handle();
+	s->handle = eh;
+	eh->id = associated_layer->sprite_add(s);
+
+	return eh;
 }
 
 void update_sprite_position(Entity_Handle* eh, int16_t x, int16_t y) {
 	//engine-side handling
-	Sprite* sprite = eh->s;
-	sprite->x0 = x;
-	sprite->y0 = y;
+	Sprite& sprite = e->layer->sprites.at(eh->id);
+	sprite.set_position(x,y);
 	
-	//app's handle handling
+	//app's entity handling
 	eh->x = x;
-	eh->y = x;
+	eh->y = y;
 }
 
 void increment_sprite_x(Entity_Handle* eh) {
 	//engine-side handling
-	Sprite* sprite = eh->s;
-	sprite->x0++;
+	Sprite& sprite = e->layer->sprites.at(eh->id);
+	sprite.x0++;
 	
-	//app's handle handling
+	//app's entity handling
 	eh->x++;
 }
 void increment_sprite_y(Entity_Handle* eh) {
 	//engine-side handling
-	Sprite* sprite = eh->s;
-	sprite->y0++;
+	Sprite& sprite = e->layer->sprites.at(eh->id);
+	sprite.y0++;
 	
-	//app's handle handling
+	//app's entity handling
 	eh->y++;
 }
 
 void update_sprite_map(Entity_Handle* eh, uint8_t* map) {
 	//engine-side handling
-	Sprite* sprite = eh->s;
-	sprite->map = map;
+	Sprite& sprite = e->layer->sprites.at(eh->id);
+	sprite.set_map(map);
 	
-	//app's handle handling
+	//app's entity handling
 	eh->map = map;
 }
 
-Engine* engine_init(struct Layer* layer) {
-	Engine* e = new Engine();
+void delete_sprite(Entity_Handle* eh) {
+	int deleted_index = eh->id;
+	e->layer->sprites.erase(e->layer->sprites.begin() + deleted_index);
+
+	for(int i = deleted_index ; i < e->layer->sprites.size() ; i++) {
+		//reduce their id's by 1
+		//engine-side handling
+		Sprite& sprite = e->layer->sprites.at(i);
+		sprite.id--;
+
+		//app entity handling
+		sprite.handle--;
+	}
+}
+
+void engine_init(struct Layer* layer) {
+	e = new Engine(); //global static
 #if   DIRTY_RENDER
 	//vector alloc, too lazy to write 
 #elif FULSCREEN_RENDER
@@ -179,11 +198,10 @@ Engine* engine_init(struct Layer* layer) {
 #endif
 
 	e->layer = layer;
-	return e;
 }
 
 #if HSCANLINE_RENDER
-uint16_t* engine_render(Engine* e) { 
+uint16_t* engine_render() { 
 
 	uint16_t* p = e->render_data;
 

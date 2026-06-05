@@ -45,6 +45,8 @@ private:
 
 class Tilemap{ 
 public:
+	Tilemap();
+
 	const uint8_t* map; 
 
 	int16_t x_offset, y_offset; // w. reference to container
@@ -52,10 +54,6 @@ public:
 	uint8_t tiles_wide, tiles_high;
 
 	Tileset* tileset;
-
-	Tilemap();
-
-	void set_position(int16_t x, int16_t y);
 
 	//simple shared accessor/modifiers
 	Tile get_tile(uint16_t idx); 
@@ -70,13 +68,12 @@ class Sprite;
 class Layer: public Tilemap {
 public:
 
-	uint16_t* framebuf_data; 
 	std::vector<Sprite> sprites;
 
 	Layer();
 	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* map, uint8_t id);
 	
-	uint8_t sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map); 
+	uint8_t sprite_add(Sprite* s); 
 	void sprite_update_by_id(uint8_t id, int16_t x, int16_t y, uint8_t* map);
 	void sprite_delete_by_id(uint8_t id); 
 	void clear_sprites();
@@ -102,12 +99,14 @@ public:
 	Sprite(Sprite&&) noexcept = default;
 	Sprite& operator=(Sprite&&) noexcept = default;
 
+	void set_position(int16_t x, int16_t y);
 	tile_context_t contextualize(int16_t x, int16_t y) override; 
 	static bool check_filter(int16_t x, int16_t y);
 
 	~Sprite();
 
 	friend Layer;
+	Entity_Handle* handle;
 };
 
 #endif //TILE_ENGINE_H

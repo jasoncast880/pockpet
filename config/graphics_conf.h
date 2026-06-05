@@ -18,7 +18,10 @@
 #define HSCANLINE_SIZE 16
 #if HSCANLINE_RENDER
 static const int HSCANLINE_MAX = (DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE;
-#endif
+#endif //TODO Define other render types and their allocated size
+
+//engine preferences
+#define SPRITE_RESERVE_SIZE 5
 
 #endif //GRAPHICS_CONF_H
 
