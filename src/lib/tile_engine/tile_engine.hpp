@@ -1,6 +1,9 @@
 #ifndef TILE_ENGINE_H
 #define TILE_ENGINE_H
 
+//TODO What happens if the entities are hitting the edge/screen boundary?
+//Without edge-case handling this will cause warping.
+
 #include <cstddef>
 #include <stdint.h>
 
@@ -21,23 +24,21 @@ typedef struct {
 //
 struct Tile {
 	Tile();
-	Tile(uint16_t* src);
-
-	uint16_t get_pixel(uint16_t idx);
-
+	Tile(const uint16_t* src);
+	void get_pixel(uint16_t idx, uint16_t& val);
 	~Tile(); //essentially this is now just a tileset-friendly unique ptr
-private:
+
 	uint16_t* buf;
 };
 
 struct Tileset{ 
-	Tileset( uint16_t* tileset_buf, size_t num_tiles ); 
+	Tileset( const uint16_t* tileset_buf, size_t num_tiles ); 
 
 	Tile get_tile(uint8_t idx); 
 	size_t get_num_tiles(uint8_t idx); 
 
 private:
-	uint16_t* buf;
+	const uint16_t* buf;
 	size_t num_tiles; // errhandle/bounds-check
 };
 //
@@ -62,9 +63,7 @@ public:
 
 	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
 
-	virtual void render() = 0;
-
-	~Tilemap();
+	virtual ~Tilemap();
 }; 
 
 class Sprite;
@@ -77,7 +76,6 @@ public:
 	std::vector<Sprite> sprites;
 
 
-	void render() override;
 	Layer();
 	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id);
 	
@@ -88,8 +86,6 @@ public:
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 
 	void clear();
-
-	std::vector<uint8_t> dirty_indices; 
 
 	~Layer();
 };
@@ -111,9 +107,7 @@ public:
 	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
 	static bool check_filter(uint16_t x, uint16_t y);
 
-
 	~Sprite();
-	void render() override;
 
 	friend Layer;
 };
