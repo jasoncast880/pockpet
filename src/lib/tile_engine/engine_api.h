@@ -22,7 +22,7 @@ typedef struct {
 typedef struct { //structure useful for app-level logic with sprites.
 				 //needs to be decoupled because of C++ lang barrier
 				 
-	int32_t  x,y; //coords of the top-left of sprite rect.
+	int16_t  x,y; //coords of the top-left of sprite rect.
 	uint8_t* map;
 	uint8_t tiles_wide, tiles_high;
 	uint8_t id; //id sets apart/secondary handle. Struct itself is the primary handle
@@ -33,12 +33,12 @@ typedef struct { //structure useful for app-level logic with sprites.
 Engine* engine_init(struct Layer* layer);
 uint16_t* engine_render(Engine* e); //needs to return a contiguous arr
 
-struct Layer* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
+struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
 int update_layer(struct Layer* layer, uint8_t* map, uint8_t x, uint8_t y);
 
-Entity_Handle* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct Layer* associated_layer);
+Entity_Handle* add_sprite(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, struct Layer* associated_layer);
 void update_sprite_map(Entity_Handle* sprite, uint8_t* map);
-void update_sprite_position(Entity_Handle* sprite, uint16_t x, uint16_t y); 
+void update_sprite_position(Entity_Handle* sprite, int16_t x, int16_t y); 
 void increment_sprite_x(Entity_Handle* sprite); //easy-increment
 void increment_sprite_y(Entity_Handle* sprite); //easy-increment
 

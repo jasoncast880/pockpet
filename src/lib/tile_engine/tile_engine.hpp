@@ -45,23 +45,23 @@ private:
 
 class Tilemap{ 
 public:
-	uint8_t* map; 
-	uint16_t x_offset, y_offset; // w. reference to container
-	uint16_t x0, y0; //top left corner of entity.
-	Tileset* tileset;
+	const uint8_t* map; 
+
+	int16_t x_offset, y_offset; // w. reference to container
+	int16_t x0, y0; //top left corner of entity.
 	uint8_t tiles_wide, tiles_high;
 
-	uint8_t id; 
+	Tileset* tileset;
 
 	Tilemap();
 
-	void set_position(uint16_t x, uint16_t y);
+	void set_position(int16_t x, int16_t y);
 
 	//simple shared accessor/modifiers
 	Tile get_tile(uint16_t idx); 
 	void set_map(uint8_t* map); 
 
-	virtual tile_context_t contextualize(uint16_t x, uint16_t y) = 0;
+	virtual tile_context_t contextualize(int16_t x, int16_t y) = 0;
 
 	virtual ~Tilemap();
 }; 
@@ -70,22 +70,19 @@ class Sprite;
 class Layer: public Tilemap {
 public:
 
-	//TEMP : temp allocate memory for a full frame buffer. (do in constructor)
-	uint16_t* framebuf_data; //keep as 16-bit 565 pixel data, de-compress via masking after.
-	
+	uint16_t* framebuf_data; 
 	std::vector<Sprite> sprites;
 
-
 	Layer();
-	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id);
+	Layer(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* map, uint8_t id);
 	
 	uint8_t sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map); 
-	void sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map);
+	void sprite_update_by_id(uint8_t id, int16_t x, int16_t y, uint8_t* map);
 	void sprite_delete_by_id(uint8_t id); 
+	void clear_sprites();
 
-	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
+	tile_context_t contextualize(int16_t x, int16_t y) override; 
 
-	void clear();
 
 	~Layer();
 };
@@ -94,6 +91,7 @@ public:
 class Sprite: public Tilemap { //touched by Layer only ; id is index within 'sprites' field
 public:
 	Layer* associated_layer = nullptr;
+	uint8_t id;
 
 	Sprite();
 	Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* mapBuf, Layer* associated_layer);
@@ -104,8 +102,8 @@ public:
 	Sprite(Sprite&&) noexcept = default;
 	Sprite& operator=(Sprite&&) noexcept = default;
 
-	tile_context_t contextualize(uint16_t x, uint16_t y) override; 
-	static bool check_filter(uint16_t x, uint16_t y);
+	tile_context_t contextualize(int16_t x, int16_t y) override; 
+	static bool check_filter(int16_t x, int16_t y);
 
 	~Sprite();
 

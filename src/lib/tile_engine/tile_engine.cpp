@@ -18,55 +18,53 @@ Tile::~Tile(){
 Tileset::Tileset( const uint16_t* buf, size_t num_tiles ) : buf(buf), num_tiles(num_tiles) {}
 Tile Tileset::get_tile(uint8_t idx) {
 	if( idx < this->num_tiles ) {
-		const uint16_t* p = this->buf+=(idx*DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
-		return Tile(p);
+		const uint16_t* p = this->buf+=(idx*DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); return Tile(p);
 	} else return nullptr;
 }
 size_t Tileset::get_num_tiles(uint8_t idx) { return this->num_tiles; }
 
 Tilemap::Tilemap(){}
-void Tilemap::set_position(uint16_t x, uint16_t y) { this->x0 = x; this->y0 = y;}
+void Tilemap::set_position(int16_t x, int16_t y) { this->x0 = x; this->y0 = y;}
 Tile Tilemap::get_tile(uint16_t idx) { 
 	return tileset->get_tile(map[idx]); 
 }
 void Tilemap::set_map(uint8_t* map) { this->map = map; }
 Tilemap::~Tilemap(){}
 
-Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t* map, uint8_t id) {
+Layer::Layer( uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, const uint8_t* map, uint8_t id) {
 	framebuf_data = new uint16_t[ (tiles_wide*tiles_high) * (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN) ];
 
 	this->tiles_wide = tiles_wide;
 	this->tiles_high = tiles_high;
 	this->tileset = tileset;
 	this->map = map;
-	this->id =id;
 }
 
 uint8_t Layer::sprite_add(uint8_t tiles_wide, uint8_t tiles_high, Tileset* ts, uint8_t* map) {
-	if(sprites.size() <= MAX_SPRITES_PER_LAYER) {
+	if(this->sprites.size() <= MAX_SPRITES_PER_LAYER) {
 		Sprite sprite(tiles_wide, tiles_high, ts, map, this);
-		sprites.push_back(sprite);
+		this->sprites.push_back(sprite);
 		sprite.id = sprites.size(); //id is size of vector.
 		return sprite.id;
 	} else return 0; //0 id means no space on the layer.
 }
 
-void Layer::sprite_update_by_id(uint8_t id, uint16_t x, uint16_t y, uint8_t* map) {
+void Layer::sprite_update_by_id(uint8_t id, int16_t x, int16_t y, uint8_t* map) {
 	Sprite sprite = sprites.at(id);
 	sprite.set_position(x,y);
 	sprite.set_map(map);
 }
 void Layer::sprite_delete_by_id(uint8_t id) {} //no delete by index on vec
 
-tile_context_t Layer::contextualize(uint16_t x, uint16_t y) {
+tile_context_t Layer::contextualize(int16_t x, int16_t y) {
 	tile_context_t tc;
 
-	uint16_t x_tile_ = x/DEFAULT_TILE_LEN;
-	uint16_t y_tile_ = y/DEFAULT_TILE_LEN;
+	int16_t x_tile_ = x/DEFAULT_TILE_LEN;
+	int16_t y_tile_ = y/DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_ + this->tiles_wide*y_tile_;
 
-	uint16_t x_tile_offset = x % DEFAULT_TILE_LEN;
-	uint16_t y_tile_offset = y % DEFAULT_TILE_LEN;
+	int16_t x_tile_offset = x % DEFAULT_TILE_LEN;
+	int16_t y_tile_offset = y % DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
 
 	return tc;
@@ -80,16 +78,18 @@ Sprite::Sprite(uint8_t tiles_wide, uint8_t tiles_high, Tileset* tileset, uint8_t
 	this->associated_layer = associated_layer;
 }
 
-tile_context_t Sprite::contextualize(uint16_t x, uint16_t y) {
+tile_context_t Sprite::contextualize(int16_t x, int16_t y) {
 	/*
 	 * returns the tile, tile index in reference to the current layer.
 	 * Sprite position always is in reference to the layer it resides in.
 	 */
-	tile_context_t tc; uint16_t x_tile_ = x/DEFAULT_TILE_LEN; uint16_t y_tile_ = y/DEFAULT_TILE_LEN;
+	tile_context_t tc; 
+	int16_t x_tile_ = x/DEFAULT_TILE_LEN; 
+	int16_t y_tile_ = y/DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_ + this->associated_layer->tiles_wide*y_tile_;
 
-	uint16_t x_tile_offset = x % DEFAULT_TILE_LEN;
-	uint16_t y_tile_offset = y % DEFAULT_TILE_LEN;
+	int16_t x_tile_offset = x % DEFAULT_TILE_LEN;
+	int16_t y_tile_offset = y % DEFAULT_TILE_LEN;
 	tc.map_idx = x_tile_offset + DEFAULT_TILE_LEN*y_tile_offset;
 
 	return tc;
@@ -110,7 +110,7 @@ Sprite::~Sprite() {
 }
 
 #include "engine_api.h"
-struct Layer* add_layer(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
+struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
 
 	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
 	Layer* handle = new Layer( tiles_wide, tiles_high, ts, tilemap, 0 );
@@ -123,7 +123,7 @@ int update_layer(Layer* layer, uint8_t* map, uint8_t x, uint8_t y) {
 	return 0;
 }
 
-Entity_Handle* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, Layer* associated_layer) {
+Entity_Handle* add_sprite(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high, Layer* associated_layer) {
 	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*tiles_wide*tiles_high);
 
 	Sprite* s = new Sprite( tiles_wide, tiles_high , ts, tilemap , associated_layer );
@@ -131,7 +131,7 @@ Entity_Handle* add_sprite(uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, u
 	return new Entity_Handle();
 }
 
-void update_sprite_position(Entity_Handle* eh, uint16_t x, uint16_t y) {
+void update_sprite_position(Entity_Handle* eh, int16_t x, int16_t y) {
 	//engine-side handling
 	Sprite* sprite = eh->s;
 	sprite->x0 = x;
@@ -205,8 +205,6 @@ uint16_t* engine_render(Engine* e) {
 		}
 		for( int j = 0 ; j < e->layer->sprites.size() ; j++ ) {
 			//TODO: store indices of occupation on render call or something
-			
-			
 		}
 	}
 	
