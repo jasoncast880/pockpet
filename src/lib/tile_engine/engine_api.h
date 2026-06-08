@@ -15,7 +15,8 @@ typedef struct {
 	uint16_t x,y; //for buf. true count of current pixel pointer
 	uint8_t x_tile, y_tile; //for tile-by-tile read.
 } Engine;
-static Engine* e; //DIRTY GLOBAL EW
+
+static Engine* e; 
 
 typedef struct { //structure useful for app-level logic with sprites.
 				 //needs to be decoupled because of C++ lang barrier

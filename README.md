@@ -26,6 +26,7 @@ export <ENV_VARIABLE_NAME>="<LIB_FILEPATH>"
 | RPi Pico SDK | PICO_SDK_PATH | https://github.com/raspberrypi/pico-sdk.git | 
 | FreeRTOS Kernel | FREERTOS_KERNEL_PATH | https://github.com/FreeRTOS/FreeRTOS-Kernel.git |
 
+<TODO - Make a Docker thing for easy compilation?? >
 
 ```bash
 # run from top level directory
