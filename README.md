@@ -11,8 +11,9 @@ It leverages the numerous and flexible hardware interfaces of the rp2040 to prov
 | SD Card | SDC Module => RP2040 SPI0 | fatfs (by elmchan) & Wrapper Class |
 | Audio | (WIP) | (WIP) |
 
-Hardware Schematics, PCB Images:
-<TODO add link to hardware github repo>
+PCB Images & [Hardware Repo](
+https://github.com/jasoncast880/tactigachi-pcb 
+)
 
 ## Building Project
 External/3rd Party Dependencies:
