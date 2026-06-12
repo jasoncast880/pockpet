@@ -6,29 +6,26 @@ extern "C" {
 #endif 
 
 typedef struct { 
-	struct Layer* layer;
 	uint16_t* render_data; //variable size, constant location.
-	size_t render_buf_size;
+	struct Layer* layer;
+	//size_t render_buf_size;
 
 	uint8_t h_scanline_counter; //use for hscanline renders
 
 	uint16_t x,y; //for buf. true count of current pixel pointer
 	uint8_t x_tile, y_tile; //for tile-by-tile read.
 } Engine;
-
-static Engine* e; 
+extern Engine* e; //le engine
 
 typedef struct { //structure useful for app-level logic with sprites.
 				 //needs to be decoupled because of C++ lang barrier
-				 
 	int16_t  x,y; //coords of the top-left of sprite rect.
 	uint8_t* map;
 	uint8_t tiles_wide, tiles_high;
 	uint8_t id; //id sets apart/secondary handle. Struct itself is the primary handle
-	 
 } Entity_Handle;
 
-void engine_init(struct Layer* layer);
+Engine* engine_init(struct Layer* layer);
 uint16_t* engine_render(); //needs to return a contiguous arr
 
 struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 

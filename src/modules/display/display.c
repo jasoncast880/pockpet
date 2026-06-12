@@ -11,8 +11,11 @@
 
 static uint32_t spi0_dma_chan; //hardware
 
-void display_setup(Engine* engine) {
-e = engine;
+void display_setup(Engine* eng) {
+	//how to verfy e works?? TODO
+	if(!eng) {
+		//break and shii
+	}
 
 #if   DIRTY_RENDER
 	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);

@@ -112,6 +112,27 @@ Sprite::~Sprite() {
 }
 
 #include "engine_api.h"
+Engine* e = nullptr;
+Engine* engine_init(struct Layer* layer) { //todo : kill this bih
+	e = new Engine(); //global static
+#if   DIRTY_RENDER
+	//vector alloc, too lazy to write 
+#elif FULSCREEN_RENDER
+	e->render_data = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN * DEFAULT_SCREEN_TILES_X * DEFAULT_SCREEN_TILES_Y];
+#elif HSCANLINE_RENDER
+	e->render_data = new uint16_t[DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN*HSCANLINE_SIZE];
+#endif
+
+	e->layer = layer;
+	e->h_scanline_counter = 0;
+	e->x = 0;
+	e->y = 0;
+	e->x_tile = 0;
+	e->y_tile = 0;
+
+	return e;
+}
+
 struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high) {
 
 	Tileset* ts = new Tileset( tiles, (DEFAULT_TILE_LEN*DEFAULT_TILE_LEN)*(30) ); 
@@ -185,19 +206,6 @@ void delete_sprite(Entity_Handle* eh) {
 		//app entity handling
 		sprite.handle--;
 	}
-}
-
-void engine_init(struct Layer* layer) {
-	e = new Engine(); //global static
-#if   DIRTY_RENDER
-	//vector alloc, too lazy to write 
-#elif FULSCREEN_RENDER
-	e->render_data = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN * DEFAULT_SCREEN_TILES_X * DEFAULT_SCREEN_TILES_Y];
-#elif HSCANLINE_RENDER
-	e->render_data = new uint16_t[DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN*HSCANLINE_SIZE];
-#endif
-
-	e->layer = layer;
 }
 
 #if HSCANLINE_RENDER

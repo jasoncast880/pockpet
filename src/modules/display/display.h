@@ -31,14 +31,11 @@ enum cmd_sequence_t {
 }; //this is a little outdated but its good reference to remember
    //the driver sequence without looking at the DS
 
-void display_setup(Engine* engine);
+void display_setup(Engine* eng);
 
 void tile_handler(); //for tile-by-tile PARTIAL rendering ISR
 void frame_handler(); //for full framebuffer rendering    ISR
 void hscanline_handler(); //for full framebuffer rendering    ISR
-
-//user-app things
-static Engine* e; //software
 
 #ifdef RTOS_MODE
 
