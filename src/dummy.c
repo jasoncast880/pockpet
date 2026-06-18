@@ -37,7 +37,6 @@ int main() {
 	while(true) {
 		//DISPLAY 
 		if( e->h_scanline_counter < HSCANLINE_MAX ) {
-			engine_render(); //TODO how much time does this take?
             e->h_scanline_counter++;
 		} else {
 			e->h_scanline_counter = 0;
@@ -45,6 +44,7 @@ int main() {
 			increment_sprite_y(sprite); 
 			//update_sprite_map(sprite, map);
 		}
+		engine_render(); //TODO how much time does this take?
 
 		//reconfigure the hw display write window to the next scanline
 		ili9341_setCS_LO();
