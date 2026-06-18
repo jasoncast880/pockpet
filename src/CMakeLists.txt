@@ -5,6 +5,7 @@ add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
 add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
 if(TARGET tactigachi_bm)
+set(CMAKE_BUILD_TYPE Debug)
 target_sources( tactigachi_bm PRIVATE
 	dummy.c
 	#add on peripherals as you go
@@ -50,7 +51,7 @@ target_link_libraries(tactigachi_bm PRIVATE
 
 target_compile_definitions(tactigachi_bm PRIVATE configNUMBER_OF_CORES=1)
 
-pico_enable_stdio_usb(tactigachi_bm 1) #perhaps disable if not using/debugging via gdb
+pico_enable_stdio_usb(tactigachi_bm 0) #perhaps disable if not using/debugging via gdb
 pico_enable_stdio_uart(tactigachi_bm 1)
 pico_add_extra_outputs(tactigachi_bm)
 

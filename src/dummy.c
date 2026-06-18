@@ -38,6 +38,7 @@ int main() {
 		//DISPLAY 
 		if( e->h_scanline_counter < HSCANLINE_MAX ) {
 			engine_render(); //TODO how much time does this take?
+            e->h_scanline_counter++;
 		} else {
 			e->h_scanline_counter = 0;
 			increment_sprite_x(sprite); //todo implement these

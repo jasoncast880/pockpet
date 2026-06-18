@@ -1,6 +1,6 @@
 #include "tile_engine.hpp"
 
-Tile::Tile() {}
+Tile::Tile() : buf(nullptr){}
 Tile::Tile(const uint16_t* src) {
 	buf = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN];
 	for(int i = 0 ; i < DEFAULT_TILE_LEN * DEFAULT_TILE_LEN ; i++) {
@@ -9,10 +9,10 @@ Tile::Tile(const uint16_t* src) {
 	}
 }
 void Tile::get_pixel(uint16_t idx, uint16_t& val) { 
-	val = *(buf+=idx); 
+	val = *(buf+idx); 
 }
 Tile::~Tile(){
-	delete this->buf;
+	delete[] buf;
 }
 
 Tileset::Tileset( const uint16_t* buf, size_t num_tiles ) : buf(buf), num_tiles(num_tiles) {}
@@ -213,8 +213,9 @@ uint16_t* engine_render() {
 
 	uint16_t* p = e->render_data;
 
-	for(int i = e->y*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; i<i+(DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; i++ ) {
-		//gather the tilemap layer data
+    int start = e->y*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ;
+    int end = start + (DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; 
+	for( int i = start ; i < end ; i++ ) {
 
 		for( int j = 0 ; j < HSCANLINE_SIZE*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++) {
 			if(e->x == (DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) - 1) {
