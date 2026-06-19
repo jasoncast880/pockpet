@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.5)
 
 set(PICO_BOARD pico_w)
 
@@ -22,4 +22,7 @@ target_include_directories( tactigachi_cfg INTERFACE config )
 
 add_subdirectory(assets) 
 add_subdirectory(src)
+
+add_subdirectory(scripts) # paths to scripts/unit-test 
+
 
