@@ -1,8 +1,8 @@
 #include "tile_engine.hpp"
 
-Tile::Tile() : buf(nullptr){}
+Tile::Tile() /*: buf(nullptr)*/{}
 Tile::Tile(const uint16_t* src) {
-	buf = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN];
+	//buf = new uint16_t[DEFAULT_TILE_LEN * DEFAULT_TILE_LEN];
 	for(int i = 0 ; i < DEFAULT_TILE_LEN * DEFAULT_TILE_LEN ; i++) {
 		buf[i] = *src;
 		src++;
@@ -12,13 +12,14 @@ void Tile::get_pixel(uint16_t idx, uint16_t& val) {
 	val = *(buf+idx); 
 }
 Tile::~Tile(){
-	delete[] buf;
+	//delete[] buf;
 }
 
 Tileset::Tileset( const uint16_t* buf, size_t num_tiles ) : buf(buf), num_tiles(num_tiles) {}
 Tile Tileset::get_tile(uint8_t idx) {
 	if( idx < this->num_tiles ) {
-		const uint16_t* p = this->buf+=(idx*DEFAULT_TILE_LEN*DEFAULT_TILE_LEN); return Tile(p);
+		const uint16_t* p = this->buf+=(idx*DEFAULT_TILE_LEN*DEFAULT_TILE_LEN);
+		return Tile(p);
 	} else return nullptr;
 }
 size_t Tileset::get_num_tiles(uint8_t idx) { return this->num_tiles; }
@@ -209,33 +210,63 @@ void delete_sprite(Entity_Handle* eh) {
 }
 
 #if HSCANLINE_RENDER
+
 uint16_t* engine_render() { 
 
 	uint16_t* p = e->render_data;
 
-    int start = e->y*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ;
-    int end = start + (DEFAULT_SCREEN_TILES_Y*DEFAULT_TILE_LEN)/HSCANLINE_SIZE ; 
-	for( int i = start ; i < end ; i++ ) {
+	/*
+	 * go line-by line for the scanline size, for each y-pixel level stash the tiles 
+	 * indexed using contextualize in order to give a quick access to the tiles..
+	 *
+	 * restart the cache every tile_len (16 pix) for now 
+	 * and then tune based on performance afterwards
+	 */
+	std::array<Tile, DEFAULT_SCREEN_TILES_X> tiles_cache{}; 
+	size_t cache_tiles_size = 0;
 
-		for( int j = 0 ; j < HSCANLINE_SIZE*DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN ; j++) {
-			if(e->x == (DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) - 1) {
-				e->x = 0;
-				e->y++;
+    int y_start = (e->y);
+    int y_end = y_start + HSCANLINE_SIZE;
+	
+	for( int i = y_start ; i < y_end ; i++ ) {
+
+		int x_start = 0;
+		int x_end = HSCANLINE_SIZE * DEFAULT_SCREEN_TILES_X * DEFAULT_TILE_LEN;
+		for( int j = x_start ; j < x_end ; j++ ) {
+			tile_context_t context = e->layer->contextualize(e->x, e->y);
+			Tile& tile = tiles_cache.at(0);
+			
+			//now you do a linear search on the tiles_cache std::aray and either
+			// a) draw on the found cached tile and draw accordingly
+			// or 
+			// b) make a new tile and add to cache for later possible use.
+
+			auto it = 0;
+			for( ; it < cache_tiles_size ; ++it) {
+
+				if( tiles_cache.at(it).id == context.map_idx){
+					tile = tiles_cache.at(it);
+					break;
+				}
+			} if ( it==cache_tiles_size ) {
+				tiles_cache.at(it) = e->layer->tileset->get_tile(context.map_idx);
 			}
 
-			tile_context_t context = e->layer->contextualize(e->x, e->y);
-			Tile tile = e->layer->tileset->get_tile(context.map_idx);
-			uint16_t pix; 
-			tile.get_pixel(context.tile_idx, pix);
-			
-			p[j] = pix;
+			e->x++;
+			tile.get_pixel(context.tile_idx, p[i*(DEFAULT_SCREEN_TILES_X*DEFAULT_TILE_LEN) + j]);
+		//TODO : Add feature: sprite handling
 		}
-		for( int j = 0 ; j < e->layer->sprites.size() ; j++ ) {
-			//TODO: store indices of occupation on render call or something
-		}
+	e->x = 0;
+	e->y++;
 	}
-	
+
 	return &p[0];
+}
+
+void engine_reset() {
+	e->x = 0 ;
+	e->y = 0 ;
+	e->h_scanline_counter = 0 ;
 }
 #endif //TODO: implement other forms of rendering as needed
 

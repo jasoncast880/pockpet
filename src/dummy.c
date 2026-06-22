@@ -39,7 +39,7 @@ int main() {
 		if( e->h_scanline_counter < HSCANLINE_MAX ) {
             e->h_scanline_counter++;
 		} else {
-			e->h_scanline_counter = 0;
+			engine_reset(); 
 			increment_sprite_x(sprite); //todo implement these
 			increment_sprite_y(sprite); 
 			//update_sprite_map(sprite, map);

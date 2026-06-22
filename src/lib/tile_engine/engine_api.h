@@ -14,6 +14,8 @@ typedef struct {
 
 	uint16_t x,y; //for buf. true count of current pixel pointer
 	uint8_t x_tile, y_tile; //for tile-by-tile read.
+	
+	bool collision_flag; // TODO implement.useful when collision is present in the system 
 } Engine;
 extern Engine* e; //le engine
 
@@ -23,10 +25,13 @@ typedef struct { //structure useful for app-level logic with sprites.
 	uint8_t* map;
 	uint8_t tiles_wide, tiles_high;
 	uint8_t id; //id sets apart/secondary handle. Struct itself is the primary handle
+
+	uint8_t collision_hash; //TODO implement collision hash
 } Entity_Handle;
 
 Engine* engine_init(struct Layer* layer);
 uint16_t* engine_render(); //needs to return a contiguous arr
+void engine_reset(); //resets scanline counter, resets rendering cursor
 
 struct Layer* add_layer(const uint16_t* tiles, size_t num_tiles, uint8_t* tilemap, uint8_t tiles_wide, uint8_t tiles_high); 
 int update_layer(struct Layer* layer, uint8_t* map);
@@ -38,7 +43,7 @@ void increment_sprite_x(Entity_Handle* eh);
 void increment_sprite_y(Entity_Handle* eh); 
 
 void delete_layer(struct Layer* layer); //TODO weird system behaviours..
-void delete_sprite(Entity_Handle* eh); //TODO essential! go thtough all sprites and update id's
+void delete_sprite(Entity_Handle* eh); //TODO essential!
 
 #ifdef __cplusplus
 } //extern "C"

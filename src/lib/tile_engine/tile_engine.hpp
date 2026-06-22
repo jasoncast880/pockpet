@@ -10,6 +10,7 @@
 #include <queue>
 #include <memory>
 #include <vector>
+#include <array>
 #include <algorithm>
 
 #define ALPHA_FILTER 0xF81F
@@ -25,10 +26,15 @@ typedef struct {
 struct Tile {
 	Tile();
 	Tile(const uint16_t* src);
+	Tile(const uint16_t* src, uint8_t id);
 	void get_pixel(uint16_t idx, uint16_t& val);
 	~Tile(); //essentially this is now just a tileset-friendly unique ptr
 
-	uint16_t* buf;
+	//uint16_t* buf; //heap-style (bad bc mem fragging
+	uint16_t buf[DEFAULT_TILE_LEN*DEFAULT_TILE_LEN] {};
+
+	uint8_t id = -1;
+
 };
 
 struct Tileset{ 
