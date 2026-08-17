@@ -23,6 +23,6 @@ target_include_directories( tactigachi_cfg INTERFACE config )
 add_subdirectory(assets) 
 add_subdirectory(src)
 
-add_subdirectory(scripts) # paths to scripts/unit-test 
+add_subdirectory(tools) # paths to scripts/unit-test 
 
 

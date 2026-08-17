@@ -1,0 +1,14 @@
+.program ili9341
+
+; 5/6 wire serial data transmission
+; push some shi
+
+loop: 
+	pull
+	out pins, 1
+	jmp loop
+
+
+static inline void ili9341_pio_init();
+
+

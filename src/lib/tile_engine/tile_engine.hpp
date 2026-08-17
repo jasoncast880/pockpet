@@ -22,7 +22,6 @@ typedef struct {
 	uint16_t tile_idx; //index of tile in the current map
 } tile_context_t; //gets returned given x,y . Helper struct for tilemap blitting
 
-//
 struct Tile {
 	Tile();
 	Tile(const uint16_t* src);
