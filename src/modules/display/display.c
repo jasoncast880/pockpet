@@ -17,7 +17,7 @@ void display_setup(Engine* eng) {
 		//break and shii
 	}
 
-#if   DIRTY_RENDER
+#if DIRTY_RENDER
 	irq_set_exclusive_handler(DMA_IRQ_0, tile_handler);
 #elif FULSCREEN_RENDER
 	irq_set_exclusive_handler(DMA_IRQ_0, frame_handler);
@@ -43,7 +43,8 @@ void display_setup(Engine* eng) {
 		 &spi0_hw->dr,
 		 NULL, //set read addr in a static helper func.
 		 DEFAULT_TILE_LEN*DEFAULT_TILE_LEN*2, //every tile has DEFAULT_TILE_LEN^2, and 2 8-bit transfers per pixel-unit
-		 false ); //CHANNEL CONFIGURED, DO NOT START
+		 false 
+	); //CHANNEL CONFIGURED, DO NOT START
 	dma_channel_set_irq0_enabled(spi0_dma_chan, true);
 
 	irq_set_enabled(DMA_IRQ_0, true);

@@ -23,7 +23,16 @@ TEST_CASE("Sum of integers for a short vector", "[short]") {
 	auto_integers = { 1, 2, 3, 4, 5, };
 	REQUIRE(sum(integers) == 15);
 
+
 }
+
+//run contextualize then check this
+//int verify_sprite_index( int  )
+
+/*
+TEST_CASE("Sprite-Tilemap Index Test", "[poop]") {
+}
+*/
 
 /*
 //layer/tilemap level testing

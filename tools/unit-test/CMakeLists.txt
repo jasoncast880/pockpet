@@ -1,8 +1,6 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+#cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-
-enable_testing()
+#set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 Include(FetchContent)
 
@@ -11,16 +9,22 @@ FetchContent_Declare(
 	GIT_REPOSITORY https://github.com/catchorg/Catch2.git
 	GIT_TAG		   v3.8.1
 )
-
 FetchContent_MakeAvailable(Catch2)
 
+#testing bin
 add_executable( tile_engine_test
 	${CMAKE_CURRENT_SOURCE_DIR}/engine_test.cpp
 )
 
 target_link_libraries( tile_engine_test PRIVATE
 	tile_engine
+)
+
+target_link_libraries( tile_engine_test PRIVATE
 	Catch2::Catch2WithMain
 )
 
-
+add_test(
+	NAME unit_tester
+	COMMAND $<TARGET_FILE:tile_engine_test> --success
+)

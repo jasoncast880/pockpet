@@ -85,7 +85,6 @@ public:
 
 	tile_context_t contextualize(int16_t x, int16_t y) override; 
 
-
 	~Layer();
 };
 

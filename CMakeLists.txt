@@ -12,6 +12,11 @@ include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(tactigachi C CXX ASM)
 
+if(NOT CMAKE_CROSSCOMPILING)
+	enable_testing()
+	add_subdirectory(tools) # paths to scripts/unit-test 
+endif()
+
 set(CMAKE_C_FLAGS_DEBUG "-g -Og -fno-omit-frame-pointer") #for debugging
 set(CMAKE_CXX_FLAGS_DEBUG "-g -Og -fno-omit-frame-pointer")
 
@@ -22,7 +27,3 @@ target_include_directories( tactigachi_cfg INTERFACE config )
 
 add_subdirectory(assets) 
 add_subdirectory(src)
-
-add_subdirectory(tools) # paths to scripts/unit-test 
-
-
