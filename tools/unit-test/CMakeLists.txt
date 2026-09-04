@@ -18,9 +18,6 @@ add_executable( tile_engine_test
 
 target_link_libraries( tile_engine_test PRIVATE
 	tile_engine
-)
-
-target_link_libraries( tile_engine_test PRIVATE
 	Catch2::Catch2WithMain
 )
 

@@ -1,7 +1,6 @@
 add_executable( tactigachi_bm ) 
 add_executable( tactigachi_rtos )
 
-add_subdirectory(lib) #for pulling in the core libs; fatfs, engines, etc.
 add_subdirectory(drivers) #for pulling in the core libs; fatfs, engines, etc.
 
 if(TARGET tactigachi_bm)

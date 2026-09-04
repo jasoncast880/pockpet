@@ -2,4 +2,4 @@
 
 add_subdirectory(unit-test)
 
-#no need to add scripts to build system.
+#no need to add scripts to build system, used by gdb via filepathing
