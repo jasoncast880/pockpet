@@ -15,12 +15,12 @@
 //#include "engine_api.h"
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include <catch2/catch_test_macros.hpp>
 
 #include <vector>
 
 TEST_CASE("Sum of integers for a short vector", "[short]") {
-	auto_integers = { 1, 2, 3, 4, 5, };
+	auto integers = { 1, 2, 3, 4, 5, };
 	REQUIRE(sum(integers) == 15);
 
 
